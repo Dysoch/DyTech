@@ -1,0 +1,499 @@
+data:extend({
+  {
+    type = "boiler",
+    name = "boiler-mk2",
+    icon = "__DyTech-Graphics__/graphics/icons/boiler2.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk2"},
+    max_health = 250,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 80
+      }
+    },
+    fast_replaceable_group = "pipe",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fluid_box =
+    {
+      base_area = 1,
+      pipe_connections =
+      {
+        { position = {0, -1} },
+        { position = {1, 0} },
+        { position = {0, 1} },
+        { position = {-1, 0} }
+      },
+    },
+    energy_consumption = "450kW",
+    burner =
+    {
+      effectivity = 0.75,
+      fuel_inventory_size = 2,
+      emissions = 0.3 / 6.5,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 1
+        }
+      }
+    },
+    structure =
+    {
+      left =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      left_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, -0.02}
+      },
+      right_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51
+      },
+      left_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      right_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      t_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      },
+      t_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-2.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      }
+    },
+    fire =
+    {
+      left = boilerfires.down,
+      down = boilerfires.left,
+      left_down = boilerfires.right,
+      right_down = boilerfires.left,
+      left_up = boilerfires.down,
+      right_up = boilerfires.down,
+      t_up = boilerfires.down
+    },
+    burning_cooldown = 20,
+    -- these are the pipe pictures - boiler is a pipe as well
+    pictures = pipepictures()
+  },
+  {
+    type = "boiler",
+    name = "boiler-mk3",
+    icon = "__DyTech-Graphics__/graphics/icons/boiler3.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk3"},
+    max_health = 350,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 80
+      }
+    },
+    fast_replaceable_group = "pipe",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fluid_box =
+    {
+      base_area = 1,
+      pipe_connections =
+      {
+        { position = {0, -1} },
+        { position = {1, 0} },
+        { position = {0, 1} },
+        { position = {-1, 0} }
+      },
+    },
+    energy_consumption = "550kW",
+    burner =
+    {
+      effectivity = 1.0,
+      fuel_inventory_size = 3,
+      emissions = 0.5 / 6.5,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 1
+        }
+      }
+    },
+    structure =
+    {
+      left =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      left_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, -0.02}
+      },
+      right_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51
+      },
+      left_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      right_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      t_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      },
+      t_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-3.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      }
+    },
+    fire =
+    {
+      left = boilerfires.down,
+      down = boilerfires.left,
+      left_down = boilerfires.right,
+      right_down = boilerfires.left,
+      left_up = boilerfires.down,
+      right_up = boilerfires.down,
+      t_up = boilerfires.down
+    },
+    burning_cooldown = 20,
+    -- these are the pipe pictures - boiler is a pipe as well
+    pictures = pipepictures()
+  },
+  {
+    type = "boiler",
+    name = "boiler-mk4",
+    icon = "__DyTech-Graphics__/graphics/icons/boiler4.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk4"},
+    max_health = 350,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 80
+      }
+    },
+    fast_replaceable_group = "pipe",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fluid_box =
+    {
+      base_area = 1,
+      pipe_connections =
+      {
+        { position = {0, -1} },
+        { position = {1, 0} },
+        { position = {0, 1} },
+        { position = {-1, 0} }
+      },
+    },
+    energy_consumption = "750kW",
+    burner =
+    {
+      effectivity = 1.25,
+      fuel_inventory_size = 4,
+      emissions = 0.8 / 6.5,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 1
+        }
+      }
+    },
+    structure =
+    {
+      left =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      left_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, -0.02}
+      },
+      right_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51
+      },
+      left_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      right_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      t_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      },
+      t_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-4.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      }
+    },
+    fire =
+    {
+      left = boilerfires.down,
+      down = boilerfires.left,
+      left_down = boilerfires.right,
+      right_down = boilerfires.left,
+      left_up = boilerfires.down,
+      right_up = boilerfires.down,
+      t_up = boilerfires.down
+    },
+    burning_cooldown = 20,
+    -- these are the pipe pictures - boiler is a pipe as well
+    pictures = pipepictures()
+  },
+  {
+    type = "boiler",
+    name = "boiler-mk5",
+    icon = "__DyTech-Graphics__/graphics/icons/boiler5.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk5"},
+    max_health = 350,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 80
+      }
+    },
+    fast_replaceable_group = "pipe",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fluid_box =
+    {
+      base_area = 1,
+      pipe_connections =
+      {
+        { position = {0, -1} },
+        { position = {1, 0} },
+        { position = {0, 1} },
+        { position = {-1, 0} }
+      },
+    },
+    energy_consumption = "1000kW",
+    burner =
+    {
+      effectivity = 1.5,
+      fuel_inventory_size = 5,
+      emissions = 1.0 / 6.5,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 1
+        }
+      }
+    },
+    structure =
+    {
+      left =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      left_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, -0.02}
+      },
+      right_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51
+      },
+      left_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.05, 0}
+      },
+      right_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0.15, 0}
+      },
+      t_down =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      },
+      t_up =
+      {
+        filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-5.png",
+        priority = "extra-high",
+        width = 51,
+        height = 51,
+        shift = {0, 0}
+      }
+    },
+    fire =
+    {
+      left = boilerfires.down,
+      down = boilerfires.left,
+      left_down = boilerfires.right,
+      right_down = boilerfires.left,
+      left_up = boilerfires.down,
+      right_up = boilerfires.down,
+      t_up = boilerfires.down
+    },
+    burning_cooldown = 20,
+    -- these are the pipe pictures - boiler is a pipe as well
+    pictures = pipepictures()
+  }
+}
+)

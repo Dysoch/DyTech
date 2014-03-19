@@ -1,0 +1,9 @@
+{
+	"name":"DyTech",
+	"author":"Dysoch",
+	"version":"1.5.2",
+	"title":"DyTech",
+	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"description":"A mod that extends the game with more machine tiers, technology and new items!",
+	"dependencies": ["base >= 0.9.2", "DyTech-Graphics >= 2.0.0"]
+}
