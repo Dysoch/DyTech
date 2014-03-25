@@ -12,12 +12,12 @@ data:extend(
   },
   {
     type = "item",
-    name = "logistic-chest-provider-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-provider-2.png",
+    name = "logistic-chest-passive-provider-1",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-p-1",
-    place_result = "logistic-chest-provider-1",
+    place_result = "logistic-chest-passive-provider-1",
     stack_size = 64
   },
   {
@@ -52,12 +52,12 @@ data:extend(
   },
   {
     type = "item",
-    name = "logistic-chest-provider-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-provider-3.png",
+    name = "logistic-chest-passive-provider-2",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-p-2",
-    place_result = "logistic-chest-provider-2",
+    place_result = "logistic-chest-passive-provider-2",
     stack_size = 64
   },
   {

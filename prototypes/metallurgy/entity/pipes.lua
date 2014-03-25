@@ -21,7 +21,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
-      base_area = 500,
+      base_area = 100,
       base_level = 5,
       pipe_connections =
       {
@@ -54,7 +54,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
-      base_area = 500,
+      base_area = 100,
 	  base_level = 5,
 	  --pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
@@ -144,7 +144,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
-      base_area = 500,
+      base_area = 100,
 	  base_level = 0,
 	  --pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),
@@ -232,7 +232,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
-      base_area = 500,
+      base_area = 100,
 	  base_level = 5,
 	  --pipe_picture = assembler3pipepictures(),
       pipe_covers = pipecoverspictures(),

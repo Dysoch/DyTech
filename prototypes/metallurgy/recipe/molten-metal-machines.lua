@@ -3,9 +3,9 @@ data:extend(
   {
    	type = "recipe",
    	name = "blast-furnace",
-	energy_required= 60,
+	energy_required = 60,
     enabled= false,
-	ingredients= 
+		ingredients= 
 	{ 
 	  {"advanced-circuit", 10}, 
 	  {"steel-plate", 50}, 
@@ -18,7 +18,7 @@ data:extend(
   {
    	type = "recipe",
    	name = "forge",
-	energy_required= 60,
+	energy_required = 60,
     enabled= false,
    	ingredients= 
 	{ 

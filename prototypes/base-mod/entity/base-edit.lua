@@ -7,7 +7,8 @@ data:extend(
     flags = {"placeable-player", "placeable-enemy"},
     minable = {mining_time = 1, result = "biter-spawner"},
     max_health = 500,
-	order="b-b-g",
+    order ="b-b-g",
+    subgroup="enemies",
     resistances =
     {
       {
@@ -113,7 +114,7 @@ data:extend(
     corpse = "big-remnants",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group = "drill",
+	fast_replaceable_group =  "drill",
     animations =
     {
       north =
@@ -229,7 +230,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -345,20 +346,20 @@ data:extend(
   },
   {
     type = "logistic-container",
-    name = "logistic-chest-provider",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-provider-1.png",
+    name = "logistic-chest-passive-provider",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-1.png",
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "logistic-chest-provider"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "logistic-chest-passive-provider"},
     max_health = 150,
     corpse = "small-remnants",
     collision_box = {{-0.4,-0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fast_replaceable_group = "container",
     inventory_size = 48,
-    logistic_mode = "provider",
+    logistic_mode = "passive-provider",
     picture =
     {
-      filename = "__base__/graphics/entity/logistic-chest/logistic-chest-provider.png",
+      filename = "__base__/graphics/entity/logistic-chest/logistic-chest-passive-provider.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -543,7 +544,7 @@ data:extend(
     corpse = "medium-remnants",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
-	fast_replaceable_group = "accumulator",
+	fast_replaceable_group =  "accumulator",
     energy_source =
     {
       type = "electric",
@@ -595,7 +596,7 @@ data:extend(
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group = "solar-panel",
+	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
       type = "electric",
@@ -627,7 +628,7 @@ data:extend(
         percent = 70
       }
     },
-	fast_replaceable_group = "steam-engine",
+	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =

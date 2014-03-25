@@ -232,7 +232,7 @@ data:extend(
     name = "sandwall-remnants",
     icon = "__DyTech-Graphics__/graphics/icons/sandwall-remnants.png",
     flags = {"placeable-neutral", "player-creation"},
-	order= "sw-r",
+	order = "sw-r",
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     selectable_in_game = false,
     time_before_removed = 60 * 60 * 15, -- 15 minutes

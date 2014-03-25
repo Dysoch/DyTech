@@ -25,7 +25,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -53,7 +53,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -81,7 +81,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -109,7 +109,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -137,7 +137,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -165,7 +165,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -193,7 +193,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -221,7 +221,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -249,7 +249,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -277,7 +277,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -305,7 +305,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -333,7 +333,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -361,7 +361,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
   {
@@ -389,7 +389,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "e-n-f"
   },
 }

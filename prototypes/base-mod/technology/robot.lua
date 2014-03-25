@@ -8,7 +8,7 @@ data:extend(
 	{
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-provider-1"
+        recipe = "logistic-chest-passive-provider-1"
       },
       {
         type = "unlock-recipe",
@@ -40,7 +40,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "l-r-1",
   },
   {
@@ -51,7 +51,7 @@ data:extend(
 	{
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-provider-2"
+        recipe = "logistic-chest-passive-provider-2"
       },
       {
         type = "unlock-recipe",
@@ -83,7 +83,7 @@ data:extend(
       },
       time = 90
     },
-	upgrade = "true",
+	upgrade = true,
     order = "l-r-2",
   },
   {
@@ -98,7 +98,7 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-provider-1"
+        recipe = "logistic-chest-passive-provider-1"
       },
       {
         type = "unlock-recipe",
@@ -121,7 +121,7 @@ data:extend(
       },
       time = 45
     },
-	upgrade = "true",
+	upgrade = true,
     order = "c-k-b",
   },
   {
@@ -136,7 +136,7 @@ data:extend(
       },
       {
         type = "unlock-recipe",
-        recipe = "logistic-chest-provider-2"
+        recipe = "logistic-chest-passive-provider-2"
       },
       {
         type = "unlock-recipe",
@@ -160,7 +160,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "c-k-c",
   },
 }

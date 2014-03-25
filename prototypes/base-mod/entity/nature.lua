@@ -2,7 +2,6 @@ data:extend(
 {
   {
     type = "container",
-	inventory_size = 1,
     name = "rubber-tree",
     icon = "__base__/graphics/icons/dry-tree.png",
     flags = {"placeable-neutral", "breaths-air"},
@@ -14,6 +13,7 @@ data:extend(
       count = 1,
     },
     max_health = 10,
+	inventory_size = 1,
     collision_box = {{-0.7, -0.8}, {0.7, 0.8}},
     selection_box = {{-0.8, -2.2}, {0.8, 0.8}},
 	drawing_box = {{-0.8, -2.8}, {0.8, 0.8}},

@@ -19,7 +19,7 @@ data:extend(
       time = 30
     },
     order = "b-l-d-e-2",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -40,7 +40,7 @@ data:extend(
       time = 30
     },
     order = "b-l-d-e-3",
-	upgrade=true
+	upgrade = true,
   },
   
 }

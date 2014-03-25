@@ -1,0 +1,14 @@
+{
+    "item":
+    [
+        ["logistic-chest-provider", "logistic-chest-passive-provider"],
+        ["logistic-chest-provider-1", "logistic-chest-passive-provider-1"],
+        ["logistic-chest-provider-2", "logistic-chest-passive-provider-2"]
+    ],
+    "entity":
+    [
+        ["logistic-chest-provider", "logistic-chest-passive-provider"],
+        ["logistic-chest-provider-1", "logistic-chest-passive-provider-1"],
+        ["logistic-chest-provider-2", "logistic-chest-passive-provider-2"]
+    ]
+}

@@ -3,6 +3,7 @@ data:extend(
   {
     type= "assembling-machine",
     name= "forge",
+	icon = "__DyTech-Graphics__/graphics/icons/forge.png",
     flags= {"placeable-neutral", "player-creation"},
     collision_box= {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box= {{-1.5, -1.5}, {1.5, 1.5}},
@@ -12,7 +13,6 @@ data:extend(
     ingredient_count= 1,
     energy_usage= "300kW",
     crafting_speed= 1,
-	icon="__DyTech-Graphics__/graphics/icons/forge.png",
     energy_source=
     {
       type= "electric",
@@ -64,10 +64,10 @@ data:extend(
     flags= {"placeable-neutral", "player-creation"},
 	collision_box= {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box= {{-2.5, -2.5}, {2.5, 2.5}},
-    minable= { hardness= 0.2, mining_time= 0.5, result= "blast-furnace" },
-    crafting_categories= { "blast-furnace" },
-    max_health= 150,
-    ingredient_count= 8,
+    minable= { hardness = 0.2, mining_time = 0.5, result = "blast-furnace" },
+    crafting_categories = { "blast-furnace" },
+    max_health = 150,
+    ingredient_count = 8,
     energy_usage= "300kW",
 	crafting_speed=1,
 	icon="__DyTech-Graphics__/graphics/icons/blast-furnace.png",

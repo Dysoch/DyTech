@@ -39,14 +39,14 @@ data:extend(
   },
   {
     type = "logistic-container",
-    name = "logistic-chest-provider-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-provider-2.png",
+    name = "logistic-chest-passive-provider-1",
+    icon = "__DyTech__/graphics/icons/logistic-chest-passive-provider-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
 		hardness = 0.2, 
 		mining_time = 0.5, 
-		result = "logistic-chest-provider-1"
+		result = "logistic-chest-passive-provider-1"
 	},
     max_health = 150,
     corpse = "small-remnants",
@@ -57,7 +57,7 @@ data:extend(
     logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-provider-1.png",
+      filename = "__DyTech__/graphics/icons/logistic-chest-passive-provider-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -157,14 +157,14 @@ data:extend(
   },
   {
     type = "logistic-container",
-    name = "logistic-chest-provider-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-provider-3.png",
+    name = "logistic-chest-passive-provider-2",
+    icon = "__DyTech__/graphics/icons/logistic-chest-passive-provider-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
 		hardness = 0.2, 
 		mining_time = 0.5, 
-		result = "logistic-chest-provider-2"
+		result = "logistic-chest-passive-provider-2"
 	},
     max_health = 150,
     corpse = "small-remnants",
@@ -175,7 +175,7 @@ data:extend(
     logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-provider-2.png",
+      filename = "__DyTech__/graphics/icons/logistic-chest-passive-provider-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,

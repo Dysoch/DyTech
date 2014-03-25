@@ -170,7 +170,7 @@ game.onevent(defines.events.ontick, function(event)
    end 
    
    --[[Power failure steam engines]]--
-   if glob.damagingforce == nil then if glob.message then glob.damagingforce = game.forces.enemy else glob.damagingforce = game.player.force end end
+	if glob.damagingforce == nil then if glob.message then glob.damagingforce = game.forces.enemy else glob.damagingforce = game.player.force end end
 	if glob.steamengine~=nil and game.tick%60==1 then
 		for i, steamengine in pairs(glob.steamengine) do
 			if steamengine.valid and steamengine.energy>1e-2 and steamengine.energy<2 then
@@ -180,7 +180,7 @@ game.onevent(defines.events.ontick, function(event)
 				break
 				end
 			elseif not steamengine.valid then
-        table.remove(glob.steamengine, i)
+		table.remove(glob.steamengine, i)
 			end
 		end
 	end
@@ -190,8 +190,8 @@ game.onevent(defines.events.ontick, function(event)
 			if solarpanel.entity.valid then
 				if (game.tick-solarpanel.tick)>(60*60*15) then 
 					if math.random(2500)==1 then
-						solarpanel.entity.damage(5, glob.damagingforce)
-						fs.dmgMsg(solarpanel.entity, glob, game)
+					solarpanel.entity.damage(5, glob.damagingforce)
+					fs.dmgMsg(solarpanel.entity, glob, game)
 					end
 				end
 			else
@@ -321,9 +321,9 @@ remote.addinterface("DyTech",
 		local current=#glob.steamengine
 		local scan = game.findentitiesfiltered{name="steam-engine", area={fs.getboundingbox(game.player.position, 100)}}
 			for _, engine in pairs(scan) do
-			local found=false
-				for _, known in pairs(glob.steamengine) do if engine.equals(known) then found=true break end end
-			if not found then table.insert(glob.steamengine, engine) end
+        local found=false
+			for _, known in pairs(glob.steamengine) do if engine.equals(known) then found=true break end end
+        if not found then table.insert(glob.steamengine, engine) end
 			end
 			game.player.print(#scan.." "..game.getlocalisedentityname("steam-engine").."s "..game.gettext("msg-found"))
 		if not glob.solarpanel then glob.solarpanel={} end

@@ -53,7 +53,7 @@ data:extend(
       },
       time = 20
     },
-	upgrade = "true",
+		upgrade = "true",
     order = "rw-2",
   },
   {
@@ -83,7 +83,7 @@ data:extend(
       },
       time = 20
     },
-	upgrade = "true",
+		upgrade = "true",
     order = "rw-3",
   },
 }

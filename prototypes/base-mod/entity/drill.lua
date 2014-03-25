@@ -9,7 +9,7 @@ data:extend(
     max_health = 350,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
-	fast_replaceable_group = "drill",
+	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     animations =
@@ -92,7 +92,7 @@ data:extend(
     max_health = 450,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
-	fast_replaceable_group = "drill",
+	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     animations =
@@ -169,7 +169,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "basic-mining-drill-mk4",
-	fast_replaceable_group = "drill",
+	fast_replaceable_group =  "drill",
     icon = "__DyTech-Graphics__/graphics/icons/basic-mining-drill4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk4"},
@@ -258,7 +258,7 @@ data:extend(
     max_health = 1500,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
-	fast_replaceable_group = "drill",
+	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     animations =
@@ -341,8 +341,8 @@ data:extend(
     max_health = 4500,
     resource_categories = {"basic-solid"},
     healing_per_tick = 0,25,
-	corpse = "big-remnants",
-	fast_replaceable_group = "drill",
+		corpse = "big-remnants",
+	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     animations =
@@ -424,7 +424,7 @@ data:extend(
     max_health = 150,
     resource_categories = {"basic-solid"},
     healing_per_tick = 0,25,
-	corpse = "big-remnants",
+		corpse = "big-remnants",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     animations =

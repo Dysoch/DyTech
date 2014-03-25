@@ -31,7 +31,7 @@ data:extend(
       time = 30
     },
     order = "c-1",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -64,7 +64,7 @@ data:extend(
       time = 30
     },
     order = "c-2",
-    upgrade=true
+	upgrade = true,
   },
 }
 )

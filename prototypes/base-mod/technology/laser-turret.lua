@@ -33,7 +33,7 @@ data:extend(
       time = 30
     },
     order = "l-t-1",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -67,7 +67,7 @@ data:extend(
       time = 30
     },
     order = "l-t-2",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -101,7 +101,7 @@ data:extend(
       time = 30
     },
     order = "l-t-3",
-	upgrade=true
+	upgrade = true,
   },
 }
 )

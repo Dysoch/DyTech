@@ -3,14 +3,15 @@ data:extend(
   {
     type = "recipe",
     name = "recycling-base-001",
-	category = "recycling",
+    category = "recycling",
     energy_required = 15,
     ingredients =
     {
       {"iron-plate", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+    result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -22,7 +23,8 @@ data:extend(
       {"copper-plate", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -34,7 +36,8 @@ data:extend(
       {"steel-plate", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -46,7 +49,8 @@ data:extend(
       {"piercing-bullet-magazine", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -58,7 +62,8 @@ data:extend(
       {"flame-thrower-ammo", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -70,7 +75,8 @@ data:extend(
       {"rocket", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -82,7 +88,8 @@ data:extend(
       {"explosive-rocket", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -94,7 +101,8 @@ data:extend(
       {"shotgun-shell", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -106,7 +114,8 @@ data:extend(
       {"piercing-shotgun-shell", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -118,7 +127,8 @@ data:extend(
       {"railgun-dart", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -130,7 +140,8 @@ data:extend(
       {"heavy-armor", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -142,7 +153,8 @@ data:extend(
       {"basic-modular-armor", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -154,7 +166,8 @@ data:extend(
       {"power-armor", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -166,7 +179,8 @@ data:extend(
       {"power-armor-mk2", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -178,7 +192,8 @@ data:extend(
       {"poison-capsule", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -190,7 +205,8 @@ data:extend(
       {"slowdown-capsule", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -202,7 +218,8 @@ data:extend(
       {"basic-grenade", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -214,7 +231,8 @@ data:extend(
       {"defender-capsule", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -226,7 +244,8 @@ data:extend(
       {"distractor-capsule", 1},
     },
     result = "scrapmetal",
-	result_count = 9
+	result_count = 9,
+	hidden = true
   },
   {
     type = "recipe",
@@ -238,7 +257,8 @@ data:extend(
       {"destroyer-capsule", 1},
     },
     result = "scrapmetal",
-	result_count = 16
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -250,7 +270,8 @@ data:extend(
       {"basic-electric-discharge-defense-remote", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -262,7 +283,8 @@ data:extend(
       {"basic-bullet-magazine", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -274,7 +296,8 @@ data:extend(
       {"basic-electric-discharge-defense-remote", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -286,7 +309,8 @@ data:extend(
       {"basic-armor", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -298,7 +322,8 @@ data:extend(
       {"pistol", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -310,7 +335,8 @@ data:extend(
       {"submachine-gun", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -322,7 +348,8 @@ data:extend(
       {"wood", 1},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -334,7 +361,8 @@ data:extend(
       {"iron-stick", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -346,7 +374,8 @@ data:extend(
       {"iron-gear-wheel", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -358,7 +387,8 @@ data:extend(
       {"copper-cable", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -370,7 +400,8 @@ data:extend(
       {"electronic-circuit", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -382,7 +413,8 @@ data:extend(
       {"wooden-chest", 1},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -394,7 +426,8 @@ data:extend(
       {"stone-furnace", 1},
     },
     result = "scrap",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -406,7 +439,8 @@ data:extend(
       {"burner-mining-drill", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -418,7 +452,8 @@ data:extend(
       {"basic-mining-drill", 1},
     },
     result = "scrapmetal",
-	result_count = 6
+	result_count = 6,
+	hidden = true
   },
   {
     type = "recipe",
@@ -430,7 +465,8 @@ data:extend(
       {"basic-transport-belt", 1},
     },
     result = "scrap",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -442,7 +478,8 @@ data:extend(
       {"burner-inserter", 1},
     },
     result = "scrap",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -454,7 +491,8 @@ data:extend(
       {"basic-inserter", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -466,7 +504,8 @@ data:extend(
       {"offshore-pump", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -478,7 +517,8 @@ data:extend(
       {"pipe", 2},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -490,7 +530,8 @@ data:extend(
       {"boiler", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -502,7 +543,8 @@ data:extend(
       {"steam-engine", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -514,7 +556,8 @@ data:extend(
       {"small-electric-pole", 2},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -526,7 +569,8 @@ data:extend(
       {"radar", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -538,7 +582,8 @@ data:extend(
       {"computer", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -550,7 +595,8 @@ data:extend(
       {"small-lamp", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -562,7 +608,8 @@ data:extend(
       {"alien-artifact", 1},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -574,7 +621,8 @@ data:extend(
       {"pipe-to-ground", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -586,7 +634,8 @@ data:extend(
       {"assembling-machine-1", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -598,7 +647,8 @@ data:extend(
       {"red-wire", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -610,7 +660,8 @@ data:extend(
       {"green-wire", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -622,7 +673,8 @@ data:extend(
       {"raw-fish", 1},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -634,7 +686,8 @@ data:extend(
       {"repair-pack", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -646,7 +699,8 @@ data:extend(
       {"iron-axe", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -658,7 +712,8 @@ data:extend(
       {"gun-turret", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -670,7 +725,8 @@ data:extend(
       {"night-vision-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -682,7 +738,8 @@ data:extend(
       {"energy-shield-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -694,7 +751,8 @@ data:extend(
       {"energy-shield-mk2-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 7
+	result_count = 7,
+	hidden = true
   },
   {
     type = "recipe",
@@ -706,7 +764,8 @@ data:extend(
       {"battery-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -718,7 +777,8 @@ data:extend(
       {"battery-mk2-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -730,7 +790,8 @@ data:extend(
       {"solar-panel-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -742,7 +803,8 @@ data:extend(
       {"fusion-reactor-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -754,7 +816,8 @@ data:extend(
       {"basic-laser-defense-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -766,7 +829,8 @@ data:extend(
       {"basic-electric-discharge-defense-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -778,7 +842,8 @@ data:extend(
       {"basic-exoskeleton-equipment", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -790,7 +855,8 @@ data:extend(
       {"flame-thrower", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -802,7 +868,8 @@ data:extend(
       {"land-mine", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -814,7 +881,8 @@ data:extend(
       {"rocket-launcher", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -826,7 +894,8 @@ data:extend(
       {"shotgun", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -838,7 +907,8 @@ data:extend(
       {"combat-shotgun", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -850,7 +920,8 @@ data:extend(
       {"railgun", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -862,7 +933,8 @@ data:extend(
       {"steel-axe", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -874,7 +946,8 @@ data:extend(
       {"speed-module", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -886,7 +959,8 @@ data:extend(
       {"speed-module-2", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -898,7 +972,8 @@ data:extend(
       {"speed-module-3", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -910,7 +985,8 @@ data:extend(
       {"productivity-module", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -922,7 +998,8 @@ data:extend(
       {"productivity-module-2", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -934,7 +1011,8 @@ data:extend(
       {"productivity-module-3", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -946,7 +1024,8 @@ data:extend(
       {"effectivity-module", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -958,7 +1037,8 @@ data:extend(
       {"effectivity-module-2", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -970,7 +1050,8 @@ data:extend(
       {"effectivity-module-3", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -982,7 +1063,8 @@ data:extend(
       {"laser-turret", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -994,7 +1076,8 @@ data:extend(
       {"stone-brick", 1},
     },
     result = "scrap",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1006,7 +1089,8 @@ data:extend(
       {"iron-chest", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1018,7 +1102,8 @@ data:extend(
       {"steel-chest", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1030,7 +1115,8 @@ data:extend(
       {"smart-chest", 1},
     },
     result = "scrapmetal",
-	result_count = 6
+	result_count = 6,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1042,7 +1128,8 @@ data:extend(
       {"fast-transport-belt", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1054,7 +1141,8 @@ data:extend(
       {"express-transport-belt", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1066,7 +1154,8 @@ data:extend(
       {"long-handed-inserter", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1078,7 +1167,8 @@ data:extend(
       {"fast-inserter", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1090,7 +1180,8 @@ data:extend(
       {"smart-inserter", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1102,7 +1193,8 @@ data:extend(
       {"assembling-machine-2", 1},
     },
     result = "scrapmetal",
-	result_count = 5
+	result_count = 5,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1114,7 +1206,8 @@ data:extend(
       {"assembling-machine-3", 1},
     },
     result = "scrapmetal",
-	result_count = 8
+	result_count = 8,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1126,7 +1219,8 @@ data:extend(
       {"solar-panel", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1138,7 +1232,8 @@ data:extend(
       {"diesel-locomotive", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1150,7 +1245,8 @@ data:extend(
       {"cargo-wagon", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1162,7 +1258,8 @@ data:extend(
       {"straight-rail", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1174,7 +1271,8 @@ data:extend(
       {"curved-rail", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1186,7 +1284,8 @@ data:extend(
       {"player-port", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1198,7 +1297,8 @@ data:extend(
       {"wall", 1},
     },
     result = "scrap",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1210,7 +1310,8 @@ data:extend(
       {"car", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1222,7 +1323,8 @@ data:extend(
       {"science-pack-1", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1234,7 +1336,8 @@ data:extend(
       {"science-pack-2", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1246,7 +1349,8 @@ data:extend(
       {"science-pack-3", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1258,7 +1362,8 @@ data:extend(
       {"alien-science-pack", 1},
     },
     result = "scrap",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1270,7 +1375,8 @@ data:extend(
       {"lab", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1282,7 +1388,8 @@ data:extend(
       {"train-stop", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1294,7 +1401,8 @@ data:extend(
       {"rail-signal", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1306,7 +1414,8 @@ data:extend(
       {"basic-transport-belt-to-ground", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1318,7 +1427,8 @@ data:extend(
       {"fast-transport-belt-to-ground", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1330,7 +1440,8 @@ data:extend(
       {"express-transport-belt-to-ground", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1342,7 +1453,8 @@ data:extend(
       {"basic-splitter", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1354,7 +1466,8 @@ data:extend(
       {"fast-splitter", 1},
     },
     result = "scrapmetal",
-	result_count = 3
+	result_count = 3,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1366,7 +1479,8 @@ data:extend(
       {"express-splitter", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1378,7 +1492,8 @@ data:extend(
       {"advanced-circuit", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1390,7 +1505,8 @@ data:extend(
       {"construction-robot", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1402,7 +1518,8 @@ data:extend(
       {"logistic-robot", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1411,10 +1528,11 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"logistic-chest-provider", 1},
+      {"logistic-chest-passive-provider", 1},
     },
     result = "scrapmetal",
-	result_count = 7
+	result_count = 7,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1426,7 +1544,8 @@ data:extend(
       {"logistic-chest-storage", 1},
     },
     result = "scrapmetal",
-	result_count = 7
+	result_count = 7,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1438,7 +1557,8 @@ data:extend(
       {"logistic-chest-requester", 1},
     },
     result = "scrapmetal",
-	result_count = 7
+	result_count = 7,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1450,7 +1570,8 @@ data:extend(
       {"rocket-defense", 1},
     },
     result = "scrapmetal",
-	result_count = 64
+	result_count = 6,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1462,7 +1583,8 @@ data:extend(
       {"roboport", 1},
     },
     result = "scrapmetal",
-	result_count = 12
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1474,7 +1596,8 @@ data:extend(
       {"coin", 10},
     },
     result = "scrapmetal",
-	result_count = 11
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1486,7 +1609,8 @@ data:extend(
       {"big-electric-pole", 1},
     },
     result = "scrapmetal",
-	result_count = 2
+	result_count = 2,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1498,7 +1622,8 @@ data:extend(
       {"medium-electric-pole", 1},
     },
     result = "scrapmetal",
-	result_count = 1
+	result_count = 1,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1510,7 +1635,8 @@ data:extend(
       {"substation", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1522,7 +1648,8 @@ data:extend(
       {"steel-furnace", 1},
     },
     result = "scrapmetal",
-	result_count = 4
+	result_count = 4,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1534,7 +1661,8 @@ data:extend(
       {"electric-furnace", 1},
     },
     result = "scrapmetal",
-	result_count = 8
+	result_count = 8,
+	hidden = true
   },
   {
     type = "recipe",
@@ -1546,7 +1674,8 @@ data:extend(
       {"basic-beacon", 1},
     },
     result = "scrapmetal",
-	result_count = 8
+	result_count = 8,
+	hidden = true
   },
 }
 )

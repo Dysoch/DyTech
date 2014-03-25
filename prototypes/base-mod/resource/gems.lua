@@ -1,71 +1,72 @@
 data:extend(
 {
-	{
-		type = "particle",
-		name = "gem-particle",
-		flags = {},
-		life_time = 180,
-		pictures = {
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-1.png",
-				priority = "extra-high",
-				frame_width = 5,
-				frame_height = 5,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-2.png",
-				priority = "extra-high",
-				frame_width = 7,
-				frame_height = 5,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-3.png",
-				priority = "extra-high",
-				frame_width = 6,
-				frame_height = 7,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-4.png",
-				priority = "extra-high",
-				frame_width = 9,
-				frame_height = 8,
-				frame_count = 1
-			}
-		},
-		shadows = {
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-1.png",
-				priority = "extra-high",
-				frame_width = 5,
-				frame_height = 5,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-2.png",
-				priority = "extra-high",
-				frame_width = 7,
-				frame_height = 5,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-3.png",
-				priority = "extra-high",
-				frame_width = 6,
-				frame_height = 7,
-				frame_count = 1
-			},
-			{
-				filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-4.png",
-				priority = "extra-high",
-				frame_width = 9,
-				frame_height = 8,
-				frame_count = 1
-			}
-		}
+  {
+	type = "particle",
+	name = "gem-particle",
+	flags = {},
+	life_time = 180,
+	pictures = {
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-1.png",
+		priority = "extra-high",
+		frame_width = 5,
+		frame_height = 5,
+		frame_count = 1
+	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-2.png",
+		priority = "extra-high",
+		frame_width = 7,
+		frame_height = 5,
+		frame_count = 1
+	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-3.png",
+		priority = "extra-high",
+		frame_width = 6,
+		frame_height = 7,
+		frame_count = 1
+	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-4.png",
+		priority = "extra-high",
+		frame_width = 9,
+		frame_height = 8,
+		frame_count = 1
+	  }
 	},
+	shadows = 
+	{
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-1.png",
+		priority = "extra-high",
+		frame_width = 5,
+		frame_height = 5,
+		frame_count = 1
+	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-2.png",
+		priority = "extra-high",
+		frame_width = 7,
+		frame_height = 5,
+		frame_count = 1
+	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-3.png",
+		priority = "extra-high",
+		frame_width = 6,
+		frame_height = 7,
+		frame_count = 1
+   	  },
+	  {
+		filename = "__DyTech-Graphics__/graphics/entity/gem/gem-particle-shadow-4.png",
+		priority = "extra-high",
+		frame_width = 9,
+		frame_height = 8,
+		frame_count = 1
+	  }
+	}
+  },
   {
     type = "resource",
     name = "gems",

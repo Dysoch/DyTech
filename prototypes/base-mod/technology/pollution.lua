@@ -63,7 +63,7 @@ data:extend(
       time = 50
     },
     order = "p-2",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -96,7 +96,7 @@ data:extend(
       time = 50
     },
     order = "p-3",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -129,7 +129,7 @@ data:extend(
       time = 50
     },
     order = "p-4",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -162,7 +162,7 @@ data:extend(
       time = 50
     },
     order = "p-5",
-	upgrade=true
+	upgrade = true,
   },
 }
 )

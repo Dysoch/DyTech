@@ -1,5 +1,6 @@
 pipecoverspictures = function()
-  return {
+return 
+  {
     north =
     {
       filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
@@ -32,7 +33,7 @@ pipecoverspictures = function()
 end
 
 function assembler3pipepictures()
-  return
+return
   {
     north =
     {
@@ -70,7 +71,7 @@ function assembler3pipepictures()
 end
 
 function pipepictures()
-  return 
+return 
   {
     straight_vertical_single =
     {

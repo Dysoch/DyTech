@@ -16,15 +16,15 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "logistic-chest-provider-1",
+    name = "logistic-chest-passive-provider-1",
     enabled = false,
     energy_required = 1,
     ingredients =
     {
-      {"logistic-chest-provider", 1},
+      {"logistic-chest-passive-provider", 1},
       {"advanced-circuit", 5}
     },
-    result = "logistic-chest-provider-1"
+    result = "logistic-chest-passive-provider-1"
   },
   {
     type = "recipe",
@@ -66,15 +66,15 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "logistic-chest-provider-2",
+    name = "logistic-chest-passive-provider-2",
     enabled = false,
     energy_required = 1,
     ingredients =
     {
-      {"logistic-chest-provider-1", 1},
+      {"logistic-chest-passive-provider-1", 1},
       {"circuit3", 5}
     },
-    result = "logistic-chest-provider-2"
+    result = "logistic-chest-passive-provider-2"
   },
   {
     type = "recipe",

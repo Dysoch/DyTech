@@ -122,7 +122,7 @@ data:extend(
       },
       time = 30
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-2"
   },
   {
@@ -149,7 +149,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-3"
   },
   {
@@ -198,7 +198,7 @@ data:extend(
       },
       time = 30
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-2"
   },
   {
@@ -225,7 +225,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-3"
   },
   {
@@ -274,7 +274,7 @@ data:extend(
       },
       time = 30
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-2"
   },
   {
@@ -301,7 +301,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-3"
   },
   {
@@ -331,7 +331,7 @@ data:extend(
       },
       time = 30
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-1"
   },
   {
@@ -362,7 +362,7 @@ data:extend(
       },
       time = 30
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-2"
   },
   {
@@ -393,7 +393,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-3"
   },
   {
@@ -425,7 +425,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-4"
   },
   {
@@ -458,7 +458,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-5"
   },
   {
@@ -491,7 +491,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-d-6"
   },
   {
@@ -521,7 +521,7 @@ data:extend(
       },
       time = 30
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-1"
   },
   {
@@ -551,7 +551,7 @@ data:extend(
       },
       time = 30
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-2"
   },
   {
@@ -582,7 +582,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-3"
   },
   {
@@ -614,7 +614,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-4"
   },
   {
@@ -647,7 +647,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-5"
   },
   {
@@ -680,7 +680,7 @@ data:extend(
       },
       time = 60
     },
-    upgrade = "true",
+	upgrade = true,
     order = "b-s-6"
   },
   {

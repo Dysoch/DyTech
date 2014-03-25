@@ -17,7 +17,7 @@ data:extend(
         percent = 70
       }
     },
-	fast_replaceable_group = "steam-engine",
+	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
@@ -113,7 +113,7 @@ data:extend(
         percent = 70
       }
     },
-	fast_replaceable_group = "steam-engine",
+	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
@@ -202,7 +202,7 @@ data:extend(
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group = "solar-panel",
+	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
       type = "electric",
@@ -227,7 +227,7 @@ data:extend(
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group = "solar-panel",
+	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
       type = "electric",
@@ -252,7 +252,7 @@ data:extend(
     corpse = "medium-remnants",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
-	fast_replaceable_group = "accumulator",
+	fast_replaceable_group =  "accumulator",
     energy_source =
     {
       type = "electric",
@@ -304,7 +304,7 @@ data:extend(
     corpse = "medium-remnants",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
-	fast_replaceable_group = "accumulator",
+	fast_replaceable_group =  "accumulator",
     energy_source =
     {
       type = "electric",

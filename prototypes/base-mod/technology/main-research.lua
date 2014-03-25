@@ -4,7 +4,7 @@ data:extend(
     type = "technology",
     name = "dytech-1",
     icon = "__DyTech-Graphics__/graphics/technology/dytech.png",
-	effects =
+		effects =
     {
 	  {
         type = "unlock-recipe",
@@ -35,7 +35,7 @@ data:extend(
     type = "technology",
     name = "dytech-2",
     icon = "__DyTech-Graphics__/graphics/technology/dytech.png",
-	effects =
+		effects =
     {
       {
         type = "unlock-recipe",
@@ -62,13 +62,13 @@ data:extend(
       time = 1
     },
     order = "d-t-2",
-	upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
     name = "dytech-3",
     icon = "__DyTech-Graphics__/graphics/technology/dytech.png",
-	effects =
+		effects =
     {
       {
         type = "unlock-recipe",
@@ -88,13 +88,13 @@ data:extend(
       time = 1
     },
     order = "d-t-3",
-	upgrade=true
+	upgrade = true,
   },  
   {
     type = "technology",
     name = "dytech-4",
     icon = "__DyTech-Graphics__/graphics/technology/dytech.png",
-	effects =
+		effects =
     {
 	  
     },
@@ -112,7 +112,7 @@ data:extend(
       time = 1
     },
     order = "d-t-4",
-	upgrade=true
+	upgrade = true,
   },  
 }
 )

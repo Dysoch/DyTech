@@ -69,7 +69,7 @@ data:extend(
       },
       time = 30
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-2"
   },
   {
@@ -96,7 +96,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-3"
   },
   {
@@ -123,7 +123,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-4"
   },
   {
@@ -150,7 +150,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-5"
   },
   {
@@ -177,7 +177,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-6"
   },
   {
@@ -204,7 +204,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-7"
   },
   {
@@ -231,7 +231,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cl-8"
   },
   --[[Pollution Producing Modules]]--
@@ -282,7 +282,7 @@ data:extend(
       },
       time = 30
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-2"
   },
   {
@@ -309,7 +309,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-3"
   },
   {
@@ -336,7 +336,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-4"
   },
   {
@@ -363,7 +363,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-5"
   },
   {
@@ -390,7 +390,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-6"
   },
   {
@@ -417,7 +417,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-7"
   },
   {
@@ -444,7 +444,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-cr-8"
   },
   --[[Speed Modules]]--
@@ -472,7 +472,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-4"
   },
   {
@@ -499,7 +499,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-5"
   },
   {
@@ -526,7 +526,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-6"
   },
   {
@@ -553,7 +553,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-7"
   },
   {
@@ -580,7 +580,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-s-8"
   },
   --[[Effectivity Modules]]--
@@ -608,7 +608,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-4"
   },
   {
@@ -635,7 +635,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-5"
   },
   {
@@ -662,7 +662,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-6"
   },
   {
@@ -689,7 +689,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-7"
   },
   {
@@ -716,7 +716,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-e-8"
   },
   --[[Productivity Modules]]--
@@ -744,7 +744,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-4"
   },
   {
@@ -771,7 +771,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-5"
   },
   {
@@ -798,7 +798,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-6"
   },
   {
@@ -825,7 +825,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-7"
   },
   {
@@ -852,7 +852,7 @@ data:extend(
       },
       time = 60
     },
-	upgrade = "true",
+	upgrade = true,
     order = "m-p-8"
   },
 }

@@ -72,7 +72,7 @@ data:extend(
       time = 50
     },
     order = "b-2",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -98,7 +98,7 @@ data:extend(
       time = 50
     },
     order = "r-2",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -125,7 +125,7 @@ data:extend(
       time = 60
     },
     order = "b-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -152,7 +152,7 @@ data:extend(
       time = 60
     },
     order = "r-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -179,7 +179,7 @@ data:extend(
       time = 70
     },
     order = "r-4",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -331,7 +331,7 @@ data:extend(
       time = 50
     },
     order = "f-2",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -358,7 +358,7 @@ data:extend(
       time = 75
     },
     order = "f-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -385,7 +385,7 @@ data:extend(
       time = 100
     },
     order = "f-4",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -435,7 +435,7 @@ data:extend(
       time = 50
     },
     order = "i-e-2",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -462,7 +462,7 @@ data:extend(
       time = 75
     },
     order = "i-e-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -489,7 +489,7 @@ data:extend(
       time = 100
     },
     order = "i-e-4",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -539,7 +539,7 @@ data:extend(
       time = 20
     },
     order = "e-2",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -566,7 +566,7 @@ data:extend(
       time = 40
     },
     order = "e-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -594,7 +594,7 @@ data:extend(
       time = 80
     },
     order = "e-4",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -622,7 +622,7 @@ data:extend(
       time = 80
     },
     order = "e-5",
-    upgrade=true
+	upgrade = true,
   },
 }
 )

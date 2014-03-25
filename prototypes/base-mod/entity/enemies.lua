@@ -665,7 +665,7 @@ data:extend(
     flags = {"placeable-player", "placeable-enemy"},
     minable = {mining_time = 1, result = "biter-spawner"},
     max_health = 500,
-	order= "b-b-g",
+	order = "b-b-g",
     resistances =
     {
       {

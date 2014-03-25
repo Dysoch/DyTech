@@ -763,7 +763,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.02
   },
@@ -823,7 +823,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.02
   },
@@ -883,7 +883,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.02
   },
@@ -943,7 +943,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.03
   },
@@ -1003,7 +1003,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.06
   },
@@ -1063,7 +1063,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/smart-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
     rotation_speed = 0.06
   },
@@ -1126,7 +1126,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-platform.png"
     },
-	programmable = true,
+		programmable = true,
     filter_count = 5,
 	--[[module_slots = 4,]]-- --NOT WORKING YET!
 	--[[allowed_effects = {"consumption", "speed"},]]-- --NOT WORKING YET!
@@ -1191,7 +1191,7 @@ data:extend(
       height = 46,
       sheet = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-platform.png"
     },
-	programmable = true,
+		programmable = true,
 	--[[module_slots = 4,]]-- --NOT WORKING YET!
 	--[[allowed_effects = {"consumption", "speed"},]]-- --NOT WORKING YET!
     rotation_speed = 0.33  
@@ -1256,7 +1256,7 @@ data:extend(
       height = 46,
       sheet = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png"
     },
-	filter_count = 5,
+		filter_count = 5,
   },
 }
 )

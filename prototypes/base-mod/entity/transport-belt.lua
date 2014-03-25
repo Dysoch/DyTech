@@ -62,7 +62,6 @@ data:extend(
   },
   {
     type = "transport-belt-to-ground",
-    distance_to_enter = 0.35,
     name = "super-transport-belt-to-ground",
     icon = "__DyTech-Graphics__/graphics/icons/super-transport-belt-to-ground.png",
     flags = {"placeable-neutral", "player-creation"},
@@ -87,6 +86,7 @@ data:extend(
     collision_box = {{-0.2, -0.2}, {0.2, 0.05}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
+    distance_to_enter = 0.35,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/super-transport-belt.png",
@@ -183,7 +183,6 @@ data:extend(
   },
   {
     type = "transport-belt-to-ground",
-    distance_to_enter = 0.35,
     name = "extreme-transport-belt-to-ground",
     icon = "__DyTech-Graphics__/graphics/icons/extreme-transport-belt-to-ground.png",
     flags = {"placeable-neutral", "player-creation"},
@@ -208,6 +207,7 @@ data:extend(
     collision_box = {{-0.2, -0.2}, {0.2, 0.05}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
+    distance_to_enter = 0.35,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/extreme-transport-belt.png",

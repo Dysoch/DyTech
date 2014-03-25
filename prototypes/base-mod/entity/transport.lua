@@ -151,7 +151,7 @@ data:extend(
         }
       }
     },
-	light =
+		light =
     {
       {
         type = "oriented",
@@ -247,7 +247,7 @@ data:extend(
         }
       }
     },
-	light =
+		light =
     {
       {
         type = "oriented",

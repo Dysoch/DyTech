@@ -2,50 +2,50 @@ require "util"
 --[[BASE EDIT]]--
 laser_turret_extension =
 {
-  filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-ruby.png",
-  priority = "medium",
-  frame_width = 131,
-  frame_height = 74,
-  direction_count = 4,
-  frame_count = 5,
-  axially_symmetrical = false,
-  shift = {1.171875, -0.34375}
+		filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-ruby.png",
+		priority = "medium",
+		frame_width = 131,
+		frame_height = 74,
+		direction_count = 4,
+		frame_count = 5,
+		axially_symmetrical = false,
+		shift = {1.171875, -0.34375}
 }
 
 laser_turret_extension_sapphire =
 {
-  filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-sapphire.png",
-  priority = "medium",
-  frame_width = 131,
-  frame_height = 74,
-  direction_count = 4,
-  frame_count = 5,
-  axially_symmetrical = false,
-  shift = {1.171875, -0.34375}
+		filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-sapphire.png",
+		priority = "medium",
+		frame_width = 131,
+		frame_height = 74,
+		direction_count = 4,
+		frame_count = 5,
+		axially_symmetrical = false,
+		shift = {1.171875, -0.34375}
 }
 
 laser_turret_extension_emerald =
 {
-  filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-emerald.png",
-  priority = "medium",
-  frame_width = 131,
-  frame_height = 74,
-  direction_count = 4,
-  frame_count = 5,
-  axially_symmetrical = false,
-  shift = {1.171875, -0.34375}
+		filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-emerald.png",
+		priority = "medium",
+		frame_width = 131,
+		frame_height = 74,
+		direction_count = 4,
+		frame_count = 5,
+		axially_symmetrical = false,
+		shift = {1.171875, -0.34375}
 }
 
 laser_turret_extension_topaz =
 {
-  filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-extension-topaz.png",
-  priority = "medium",
-  frame_width = 131,
-  frame_height = 74,
-  direction_count = 4,
-  frame_count = 5,
-  axially_symmetrical = false,
-  shift = {1.171875, -0.34375}
+		filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-extension-topaz.png",
+		priority = "medium",
+		frame_width = 131,
+		frame_height = 74,
+		direction_count = 4,
+		frame_count = 5,
+		axially_symmetrical = false,
+		shift = {1.171875, -0.34375}
 }
 
 data:extend(
@@ -228,7 +228,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -321,7 +321,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -413,7 +413,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -505,7 +505,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -598,7 +598,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -690,7 +690,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -782,7 +782,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -875,7 +875,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -967,7 +967,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
@@ -1059,7 +1059,7 @@ data:extend(
     corpse = "small-remnants",
     collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-	fast_replaceable_group = "laser-turret",
+	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",

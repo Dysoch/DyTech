@@ -11,9 +11,10 @@ data:extend(
 	  {type="item", name="sand", amount=4},
     },
     results = 
-	{
-	  {type="item", name="clay", amount=1}
-	}
+    {
+      {type="item", name="clay", amount=1}
+    },
+    hidden=true
   },
   {
     type = "recipe",

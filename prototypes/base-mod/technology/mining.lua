@@ -48,7 +48,7 @@ data:extend(
       time = 30
     },
     order = "m-3",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -75,7 +75,7 @@ data:extend(
       time = 45
     },
     order = "m-4",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -102,7 +102,7 @@ data:extend(
       time = 60
     },
     order = "m-5",
-    upgrade=true
+	upgrade = true,
   },
   {
     type = "technology",
@@ -131,7 +131,7 @@ data:extend(
       time = 150
     },
     order = "m-6",
-    upgrade=true
+	upgrade = true,
   },
 }
 )
