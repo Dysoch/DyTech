@@ -219,7 +219,7 @@ data:extend(
     stage_counts = {1000, 600, 400, 200, 100, 50, 20, 10},
     stages =
     {
-      filename = "__DyTech__/graphics/entity/gemstone-deposit.png",
+      filename = "__DyTech-Graphics__/graphics/entity/gemstone-deposit.png",
       priority = "extra-high",
       frame_width = 38,
       frame_height = 38,

@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "recycler",
-    icon = "__DyTech__/graphics/icons/recycler.png",
+    icon = "__DyTech-Graphics__/graphics/icons/recycler.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling",
     order = "re",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "scrap",
-    icon = "__DyTech__/graphics/icons/scrap.png",
+    icon = "__DyTech-Graphics__/graphics/icons/scrap.png",
     flags = {"goes-to-quickbar"},
     subgroup = "recycled",
     order = "s",
@@ -22,7 +22,7 @@ data:extend(
   {
     type = "item",
     name = "scrapmetal",
-    icon = "__DyTech__/graphics/icons/scrapmetal.png",
+    icon = "__DyTech-Graphics__/graphics/icons/scrapmetal.png",
     flags = {"goes-to-quickbar"},
     subgroup = "recycled",
     order = "sm",

@@ -30,7 +30,7 @@ data:extend(
   {
     type = "item",
     name = "sandbag",
-    icon = "__DyTech__/graphics/icons/sandbag.png",
+    icon = "__DyTech-Graphics__/graphics/icons/sandbag.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "soft",
     order = "s-b-1",

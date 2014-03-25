@@ -38,7 +38,7 @@ laser_turret_extension_emerald =
 
 laser_turret_extension_topaz =
 {
-		filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-extension-topaz.png",
+		filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-extension-topaz.png",
 		priority = "medium",
 		frame_width = 131,
 		frame_height = 74,
@@ -868,7 +868,7 @@ data:extend(
   {
     type = "electric-turret",
     name = "laser-turret-sniper-1",
-    icon = "__DyTech__/graphics/icons/laser-topaz-1.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-1.png",
     flags = { "placeable-player", "placeable-enemy", "player-creation" },
     minable = { mining_time = 0.5, result = "laser-turret-sniper-1" },
     max_health = 1000,
@@ -917,7 +917,7 @@ data:extend(
     preparing_animation = laser_turret_extension_topaz,
     prepared_animation =
     {
-      filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-topaz.png",
       priority = "medium",
       frame_width = 131,
       frame_height = 72,
@@ -960,7 +960,7 @@ data:extend(
   {
     type = "electric-turret",
     name = "laser-turret-sniper-2",
-    icon = "__DyTech__/graphics/icons/laser-topaz-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-2.png",
     flags = { "placeable-player", "placeable-enemy", "player-creation" },
     minable = { mining_time = 0.5, result = "laser-turret-sniper-2" },
     max_health = 1000,
@@ -1009,7 +1009,7 @@ data:extend(
     preparing_animation = laser_turret_extension_topaz,
     prepared_animation =
     {
-      filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-topaz.png",
       priority = "medium",
       frame_width = 131,
       frame_height = 72,
@@ -1052,7 +1052,7 @@ data:extend(
   {
     type = "electric-turret",
     name = "laser-turret-sniper-3",
-    icon = "__DyTech__/graphics/icons/laser-topaz-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-3.png",
     flags = { "placeable-player", "placeable-enemy", "player-creation" },
     minable = { mining_time = 0.5, result = "laser-turret-sniper-3" },
     max_health = 4000,
@@ -1101,7 +1101,7 @@ data:extend(
     preparing_animation = laser_turret_extension_topaz,
     prepared_animation =
     {
-      filename = "__DyTech__/graphics/entity/laser-turrets/laser-turret-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser-turrets/laser-turret-topaz.png",
       priority = "medium",
       frame_width = 131,
       frame_height = 72,

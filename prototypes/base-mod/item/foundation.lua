@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "wood-foundation",
-    icon = "__DyTech__/graphics/icons/wood-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/wood-foundation.png",
     flags = {"goes-to-quickbar"},
     subgroup = "foundation",
     order = "f-1",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "stone-foundation",
-    icon = "__DyTech__/graphics/icons/stone-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/stone-foundation.png",
     flags = {"goes-to-quickbar"},
     subgroup = "foundation",
     order = "f-2",
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "iron-foundation",
-    icon = "__DyTech__/graphics/icons/iron-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/iron-foundation.png",
     flags = {"goes-to-quickbar"},
     subgroup = "foundation",
     order = "f-3",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "steel-foundation",
-    icon = "__DyTech__/graphics/icons/steel-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/steel-foundation.png",
     flags = {"goes-to-quickbar"},
     subgroup = "foundation",
     order = "f-4",

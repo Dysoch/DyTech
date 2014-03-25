@@ -51,7 +51,7 @@ data:extend(
   {
     type = "mining-tool",
     name = "wooden-axe",
-    icon = "__DyTech__/graphics/icons/wooden-axe.png",
+    icon = "__DyTech-Graphics__/graphics/icons/wooden-axe.png",
     flags = {"goes-to-main-inventory"},
     action =
     {

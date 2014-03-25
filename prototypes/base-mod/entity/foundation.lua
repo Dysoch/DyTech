@@ -3,7 +3,7 @@ data:extend(
   {
     type = "wall",
     name = "wood-foundation",
-    icon = "__DyTech__/graphics/icons/wood-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/wood-foundation.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "wood-foundation"},
     max_health = 100,
@@ -15,7 +15,7 @@ data:extend(
       single =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -25,14 +25,14 @@ data:extend(
       straight_vertical =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -42,7 +42,7 @@ data:extend(
       straight_vertical_under_ending =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -52,21 +52,21 @@ data:extend(
       straight_horizontal =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -76,7 +76,7 @@ data:extend(
       corner_right_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -86,7 +86,7 @@ data:extend(
       corner_right_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -96,7 +96,7 @@ data:extend(
       corner_left_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -106,7 +106,7 @@ data:extend(
       corner_left_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -116,7 +116,7 @@ data:extend(
       t_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -126,7 +126,7 @@ data:extend(
       t_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -136,7 +136,7 @@ data:extend(
       t_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -146,7 +146,7 @@ data:extend(
       t_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -156,7 +156,7 @@ data:extend(
       cross =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -166,7 +166,7 @@ data:extend(
       ending_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -176,7 +176,7 @@ data:extend(
       ending_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -186,7 +186,7 @@ data:extend(
       ending_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -196,7 +196,7 @@ data:extend(
       ending_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/wood.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/wood.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -208,7 +208,7 @@ data:extend(
   {
     type = "wall",
     name = "stone-foundation",
-    icon = "__DyTech__/graphics/icons/stone-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/stone-foundation.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "stone-foundation"},
     max_health = 250,
@@ -220,7 +220,7 @@ data:extend(
       single =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -230,14 +230,14 @@ data:extend(
       straight_vertical =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -247,7 +247,7 @@ data:extend(
       straight_vertical_under_ending =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -257,21 +257,21 @@ data:extend(
       straight_horizontal =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -281,7 +281,7 @@ data:extend(
       corner_right_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -291,7 +291,7 @@ data:extend(
       corner_right_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -301,7 +301,7 @@ data:extend(
       corner_left_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -311,7 +311,7 @@ data:extend(
       corner_left_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -321,7 +321,7 @@ data:extend(
       t_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -331,7 +331,7 @@ data:extend(
       t_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -341,7 +341,7 @@ data:extend(
       t_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -351,7 +351,7 @@ data:extend(
       t_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -361,7 +361,7 @@ data:extend(
       cross =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -371,7 +371,7 @@ data:extend(
       ending_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -381,7 +381,7 @@ data:extend(
       ending_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -391,7 +391,7 @@ data:extend(
       ending_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -401,7 +401,7 @@ data:extend(
       ending_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/stone.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/stone.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -413,7 +413,7 @@ data:extend(
   {
     type = "wall",
     name = "iron-foundation",
-    icon = "__DyTech__/graphics/icons/iron-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/iron-foundation.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "iron-foundation"},
     max_health = 500,
@@ -425,7 +425,7 @@ data:extend(
       single =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -435,14 +435,14 @@ data:extend(
       straight_vertical =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -452,7 +452,7 @@ data:extend(
       straight_vertical_under_ending =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -462,21 +462,21 @@ data:extend(
       straight_horizontal =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -486,7 +486,7 @@ data:extend(
       corner_right_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -496,7 +496,7 @@ data:extend(
       corner_right_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -506,7 +506,7 @@ data:extend(
       corner_left_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -516,7 +516,7 @@ data:extend(
       corner_left_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -526,7 +526,7 @@ data:extend(
       t_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -536,7 +536,7 @@ data:extend(
       t_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -546,7 +546,7 @@ data:extend(
       t_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -556,7 +556,7 @@ data:extend(
       t_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -566,7 +566,7 @@ data:extend(
       cross =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -576,7 +576,7 @@ data:extend(
       ending_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -586,7 +586,7 @@ data:extend(
       ending_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -596,7 +596,7 @@ data:extend(
       ending_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -606,7 +606,7 @@ data:extend(
       ending_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/iron.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/iron.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -618,7 +618,7 @@ data:extend(
   {
     type = "wall",
     name = "steel-foundation",
-    icon = "__DyTech__/graphics/icons/steel-foundation.png",
+    icon = "__DyTech-Graphics__/graphics/icons/steel-foundation.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "steel-foundation"},
     max_health = 1000,
@@ -630,7 +630,7 @@ data:extend(
       single =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -640,14 +640,14 @@ data:extend(
       straight_vertical =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -657,7 +657,7 @@ data:extend(
       straight_vertical_under_ending =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -667,21 +667,21 @@ data:extend(
       straight_horizontal =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
           shift = {0.0, 0.0}
         },
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -691,7 +691,7 @@ data:extend(
       corner_right_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -701,7 +701,7 @@ data:extend(
       corner_right_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -711,7 +711,7 @@ data:extend(
       corner_left_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -721,7 +721,7 @@ data:extend(
       corner_left_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -731,7 +731,7 @@ data:extend(
       t_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -741,7 +741,7 @@ data:extend(
       t_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -751,7 +751,7 @@ data:extend(
       t_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -761,7 +761,7 @@ data:extend(
       t_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -771,7 +771,7 @@ data:extend(
       cross =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -781,7 +781,7 @@ data:extend(
       ending_up =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -791,7 +791,7 @@ data:extend(
       ending_down =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -801,7 +801,7 @@ data:extend(
       ending_right =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,
@@ -811,7 +811,7 @@ data:extend(
       ending_left =
       {
         {
-          filename = "__DyTech__/graphics/entity/foundation/steel.png",
+          filename = "__DyTech-Graphics__/graphics/entity/foundation/steel.png",
           priority = "extra-high",
           width = 32,
           height = 32,

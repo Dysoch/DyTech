@@ -97,7 +97,7 @@ data:extend(
   {
     type = "item",
     name = "laser-turret-sniper-1",
-    icon = "__DyTech__/graphics/icons/laser-topaz-1.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "defensive-structure",
     order = "l-t-s-1",
@@ -107,7 +107,7 @@ data:extend(
   {
     type = "item",
     name = "laser-turret-sniper-2",
-    icon = "__DyTech__/graphics/icons/laser-topaz-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "defensive-structure",
     order = "l-t-s-2",
@@ -117,7 +117,7 @@ data:extend(
   {
     type = "item",
     name = "laser-turret-sniper-3",
-    icon = "__DyTech__/graphics/icons/laser-topaz-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/laser-topaz-3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "defensive-structure",
     order = "l-t-s-3",

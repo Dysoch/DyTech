@@ -3,7 +3,7 @@ data:extend(
   {
     type = "logistic-robot",
     name = "logistic-robot-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-1.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = 
 	{
@@ -40,7 +40,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-passive-provider-1",
-    icon = "__DyTech__/graphics/icons/logistic-chest-passive-provider-1.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -57,7 +57,7 @@ data:extend(
     logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech__/graphics/icons/logistic-chest-passive-provider-1.png",
+      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-passive-provider-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -67,7 +67,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-storage-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -94,7 +94,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-requester-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -121,7 +121,7 @@ data:extend(
   {
     type = "logistic-robot",
     name = "logistic-robot-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-2.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = 
 	{
@@ -158,7 +158,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-passive-provider-2",
-    icon = "__DyTech__/graphics/icons/logistic-chest-passive-provider-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -175,7 +175,7 @@ data:extend(
     logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech__/graphics/icons/logistic-chest-passive-provider-2.png",
+      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-passive-provider-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -185,7 +185,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-storage-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -212,7 +212,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-requester-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{

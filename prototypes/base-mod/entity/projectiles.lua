@@ -298,7 +298,7 @@ data:extend(
     light = {intensity = 0.8, size = 10},
     animation =
     {
-      filename = "__DyTech__/graphics/entity/laser/laser-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
       frame_width = 7,
       frame_height = 14,
@@ -332,7 +332,7 @@ data:extend(
     light = {intensity = 0.8, size = 10},
     animation =
     {
-      filename = "__DyTech__/graphics/entity/laser/laser-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
       frame_width = 7,
       frame_height = 14,
@@ -366,7 +366,7 @@ data:extend(
     light = {intensity = 0.8, size = 10},
     animation =
     {
-      filename = "__DyTech__/graphics/entity/laser/laser-topaz.png",
+      filename = "__DyTech-Graphics__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
       frame_width = 7,
       frame_height = 14,

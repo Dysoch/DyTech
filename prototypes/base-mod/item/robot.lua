@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-robot-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-r-1",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-passive-provider-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-p-1",
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-storage-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-s-1",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-requester-1",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-2.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-r-1",
@@ -43,7 +43,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-robot-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-r-2",
@@ -53,7 +53,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-passive-provider-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-p-2",
@@ -63,7 +63,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-storage-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-s-2",
@@ -73,7 +73,7 @@ data:extend(
   {
     type = "item",
     name = "logistic-chest-requester-2",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-3.png",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "l-c-r-2",

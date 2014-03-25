@@ -85,7 +85,7 @@ data:extend(
   {
     type = "furnace",
     name = "recycler",
-    icon = "__DyTech__/graphics/icons/recycler.png",
+    icon = "__DyTech-Graphics__/graphics/icons/recycler.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "recycler"},
     max_health = 150,
@@ -113,7 +113,7 @@ data:extend(
     },
     on_animation =
     {
-      filename = "__DyTech__/graphics/entity/recycler/recycler.png",
+      filename = "__DyTech-Graphics__/graphics/entity/recycler/recycler.png",
       priority = "high",
       x = 131,
       frame_width = 131,
@@ -124,7 +124,7 @@ data:extend(
     },
     off_animation =
     {
-      filename = "__DyTech__/graphics/entity/recycler/recycler.png",
+      filename = "__DyTech-Graphics__/graphics/entity/recycler/recycler.png",
       priority = "high",
       frame_width = 131,
       frame_height = 102,

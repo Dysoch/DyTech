@@ -85,46 +85,6 @@ data:extend(
     stack_size = 16
   },
   {
-    type = "item",
-    name = "logistic-robot",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-robot-1.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "logistic-network",
-    order = "l-r-1",
-    place_result = "logistic-robot",
-    stack_size = 32
-  },
-  {
-    type = "item",
-    name = "logistic-chest-passive-provider",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-passive-provider-1.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "logistic-network",
-    order = "l-c-p-1",
-    place_result = "logistic-chest-passive-provider",
-    stack_size = 64
-  },
-  {
-    type = "item",
-    name = "logistic-chest-storage",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-storage-1.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "logistic-network",
-    order = "l-c-s-1",
-    place_result = "logistic-chest-storage",
-    stack_size = 64
-  },
-  {
-    type = "item",
-    name = "logistic-chest-requester",
-    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-requester-1.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "logistic-network",
-    order = "l-c-r-1",
-    place_result = "logistic-chest-requester",
-    stack_size = 64
-  },
-  {
     type = "module",
     name = "speed-module",
     icon = "__DyTech-Graphics__/graphics/icons/speed-module.png",

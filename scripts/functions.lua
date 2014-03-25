@@ -9,8 +9,7 @@ function CollectByPosition(name, radius, ext, glob, pairs, game)
 	for i, value in pairs(glob[name]) do
     local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
 		if not foundcollector[1] then
-		--table.remove(glob[name], i) --this caused it to remove the entry on the second loop because it doesn't find the -1 (or vice versa)
-		--so no way to remove invalid entries from table like this (without modifying how the entries are made, which you have to do for the above
+		table.remove(glob[name], i)
 		break
 		else
 			for _, item in pairs(game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}) do
@@ -91,6 +90,7 @@ function OnLoad(glob)
 	if not glob.unlock.umd then glob.unlock.umd=0 end
 	if not glob.craftfoundation then glob.craftfoundation={wood=0, stone=0, iron=0, steel=0} end
 	if not glob.reward then glob.reward={axe1=false} end
+	if not glob.reward.axe1 then glob.reward.axe1=false end
 	if not glob.time then glob.time=0 end
 	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0} end
 	if not glob.combat.dytech then glob.combat.dytech=0 end
