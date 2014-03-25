@@ -5,7 +5,7 @@ data:extend(
     name = "silicon",
     icon = "__DyTech-Graphics__/graphics/icons/silicon.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "metalinter",
+    subgroup = "metallurgy-intermediates",
     order = "silicon",
     stack_size = 128
   },
@@ -14,7 +14,7 @@ data:extend(
     name = "carbon",
     icon = "__DyTech-Graphics__/graphics/icons/carbon.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "metalinter",
+    subgroup = "metallurgy-intermediates",
     order = "carbon",
     stack_size = 128
   },
@@ -23,7 +23,7 @@ data:extend(
     name = "clay",
     icon = "__DyTech-Graphics__/graphics/icons/clay.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "metalinter",
+    subgroup = "metallurgy-intermediates",
     order = "clay",
     stack_size = 128
   },
