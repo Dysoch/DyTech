@@ -11,7 +11,7 @@ require("prototypes.alien-tech.drilling-tower")
 
 
 -- Metal Processing
-if data.raw.resource["lava-600"] then --Added When DyTech is found. DyTech is set to be loaded first!
+if data.raw.resource["lava-600"] then --Added When DyTech is found. DyTech is set to be loaded first! (done in info.json)
 	require("prototypes.metal-processing.tech-dytech")
 	require("prototypes.metal-processing.tin-recipes-dytech")
 	require("prototypes.metal-processing.ores.tin-dytech")

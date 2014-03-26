@@ -5,5 +5,5 @@
 	"title":"Fmod",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=390,",
 	"description":"This mod adds an underground mining drill, and some more awesome stuff, and much more to come, read the forum post for more info.",
-	"dependencies": ["base", "? DyTech >= 1.9.9"]
+	"dependencies": ["base", "? DyTech >= 1.5.0"]
 }
