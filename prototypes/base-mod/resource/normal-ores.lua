@@ -123,7 +123,7 @@ data:extend(
     stage_counts = {100000, 60000, 40000, 20000, 10000, 5000, 2000, 1000},
     stages =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/super-ore.png",
+      filename = "__DyTech-Graphics__/graphics/entity/ores/super-ore.png",
       priority = "extra-high",
       frame_width = 76,
       frame_height = 76,
