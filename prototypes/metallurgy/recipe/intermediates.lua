@@ -21,7 +21,7 @@ data:extend(
     name = "coal-splitting",
 	category = "blast-furnace",
     icon = "__DyTech-Graphics__/graphics/icons/carbon.png",
-    subgroup = "metallurgy-fluid",
+    subgroup = "metallurgy-intermediates",
     energy_required = 4,
 	enabled = false,
     ingredients =

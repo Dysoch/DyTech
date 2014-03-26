@@ -6,7 +6,7 @@ data:extend(
     icon = "__DyTech-Graphics__/graphics/fluid/lava-600.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
-    order="lava-1",
+    order = "lava-1",
     infinite = true,
     minimum = 100,
     normal = 8000,
