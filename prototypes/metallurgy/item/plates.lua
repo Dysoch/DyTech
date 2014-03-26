@@ -46,7 +46,6 @@ data:extend(
     order = "tungsten",
     stack_size = 256
   },
-  --[[Plates from Alloys]]--
   --[[{
     type = "item",
     name = "silicon-steel-plate",

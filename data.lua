@@ -145,29 +145,32 @@ require("prototypes.metallurgy.entity.lava-machines")
 require("prototypes.metallurgy.entity.molten-metal-machines")
 require("prototypes.metallurgy.entity.pipes")
 
--- fluid 3x
-require("prototypes.metallurgy.fluid.base-metals-molten")
+-- fluid 5x
 require("prototypes.metallurgy.fluid.intermediates")
 require("prototypes.metallurgy.fluid.lava")
+--require("prototypes.metallurgy.fluid.metals-molten-advanced")
+require("prototypes.metallurgy.fluid.metals-molten-base")
+require("prototypes.metallurgy.fluid.metals-molten-basic")
 
--- item 9x
---require("prototypes.metallurgy.item.alloys")
+-- item 8x
 require("prototypes.metallurgy.item.assemblers-molds")
 require("prototypes.metallurgy.item.intermediates")
 require("prototypes.metallurgy.item.lava-machines")
 require("prototypes.metallurgy.item.molds")
 require("prototypes.metallurgy.item.molten-metal-machines")
---require("prototypes.metallurgy.item.ores")
+require("prototypes.metallurgy.item.ores")
 require("prototypes.metallurgy.item.pipes")
---require("prototypes.metallurgy.item.plates")
+require("prototypes.metallurgy.item.plates")
 
--- recipe 16x
+-- recipe 20x
 require("prototypes.metallurgy.recipe.assemblers-molds")
-require("prototypes.metallurgy.recipe.base-metals")
 require("prototypes.metallurgy.recipe.intermediates")
 require("prototypes.metallurgy.recipe.lava-heating")
 require("prototypes.metallurgy.recipe.lava-machines")
 require("prototypes.metallurgy.recipe.metal-mixing")
+--require("prototypes.metallurgy.recipe.metals-advanced")
+require("prototypes.metallurgy.recipe.metals-base")
+require("prototypes.metallurgy.recipe.metals-basic")
 require("prototypes.metallurgy.recipe.mold-crafting-ammo-advanced")
 require("prototypes.metallurgy.recipe.mold-crafting-ammo-basic")
 require("prototypes.metallurgy.recipe.mold-crafting-circuit")
@@ -176,7 +179,9 @@ require("prototypes.metallurgy.recipe.mold-crafting-tools")
 require("prototypes.metallurgy.recipe.mold-crafting-wires")
 require("prototypes.metallurgy.recipe.molds")
 require("prototypes.metallurgy.recipe.molten-metal-machines")
-require("prototypes.metallurgy.recipe.ore-smelting")
+--require("prototypes.metallurgy.recipe.ore-smelting-advanced")
+require("prototypes.metallurgy.recipe.ore-smelting-base")
+require("prototypes.metallurgy.recipe.ore-smelting-basic")
 require("prototypes.metallurgy.recipe.pipes")
 
 -- resource 1x
