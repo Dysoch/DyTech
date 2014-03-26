@@ -4,7 +4,7 @@ data:extend(
   {
     type = "item",
     name = "zinc-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/zinc-plate.png",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-zinc.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "zinc",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "tin-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/tin-plate.png",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-tin.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tin",
@@ -22,7 +22,7 @@ data:extend(
   {
     type = "item",
     name = "silver-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/silver-plate.png",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-silver.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "silver",
@@ -31,7 +31,7 @@ data:extend(
   {
     type = "item",
     name = "lead-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/lead-plate.png",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-lead.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "lead",
@@ -40,10 +40,19 @@ data:extend(
   {
     type = "item",
     name = "tungsten-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/tungsten-plate.png",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-tungsten.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tungsten",
+    stack_size = 256
+  },
+  {
+    type = "item",
+    name = "gold-plate",
+    icon = "__DyTech-Graphics__/graphics/icons/plate-gold.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-plates",
+    order = "gold",
     stack_size = 256
   },
   --[[{

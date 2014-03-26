@@ -20,6 +20,7 @@ data:extend(
     name = "mold-crafting-ammo-basic-2",
 	category = "metallurgy-ammo-basic",
     energy_required = 0.5,
+	enabled = false,
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=15},

@@ -1,7 +1,7 @@
 module("ds")
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 63
+dstotalevents = 64
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
@@ -732,7 +732,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	end
 	if event.tick%ttime==(r*55) then 
 		if not game.player.force.recipes["mold-crafting-tool-3"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enable and glob.time > 3000 and game.player.force.recipes["steel-axe2"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["steel-axe2"].enabled then
 				game.player.force.recipes["mold-crafting-tool-3"].enabled = true
 				game.player.print(game.gettext("msg-craft-tools-3"))
 				game.player.force.resetrecipes()
@@ -745,7 +745,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 				game.player.force.recipes["mold-crafting-wire-1"].enabled = true
 				game.player.force.recipes["mold-crafting-wire-2"].enabled = true
 				game.player.force.recipes["mold-crafting-wire-3"].enabled = true
-				game.player.print(game.gettext("msg-craft-wire"))
+				game.player.print(game.gettext("msg-craft-wire-1"))
 				game.player.force.resetrecipes()
 			end
 		end
@@ -845,6 +845,35 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 					game.player.force.recipes["lava-3800"].enabled = true
 					game.player.force.recipes["lava-4000"].enabled = true
 					game.player.print(game.gettext("msg-tungsten"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*63) then 
+		if not game.player.force.recipes["metallurgy-copper-tungsten"].enabled then
+			if glob.time > math.random(5000,15000) and glob.counter.dytech > math.random(25000,100000) and game.player.force.recipes["metallurgy-tungsten-smelt"].enabled then
+				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["metallurgy-copper-tungsten-alloy"].enabled = true
+					game.player.force.recipes["metallurgy-copper-tungsten"].enabled = true
+					game.player.print(game.gettext("msg-copper-tungsten"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*64) then 
+		if not game.player.force.recipes["mold-crafting-wire-4"].enabled then
+			if glob.time > math.random(5000,15000) and glob.counter.dytech > math.random(25000,100000) and game.player.force.recipes["metallurgy-copper-tungsten"].enabled then
+				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["mold-crafting-wire-4"].enabled = true
+					game.player.print(game.gettext("msg-craft-wire-2"))
 					game.player.force.resetrecipes()
 				end
 			end

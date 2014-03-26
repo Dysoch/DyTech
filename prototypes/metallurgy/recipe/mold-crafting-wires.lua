@@ -47,5 +47,20 @@ data:extend(
 	  {type="item", name="green-wire", amount=1}
 	}
   },
+  {
+    type = "recipe",
+    name = "mold-crafting-wire-4",
+	category = "metallurgy-wire",
+    energy_required = 1.5,
+    enabled = false,
+    ingredients =
+    {
+	  {type="fluid", name="molten-copper-tungsten", amount=7.5},
+    },
+    results = 
+	{
+	  {type="item", name="copper-cable", amount=5}
+	}
+  },
 }
 )
