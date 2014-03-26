@@ -9,7 +9,7 @@ data:extend(
     ingredients =
     {
       {type="item", name="tin-ore", amount=1},
-	  {type="fluid", name="lava-600", amount=0.2}
+	  {type="fluid", name="lava-800", amount=0.2}
     },
     results = 
 	{
@@ -25,7 +25,7 @@ data:extend(
     ingredients =
     {
       {type="item", name="zinc-ore", amount=1},
-	  {type="fluid", name="lava-600", amount=0.2}
+	  {type="fluid", name="lava-800", amount=0.2}
     },
     results = 
 	{
@@ -41,7 +41,7 @@ data:extend(
     ingredients =
     {
       {type="item", name="lead-ore", amount=1},
-	  {type="fluid", name="lava-600", amount=0.2}
+	  {type="fluid", name="lava-800", amount=0.2}
     },
     results = 
 	{
