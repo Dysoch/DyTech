@@ -1,7 +1,7 @@
 module("ds")
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 62
+dstotalevents = 63
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end

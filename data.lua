@@ -154,7 +154,8 @@ require("prototypes.metallurgy.fluid.lava")
 require("prototypes.metallurgy.fluid.metals-molten-base")
 require("prototypes.metallurgy.fluid.metals-molten-basic")
 
--- item 8x
+-- item 9x
+--require("prototypes.metallurgy.item.alloys")
 require("prototypes.metallurgy.item.assemblers-molds")
 require("prototypes.metallurgy.item.intermediates")
 require("prototypes.metallurgy.item.lava-machines")

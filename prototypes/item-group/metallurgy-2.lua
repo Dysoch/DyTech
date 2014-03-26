@@ -21,13 +21,13 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "metallurgy-alloys",
+    name = "metallurgy-plates",
     group = "metallurgy-2",
     order = "3"
   },
   {
     type = "item-subgroup",
-    name = "metallurgy-plates",
+    name = "metallurgy-alloys",
     group = "metallurgy-2",
     order = "4"
   },

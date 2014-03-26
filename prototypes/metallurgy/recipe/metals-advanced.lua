@@ -2,50 +2,18 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "metallurgy-iron-plate",
+    name = "metallurgy-copper-tungsten-alloy",
 	enabled = false,
 	category = "forge",
-    energy_required = 0.5,
+    energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-iron", amount=7.5},
+      {type="fluid", name="molten-copper-tungsten", amount=10},
       {type="fluid", name="water", amount=1},
     },
     results = 
 	{
-      {type="item", name="iron-plate", amount=1}
-    },
-  },
-  {
-    type = "recipe",
-    name = "metallurgy-copper-plate",
-	enabled = false,
-	category = "forge",
-    energy_required = 0.5,
-    ingredients =
-    {
-      {type="fluid", name="molten-copper", amount=7.5},
-      {type="fluid", name="water", amount=1},
-    },
-    results =
-	{
-      {type="item", name="copper-plate", amount=1}
-    },
-  },
-  {
-    type = "recipe",
-    name = "metallurgy-steel-plate",
-	enabled = false,
-	category = "forge",
-    energy_required = 1,
-    ingredients =
-    {
-      {type="fluid", name="molten-carbonated-iron", amount=37.5},
-      {type="fluid", name="water", amount=5},
-    },
-    results =
-	{
-      {type="item", name="steel-plate", amount=1}
+      {type="item", name="copper-tungsten-alloy", amount=1}
     },
   },
 }
