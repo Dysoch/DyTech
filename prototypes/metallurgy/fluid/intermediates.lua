@@ -12,7 +12,7 @@ data:extend(
     order = "l-a",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
-    subgroup = "metallurgy-fluid",
+    subgroup = "metallurgy-fluid-intermediate",
   },
 }
 )

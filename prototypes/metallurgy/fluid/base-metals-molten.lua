@@ -9,10 +9,10 @@ data:extend(
     base_color = {r=214, g=165, b=91},
     flow_color = {r=214, g=165, b=91},
     icon = "__DyTech-Graphics__/graphics/fluid/molten-copper.png",
-    order = "m-c",
+    order = "copper",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
-    subgroup = "metallurgy-fluid",
+    subgroup = "metallurgy-fluid-metal-basic",
   },
   {
     type = "fluid",
@@ -23,10 +23,10 @@ data:extend(
     base_color = {r=185, g=188, b=192},
     flow_color = {r=185, g=188, b=192},
     icon = "__DyTech-Graphics__/graphics/fluid/molten-iron.png",
-    order = "m-i",
+    order = "iron",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
-    subgroup = "metallurgy-fluid",
+    subgroup = "metallurgy-fluid-metal-basic",
   },
   {
     type = "fluid",
@@ -37,10 +37,10 @@ data:extend(
     base_color = {r=185, g=188, b=192},
     flow_color = {r=185, g=188, b=192},
     icon = "__DyTech-Graphics__/graphics/fluid/molten-carbonated-iron.png",
-    order = "m-c-i",
+    order = "carbonated-iron",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
-    subgroup = "metallurgy-fluid",
+    subgroup = "metallurgy-fluid-metal-basic",
   },
 }
 )

@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-ores",
     order = "tin",
-    stack_size = 256
+    stack_size = 128
   },
   {
     type = "item",
@@ -16,7 +16,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-ores",
     order = "zinc",
-    stack_size = 256
+    stack_size = 128
   },
   {
     type = "item",
@@ -25,7 +25,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-ores",
     order = "lead",
-    stack_size = 256
+    stack_size = 128
   },
   {
     type = "item",
@@ -34,7 +34,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-ores",
     order = "silver",
-    stack_size = 256
+    stack_size = 128
   },
   {
     type = "item",
@@ -43,7 +43,16 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-ores",
     order = "gold",
-    stack_size = 256
+    stack_size = 128
+  },
+  {
+    type = "item",
+    name = "tungsten-ore",
+    icon = "__DyTech-Graphics__/graphics/icons/ore-tungsten.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-ores",
+    order = "tungsten",
+    stack_size = 128
   },
 }
 )

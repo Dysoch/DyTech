@@ -25,12 +25,5 @@ data:extend(
     group = "metallurgy-1",
     order = "3"
   },
-  {
-    type = "item-subgroup",
-    name = "metallurgy-fluid",
-    group = "metallurgy-1",
-    order = "4"
-  },
-
 }
 )

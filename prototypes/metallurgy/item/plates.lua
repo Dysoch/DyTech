@@ -37,6 +37,15 @@ data:extend(
     order = "lead",
     stack_size = 256
   },
+  {
+    type = "item",
+    name = "tungsten-plate",
+    icon = "__DyTech-Graphics__/graphics/icons/tungsten-plate.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-plates",
+    order = "tungsten",
+    stack_size = 256
+  },
   --[[Plates from Alloys]]--
   --[[{
     type = "item",
