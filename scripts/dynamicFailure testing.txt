@@ -28,11 +28,24 @@ Test result 2 at newest code:
 		-- The main problem is, it stays at 5% when you go higher then 100000! i want it to keep lowering till 0.1% (this chance will be around dytech counter at 1-2 million)
 		--but thats to figure out still :P
 
+		TEST 3!
+	counter = 0
+        failure rate: 1 --kinda good, but pretty hard setting :P
+    counter = 100
+        failure rate: 1 --just play wrong xD 100% chance for people to stop playing DyTech xD (there are a few unlocks in the 1000 range, and 1 unlock under 100)
+    counter = 1,000
+        failure rate: 1 --WRONG! TO HIGH!
+    counter = 10,000
+        failure rate: 1 -- TO HIGH!
+    counter = 100,000
+        failure rate: 0.2504 --Good, but still to high was thinking around 5% chance here
+	counter = 1,000,000
+		failure rate: 0.006 --exactly what i want. this needs to stay the same!
 
 -- test code below
 function DynamicFailure(counter)
-    local basePercent = 250 
-    local minModifier = 200 
+	local basePercent = 20050 
+    local minModifier = 20048 
     local modifier = 250000000 
     local normalCounter = minModifier*((counter/math.pow((math.pow(counter,2)+modifier), 0.5)))
     if math.random(1000)<(basePercent+1-normalCounter) then
