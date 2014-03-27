@@ -8,15 +8,13 @@ return (dstotalevents*eventtime) end
 
 --[[The functions essential for the Dynamic System!]]--
 
-
-
 --[[Dynamic System unlock event themself!]]--
 function dynamicUnlocks(event, game, glob, math, random, ttime, r)   
 	--[[Repair Packs]]--
 	if event.tick%ttime==(r*1) then 
 		if not game.player.force.recipes["repair-pack"].enabled then 
 			if glob.counter.robot > math.random(75,200) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.robot =(glob.counter.robot-math.random(50))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -30,7 +28,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*2) then 
 		if not game.player.force.recipes["repair-pack-2"].enabled then
 			if glob.counter.robot > math.random(275,500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.robot =(glob.counter.robot-math.random(glob.counter.robot/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.recipes["repair-pack"].enabled then
@@ -45,7 +43,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*3) then 
 		if not game.player.force.recipes["iron-gear-wheel"].enabled then
 			if glob.counter.gear > math.random(150,400) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.gear =(glob.counter.gear-math.random(25))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else 
@@ -59,7 +57,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*4) then 
 		if not game.player.force.recipes["steel-gear-wheel"].enabled then
 			if glob.counter.gear > math.random(1000,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.gear =(glob.counter.gear-math.random(100))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.recipes["iron-gear-wheel"].enabled then
@@ -74,7 +72,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*5) then  
 		if not game.player.force.recipes["iron-axe"].enabled then 
 			if glob.counter.mining > math.random(15,40) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -88,7 +86,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*6) then 
 		if not game.player.force.recipes["steel-axe"].enabled then 
 			if glob.counter.mining > math.random(50,100) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.recipes["iron-axe"].enabled then
@@ -102,7 +100,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*7) then 
 		if not game.player.force.recipes["steel-axe2"].enabled then
 			if glob.counter.mining > math.random(120,180) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.recipes["steel-axe"].enabled then 
@@ -116,7 +114,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*8) then 
 		if not game.player.force.recipes["steel-axe3"].enabled then
 			if glob.counter.mining > math.random(400,1250) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.technologies["gem-processing"].researched and game.player.force.recipes["steel-axe2"].enabled then
@@ -131,7 +129,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*9) then 
 		if not game.player.force.recipes["basic-mining-drill"].enabled then
 			if glob.counter.mining > math.random(25,50) and glob.counter.resource > math.random(250,500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -145,7 +143,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*10) then 
 		if not game.player.force.recipes["basic-mining-drill-mk2"].enabled then
 			if glob.counter.mining > math.random(125,250) and glob.counter.resource > math.random(2500,5000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["miner-2"].researched and game.player.force.recipes["basic-mining-drill"].enabled then
@@ -159,7 +157,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*11) then 
 		if not game.player.force.recipes["basic-mining-drill-mk3"].enabled then
 			if glob.counter.mining > math.random(400,500) and glob.counter.resource > math.random(5000,7500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["miner-3"].researched and game.player.force.recipes["basic-mining-drill-mk2"].enabled then
@@ -173,7 +171,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*12) then 
 		if not game.player.force.recipes["basic-mining-drill-mk4"].enabled then
 			if glob.counter.mining > math.random(800,1000) and glob.counter.resource > math.random(7500,12500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["miner-4"].researched and game.player.force.recipes["basic-mining-drill-mk3"].enabled then
@@ -187,7 +185,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*13) then 
 		if not game.player.force.recipes["basic-mining-drill-mk5"].enabled then
 			if glob.counter.mining > math.random(1250,1750) and glob.counter.resource > math.random(13000,15000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["miner-5"].researched and game.player.force.recipes["basic-mining-drill-mk4"].enabled then
@@ -201,7 +199,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*14) then 
 		if not game.player.force.recipes["basic-mining-drill-mk6"].enabled then
 			if glob.counter.mining > math.random(5000,10000) and glob.counter.resource > math.random(50000,100000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["miner-6"].researched and game.player.force.recipes["basic-mining-drill-mk5"].enabled then
@@ -220,7 +218,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*15) then 
 		if not game.player.force.recipes["basic-mining-drill-sand"].enabled then
 			if glob.counter.resource > math.random(750,2500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.resource = (glob.counter.resource-math.random(glob.counter.resource/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -234,7 +232,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*16) then 
 		if not game.player.force.recipes["sandwall"].enabled then
 			if glob.counter.resource > math.random(3000,5000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.resource = (glob.counter.resource-math.random(glob.counter.resource/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -248,7 +246,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*17) then 
 		if not game.player.force.recipes["gun-turret"].enabled then
 			if glob.combat.small > math.random(100,500) and glob.counter.plates > math.random(1000,2500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.gun = (glob.counter.gun-math.random(glob.counter.gun/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["turrets"].researched then
@@ -262,7 +260,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*18) then 
 		if not game.player.force.recipes["laser-turret"].enabled then
 			if glob.counter.turret > math.random(5,25) and glob.counter.plates > math.random(1000,2000) and glob.combat.small > math.random(1000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets"].researched and game.player.force.recipes["gun-turret"].enabled then
@@ -276,7 +274,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*19) then 
 		if not game.player.force.recipes["laser-turret-2"].enabled then
 			if glob.counter.turret > math.random(25,100) and glob.counter.plates > math.random(2000,4000) and glob.combat.dytech > math.random(2000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets"].researched and game.player.force.recipes["laser-turret"].enabled then
@@ -290,7 +288,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*20) then 
 		if not game.player.force.recipes["laser-turret-3"].enabled then
 			if glob.counter.turret > math.random(75,150) and glob.counter.plates > math.random(4000,8000) and glob.combat.dytech > math.random(3000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets"].researched and game.player.force.recipes["laser-turret-2"].enabled then
@@ -304,7 +302,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*21) then 
 		if not game.player.force.recipes["laser-turret-4"].enabled then
 			if glob.counter.turret > math.random(100,200) and glob.counter.plates > math.random(8000,16000) and glob.combat.dytech > math.random(4000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-1"].researched and game.player.force.recipes["laser-turret-3"].enabled then
@@ -318,7 +316,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*22) then 
 		if not game.player.force.recipes["laser-turret-5"].enabled then
 			if glob.counter.turret > math.random(150,300) and glob.counter.plates > math.random(16000,32000) and glob.combat.dytech > math.random(5000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-1"].researched and game.player.force.recipes["laser-turret-4"].enabled then
@@ -332,7 +330,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*23) then 
 		if not game.player.force.recipes["laser-turret-6"].enabled then
 			if glob.counter.turret > math.random(2500) and glob.counter.dytech > math.random(25000,75000) and glob.combat.dytech > math.random(6000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-1"].researched and game.player.force.recipes["laser-turret-5"].enabled then
@@ -346,7 +344,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*24) then 
 		if not game.player.force.recipes["laser-turret-7"].enabled then
 			if glob.counter.turret > math.random(3350) and glob.counter.dytech > math.random(50000,100000) and glob.combat.dytech > math.random(7000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-2"].researched and game.player.force.recipes["laser-turret-6"].enabled then
@@ -360,7 +358,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*25) then 
 		if not game.player.force.recipes["laser-turret-8"].enabled then
 			if glob.counter.turret > math.random(4200) and glob.counter.dytech > math.random(75000,125000) and glob.combat.dytech > math.random(8000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-2"].researched and game.player.force.recipes["laser-turret-7"].enabled then
@@ -374,7 +372,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*26) then 
 		if not game.player.force.recipes["laser-turret-9"].enabled then
 			if glob.counter.turret > math.random(5000) and glob.counter.dytech > math.random(100000,1000000) and glob.counter.tech > math.random(25000) and glob.counter.plates > math.random(50000) and glob.combat.dytech > math.random(5000,10000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-2"].researched and game.player.force.recipes["laser-turret-8"].enabled then
@@ -388,7 +386,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*27) then 
 		if not game.player.force.recipes["laser-turret-sniper-1"].enabled then
 			if glob.counter.turret > math.random(2500) and glob.counter.dytech > math.random(500000) and glob.combat.dytech > math.random(3000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-3"].researched then
@@ -402,7 +400,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*28) then 
 		if not game.player.force.recipes["laser-turret-sniper-2"].enabled then
 			if glob.counter.turret > math.random(2500) and glob.counter.dytech > math.random(100000,1000000) and glob.combat.dytech > math.random(6000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-3"].researched and game.player.force.recipes["laser-turret-sniper-1"].enabled then
@@ -416,7 +414,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*29) then 
 		if not game.player.force.recipes["laser-turret-sniper-3"].enabled then
 			if glob.counter.turret > math.random(2500) and glob.counter.dytech > math.random(250000,10000000) and glob.combat.dytech > math.random(9000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["laser-turrets-3"].researched and game.player.force.recipes["laser-turret-sniper-2"].enabled then
@@ -442,7 +440,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*31) then 
 		if not game.player.force.recipes["science-pack-2"].enabled then
 			if glob.counter.science > math.random(25,50) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.science = (glob.counter.science-math.random(glob.counter.science/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.recipes["science-pack-1"].enabled then
@@ -456,7 +454,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*32) then 
 		if not game.player.force.recipes["science-pack-3"].enabled then
 			if glob.counter.science > math.random(250) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.science = (glob.counter.science-math.random(glob.counter.science/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["rocketry"].researched and game.player.force.recipes["science-pack-2"].enabled then
@@ -470,7 +468,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*33) then 
 		if not game.player.force.recipes["alien-science-pack"].enabled then
 			if glob.counter.science > math.random(100,250) and glob.counter.dytech > math.random(25000) and glob.combat.dytech > math.random(500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.science = (glob.counter.science-math.random(glob.counter.science/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["alien-technology"].researched and game.player.force.recipes["science-pack-3"].enabled then
@@ -484,7 +482,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*34) then 
 		if not game.player.force.recipes["geothermal-extractor"].enabled then
 			if glob.time > 1800 and glob.counter.plates > math.random(100,150) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -498,7 +496,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*35) then 
 		if not game.player.force.recipes["mold-gear"].enabled then
 			if glob.time > 2100 and glob.counter.gear > math.random(150,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.gear = (glob.counter.gear-math.random(glob.counter.gear/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -513,7 +511,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*36) then 
 		if not game.player.force.recipes["mold-wire"].enabled then
 			if glob.time > 2100 and glob.counter.energy > math.random(150,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.energy = (glob.counter.energy-math.random(glob.counter.energy/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -528,7 +526,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*37) then 
 		if not game.player.force.recipes["mold-circuit"].enabled then
 			if glob.time > 2100 and glob.counter.tech > math.random(150,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -543,7 +541,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*38) then 
 		if not game.player.force.recipes["mold-tool"].enabled then
 			if glob.time > 2100 and glob.counter.mining > math.random(150,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining = (glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -558,7 +556,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*39) then 
 		if not game.player.force.recipes["mold-ammo-basic"].enabled then
 			if glob.time > 2100 and glob.counter.ammo > math.random(150,1500) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.ammo = (glob.counter.ammo-math.random(glob.counter.ammo/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -575,7 +573,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*40) then 
 		if not game.player.force.recipes["metallurgy-copper-smelt"].enabled then
 			if game.player.force.recipes["geothermal-extractor"].enabled and glob.time > 2000 and glob.counter.dytech > math.random(1500,15000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -599,7 +597,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*41) then 
 		if not game.player.force.recipes["metallurgy-iron-smelt"].enabled then
 			if game.player.force.recipes["metallurgy-copper-smelt"].enabled and glob.time > 2000 and glob.counter.dytech > math.random(1800,18000) then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -616,7 +614,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*42) then 
 		if not game.player.force.recipes["metallurgy-steel-plate"].enabled then
 			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 2500 and glob.counter.dytech > math.random(2100,21000) and game.player.force.technologies["steel-processing"].researched then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -753,7 +751,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*57) then 
 		if not game.player.force.recipes["metallurgy-tin-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(5000,50000) and game.player.force.recipes["lava-800"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -768,7 +766,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*58) then 
 		if not game.player.force.recipes["metallurgy-zinc-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(5000,50000) and game.player.force.recipes["lava-800"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -783,7 +781,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*59) then 
 		if not game.player.force.recipes["metallurgy-lead-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(5000,50000) and game.player.force.recipes["lava-800"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -798,7 +796,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*60) then 
 		if not game.player.force.recipes["metallurgy-gold-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(5000,50000) and game.player.force.recipes["lava-1200"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -813,7 +811,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*61) then 
 		if not game.player.force.recipes["metallurgy-silver-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(5000,50000) and game.player.force.recipes["lava-2000"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -831,7 +829,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*62) then 
 		if not game.player.force.recipes["metallurgy-tungsten-smelt"].enabled then
 			if glob.time > math.random(2500,10000) and glob.counter.dytech > math.random(15000,50000) and game.player.force.recipes["lava-2000"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -853,7 +851,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*63) then 
 		if not game.player.force.recipes["metallurgy-copper-tungsten"].enabled then
 			if glob.time > math.random(5000,15000) and glob.counter.dytech > math.random(25000,100000) and game.player.force.recipes["metallurgy-tungsten-smelt"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -868,7 +866,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	if event.tick%ttime==(r*64) then 
 		if not game.player.force.recipes["mold-crafting-wire-4"].enabled then
 			if glob.time > math.random(5000,15000) and glob.counter.dytech > math.random(25000,100000) and game.player.force.recipes["metallurgy-copper-tungsten"].enabled then
-				if math.random((glob.counter.dytech),(glob.counter.dytech*3))==(glob.counter.dytech*2) then
+				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
@@ -892,4 +890,26 @@ function dynamicRewards(event, glob, game, math, random)
 			end
 		end
 	end
+end
+
+--[[Function to determine if a dynamic failure occurs]]--
+function DynamicFailure(counter)
+    local basePercent = 400 -- the percent chance (times 10) of returning true when counter is 0.
+    local minModifier = 250 -- (basePercent-minModifier)/1000 equals the percentage chance as normalized counter approaches minModifier.
+    local modifier = 250000000 -- decrease to lower value of counter needed to approach minModifier
+    
+    -- normalize counter to ~(0, minModifier).
+    -- with a minModifier of 250 and modifier of 250000000, counter normalizes as: 1,000 to 15.78, 10,000 to 133.6, 30,000 to 221.16
+    -- equation taken from http://people.revoledu.com/kardi/tutorial/Similarity/Normalization.html
+    local normalCounter = minModifier*((counter/math.pow((math.pow(counter,2)+modifier), 0.5)))
+    
+    --now:
+    -- return true basePercent% when normalCounter=0, as normalCounter approaches minModifier returns true (basePercent-minModifier)%
+    -- ie: with a basePercent of 400 and a minModifier of 250, returns true 40% at 0 and 15% at minModifier.
+    -- The +1 is here so there are basePercent numbers smaller than the basePercent when choosing a random number between 1 and 100.
+    if math.random(1000)<(basePercent+1-normalCounter) then
+        return true
+    else
+        return false
+    end
 end
