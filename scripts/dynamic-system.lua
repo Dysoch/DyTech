@@ -894,19 +894,10 @@ end
 
 --[[Function to determine if a dynamic failure occurs]]--
 function DynamicFailure(counter)
-    local basePercent = 400 -- the percent chance (times 10) of returning true when counter is 0.
-    local minModifier = 250 -- (basePercent-minModifier)/1000 equals the percentage chance as normalized counter approaches minModifier.
-    local modifier = 250000000 -- decrease to lower value of counter needed to approach minModifier
-    
-    -- normalize counter to ~(0, minModifier).
-    -- with a minModifier of 250 and modifier of 250000000, counter normalizes as: 1,000 to 15.78, 10,000 to 133.6, 30,000 to 221.16
-    -- equation taken from http://people.revoledu.com/kardi/tutorial/Similarity/Normalization.html
+    local basePercent = 250
+    local minModifier = 200
+    local modifier = 250000000 
     local normalCounter = minModifier*((counter/math.pow((math.pow(counter,2)+modifier), 0.5)))
-    
-    --now:
-    -- return true basePercent% when normalCounter=0, as normalCounter approaches minModifier returns true (basePercent-minModifier)%
-    -- ie: with a basePercent of 400 and a minModifier of 250, returns true 40% at 0 and 15% at minModifier.
-    -- The +1 is here so there are basePercent numbers smaller than the basePercent when choosing a random number between 1 and 100.
     if math.random(1000)<(basePercent+1-normalCounter) then
         return true
     else
