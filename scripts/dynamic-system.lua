@@ -1,7 +1,7 @@
 module("ds")
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 64
+dstotalevents = 70
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
@@ -872,6 +872,83 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 				else
 					game.player.force.recipes["mold-crafting-wire-4"].enabled = true
 					game.player.print(game.gettext("msg-craft-wire-2"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*65) then 
+		if not game.player.force.recipes["metallurgy-bronze"].enabled then
+			if glob.time > math.random(7500,15000) and glob.counter.dytech > math.random(50000,150000) and game.player.force.recipes["metallurgy-tin-smelt"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["metallurgy-bronze"].enabled = true
+					game.player.force.recipes["metallurgy-bronze-alloy"].enabled = true
+					game.player.print(game.gettext("msg-bronze"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*66) then 
+		if not game.player.force.recipes["metallurgy-brass"].enabled then
+			if glob.time > math.random(7500,15000) and glob.counter.dytech > math.random(50000,150000) and game.player.force.recipes["metallurgy-zinc-smelt"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["metallurgy-brass"].enabled = true
+					game.player.force.recipes["metallurgy-brass-alloy"].enabled = true
+					game.player.print(game.gettext("msg-brass"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*67) then 
+		if not game.player.force.recipes["metallurgy-electrum"].enabled then
+			if glob.time > math.random(7500,15000) and glob.counter.dytech > math.random(50000,150000) and game.player.force.recipes["metallurgy-gold-smelt"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["metallurgy-electrum"].enabled = true
+					game.player.force.recipes["metallurgy-electrum-alloy"].enabled = true
+					game.player.print(game.gettext("msg-electrum"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*68) then 
+		if not game.player.force.recipes["metallurgy-gunmetal"].enabled then
+			if glob.time > math.random(7500,15000) and glob.counter.dytech > math.random(50000,150000) and game.player.force.recipes["metallurgy-zinc-smelt"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["metallurgy-gunmetal"].enabled = true
+					game.player.force.recipes["metallurgy-gunmetal-alloy"].enabled = true
+					game.player.print(game.gettext("msg-gunmetal"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*69) then 
+		if not game.player.force.recipes["pipe-mainline"].enabled then
+			if glob.counter.energy > math.random(500,1500) and glob.counter.plates > math.random(25000,50000) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-bronze"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["pipe-mainline"].enabled = true
+					game.player.force.recipes["pump-to-mainline"].enabled = true
+					game.player.force.recipes["pump-from-mainline"].enabled = true
+					game.player.force.recipes["pump-inline-mainline"].enabled = true
+					game.player.print(game.gettext("msg-mainline"))
 					game.player.force.resetrecipes()
 				end
 			end
