@@ -1,3 +1,5 @@
+require ("prototypes.functions")
+
 data:extend(
 {
   {
@@ -27,6 +29,7 @@ data:extend(
       frame_count = 32,
       direction_count = 12
     },
+    ending_patch = ending_patch_prototype,
     fast_replaceable_group = "transport-belt",
     speed = 0.133
   },
@@ -57,6 +60,7 @@ data:extend(
       frame_count = 32,
       direction_count = 12
     },
+    ending_patch = ending_patch_prototype,
     fast_replaceable_group = "transport-belt",
     speed = 0.18
   },
@@ -87,6 +91,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
     distance_to_enter = 0.35,
+    ending_patch = ending_patch_prototype,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/super-transport-belt.png",
@@ -208,6 +213,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
     distance_to_enter = 0.35,
+    ending_patch = ending_patch_prototype,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/extreme-transport-belt.png",
@@ -322,6 +328,7 @@ data:extend(
     animation_speed_coefficient = 64,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    ending_patch = ending_patch_prototype,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/super-transport-belt.png",
@@ -459,6 +466,7 @@ data:extend(
     animation_speed_coefficient = 64,
     structure_animation_speed_coefficient = 1.2,
     structure_animation_movement_cooldown = 10,
+    ending_patch = ending_patch_prototype,
     belt_horizontal =
     {
       filename = "__DyTech-Graphics__/graphics/entity/transport-belt/extreme-transport-belt.png",
