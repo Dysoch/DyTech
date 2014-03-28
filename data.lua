@@ -48,7 +48,7 @@ require("prototypes.base-mod.equipment.equipment")
 
 -- Fluid --0
 
--- Item --32
+-- Item --31x
 require("prototypes.base-mod.item.ammo")
 require("prototypes.base-mod.item.armor")
 require("prototypes.base-mod.item.assembling")
@@ -61,6 +61,7 @@ require("prototypes.base-mod.item.enemies")
 require("prototypes.base-mod.item.energy")
 require("prototypes.base-mod.item.equipment")
 require("prototypes.base-mod.item.foundation")
+require("prototypes.base-mod.item.gears")
 require("prototypes.base-mod.item.gem-processing")
 require("prototypes.base-mod.item.gems")
 require("prototypes.base-mod.item.gun")

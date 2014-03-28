@@ -182,24 +182,6 @@ data:extend(
   },
   {
     type = "item",
-    name = "stone-gear-wheel",
-    icon = "__DyTech-Graphics__/graphics/icons/stone-gear-wheel.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "g-0",
-    stack_size = 128
-  },
-  {
-    type = "item",
-    name = "steel-gear-wheel",
-    icon = "__DyTech-Graphics__/graphics/icons/steel-gear-wheel.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "g-2",
-    stack_size = 128
-  },
-  {
-    type = "item",
     name = "circuit3",
     icon = "__DyTech-Graphics__/graphics/icons/circuit3.png",
     flags = {"goes-to-main-inventory"},

@@ -954,6 +954,51 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 			end
 		end
 	end
+	if event.tick%ttime==(r*70) then 
+		if not game.player.force.recipes["brass-gear-wheel"].enabled then
+			if glob.counter.gear > math.random(500,1500) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-brass"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["brass-gear-wheel"].enabled = true
+					game.player.force.recipes["mold-crafting-gear-3"].enabled = true
+					game.player.print(game.gettext("msg-brass-gears"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*71) then 
+		if not game.player.force.recipes["tungsten-gear-wheel"].enabled then
+			if glob.counter.gear > math.random(500,1500) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-tungsten"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["tungsten-gear-wheel"].enabled = true
+					game.player.force.recipes["mold-crafting-gear-4"].enabled = true
+					game.player.print(game.gettext("msg-tungsten-gears"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*72) then 
+		if not game.player.force.recipes["copper-tungsten-gear-wheel"].enabled then
+			if glob.counter.gear > math.random(500,1500) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-copper-tungsten"].enabled then
+				if DynamicFailure(glob.counter.dytech) then
+					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
+					game.player.print(game.gettext("msg-dynamic-failure"))
+				else
+					game.player.force.recipes["copper-tungsten-gear-wheel"].enabled = true
+					game.player.force.recipes["mold-crafting-gear-5"].enabled = true
+					game.player.print(game.gettext("msg-copper-tungsten-gears"))
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
 end
 
 function dynamicRewards(event, glob, game, math, random)
