@@ -7,7 +7,8 @@ data:extend(
     ingredients =
     {
       {"circuit3", 15},
-      {"steel-gear-wheel", 5},
+      {"electrum-alloy", 5},
+      {"bronze-alloy", 5},
       {"radar", 5}
     },
     result = "radar-1"

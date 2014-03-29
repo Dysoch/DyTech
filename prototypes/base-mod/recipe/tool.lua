@@ -18,7 +18,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 25},
+      {"tungsten-plate", 25},
       {"iron-stick", 5},
 	  {"steel-axe2", 1},
 	  {"ruby-3", 2}

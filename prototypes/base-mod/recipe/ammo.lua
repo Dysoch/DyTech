@@ -7,9 +7,9 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"steel-plate", 5},
-	  {"iron-plate", 10},
-      {"copper-plate", 10},
+      {"gunmetal-alloy", 2},
+	  {"bronze-alloy", 3},
+      {"sulfur", 1},
       {"coal", 2},
     },
     result = "sniper-magazine"

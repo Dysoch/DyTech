@@ -69,9 +69,9 @@ data:extend(
     {
       {"basic-mining-drill-mk5", 3},
 	  {"circuit3", 250},
-      {"steel-plate-1", 100},
-	  {"iron-plate-1", 150},
-      {"copper-plate-1", 150}
+      {"tungsten-plate", 100},
+	  {"copper-tungsten-alloy", 150},
+      {"brass-alloy", 150}
     },
     result = "basic-mining-drill-mk6"
   },
@@ -95,8 +95,8 @@ data:extend(
     energy_required = 45,
     ingredients =
       {
-        {"steel-gear-wheel", 25},
-        {"ruby-4", 20},
+        {"tungsten-gear-wheel", 25},
+        {"brass-alloy", 20},
         {"steel-plate", 50},
       },
     result = "basic-mining-drill-gem"

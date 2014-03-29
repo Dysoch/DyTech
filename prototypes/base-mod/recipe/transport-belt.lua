@@ -7,7 +7,7 @@ data:extend(
 	energy_required = 5,
     ingredients =
     {
-	  {"steel-gear-wheel", 2},
+	  {"brass-gear-wheel", 2},
       {"express-transport-belt", 1}
     },
     result = "super-transport-belt"
@@ -20,7 +20,7 @@ data:extend(
     ingredients =
     {
       {"circuit3", 1},
-	  {"steel-gear-wheel", 5},
+	  {"tungsten-gear-wheel", 5},
       {"super-transport-belt", 1}
     },
     result = "extreme-transport-belt"
@@ -32,7 +32,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"steel-plate", 20},
+      {"brass-alloy", 20},
       {"super-transport-belt", 6}
     },
     result_count = 2,
@@ -46,7 +46,7 @@ data:extend(
     ingredients =
     {
       {"extreme-transport-belt", 6},
-      {"steel-plate", 40}
+      {"tungsten-plate", 40}
     },
     result_count = 2,
     result = "extreme-transport-belt-to-ground"
@@ -59,7 +59,7 @@ data:extend(
     ingredients =
     {
       {"circuit3", 4},
-      {"steel-gear-wheel", 10},
+      {"brass-gear-wheel", 10},
       {"super-transport-belt", 2}
     },
     result = "super-splitter"
@@ -72,7 +72,7 @@ data:extend(
     ingredients =
     {
       {"circuit3", 10},
-      {"steel-gear-wheel", 20},
+      {"tungsten-gear-wheel", 20},
       {"extreme-transport-belt", 2}
     },
     result = "extreme-splitter"

@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-4", 1},
-      {"steel-plate", 15},
+      {"brass-alloy", 15},
       {"laser-turret-5", 5}
     },
     result = "basic-laser-defense-equipment-2"
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-7", 1},
-      {"steel-plate-1", 45},
+      {"tungsten-plate", 45},
       {"laser-turret-8", 5}
     },
     result = "basic-laser-defense-equipment-3"

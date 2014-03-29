@@ -38,7 +38,7 @@ require("prototypes.metal-processing.foundry")
 	require("prototypes.metal-processing.ores.titanium")
 	
 	--Alloys
-	require("prototypes.metal-processing.alloys.bronze")
+	require("prototypes.metal-processing.alloys.bronze") --this needs to be checked out. name differs from mine, so a problem. might change all recipes in fmod to suit my recipe when dytech is installed
 	require("prototypes.metal-processing.alloys.soldering-tin")
 	           
 -- Misc

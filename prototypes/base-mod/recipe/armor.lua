@@ -10,7 +10,7 @@ data:extend(
 	  {"effectivity-module-5", 12},
 	  {"power-armor-mk2", 2},
 	  {"speed-module-5", 10},
-	  {"steel-plate", 150},
+	  {"tungsten-plate", 100},
 	  {"alien-artifact", 150}
 	},
     result = "power-armor-mk3"
