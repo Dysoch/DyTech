@@ -1016,11 +1016,14 @@ end
 
 --[[Function to determine if a dynamic failure occurs]]--
 function DynamicFailure(counter)
-    local basePercent = 250
-    local minModifier = 200
-    local modifier = 250000000 
-    local normalCounter = minModifier*((counter/math.pow((math.pow(counter,2)+modifier), 0.5)))
-    if math.random(1000)<(basePercent+1-normalCounter) then
+    local basePercent = 0.25 -- failure rate [0,1] at counter=0
+    local minPercent = 0.05 -- minimum failure rate [0,1] at arbitraryMax
+    local arbitraryMax = 100000 -- when you want the failure rate to stop decreasing.
+    -- normalization between 0 and arbitraryMax, with cap at arbitraryMax of 1
+    local normalCounter = math.min(counter/arbitraryMax, 1)
+    -- if the above was 1 then this will make normalCounter = minPercent, else some percent on a linear curve between base and min.
+    normalCounter = basePercent-(normalCounter*(basePercent-minPercent))
+    if math.random() < normalCounter then
         return true
     else
         return false
