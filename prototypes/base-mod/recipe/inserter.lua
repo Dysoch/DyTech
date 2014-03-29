@@ -79,7 +79,7 @@ data:extend(
 	{
       {"advanced-circuit", 1},
       {"inserter-half", 1},
-      {"iron-plate", 1}
+      {"zinc-plate", 1}
     },
     result = "inserter-half-filter",
     enabled = false
@@ -90,7 +90,7 @@ data:extend(
     ingredients = 
 	{
       {"inserter-long", 1},
-      {"iron-plate", 2},
+      {"zinc-plate", 1},
       {"advanced-circuit", 2}
     },
     result = "inserter-long-filter",
@@ -102,7 +102,7 @@ data:extend(
     ingredients = 
 	{
       {"inserter-long-half", 1},
-      {"iron-plate", 2},
+      {"zinc-plate", 1},
       {"advanced-circuit", 2}
     },
     result = "inserter-long-half-filter",
@@ -114,7 +114,7 @@ data:extend(
     ingredients = 
 	{
       {"advanced-circuit", 2},
-      {"iron-plate", 2},
+      {"zinc-plate", 1},
       {"inserter-fast-half", 1}
     },
     result = "inserter-fast-half-filter",
@@ -126,7 +126,7 @@ data:extend(
     ingredients = 
 	{
       {"advanced-circuit", 2},
-      {"iron-plate", 2},
+      {"zinc-plate", 1},
       {"inserter-veryfast", 1}
     },
     result = "inserter-veryfast-filter",
@@ -138,7 +138,7 @@ data:extend(
     ingredients = 
 	{
       {"advanced-circuit", 2},
-      {"iron-plate", 2},
+      {"zinc-plate", 1},
       {"inserter-veryfast-half", 1}
     },
     result = "inserter-veryfast-half-filter",
@@ -151,7 +151,7 @@ data:extend(
 	{
       {"circuit3", 2},
       {"inserter-half-filter", 1},
-      {"steel-plate", 3}
+      {"brass-alloy", 3},
     },
     result = "inserter-half-smart",
     enabled = false
@@ -162,7 +162,7 @@ data:extend(
     ingredients = 
 	{
       {"inserter-long-filter", 1},
-      {"steel-plate", 4},
+      {"brass-alloy", 3},
       {"circuit3", 3}
     },
     result = "inserter-long-smart",
@@ -174,7 +174,7 @@ data:extend(
     ingredients = 
 	{
       {"inserter-long-half-filter", 1},
-      {"steel-plate", 4},
+      {"brass-alloy", 3},
       {"circuit3", 3}
     },
     result = "inserter-long-half-smart",
@@ -186,7 +186,7 @@ data:extend(
     ingredients = 
 	{
       {"circuit3", 4},
-      {"steel-plate", 3},
+      {"brass-alloy", 3},
       {"inserter-fast-half-filter", 1}
     },
     result = "inserter-fast-half-smart",
@@ -198,7 +198,7 @@ data:extend(
     ingredients = 
 	{
       {"circuit3", 4},
-      {"steel-plate", 3},
+      {"brass-alloy", 3},
       {"inserter-veryfast-filter", 1}
     },
     result = "inserter-veryfast-smart",
@@ -210,7 +210,7 @@ data:extend(
     ingredients = 
 	{
       {"circuit3", 4},
-      {"steel-plate", 3},
+      {"brass-alloy", 3},
       {"inserter-veryfast-half-filter", 1}
     },
     result = "inserter-veryfast-half-smart",

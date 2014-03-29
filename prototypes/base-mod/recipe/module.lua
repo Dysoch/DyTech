@@ -50,7 +50,7 @@ data:extend(
     {
       {"pollution-clean-module-3", 1},
 	  {"steel-plate", 5},
-      {"iron-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -64,7 +64,7 @@ data:extend(
     {
       {"pollution-clean-module-4", 1},
 	  {"steel-plate", 5},
-      {"copper-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
 	  {"ruby-5", 1},
     },
@@ -78,8 +78,8 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-5", 1},
-	  {"iron-plate-1", 5},
-	  {"copper-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"brass-alloy", 5},
       {"circuit3", 5},
 	  {"emerald-5", 5},
     },
@@ -93,8 +93,8 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-6", 1},
-	  {"iron-plate-1", 5},
-	  {"steel-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"tungsten-plate", 5},
       {"circuit3", 5},
 	  {"topaz-5", 5},
     },
@@ -108,7 +108,7 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-7", 1},
-	  {"steel-plate-1", 25},
+	  {"tungsten-plate", 25},
       {"circuit3", 50},
 	  {"diamond-5", 10},
     },
@@ -165,7 +165,7 @@ data:extend(
     {
       {"pollution-create-module-3", 1},
 	  {"steel-plate", 5},
-      {"iron-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -179,7 +179,7 @@ data:extend(
     {
       {"pollution-create-module-4", 1},
 	  {"steel-plate", 5},
-      {"copper-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
 	  {"ruby-5", 1},
     },
@@ -193,8 +193,8 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-5", 1},
-	  {"iron-plate-1", 5},
-	  {"copper-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"brass-alloy", 5},
       {"circuit3", 5},
 	  {"emerald-5", 5},
     },
@@ -208,8 +208,8 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-6", 1},
-	  {"iron-plate-1", 5},
-	  {"steel-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"tungsten-plate", 5},
       {"circuit3", 5},
 	  {"topaz-5", 5},
     },
@@ -223,7 +223,7 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-7", 1},
-	  {"steel-plate-1", 25},
+	  {"tungsten-plate", 25},
       {"circuit3", 50},
 	  {"diamond-5", 10},
     },
@@ -239,7 +239,7 @@ data:extend(
     {
       {"speed-module-3", 1},
 	  {"steel-plate", 5},
-      {"iron-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -253,7 +253,7 @@ data:extend(
     {
       {"speed-module-4", 1},
 	  {"steel-plate", 5},
-      {"copper-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
 	  {"ruby-5", 1},
     },
@@ -267,8 +267,8 @@ data:extend(
     ingredients =
     {
       {"speed-module-5", 1},
-	  {"iron-plate-1", 5},
-	  {"copper-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"brass-alloy", 5},
       {"circuit3", 5},
 	  {"emerald-5", 5},
     },
@@ -282,8 +282,8 @@ data:extend(
     ingredients =
     {
       {"speed-module-6", 1},
-	  {"iron-plate-1", 5},
-	  {"steel-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"tungsten-plate", 5},
       {"circuit3", 5},
 	  {"topaz-5", 5},
     },
@@ -297,7 +297,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-7", 1},
-	  {"steel-plate-1", 25},
+	  {"tungsten-plate", 25},
       {"circuit3", 50},
 	  {"diamond-5", 10},
     },
@@ -313,7 +313,7 @@ data:extend(
     {
       {"effectivity-module-3", 1},
 	  {"steel-plate", 5},
-      {"iron-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -327,7 +327,7 @@ data:extend(
     {
       {"effectivity-module-4", 1},
 	  {"steel-plate", 5},
-      {"copper-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
 	  {"ruby-5", 1},
     },
@@ -341,8 +341,8 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-5", 1},
-	  {"iron-plate-1", 5},
-	  {"copper-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"brass-alloy", 5},
       {"circuit3", 5},
 	  {"emerald-5", 5},
     },
@@ -356,8 +356,8 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-6", 1},
-	  {"iron-plate-1", 5},
-	  {"steel-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"tungsten-plate", 5},
       {"circuit3", 5},
 	  {"topaz-5", 5},
     },
@@ -371,7 +371,7 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-7", 1},
-	  {"steel-plate-1", 25},
+	  {"tungsten-plate", 25},
       {"circuit3", 50},
 	  {"diamond-5", 10},
     },
@@ -387,7 +387,7 @@ data:extend(
     {
       {"productivity-module-3", 1},
 	  {"steel-plate", 5},
-      {"iron-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -401,7 +401,7 @@ data:extend(
     {
       {"productivity-module-4", 1},
 	  {"steel-plate", 5},
-      {"copper-plate-1", 5},
+      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
 	  {"ruby-5", 1},
     },
@@ -415,8 +415,8 @@ data:extend(
     ingredients =
     {
       {"productivity-module-5", 1},
-	  {"iron-plate-1", 5},
-	  {"copper-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"brass-alloy", 5},
       {"circuit3", 5},
 	  {"emerald-5", 5},
     },
@@ -430,8 +430,8 @@ data:extend(
     ingredients =
     {
       {"productivity-module-6", 1},
-	  {"iron-plate-1", 5},
-	  {"steel-plate-1", 5},
+	  {"electrum-alloy", 5},
+	  {"tungsten-plate", 5},
       {"circuit3", 5},
 	  {"topaz-5", 5},
     },
@@ -445,7 +445,7 @@ data:extend(
     ingredients =
     {
       {"productivity-module-7", 1},
-	  {"steel-plate-1", 25},
+	  {"tungsten-plate", 25},
       {"circuit3", 50},
 	  {"diamond-5", 10},
     },

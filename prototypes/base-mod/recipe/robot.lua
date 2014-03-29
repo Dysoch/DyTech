@@ -7,8 +7,8 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {"steel-plate", 4},
-      {"iron-gear-wheel", 5},
+      {"silver-plate", 4},
+      {"steel-gear-wheel", 5},
       {"advanced-circuit", 2},
 	  {"logistic-robot", 1}
     },
@@ -57,8 +57,8 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {"steel-plate", 15},
-      {"iron-gear-wheel", 15},
+      {"electrum-alloy", 15},
+      {"tungsten-gear-wheel", 15},
       {"circuit3", 2},
 	  {"logistic-robot-1", 1}
     },
@@ -106,8 +106,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"iron-plate-1", 45},
-      {"steel-gear-wheel", 45},
+      {"electrum-alloy", 45},
+      {"brass-gear-wheel", 45},
       {"advanced-circuit", 45}
     },
     result = "roboport-1",
@@ -119,8 +119,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate-1", 45},
-      {"steel-gear-wheel", 45},
+      {"tungsten-plate", 45},
+      {"tungsten-gear-wheel", 45},
       {"circuit3", 45}
     },
     result = "roboport-2",
@@ -132,7 +132,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 15},
+      {"silver-plate", 15},
       {"steel-gear-wheel", 5},
       {"advanced-circuit", 10},
 	  {"construction-robot", 1},
@@ -145,8 +145,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate-1", 4},
-      {"steel-gear-wheel", 5},
+      {"electrum-alloy", 4},
+      {"tungsten-gear-wheel", 5},
       {"circuit3", 2},
 	  {"construction-robot-1", 1},
     },

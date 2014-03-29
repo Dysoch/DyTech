@@ -6,7 +6,6 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 15},
       {"iron-plate", 45},
 	  {"iron-stick", 30},
 	  {"electronic-circuit", 15}
@@ -22,7 +21,7 @@ data:extend(
       {"frame1", 1},
       {"steel-plate", 10},
 	  {"advanced-circuit", 5},
-	  {"copper-plate", 15}
+	  {"brass-alloy", 15}
     },
     result = "frame2"
   },
@@ -34,7 +33,7 @@ data:extend(
     {
       {"frame2", 1},
 	  {"advanced-circuit", 15},
-      {"steel-plate", 18},
+      {"tungsten-plate", 18},
 	  {"copper-cable", 20}
     },
     result = "frame3"
@@ -47,7 +46,7 @@ data:extend(
     {
       {"frame3", 1},
 	  {"circuit3", 10},
-      {"steel-plate", 25},
+      {"copper-tungsten-alloy", 25},
 	  {"bundledwire", 50}
     },
     result = "frame4"
@@ -58,7 +57,6 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 1},
       {"rubber", 5},
 	  {"wooden-chest", 1},
 	  {"iron-plate", 12}
@@ -87,7 +85,7 @@ data:extend(
       {"item-exit2", 1},
 	  {"steel-chest", 1},
       {"bundledwire", 10},
-	  {"copper-plate", 15}
+	  {"tungsten-plate", 15}
     },
     result = "item-exit3"
   },
@@ -202,7 +200,7 @@ data:extend(
       {"rotor2", 1},
       {"blade3", 3},
 	  {"steel-gear-wheel", 4},
-	  {"copper-plate", 12}
+	  {"brass-alloy", 12}
     },
     result = "rotor3"
   },
@@ -214,7 +212,7 @@ data:extend(
     {
       {"rotor3", 1},
 	  {"blade3", 9},
-      {"steel-gear-wheel", 12},
+      {"tungsten-gear-wheel", 12},
 	  {"advanced-circuit", 5}
     },
     result = "rotor4"
@@ -237,9 +235,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"iron-stick", 4},
-      {"iron-plate", 12},
-	  {"wood", 2}
+      {"steel-plate", 12},
+      {"silver-plate", 12},
     },
     result = "blade2"
   },
@@ -250,8 +247,8 @@ data:extend(
     ingredients =
     {
       {"blade2", 1},
-      {"steel-plate", 4},
-	  {"copper-plate", 4}
+      {"tungsten-plate", 4},
+	  {"brass-alloy", 4}
     },
     result = "blade3"
   },
@@ -262,7 +259,7 @@ data:extend(
     ingredients =
     {
       {"advanced-circuit", 5},
-      {"electronic-circuit", 2},
+      {"electrum-alloy", 2},
 	  {"bundledwire", 5}
     },
     result = "circuit3"

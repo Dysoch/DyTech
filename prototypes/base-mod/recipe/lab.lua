@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"circuit3", 5},
-      {"steel-gear-wheel", 5},
+      {"tungsten-gear-wheel", 5},
       {"bundledwire", 4},
 	  {"lab", 2},
     },

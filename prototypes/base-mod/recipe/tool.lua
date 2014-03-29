@@ -7,7 +7,7 @@ data:extend(
     ingredients =
     {
       {"steel-plate", 15},
-      {"iron-stick", 5},
+      {"gunmetal-alloy", 5},
 	  {"steel-axe", 1}
     },
     result = "steel-axe2"

@@ -7,7 +7,7 @@ data:extend(
     ingredients =
     {
       {"wheel", 4},
-      {"steel-plate", 75},
+      {"tungsten-plate", 75},
 	  {"engine5", 2},
       {"circuit3", 2},
       {"iron-stick", 12},
@@ -22,9 +22,9 @@ data:extend(
     ingredients =
     {
       {"advanced-circuit", 5},
-      {"steel-gear-wheel", 20},
-      {"iron-plate-1", 20},
-      {"steel-plate-1", 15},
+      {"tungsten-gear-wheel", 20},
+      {"gunmetal-alloy", 20},
+      {"tungsten-plate", 15},
     },
     result = "diesel-locomotive-armor"
   },
@@ -35,8 +35,8 @@ data:extend(
     ingredients =
     {
       {"circuit3", 5},
-      {"steel-gear-wheel", 20},
-      {"iron-plate-1", 20},
+      {"brass-gear-wheel", 20},
+      {"brass-alloy", 20},
       {"boiler-mk3", 2},
     },
     result = "diesel-locomotive-fast"
@@ -47,9 +47,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-gear-wheel", 10},
+      {"tungsten-gear-wheel", 10},
       {"rubber", 20},
-      {"steel-plate-1", 20},
+      {"tungsten-plate", 20},
     },
     result = "cargo-wagon-armor"
   },
@@ -59,8 +59,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-gear-wheel", 10},
-      {"iron-plate-1", 20},
+      {"brass-gear-wheel", 10},
+      {"brass-alloy", 20},
       {"rubber", 5},
     },
     result = "cargo-wagon-fast"
@@ -71,8 +71,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 10},
-      {"iron-plate", 20},
+      {"brass-gear-wheel", 10},
+      {"tungsten-plate", 20},
       {"rubber", 5},
     },
     result = "cargo-wagon-large"
