@@ -94,6 +94,21 @@ game.onevent(defines.events.ontick, function(event)
 		game.player.print(game.gettext("msg-reminder2"))
 		game.player.print(game.gettext("msg-welcome-2"))
 	end
+	--[[Event for generation the meteors]]--
+	--[[if event.tick%18000==0 then
+		local chance = math.random(100) --chance of 100%
+		if chance == 5 or 25 or 45 or 65 or 85 then --dunno if this works, but i hope it will
+			--generate asteroids (big, only 5% chance for it)
+		elseif chance == 4 or 6 or 24 or 26 or 44 or 46 or 64 or 66 or 84 or 86 then
+			--generate the big meteoride (10% chance)
+		elseif chance == (2,3,7,8,22,23,27,28,42,43,47,48,62,63,67,68,82,83,87,88) then --maybe this will work?
+			--generate the comet (20% chance)
+		elseif chance == 
+			--generate the medium meteoride (20% chance)
+		elseif chance == 
+			--generate the small meteoride (45% chance)
+		end
+	end]]--
 	--[[Resin generator]]--
     if event.tick%3600==0 then
 		for _,specie in pairs (glob.specieOfTreeTable) do
