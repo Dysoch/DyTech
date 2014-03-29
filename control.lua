@@ -96,19 +96,35 @@ game.onevent(defines.events.ontick, function(event)
 	end
 	--[[Event for generation the meteors]]--
 	--[[if event.tick%18000==0 then
-		local chance = math.random(100) --chance of 100%
-		if chance == 5 or 25 or 45 or 65 or 85 then --dunno if this works, but i hope it will
-			--generate asteroids (big, only 5% chance for it)
-		elseif chance == 4 or 6 or 24 or 26 or 44 or 46 or 64 or 66 or 84 or 86 then
-			--generate the big meteoride (10% chance)
-		elseif chance == (2,3,7,8,22,23,27,28,42,43,47,48,62,63,67,68,82,83,87,88) then --maybe this will work?
-			--generate the comet (20% chance)
-		elseif chance == 
-			--generate the medium meteoride (20% chance)
-		elseif chance == 
-			--generate the small meteoride (45% chance)
-		end
-	end]]--
+        local chance = math.random(100)
+    local pos = 1 -- 'saved' state for checkMatch
+    local chances = {
+    66, 30, 100, 29, 28, 59, 69, 9, 6, 70, 18, 23, 76, 81, 57, 68, 22, 75, 52, 14, 73, 15, 37, 7, 39, 25, 96, 34, 80, 87, 21, 17, 92, 13, 63, 99, 47, 65, 38, 61, 84, 55, 1, 3, 89, 41, 83, 74, 5, 27, 53, 4, 49, 44, 67, 71, 91, 24, 46, 64, 48, 95, 98, 94, 35, 90, 79, 42, 58, 36, 16, 93, 8, 10, 31, 86, 62, 11, 20, 2, 50, 12, 60, 54, 97, 82, 45, 33, 56, 43, 51, 26, 72, 32, 19, 88, 78, 77, 40, 85}  -- table of randomized chances 
+    local function checkMatch(percent)
+      for i=pos, (pos+percent) do
+        if chance == chances[i] then 
+            return true 
+        end
+      end
+      pos = pos + percent --failed to find a match, so update start position for next check 
+      return false
+    end
+    if checkMatch(5) then 
+      --generate asteroids (big, only 5% chance for it)
+      
+    elseif checkMatch(10) then
+      --generate the big meteoride (10% chance)
+      
+    elseif checkMatch(20) then
+      --generate the comet (20% chance)
+      
+    elseif checkMatch(20) then 
+      --generate the medium meteoride (20% chance)
+      
+    else --generate the small meteoride (45% chance)
+        
+    end
+	end--]]
 	--[[Resin generator]]--
     if event.tick%3600==0 then
 		for _,specie in pairs (glob.specieOfTreeTable) do
