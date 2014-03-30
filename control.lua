@@ -58,7 +58,10 @@ game.onevent(defines.events.onplayermineditem, function(event)
 		end
 	end
 	if event.itemstack.name == "radar-1" then
-		glob.warning=false
+    for index, radar in pairs(glob.radars) do
+      if not radar.valid then table.remove(glob.radars, index) end
+    end
+    if glob.radars.length == 0 then glob.warning=false end
 	end
 end)
 
@@ -69,7 +72,10 @@ game.onevent(defines.events.onentitydied, function(event)
 		end
 	end
 	if event.entity.name == "radar-1" then
-		glob.warning=false
+		for index, radar in pairs(glob.radars) do
+      if not radar.valid then table.remove(glob.radars, index) end
+    end
+    if glob.radars.length == 0 then glob.warning=false end
 	end
 end)
 
@@ -106,7 +112,7 @@ game.onevent(defines.events.ontick, function(event)
 		game.player.print(game.gettext("msg-welcome-2"))
 	end
 	--[[Event for generation the meteors]]--
-	--[[if event.tick%18000==0 then
+	if event.tick%18000==0 then
         local chance = math.random(100)
 		local pos = 1 -- 'saved' state for checkMatch
 		local chances = {
@@ -335,7 +341,8 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		event.createdentity.destroy()
 	--[[Early Warning System buildup]]--
 	elseif event.createdentity.name == "radar-1" then
-		glob.warning = true
+		table.insert(glob.radars, event.createdentity)
+    glob.warning = true
 	--[[Steam Engine Build]]--
 	elseif event.createdentity.name == "steam-engine-primary" or event.createdentity.name == "steam-engine" or event.createdentity.name == "steam-engine-terciary" then
 		if not glob.steamengine then 

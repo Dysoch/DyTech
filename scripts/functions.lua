@@ -108,6 +108,7 @@ function OnLoad(glob)
 	if not glob.combat.dog then glob.combat.dog=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
 	if not glob.warning then glob.warning=false end
+  if not glob.radars then glob.radars={} end
 end
 
 function OnInit(game, glob)
@@ -130,4 +131,5 @@ glob.sandcount=0
 glob.coal={}
 glob.coalcount=0
 glob.warning=false
+glob.radars={}
 end
