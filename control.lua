@@ -57,6 +57,9 @@ game.onevent(defines.events.onplayermineditem, function(event)
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
 		end
 	end
+	if event.itemstack.name == "radar-1" then
+		glob.warning=false
+	end
 end)
 
 game.onevent(defines.events.onentitydied, function(event)
@@ -65,6 +68,14 @@ game.onevent(defines.events.onentitydied, function(event)
 			glob.combat[counter]=glob.combat[counter] + ingredients
 		end
 	end
+	if event.entity.name == "radar-1" then
+		glob.warning=false
+	end
+end)
+
+game.onevent(defines.events.onsectorscanned, function(event)
+	--[[Counter increase for sectors scanned]]--
+	glob.counter.sectorscanned = glob.counter.sectorscanned + 1
 end)
 
 --[[Main Events]]--
@@ -97,34 +108,55 @@ game.onevent(defines.events.ontick, function(event)
 	--[[Event for generation the meteors]]--
 	--[[if event.tick%18000==0 then
         local chance = math.random(100)
-    local pos = 1 -- 'saved' state for checkMatch
-    local chances = {
-    66, 30, 100, 29, 28, 59, 69, 9, 6, 70, 18, 23, 76, 81, 57, 68, 22, 75, 52, 14, 73, 15, 37, 7, 39, 25, 96, 34, 80, 87, 21, 17, 92, 13, 63, 99, 47, 65, 38, 61, 84, 55, 1, 3, 89, 41, 83, 74, 5, 27, 53, 4, 49, 44, 67, 71, 91, 24, 46, 64, 48, 95, 98, 94, 35, 90, 79, 42, 58, 36, 16, 93, 8, 10, 31, 86, 62, 11, 20, 2, 50, 12, 60, 54, 97, 82, 45, 33, 56, 43, 51, 26, 72, 32, 19, 88, 78, 77, 40, 85}  -- table of randomized chances 
-    local function checkMatch(percent)
-      for i=pos, (pos+percent) do
-        if chance == chances[i] then 
-            return true 
-        end
-      end
-      pos = pos + percent --failed to find a match, so update start position for next check 
-      return false
-    end
-    if checkMatch(5) then 
-      --generate asteroids (big, only 5% chance for it)
-      
+		local pos = 1 -- 'saved' state for checkMatch
+		local chances = {
+		66, 30, 100, 29, 28, 59, 69, 9, 6, 70, 18, 23, 76, 81, 57, 68, 22, 75, 52, 14, 73, 15, 37, 7, 39, 25, 96, 34, 80, 87, 21, 17, 92, 13, 63, 99, 47, 65, 38, 61, 84, 55, 1, 3, 89, 41, 83, 74, 5, 27, 53, 4, 49, 44, 67, 71, 91, 24, 46, 64, 48, 95, 98, 94, 35, 90, 79, 42, 58, 36, 16, 93, 8, 10, 31, 86, 62, 11, 20, 2, 50, 12, 60, 54, 97, 82, 45, 33, 56, 43, 51, 26, 72, 32, 19, 88, 78, 77, 40, 85}
+		local function checkMatch(percent)
+			for i=pos, (pos+percent) do
+				if chance == chances[i] then 
+					return true 
+				end
+			end
+		pos = pos + percent 
+			return false
+		end
+	if checkMatch(5) then 
+		if glob.time > 7200 and glob.counter.chunks > 100 and glob.counter.sectorscanned > 100 then --after time of 2 hours and 100 chunks. good balance???
+			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5"))
+			
+			end
+		end
     elseif checkMatch(10) then
-      --generate the big meteoride (10% chance)
-      
+		if glob.time > 6840 and glob.counter.chunks > 70 and glob.counter.sectorscanned > 70 then --95% of max time (7200) for spawning
+			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4"))
+			
+			end
+		end
     elseif checkMatch(20) then
-      --generate the comet (20% chance)
-      
+		if glob.time > 6120 and glob.counter.chunks > 45 and glob.counter.sectorscanned > 45 then --85% of max time (7200) for spawning
+			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3"))
+			
+			end
+		end
     elseif checkMatch(20) then 
-      --generate the medium meteoride (20% chance)
-      
-    else --generate the small meteoride (45% chance)
-        
+		if glob.time > 4680 and glob.counter.chunks > 25 and glob.counter.sectorscanned > 25 then --65% of max time (7200) for spawning
+			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2"))
+			
+			end
+		end
+    else 
+		if glob.time > 3240 then --45% of max time (7200) for spawning
+			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-1"))
+			
+			end
+		end
     end
-	end--]]
+	end]]--
 	--[[Resin generator]]--
     if event.tick%3600==0 then
 		for _,specie in pairs (glob.specieOfTreeTable) do
@@ -301,6 +333,9 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		end
 		table.insert(glob[specie.."trees"], {entity=game.createentity({name=specie.."-tree", position=event.createdentity.position, force=game.forces.neutral}), time=0})
 		event.createdentity.destroy()
+	--[[Early Warning System buildup]]--
+	elseif event.createdentity.name == "radar-1" then
+		glob.warning = true
 	--[[Steam Engine Build]]--
 	elseif event.createdentity.name == "steam-engine-primary" or event.createdentity.name == "steam-engine" or event.createdentity.name == "steam-engine-terciary" then
 		if not glob.steamengine then 
@@ -330,7 +365,9 @@ game.onevent(defines.events.onbuiltentity, function(event)
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
-   --[[Tree generator]]--
+	--[[Counter increas for chunks loaded]]--
+	glob.counter.chunks = glob.counter.chunks + 1
+	--[[Tree generator]]--
 	if math.random(5)==1 then
 		local specieOfTree=glob.specieOfTreeTable[math.random(#glob.specieOfTreeTable)]
 		local treex = event.area.lefttop.x+math.random(32)

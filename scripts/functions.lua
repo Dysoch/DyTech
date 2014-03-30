@@ -59,11 +59,13 @@ function CounterPrinter(game, tostring, glob)
 	game.player.print("Science:".." "..tostring(glob.counter.science))
 	game.player.print("Wall:".." "..tostring(glob.counter.wall))
 	game.player.print("Modules:".." "..tostring(glob.counter.modules))
+	game.player.print("Chunks Loaded:".." "..tostring(glob.counter.chunks))
+	game.player.print("Sectors Scanned:".." "..tostring(glob.counter.sectorscanned))
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end
 
 function OnLoad(glob)
-	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
+	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, chunks=0, sectorscanned=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
 	if not glob.counter.resource then glob.counter.resource=0 end
@@ -86,6 +88,8 @@ function OnLoad(glob)
 	if not glob.counter.science then glob.counter.science=0 end
 	if not glob.counter.wall then glob.counter.wall=0 end
 	if not glob.counter.modules then glob.counter.modules=0 end
+	if not glob.counter.chunks then glob.counter.chunks=0 end
+	if not glob.counter.sectorscanned then glob.counter.sectorscanned=0 end
 	if not glob.unlock then glob.unlock={umd=0} end
 	if not glob.unlock.umd then glob.unlock.umd=0 end
 	if not glob.craftfoundation then glob.craftfoundation={wood=0, stone=0, iron=0, steel=0} end
@@ -103,13 +107,14 @@ function OnLoad(glob)
 	if not glob.combat.queen then glob.combat.queen=0 end
 	if not glob.combat.dog then glob.combat.dog=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
+	if not glob.warning then glob.warning=false end
 end
 
 function OnInit(game, glob)
 	game.player.print(game.gettext("msg-welcome-1"))
 	game.player.print(game.gettext("msg-welcome-2"))
 	game.player.insert{name="wood",count=4}
-glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0}
+glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, chunks=0, sectorscanned=0}
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
 glob.unlock={umd=0}
 glob.craftfoundation={wood=0, stone=0, iron=0, steel=0}
@@ -124,4 +129,5 @@ glob.sand={}
 glob.sandcount=0
 glob.coal={}
 glob.coalcount=0
+glob.warning=false
 end
