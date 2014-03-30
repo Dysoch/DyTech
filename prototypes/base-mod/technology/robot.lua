@@ -8,6 +8,10 @@ data:extend(
 	{
       {
         type = "unlock-recipe",
+        recipe = "logistic-chest-active-provider-1"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "logistic-chest-passive-provider-1"
       },
       {
@@ -49,6 +53,10 @@ data:extend(
     icon = "__base__/graphics/technology/logistic-robotics.png",
     effects = 
 	{
+      {
+        type = "unlock-recipe",
+        recipe = "logistic-chest-active-provider-2"
+      },
       {
         type = "unlock-recipe",
         recipe = "logistic-chest-passive-provider-2"

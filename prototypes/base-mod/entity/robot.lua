@@ -54,10 +54,37 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fast_replaceable_group = "container",
     inventory_size = 72,
-    logistic_mode = "provider",
+    logistic_mode = "passive-provider",
     picture =
     {
       filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-passive-provider-1.png",
+      priority = "extra-high",
+      width = 38,
+      height = 32,
+      shift = {0.1, 0}
+    }
+  },
+  {
+    type = "logistic-container",
+    name = "logistic-chest-active-provider-1",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-active-provider-1.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = 
+	{
+		hardness = 0.2, 
+		mining_time = 0.5, 
+		result = "logistic-chest-active-provider-1"
+	},
+    max_health = 150,
+    corpse = "small-remnants",
+    collision_box = {{-0.4,-0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    fast_replaceable_group = "container",
+    inventory_size = 72,
+    logistic_mode = "active-provider",
+    picture =
+    {
+      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-active-provider-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -172,10 +199,37 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fast_replaceable_group = "container",
     inventory_size = 96,
-    logistic_mode = "provider",
+    logistic_mode = "passive-provider",
     picture =
     {
       filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-passive-provider-2.png",
+      priority = "extra-high",
+      width = 38,
+      height = 32,
+      shift = {0.1, 0}
+    }
+  },
+  {
+    type = "logistic-container",
+    name = "logistic-chest-active-provider-2",
+    icon = "__DyTech-Graphics__/graphics/icons/logistic-chest-active-provider-2.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = 
+	{
+		hardness = 0.2, 
+		mining_time = 0.5, 
+		result = "logistic-chest-active-provider-2"
+	},
+    max_health = 150,
+    corpse = "small-remnants",
+    collision_box = {{-0.4,-0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    fast_replaceable_group = "container",
+    inventory_size = 96,
+    logistic_mode = "active-provider",
+    picture =
+    {
+      filename = "__DyTech-Graphics__/graphics/entity/logistic/logistic-chest-active-provider-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,

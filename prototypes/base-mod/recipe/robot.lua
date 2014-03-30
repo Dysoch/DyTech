@@ -28,6 +28,18 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "logistic-chest-active-provider-1",
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {"logistic-chest-active-provider", 1},
+      {"advanced-circuit", 5}
+    },
+    result = "logistic-chest-active-provider-1"
+  },
+  {
+    type = "recipe",
     name = "logistic-chest-storage-1",
     enabled = false,
     energy_required = 1,
@@ -75,6 +87,18 @@ data:extend(
       {"circuit3", 5}
     },
     result = "logistic-chest-passive-provider-2"
+  },
+  {
+    type = "recipe",
+    name = "logistic-chest-active-provider-2",
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {"logistic-chest-active-provider-1", 1},
+      {"circuit3", 5}
+    },
+    result = "logistic-chest-active-provider-2"
   },
   {
     type = "recipe",
