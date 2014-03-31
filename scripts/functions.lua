@@ -1,11 +1,17 @@
 module("fs")
 
 function MeteorSpawn(math, random, abs, glob, game, meteor)
-	local position={x=math.random(math.abs(glob.landing.west)+glob.landing.east), y=math.random(math.abs(glob.landing.south)+glob.landing.north)}
-	if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
-	if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
+	local position={}
+	local name = meteor[math.random(#meteor)]    
+	repeat
+		position.x=math.random(math.abs(glob.landing.west)+glob.landing.east)
+		position.y=math.random(math.abs(glob.landing.south)+glob.landing.north)
+		if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
+		if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
+		position = game.findnoncollidingposition(name, position, 30, 1)
+	until ((math.abs(position.x) < 1000000) and (math.abs(position.y) < 1000000))
 	--optional findentities table around position for damage of entities near strike position
-		game.createentity{name=meteor[math.random(#meteor)], position=position, force=game.forces.neutral}
+	game.createentity{name=name, position=position, force=game.forces.neutral}
 end
 
 function getboundingbox(position, radius)

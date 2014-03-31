@@ -364,13 +364,6 @@ game.onevent(defines.events.onbuiltentity, function(event)
 			glob.solarpanel = {}
 		end
 		table.insert(glob.solarpanel, {entity=event.createdentity, tick=event.tick})
-	elseif game.entityprototypes.quartz then --[[Industrio Compatibility]]--
-		if event.createdentity.name == "solar-array-mk1" or event.createdentity.name == "solar-array-mk2" then
-			if not glob.solarpanel then
-				glob.solarpanel = {}
-			end
-		table.insert(glob.solarpanel, {entity=event.createdentity, tick=event.tick})
-		end
 	--[[Biter spawner build]]--
 	elseif event.createdentity.name == "biter-spawner-1" then
 		if not glob.spawning then 
