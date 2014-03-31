@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "container",
-    name = "meteor-asteroid-01",
+    name = "meteor-asteroid-1",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =

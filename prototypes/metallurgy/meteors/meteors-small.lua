@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "container",
-    name = "meteor-small-01",
+    name = "meteor-small-1",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =
@@ -41,7 +41,7 @@ data:extend(
   },
   {
     type = "container",
-    name = "meteor-small-02",
+    name = "meteor-small-2",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =
@@ -80,7 +80,7 @@ data:extend(
   },
   {
     type = "container",
-    name = "meteor-small-03",
+    name = "meteor-small-3",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =
@@ -119,7 +119,7 @@ data:extend(
   },
   {
     type = "container",
-    name = "meteor-small-04",
+    name = "meteor-small-4",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =
@@ -158,7 +158,7 @@ data:extend(
   },
   {
     type = "container",
-    name = "meteor-small-05",
+    name = "meteor-small-5",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
     minable =
