@@ -6,14 +6,19 @@ require "scripts/functions"
 --game.player.print(serpent.block(glob.counter.dytech)) --debugger
 	glob.specieOfTreeTable={"rubber"}
 	--Small meteors:
-	--[[glob.specieOfMeteorSmallTable={
+	glob.specieOfMeteorSmallTable={
 	"meteor-small-01", "meteor-small-02", "meteor-small-03", "meteor-small-04", "meteor-small-05"}
 	--Medium meteors:
 	glob.specieOfMeteorMediumTable={
 	"meteor-medium-01", "meteor-medium-02", "meteor-medium-03", "meteor-medium-04", "meteor-medium-05"}
 	--Large meteors:
 	glob.specieOfMeteorLargeTable={
-	"meteor-large-01", "meteor-large-02", "meteor-large-03", "meteor-large-04", "meteor-large-05"}]]--
+	"meteor-large-01", "meteor-large-02", "meteor-large-03", "meteor-large-04", "meteor-large-05"}
+	--Comets:
+	glob.specieOfCometTable={
+	"meteor-comet-01", "meteor-comet-02", "meteor-comet-03", "meteor-comet-04", "meteor-comet-05"}
+	--Asteroids:
+	glob.specieOfAsteroidTable={"meteor-asteroid-01"}
 	
 game.oninit(function()
 	fs.OnInit(game, glob)
