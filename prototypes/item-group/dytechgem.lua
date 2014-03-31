@@ -43,5 +43,11 @@ data:extend(
     group = "dytechgem",
     order = "6"
   },
+  {
+    type = "item-subgroup",
+    name = "meteors",
+    group = "dytechgem",
+    order = "7"
+  },
 }
 )

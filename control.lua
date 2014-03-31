@@ -12,8 +12,8 @@ require "scripts/functions"
 	--glob.specieOfMeteorMediumTable={
 	--"meteor-medium-1", "meteor-medium-2", "meteor-medium-3", "meteor-medium-4", "meteor-medium-5"}
 	--Large meteors:
-	--glob.specieOfMeteorLargeTable={
-	--"meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
+	glob.specieOfMeteorLargeTable={
+	"meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
 	--Comets:
 	--glob.specieOfCometTable={
 	--"meteor-comet-1", "meteor-comet-2", "meteor-comet-3", "meteor-comet-4", "meteor-comet-5"}
@@ -21,7 +21,7 @@ require "scripts/functions"
 	--glob.specieOfAsteroidTable={"meteor-asteroid-1"}
 	
 game.oninit(function()
-	fs.OnInit(game, glob)
+	fs.OnInit(game, glob, math, random)
 end)
 
 game.onsave(function()
@@ -29,7 +29,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	fs.OnLoad(glob)
+	fs.OnLoad(glob, math, random)
 end)
 
 --[[F-mod Compatibility]]--
@@ -145,35 +145,30 @@ game.onevent(defines.events.ontick, function(event)
 		pos = pos + percent 
 			return false
 		end
-	if checkMatch(5) then 
+	if checkMatch(5) then --Asteroids
 		if glob.time > 7200 and (glob.chunks+glob.counter.sectorscanned) > math.random(10000,50000) then
-			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5"))
-			
-			end
+			--fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5")) end
 		end
-    elseif checkMatch(10) then
+    elseif checkMatch(10) then --Large Meteors
 		if glob.time > 6840 and (glob.chunks+glob.counter.sectorscanned) > math.random(5000,10000) then
-			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4"))
-			
-			end
+			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4")) end
 		end
-    elseif checkMatch(20) then
+    elseif checkMatch(20) then --Comets
 		if glob.time > 6120 and (glob.chunks+glob.counter.sectorscanned) > math.random(2500,5000) then
-			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3"))
-			
-			end
+			--fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3")) end
 		end
-    elseif checkMatch(20) then 
+    elseif checkMatch(20) then --Medium Meteors
 		if glob.time > 4680 and (glob.chunks+glob.counter.sectorscanned) > math.random(1000,2500) then
-			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2"))
-			
-			end
+			--fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2")) end
 		end
     else 
-		if glob.time > 3240 then
-			if glob.warning==true then game.player.print(game.gettext("msg-meteor-1"))
-			
-			end
+		if glob.time > 3240 then --Small Meteors
+		--fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
+			if glob.warning==true then game.player.print(game.gettext("msg-meteor-1")) end
 		end
     end
 	end
@@ -401,6 +396,16 @@ game.onevent(defines.events.onchunkgenerated, function(event)
 		table.insert(glob[specieOfTree.."trees"], {entity=createdentity})
 		end
 	end
+	if event.area.lefttop.y>glob.landing.north then
+		glob.landing.north=event.area.lefttop.y+glob.landing.extra
+	elseif event.area.rightbottom.y<glob.landing.south then
+		glob.landing.south=event.area.rightbottom.y-glob.landing.extra
+	end
+	if event.area.lefttop.x>glob.landing.east then
+		glob.landing.east=event.area.lefttop.x+glob.landing.extra
+	elseif event.area.rightbottom.x<glob.landing.west then
+		glob.landing.west=event.area.rightbottom.x-glob.landing.extra
+	end
 end)
 
 remote.addinterface("DyTech",
@@ -505,9 +510,10 @@ remote.addinterface("DyTech",
 			game.player.print("Dogs:".." "..tostring(glob.combat.dog))
 			game.player.print("Birds:".." "..tostring(glob.combat.bird))
 			game.player.print("Global Counter:".." "..tostring(glob.combat.dytech))
-  end
+  end,
   
   Chunks = function()
 			game.player.print("Chunks Generated:".." "..tostring(glob.chunks))
+			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
   end
 })

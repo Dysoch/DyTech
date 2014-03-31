@@ -1,5 +1,13 @@
 module("fs")
 
+function MeteorSpawn(math, random, abs, glob, game, meteor)
+	local position={x=math.random(math.abs(glob.landing.west)+glob.landing.east), y=math.random(math.abs(glob.landing.south)+glob.landing.north)}
+	if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
+	if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
+	--optional findentities table around position for damage of entities near strike position
+		game.createentity{name=meteor[math.random(#meteor)], position=position, force=game.forces.neutral}
+end
+
 function getboundingbox(position, radius)
 return {position.x-radius, position.y-radius}, {position.x+radius,position.y+radius} end
 
@@ -63,7 +71,7 @@ function CounterPrinter(game, tostring, glob)
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end
 
-function OnLoad(glob)
+function OnLoad(glob, math, random)
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, sectorscanned=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
@@ -107,10 +115,15 @@ function OnLoad(glob)
 	if not glob.combat.dog then glob.combat.dog=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
 	if not glob.warning then glob.warning=false end
-  if not glob.radars then glob.radars={} end
+	if not glob.radars then glob.radars={} end
+	if not glob.landing then glob.landing={extra=math.random(800,1200)} end
+	if not glob.landing.north then glob.landing.north=glob.landing.extra end
+	if not glob.landing.south then glob.landing.south=0-glob.landing.extra end
+	if not glob.landing.east then glob.landing.east=glob.landing.extra end
+	if not glob.landing.west then glob.landing.west=0-glob.landing.extra end
 end
 
-function OnInit(game, glob)
+function OnInit(game, glob, math, random)
 	game.player.print(game.gettext("msg-welcome-1"))
 	game.player.print(game.gettext("msg-welcome-2"))
 	game.player.insert{name="wood",count=4}
@@ -132,4 +145,9 @@ glob.coal={}
 glob.coalcount=0
 glob.warning=false
 glob.radars={}
+glob.landing={extra=math.random(800,1200)}
+glob.landing.north=glob.landing.extra
+glob.landing.south=0-glob.landing.extra
+glob.landing.east=glob.landing.extra
+glob.landing.west=0-glob.landing.extra
 end

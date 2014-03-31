@@ -170,7 +170,7 @@ require("prototypes.metallurgy.item.plates")
 --require("prototypes.metallurgy.meteors.asteroids")
 --require("prototypes.metallurgy.meteors.comets")
 --require("prototypes.metallurgy.meteors.explosions") --NEED TO TEST THIS, IF IT WORKS!
---require("prototypes.metallurgy.meteors.meteors-large")
+require("prototypes.metallurgy.meteors.meteors-large")
 --require("prototypes.metallurgy.meteors.meteors-medium")
 --require("prototypes.metallurgy.meteors.meteors-small")
 --require("prototypes.metallurgy.meteors.projectiles") --UNSURE IF NEEDED!

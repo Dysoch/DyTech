@@ -5,6 +5,8 @@ data:extend(
     name = "meteor-large-1",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -40,15 +42,15 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 128,
+        height = 128,
+        --shift = {1.1, -1}
     },
   },
   {
@@ -56,6 +58,8 @@ data:extend(
     name = "meteor-large-2",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -91,15 +95,15 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 128,
+        height = 128,
+        --shift = {1.1, -1}
     },
   },
   {
@@ -107,6 +111,8 @@ data:extend(
     name = "meteor-large-3",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -142,15 +148,15 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 128,
+        height = 128,
+        --shift = {1.1, -1}
     },
   },
   {
@@ -158,6 +164,8 @@ data:extend(
     name = "meteor-large-4",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -193,15 +201,15 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 128,
+        height = 128,
+        --shift = {1.1, -1}
     },
   },
   {
@@ -209,6 +217,8 @@ data:extend(
     name = "meteor-large-5",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -244,15 +254,15 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 128,
+        height = 128,
+        --shift = {1.1, -1}
     },
   },
 }
