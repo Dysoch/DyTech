@@ -6,19 +6,19 @@ require "scripts/functions"
 --game.player.print(serpent.block(glob.counter.dytech)) --debugger
 	glob.specieOfTreeTable={"rubber"}
 	--Small meteors:
-	glob.specieOfMeteorSmallTable={
-	"meteor-small-01", "meteor-small-02", "meteor-small-03", "meteor-small-04", "meteor-small-05"}
+	--glob.specieOfMeteorSmallTable={
+	--"meteor-small-01", "meteor-small-02", "meteor-small-03", "meteor-small-04", "meteor-small-05"}
 	--Medium meteors:
-	glob.specieOfMeteorMediumTable={
-	"meteor-medium-01", "meteor-medium-02", "meteor-medium-03", "meteor-medium-04", "meteor-medium-05"}
+	--glob.specieOfMeteorMediumTable={
+	--"meteor-medium-01", "meteor-medium-02", "meteor-medium-03", "meteor-medium-04", "meteor-medium-05"}
 	--Large meteors:
-	glob.specieOfMeteorLargeTable={
-	"meteor-large-01", "meteor-large-02", "meteor-large-03", "meteor-large-04", "meteor-large-05"}
+	--glob.specieOfMeteorLargeTable={
+	--"meteor-large-01", "meteor-large-02", "meteor-large-03", "meteor-large-04", "meteor-large-05"}
 	--Comets:
-	glob.specieOfCometTable={
-	"meteor-comet-01", "meteor-comet-02", "meteor-comet-03", "meteor-comet-04", "meteor-comet-05"}
+	--glob.specieOfCometTable={
+	--"meteor-comet-01", "meteor-comet-02", "meteor-comet-03", "meteor-comet-04", "meteor-comet-05"}
 	--Asteroids:
-	glob.specieOfAsteroidTable={"meteor-asteroid-01"}
+	--glob.specieOfAsteroidTable={"meteor-asteroid-01"}
 	
 game.oninit(function()
 	fs.OnInit(game, glob)
@@ -130,6 +130,7 @@ game.onevent(defines.events.ontick, function(event)
 		game.player.print(game.gettext("msg-welcome-2"))
 	end
 	--[[Event for generation the meteors]]--
+	--if event.tick%18000==0 and math.random(3)==2 then --every 5 minutes, and a chance of 33% for it to activate (otherwise it will happen to much) --commented out for testing puposes
 	if event.tick%18000==0 then
         local chance = math.random(100)
 		local pos = 1 -- 'saved' state for checkMatch
@@ -145,42 +146,37 @@ game.onevent(defines.events.ontick, function(event)
 			return false
 		end
 	if checkMatch(5) then 
-		if glob.time > 7200 and glob.counter.chunks > 100 and glob.counter.sectorscanned > 100 then --after time of 2 hours and 100 chunks. good balance???
-			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+		if glob.time > 7200 and (glob.chunks+glob.counter.sectorscanned) > math.random(10000,50000) then
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5"))
 			
 			end
 		end
     elseif checkMatch(10) then
-		if glob.time > 6840 and glob.counter.chunks > 70 and glob.counter.sectorscanned > 70 then --95% of max time (7200) for spawning
-			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+		if glob.time > 6840 and (glob.chunks+glob.counter.sectorscanned) > math.random(5000,10000) then
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4"))
 			
 			end
 		end
     elseif checkMatch(20) then
-		if glob.time > 6120 and glob.counter.chunks > 45 and glob.counter.sectorscanned > 45 then --85% of max time (7200) for spawning
-			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+		if glob.time > 6120 and (glob.chunks+glob.counter.sectorscanned) > math.random(2500,5000) then
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3"))
 			
 			end
 		end
     elseif checkMatch(20) then 
-		if glob.time > 4680 and glob.counter.chunks > 25 and glob.counter.sectorscanned > 25 then --65% of max time (7200) for spawning
-			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+		if glob.time > 4680 and (glob.chunks+glob.counter.sectorscanned) > math.random(1000,2500) then
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2"))
 			
 			end
 		end
     else 
-		if glob.time > 3240 then --45% of max time (7200) for spawning
-			-- the next line will check for the early warning system if its active or not. if it is, posts a message to the player
+		if glob.time > 3240 then
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-1"))
 			
 			end
 		end
     end
-	end]]--
+	end
 	--[[Resin generator]]--
     if event.tick%3600==0 then
 		for _,specie in pairs (glob.specieOfTreeTable) do
@@ -390,8 +386,8 @@ game.onevent(defines.events.onbuiltentity, function(event)
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
-	--[[Counter increas for chunks loaded]]--
-	glob.counter.chunks = glob.counter.chunks + 1
+	--[[Counter increase for chunks loaded]]--
+	glob.chunks = glob.chunks + 1
 	--[[Tree generator]]--
 	if math.random(5)==1 then
 		local specieOfTree=glob.specieOfTreeTable[math.random(#glob.specieOfTreeTable)]
@@ -509,5 +505,9 @@ remote.addinterface("DyTech",
 			game.player.print("Dogs:".." "..tostring(glob.combat.dog))
 			game.player.print("Birds:".." "..tostring(glob.combat.bird))
 			game.player.print("Global Counter:".." "..tostring(glob.combat.dytech))
+  end
+  
+  Chunks = function()
+			game.player.print("Chunks Generated:".." "..tostring(glob.chunks))
   end
 })
