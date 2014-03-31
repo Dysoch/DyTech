@@ -166,6 +166,13 @@ require("prototypes.metallurgy.item.ores")
 require("prototypes.metallurgy.item.pipes")
 require("prototypes.metallurgy.item.plates")
 
+-- meteors 5x
+--require("prototypes.metallurgy.meteors.asteroids")
+--require("prototypes.metallurgy.meteors.comets")
+--require("prototypes.metallurgy.meteors.meteors-large")
+--require("prototypes.metallurgy.meteors.meteors-medium")
+--require("prototypes.metallurgy.meteors.meteors-small")
+
 -- recipe 20x
 require("prototypes.metallurgy.recipe.assemblers-molds")
 require("prototypes.metallurgy.recipe.intermediates")

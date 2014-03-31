@@ -5,6 +5,15 @@ require "scripts/functions"
 
 --game.player.print(serpent.block(glob.counter.dytech)) --debugger
 	glob.specieOfTreeTable={"rubber"}
+	--Small meteors:
+	--[[glob.specieOfMeteorSmallTable={
+	"meteor-small-01", "meteor-small-02", "meteor-small-03", "meteor-small-04", "meteor-small-05"}
+	--Medium meteors:
+	glob.specieOfMeteorMediumTable={
+	"meteor-medium-01", "meteor-medium-02", "meteor-medium-03", "meteor-medium-04", "meteor-medium-05"}
+	--Large meteors:
+	glob.specieOfMeteorLargeTable={
+	"meteor-large-01", "meteor-large-02", "meteor-large-03", "meteor-large-04", "meteor-large-05"}]]--
 	
 game.oninit(function()
 	fs.OnInit(game, glob)
@@ -35,6 +44,10 @@ if remote.interfaces["F-mod"] then
   remote.call("F-mod", "addumdresource", "emerald-ore", 1)
   remote.call("F-mod", "addumdresource", "diamond-orex", 4)
   remote.call("F-mod", "addumdresource", "diamond-ore", 1)
+  remote.call("F-mod", "addumdresource", "zinc-ore", 1)
+  remote.call("F-mod", "addumdresource", "lead-ore", 1)
+  remote.call("F-mod", "addumdresource", "tungsten-ore", 1)
+  remote.call("F-mod", "addumdresource", "tin-ore", 1)
 end
 
 --[[Dynamic System Counters increase]]--
