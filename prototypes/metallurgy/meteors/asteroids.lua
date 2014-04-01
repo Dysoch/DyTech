@@ -5,6 +5,8 @@ data:extend(
     name = "meteor-asteroid-1",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -76,15 +78,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = {{-5.85, -5.85}, {5.85, 5.85}},
+    selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
     picture =
 	{
-        filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-large-01.png",
+        filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-asteroid-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 384,
+        height = 384,
     },
   },
 }

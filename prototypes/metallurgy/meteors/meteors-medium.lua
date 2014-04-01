@@ -5,6 +5,8 @@ data:extend(
     name = "meteor-medium-1",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -34,15 +36,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-medium-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 64,
+        height = 64,
     },
   },
   {
@@ -50,6 +51,8 @@ data:extend(
     name = "meteor-medium-2",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -79,15 +82,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-medium-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 64,
+        height = 64,
     },
   },
   {
@@ -95,6 +97,8 @@ data:extend(
     name = "meteor-medium-3",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -124,15 +128,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-medium-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 64,
+        height = 64,
     },
   },
   {
@@ -140,6 +143,8 @@ data:extend(
     name = "meteor-medium-4",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -169,15 +174,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-medium-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 64,
+        height = 64,
     },
   },
   {
@@ -185,6 +189,8 @@ data:extend(
     name = "meteor-medium-5",
     icon = "__DyTech-Graphics__/graphics/icons/meteor.png",
     flags = {"placeable-neutral"},
+	order = "meteor",
+	subgroup = "meteors",
     minable =
     {
       hardness = 15,
@@ -214,15 +220,14 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     picture =
 	{
         filename = "__DyTech-Graphics__/graphics/entity/meteor/meteor-medium-01.png",
         priority = "extra-high",
-        width = 155,
-        height = 118,
-        shift = {1.1, -1}
+        width = 64,
+        height = 64,
     },
   },
 }

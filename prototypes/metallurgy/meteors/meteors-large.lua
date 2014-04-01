@@ -42,7 +42,7 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
@@ -50,7 +50,6 @@ data:extend(
         priority = "extra-high",
         width = 128,
         height = 128,
-        --shift = {1.1, -1}
     },
   },
   {
@@ -95,7 +94,7 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
@@ -103,7 +102,6 @@ data:extend(
         priority = "extra-high",
         width = 128,
         height = 128,
-        --shift = {1.1, -1}
     },
   },
   {
@@ -148,7 +146,7 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
@@ -156,7 +154,6 @@ data:extend(
         priority = "extra-high",
         width = 128,
         height = 128,
-        --shift = {1.1, -1}
     },
   },
   {
@@ -201,7 +198,7 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
@@ -209,7 +206,6 @@ data:extend(
         priority = "extra-high",
         width = 128,
         height = 128,
-        --shift = {1.1, -1}
     },
   },
   {
@@ -254,7 +250,7 @@ data:extend(
     },
     max_health = 10,
 	inventory_size = 1,
-    collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+    collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     picture =
 	{
@@ -262,7 +258,6 @@ data:extend(
         priority = "extra-high",
         width = 128,
         height = 128,
-        --shift = {1.1, -1}
     },
   },
 }
