@@ -1,31 +1,3 @@
-data:extend(
-{ 
-  {
-    type = "recipe",
-    name = "car",
-    enabled = false,
-    ingredients =
-    {
-      {"engine-unit", 8},
-      {"iron-plate", 20},
-      {"steel-plate", 5},
-	  {"wheel", 4},
-    },
-    result = "car"
-  },
-  {
-    type = "recipe",
-    name = "laser-turret",
-    enabled = false,
-    energy_required = 10,
-    ingredients =
-    {
-      {"iron-plate", 5},
-      {"electronic-circuit", 5},
-      {"stone-gear-wheel", 5},
-    },
-    result = "laser-turret"
-  },
   {
     type = "recipe",
     name = "speed-module",

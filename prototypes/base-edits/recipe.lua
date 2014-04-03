@@ -1,0 +1,5 @@
+table.insert(data.raw["recipe"]["car"].ingredients,{"wheel", 4})
+table.insert(data.raw["recipe"]["laser-turret"].ingredients,{"stone-gear-wheel", 5})
+table.remove(data.raw["recipe"]["speed-module"].ingredients,{"advanced-circuit", 5})
+table.remove(data.raw["recipe"]["speed-module-2"].ingredients,{"advanced-circuit", 5})
+table.remove(data.raw["recipe"]["speed-module-2"].ingredients,{"processing-unit", 5})

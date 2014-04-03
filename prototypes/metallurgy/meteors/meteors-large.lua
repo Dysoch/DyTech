@@ -9,9 +9,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 20,
       results =
       {
         {
@@ -40,7 +40,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -61,9 +61,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 20,
       results =
       {
         {
@@ -92,7 +92,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -113,9 +113,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 20,
       results =
       {
         {
@@ -144,7 +144,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -165,9 +165,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 20,
       results =
       {
         {
@@ -196,7 +196,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -217,9 +217,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 20,
       results =
       {
         {
@@ -248,7 +248,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},

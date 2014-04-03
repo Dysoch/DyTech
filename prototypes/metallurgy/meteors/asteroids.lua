@@ -9,9 +9,9 @@ data:extend(
 	subgroup = "meteors",
     minable =
     {
-      hardness = 15,
+      hardness = 5,
       mining_particle = "gem-particle",
-      mining_time = 10,
+      mining_time = 30,
       results =
       {
         {
@@ -76,7 +76,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-5.85, -5.85}, {5.85, 5.85}},
     selection_box = {{-6.0, -6.0}, {6.0, 6.0}},
