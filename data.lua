@@ -169,7 +169,7 @@ require("prototypes.metallurgy.item.plates")
 -- meteors 5x
 require("prototypes.metallurgy.meteors.asteroids")
 require("prototypes.metallurgy.meteors.comets")
---require("prototypes.metallurgy.meteors.explosions") --NEED TO TEST THIS, IF IT WORKS!
+require("prototypes.metallurgy.meteors.explosions")
 require("prototypes.metallurgy.meteors.meteors-large")
 require("prototypes.metallurgy.meteors.meteors-medium")
 require("prototypes.metallurgy.meteors.meteors-small")

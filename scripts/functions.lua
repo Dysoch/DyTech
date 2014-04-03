@@ -7,7 +7,7 @@ function MeteorSpawn(meteor)
     position.y=math.random(math.abs(glob.landing.south)+glob.landing.north)
     if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
     if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
-	local name = meteor[math.random(3, #meteor)] -- first index is explosion
+	local name = meteor[math.random(#meteor)] -- first index is explosion
 	game.createentity{name=name, position=position, force=game.forces.player} -- spawn meteor
   game.createentity{name=meteor.explosion, position=position, force=game.forces.neutral} -- spawn explosion
   for _, nearbyentity in ipairs(game.findentities{getboundingbox(position, meteor.area)}) do

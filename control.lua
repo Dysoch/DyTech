@@ -7,19 +7,19 @@ require "scripts/functions"
 	glob.specieOfTreeTable={"rubber"}
 	--Small meteors:
 	glob.specieOfMeteorSmallTable={ 
-	explosion = "meteor-impact-small", area=5, "meteor-small-1", "meteor-small-2", "meteor-small-3", "meteor-small-4", "meteor-small-5"}
+	explosion = "meteor-impact-small", area=10, "meteor-small-1", "meteor-small-2", "meteor-small-3", "meteor-small-4", "meteor-small-5"}
 	--Medium meteors:
 	glob.specieOfMeteorMediumTable={
-	explosion = "meteor-impact-medium", area=10, "meteor-medium-1", "meteor-medium-2", "meteor-medium-3", "meteor-medium-4", "meteor-medium-5"}
+	explosion = "meteor-impact-medium", area=20, "meteor-medium-1", "meteor-medium-2", "meteor-medium-3", "meteor-medium-4", "meteor-medium-5"}
 	--Large meteors:
 	glob.specieOfMeteorLargeTable={
-	explosion = "meteor-impact-large", area=15, "meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
+	explosion = "meteor-impact-large", area=40, "meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
 	--Comets:
 	glob.specieOfCometTable={
-	explosion = "meteor-impact-comet", area=20, "meteor-comet-1", "meteor-comet-2", "meteor-comet-3", "meteor-comet-4", "meteor-comet-5"}
+	explosion = "meteor-impact-comet", area=30, "meteor-comet-1", "meteor-comet-2", "meteor-comet-3", "meteor-comet-4", "meteor-comet-5"}
 	--Asteroids:
 	glob.specieOfAsteroidTable={
-  explosion = "meteor-impact-asteroid", area=30, "meteor-asteroid-1"}
+	explosion = "meteor-impact-asteroid", area=80, "meteor-asteroid-1"}
 	
 game.oninit(function()
 	fs.OnInit()
