@@ -6,7 +6,7 @@ require "scripts/functions"
 --game.player.print(serpent.block(glob.counter.dytech)) --debugger
 	glob.specieOfTreeTable={"rubber"}
 	--Small meteors:
-	glob.specieOfMeteorSmallTable={ -- first index is explosion name
+	glob.specieOfMeteorSmallTable={ 
 	explosion = "meteor-impact-small", area=5, "meteor-small-1", "meteor-small-2", "meteor-small-3", "meteor-small-4", "meteor-small-5"}
 	--Medium meteors:
 	glob.specieOfMeteorMediumTable={
