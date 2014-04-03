@@ -58,5 +58,33 @@ data:extend(
       }
     }
   },
+  {
+    type = "explosion",
+    name = "meteor-impact-large",
+    flags = {"not-on-map"},
+    animation_speed = 5,
+    animations =
+    {
+      {
+        filename = "__base__/graphics/entity/huge-explosion/huge-explosion.png",
+        priority = "extra-high",
+        frame_width = 111,
+        frame_height = 131,
+        frame_count = 24,
+        line_length = 5
+      }
+    },
+    light = {intensity = 1, size = 80},
+    smoke = "smoke",
+    smoke_count = 50,
+    smoke_slow_down_factor = 1,
+    sound =
+    {
+      {
+        filename = "__base__/sound/huge-explosion.wav",
+        volume = 1.6
+      }
+    },
+  },
 }
 )

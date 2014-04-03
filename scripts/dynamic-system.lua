@@ -1,4 +1,4 @@
-module("ds")
+module("ds", package.seeall)
 
 --[[ The Calculators for the time to check the events!]]--
 dstotalevents = 70
@@ -9,7 +9,7 @@ return (dstotalevents*eventtime) end
 --[[The functions essential for the Dynamic System!]]--
 
 --[[Dynamic System unlock event themself!]]--
-function dynamicUnlocks(event, game, glob, math, random, ttime, r)   
+function dynamicUnlocks(event, ttime, r)   
 	--[[Repair Packs]]--
 	if event.tick%ttime==(r*1) then 
 		if not game.player.force.recipes["repair-pack"].enabled then 
@@ -1001,7 +1001,7 @@ function dynamicUnlocks(event, game, glob, math, random, ttime, r)
 	end
 end
 
-function dynamicRewards(event, glob, game, math, random)
+function dynamicRewards(event)
 	if event.tick%3600==0 then
 		if not glob.reward.axe1 then 
 			if glob.counter.dytech > math.random(5000,7500) then
