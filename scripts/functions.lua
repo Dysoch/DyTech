@@ -1,23 +1,29 @@
-module("fs")
+module("fs", package.seeall)
+require("util")
 
-function MeteorSpawn(math, random, abs, glob, game, meteor)
+function MeteorSpawn(meteor)
 	local position={}
-	local name = meteor[math.random(#meteor)]    
-	repeat
-		position.x=math.random(math.abs(glob.landing.west)+glob.landing.east)
-		position.y=math.random(math.abs(glob.landing.south)+glob.landing.north)
-		if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
-		if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
-		position = game.findnoncollidingposition(name, position, 30, 1)
-	until ((math.abs(position.x) < 1000000) and (math.abs(position.y) < 1000000))
-	--optional findentities table around position for damage of entities near strike position
-	game.createentity{name=name, position=position, force=game.forces.neutral}
+  	position.x=math.random(math.abs(glob.landing.west)+glob.landing.east)
+    position.y=math.random(math.abs(glob.landing.south)+glob.landing.north)
+    if position.x > glob.landing.east then position.x=glob.landing.east-position.x end
+    if position.y > glob.landing.north then position.y=glob.landing.north-position.y end
+	local name = meteor[math.random(2, #meteor)] -- first index is explosion
+	game.createentity{name=name, position=position, force=game.forces.player} -- spawn meteor
+  game.createentity{name=meteor.explosion, position=position, force=game.forces.neutral} -- spawn explosion
+  for _, nearbyentity in ipairs(game.findentities{getboundingbox(position, meteor.area)}) do
+    if nearbyentity.health then
+      if nearbyentity.name == name then --this IS necessary, even with health=500000, the damage at ground zero is practically infinite
+      else nearbyentity.damage((50*meteor.area/util.distance(position, nearbyentity.position)), game.forces.enemy)
+      end
+  --else nearbyentity.destroy() -- optional
+    end
+  end
 end
 
 function getboundingbox(position, radius)
 return {position.x-radius, position.y-radius}, {position.x+radius,position.y+radius} end
 
-function CollectByPosition(name, radius, ext, glob, pairs, game)
+function CollectByPosition(name, radius, ext)
 	local realname=name.."-collector"
 	if ext then realname=realname.."-1" end
 	for i, value in pairs(glob[name]) do
@@ -38,7 +44,7 @@ function CollectByPosition(name, radius, ext, glob, pairs, game)
 	end
 end
 
-function dmgMsg(entity, glob, game) -- Messages for the Damage Events!
+function dmgMsg(entity) -- Messages for the Damage Events!
 	if glob.message then 
 		if entity.valid then
 			game.player.print(game.getlocalisedentityname(entity.name).." "..game.gettext("msg-damaged"))
@@ -50,7 +56,7 @@ function dmgMsg(entity, glob, game) -- Messages for the Damage Events!
 	end
 end
 
-function CounterPrinter(game, tostring, glob)
+function CounterPrinter()
 	game.player.print("Here are all your counters with their current status!")
 	game.player.print("Gear:".." "..tostring(glob.counter.gear))
 	game.player.print("Resource:".." "..tostring(glob.counter.resource))
@@ -77,7 +83,7 @@ function CounterPrinter(game, tostring, glob)
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end
 
-function OnLoad(glob, math, random)
+function OnLoad()
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, sectorscanned=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
@@ -129,7 +135,7 @@ function OnLoad(glob, math, random)
 	if not glob.landing.west then glob.landing.west=0-glob.landing.extra end
 end
 
-function OnInit(game, glob, math, random)
+function OnInit()
 	game.player.print(game.gettext("msg-welcome-1"))
 	game.player.print(game.gettext("msg-welcome-2"))
 	game.player.insert{name="wood",count=4}
@@ -156,4 +162,5 @@ glob.landing.north=glob.landing.extra
 glob.landing.south=0-glob.landing.extra
 glob.landing.east=glob.landing.extra
 glob.landing.west=0-glob.landing.extra
+end
 end

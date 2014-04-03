@@ -6,22 +6,23 @@ require "scripts/functions"
 --game.player.print(serpent.block(glob.counter.dytech)) --debugger
 	glob.specieOfTreeTable={"rubber"}
 	--Small meteors:
-	glob.specieOfMeteorSmallTable={
-	"meteor-small-1", "meteor-small-2", "meteor-small-3", "meteor-small-4", "meteor-small-5"}
+	glob.specieOfMeteorSmallTable={ -- first index is explosion name
+	explosion = "meteor-impact-small", area=5, "meteor-small-1", "meteor-small-2", "meteor-small-3", "meteor-small-4", "meteor-small-5"}
 	--Medium meteors:
 	glob.specieOfMeteorMediumTable={
-	"meteor-medium-1", "meteor-medium-2", "meteor-medium-3", "meteor-medium-4", "meteor-medium-5"}
+	explosion = "meteor-impact-medium", area=10, "meteor-medium-1", "meteor-medium-2", "meteor-medium-3", "meteor-medium-4", "meteor-medium-5"}
 	--Large meteors:
 	glob.specieOfMeteorLargeTable={
-	"meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
+	explosion = "meteor-impact-large", area=15, "meteor-large-1", "meteor-large-2", "meteor-large-3", "meteor-large-4", "meteor-large-5"}
 	--Comets:
 	glob.specieOfCometTable={
-	"meteor-comet-1", "meteor-comet-2", "meteor-comet-3", "meteor-comet-4", "meteor-comet-5"}
+	explosion = "meteor-impact-comet", area=20, "meteor-comet-1", "meteor-comet-2", "meteor-comet-3", "meteor-comet-4", "meteor-comet-5"}
 	--Asteroids:
-	glob.specieOfAsteroidTable={"meteor-asteroid-1"}
+	glob.specieOfAsteroidTable={
+  explosion = "meteor-impact-asteroid", area=30, "meteor-asteroid-1"}
 	
 game.oninit(function()
-	fs.OnInit(game, glob, math, random)
+	fs.OnInit()
 end)
 
 game.onsave(function()
@@ -29,7 +30,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	fs.OnLoad(glob, math, random)
+	fs.OnLoad()
 end)
 
 --[[F-mod Compatibility]]--
@@ -120,9 +121,9 @@ game.onevent(defines.events.ontick, function(event)
 		end
 	end
 	--[[Dynamic System unlocks]]--
-	ds.dynamicUnlocks(event, game, glob, math, random, ds.dsttime(), ds.eventtime) 
+	ds.dynamicUnlocks(event, ds.dsttime(), ds.eventtime) 
 	--[[Rewards for the Dynamic System]]--
-	ds.dynamicRewards(event, glob, game, math, random)
+	ds.dynamicRewards(event)
 	--[[Checker for messages]]--
 	if event.tick%216000==0 then
 		game.player.print(game.gettext("msg-reminder1").." "..tostring(glob.message))
@@ -147,27 +148,27 @@ game.onevent(defines.events.ontick, function(event)
 		end
 	if checkMatch(5) then --Asteroids
 		if glob.time > 7200 and (glob.chunks+glob.counter.sectorscanned) > math.random(10000,50000) then
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5")) end
 		end
     elseif checkMatch(10) then --Large Meteors
 		if glob.time > 6840 and (glob.chunks+glob.counter.sectorscanned) > math.random(5000,10000) then
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4")) end
 		end
     elseif checkMatch(20) then --Comets
 		if glob.time > 6120 and (glob.chunks+glob.counter.sectorscanned) > math.random(2500,5000) then
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3")) end
 		end
     elseif checkMatch(20) then --Medium Meteors
 		if glob.time > 4680 and (glob.chunks+glob.counter.sectorscanned) > math.random(1000,2500) then
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2")) end
 		end
     else 
 		if glob.time > 3240 then --Small Meteors
-		fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
+		fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-1")) end
 		end
     end
@@ -190,18 +191,18 @@ game.onevent(defines.events.ontick, function(event)
 	end
 	--[[Stone Collector]]--
     if glob.stone~=nil and event.tick%12==0 then
-		fs.CollectByPosition("stone", 1.5, false, glob, pairs, game)
-		fs.CollectByPosition("stone", 1.5, true, glob, pairs, game)
+		fs.CollectByPosition("stone", 1.5, false)
+		fs.CollectByPosition("stone", 1.5, true)
 	end
 	--[[Sand Collector]]--
 	if glob.sand~=nil and event.tick%12==0 then
-		fs.CollectByPosition("sand", 1.5, false, glob, pairs, game)
-		fs.CollectByPosition("sand", 1.5, true, glob, pairs, game)
+		fs.CollectByPosition("sand", 1.5, false)
+		fs.CollectByPosition("sand", 1.5, true)
 	end
 	--[[Coal Collector]]--
 	if glob.coal~=nil and event.tick%12==0 then
-		fs.CollectByPosition("coal", 1.5, false, glob, pairs, game)
-		fs.CollectByPosition("coal", 1.5, true, glob, pairs, game)
+		fs.CollectByPosition("coal", 1.5, false)
+		fs.CollectByPosition("coal", 1.5, true)
 	end
    --[[Gem Collector]]--
 	if glob.gem~=nil and game.tick%60==0 then
@@ -254,7 +255,7 @@ game.onevent(defines.events.ontick, function(event)
 			if steamengine.valid and steamengine.energy>1e-2 and steamengine.energy<2 then
 				if math.random(1020/(9.667-steamengine.energy+1))==2 then
 					steamengine.damage(5*(9.667-steamengine.energy), glob.damagingforce)
-					fs.dmgMsg(steamengine, glob, game)
+					fs.dmgMsg(steamengine)
 				break
 				end
 			elseif not steamengine.valid then
@@ -269,7 +270,7 @@ game.onevent(defines.events.ontick, function(event)
 				if (game.tick-solarpanel.tick)>(60*60*15) then 
 					if math.random(2500)==1 then
 					solarpanel.entity.damage(5, glob.damagingforce)
-					fs.dmgMsg(solarpanel.entity, glob, game)
+					fs.dmgMsg(solarpanel.entity)
 					end
 				end
 			else
@@ -478,7 +479,7 @@ remote.addinterface("DyTech",
   end,
   
   CounterPrint = function() 
-	fs.CounterPrinter(game, tostring, glob)
+	fs.CounterPrinter()
   end,
   
   RewardPrint = function() 
@@ -507,34 +508,34 @@ remote.addinterface("DyTech",
   
   Chunks = function()
 			game.player.print("Chunks Generated:".." "..tostring(glob.chunks))
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
   end,
   
   Meteor = function()
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfCometTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(math, random, abs, glob, game, glob.specieOfMeteorSmallTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
+			fs.MeteorSpawn(glob.specieOfAsteroidTable)
+			fs.MeteorSpawn(glob.specieOfCometTable)
+			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
+			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
+			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
   end
 })

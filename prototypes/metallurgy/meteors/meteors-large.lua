@@ -40,7 +40,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -92,7 +92,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -144,7 +144,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -196,7 +196,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
@@ -248,7 +248,7 @@ data:extend(
         },
       }
     },
-    max_health = 10,
+    max_health = 500000,
 	inventory_size = 1,
     collision_box = {{-1.85, -1.85}, {1.85, 1.85}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
