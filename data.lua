@@ -2,6 +2,13 @@
 require("prototypes.autoplace-controls")
 require("prototypes.tile.noise-layers")
 
+-- base edits --5
+require("prototypes.base-edits.entity")
+--require("prototypes.base-edits.equipment")
+require("prototypes.base-edits.item")
+require("prototypes.base-edits.recipe")
+require("prototypes.base-edits.tech")
+
 -- categories --3
 require("prototypes.categories.ammo-category")
 require("prototypes.categories.recipe-category")
@@ -19,9 +26,8 @@ require("prototypes.item-group.metallurgy-3")
 require("prototypes.item-group.recycler")
 
 -- Base Mod!
--- Entity --22
+-- Entity --21
 require("prototypes.base-mod.entity.assembling")
-require("prototypes.base-mod.entity.base-edit")
 require("prototypes.base-mod.entity.boiler")
 require("prototypes.base-mod.entity.chest")
 require("prototypes.base-mod.entity.collector")
@@ -42,8 +48,7 @@ require("prototypes.base-mod.entity.transport-belt")
 require("prototypes.base-mod.entity.turret")
 require("prototypes.base-mod.entity.wall")
 
--- Equipment --2
-require("prototypes.base-mod.equipment.base-edit")
+-- Equipment --1
 require("prototypes.base-mod.equipment.equipment")
 
 -- Fluid --0
@@ -52,7 +57,6 @@ require("prototypes.base-mod.equipment.equipment")
 require("prototypes.base-mod.item.ammo")
 require("prototypes.base-mod.item.armor")
 require("prototypes.base-mod.item.assembling")
-require("prototypes.base-mod.item.base-edit")
 require("prototypes.base-mod.item.boiler")
 require("prototypes.base-mod.item.chest")
 require("prototypes.base-mod.item.collector")
@@ -85,7 +89,6 @@ require("prototypes.base-mod.item.wall")
 require("prototypes.base-mod.recipe.ammo")
 require("prototypes.base-mod.recipe.armor")
 require("prototypes.base-mod.recipe.assembling")
---require("prototypes.base-mod.recipe.base-edit")
 require("prototypes.base-mod.recipe.boiler")
 require("prototypes.base-mod.recipe.chest")
 require("prototypes.base-mod.recipe.collector")
@@ -123,7 +126,6 @@ require("prototypes.base-mod.resource.sand")
 
 -- Technology --18
 require("prototypes.base-mod.technology.armor")
---require("prototypes.base-mod.technology.base-edit")
 require("prototypes.base-mod.technology.chest")
 require("prototypes.base-mod.technology.energy")
 require("prototypes.base-mod.technology.equipment")
