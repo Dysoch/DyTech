@@ -620,6 +620,7 @@ function dynamicUnlocks(event, ttime, r)
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				else
 					game.player.force.recipes["metallurgy-steel-plate"].enabled = true
+					game.player.force.recipes["centrifuge"].enabled = true
 					game.player.force.recipes["coal-splitting"].enabled = true
 					game.player.force.recipes["metallurgy-iron-carbonated"].enabled = true
 					game.player.force.recipes["lava-1800"].enabled = true

@@ -72,5 +72,9 @@ data:extend(
     type = "recipe-category",
     name = "air-collection"
   },
+  {
+    type = "recipe-category",
+    name = "centrifuge"
+  },
 }
 )

@@ -19,7 +19,7 @@ data:extend(
   {
     type = "recipe",
     name = "coal-splitting",
-	category = "blast-furnace",
+	category = "centrifuge",
     icon = "__DyTech-Graphics__/graphics/icons/carbon.png",
     subgroup = "metallurgy-intermediates",
     energy_required = 4,

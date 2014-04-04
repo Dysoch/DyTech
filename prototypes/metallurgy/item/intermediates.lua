@@ -16,6 +16,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-intermediates",
     order = "carbon",
+    fuel_value = "2MJ",
     stack_size = 128
   },
   {
