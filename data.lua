@@ -4,7 +4,7 @@ require("prototypes.tile.noise-layers")
 
 -- base edits --5
 require("prototypes.base-edits.entity")
---require("prototypes.base-edits.equipment")
+require("prototypes.base-edits.equipment")
 require("prototypes.base-edits.item")
 require("prototypes.base-edits.recipe")
 require("prototypes.base-edits.tech")
