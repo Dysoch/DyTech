@@ -525,6 +525,14 @@ remote.addinterface("DyTech",
   Regenerate = function()
 	game.regenerateentity("sand")
 	game.regenerateentity("lava-600")
+  end,
+  
+  SpotlightOn = function()
+	fs.SpotlightOn()
+  end,
+  
+  SpotlightOff = function()
+	fs.SpotlightOff()
   end
   
 })
