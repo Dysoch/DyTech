@@ -144,9 +144,10 @@ require("prototypes.base-mod.technology.transport")
 require("prototypes.base-mod.technology.transport-belt")
 
 -- Metallurgy
--- entity 4x
+-- entity 5x
 require("prototypes.metallurgy.entity.assemblers-molds")
 require("prototypes.metallurgy.entity.lava-machines")
+require("prototypes.metallurgy.entity.machines")
 require("prototypes.metallurgy.entity.molten-metal-machines")
 require("prototypes.metallurgy.entity.pipes")
 
@@ -157,11 +158,12 @@ require("prototypes.metallurgy.fluid.metals-molten-advanced")
 require("prototypes.metallurgy.fluid.metals-molten-base")
 require("prototypes.metallurgy.fluid.metals-molten-basic")
 
--- item 9x
+-- item 10x
 require("prototypes.metallurgy.item.alloys")
 require("prototypes.metallurgy.item.assemblers-molds")
 require("prototypes.metallurgy.item.intermediates")
 require("prototypes.metallurgy.item.lava-machines")
+require("prototypes.metallurgy.item.machines")
 require("prototypes.metallurgy.item.molds")
 require("prototypes.metallurgy.item.molten-metal-machines")
 require("prototypes.metallurgy.item.ores")
@@ -175,14 +177,13 @@ require("prototypes.metallurgy.meteors.explosions")
 require("prototypes.metallurgy.meteors.meteors-large")
 require("prototypes.metallurgy.meteors.meteors-medium")
 require("prototypes.metallurgy.meteors.meteors-small")
---require("prototypes.metallurgy.meteors.projectiles") --UNSURE IF NEEDED!
---require("prototypes.metallurgy.meteors.warning-system")
 
--- recipe 20x
+-- recipe 21x
 require("prototypes.metallurgy.recipe.assemblers-molds")
 require("prototypes.metallurgy.recipe.intermediates")
 require("prototypes.metallurgy.recipe.lava-heating")
 require("prototypes.metallurgy.recipe.lava-machines")
+require("prototypes.metallurgy.recipe.machines")
 require("prototypes.metallurgy.recipe.metal-mixing")
 require("prototypes.metallurgy.recipe.metals-advanced")
 require("prototypes.metallurgy.recipe.metals-base")

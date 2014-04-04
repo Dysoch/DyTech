@@ -583,6 +583,7 @@ function dynamicUnlocks(event, ttime, r)
 					game.player.force.recipes["forge"].enabled = true
 					game.player.force.recipes["lava-handler"].enabled = true
 					game.player.force.recipes["metallurgy-liquid-air"].enabled = true
+					game.player.force.recipes["air-intake"].enabled = true
 					game.player.force.recipes["lava-800"].enabled = true
 					game.player.force.recipes["lava-1000"].enabled = true
 					game.player.force.recipes["lava-1200"].enabled = true

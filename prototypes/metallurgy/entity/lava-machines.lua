@@ -130,7 +130,7 @@ data:extend(
       line_length = 8,
       shift = {0.84, -0.09}
     },
-    crafting_categories = {"lava", "air-collection"},
+    crafting_categories = {"lava"},
     crafting_speed = 1,
     energy_source =
     {

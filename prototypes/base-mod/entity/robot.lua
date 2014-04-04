@@ -321,15 +321,22 @@ data:extend(
     {
       {-1.5, -0.5}, {1.5, -0.5}, {1.5, 1.5}, {-1.5, 1.5},
     },
+	base =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-base.png",
+      width = 143,
+      height = 135,
+      shift = {0.5, 0.25}
+    },
     base_animation =
     {
-      filename = "__base__/graphics/entity/roboport/roboport.png",
+      filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
       priority = "medium",
-      frame_width = 143,
-      frame_height = 151,
+      frame_width = 42,
+      frame_height = 31,
       frame_count = 8,
-      shift = {0.5, 0},
-      animation_speed = 0.5
+      animation_speed = 0.5,
+      shift = {-0.5315, -1.9375}
     },
     door_animation =
     {
@@ -397,15 +404,22 @@ data:extend(
     {
       {-1.5, -0.5}, {1.5, -0.5}, {1.5, 1.5}, {-1.5, 1.5},
     },
+	base =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-base.png",
+      width = 143,
+      height = 135,
+      shift = {0.5, 0.25}
+    },
     base_animation =
     {
-      filename = "__base__/graphics/entity/roboport/roboport.png",
+      filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
       priority = "medium",
-      frame_width = 143,
-      frame_height = 151,
+      frame_width = 42,
+      frame_height = 31,
       frame_count = 8,
-      shift = {0.5, 0},
-      animation_speed = 0.5
+      animation_speed = 0.5,
+      shift = {-0.5315, -1.9375}
     },
     door_animation =
     {
