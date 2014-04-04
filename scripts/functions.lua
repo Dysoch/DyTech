@@ -79,12 +79,21 @@ function CounterPrinter()
 	game.player.print("Science:".." "..tostring(glob.counter.science))
 	game.player.print("Wall:".." "..tostring(glob.counter.wall))
 	game.player.print("Modules:".." "..tostring(glob.counter.modules))
-	game.player.print("Sectors Scanned:".." "..tostring(glob.counter.sectorscanned))
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end
 
+function CounterPrinter2()
+	game.player.print("Here are all your counters of second tier with their current status!")
+	game.player.print("Item Mined:".." "..tostring(glob.counter2.mine))
+	game.player.print("Entities Build:".." "..tostring(glob.counter2.build))
+	game.player.print("Sectors Scanned:".." "..tostring(glob.counter2.sectorscanned))
+	game.player.print("Entities Died:".." "..tostring(glob.counter2.died))
+	game.player.print("Items Picked Up:".." "..tostring(glob.counter2.pickup))
+	game.player.print("All Counters Combined:".." "..tostring(glob.counter2.dytech))
+end
+
 function OnLoad()
-	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, sectorscanned=0} end
+	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
 	if not glob.counter.resource then glob.counter.resource=0 end
@@ -107,10 +116,8 @@ function OnLoad()
 	if not glob.counter.science then glob.counter.science=0 end
 	if not glob.counter.wall then glob.counter.wall=0 end
 	if not glob.counter.modules then glob.counter.modules=0 end
-	if not glob.counter.sectorscanned then glob.counter.sectorscanned=0 end
 	if not glob.unlock then glob.unlock={umd=0} end
 	if not glob.unlock.umd then glob.unlock.umd=0 end
-	if not glob.chunks then glob.chunks=0 end
 	if not glob.craftfoundation then glob.craftfoundation={wood=0, stone=0, iron=0, steel=0} end
 	if not glob.reward then glob.reward={axe1=false} end
 	if not glob.reward.axe1 then glob.reward.axe1=false end
@@ -133,6 +140,14 @@ function OnLoad()
 	if not glob.landing.south then glob.landing.south=0-glob.landing.extra end
 	if not glob.landing.east then glob.landing.east=glob.landing.extra end
 	if not glob.landing.west then glob.landing.west=0-glob.landing.extra end
+	if not glob.counter2 then glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0} end
+	if not glob.counter2.dytech then glob.counter2.dytech=0 end
+	if not glob.counter2.mine then glob.counter2.mine=0 end
+	if not glob.counter2.build then glob.counter2.build=0 end
+	if not glob.counter2.sectorscanned then glob.counter2.sectorscanned=0 end
+	if not glob.counter2.died then glob.counter2.died=0 end
+	if not glob.counter2.pickup then glob.counter2.pickup=0 end
+	if not glob.counter2.chunks then glob.counter2.chunks=0 end
 end
 
 function OnInit()
@@ -144,7 +159,6 @@ glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, q
 glob.unlock={umd=0}
 glob.craftfoundation={wood=0, stone=0, iron=0, steel=0}
 glob.reward={axe1=false}
-glob.chunks=0
 glob.time=0
 glob.message=true
 glob.gem={}
@@ -162,4 +176,5 @@ glob.landing.north=glob.landing.extra
 glob.landing.south=0-glob.landing.extra
 glob.landing.east=glob.landing.extra
 glob.landing.west=0-glob.landing.extra
+glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0}
 end

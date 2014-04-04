@@ -71,6 +71,7 @@ game.onevent(defines.events.onplayercrafteditem, function(event)
 end)
 
 game.onevent(defines.events.onplayermineditem, function(event)
+	glob.counter2.mine = glob.counter2.mine + 1
 	if dsd.mineitems[event.itemstack.name] then
 		for counter, ingredients in pairs(dsd.mineitems[event.itemstack.name]) do 
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
@@ -85,6 +86,7 @@ game.onevent(defines.events.onplayermineditem, function(event)
 end)
 
 game.onevent(defines.events.onentitydied, function(event)
+	glob.counter2.died = glob.counter2.died + 1
 	if dsd.kill[event.entity.name] and event.entity.force.name == "enemy" then
 		for counter, ingredients in pairs(dsd.kill[event.entity.name]) do 
 			glob.combat[counter]=glob.combat[counter] + ingredients
@@ -99,8 +101,11 @@ game.onevent(defines.events.onentitydied, function(event)
 end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
-	--[[Counter increase for sectors scanned]]--
-	glob.counter.sectorscanned = glob.counter.sectorscanned + 1
+	glob.counter2.sectorscanned = glob.counter2.sectorscanned + 1
+end)
+
+game.onevent(defines.events.onpickedupitem, function(event)
+	glob.counter2.pickup = glob.counter2.pickup + 1
 end)
 
 --[[Main Events]]--
@@ -112,6 +117,12 @@ game.onevent(defines.events.ontick, function(event)
 		glob.counter.dytech=0
 		for _, counter in pairs(glob.counter) do 
 			if (counter~=glob.counter.dytech) then glob.counter.dytech=glob.counter.dytech+counter end
+		end
+	end
+	if game.tick%60==1 then
+		glob.counter2.dytech=0
+		for _, counter in pairs(glob.counter2) do 
+			if (counter~=glob.counter2.dytech) then glob.counter2.dytech=glob.counter2.dytech+counter end
 		end
 	end
 	if game.tick%60==1 then
@@ -147,22 +158,22 @@ game.onevent(defines.events.ontick, function(event)
 			return false
 		end
 	if checkMatch(5) then --Asteroids
-		if glob.time > 7200 and (glob.chunks+glob.counter.sectorscanned) > math.random(10000,50000) then
+		if glob.time > 7200 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(10000,50000) then
 			fs.MeteorSpawn(glob.specieOfAsteroidTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5")) end
 		end
     elseif checkMatch(10) then --Large Meteors
-		if glob.time > 6840 and (glob.chunks+glob.counter.sectorscanned) > math.random(5000,10000) then
+		if glob.time > 6840 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(5000,10000) then
 			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4")) end
 		end
     elseif checkMatch(20) then --Comets
-		if glob.time > 6120 and (glob.chunks+glob.counter.sectorscanned) > math.random(2500,5000) then
+		if glob.time > 6120 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(2500,5000) then
 			fs.MeteorSpawn(glob.specieOfCometTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3")) end
 		end
     elseif checkMatch(20) then --Medium Meteors
-		if glob.time > 4680 and (glob.chunks+glob.counter.sectorscanned) > math.random(1000,2500) then
+		if glob.time > 4680 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(1000,2500) then
 			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2")) end
 		end
@@ -281,6 +292,7 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
+	glob.counter2.build = glob.counter2.build + 1
 	--[[Gem collector build]]--
 	if event.createdentity.name == "gem-collector" then				
 		if glob.gem==nil then
@@ -376,7 +388,7 @@ end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
 	--[[Counter increase for chunks loaded]]--
-	glob.chunks = glob.chunks + 1
+	glob.counter2.chunks = glob.counter2.chunks + 1
 	--[[Tree generator]]--
 	if math.random(5)==1 then
 		local specieOfTree=glob.specieOfTreeTable[math.random(#glob.specieOfTreeTable)]
@@ -506,36 +518,8 @@ remote.addinterface("DyTech",
 			game.player.print("Global Counter:".." "..tostring(glob.combat.dytech))
   end,
   
-  Chunks = function()
-			game.player.print("Chunks Generated:".." "..tostring(glob.chunks))
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-  end,
-  
-  Meteor = function()
-			fs.MeteorSpawn(glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(glob.specieOfCometTable)
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(glob.specieOfCometTable)
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(glob.specieOfCometTable)
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(glob.specieOfCometTable)
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
-			fs.MeteorSpawn(glob.specieOfAsteroidTable)
-			fs.MeteorSpawn(glob.specieOfCometTable)
-			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
-			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
-			fs.MeteorSpawn(glob.specieOfMeteorSmallTable)
+  CounterPrint2 = function() 
+	fs.CounterPrinter2()
   end
+  
 })
