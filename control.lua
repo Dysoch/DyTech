@@ -71,7 +71,7 @@ game.onevent(defines.events.onplayercrafteditem, function(event)
 end)
 
 game.onevent(defines.events.onplayermineditem, function(event)
-	glob.counter2.mine = glob.counter2.mine + 1
+	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
 	if dsd.mineitems[event.itemstack.name] then
 		for counter, ingredients in pairs(dsd.mineitems[event.itemstack.name]) do 
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
@@ -105,7 +105,7 @@ game.onevent(defines.events.onsectorscanned, function(event)
 end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
-	glob.counter2.pickup = glob.counter2.pickup + 1
+	glob.counter2.pickup = glob.counter2.pickup + event.itemstack.count
 end)
 
 --[[Main Events]]--
@@ -520,6 +520,11 @@ remote.addinterface("DyTech",
   
   CounterPrint2 = function() 
 	fs.CounterPrinter2()
+  end,
+  
+  Regenerate = function()
+	game.regenerateentity("sand")
+	game.regenerateentity("lava-600")
   end
   
 })

@@ -89,6 +89,7 @@ function CounterPrinter2()
 	game.player.print("Sectors Scanned:".." "..tostring(glob.counter2.sectorscanned))
 	game.player.print("Entities Died:".." "..tostring(glob.counter2.died))
 	game.player.print("Items Picked Up:".." "..tostring(glob.counter2.pickup))
+	game.player.print("Chunks Loaded:".." "..tostring(glob.counter2.chunks))
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter2.dytech))
 end
 
