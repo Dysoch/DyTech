@@ -13,7 +13,7 @@ data:extend(
     crafting_categories = {"forge"},
     max_health = 150,
     ingredient_count = 1,
-    energy_usage = "300kW",
+    energy_usage = "75kW",
     crafting_speed = 1,
     energy_source =
     {
@@ -72,7 +72,7 @@ data:extend(
     crafting_categories = {"blast-furnace"},
     max_health = 150,
     ingredient_count = 8,
-    energy_usage = "300kW",
+    energy_usage = "150kW",
 	crafting_speed =1,
 	icon = "__DyTech-Graphics__/graphics/icons/blast-furnace.png",
     energy_source =

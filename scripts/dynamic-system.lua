@@ -247,7 +247,7 @@ function dynamicUnlocks(event, ttime, r)
 		if not game.player.force.recipes["gun-turret"].enabled then
 			if glob.combat.small > math.random(1,50) and glob.counter.plates > math.random(100,250) then
 				if DynamicFailure(glob.counter.dytech) then
-					glob.counter.gun = (glob.counter.gun-math.random(glob.counter.gun/2))
+					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
 				elseif game.player.force.technologies["turrets"].researched then
 					game.player.force.recipes["gun-turret"].enabled = true
