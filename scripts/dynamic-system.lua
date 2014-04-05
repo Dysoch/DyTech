@@ -1010,7 +1010,6 @@ function dynamicRewards(event)
 				game.player.insert{name="steel-axe3",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
 				glob.reward.axe1=true
-				glob.unlock.reward1 = glob.unlock.reward1 + glob.time
 			end
 		end
 	end
