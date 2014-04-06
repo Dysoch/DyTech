@@ -14,7 +14,6 @@ data:extend(
     {
       {type="item", name="clay", amount=1}
     },
-    hidden=true
   },
   {
     type = "recipe",

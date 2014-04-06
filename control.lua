@@ -158,22 +158,22 @@ game.onevent(defines.events.ontick, function(event)
 			return false
 		end
 	if checkMatch(5) then --Asteroids
-		if glob.time > 7200 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(10000,50000) then
+		if glob.time > 7200 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(1000,5000) and glob.meteor.large > math.random(100) then
 			fs.MeteorSpawn(glob.specieOfAsteroidTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-5")) end
 		end
     elseif checkMatch(10) then --Large Meteors
-		if glob.time > 6840 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(5000,10000) then
+		if glob.time > 6840 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(500,1000) and glob.meteor.comet > math.random(100) then
 			fs.MeteorSpawn(glob.specieOfMeteorLargeTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-4")) end
 		end
     elseif checkMatch(20) then --Comets
-		if glob.time > 6120 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(2500,5000) then
+		if glob.time > 6120 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(250,500) and glob.meteor.medium > math.random(100) then
 			fs.MeteorSpawn(glob.specieOfCometTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-3")) end
 		end
     elseif checkMatch(20) then --Medium Meteors
-		if glob.time > 4680 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(1000,2500) then
+		if glob.time > 4680 and (glob.counter2.chunks+glob.counter2.sectorscanned) > math.random(100,250) and glob.meteor.small > math.random(100) then
 			fs.MeteorSpawn(glob.specieOfMeteorMediumTable)
 			if glob.warning==true then game.player.print(game.gettext("msg-meteor-2")) end
 		end
@@ -292,6 +292,11 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
+	if dsd.meteor[event.createdentity.name] then
+		for counter, ingredients in pairs(dsd.meteor[event.createdentity.name]) do 
+			glob.meteor[counter]=glob.meteor[counter] + 1
+		end
+	end
 	glob.counter2.build = glob.counter2.build + 1
 	--[[Gem collector build]]--
 	if event.createdentity.name == "gem-collector" then				

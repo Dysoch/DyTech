@@ -149,6 +149,13 @@ function OnLoad()
 	if not glob.counter2.died then glob.counter2.died=0 end
 	if not glob.counter2.pickup then glob.counter2.pickup=0 end
 	if not glob.counter2.chunks then glob.counter2.chunks=0 end
+	if not glob.meteor then glob.meteor={small=0, medium=0, large=0, comet=0, asteroid=0, dytech=0} end
+	if not glob.meteor.small then glob.meteor.small=0 end
+	if not glob.meteor.medium then glob.meteor.medium=0 end
+	if not glob.meteor.large then glob.meteor.large=0 end
+	if not glob.meteor.comet then glob.meteor.comet=0 end
+	if not glob.meteor.asteroid then glob.meteor.asteroid=0 end
+	if not glob.meteor.dytech then glob.meteor.dytech=0 end
 end
 
 function OnInit()
@@ -178,6 +185,7 @@ glob.landing.south=0-glob.landing.extra
 glob.landing.east=glob.landing.extra
 glob.landing.west=0-glob.landing.extra
 glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0}
+glob.meteor={small=0, medium=0, large=0, comet=0, asteroid=0, dytech=0}
 end
 
 function SpotlightOn()

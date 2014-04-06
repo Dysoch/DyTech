@@ -285,3 +285,30 @@ kill =
 	["king-biter"]={king=1},
 	["queen-biter"]={queen=1}
 }
+
+--[[Meteor spawns]]--
+
+meteor = 
+{ 
+	["meteor-small-1"]={small=1},
+	["meteor-small-2"]={small=1},
+	["meteor-small-3"]={small=1},
+	["meteor-small-4"]={small=1},
+	["meteor-small-5"]={small=1},
+	["meteor-medium-1"]={medium=1},
+	["meteor-medium-2"]={medium=1},
+	["meteor-medium-3"]={medium=1},
+	["meteor-medium-4"]={medium=1},
+	["meteor-medium-5"]={medium=1},
+	["meteor-large-1"]={large=1},
+	["meteor-large-2"]={large=1},
+	["meteor-large-3"]={large=1},
+	["meteor-large-4"]={large=1},
+	["meteor-large-5"]={large=1},
+	["meteor-comet-1"]={comet=1},
+	["meteor-comet-2"]={comet=1},
+	["meteor-comet-3"]={comet=1},
+	["meteor-comet-4"]={comet=1},
+	["meteor-comet-5"]={comet=1},
+	["meteor-asteroid-1"]={asteroid=1}
+}

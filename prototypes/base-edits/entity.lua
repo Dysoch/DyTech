@@ -38,3 +38,4 @@ data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulat
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel"
 data.raw["generator"]["steam-engine"].fast_replaceable_group = "steam-engine"
 data.raw["construction-robot"]["construction-robot"].repair_pack = "repair-pack-0"
+data.raw["player"]["player"].max_health = 1000
