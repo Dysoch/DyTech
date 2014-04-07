@@ -264,7 +264,7 @@ game.onevent(defines.events.ontick, function(event)
 	if glob.steamengine~=nil and game.tick%60==1 then
 		for i, steamengine in pairs(glob.steamengine) do
 			if steamengine.valid and steamengine.energy>1e-2 and steamengine.energy<2 then
-				if math.random(1020/(9.667-steamengine.energy+1))==2 then
+				if math.random(1530/(9.667-steamengine.energy+1))==2 then
 					steamengine.damage(5*(9.667-steamengine.energy), glob.damagingforce)
 					fs.dmgMsg(steamengine)
 				break
@@ -279,7 +279,7 @@ game.onevent(defines.events.ontick, function(event)
 		for i, solarpanel in pairs(glob.solarpanel) do
 			if solarpanel.entity.valid then
 				if (game.tick-solarpanel.tick)>(60*60*15) then 
-					if math.random(2500)==1 then
+					if math.random(2500)==1 and game.darkness==0 then
 					solarpanel.entity.damage(5, glob.damagingforce)
 					fs.dmgMsg(solarpanel.entity)
 					end
