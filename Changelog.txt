@@ -5,6 +5,8 @@ Version 2.1.0:
 #Graphics:
 - Added new graphics for Transport Belts
 - Added new icons for Transport Belts, Splitters and Underground
+- Added new graphics for Boilers (new colors)
+- Added new icons for Boilers
 
 #Bugfixes:
 - Fixed wooden axe had same speed as player

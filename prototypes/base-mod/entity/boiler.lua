@@ -15,7 +15,7 @@ data:extend({
       }
     },
     fast_replaceable_group = "pipe",
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fluid_box =
     {
@@ -49,64 +49,58 @@ data:extend({
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 46,
+        shift = {0.03125, 0}
       },
       down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 72
       },
       left_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, -0.02}
+        width = 60,
+        height = 50
       },
       right_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51
+        width = 44,
+        height = 50
       },
       left_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 74
       },
       right_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 72
       },
       t_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 44,
+        height = 50
       },
       t_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-2.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 46,
+        height = 70
       }
     },
     fire =
@@ -139,7 +133,7 @@ data:extend({
       }
     },
     fast_replaceable_group = "pipe",
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fluid_box =
     {
@@ -173,64 +167,58 @@ data:extend({
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 46,
+        shift = {0.03125, 0}
       },
       down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 72
       },
       left_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, -0.02}
+        width = 60,
+        height = 50
       },
       right_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51
+        width = 44,
+        height = 50
       },
       left_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 74
       },
       right_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 72
       },
       t_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 44,
+        height = 50
       },
       t_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-3.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 46,
+        height = 70
       }
     },
     fire =
@@ -263,7 +251,7 @@ data:extend({
       }
     },
     fast_replaceable_group = "pipe",
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fluid_box =
     {
@@ -297,64 +285,58 @@ data:extend({
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 46,
+        shift = {0.03125, 0}
       },
       down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 72
       },
       left_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, -0.02}
+        width = 60,
+        height = 50
       },
       right_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51
+        width = 44,
+        height = 50
       },
       left_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 74
       },
       right_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 72
       },
       t_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 44,
+        height = 50
       },
       t_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-4.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 46,
+        height = 70
       }
     },
     fire =
@@ -387,7 +369,7 @@ data:extend({
       }
     },
     fast_replaceable_group = "pipe",
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fluid_box =
     {
@@ -421,64 +403,58 @@ data:extend({
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 46,
+        shift = {0.03125, 0}
       },
       down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-down-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 72
       },
       left_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-down-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, -0.02}
+        width = 60,
+        height = 50
       },
       right_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-down-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51
+        width = 44,
+        height = 50
       },
       left_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-left-up-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.05, 0}
+        width = 66,
+        height = 74
       },
       right_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-right-up-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0.15, 0}
+        width = 46,
+        height = 72
       },
       t_down =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-down-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 44,
+        height = 50
       },
       t_up =
       {
         filename = "__DyTech-Graphics__/graphics/entity/boiler/boiler-t-up-5.png",
         priority = "extra-high",
-        width = 51,
-        height = 51,
-        shift = {0, 0}
+        width = 46,
+        height = 70
       }
     },
     fire =
