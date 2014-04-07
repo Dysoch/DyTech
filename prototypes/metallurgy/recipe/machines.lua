@@ -5,6 +5,7 @@ data:extend(
    	name = "air-intake",
 	energy_required = 60,
     enabled = false,
+    subgroup = "metallurgy-machines",
 	ingredients = 
 	{ 
 	  {"iron-plate", 25},
@@ -17,6 +18,7 @@ data:extend(
    	name = "centrifuge",
 	energy_required = 60,
     enabled = false,
+    subgroup = "metallurgy-machines",
 	ingredients = 
 	{ 
 	  {"iron-plate", 25},

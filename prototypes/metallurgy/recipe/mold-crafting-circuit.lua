@@ -6,6 +6,7 @@ data:extend(
 	category = "metallurgy-circuit",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=8},
@@ -22,6 +23,7 @@ data:extend(
 	category = "metallurgy-circuit",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=14},

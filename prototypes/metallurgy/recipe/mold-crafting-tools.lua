@@ -6,6 +6,7 @@ data:extend(
 	category = "metallurgy-tool",
     energy_required = 0.25,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=30},
@@ -21,6 +22,7 @@ data:extend(
 	category = "metallurgy-tool",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=38},
@@ -37,6 +39,7 @@ data:extend(
 	category = "metallurgy-tool",
     energy_required = 0.75,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=120},

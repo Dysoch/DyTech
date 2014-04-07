@@ -6,6 +6,7 @@ data:extend(
 	category = "metallurgy-gear",
     energy_required = 0.25,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=12},
@@ -21,6 +22,7 @@ data:extend(
 	category = "metallurgy-gear",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=15},
@@ -36,6 +38,7 @@ data:extend(
 	category = "metallurgy-gear",
     energy_required = 0.75,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-brass", amount=10},
@@ -51,6 +54,7 @@ data:extend(
 	category = "metallurgy-gear",
     energy_required = 0.75,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-tungsten", amount=10},
@@ -66,6 +70,7 @@ data:extend(
 	category = "metallurgy-gear",
     energy_required = 0.75,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-copper-tungsten", amount=10},

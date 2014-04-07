@@ -6,6 +6,7 @@ data:extend(
 	category = "metallurgy-wire",
     energy_required = 0.25,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-copper", amount=4},
@@ -21,6 +22,7 @@ data:extend(
 	category = "metallurgy-wire",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=8},
@@ -37,6 +39,7 @@ data:extend(
 	category = "metallurgy-wire",
     energy_required = 0.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=8},
@@ -53,6 +56,7 @@ data:extend(
 	category = "metallurgy-wire",
     energy_required = 1.5,
     enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-copper-tungsten", amount=7.5},

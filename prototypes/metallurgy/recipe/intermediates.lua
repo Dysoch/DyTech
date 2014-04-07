@@ -4,6 +4,7 @@ data:extend(
     type = "recipe",
     name = "clay",
 	category = "crafting-with-fluid",
+    subgroup = "metallurgy-intermediates",
     energy_required = 2,
     ingredients =
     {

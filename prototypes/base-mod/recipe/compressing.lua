@@ -5,6 +5,7 @@ data:extend(
     name = "scrap-01",
 	category = "compressing",
 	energy_required = 15,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrap", 3},
@@ -16,6 +17,7 @@ data:extend(
     name = "scrap-02",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrap", 6},
@@ -27,6 +29,7 @@ data:extend(
     name = "scrap-03",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrap", 10},
@@ -38,6 +41,7 @@ data:extend(
     name = "scrap-04",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrap", 10},
@@ -49,6 +53,7 @@ data:extend(
     name = "scrap-05",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrap", 10},
@@ -60,6 +65,7 @@ data:extend(
     name = "scrapmetal-01",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrapmetal", 2},
@@ -71,6 +77,7 @@ data:extend(
     name = "scrapmetal-02",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrapmetal", 2},
@@ -82,6 +89,7 @@ data:extend(
     name = "scrapmetal-03",
 	category = "compressing",
 	energy_required = 25,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"scrapmetal", 10},
@@ -93,6 +101,7 @@ data:extend(
     name = "stone-01",
 	category = "compressing",
 	energy_required = 5,
+    subgroup = "dytechinter",
     ingredients =
     {
       {"sand", 10},

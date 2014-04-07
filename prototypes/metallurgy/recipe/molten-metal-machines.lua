@@ -5,6 +5,7 @@ data:extend(
    	name = "blast-furnace",
 	energy_required = 60,
     enabled = false,
+    subgroup = "metallurgy-machines",
 	ingredients = 
 	{ 
 	  {"advanced-circuit", 10}, 
@@ -20,6 +21,7 @@ data:extend(
    	name = "forge",
 	energy_required = 60,
     enabled = false,
+    subgroup = "metallurgy-machines",
    	ingredients = 
 	{ 
 	  {"steel-plate", 25},

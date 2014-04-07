@@ -4,6 +4,7 @@ data:extend(
     type = "recipe",
     name = "geothermal-extractor",
     energy_required = 20,
+    subgroup = "metallurgy-machines",
     ingredients =
     {
       {"steel-plate", 15},
@@ -18,6 +19,7 @@ data:extend(
     type = "recipe",
     name = "lava-handler",
     energy_required = 20,
+    subgroup = "metallurgy-machines",
     ingredients =
     {
       {"boiler", 2},

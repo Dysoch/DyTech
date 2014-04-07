@@ -6,6 +6,7 @@ data:extend(
 	category = "metallurgy-ammo-advanced",
     energy_required = 0.5,
 	enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-copper", amount=40},
@@ -22,6 +23,7 @@ data:extend(
 	category = "metallurgy-ammo-advanced",
     energy_required = 0.75,
 	enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=15},
@@ -39,6 +41,7 @@ data:extend(
 	category = "metallurgy-ammo-advanced",
     energy_required = 0.75,
 	enabled = false,
+    subgroup = "assembling-molds-crafting",
     ingredients =
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=15},

@@ -6,6 +6,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 0.5,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-iron", amount=7.5},
@@ -22,6 +23,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 0.5,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-copper", amount=7.5},
@@ -38,6 +40,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 1,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-carbonated-iron", amount=37.5},

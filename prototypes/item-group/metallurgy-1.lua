@@ -25,5 +25,11 @@ data:extend(
     group = "metallurgy-1",
     order = "3"
   },
+  {
+    type = "item-subgroup",
+    name = "assembling-molds-crafting",
+    group = "metallurgy-1",
+    order = "4"
+  },
 }
 )
