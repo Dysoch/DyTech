@@ -8,8 +8,8 @@ data:extend(
     category = "lava-magma",
     order = "lava-1",
     infinite = true,
-    minimum = 100,
-    normal = 8000,
+    minimum = 10000,
+    normal = 25000,
     minable =
     {
       hardness = 1,
