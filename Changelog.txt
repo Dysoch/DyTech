@@ -1,3 +1,16 @@
+Version 2.1.0:
+#New Features:
+- Added 2 new lava resources
+
+#Graphics:
+- 
+
+#Bugfixes:
+- Fixed wooden axe had same speed as player
+- Fixed map color of lava
+- Fixed Solar Panels being damaged at night
+- Fixed Steam Engines and Solar Panels damage to quick
+
 START A NEW WORLD!!!!!! IT MIGHT WORK WITH OLD WORLDS, BUT IT WILL LIMIT PLAYABILITY!!!
 
 Version 2.0.0:
