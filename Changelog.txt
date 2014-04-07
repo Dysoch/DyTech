@@ -3,7 +3,8 @@ Version 2.1.0:
 - Added 2 new lava resources
 
 #Graphics:
-- 
+- Added new graphics for Transport Belts
+- Added new icons for Transport Belts, Splitters and Underground
 
 #Bugfixes:
 - Fixed wooden axe had same speed as player
