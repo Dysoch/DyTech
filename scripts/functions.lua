@@ -13,6 +13,9 @@ function MeteorSpawn(meteor)
   for _, nearbyentity in ipairs(game.findentities{getboundingbox(position, meteor.area)}) do
     if nearbyentity.health then
       if nearbyentity.name == name then --this IS necessary, even with health=500000, the damage at ground zero is practically infinite
+      elseif nearbyentity.name == "player" then
+        nearbyentity.damage(math.min((50*meteor.area/util.distance(position, nearbyentity.position)), (nearbyentity.health-1)), game.forces.enemy) --same calc, but limited to prevent player death
+      --elseif nearbyentity.name == "player" then nearbyentity.damage(math.min(50, nearbyentity.health-1), game.forces.enemy) --explicit damage of 50 or 1 less than current health to prevent death.
       else nearbyentity.damage((50*meteor.area/util.distance(position, nearbyentity.position)), game.forces.enemy)
       end
   --else nearbyentity.destroy() -- optional
