@@ -64,7 +64,7 @@ data:extend(
       frame_count = 4,
       direction_count = 1
     },
-    map_color = {r=0.8, g=0.1, b=0.8},
+    map_color = {r=72, g=60, b=50},
     map_grid = false
   }
 }
