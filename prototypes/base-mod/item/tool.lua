@@ -69,7 +69,7 @@ data:extend(
     durability = 1000,
     subgroup = "tool",
     order = "w-a",
-    speed = 1,
+    speed = 1.25,
     stack_size = 32
   },
 }
