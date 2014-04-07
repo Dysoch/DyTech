@@ -7,3 +7,5 @@ You can look into the code here, and if you see something unbalanced, or a bug (
 
 WARNING:
 No unauthorized editing, copying or publishing of this mod is permitted!!!!! 
+
+FOR BUG REPORTS, CHECK AT [https://github.com/Dysoch/DyTech/wiki/Bug-Reporting-Guidelines!]
