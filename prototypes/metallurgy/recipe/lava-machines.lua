@@ -21,9 +21,9 @@ data:extend(
     ingredients =
     {
       {"boiler", 2},
-      {"iron-gear-wheel", 10},
-      {"electronic-circuit", 10},
-      {"pipe", 4},
+      {"steel-gear-wheel", 5},
+      {"advanced-circuit", 8},
+      {"pipe", 8},
     },
     result = "lava-handler",
     enabled = false

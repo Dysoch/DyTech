@@ -1,7 +1,7 @@
 module("ds", package.seeall)
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 70
+dstotalevents = 74
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
@@ -481,7 +481,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*34) then 
 		if not game.player.force.recipes["geothermal-extractor"].enabled then
-			if glob.time > 1800 and glob.counter.plates > math.random(100,150) then
+			if glob.time > 3600 and glob.counter.plates > math.random(100,150) and game.player.force.technologies["dytech-1"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.plates = (glob.counter.plates-math.random(glob.counter.plates/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -495,7 +495,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*35) then 
 		if not game.player.force.recipes["mold-gear"].enabled then
-			if glob.time > 2100 and glob.counter.gear > math.random(150,1500) then
+			if glob.time > 4200 and glob.counter.gear > math.random(150,1500) and game.player.force.recipes["steel-gear-wheel"].enabled and game.player.force.technologies["dytech-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.gear = (glob.counter.gear-math.random(glob.counter.gear/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -510,7 +510,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*36) then 
 		if not game.player.force.recipes["mold-wire"].enabled then
-			if glob.time > 2100 and glob.counter.energy > math.random(150,1500) then
+			if glob.time > 4200 and glob.counter.energy > math.random(150,1500) and game.player.force.technologies["dytech-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.energy = (glob.counter.energy-math.random(glob.counter.energy/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -525,7 +525,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*37) then 
 		if not game.player.force.recipes["mold-circuit"].enabled then
-			if glob.time > 2100 and glob.counter.tech > math.random(150,1500) then
+			if glob.time > 4200 and glob.counter.tech > math.random(150,1500) and game.player.force.technologies["dytech-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -540,7 +540,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*38) then 
 		if not game.player.force.recipes["mold-tool"].enabled then
-			if glob.time > 2100 and glob.counter.mining > math.random(150,1500) then
+			if glob.time > 4200 and glob.counter.mining > math.random(150,1500) and game.player.force.technologies["dytech-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining = (glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -555,7 +555,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*39) then 
 		if not game.player.force.recipes["mold-ammo-basic"].enabled then
-			if glob.time > 2100 and glob.counter.ammo > math.random(150,1500) then
+			if glob.time > 4200 and glob.counter.ammo > math.random(150,1500) and game.player.force.technologies["dytech-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.ammo = (glob.counter.ammo-math.random(glob.counter.ammo/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -572,7 +572,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*40) then 
 		if not game.player.force.recipes["metallurgy-copper-smelt"].enabled then
-			if game.player.force.recipes["geothermal-extractor"].enabled and glob.time > 2000 and glob.counter.dytech > math.random(1500,15000) then
+			if game.player.force.recipes["geothermal-extractor"].enabled and glob.time > 4000 and glob.counter.dytech > math.random(1500,15000) then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -597,7 +597,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*41) then 
 		if not game.player.force.recipes["metallurgy-iron-smelt"].enabled then
-			if game.player.force.recipes["metallurgy-copper-smelt"].enabled and glob.time > 2000 and glob.counter.dytech > math.random(1800,18000) then
+			if game.player.force.recipes["metallurgy-copper-smelt"].enabled and glob.time > 4000 and glob.counter.dytech > math.random(1800,18000) then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -614,7 +614,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*42) then 
 		if not game.player.force.recipes["metallurgy-steel-plate"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 2500 and glob.counter.dytech > math.random(2100,21000) and game.player.force.technologies["steel-processing"].researched then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 5000 and glob.counter.dytech > math.random(2100,21000) and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
@@ -633,7 +633,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*43) then 
 		if not game.player.force.recipes["mold-crafting-ammo-advanced-1"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["piercing-bullet-magazine"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["piercing-bullet-magazine"].enabled then
 				game.player.force.recipes["mold-crafting-ammo-advanced-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-ammo-advanced-1"))
 				game.player.force.resetrecipes()
@@ -642,7 +642,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*44) then 
 		if not game.player.force.recipes["mold-crafting-ammo-advanced-2"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["explosives"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["explosives"].enabled then
 				game.player.force.recipes["mold-crafting-ammo-advanced-2"].enabled = true
 				game.player.print(game.gettext("msg-craft-ammo-advanced-2"))
 				game.player.force.resetrecipes()
@@ -651,7 +651,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*45) then 
 		if not game.player.force.recipes["mold-crafting-ammo-advanced-3"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["piercing-shotgun-shell"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["piercing-shotgun-shell"].enabled then
 				game.player.force.recipes["mold-crafting-ammo-advanced-3"].enabled = true
 				game.player.print(game.gettext("msg-craft-ammo-advanced-3"))
 				game.player.force.resetrecipes()
@@ -660,7 +660,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*46) then 
 		if not game.player.force.recipes["mold-crafting-ammo-basic-1"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["basic-bullet-magazine"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["basic-bullet-magazine"].enabled then
 				game.player.force.recipes["mold-crafting-ammo-basic-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-ammo-basic-1"))
 				game.player.force.resetrecipes()
@@ -678,7 +678,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*48) then 
 		if not game.player.force.recipes["mold-crafting-circuit-1"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["electronic-circuit"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["electronic-circuit"].enabled then
 				game.player.force.recipes["mold-crafting-circuit-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-circuit-1"))
 				game.player.force.resetrecipes()
@@ -687,7 +687,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*49) then 
 		if not game.player.force.recipes["mold-crafting-circuit-2"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["advanced-circuit"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["advanced-circuit"].enabled then
 				game.player.force.recipes["mold-crafting-circuit-2"].enabled = true
 				game.player.print(game.gettext("msg-craft-circuit-2"))
 				game.player.force.resetrecipes()
@@ -696,7 +696,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*51) then
 		if not game.player.force.recipes["mold-crafting-gear-1"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["iron-gear-wheel"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["iron-gear-wheel"].enabled then
 				game.player.force.recipes["mold-crafting-gear-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-gear-1"))
 				game.player.force.resetrecipes()
@@ -705,7 +705,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*52) then 
 		if not game.player.force.recipes["mold-crafting-gear-2"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["steel-gear-wheel"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["steel-gear-wheel"].enabled then
 				game.player.force.recipes["mold-crafting-gear-2"].enabled = true
 				game.player.print(game.gettext("msg-craft-gear-2"))
 				game.player.force.resetrecipes()
@@ -714,7 +714,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*53) then 
 		if not game.player.force.recipes["mold-crafting-tool-1"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 and game.player.force.recipes["iron-axe"].enabled then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 and game.player.force.recipes["iron-axe"].enabled then
 				game.player.force.recipes["mold-crafting-tool-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-tools-1"))
 				game.player.force.resetrecipes()
@@ -723,7 +723,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*54) then 
 		if not game.player.force.recipes["mold-crafting-tool-2"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["steel-axe"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["steel-axe"].enabled then
 				game.player.force.recipes["mold-crafting-tool-2"].enabled = true
 				game.player.print(game.gettext("msg-craft-tools-2"))
 				game.player.force.resetrecipes()
@@ -732,7 +732,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*55) then 
 		if not game.player.force.recipes["mold-crafting-tool-3"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 3000 and game.player.force.recipes["steel-axe2"].enabled then
+			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["steel-axe2"].enabled then
 				game.player.force.recipes["mold-crafting-tool-3"].enabled = true
 				game.player.print(game.gettext("msg-craft-tools-3"))
 				game.player.force.resetrecipes()
@@ -741,10 +741,8 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*56) then 
 		if not game.player.force.recipes["mold-crafting-wire-2"].enabled then
-			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 3000 then
+			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 then
 				game.player.force.recipes["mold-crafting-wire-1"].enabled = true
-				game.player.force.recipes["mold-crafting-wire-2"].enabled = true
-				game.player.force.recipes["mold-crafting-wire-3"].enabled = true
 				game.player.print(game.gettext("msg-craft-wire-1"))
 				game.player.force.resetrecipes()
 			end
@@ -998,6 +996,16 @@ function dynamicUnlocks(event, ttime, r)
 					game.player.print(game.gettext("msg-copper-tungsten-gears"))
 					game.player.force.resetrecipes()
 				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*73) then 
+		if not game.player.force.recipes["mold-crafting-wire-2"].enabled then
+			if game.player.force.recipes["green-wire"].enabled and glob.time > 9000 then
+				game.player.force.recipes["mold-crafting-wire-2"].enabled = true
+				game.player.force.recipes["mold-crafting-wire-3"].enabled = true
+				game.player.print(game.gettext("msg-craft-wire-1"))
+				game.player.force.resetrecipes()
 			end
 		end
 	end

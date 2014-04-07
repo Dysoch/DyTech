@@ -294,7 +294,7 @@ end)
 game.onevent(defines.events.onbuiltentity, function(event)
 	if dsd.meteor[event.createdentity.name] then
 		for counter, ingredients in pairs(dsd.meteor[event.createdentity.name]) do 
-			glob.meteor[counter]=glob.meteor[counter] + 1
+			glob.meteor[counter]=glob.meteor[counter] + ingredients
 		end
 	end
 	glob.counter2.build = glob.counter2.build + 1
