@@ -11,6 +11,7 @@ Version 2.1.0:
 - Added new graphics for Boilers (new colors)
 - Added new icons for Boilers
 - Added new icons for Tungsten Axe and Gemstone Axe
+- Added new icons for Packing and Unpacking Machines
 
 #Bugfixes:
 - Fixed wooden axe had same speed as player
