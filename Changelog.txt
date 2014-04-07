@@ -2,11 +2,15 @@ Version 2.1.0:
 #New Features:
 - Added 2 new lava resources
 
+#Changes:
+- Changed Advanced Steel Axe to Tungsten Axe
+
 #Graphics:
 - Added new graphics for Transport Belts
 - Added new icons for Transport Belts, Splitters and Underground
 - Added new graphics for Boilers (new colors)
 - Added new icons for Boilers
+- Added new icons for Tungsten Axe and Gemstone Axe
 
 #Bugfixes:
 - Fixed wooden axe had same speed as player

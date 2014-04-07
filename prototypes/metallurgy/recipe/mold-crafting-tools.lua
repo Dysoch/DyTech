@@ -42,12 +42,12 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-carbonated-iron", amount=120},
-	  {type="fluid", name="molten-iron", amount=18},
+	  {type="fluid", name="molten-tungsten", amount=120},
+	  {type="fluid", name="molten-gunmetal", amount=18},
     },
     results = 
 	{
-	  {type="item", name="steel-axe2", amount=1}
+	  {type="item", name="tungsten-axe", amount=1}
 	}
   },
 }

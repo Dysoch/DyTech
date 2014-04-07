@@ -98,13 +98,13 @@ function dynamicUnlocks(event, ttime, r)
 		end
 	end
 	if event.tick%ttime==(r*7) then 
-		if not game.player.force.recipes["steel-axe2"].enabled then
-			if glob.counter.mining > math.random(120,180) then
+		if not game.player.force.recipes["tungsten-axe"].enabled then
+			if glob.counter.mining > math.random(240,360) and game.player.force.recipes["metallurgy-tungsten"].enabled then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
-				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.recipes["steel-axe"].enabled then 
-					game.player.force.recipes["steel-axe2"].enabled = true
+				else
+					game.player.force.recipes["tungsten-axe"].enabled = true
 					game.player.print(game.gettext("msg-adv-steel-axe"))
 					game.player.force.resetrecipes()
 				end
@@ -112,13 +112,13 @@ function dynamicUnlocks(event, ttime, r)
 		end
 	end
 	if event.tick%ttime==(r*8) then 
-		if not game.player.force.recipes["steel-axe3"].enabled then
-			if glob.counter.mining > math.random(400,1250) then
+		if not game.player.force.recipes["gemstone-axe"].enabled then
+			if glob.counter.mining > math.random(400,1250) and game.player.force.recipes["metallurgy-tungsten"].enabled then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.mining =(glob.counter.mining-math.random(glob.counter.mining/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
-				elseif game.player.force.technologies["steel-processing"].researched and game.player.force.technologies["gem-processing"].researched and game.player.force.recipes["steel-axe2"].enabled then
-					game.player.force.recipes["steel-axe3"].enabled = true
+				elseif game.player.force.technologies["gem-processing"].researched then
+					game.player.force.recipes["gemstone-axe"].enabled = true
 					game.player.print(game.gettext("msg-adv-steel-axe-2"))
 					game.player.force.resetrecipes()
 				end

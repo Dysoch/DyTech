@@ -2,8 +2,8 @@ data:extend(
 {
   {
     type = "mining-tool",
-    name = "steel-axe2",
-    icon = "__DyTech-Graphics__/graphics/icons/steel-axe2.png",
+    name = "tungsten-axe",
+    icon = "__DyTech-Graphics__/graphics/icons/tungsten-axe.png",
     flags = {"goes-to-main-inventory"},
     action =
     {
@@ -18,7 +18,7 @@ data:extend(
         }
       }
     },
-    durability = 7500,
+    durability = 25000,
     subgroup = "tool",
     order = "s-a-2",
     speed = 6,
@@ -26,8 +26,8 @@ data:extend(
   },
   {
     type = "mining-tool",
-    name = "steel-axe3",
-    icon = "__DyTech-Graphics__/graphics/icons/steel-axe2.png",
+    name = "gemstone-axe",
+    icon = "__DyTech-Graphics__/graphics/icons/gemstone-axe.png",
     flags = {"goes-to-main-inventory"},
     action =
     {

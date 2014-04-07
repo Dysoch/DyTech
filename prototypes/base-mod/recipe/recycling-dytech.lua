@@ -293,7 +293,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"steel-axe2", 1},
+      {"tungsten-axe", 1},
     },
     result = "scrapmetal",
 	result_count = 3,
@@ -306,7 +306,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"steel-axe3", 1},
+      {"gemstone-axe", 1},
     },
     result = "scrapmetal",
 	result_count = 3,

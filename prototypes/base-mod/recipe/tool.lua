@@ -2,28 +2,29 @@ data:extend(
 { 
   {
     type = "recipe",
-    name = "steel-axe2",
+    name = "tungsten-axe",
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 15},
-      {"gunmetal-alloy", 5},
-	  {"steel-axe", 1}
+      {"tungsten-plate", 15},
+      {"gunmetal-alloy", 5}
     },
-    result = "steel-axe2"
+    result = "tungsten-axe"
   },
   {
     type = "recipe",
-    name = "steel-axe3",
+    name = "gemstone-axe",
     enabled = false,
     ingredients =
     {
       {"tungsten-plate", 25},
       {"iron-stick", 5},
 	  {"steel-axe2", 1},
-	  {"ruby-3", 2}
+	  {"ruby-3", 2},
+	  {"emerald-3", 2},
+	  {"sapphire-3", 2},
     },
-    result = "steel-axe3"
+    result = "gemstone-axe"
   },
   {
     type = "recipe",
