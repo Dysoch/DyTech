@@ -1,0 +1,33 @@
+Changelog.txt
+
+START A NEW WORLD!!!!!! IT MIGHT WORK WITH OLD WORLDS, BUT IT WILL LIMIT PLAYABILITY!!!
+
+Version 2.0.0:
+#New Features:
+- Added Blast Furnace
+- Added Forge
+- Added Air Intake
+- Added Mold Crafting Machines (6 types)
+- Added liquids: iron, copper, steel, gold, tungsten, tin, brass, bronze, gunmetal, silver, zinc, copper-tungsten, air
+- Added new plates for all of the above
+- Added clay, carbon and silicon(silicon not used atm)
+- Added mainline pipe and pumps
+- Added meteors. Comes in 5 different sizes. They hold ores.
+- Added Fmod compatibility. Copy contents of F-mod compatibility folder to F-mod folder for maximum playability.
+
+#Changed:
+- Changed item groups to work with metallurgy.
+
+#Removed:
+- Removed the assembling machines Dytech and Module. All those items are now crafted by hand or normal assembling machines.
+
+#Dynamic System:
+- Added more then 50 unlock events!
+- Added more then 10 new counters!
+- Changed dynamic failure. It now actually works!
+
+Known issues!!!!!!
+- Graphics and icons are outdated or not even done! this will be done for v2.1!
+- All new recipes wont be counted in the dynamic database. This will be done for v2.1! (Intended!)
+
+I might have done more, but i forgot xD
