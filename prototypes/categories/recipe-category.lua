@@ -76,5 +76,13 @@ data:extend(
     type = "recipe-category",
     name = "centrifuge"
   },
+  {
+    type = "recipe-category",
+    name = "forge"
+  },
+  {
+    type = "recipe-category",
+    name = "blast-furnace"
+  },
 }
 )
