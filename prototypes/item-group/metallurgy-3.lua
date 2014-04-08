@@ -31,5 +31,23 @@ data:extend(
     group = "metallurgy-3",
     order = "4"
   },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels",
+    group = "metallurgy-3",
+    order = "5"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels-filling",
+    group = "metallurgy-3",
+    order = "7"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels-emptying",
+    group = "metallurgy-3",
+    order = "7"
+  },
 }
 )

@@ -1,6 +1,8 @@
 Version 2.1.0:
 #New Features:
 - Added 2 new lava resources
+- Added 13 Lava Barrels made of Tungsten (14th barrel, which is empty)
+- Added recipes to fill them, and empty them.
 
 #Changes:
 - Changed Advanced Steel Axe to Tungsten Axe
@@ -18,8 +20,8 @@ Version 2.1.0:
 - Fixed map color of lava
 - Fixed Solar Panels being damaged at night
 - Fixed Steam Engines and Solar Panels damage to quick
+- Fixed Event 56 spamming messages
 
-START A NEW WORLD!!!!!! IT MIGHT WORK WITH OLD WORLDS, BUT IT WILL LIMIT PLAYABILITY!!!
 
 Version 2.0.0:
 #New Features:

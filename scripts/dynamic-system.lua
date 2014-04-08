@@ -842,6 +842,33 @@ function dynamicUnlocks(event, ttime, r)
 					game.player.force.recipes["lava-3600"].enabled = true
 					game.player.force.recipes["lava-3800"].enabled = true
 					game.player.force.recipes["lava-4000"].enabled = true
+					game.player.force.recipes["empty-tungsten-barrel"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-01"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-02"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-03"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-04"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-05"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-06"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-07"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-08"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-09"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-10"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-11"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-12"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-empty-13"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-01"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-02"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-03"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-04"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-05"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-06"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-07"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-08"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-09"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-10"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-11"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-12"].enabled = true
+					game.player.force.recipes["metallurgy-barrel-fill-13"].enabled = true
 					game.player.print(game.gettext("msg-tungsten"))
 					game.player.force.resetrecipes()
 				end
