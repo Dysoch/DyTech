@@ -740,7 +740,7 @@ function dynamicUnlocks(event, ttime, r)
 		end
 	end
 	if event.tick%ttime==(r*56) then 
-		if not game.player.force.recipes["mold-crafting-wire-2"].enabled then
+		if not game.player.force.recipes["mold-crafting-wire-1"].enabled then
 			if game.player.force.recipes["metallurgy-iron-smelt"].enabled and glob.time > 9000 then
 				game.player.force.recipes["mold-crafting-wire-1"].enabled = true
 				game.player.print(game.gettext("msg-craft-wire-1"))
