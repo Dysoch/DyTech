@@ -158,9 +158,10 @@ require("prototypes.metallurgy.fluid.metals-molten-advanced")
 require("prototypes.metallurgy.fluid.metals-molten-base")
 require("prototypes.metallurgy.fluid.metals-molten-basic")
 
--- item 10x
+-- item 11x
 require("prototypes.metallurgy.item.alloys")
 require("prototypes.metallurgy.item.assemblers-molds")
+require("prototypes.metallurgy.item.barrels")
 require("prototypes.metallurgy.item.intermediates")
 require("prototypes.metallurgy.item.lava-machines")
 require("prototypes.metallurgy.item.machines")
@@ -178,8 +179,11 @@ require("prototypes.metallurgy.meteors.meteors-large")
 require("prototypes.metallurgy.meteors.meteors-medium")
 require("prototypes.metallurgy.meteors.meteors-small")
 
--- recipe 21x
+-- recipe 24x
 require("prototypes.metallurgy.recipe.assemblers-molds")
+require("prototypes.metallurgy.recipe.barrels")
+require("prototypes.metallurgy.recipe.barrels-filling")
+require("prototypes.metallurgy.recipe.barrels-unfilling")
 require("prototypes.metallurgy.recipe.intermediates")
 require("prototypes.metallurgy.recipe.lava-heating")
 require("prototypes.metallurgy.recipe.lava-machines")

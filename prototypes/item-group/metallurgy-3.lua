@@ -41,7 +41,7 @@ data:extend(
     type = "item-subgroup",
     name = "metallurgy-fluid-barrels-filling",
     group = "metallurgy-3",
-    order = "7"
+    order = "6"
   },
   {
     type = "item-subgroup",
