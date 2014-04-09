@@ -3,6 +3,7 @@ Version 2.1.0:
 - Added 2 new lava resources
 - Added 13 Lava Barrels made of Tungsten (14th barrel, which is empty)
 - Added recipes to fill them, and empty them.
+- Added Advanced versions of Steam Engine, Solar Panel and Accumulator
 
 #Changes:
 - Changed Advanced Steel Axe to Tungsten Axe
