@@ -24,5 +24,18 @@ data:extend(
     },
     result = "solar-panel-terciary"
   },
+  {
+    type = "recipe",
+    name = "advanced-solar-panel-primary",
+    enabled = true, --for testing purposes!
+    ingredients =
+    {
+      {"solar-panel", 1},
+      {"copper-tungsten-alloy", 5},
+      {"circuit3", 15},
+      {"silver-plate", 5}
+    },
+    result = "advanced-solar-panel-primary"
+  },
 }
 )
