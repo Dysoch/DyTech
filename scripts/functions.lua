@@ -96,6 +96,16 @@ function CounterPrinter2()
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter2.dytech))
 end
 
+function Meteor()
+	game.player.print("Here you can see how many Meteors have spawned")
+	game.player.print("Small:".." "..tostring(glob.meteor.small))
+	game.player.print("Medium:".." "..tostring(glob.meteor.medium))
+	game.player.print("Comets:".." "..tostring(glob.meteor.comet))
+	game.player.print("Large:".." "..tostring(glob.meteor.large))
+	game.player.print("Asteroid:".." "..tostring(glob.meteor.asteroid))
+	game.player.print("All Counters Combined:".." "..tostring(glob.meteor.dytech))
+end
+
 function OnLoad()
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end

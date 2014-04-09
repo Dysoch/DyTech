@@ -19,7 +19,7 @@ data:extend(
     {
       {"tungsten-plate", 25},
       {"iron-stick", 5},
-	  {"steel-axe2", 1},
+	  {"steel-axe", 1},
 	  {"ruby-3", 2},
 	  {"emerald-3", 2},
 	  {"sapphire-3", 2},

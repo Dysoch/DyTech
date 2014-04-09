@@ -11,7 +11,7 @@ data:extend(
     icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
-      {type="fluid", name="lava-0600", amount=25},
+      {type="fluid", name="lava-600", amount=25},
       {type="item", name="empty-tungsten-barrel", amount=1},
     },
     results =
@@ -30,7 +30,7 @@ data:extend(
     icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
-      {type="fluid", name="lava-0800", amount=25},
+      {type="fluid", name="lava-800", amount=25},
       {type="item", name="empty-tungsten-barrel", amount=1},
     },
     results =

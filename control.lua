@@ -527,6 +527,10 @@ remote.addinterface("DyTech",
 	fs.CounterPrinter2()
   end,
   
+  Meteor = function() 
+	fs.Meteor()
+  end,
+  
   Regenerate = function()
 	game.regenerateentity("sand")
 	game.regenerateentity("lava-600")
