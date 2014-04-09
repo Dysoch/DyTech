@@ -20,5 +20,15 @@ data:extend(
     place_result = "basic-accumulator-secondary",
     stack_size = 32
   },
+  {
+    type = "item",
+    name = "advanced-accumulator-terciary",
+    icon = "__base__/graphics/icons/basic-accumulator.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "energy",
+    order = "a-a-3",
+    place_result = "advanced-accumulator-terciary",
+    stack_size = 32
+  },
 }
 )

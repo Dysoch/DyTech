@@ -24,5 +24,18 @@ data:extend(
     },
     result = "basic-accumulator-secondary"
   },
+  {
+    type = "recipe",
+    name = "advanced-accumulator-terciary",
+    enabled = false,
+    ingredients =
+    {
+      {"tungsten-plate", 2},
+      {"copper-tungsten-alloy", 5},
+      {"basic-accumulator", 1},
+      {"circuit3", 20}
+    },
+    result = "advanced-accumulator-terciary"
+  },
 }
 )
