@@ -1042,7 +1042,7 @@ function dynamicRewards(event)
 	if event.tick%3600==0 then
 		if not glob.reward.axe1 then 
 			if glob.counter.dytech > math.random(5000,7500) then
-				game.player.insert{name="steel-axe3",count=1}
+				game.player.insert{name="tungsten-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
 				glob.reward.axe1=true
 			end

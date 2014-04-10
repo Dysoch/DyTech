@@ -8,7 +8,7 @@ data:extend(
     category = "lava-magma",
     order = "lava-0600",
     infinite = true,
-    minimum = 10000,
+    minimum = 1000,
     normal = 25000,
     minable =
     {
@@ -30,7 +30,7 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 1,
+      sharpness = 0.8,
       max_probability = 0.04,
       richness_multiplier = 150000,
       richness_base = 5000,
@@ -97,10 +97,10 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 1,
+      sharpness = 0.8,
       max_probability = 0.04,
       richness_multiplier = 150000,
-      richness_base = 5000,
+      richness_base = 1000,
       size_control_multiplier = 0.06,
       peaks =
       {
@@ -164,10 +164,10 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 1,
+      sharpness = 0.8,
       max_probability = 0.04,
       richness_multiplier = 150000,
-      richness_base = 5000,
+      richness_base = 1000,
       size_control_multiplier = 0.06,
       peaks =
       {
