@@ -998,7 +998,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*71) then 
 		if not game.player.force.recipes["tungsten-gear-wheel"].enabled then
-			if glob.counter.gear > math.random(500,1500) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-tungsten"].enabled then
+			if glob.counter.gear > math.random(500,1500) and glob.counter.tech > math.random(5000,15000) and game.player.force.recipes["metallurgy-tungsten-smelt"].enabled then
 				if DynamicFailure(glob.counter.dytech) then
 					glob.counter.tech = (glob.counter.tech-math.random(glob.counter.tech/2))
 					game.player.print(game.gettext("msg-dynamic-failure"))
