@@ -48,7 +48,7 @@ data:extend(
         },
         {
           influence = 0.67,
-          noise_layer = "crude-oil",
+          noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
         }
@@ -115,7 +115,7 @@ data:extend(
         },
         {
           influence = 0.67,
-          noise_layer = "crude-oil",
+          noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
         }
@@ -182,7 +182,7 @@ data:extend(
         },
         {
           influence = 0.67,
-          noise_layer = "crude-oil",
+          noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
         }

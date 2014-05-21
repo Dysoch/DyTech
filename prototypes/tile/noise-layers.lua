@@ -12,5 +12,9 @@ data:extend(
     type = "noise-layer",
     name = "gems"
   },
+  {
+    type = "noise-layer",
+    name = "lava"
+  },
 }
 )

@@ -101,7 +101,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_slots = 0,
     smelting_categories = {"recycling"},
-    result_inventory_size = 2,
+    result_inventory_size = 1,
     smelting_speed = 0.25,
     smelting_energy_consumption = "250kW",
     source_inventory_size = 1,
