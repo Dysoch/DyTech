@@ -732,7 +732,7 @@ function dynamicUnlocks(event, ttime, r)
 	end
 	if event.tick%ttime==(r*55) then 
 		if not game.player.force.recipes["mold-crafting-tool-3"].enabled then
-			if game.player.force.recipes["metallurgy-iron-carbonated"].enabled and glob.time > 9000 and game.player.force.recipes["steel-axe2"].enabled then
+			if game.player.force.recipes["metallurgy-tungsten-plate"].enabled and glob.time > 9000 and game.player.force.recipes["tungsten-axe"].enabled then
 				game.player.force.recipes["mold-crafting-tool-3"].enabled = true
 				game.player.print(game.gettext("msg-craft-tools-3"))
 				game.player.force.resetrecipes()
