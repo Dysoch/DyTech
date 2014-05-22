@@ -1,0 +1,9 @@
+{
+	"name":"DyTech-(something!!!)",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"DyTech-(SOMETHING)",
+	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"description":"A DESCRIPTION HERE!",
+	"dependencies": ["base >= 0.9.8", "DyTech-Graphics >= 2.0.0"] --need to be changed
+}
