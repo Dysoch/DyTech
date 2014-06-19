@@ -4,7 +4,7 @@ data:extend(
     type = "technology",
     name = "inserter-optimization",
     icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization.png",
-    prerequisites = {"logistics", "dytech-1"},
+    prerequisites = {"logistics"},
     effects = {
       {
         type = "unlock-recipe",
@@ -111,7 +111,7 @@ data:extend(
     type = "technology",
     name = "inserter-optimization-smart",
     icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization_adv.png",
-    prerequisites = {"inserter-optimization-filter", "circuit3"},
+    prerequisites = {"inserter-optimization-filter"},
     effects = 
 	{
       {
