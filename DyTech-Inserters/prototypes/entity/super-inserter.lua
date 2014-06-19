@@ -3,7 +3,7 @@ data:extend(
   {
     type = "inserter",
     name = "dytech-inserter",
-    icon = "__DyTech-Graphics__/graphics/icons/dytech-inserter.png",
+    icon = "__DyTech-Inserters__/graphics/icons/dytech-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "dytech-inserter"},
     max_health = 1000,
@@ -29,21 +29,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -57,7 +57,7 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-platform.png"
     },
 		programmable = true,
     filter_count = 5,
@@ -66,7 +66,7 @@ data:extend(
   {
     type = "inserter",
     name = "dytech-inserter-fast",
-    icon = "__DyTech-Graphics__/graphics/icons/dytech-inserter.png",
+    icon = "__DyTech-Inserters__/graphics/icons/dytech-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "dytech-inserter-fast"},
     max_health = 1000,
@@ -92,21 +92,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -120,7 +120,7 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/dytech-inserter-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/dytech-inserter-platform.png"
     },
 		programmable = true,
     rotation_speed = 0.33  

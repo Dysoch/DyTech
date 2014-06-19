@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_half.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-h",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_long.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_long.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-l",
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_long_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_long_half.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-l-h",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-fast-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_fast_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_fast_half.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-f-h",
@@ -43,7 +43,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-veryfast",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_veryfast.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-v-f",
@@ -53,7 +53,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-veryfast-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_veryfast_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast_half.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "i-v-f-h",

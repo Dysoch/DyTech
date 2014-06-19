@@ -3,7 +3,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_half.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -26,21 +26,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/half-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/half-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/half-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -54,14 +54,14 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.02
   },
   {
     type = "inserter",
     name = "inserter-long",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_long.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_long.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -84,21 +84,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -112,14 +112,14 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.02
   },
   {
     type = "inserter",
     name = "inserter-long-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_long_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_long_half.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -142,21 +142,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-half-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-half-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/long-half-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -170,14 +170,14 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.02
   },
   {
     type = "inserter",
     name = "inserter-fast-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_fast_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_fast_half.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -200,21 +200,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/fast-half-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/fast-half-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/fast-half-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -228,14 +228,14 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.03
   },
   {
     type = "inserter",
     name = "inserter-veryfast-half",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_veryfast_half.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast_half.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -258,21 +258,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-half-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-half-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-half-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -286,14 +286,14 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.06
   },
   {
     type = "inserter",
     name = "inserter-veryfast",
-    icon = "__DyTech-Graphics__/graphics/icons/inserter_veryfast.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = 
 	{
@@ -316,21 +316,21 @@ data:extend(
     fast_replaceable_group = "inserter",
     hand_base_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-hand-base.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-hand-closed.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-closed.png",
       priority = "extra-high",
       width = 13,
       height = 41
     },
     hand_open_picture = 
 	{
-      filename = "__DyTech-Graphics__/graphics/entity/inserter/very-fast-hand-open.png",
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-open.png",
       priority = "extra-high",
       width = 13,
       height = 41
@@ -344,7 +344,7 @@ data:extend(
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Graphics__/graphics/entity/inserter/normal-platform.png"
+      sheet = "__DyTech-Inserters__/graphics/entity/inserter/normal-platform.png"
     },
     rotation_speed = 0.06
   },
