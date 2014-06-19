@@ -5,5 +5,5 @@
 	"title":"DyTech-Tools",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Tools",
-	"dependencies": ["base >= 0.9.8", "DyTech-Core >= 1.0.0"]
+	"dependencies": ["base >= 0.10.0", "DyTech-Core >= 0.2.0"]
 }
