@@ -1,3 +1,11 @@
+if not glob.dytech then glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
+
+if glob.dytech.energy=false then glob.dytech.energy=true end
+
+
+
+
+
 require "defines"
 require "scripts/dynamic-system"
 require "scripts/dynamic-system-database"
