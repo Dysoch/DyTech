@@ -1,0 +1,9 @@
+{
+	"name":"DyTech-Compatibility",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"DyTech-Compatibility",
+	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"description":"The DyTech Module for the Compatibility to other mods",
+	"dependencies": ["base >= 0.9.8", "DyTech-Core >= 1.0.0"]
+}
