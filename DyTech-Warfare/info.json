@@ -1,0 +1,9 @@
+{
+	"name":"DyTech-Warfare",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"DyTech-Warfare",
+	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"description":"The DyTech Module for the Warfare",
+	"dependencies": ["base >= 0.9.8", "DyTech-Core >= 1.0.0"]
+}
