@@ -1,9 +1,8 @@
 require "defines"
+require "scripts/functions"
 
 game.oninit(function()
-	if not glob.dytech then 
-		glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} 
-	end 
+	fs.OnInit()
 end)
 
 game.onsave(function()
@@ -11,7 +10,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-
+	fs.OnLoad()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
@@ -82,5 +81,40 @@ remote.addinterface("DyTech-Core",
 			game.player.print("DyTech-Tools:".." "..tostring(glob.dytech.tools))
 			game.player.print("DyTech-Transportation:".." "..tostring(glob.dytech.transportation))
 			game.player.print("DyTech-Warfare:".." "..tostring(glob.dytech.warfare))
+  end,
+  
+  CounterPrint = function() 
+	fs.CounterPrinter()
+  end,
+  
+  CounterPrint2 = function() 
+	fs.CounterPrinter2()
+  end,
+  
+  CombatPrint = function() 
+	fs.CombatPrinter()
+  end,
+  
+  checkCounter = function(name)
+	if type(name) == "string" then
+		if name == "all" then return glob.counter.dytech else return glob.counter[name] end
+	elseif type(name) == "table" then
+		local result = {}
+			for _, name in ipairs(name) do
+			result[name] = glob.counter[name]
+			end
+	return result
+	else
+    return false -- could also use error("unknown name type", 2)
+	end
+  end,
+  
+  removefromCounter = function(name, number)
+	glob.counter[name] = glob.counter[name] - number
+  end,
+  
+  addtoCounter = function(name, number)
+	glob.counter[name] = glob.counter[name] + number
   end
+  
 })
