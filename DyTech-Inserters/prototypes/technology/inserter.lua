@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization",
-    icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization.png",
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization.png",
     prerequisites = {"logistics"},
     effects = {
       {
@@ -32,7 +32,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-adv",
-    icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization_adv.png",
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
     prerequisites = {"logistics-2", "inserter-optimization"},
     effects = 
 	{
@@ -63,7 +63,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-filter",
-    icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization_adv.png",
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
     prerequisites = {"inserter-optimization-adv"},
     effects = 
 	{
@@ -110,7 +110,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-smart",
-    icon = "__DyTech-Graphics__/graphics/technology/inserter_optimization_adv.png",
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
     prerequisites = {"inserter-optimization-filter"},
     effects = 
 	{
