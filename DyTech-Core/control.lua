@@ -56,7 +56,24 @@ game.onevent(defines.events.onpickedupitem, function(event)
 end)
 
 game.onevent(defines.events.ontick, function(event)
-
+	if game.tick%60==1 then
+		glob.counter.dytech=0
+		for _, counter in pairs(glob.counter) do 
+			if (counter~=glob.counter.dytech) then glob.counter.dytech=glob.counter.dytech+counter end
+		end
+	end
+	if game.tick%60==1 then
+		glob.counter2.dytech=0
+		for _, counter in pairs(glob.counter2) do 
+			if (counter~=glob.counter2.dytech) then glob.counter2.dytech=glob.counter2.dytech+counter end
+		end
+	end
+	if game.tick%60==1 then
+		glob.combat.dytech=0
+		for _, counter in pairs(glob.combat) do 
+			if (counter~=glob.combat.dytech) then glob.combat.dytech=glob.combat.dytech+counter end
+		end
+	end
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)

@@ -90,7 +90,7 @@ craftitems =
 	["rail-signal"]={["electronic-circuit"]=1, plates=5},
 	["heavy-armor"]={armor=2, plates=150},
 	["basic-modular-armor"]={["advanced-circuit"]=30, ["processing-unit"]=5, plates=50},
-	["power-armor"]={armor=8, ["processing-unit"]=100, ["electric-engine-unit"]=30 plates=100, alien=10},
+	["power-armor"]={armor=8, ["processing-unit"]=100, ["electric-engine-unit"]=30, plates=100, alien=10},
 	["power-armor-mk2"]={armor=16, ["effectivity-module-3"]=5, ["speed-module-3"]=5, ["processing-unit"]=200, plates=50, alien=50},
 	["iron-chest"]={chest=1, plates=8},
 	["steel-chest"]={chest=1, plates=8},

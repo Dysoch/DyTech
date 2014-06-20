@@ -77,7 +77,7 @@ data:extend(
     name = "inserter-half-smart",
     ingredients = 
 	{
-      {"advanced-circuit", 6},
+      {"processing-unit", 6},
       {"inserter-half-filter", 1},
       {"steel-plate", 15},
     },
@@ -91,7 +91,7 @@ data:extend(
 	{
       {"inserter-long-filter", 1},
       {"steel-plate", 15},
-      {"advanced-circuit", 8},
+      {"processing-unit", 8},
     },
     result = "inserter-long-smart",
     enabled = false
@@ -103,7 +103,7 @@ data:extend(
 	{
       {"inserter-long-half-filter", 1},
       {"steel-plate", 15},
-      {"advanced-circuit", 8},
+      {"processing-unit", 8},
     },
     result = "inserter-long-half-smart",
     enabled = false
@@ -113,7 +113,7 @@ data:extend(
     name = "inserter-fast-half-smart",
     ingredients = 
 	{
-      {"advanced-circuit", 10},
+      {"processing-unit", 10},
       {"steel-plate", 15},
       {"inserter-fast-half-filter", 1}
     },
@@ -125,7 +125,7 @@ data:extend(
     name = "inserter-veryfast-smart",
     ingredients = 
 	{
-      {"advanced-circuit", 10},
+      {"processing-unit", 10},
       {"steel-plate", 15},
       {"inserter-veryfast-filter", 1}
     },
@@ -137,7 +137,7 @@ data:extend(
     name = "inserter-veryfast-half-smart",
     ingredients = 
 	{
-      {"advanced-circuit", 10},
+      {"processing-unit", 10},
       {"steel-plate", 15},
       {"inserter-veryfast-half-filter", 1}
     },
