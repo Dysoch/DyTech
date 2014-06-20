@@ -76,6 +76,7 @@ remote.addinterface("DyTech-Core",
 			game.player.print("DyTech-Logistic:".." "..tostring(glob.dytech.logistic))
 			game.player.print("DyTech-Metallurgy:".." "..tostring(glob.dytech.metallurgy))
 			game.player.print("DyTech-Meteors:".." "..tostring(glob.dytech.meteors))
+			game.player.print("DyTech-Mining:".." "..tostring(glob.dytech.mining))
 			game.player.print("DyTech-Modules:".." "..tostring(glob.dytech.modules))
 			game.player.print("DyTech-Storage:".." "..tostring(glob.dytech.storage))
 			game.player.print("DyTech-Tools:".." "..tostring(glob.dytech.tools))
