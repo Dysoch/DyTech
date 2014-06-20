@@ -167,14 +167,6 @@ craftitems =
 	-- DyTech Warfare --
 }
 
-foundation =
-{
-	["wood-foundation"]={wood=1},
-	["stone-foundation"]={stone=1},
-	["iron-foundation"]={iron=1},
-	["steel-foundation"]={steel=1}
-}
-
 --[[MINED ITEMS]]--
 
 mineitems =
@@ -184,6 +176,11 @@ mineitems =
 	["stone"]={resource=1},
 	["iron-ore"]={resource=1},
 	["copper-ore"]={resource=1},
+	["gold-ore"]={resource=1},
+	["silver-ore"]={resource=1},
+	["zinc-ore"]={resource=1},
+	["tungsten-ore"]={resource=1},
+	["tin-ore"]={resource=1},
 	["raw-wood"]={resource=1},
 	["ruby-ore"]={gems=5},
 	["sapphire-ore"]={gems=5},

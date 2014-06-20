@@ -33,6 +33,11 @@ end)
 
 game.onevent(defines.events.onentitydied, function(event)
 	glob.counter2.died = glob.counter2.died + 1
+	if database.kill[event.entity.name] and event.entity.force.name == "enemy" then
+		for counter, ingredients in pairs(database.kill[event.entity.name]) do 
+			glob.combat[counter]=glob.combat[counter] + ingredients
+		end
+	end
 end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
@@ -49,6 +54,11 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 	glob.counter2.build = glob.counter2.build + 1
+	if database.meteor[event.createdentity.name] then
+		for counter, ingredients in pairs(database.meteor[event.createdentity.name]) do 
+			glob.meteor[counter]=glob.meteor[counter] + ingredients
+		end
+	end
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
