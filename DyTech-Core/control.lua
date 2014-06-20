@@ -1,4 +1,5 @@
 require "defines"
+require "scripts/database"
 require "scripts/functions"
 
 game.oninit(function()
@@ -14,23 +15,32 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-
+	if database.craftitems[event.itemstack.name] then
+		for counter, ingredients in pairs(database.craftitems[event.itemstack.name]) do 
+			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
+		end
+	end
 end)
 
 game.onevent(defines.events.onplayermineditem, function(event)
-
+	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
+	if database.mineitems[event.itemstack.name] then
+		for counter, ingredients in pairs(database.mineitems[event.itemstack.name]) do 
+			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
+		end
+	end
 end)
 
 game.onevent(defines.events.onentitydied, function(event)
-
+	glob.counter2.died = glob.counter2.died + 1
 end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
-
+	glob.counter2.sectorscanned = glob.counter2.sectorscanned + 1
 end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
-
+	glob.counter2.pickup = glob.counter2.pickup + event.itemstack.count
 end)
 
 game.onevent(defines.events.ontick, function(event)
@@ -38,11 +48,11 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
-
+	glob.counter2.build = glob.counter2.build + 1
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
-
+	glob.counter2.chunks = glob.counter2.chunks + 1
 end)
 
 remote.addinterface("DyTech-Core",
