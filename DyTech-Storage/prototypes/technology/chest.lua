@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "chest-1",
-    icon = "__DyTech-Graphics__/graphics/technology/boiler.png",
+    icon = "__DyTech-Storage__/graphics/technology/chest.png",
     effects =
     {
       {
@@ -25,18 +25,17 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"sandbag", 1},
+        {"science-pack-1", 1},
+		{"science-pack-2", 1},
       },
       time = 30
     },
     order = "c-1",
-	upgrade = true,
   },
   {
     type = "technology",
     name = "chest-2",
-    icon = "__DyTech-Graphics__/graphics/technology/boiler.png",
+    icon = "__DyTech-Storage__/graphics/technology/chest.png",
     effects =
     {
       {
@@ -58,8 +57,9 @@ data:extend(
       count = 150,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"sandbag", 1},
+        {"science-pack-1", 1},
+		{"science-pack-2", 1},
+		{"science-pack-3", 1},
       },
       time = 30
     },

@@ -1,0 +1,7 @@
+require("prototypes.entity.chest")
+require("prototypes.entity.collector")
+require("prototypes.item.chest")
+require("prototypes.item.collector")
+require("prototypes.recipe.chest")
+require("prototypes.recipe.collector")
+require("prototypes.technology.chest")
