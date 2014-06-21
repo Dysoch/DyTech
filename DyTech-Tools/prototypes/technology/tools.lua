@@ -40,7 +40,7 @@ data:extend(
       count = 20,
       ingredients =
       {
-        {"science-pack-1", 2},,
+        {"science-pack-1", 2},
       },
       time = 20
     },

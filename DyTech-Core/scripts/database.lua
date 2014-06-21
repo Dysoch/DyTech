@@ -187,7 +187,7 @@ craftitems =
 	["steel-chest-medium"]={plates=32, chest=1},
 	["steel-chest-big"]={plates=72, chest=1},
 	["iron-chest-medium"]={plates=32, chest=1},
-	["iron-chest-big"]={plates=72, chest=1}
+	["iron-chest-big"]={plates=72, chest=1},
 	-- DyTech Tools --
 	["wooden-axe"]={["wood"]=4, mining=1},
 	["stone-axe"]={["wood"]=2, resource=4, mining=1},

@@ -1,6 +1,7 @@
 --Base Edits!
 require("prototypes.base-edit.item")
 require("prototypes.base-edit.recipe")
+require("prototypes.base-edit.tech")
 
 -- Always active!
 require("prototypes.item.tools")
@@ -18,5 +19,5 @@ end
 if data.raw.item["tungsten-ore"] then
 require("prototypes.item.tools-metallurgy")
 require("prototypes.recipe.tools-metallurgy")
-require("prototypes.technology.tools-metallurgy")
+--require("prototypes.technology.tools-metallurgy")
 end
