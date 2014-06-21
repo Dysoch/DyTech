@@ -172,13 +172,22 @@ craftitems =
 	["inserter-veryfast-half-smart"]={inserter=4, ["processing-unit"]=10, ["inserter-long-filter"]=1, plates=15},
 	["dytech-inserter"]={inserter=5, ["iron-gear-wheel"]=10, ["circuit3"]=10, plates=10},
 	["dytech-inserter-fast"]={inserter=6, ["circuit3"]=25, ["steel-gear-wheel"]=25, plates=15},
-	["long-handed-inserter-filter"]={inserter=1, ["iron-gear-wheel"]=1, ["advanced-circuit"]=2, ["basic-inserter"]=1, plates=1}
+	["long-handed-inserter-filter"]={inserter=1, ["iron-gear-wheel"]=1, ["advanced-circuit"]=2, ["basic-inserter"]=1, plates=1},
 	-- DyTech Logistic --
 	-- DyTech Metallurgy --
 	-- DyTech Meteors --
 	-- DyTech Mining --
 	-- DyTech Modules --
 	-- DyTech Storage --
+	["stone-collector-1"]={plates=25, resource=25, chest=1},
+	["sand-collector-1"]={plates=25, resource=25, chest=1},
+	["coal-collector-1"]={plates=25, resource=25, chest=1},
+	["wooden-chest-medium"]={["wood"]=16, chest=1},
+	["wooden-chest-big"]={["wood"]=36, chest=1},
+	["steel-chest-medium"]={plates=32, chest=1},
+	["steel-chest-big"]={plates=72, chest=1},
+	["iron-chest-medium"]={plates=32, chest=1},
+	["iron-chest-big"]={plates=72, chest=1}
 	-- DyTech Tools --
 	-- DyTech Transportation --
 	-- DyTech Warfare --
