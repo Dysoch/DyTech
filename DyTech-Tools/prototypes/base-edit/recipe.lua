@@ -1,0 +1,1 @@
+data.raw["recipe"]["iron-axe"].enabled = false

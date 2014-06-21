@@ -189,6 +189,21 @@ craftitems =
 	["iron-chest-medium"]={plates=32, chest=1},
 	["iron-chest-big"]={plates=72, chest=1}
 	-- DyTech Tools --
+	["wooden-axe"]={["wood"]=4, mining=1},
+	["stone-axe"]={["wood"]=2, resource=4, mining=1},
+	["copper-axe"]={["iron-stick"]=2, plates=3, mining=1},
+	["advanced-steel-axe"]={["iron-stick"]=2, plates=21, mining=1},
+	["ruby-axe"]={["iron-stick"]=2, gems=8, mining=1},
+	["sapphire-axe"]={["iron-stick"]=2, gems=8, mining=1},
+	["emerald-axe"]={["iron-stick"]=2, gems=8, mining=1},
+	["topaz-axe"]={["iron-stick"]=2, gems=8, mining=1},
+	["diamond-axe"]={["iron-stick"]=2, gems=8, mining=1},
+	["brass-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	["bronze-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	["gold-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	["silver-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	["tin-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	["tungsten-axe"]={["iron-stick"]=2, plates=15, mining=1},
 	-- DyTech Transportation --
 	-- DyTech Warfare --
 }
