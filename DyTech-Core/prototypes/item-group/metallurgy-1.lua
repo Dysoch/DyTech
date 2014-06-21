@@ -5,7 +5,7 @@ data:extend(
     name = "metallurgy-1",
     order = "m-1",
 	inventory_order = "m-1",
-    icon = "__DyTech-Graphics__/graphics/item-group/molds.png",
+    icon = "__DyTech-Core__/graphics/item-group/molds.png",
   },
   {
     type = "item-subgroup",

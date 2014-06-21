@@ -5,7 +5,7 @@ data:extend(
     name = "dytechgem",
     order = "d-g",
 	inventory_order = "g",
-    icon = "__DyTech-Graphics__/graphics/item-group/dygem.png",
+    icon = "__DyTech-Core__/graphics/item-group/dygem.png",
   },
   {
     type = "item-subgroup",

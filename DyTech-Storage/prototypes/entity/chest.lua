@@ -12,11 +12,11 @@ data:extend(
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
 	fast_replaceable_group =  "container-medium",
     inventory_size = 40,
-    open_sound = { filename = "__base__/sound/wooden-chest-open.wav" },
-    close_sound = { filename = "__base__/sound/wooden-chest-close.wav" },
+    open_sound = { filename = "__base__/sound/wooden-chest-open.ogg" },
+    close_sound = { filename = "__base__/sound/wooden-chest-close.ogg" },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/wooden-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/wooden-chest-medium.png",
       priority = "extra-high",
       width = 92,
       height = 66,
@@ -42,11 +42,11 @@ data:extend(
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     fast_replaceable_group = "container-medium",
     inventory_size = 80,
-    open_sound = { filename = "__base__/sound/metallic-chest-open.wav", volume=0.65 },
-    close_sound = { filename = "__base__/sound/metallic-chest-close.wav", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/iron-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/iron-chest-medium.png",
       priority = "extra-high",
       width = 96,
       height = 68,
@@ -72,11 +72,11 @@ data:extend(
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     fast_replaceable_group = "container-medium",
     inventory_size = 120,
-    open_sound = { filename = "__base__/sound/metallic-chest-open.wav", volume=0.65 },
-    close_sound = { filename = "__base__/sound/metallic-chest-close.wav", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/steel-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/steel-chest-medium.png",
       priority = "extra-high",
       width = 96,
       height = 68,
@@ -95,11 +95,11 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "container-big",
     inventory_size = 80,
-    open_sound = { filename = "__base__/sound/wooden-chest-open.wav" },
-    close_sound = { filename = "__base__/sound/wooden-chest-close.wav" },
+    open_sound = { filename = "__base__/sound/wooden-chest-open.ogg" },
+    close_sound = { filename = "__base__/sound/wooden-chest-close.ogg" },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/wooden-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/wooden-chest-big.png",
       priority = "extra-high",
       width = 138,
       height = 99,
@@ -125,11 +125,11 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "container-big",
     inventory_size = 160,
-    open_sound = { filename = "__base__/sound/metallic-chest-open.wav", volume=0.65 },
-    close_sound = { filename = "__base__/sound/metallic-chest-close.wav", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/iron-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/iron-chest-big.png",
       priority = "extra-high",
       width = 144,
       height = 102,
@@ -155,11 +155,11 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "container-big",
     inventory_size = 240,
-    open_sound = { filename = "__base__/sound/metallic-chest-open.wav", volume=0.65 },
-    close_sound = { filename = "__base__/sound/metallic-chest-close.wav", volume = 0.7 },
+    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/chest/steel-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/steel-chest-big.png",
       priority = "extra-high",
       width = 144,
       height = 102,

@@ -1,6 +1,5 @@
 -- game mechanics
 require("prototypes.autoplace-controls")
-require("prototypes.tile.noise-layers")
 
 -- base edits --5
 require("prototypes.base-edits.entity")
@@ -10,20 +9,10 @@ require("prototypes.base-edits.recipe")
 require("prototypes.base-edits.tech")
 
 -- categories --3
-require("prototypes.categories.ammo-category")
-require("prototypes.categories.recipe-category")
-require("prototypes.categories.resource-category")
+
 
 -- Item-group --6
-require("prototypes.item-group.dytechbundles")
-require("prototypes.item-group.dytechgem")
-require("prototypes.item-group.dytechintermediates")
-require("prototypes.item-group.dytechmachines")
-require("prototypes.item-group.dytechmodules")
-require("prototypes.item-group.metallurgy-1")
-require("prototypes.item-group.metallurgy-2")
-require("prototypes.item-group.metallurgy-3")
-require("prototypes.item-group.recycler")
+
 
 -- Base Mod!
 -- Entity --21
