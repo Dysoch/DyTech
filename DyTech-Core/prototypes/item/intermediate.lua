@@ -46,5 +46,23 @@ data:extend(
 	place_result = "rubber-seed",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "stone-gear-wheel",
+    icon = "__DyTech-Core__/graphics/icons/stone-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[a]stone",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "steel-gear-wheel",
+    icon = "__DyTech-Core__/graphics/icons/steel-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[c]steel",
+    stack_size = 100
+  },
 }
 )

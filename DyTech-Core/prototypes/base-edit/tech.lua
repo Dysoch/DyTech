@@ -1,0 +1,2 @@
+table.insert(data.raw["technology"]["steel-processing"].effects,{type = "unlock-recipe",recipe = "steel-gear-wheel"})
+table.insert(data.raw["technology"]["automation"].effects,{type = "unlock-recipe",recipe = "iron-gear-wheel"})

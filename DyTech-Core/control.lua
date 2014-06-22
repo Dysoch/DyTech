@@ -47,10 +47,9 @@ game.onload(function()
 	fs.OnLoad()
 	if game.itemprototypes.charcoal and glob.compatibility.treefarm=false then --checks for Treefarm mod and if it has already detected it
 		glob.compatibility.treefarm=true
-		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) and glob.compatibility.treefarm2=false then
+		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then
 			local errorMsg = remote.call("treefarm", "addSeed", allInOne)
 			if errorMsg ~= nil then game.player.print (errorMsg) end
-			glob.compatibility.treefarm2=true
 		end
 	else
 		glob.compatibility.treefarm=false

@@ -17,5 +17,17 @@ require("prototypes.categories.ammo-category")
 require("prototypes.categories.recipe-category")
 require("prototypes.categories.resource-category")
 
+-- Base Edits
+require("prototypes.base-edit.item")
+require("prototypes.base-edit.recipe")
+require("prototypes.base-edit.tech")
+
 -- Entity
 require("prototypes.entity.explosion")
+require("prototypes.entity.nature")
+
+-- Item
+require("prototypes.item.intermediate")
+
+-- Recipe
+require("prototypes.recipe.intermediate")
