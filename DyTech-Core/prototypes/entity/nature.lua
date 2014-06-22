@@ -96,24 +96,10 @@ data:extend(
 	emissions_per_tick = -0.0005,
 	minable =
 	{
-	  count = 1,
+	  count = 3,
 	  mining_particle = "wooden-particle",
 	  mining_time = 1,
-	  results =
-      {
-        {
-          name = "resin",
-          amount_min = 1,
-          amount_max = 5,
-          probability = 0.9
-        },
-        {
-          name = "rubber-seed",
-          amount_min = 0,
-          amount_max = 2,
-          probability = 0.1
-        },
-	  },
+	  result = "resin"
 	},
 	max_health = 50,
 	collision_box = {{-0.7, -0.8}, {0.7, 0.8}},

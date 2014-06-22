@@ -2,8 +2,41 @@ require "defines"
 require "scripts/database"
 require "scripts/functions"
 
+local RubberSeedTypeName = "RubberTree"
+local RubberGrowingStates = {
+	"rubber-seed",
+	"small-rubber-tree",
+	"medium-rubber-tree",
+	"mature-rubber-tree"
+}
+local RubberOutput = {"resin", 3}
+local RubberTileEfficiency = {
+	["grass"] = 1.00,
+	["grass-medium"] = 1.50,
+	["grass-dry"] = 0.75,
+	["dirt"] = 1.25,
+	["dirt-dark"] = 1.25,
+	["hills"] = 0.80,
+	["sand"] = 0.25,
+	["sand-dark"] = 0.25,
+	["other"] = 0
+}
+local RubberBasicGrowingTime = 3600
+local RubberRandomGrowingTime = 1800
+local RubberFertilizerBoost = 1.25
+local allInOne = {
+	["name"] = RubberSeedTypeName,
+	["states"] = RubberGrowingStates,
+	["output"] = RubberOutput,
+	["efficiency"] = RubberTileEfficiency,
+	["basicGrowingTime"] = RubberBasicGrowingTime,
+	["randomGrowingTime"] = RubberRandomGrowingTime,
+	["fertilizerBoost"] = RubberFertilizerBoost
+}
+
 game.oninit(function()
 	fs.OnInit()
+	
 end)
 
 game.onsave(function()
@@ -12,6 +45,16 @@ end)
 
 game.onload(function()
 	fs.OnLoad()
+	if game.itemprototypes.charcoal and glob.compatibility.treefarm=false then --checks for Treefarm mod and if it has already detected it
+		glob.compatibility.treefarm=true
+		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) and glob.compatibility.treefarm2=false then
+			local errorMsg = remote.call("treefarm", "addSeed", allInOne)
+			if errorMsg ~= nil then game.player.print (errorMsg) end
+			glob.compatibility.treefarm2=true
+		end
+	else
+		glob.compatibility.treefarm=false
+	end
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)

@@ -111,6 +111,9 @@ function OnLoad()
 	if not glob.dytech.tools then glob.dytech.tools=false end
 	if not glob.dytech.transportation then glob.dytech.transportation=false end
 	if not glob.dytech.warfare then glob.dytech.warfare=false end
+	if not glob.compatibility then glob.compatibility={treefarm=false, Fmod=false} end
+	if not glob.compatibility.treefarm then glob.compatibility.treefarm=false end
+	if not glob.compatibility.Fmod then glob.compatibility.Fmod=false end
 end
 
 function OnInit()
@@ -118,4 +121,5 @@ glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, ma
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
 glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0}
 glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
+glob.compatibility={treefarm=false, Fmod=false}
 end

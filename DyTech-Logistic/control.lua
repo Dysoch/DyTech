@@ -1,7 +1,7 @@
 require "defines"
 
 game.oninit(function()
-	remote.call("DyTech-Core", "addModule", "inserters")
+	remote.call("DyTech-Core", "addModule", "logistic")
 end)
 
 game.onsave(function()
