@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "technology",
-    name = "tools-06",
+    name = "tools-05",
     icon = "__DyTech-Tools__/graphics/technology/tools.png",
     effects =
     {
@@ -11,7 +11,7 @@ data:extend(
         recipe = "advanced-steel-axe"
       },
     },
-    prerequisites = {"tools-05", "gem-processing"},
+    prerequisites = {"tools-04", "gem-processing"},
     unit =
     {
       count = 200,
@@ -23,7 +23,7 @@ data:extend(
       },
       time = 100
     },
-    order = "tools-06",
+    order = "tools-05",
 	upgrade = true,
   },
 }

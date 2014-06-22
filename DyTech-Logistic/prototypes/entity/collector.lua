@@ -1,54 +1,57 @@
 data:extend(
 {
   {
-    type = "container",
-    name = "stone-collector-1",
-    icon = "__DyTech-Storage__/graphics/icons/stone-collector.png",
+    type = "logistic-container",
+    name = "stone-collector",
+    icon = "__DyTech-Logistic__/graphics/icons/stone-collector.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "stone-collector-1"},
+    minable = {mining_time = 1, result = "stone-collector"},
     max_health = 20,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     inventory_size = 25,
+	logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/collector/stone-collector.png",
+      filename = "__DyTech-Logistic__/graphics/entity/collector/stone-collector.png",
       priority = "extra-high",
       width = 32,
       height = 32
     }
   },
   --[[{
-    type = "container",
-    name = "sand-collector-1",
-    icon = "__DyTech-Storage__/graphics/icons/sand-collector.png",
+    type = "logistic-container",
+    name = "sand-collector",
+    icon = "__DyTech-Logistic__/graphics/icons/sand-collector.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "sand-collector-1"},
+    minable = {mining_time = 1, result = "sand-collector"},
     max_health = 20,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     inventory_size = 25,
+	logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/collector/sand-collector.png",
+      filename = "__DyTech-Logistic__/graphics/entity/collector/sand-collector.png",
       priority = "extra-high",
       width = 32,
       height = 32
     }
   },]]--
   {
-    type = "container",
-    name = "coal-collector-1",
-    icon = "__DyTech-Storage__/graphics/icons/coal-collector.png",
+    type = "logistic-container",
+    name = "coal-collector",
+    icon = "__DyTech-Logistic__/graphics/icons/coal-collector.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "coal-collector-1"},
+    minable = {mining_time = 1, result = "coal-collector"},
     max_health = 20,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     inventory_size = 25,
+	logistic_mode = "provider",
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/collector/coal-collector.png",
+      filename = "__DyTech-Logistic__/graphics/entity/collector/coal-collector.png",
       priority = "extra-high",
       width = 32,
       height = 32

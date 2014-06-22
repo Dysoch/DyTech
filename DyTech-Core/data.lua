@@ -16,3 +16,6 @@ require("prototypes.tile.noise-layers")
 require("prototypes.categories.ammo-category")
 require("prototypes.categories.recipe-category")
 require("prototypes.categories.resource-category")
+
+-- Entity
+require("prototypes.entity.explosion")

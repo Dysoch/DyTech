@@ -8,7 +8,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "wooden-axe"
+        recipe = "stone-axe"
       },
     },
     unit =
@@ -31,7 +31,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "stone-axe"
+        recipe = "copper-axe"
       },
     },
     prerequisites = {"tools-01"},
@@ -55,7 +55,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "copper-axe"
+        recipe = "iron-axe"
       },
     },
     prerequisites = {"tools-02"},
@@ -80,35 +80,10 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "iron-axe"
-      },
-    },
-    prerequisites = {"tools-03"},
-    unit =
-    {
-      count = 40,
-      ingredients =
-      {
-        {"science-pack-1", 2},
-		{"science-pack-2", 1},
-      },
-      time = 40
-    },
-    order = "tools-04",
-	upgrade = true,
-  },
-  {
-    type = "technology",
-    name = "tools-05",
-    icon = "__DyTech-Tools__/graphics/technology/tools.png",
-    effects =
-    {
-      {
-        type = "unlock-recipe",
         recipe = "advanced-steel-axe"
       },
     },
-    prerequisites = {"tools-04", "steel-processing"},
+    prerequisites = {"tools-03", "steel-processing"},
     unit =
     {
       count = 100,
@@ -120,7 +95,7 @@ data:extend(
       },
       time = 50
     },
-    order = "tools-05",
+    order = "tools-04",
 	upgrade = true,
   },
 }
