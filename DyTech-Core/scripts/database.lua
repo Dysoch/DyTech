@@ -147,6 +147,11 @@ craftitems =
 	["chemical-plant"]={plates=5, ["pipe"]=5, ["iron-gear-wheel"]=5, ["electronic-circuit"]=5, machine=1},
 	["small-plane"]={["plastic-bar"]=120, ["advanced-circuit"]=250, ["electric-engine-unit"]=20, ["battery"]=150},
 	-- DyTech Core --
+	["advanced-processing-unit"]={["processing-unit"]=5, ["bundled-wire"]=5, plates=2, tech=1},
+	["bundled-wire"]={["red-wire"]=1, ["green-wire"]=1, ["copper-cable"]=1, resource=2},
+	["rubber-seed"]={resource=1},
+	["stone-gear-wheel"]={resource=1, gear=1},
+	["steel-gear-wheel"]={plates=1, gear=1},
 	-- DyTech Compatibility --
 	-- DyTech Dynamic --
 	-- DyTech Energy --
@@ -174,6 +179,25 @@ craftitems =
 	["dytech-inserter-fast"]={inserter=6, ["circuit3"]=25, ["steel-gear-wheel"]=25, plates=15},
 	["long-handed-inserter-filter"]={inserter=1, ["iron-gear-wheel"]=1, ["advanced-circuit"]=2, ["basic-inserter"]=1, plates=1},
 	-- DyTech Logistic --
+	["logistic-robot-1"]={["processing-unit"]=5, ["logistic-robot"]=1, robot=1},
+	["logistic-robot-2"]={["advanced-processing-unit"]=5, ["logistic-robot-1"]=1, robot=1},
+	["logistic-chest-passive-provider-1"]={["processing-unit"]=5, ["logistic-chest-passive-provider"]=1, robot=1},
+	["logistic-chest-passive-provider-2"]={["advanced-processing-unit"]=5, ["logistic-chest-passive-provider-1"]=1, robot=1},
+	["logistic-chest-active-provider-1"]={["processing-unit"]=5, ["logistic-chest-active-provider"]=1, robot=1},
+	["logistic-chest-active-provider-2"]={["advanced-processing-unit"]=5, ["logistic-chest-active-provider-1"]=1, robot=1},
+	["logistic-chest-storage-1"]={["processing-unit"]=5, ["logistic-chest-storage"]=1, robot=1},
+	["logistic-chest-storage-2"]={["advanced-processing-unit"]=5, ["logistic-chest-storage-1"]=1, robot=1},
+	["logistic-chest-requester-1"]={["processing-unit"]=5, ["logistic-chest-requester"]=1, robot=1},
+	["logistic-chest-requester-2"]={["advanced-processing-unit"]=5, ["logistic-chest-requester-1"]=1, robot=1},
+	["roboport-1"]={plates=90, ["steel-gear-wheel"]=45, ["processing-unit"]=45, machine=1},
+	["roboport-2"]={plates=180, ["steel-gear-wheel"]=90, ["advanced-processing-unit"]=45, machine=1},
+	["construction-robot-1"]={["advanced-processing-unit"]=5, [""]=1, robot=1},
+	["construction-robot-2"]={["advanced-processing-unit"]=5, [""]=1, robot=1},
+	["repair-pack-0"]={plates=1, ["wood"]=1},
+	["repair-pack-2"]={["processing-unit"]=1, ["iron-gear-wheel"]=1},
+	["stone-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
+	["sand-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
+	["coal-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
 	-- DyTech Metallurgy --
 	-- DyTech Meteors --
 	-- DyTech Mining --

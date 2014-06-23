@@ -84,6 +84,11 @@ game.onevent(defines.events.onplayermineditem, function(event)
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
 		end
 	end
+	if event.itemstack.name == "raw-wood" then
+		if math.random(100) == 50 then
+			game.player.insert{name="resin",count=math.random(0,4)}
+		end
+	end
 end)
 
 game.onevent(defines.events.onentitydied, function(event)

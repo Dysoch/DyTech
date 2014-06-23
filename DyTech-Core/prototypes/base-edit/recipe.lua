@@ -3,10 +3,10 @@ for k, v in pairs(data.raw["recipe"]["steam-engine"].ingredients) do
 	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["steam-engine"].ingredients, k) end
 end
 table.insert(data.raw["recipe"]["steam-engine"].ingredients,{"stone-gear-wheel", 5})
-for k, v in pairs(data.raw["recipe"]["basic-mining-drill"].ingredients) do
-	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["basic-mining-drill"].ingredients, k) end
+for k, v in pairs(data.raw["recipe"]["burner-mining-drill"].ingredients) do
+	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["burner-mining-drill"].ingredients, k) end
 end
-table.insert(data.raw["recipe"]["basic-mining-drill"].ingredients,{"stone-gear-wheel", 5})
+table.insert(data.raw["recipe"]["burner-mining-drill"].ingredients,{"stone-gear-wheel", 3})
 for k, v in pairs(data.raw["recipe"]["burner-inserter"].ingredients) do
 	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["burner-inserter"].ingredients, k) end
 end
