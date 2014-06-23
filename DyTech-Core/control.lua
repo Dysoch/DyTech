@@ -53,6 +53,12 @@ game.onload(function()
 		end
 	else
 		glob.compatibility.treefarm=false
+		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
+			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
+				glob.trees.isGrowing[seedTypeName] = nil
+				glob.trees.seedTypes[seedTypeName] = nil
+			end
+		end
 	end
 end)
 
@@ -100,20 +106,24 @@ end)
 game.onevent(defines.events.ontick, function(event)
 	if game.tick%60==1 then
 		glob.counter.dytech=0
+		glob.combat.dytech=0
+		glob.counter2.dytech=0
 		for _, counter in pairs(glob.counter) do 
 			if (counter~=glob.counter.dytech) then glob.counter.dytech=glob.counter.dytech+counter end
 		end
-	end
-	if game.tick%60==1 then
-		glob.counter2.dytech=0
 		for _, counter in pairs(glob.counter2) do 
 			if (counter~=glob.counter2.dytech) then glob.counter2.dytech=glob.counter2.dytech+counter end
 		end
-	end
-	if game.tick%60==1 then
-		glob.combat.dytech=0
 		for _, counter in pairs(glob.combat) do 
 			if (counter~=glob.combat.dytech) then glob.combat.dytech=glob.combat.dytech+counter end
+		end
+	end
+	if glob.compatibility.treefarm=false then
+		for seedTypeName, seedType in pairs(glob.trees.isGrowing) do
+			if (seedType[1] ~= nil) and (game.tick >= seedType[1].nextUpdate)then
+				local removedEntity = table.remove(seedType, 1)
+				fs.updateEntityState(removedEntity)
+			end
 		end
 	end
 end)
@@ -123,6 +133,14 @@ game.onevent(defines.events.onbuiltentity, function(event)
 	if database.meteor[event.createdentity.name] then
 		for counter, ingredients in pairs(database.meteor[event.createdentity.name]) do 
 			glob.meteor[counter]=glob.meteor[counter] + ingredients
+		end
+	elseif glob.compatibility.treefarm=false then
+		if event.createdentity.type == "tree" then
+			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
+			if currentSeedTypeName ~= nil then
+				fs.seedPlaced(event.createdentity, currentSeedTypeName)
+				return
+			end
 		end
 	end
 end)
