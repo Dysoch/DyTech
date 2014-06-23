@@ -131,6 +131,21 @@ game.onevent(defines.events.ontick, function(event)
 			end
 		end
 	end
+	--[[Stone Collector]]--
+    if glob.stone~=nil and event.tick%12==0 then
+		fs.CollectByPosition("stone", 1.5, false)
+		fs.CollectByPosition("stone", 1.5, true)
+	end
+	--[[Sand Collector]]--
+--	if glob.sand~=nil and event.tick%12==0 then
+--		fs.CollectByPosition("sand", 1.5, false)
+--		fs.CollectByPosition("sand", 1.5, true)
+--	end
+	--[[Coal Collector]]--
+	if glob.coal~=nil and event.tick%12==0 then
+		fs.CollectByPosition("coal", 1.5, false)
+		fs.CollectByPosition("coal", 1.5, true)
+	end
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
@@ -147,6 +162,33 @@ game.onevent(defines.events.onbuiltentity, function(event)
 				return
 			end
 		end
+	--[[Stone Collector Build]]--
+	elseif event.createdentity.name == "stone-collector-1" or event.createdentity.name == "stone-collector" then				
+		if glob.stone==nil then
+			glob.stone={}
+			glob.stonecount=0
+		end
+		glob.stonecount=glob.stonecount+1
+		glob.stone[glob.stonecount]={}
+		glob.stone[glob.stonecount].position=event.createdentity.position
+	--[[Sand Collector Build]]--
+--	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
+--		if glob.sand==nil then
+--			glob.sand={}
+--			glob.sandcount=0
+--		end
+--		glob.sandcount=glob.sandcount+1
+--		glob.sand[glob.sandcount]={}
+--		glob.sand[glob.sandcount].position=event.createdentity.position
+	--[[Coal Collector Build]]--
+	elseif event.createdentity.name == "coal-collector-1" or event.createdentity.name == "coal-collector" then				
+		if glob.coal==nil then
+			glob.coal={}
+			glob.coalcount=0
+		end
+		glob.coalcount=glob.coalcount+1
+		glob.coal[glob.coalcount]={}
+		glob.coal[glob.coalcount].position=event.createdentity.position
 	end
 end)
 

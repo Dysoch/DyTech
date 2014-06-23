@@ -121,6 +121,12 @@ glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, ma
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
 glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0}
 glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
+glob.stone={}
+glob.stonecount=0
+--glob.sand={}
+--glob.sandcount=0
+glob.coal={}
+glob.coalcount=0
 glob.compatibility={treefarm=false, Fmod=false}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
@@ -231,4 +237,28 @@ function seedPlaced(placedSeed, seedTypeName)
 		nextUpdate = nextUpdateIn
 	}
 	placeSeedIntoList(entInfo, seedTypeName)
+end
+
+function getboundingbox(position, radius)
+return {position.x-radius, position.y-radius}, {position.x+radius,position.y+radius} end
+
+function CollectByPosition(name, radius, ext)
+	local realname=name.."-collector"
+	if ext then realname=realname.."-1" end
+	for i, value in pairs(glob[name]) do
+    local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
+		if not foundcollector[1] then
+		table.remove(glob[name], i)
+		break
+		else
+			for _, item in pairs(game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}) do
+				if item.stack.name==name and foundcollector[1].caninsert{name=name, count=1} then
+					foundcollector[1].insert{name=name, count=1}
+					game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
+					item.destroy()
+				break
+				end
+			end
+		end
+	end
 end
