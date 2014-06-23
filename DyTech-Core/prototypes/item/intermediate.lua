@@ -43,6 +43,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw-material",
     order = "rubber-seed",
+    place_result = "rubber-seed",
     stack_size = 50
   },
   {

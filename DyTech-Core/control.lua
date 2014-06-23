@@ -45,7 +45,7 @@ end)
 
 game.onload(function()
 	fs.OnLoad()
-	if game.itemprototypes.charcoal and glob.compatibility.treefarm=false then --checks for Treefarm mod and if it has already detected it
+	if game.itemprototypes.charcoal and glob.compatibility.treefarm == false then --checks for Treefarm mod and if it has already detected it
 		glob.compatibility.treefarm=true
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then
 			local errorMsg = remote.call("treefarm", "addSeed", allInOne)
@@ -118,7 +118,7 @@ game.onevent(defines.events.ontick, function(event)
 			if (counter~=glob.combat.dytech) then glob.combat.dytech=glob.combat.dytech+counter end
 		end
 	end
-	if glob.compatibility.treefarm=false then
+	if glob.compatibility.treefarm == false then
 		for seedTypeName, seedType in pairs(glob.trees.isGrowing) do
 			if (seedType[1] ~= nil) and (game.tick >= seedType[1].nextUpdate)then
 				local removedEntity = table.remove(seedType, 1)
@@ -134,7 +134,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		for counter, ingredients in pairs(database.meteor[event.createdentity.name]) do 
 			glob.meteor[counter]=glob.meteor[counter] + ingredients
 		end
-	elseif glob.compatibility.treefarm=false then
+	elseif glob.compatibility.treefarm == false then
 		if event.createdentity.type == "tree" then
 			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
 			if currentSeedTypeName ~= nil then

@@ -123,12 +123,6 @@ glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chu
 glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
 glob.compatibility={treefarm=false, Fmod=false}
 glob.trees = {}
-for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
-	if game.itemprototypes[seedTypeInfo.states[1]] == nil then
-		glob.trees.isGrowing[seedTypeName] = nil
-		glob.trees.seedTypes[seedTypeName] = nil
-	end
-end
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {
 	states = {
@@ -152,6 +146,12 @@ glob.trees.seedTypes.RubberTree = {
 	fertilizerBoost = 1.25 }
 glob.trees.isGrowing = {RubberTree = {}}
 glob.trees.tmpData = {}
+for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
+	if game.itemprototypes[seedTypeInfo.states[1]] == nil then
+		glob.trees.isGrowing[seedTypeName] = nil
+		glob.trees.seedTypes[seedTypeName] = nil
+	end
+end
 end
 
 function updateEntityState(entInfo)
