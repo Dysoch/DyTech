@@ -229,6 +229,18 @@ craftitems =
 	["tin-axe"]={["iron-stick"]=2, plates=15, mining=1},
 	["tungsten-axe"]={["iron-stick"]=2, plates=15, mining=1},
 	-- DyTech Transportation --
+	["super-transport-belt"]={["steel-gear-wheel"]=2, ["express-transport-belt"]=1, belt=1},
+	["super-transport-belt-to-ground"]={plates=20, belt=1, ["super-transport-belt"]=6},
+	["super-splitter"]={["advanced-processing-unit"]=4, ["steel-gear-wheel"]=10, ["super-transport-belt"]=2, belt=1},
+	["extreme-transport-belt"]={["advanced-processing-unit"]=1, ["steel-gear-wheel"]=5, ["super-transport-belt"]=1, belt=1},
+	["extreme-transport-belt-to-ground"]={["extreme-transport-belt"]=6, plates=40, belt=1},
+	["extreme-splitter"]={["advanced-processing-unit"]=10, ["steel-gear-wheel"]=20, ["extreme-transport-belt"]=2, belt=1},
+	["car2"]={plates=75, tech=1, ["advanced-processing-unit"]=2, ["iron-stick"]=12},
+	["diesel-locomotive-armor"]={["steel-gear-wheel"]=20, plates=45, tech=1, ["advanced-circuit"]=5},
+	["diesel-locomotive-fast"]={["steel-gear-wheel"]=10, ["advanced-processing-unit"]=5, plates=20, tech=1},
+	["cargo-wagon-armor"]={["steel-gear-wheel"]=10, resource=20, plates=20, tech=1},
+	["cargo-wagon-fast"]={["steel-gear-wheel"]=10, plates=20, resource=5, tech=1},
+	["cargo-wagon-large"]={plates=20, tech=1, resource=5, ["steel-gear-wheel"]=10},
 	-- DyTech Warfare --
 }
 

@@ -114,6 +114,36 @@ function OnLoad()
 	if not glob.compatibility then glob.compatibility={treefarm=false, Fmod=false} end
 	if not glob.compatibility.treefarm then glob.compatibility.treefarm=false end
 	if not glob.compatibility.Fmod then glob.compatibility.Fmod=false end
+	if not glob.stone then glob.stone={} end
+	if not glob.stonecount then glob.stonecount=0 end
+--	if not glob.sand then glob.sand={} end
+--	if not glob.sandcount then glob.sandcount=0 end
+	if not glob.coal then glob.coal={} end
+	if not glob.coalcount then glob.coalcount=0 end
+	if not glob.trees then glob.trees = {} end
+	if not glob.trees.seedTypes then glob.trees.seedTypes = {RubberTree = {}} end
+	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes.RubberTree = {
+	states = {
+		"rubber-seed",
+		"small-rubber-tree",
+		"medium-rubber-tree",
+		"mature-rubber-tree" },
+	output = {"resin", 3},
+	efficiency = {
+		["grass"] = 1.00,
+		["grass-medium"] = 1.50,
+		["grass-dry"] = 0.75,
+		["dirt"] = 1.25,
+		["dirt-dark"] = 1.25,
+		["hills"] = 0.80,
+		["sand"] = 0.25,
+		["sand-dark"] = 0.25,
+		["other"] = 0 },
+	basicGrowingTime = 3600,
+	randomGrowingTime = 1800,
+	fertilizerBoost = 1.25 } end
+	if not glob.trees.isGrowing then glob.trees.isGrowing = {RubberTree = {}} end
+	if not glob.trees.tmpData then glob.trees.tmpData = {} end
 end
 
 function OnInit()

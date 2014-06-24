@@ -1,0 +1,8 @@
+require("prototypes.entity.transport")
+require("prototypes.entity.transport-belt")
+require("prototypes.item.transport")
+require("prototypes.item.transport-belt")
+require("prototypes.recipe.transport")
+require("prototypes.recipe.transport-belt")
+require("prototypes.technology.transport")
+require("prototypes.technology.transport-belt")
