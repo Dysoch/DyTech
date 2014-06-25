@@ -121,27 +121,27 @@ function OnLoad()
 	if not glob.coal then glob.coal={} end
 	if not glob.coalcount then glob.coalcount=0 end
 	if not glob.trees then glob.trees = {} end
-	if not glob.trees.seedTypes then glob.trees.seedTypes = {RubberTree = {}} end
-	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes.RubberTree = {
-	states = {
-		"rubber-seed",
-		"small-rubber-tree",
-		"medium-rubber-tree",
-		"mature-rubber-tree" },
-	output = {"resin", 3},
-	efficiency = {
-		["grass"] = 1.00,
-		["grass-medium"] = 1.50,
-		["grass-dry"] = 0.75,
-		["dirt"] = 1.25,
-		["dirt-dark"] = 1.25,
-		["hills"] = 0.80,
-		["sand"] = 0.25,
-		["sand-dark"] = 0.25,
-		["other"] = 0 },
-	basicGrowingTime = 3600,
-	randomGrowingTime = 1800,
-	fertilizerBoost = 1.25 } end
+	if not glob.trees.seedTypes then glob.trees.seedTypes = {} end
+	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes = {RubberTree = {
+		states = {
+			"rubber-seed",
+			"small-rubber-tree",
+			"medium-rubber-tree",
+			"mature-rubber-tree" },
+		output = {"resin", 3},
+		efficiency = {
+			["grass"] = 1.00,
+			["grass-medium"] = 1.50,
+			["grass-dry"] = 0.75,
+			["dirt"] = 1.25,
+			["dirt-dark"] = 1.25,
+			["hills"] = 0.80,
+			["sand"] = 0.25,
+			["sand-dark"] = 0.25,
+			["other"] = 0 },
+		basicGrowingTime = 3600,
+		randomGrowingTime = 1800,
+		fertilizerBoost = 1.25 }} end
 	if not glob.trees.isGrowing then glob.trees.isGrowing = {RubberTree = {}} end
 	if not glob.trees.tmpData then glob.trees.tmpData = {} end
 end
