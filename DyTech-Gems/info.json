@@ -1,9 +1,0 @@
-{
-	"name":"DyTech-Gems",
-	"author":"Dysoch",
-	"version":"1.0.0",
-	"title":"DyTech-Gems",
-	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
-	"description":"The DyTech Module for the Gems",
-	"dependencies": ["DyTech-Core >= 0.5.0"]
-}

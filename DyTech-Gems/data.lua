@@ -1,1 +1,0 @@
-require("prototypes.entity.collector")

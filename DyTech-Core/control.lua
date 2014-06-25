@@ -222,7 +222,6 @@ remote.addinterface("DyTech-Core",
 			game.player.print("DyTech-Compatibility".." "..tostring(glob.dytech.compatibility))
 			game.player.print("DyTech-Dynamic:".." "..tostring(glob.dytech.dynamic))
 			game.player.print("DyTech-Energy:".." "..tostring(glob.dytech.energy))
-			game.player.print("DyTech-Gems:".." "..tostring(glob.dytech.gems))
 			game.player.print("DyTech-Inserters:".." "..tostring(glob.dytech.inserters))
 			game.player.print("DyTech-Logistic:".." "..tostring(glob.dytech.logistic))
 			game.player.print("DyTech-Metallurgy:".." "..tostring(glob.dytech.metallurgy))

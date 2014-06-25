@@ -95,12 +95,11 @@ function OnLoad()
 	if not glob.counter2.died then glob.counter2.died=0 end
 	if not glob.counter2.pickup then glob.counter2.pickup=0 end
 	if not glob.counter2.chunks then glob.counter2.chunks=0 end
-	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
+	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
 	if not glob.dytech.core then glob.dytech.core=true end
 	if not glob.dytech.compatibility then glob.dytech.compatibility=false end
 	if not glob.dytech.dynamic then glob.dytech.dynamic=false end
 	if not glob.dytech.energy then glob.dytech.energy=false end
-	if not glob.dytech.gems then glob.dytech.gems=false end
 	if not glob.dytech.inserters then glob.dytech.inserters=false end
 	if not glob.dytech.logistic then glob.dytech.logistics=false end
 	if not glob.dytech.metallurgy then glob.dytech.metallurgy=false end
@@ -150,7 +149,7 @@ function OnInit()
 glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, sectorscanned=0}
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
 glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0}
-glob.dytech={core=true, dynamic=false, energy=false, gems=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
+glob.dytech={core=true, dynamic=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
 glob.stone={}
 glob.stonecount=0
 --glob.sand={}
