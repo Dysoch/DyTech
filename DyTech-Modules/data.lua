@@ -1,0 +1,5 @@
+require("prototypes.base-edit.item")
+require("prototypes.base-edit.recipe")
+require("prototypes.item.module")
+require("prototypes.recipe.module")
+require("prototypes.technology.module")
