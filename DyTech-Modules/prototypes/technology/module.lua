@@ -8,14 +8,13 @@ data:extend(
     {
 	
     },
-    prerequisites = {"modules", "dytech-1"},
+    prerequisites = {"modules"},
     unit =
     {
       count = 10,
       ingredients = 
 	  {
-        {"iron-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
       },
       time = 30
     },
@@ -25,7 +24,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-1",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -39,8 +38,7 @@ data:extend(
       count = 50,
       ingredients = 
 	  {
-        {"iron-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 2},
       },
       time = 30
     },
@@ -49,7 +47,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-2",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -63,9 +61,8 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"copper-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 2},
+        {"science-pack-2", 1},
       },
       time = 30
     },
@@ -75,7 +72,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-3",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -89,10 +86,8 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"copper-plate-1", 1},
-		{"steel-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
       },
       time = 60
     },
@@ -102,7 +97,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-4",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -116,10 +111,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 2},
-		{"copper-plate-1", 2},
-		{"steel-plate-1", 2},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },
@@ -129,7 +123,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-5",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -143,10 +137,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 4},
-		{"copper-plate-1", 4},
-		{"steel-plate-1", 4},
-		{"sandbag", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 3},
+        {"science-pack-3", 2},
       },
       time = 60
     },
@@ -156,7 +149,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-6",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -170,10 +163,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 8},
-		{"copper-plate-1", 8},
-		{"steel-plate-1", 8},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
+        {"science-pack-2", 4},
+        {"science-pack-3", 3},
       },
       time = 60
     },
@@ -183,7 +175,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-7",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -197,10 +189,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 16},
-		{"copper-plate-1", 16},
-		{"steel-plate-1", 16},
-		{"sandbag", 2},
+        {"science-pack-1", 6},
+        {"science-pack-2", 5},
+        {"science-pack-3", 4},
+        {"alien-science-pack", 2},
       },
       time = 60
     },
@@ -210,7 +202,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-8",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-clean-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-clean-module.png",
     effects =
     {
       {
@@ -224,10 +216,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 32},
-		{"copper-plate-1", 32},
-		{"steel-plate-1", 32},
-		{"sandbag", 2},
+        {"science-pack-1", 8},
+        {"science-pack-2", 7},
+        {"science-pack-3", 6},
+        {"alien-science-pack", 5},
       },
       time = 60
     },
@@ -238,7 +230,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-1",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -252,8 +244,7 @@ data:extend(
       count = 50,
       ingredients = 
 	  {
-        {"iron-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 2},
       },
       time = 30
     },
@@ -262,7 +253,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-2",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -276,9 +267,8 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"copper-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 2},
+        {"science-pack-2", 1},
       },
       time = 30
     },
@@ -288,7 +278,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-3",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -302,10 +292,8 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 1},
-		{"copper-plate-1", 1},
-		{"steel-plate-1", 1},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
       },
       time = 60
     },
@@ -315,7 +303,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-4",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -329,10 +317,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 2},
-		{"copper-plate-1", 2},
-		{"steel-plate-1", 2},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },
@@ -342,7 +329,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-5",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -356,10 +343,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 4},
-		{"copper-plate-1", 4},
-		{"steel-plate-1", 4},
-		{"sandbag", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 3},
+        {"science-pack-3", 2},
       },
       time = 60
     },
@@ -369,7 +355,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-6",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -383,10 +369,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 8},
-		{"copper-plate-1", 8},
-		{"steel-plate-1", 8},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
+        {"science-pack-2", 4},
+        {"science-pack-3", 3},
       },
       time = 60
     },
@@ -396,7 +381,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-7",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -410,10 +395,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 16},
-		{"copper-plate-1", 16},
-		{"steel-plate-1", 16},
-		{"sandbag", 2},
+        {"science-pack-1", 6},
+        {"science-pack-2", 5},
+        {"science-pack-3", 4},
+        {"alien-science-pack", 2},
       },
       time = 60
     },
@@ -423,7 +408,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-8",
-    icon = "__DyTech-Graphics__/graphics/technology/pollution-create-module.png",
+    icon = "__DyTech-Modules__/graphics/technology/pollution-create-module.png",
     effects =
     {
       {
@@ -437,10 +422,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 32},
-		{"copper-plate-1", 32},
-		{"steel-plate-1", 32},
-		{"sandbag", 2},
+        {"science-pack-1", 8},
+        {"science-pack-2", 7},
+        {"science-pack-3", 6},
+        {"alien-science-pack", 5},
       },
       time = 60
     },
@@ -465,10 +450,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 2},
-		{"copper-plate-1", 2},
-		{"steel-plate-1", 2},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },
@@ -492,10 +476,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 4},
-		{"copper-plate-1", 4},
-		{"steel-plate-1", 4},
-		{"sandbag", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 3},
+        {"science-pack-3", 2},
       },
       time = 60
     },
@@ -519,10 +502,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 8},
-		{"copper-plate-1", 8},
-		{"steel-plate-1", 8},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
+        {"science-pack-2", 4},
+        {"science-pack-3", 3},
       },
       time = 60
     },
@@ -546,10 +528,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 16},
-		{"copper-plate-1", 16},
-		{"steel-plate-1", 16},
-		{"sandbag", 2},
+        {"science-pack-1", 6},
+        {"science-pack-2", 5},
+        {"science-pack-3", 4},
+        {"alien-science-pack", 2},
       },
       time = 60
     },
@@ -573,10 +555,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 32},
-		{"copper-plate-1", 32},
-		{"steel-plate-1", 32},
-		{"sandbag", 2},
+        {"science-pack-1", 8},
+        {"science-pack-2", 7},
+        {"science-pack-3", 6},
+        {"alien-science-pack", 5},
       },
       time = 60
     },
@@ -601,10 +583,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 2},
-		{"copper-plate-1", 2},
-		{"steel-plate-1", 2},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },
@@ -628,10 +609,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 4},
-		{"copper-plate-1", 4},
-		{"steel-plate-1", 4},
-		{"sandbag", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 3},
+        {"science-pack-3", 2},
       },
       time = 60
     },
@@ -655,10 +635,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 8},
-		{"copper-plate-1", 8},
-		{"steel-plate-1", 8},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
+        {"science-pack-2", 4},
+        {"science-pack-3", 3},
       },
       time = 60
     },
@@ -682,10 +661,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 16},
-		{"copper-plate-1", 16},
-		{"steel-plate-1", 16},
-		{"sandbag", 2},
+        {"science-pack-1", 6},
+        {"science-pack-2", 5},
+        {"science-pack-3", 4},
+        {"alien-science-pack", 2},
       },
       time = 60
     },
@@ -709,10 +688,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 32},
-		{"copper-plate-1", 32},
-		{"steel-plate-1", 32},
-		{"sandbag", 2},
+        {"science-pack-1", 8},
+        {"science-pack-2", 7},
+        {"science-pack-3", 6},
+        {"alien-science-pack", 5},
       },
       time = 60
     },
@@ -737,10 +716,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 2},
-		{"copper-plate-1", 2},
-		{"steel-plate-1", 2},
-		{"sandbag", 2},
+        {"science-pack-1", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },
@@ -764,10 +742,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 4},
-		{"copper-plate-1", 4},
-		{"steel-plate-1", 4},
-		{"sandbag", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 3},
+        {"science-pack-3", 2},
       },
       time = 60
     },
@@ -791,10 +768,9 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 8},
-		{"copper-plate-1", 8},
-		{"steel-plate-1", 8},
-		{"sandbag", 2},
+        {"science-pack-1", 5},
+        {"science-pack-2", 4},
+        {"science-pack-3", 3},
       },
       time = 60
     },
@@ -818,10 +794,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 16},
-		{"copper-plate-1", 16},
-		{"steel-plate-1", 16},
-		{"sandbag", 2},
+        {"science-pack-1", 6},
+        {"science-pack-2", 5},
+        {"science-pack-3", 4},
+        {"alien-science-pack", 2},
       },
       time = 60
     },
@@ -845,10 +821,10 @@ data:extend(
       count = 50,
       ingredients =
       {
-        {"iron-plate-1", 32},
-		{"copper-plate-1", 32},
-		{"steel-plate-1", 32},
-		{"sandbag", 2},
+        {"science-pack-1", 8},
+        {"science-pack-2", 7},
+        {"science-pack-3", 6},
+        {"alien-science-pack", 5},
       },
       time = 60
     },

@@ -1,7 +1,7 @@
 require "defines"
 
 game.oninit(function()
-	
+	remote.call("DyTech-Core", "addModule", "modules")
 end)
 
 game.onsave(function()
@@ -13,9 +13,10 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.dytech.modules=false then glob.dytech.modules=true end
+	
 end)
 
 remote.addinterface("DyTech-Modules",
+{
 
 })

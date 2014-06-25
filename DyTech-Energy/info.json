@@ -5,5 +5,5 @@
 	"title":"DyTech-Energy",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Energy",
-	"dependencies": ["base >= 0.9.8", "DyTech-Core >= 1.0.0"]
+	"dependencies": ["DyTech-Core >= 0.5.0"]
 }

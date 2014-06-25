@@ -50,7 +50,6 @@ data:extend(
     {
       {"pollution-clean-module-3", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -64,9 +63,7 @@ data:extend(
     {
       {"pollution-clean-module-4", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
-      {"advanced-circuit", 5},
-	  {"ruby-5", 1},
+      {"processing-unit", 5},
     },
     energy_required = 80,
     result = "pollution-clean-module-5"
@@ -78,10 +75,7 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-5", 1},
-	  {"electrum-alloy", 5},
-	  {"brass-alloy", 5},
-      {"circuit3", 5},
-	  {"emerald-5", 5},
+      {"processing-unit", 5},
     },
     energy_required = 160,
     result = "pollution-clean-module-6"
@@ -93,10 +87,8 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-6", 1},
-	  {"electrum-alloy", 5},
-	  {"tungsten-plate", 5},
-      {"circuit3", 5},
-	  {"topaz-5", 5},
+      {"processing-unit", 5},
+      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "pollution-clean-module-7"
@@ -108,9 +100,7 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-7", 1},
-	  {"tungsten-plate", 25},
-      {"circuit3", 50},
-	  {"diamond-5", 10},
+      {"advanced-processing-unit", 25},
     },
     energy_required = 640,
     result = "pollution-clean-module-8"
@@ -165,7 +155,6 @@ data:extend(
     {
       {"pollution-create-module-3", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -179,9 +168,7 @@ data:extend(
     {
       {"pollution-create-module-4", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
-      {"advanced-circuit", 5},
-	  {"ruby-5", 1},
+      {"processing-unit", 5},
     },
     energy_required = 80,
     result = "pollution-create-module-5"
@@ -193,10 +180,7 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-5", 1},
-	  {"electrum-alloy", 5},
-	  {"brass-alloy", 5},
-      {"circuit3", 5},
-	  {"emerald-5", 5},
+      {"processing-unit", 5},
     },
     energy_required = 160,
     result = "pollution-create-module-6"
@@ -208,10 +192,8 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-6", 1},
-	  {"electrum-alloy", 5},
-	  {"tungsten-plate", 5},
-      {"circuit3", 5},
-	  {"topaz-5", 5},
+      {"processing-unit", 5},
+      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "pollution-create-module-7"
@@ -223,9 +205,7 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-7", 1},
-	  {"tungsten-plate", 25},
-      {"circuit3", 50},
-	  {"diamond-5", 10},
+      {"advanced-processing-unit", 25},
     },
     energy_required = 640,
     result = "pollution-create-module-8"
@@ -239,7 +219,6 @@ data:extend(
     {
       {"speed-module-3", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -253,9 +232,7 @@ data:extend(
     {
       {"speed-module-4", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
-      {"advanced-circuit", 5},
-	  {"ruby-5", 1},
+      {"processing-unit", 5},
     },
     energy_required = 80,
     result = "speed-module-5"
@@ -267,10 +244,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-5", 1},
-	  {"electrum-alloy", 5},
-	  {"brass-alloy", 5},
-      {"circuit3", 5},
-	  {"emerald-5", 5},
+      {"processing-unit", 5},
     },
     energy_required = 160,
     result = "speed-module-6"
@@ -282,10 +256,8 @@ data:extend(
     ingredients =
     {
       {"speed-module-6", 1},
-	  {"electrum-alloy", 5},
-	  {"tungsten-plate", 5},
-      {"circuit3", 5},
-	  {"topaz-5", 5},
+      {"processing-unit", 5},
+      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "speed-module-7"
@@ -297,9 +269,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-7", 1},
-	  {"tungsten-plate", 25},
-      {"circuit3", 50},
-	  {"diamond-5", 10},
+      {"advanced-processing-unit", 25},
     },
     energy_required = 640,
     result = "speed-module-8"
@@ -313,7 +283,6 @@ data:extend(
     {
       {"effectivity-module-3", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -327,9 +296,7 @@ data:extend(
     {
       {"effectivity-module-4", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
-      {"advanced-circuit", 5},
-	  {"ruby-5", 1},
+      {"processing-unit", 5},
     },
     energy_required = 80,
     result = "effectivity-module-5"
@@ -341,10 +308,7 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-5", 1},
-	  {"electrum-alloy", 5},
-	  {"brass-alloy", 5},
-      {"circuit3", 5},
-	  {"emerald-5", 5},
+      {"processing-unit", 5},
     },
     energy_required = 160,
     result = "effectivity-module-6"
@@ -356,10 +320,8 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-6", 1},
-	  {"electrum-alloy", 5},
-	  {"tungsten-plate", 5},
-      {"circuit3", 5},
-	  {"topaz-5", 5},
+      {"processing-unit", 5},
+      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "effectivity-module-7"
@@ -371,9 +333,7 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-7", 1},
-	  {"tungsten-plate", 25},
-      {"circuit3", 50},
-	  {"diamond-5", 10},
+      {"advanced-processing-unit", 25},
     },
     energy_required = 640,
     result = "effectivity-module-8"
@@ -387,7 +347,6 @@ data:extend(
     {
       {"productivity-module-3", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
       {"advanced-circuit", 5},
     },
     energy_required = 40,
@@ -401,9 +360,7 @@ data:extend(
     {
       {"productivity-module-4", 1},
 	  {"steel-plate", 5},
-      {"electrum-alloy", 5},
-      {"advanced-circuit", 5},
-	  {"ruby-5", 1},
+      {"processing-unit", 5},
     },
     energy_required = 80,
     result = "productivity-module-5"
@@ -415,10 +372,7 @@ data:extend(
     ingredients =
     {
       {"productivity-module-5", 1},
-	  {"electrum-alloy", 5},
-	  {"brass-alloy", 5},
-      {"circuit3", 5},
-	  {"emerald-5", 5},
+      {"processing-unit", 5},
     },
     energy_required = 160,
     result = "productivity-module-6"
@@ -430,10 +384,8 @@ data:extend(
     ingredients =
     {
       {"productivity-module-6", 1},
-	  {"electrum-alloy", 5},
-	  {"tungsten-plate", 5},
-      {"circuit3", 5},
-	  {"topaz-5", 5},
+      {"processing-unit", 5},
+      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "productivity-module-7"
@@ -445,9 +397,7 @@ data:extend(
     ingredients =
     {
       {"productivity-module-7", 1},
-	  {"tungsten-plate", 25},
-      {"circuit3", 50},
-	  {"diamond-5", 10},
+      {"advanced-processing-unit", 25},
     },
     energy_required = 640,
     result = "productivity-module-8"

@@ -64,15 +64,15 @@ end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
 incrementDynamicCounters = function(stack)
-  if database.craftitems[stack.name] then
-    for counter, ingredients in pairs(database.craftitems[stack.name]) do
-      if database.craftitems[counter] then
-        incrementDynamicCounters({name=counter, count=ingredients})
-      else
-        glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
-      end
-    end
-  end
+	if database.craftitems[stack.name] then
+		for counter, ingredients in pairs(database.craftitems[stack.name]) do
+			if database.craftitems[counter] then
+				incrementDynamicCounters({name=counter, count=ingredients})
+			else
+				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
+			end
+		end
+	end
 end
 incrementDynamicCounters(event.itemstack)
 end)
