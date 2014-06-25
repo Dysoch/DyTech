@@ -28,7 +28,7 @@ data:extend(
       {"copper-plate", 3},
       {"iron-stick", 2},
     },
-    result = "wooden-axe",
+    result = "copper-axe",
     enabled = false
   },
   {

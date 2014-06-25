@@ -1,0 +1,1 @@
+data.raw["item"]["basic-mining-drill"].icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill1.png"

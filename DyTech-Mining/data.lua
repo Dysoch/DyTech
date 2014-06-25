@@ -1,0 +1,8 @@
+require("prototypes.base-edit.entity")
+require("prototypes.base-edit.item")
+require("prototypes.entity.drill")
+require("prototypes.item.drill")
+require("prototypes.item.intermediate")
+require("prototypes.recipe.drill")
+require("prototypes.recipe.intermediate")
+require("prototypes.technology.mining")

@@ -201,6 +201,26 @@ craftitems =
 	-- DyTech Metallurgy --
 	-- DyTech Meteors --
 	-- DyTech Mining --
+	["basic-mining-drill-mk2"]={["basic-mining-drill"]=1, ["rotor1"]=2, ["item-exit1"]=1, ["frame1"]=1, mining=1},
+	["basic-mining-drill-mk3"]={["basic-mining-drill-mk2"]=1, ["rotor2"]=2, ["item-exit2"]=1, ["frame2"]=1, mining=1},
+	["basic-mining-drill-mk4"]={["basic-mining-drill-mk3"]=1, ["rotor3"]=2, ["item-exit3"]=2, ["frame3"]=1, mining=1},
+	["basic-mining-drill-mk5"]={["basic-mining-drill-mk4"]=1, ["rotor4"]=2, ["item-exit4"]=4, ["frame4"]=1, mining=1},
+	["basic-mining-drill-mk6"]={["basic-mining-drill-mk5"]=3, ["advanced-processing-unit"]=250, mining=500, plates=500},
+	["frame1"]={["iron-stick"]=30, ["electronic-circuit"]=15, plates=45},
+	["frame2"]={["frame1"]=1, ["advanced-circuit"]=5, plates=10},
+	["frame3"]={["frame2"]=1, ["advanced-circuit"]=15, ["processing-unit"]=18, ["copper-cable"]=20},
+	["frame4"]={["frame3"]=1, ["advanced-processing-unit"]=10, ["bundled-wire"]=50, plates=25},
+	["item-exit1"]={["wooden-chest"]=1, plates=12, resource=5},
+	["item-exit2"]={["item-exit1"]=1, ["iron-chest"]=1, plates=12, resource=25},
+	["item-exit3"]={["item-exit2"]=1, ["steel-chest"]=1, [""]=10, plates=15},
+	["item-exit4"]={["item-exit3"]=1, ["advanced-processing-unit"]=5, ["smart-chest"]=1, ["smart-inserter"]=1},
+	["rotor1"]={["blade1"]=3, ["stone-gear-wheel"]=4, plates=10},
+	["rotor2"]={["rotor1"]=1, ["blade2"]=3, [""]=4, plates=6},
+	["rotor3"]={["rotor2"]=1, ["blade3"]=3, ["steel-gear-wheel"]=4, plates=12},
+	["rotor4"]={["rotor3"]=1, ["blade3"]=9, ["steel-gear-wheel"]=12, ["advanced-circuit"]=5},
+	["blade1"]={[""]=1, ["iron-stick"]=1, resource=4},
+	["blade2"]={plates=12, resource=12},
+	["blade3"]={["blade2"]=1, plates=4},
 	-- DyTech Modules --
 	["pollution-clean-module-1"]={plates=10, modules=1, ["electronic-circuit"]=5},
 	["pollution-create-module-1"]={plates=10, modules=1, ["electronic-circuit"]=5},
