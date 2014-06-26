@@ -8,7 +8,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-0600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-0600", amount=1}
@@ -27,7 +27,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-0800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-0800", amount=1}
@@ -46,7 +46,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-1000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-1000", amount=1}
@@ -65,7 +65,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-1200",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-1200", amount=1}
@@ -84,7 +84,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-1400",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-1400", amount=1}
@@ -103,7 +103,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-1600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-1600", amount=1}
@@ -122,7 +122,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-1800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-1800", amount=1}
@@ -141,7 +141,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-2000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-2000", amount=1}
@@ -160,7 +160,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-2200",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-2200", amount=1}
@@ -179,7 +179,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-2400",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-2400", amount=1}
@@ -198,7 +198,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-2600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-2600", amount=1}
@@ -217,7 +217,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-2800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-2800", amount=1}
@@ -236,7 +236,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-emptying",
     order = "lava-3000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/empty-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/empty-lava-barrel.png",
     ingredients =
     {
       {type="item", name="tungsten-barrel-lava-3000", amount=1}

@@ -20,7 +20,7 @@ data:extend(
     type = "recipe",
     name = "coal-splitting",
 	category = "centrifuge",
-    icon = "__DyTech-Graphics__/graphics/icons/carbon.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/carbon.png",
     subgroup = "metallurgy-intermediates",
     energy_required = 4,
 	enabled = false,

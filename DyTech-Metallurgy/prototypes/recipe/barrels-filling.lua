@@ -8,7 +8,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-0600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-600", amount=25},
@@ -27,7 +27,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-0800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-800", amount=25},
@@ -46,7 +46,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-1000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-1000", amount=25},
@@ -65,7 +65,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-1200",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-1200", amount=25},
@@ -84,7 +84,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-1400",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-1400", amount=25},
@@ -103,7 +103,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-1600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-1600", amount=25},
@@ -122,7 +122,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-1800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-1800", amount=25},
@@ -141,7 +141,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-2000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-2000", amount=25},
@@ -160,7 +160,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-2200",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-2200", amount=25},
@@ -179,7 +179,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-2400",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-2400", amount=25},
@@ -198,7 +198,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-2600",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-2600", amount=25},
@@ -217,7 +217,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-2800",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-2800", amount=25},
@@ -236,7 +236,7 @@ data:extend(
     subgroup = "metallurgy-fluid-barrels-filling",
     order = "lava-3000",
     enabled = "false",
-    icon = "__DyTech-Graphics__/graphics/icons/fill-lava-barrel.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/fill-lava-barrel.png",
     ingredients =
     {
       {type="fluid", name="lava-3000", amount=25},

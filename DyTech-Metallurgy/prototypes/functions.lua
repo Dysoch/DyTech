@@ -76,7 +76,7 @@ return
     straight_vertical_single =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-straight-vertical-single-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-straight-vertical-single-large.png",
       priority = "extra-high",
       width = 44,
       height = 58
@@ -84,7 +84,7 @@ return
     straight_vertical =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-straight-vertical-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-straight-vertical-large.png",
       priority = "extra-high",
       width = 44,
       height = 42
@@ -92,7 +92,7 @@ return
     straight_vertical_window =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-straight-vertical-window-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-straight-vertical-window-large.png",
       priority = "extra-high",
       width = 44,
       height = 32
@@ -100,7 +100,7 @@ return
     straight_horizontal_window =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-straight-horizontal-window-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-straight-horizontal-window-large.png",
       priority = "extra-high",
       width = 32,
       height = 42
@@ -108,7 +108,7 @@ return
     straight_horizontal =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-straight-horizontal-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-straight-horizontal-large.png",
       priority = "extra-high",
       width = 32,
       height = 42
@@ -116,7 +116,7 @@ return
     corner_up_right =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-corner-up-right-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-corner-up-right-large.png",
       priority = "extra-high",
       width = 32,
       height = 40
@@ -124,7 +124,7 @@ return
     corner_up_left =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-corner-up-left-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-corner-up-left-large.png",
       priority = "extra-high",
       width = 44,
       height = 44
@@ -132,7 +132,7 @@ return
     corner_down_right =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-corner-down-right-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-corner-down-right-large.png",
       priority = "extra-high",
       width = 32,
       height = 32
@@ -140,7 +140,7 @@ return
     corner_down_left =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-corner-down-left-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-corner-down-left-large.png",
       priority = "extra-high",
       width = 36,
       height = 32
@@ -148,7 +148,7 @@ return
     t_up =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-t-up-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-t-up-large.png",
       priority = "extra-high",
       width = 32,
       height = 42
@@ -156,7 +156,7 @@ return
     t_down =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-t-down-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-t-down-large.png",
       priority = "extra-high",
       width = 40,
       height = 44
@@ -164,7 +164,7 @@ return
     t_right =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-t-right-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-t-right-large.png",
       priority = "extra-high",
       width = 40,
       height = 32
@@ -172,7 +172,7 @@ return
     t_left =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-t-left-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-t-left-large.png",
       priority = "extra-high",
       width = 44,
       height = 42
@@ -180,7 +180,7 @@ return
     cross =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-cross-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-cross-large.png",
       priority = "extra-high",
       width = 40,
       height = 40
@@ -188,7 +188,7 @@ return
     ending_up =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-ending-up-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-ending-up-large.png",
       priority = "extra-high",
       width = 44,
       height = 42
@@ -196,7 +196,7 @@ return
     ending_down =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-ending-down-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-ending-down-large.png",
       priority = "extra-high",
       width = 44,
       height = 32
@@ -204,7 +204,7 @@ return
     ending_right =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-ending-right-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-ending-right-large.png",
       priority = "extra-high",
       width = 32,
       height = 44
@@ -212,7 +212,7 @@ return
     ending_left =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-ending-left-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-ending-left-large.png",
       priority = "extra-high",
       width = 58,
       height = 44
@@ -220,7 +220,7 @@ return
     horizontal_window_background =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-horizontal-window-background-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-horizontal-window-background-large.png",
       priority = "extra-high",
       width = 32,
       height = 42
@@ -228,7 +228,7 @@ return
     vertical_window_background =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/pipe-vertical-window-background-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/pipe-vertical-window-background-large.png",
       priority = "extra-high",
       width = 44,
       height = 32
@@ -236,7 +236,7 @@ return
     fluid_background =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/fluid-background-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/fluid-background-large.png",
       priority = "extra-high",
       width = 32,
       height = 20
@@ -244,7 +244,7 @@ return
     low_temperature_flow =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/fluid-flow-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/fluid-flow-large.png",
       priority = "extra-high",
       width = 128,
       height = 18
@@ -252,7 +252,7 @@ return
     middle_temperature_flow =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/fluid-flow-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/fluid-flow-large.png",
       priority = "extra-high",
       width = 128,
       height = 18
@@ -260,18 +260,10 @@ return
     high_temperature_flow =
     {
       scale = 3,
-	  filename = "__DyTech-Graphics__/graphics/entity/pipes/fluid-flow-large.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/pipes/fluid-flow-large.png",
       priority = "extra-high",
       width = 128,
       height = 18
     }
   }
 end
-
-ending_patch_prototype =
-  {
-    sheet = "__base__/graphics/entity/basic-transport-belt/start-end-integration-patches.png",
-    width = 40,
-    height = 40,
-    priority = "extra-high"
-  }

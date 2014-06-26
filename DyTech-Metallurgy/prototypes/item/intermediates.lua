@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-intermediates",
     order = "silicon",
-    stack_size = 128
+    stack_size = 100
   },
   {
     type = "item",
@@ -17,7 +17,7 @@ data:extend(
     subgroup = "metallurgy-intermediates",
     order = "carbon",
     fuel_value = "2MJ",
-    stack_size = 128
+    stack_size = 100
   },
   {
     type = "item",
@@ -26,7 +26,16 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-intermediates",
     order = "clay",
-    stack_size = 128
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "sand",
+    icon = "__DyTech-Metallurgy__/graphics/icons/sand.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "raw-material",
+    order = "sand",
+    stack_size = 100
   },
 }
 )

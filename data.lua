@@ -139,69 +139,13 @@ require("prototypes.base-mod.technology.transport")
 require("prototypes.base-mod.technology.transport-belt")
 
 -- Metallurgy
--- entity 5x
-require("prototypes.metallurgy.entity.assemblers-molds")
-require("prototypes.metallurgy.entity.lava-machines")
-require("prototypes.metallurgy.entity.machines")
-require("prototypes.metallurgy.entity.molten-metal-machines")
-require("prototypes.metallurgy.entity.pipes")
-
--- fluid 5x
-require("prototypes.metallurgy.fluid.intermediates")
-require("prototypes.metallurgy.fluid.lava")
-require("prototypes.metallurgy.fluid.metals-molten-advanced")
-require("prototypes.metallurgy.fluid.metals-molten-base")
-require("prototypes.metallurgy.fluid.metals-molten-basic")
-
--- item 11x
-require("prototypes.metallurgy.item.alloys")
-require("prototypes.metallurgy.item.assemblers-molds")
-require("prototypes.metallurgy.item.barrels")
-require("prototypes.metallurgy.item.intermediates")
-require("prototypes.metallurgy.item.lava-machines")
-require("prototypes.metallurgy.item.machines")
-require("prototypes.metallurgy.item.molds")
-require("prototypes.metallurgy.item.molten-metal-machines")
-require("prototypes.metallurgy.item.ores")
-require("prototypes.metallurgy.item.pipes")
-require("prototypes.metallurgy.item.plates")
-
--- meteors 5x
+-- meteors 
 require("prototypes.metallurgy.meteors.asteroids")
 require("prototypes.metallurgy.meteors.comets")
 require("prototypes.metallurgy.meteors.explosions")
 require("prototypes.metallurgy.meteors.meteors-large")
 require("prototypes.metallurgy.meteors.meteors-medium")
 require("prototypes.metallurgy.meteors.meteors-small")
-
--- recipe 24x
-require("prototypes.metallurgy.recipe.assemblers-molds")
-require("prototypes.metallurgy.recipe.barrels")
-require("prototypes.metallurgy.recipe.barrels-filling")
-require("prototypes.metallurgy.recipe.barrels-unfilling")
-require("prototypes.metallurgy.recipe.intermediates")
-require("prototypes.metallurgy.recipe.lava-heating")
-require("prototypes.metallurgy.recipe.lava-machines")
-require("prototypes.metallurgy.recipe.machines")
-require("prototypes.metallurgy.recipe.metal-mixing")
-require("prototypes.metallurgy.recipe.metals-advanced")
-require("prototypes.metallurgy.recipe.metals-base")
-require("prototypes.metallurgy.recipe.metals-basic")
-require("prototypes.metallurgy.recipe.mold-crafting-ammo-advanced")
-require("prototypes.metallurgy.recipe.mold-crafting-ammo-basic")
-require("prototypes.metallurgy.recipe.mold-crafting-circuit")
-require("prototypes.metallurgy.recipe.mold-crafting-gears")
-require("prototypes.metallurgy.recipe.mold-crafting-tools")
-require("prototypes.metallurgy.recipe.mold-crafting-wires")
-require("prototypes.metallurgy.recipe.molds")
-require("prototypes.metallurgy.recipe.molten-metal-machines")
---require("prototypes.metallurgy.recipe.ore-smelting-advanced")
-require("prototypes.metallurgy.recipe.ore-smelting-base")
-require("prototypes.metallurgy.recipe.ore-smelting-basic")
-require("prototypes.metallurgy.recipe.pipes")
-
--- resource 1x
-require("prototypes.metallurgy.resource.lava")
 
 -- technology
 

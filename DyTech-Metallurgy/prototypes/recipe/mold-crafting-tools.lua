@@ -33,7 +33,7 @@ data:extend(
 	  {type="item", name="steel-axe", amount=1}
 	}
   },
-  {
+  --[[{
     type = "recipe",
     name = "mold-crafting-tool-3",
 	category = "metallurgy-tool",
@@ -49,6 +49,6 @@ data:extend(
 	{
 	  {type="item", name="tungsten-axe", amount=1}
 	}
-  },
+  },]]--
 }
 )
