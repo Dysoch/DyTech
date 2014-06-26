@@ -3,7 +3,7 @@ data:extend(
   {
     type = "resource",
     name = "lava-600",
-    icon = "__DyTech-Graphics__/graphics/fluid/lava-600.png",
+    icon = "__DyTech-Metallurgy__/graphics/fluid/lava-600.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
     order = "lava-0600",
@@ -57,7 +57,7 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/fluids/lava-600.png",
+      filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-600.png",
       priority = "extra-high",
       frame_width = 75,
       frame_height = 61,
@@ -70,7 +70,7 @@ data:extend(
   {
     type = "resource",
     name = "lava-1400",
-    icon = "__DyTech-Graphics__/graphics/fluid/lava-1400.png",
+    icon = "__DyTech-Metallurgy__/graphics/fluid/lava-1400.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
     order = "lava-1400",
@@ -124,7 +124,7 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/fluids/lava-600.png",
+      filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-600.png",
       priority = "extra-high",
       frame_width = 75,
       frame_height = 61,
@@ -137,7 +137,7 @@ data:extend(
   {
     type = "resource",
     name = "lava-2800",
-    icon = "__DyTech-Graphics__/graphics/fluid/lava-2800.png",
+    icon = "__DyTech-Metallurgy__/graphics/fluid/lava-2800.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
     order = "lava-2800",
@@ -191,7 +191,7 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/fluids/lava-600.png",
+      filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-600.png",
       priority = "extra-high",
       frame_width = 75,
       frame_height = 61,

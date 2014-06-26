@@ -5,5 +5,5 @@
 	"title":"DyTech-Transportation",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Transportation",
-	"dependencies": ["base >= 0.10.0", "DyTech-Core >= 0.4.0"]
+	"dependencies": ["DyTech-Core >= 0.6.0"]
 }

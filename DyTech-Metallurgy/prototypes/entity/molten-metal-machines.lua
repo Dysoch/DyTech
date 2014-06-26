@@ -5,7 +5,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "forge",
-	icon = "__DyTech-Graphics__/graphics/icons/forge.png",
+	icon = "__DyTech-Metallurgy__/graphics/icons/forge.png",
     flags = {"placeable-neutral", "player-creation"},
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -22,7 +22,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/metallurgy-machines/forge.png",
+      filename = "__DyTech-Metallurgy__/graphics/entity/metallurgy-machines/forge.png",
       priority = "medium",
       frame_width = 113,
       frame_height = 91,
@@ -74,7 +74,7 @@ data:extend(
     ingredient_count = 8,
     energy_usage = "150kW",
 	crafting_speed =1,
-	icon = "__DyTech-Graphics__/graphics/icons/blast-furnace.png",
+	icon = "__DyTech-Metallurgy__/graphics/icons/blast-furnace.png",
     energy_source =
     {
       type= "electric",
@@ -82,7 +82,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__DyTech-Graphics__/graphics/entity/metallurgy-machines/blast-furnace.png",
+      filename = "__DyTech-Metallurgy__/graphics/entity/metallurgy-machines/blast-furnace.png",
       priority = "medium",
       frame_width = 212,
       frame_height = 180,

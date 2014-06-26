@@ -7,7 +7,7 @@ data:extend(
 	place_result= "blast-furnace",
 	stack_size= 10,
 	flags= {"goes-to-quickbar"},
-	icon="__DyTech-Graphics__/graphics/icons/blast-furnace.png",
+	icon="__DyTech-Metallurgy__/graphics/icons/blast-furnace.png",
 	subgroup = "production-machine",
   },
   {
@@ -17,7 +17,7 @@ data:extend(
 	place_result= "forge",
 	stack_size= 10,
 	flags= {"goes-to-quickbar"},
-	icon="__DyTech-Graphics__/graphics/icons/forge.png",
+	icon="__DyTech-Metallurgy__/graphics/icons/forge.png",
 	subgroup = "production-machine",
   },
 }

@@ -70,7 +70,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "lava-handler",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-gear-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-gear-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "lava-handler"},
     max_health = 500,
@@ -122,7 +122,7 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     animation =
     {
-	  filename = "__DyTech-Graphics__/graphics/entity/metallurgy-machines/lava-handler.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/metallurgy-machines/lava-handler.png",
       priority = "high",
       frame_width = 142,
       frame_height = 113,

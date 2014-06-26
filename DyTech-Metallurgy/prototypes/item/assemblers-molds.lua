@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "metallurgy-machine-gear",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-gear-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-gear-machine.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling-molds",
     order = "metallurgy-machine-gear",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "metallurgy-machine-wire",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-wire-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-wire-machine.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling-molds",
     order = "metallurgy-machine-wire",
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "metallurgy-machine-circuit",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-circuit-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-circuit-machine.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling-molds",
     order = "metallurgy-machine-circuit",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "metallurgy-machine-ammo-basic",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-ammo-basic-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-basic-machine.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling-molds",
     order = "metallurgy-machine-ammo-basic",
@@ -43,7 +43,7 @@ data:extend(
   {
     type = "item",
     name = "metallurgy-machine-ammo-advanced",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-ammo-advanced-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-advanced-machine.png",
     flags = {"goes-to-quickbar"},
     subgroup = "assembling-molds",
     order = "metallurgy-machine-ammo-advanced",
@@ -53,7 +53,7 @@ data:extend(
   {
 	type= "item",
 	name= "metallurgy-machine-tool",
-	icon= "__DyTech-Graphics__/graphics/icons/mold-tool-machine.png",
+	icon= "__DyTech-Metallurgy__/graphics/icons/mold-tool-machine.png",
 	flags= {"goes-to-quickbar"},
 	subgroup = "assembling-molds",
 	order= "metallurgy-machine-tool",

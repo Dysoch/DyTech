@@ -119,6 +119,8 @@ function OnLoad()
 --	if not glob.sandcount then glob.sandcount=0 end
 	if not glob.coal then glob.coal={} end
 	if not glob.coalcount then glob.coalcount=0 end
+	if not glob.gem then glob.gem={} end
+	if not glob.gemcount then glob.gemcount=0 end
 	if not glob.trees then glob.trees = {} end
 	if not glob.trees.seedTypes then glob.trees.seedTypes = {} end
 	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes = {RubberTree = {
@@ -156,6 +158,8 @@ glob.stonecount=0
 --glob.sandcount=0
 glob.coal={}
 glob.coalcount=0
+glob.gem={}
+glob.gemcount=0
 glob.compatibility={treefarm=false, Fmod=false}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}

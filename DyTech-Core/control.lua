@@ -146,6 +146,34 @@ game.onevent(defines.events.ontick, function(event)
 		fs.CollectByPosition("coal", 1.5, false)
 		fs.CollectByPosition("coal", 1.5, true)
 	end
+	if glob.gem~=nil and game.tick%60==0 then
+		for i,_ in pairs(glob.gem) do
+			local entities=game.findentities({{glob.gem[i].position.x-1,glob.gem[i].position.y-1},{glob.gem[i].position.x+1,glob.gem[i].position.y+1}})
+			for x,_ in pairs(entities) do
+				if entities[x].valid and entities[x].name=="gem-collector" then
+					local gem=game.findentities({{glob.gem[i].position.x-25,glob.gem[i].position.y-25},{glob.gem[i].position.x+25,glob.gem[i].position.y+25}})
+					for z,_ in pairs(gem) do 
+						if gem[z].name=="item-on-ground" and gem[z].stack.name=="ruby-3" and entities[x].caninsert{name="ruby-3",count=1} then
+							entities[x].insert{name="ruby-3",count=1}
+							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
+							gem[z].destroy()
+						break
+						elseif gem[z].name=="item-on-ground" and gem[z].stack.name=="sapphire-3" and entities[x].caninsert{name="sapphire-3",count=1} then
+							entities[x].insert{name="sapphire-3",count=1}
+							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
+							gem[z].destroy()
+						break
+						elseif gem[z].name=="item-on-ground" and gem[z].stack.name=="emerald-3" and entities[x].caninsert{name="emerald-3",count=1} then
+							entities[x].insert{name="emerald-3",count=1}
+							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
+							gem[z].destroy()
+						break
+						end
+					end
+				end
+			end
+		end
+	end
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
@@ -189,6 +217,14 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		glob.coalcount=glob.coalcount+1
 		glob.coal[glob.coalcount]={}
 		glob.coal[glob.coalcount].position=event.createdentity.position
+	elseif event.createdentity.name == "gem-collector" then				
+		if glob.gem==nil then
+			glob.gem={}
+			glob.gemcount=0
+		end
+		glob.gemcount=glob.gemcount+1
+		glob.gem[glob.gemcount]={}
+		glob.gem[glob.gemcount].position=event.createdentity.position
 	end
 end)
 

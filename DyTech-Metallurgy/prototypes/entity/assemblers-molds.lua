@@ -5,7 +5,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-gear",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-gear-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-gear-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-gear"},
     max_health = 500,
@@ -82,7 +82,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-wire",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-wire-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-wire-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-wire"},
     max_health = 500,
@@ -159,7 +159,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-circuit",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-circuit-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-circuit-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-circuit"},
     max_health = 500,
@@ -236,7 +236,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-ammo-basic",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-ammo-basic-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-basic-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-ammo-basic"},
     max_health = 500,
@@ -313,7 +313,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-ammo-advanced",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-ammo-advanced-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-advanced-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-ammo-advanced"},
     max_health = 500,
@@ -390,7 +390,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "metallurgy-machine-tool",
-    icon = "__DyTech-Graphics__/graphics/icons/mold-tool-machine.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/mold-tool-machine.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "metallurgy-machine-tool"},
     max_health = 500,

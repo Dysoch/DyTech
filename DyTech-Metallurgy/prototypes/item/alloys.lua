@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "copper-tungsten-alloy",
-    icon = "__DyTech-Graphics__/graphics/icons/alloy-copper-tungsten.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/alloy-copper-tungsten.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-alloys",
     order = "copper-tungsten",
@@ -12,7 +12,7 @@ data:extend(
   {
     type = "item",
     name = "bronze-alloy",
-    icon = "__DyTech-Graphics__/graphics/icons/alloy-bronze.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/alloy-bronze.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-alloys",
     order = "bronze",
@@ -21,7 +21,7 @@ data:extend(
   {
     type = "item",
     name = "brass-alloy",
-    icon = "__DyTech-Graphics__/graphics/icons/alloy-brass.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/alloy-brass.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-alloys",
     order = "brass",
@@ -30,7 +30,7 @@ data:extend(
   {
     type = "item",
     name = "electrum-alloy",
-    icon = "__DyTech-Graphics__/graphics/icons/alloy-electrum.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/alloy-electrum.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-alloys",
     order = "electrum",
@@ -39,7 +39,7 @@ data:extend(
   {
     type = "item",
     name = "gunmetal-alloy",
-    icon = "__DyTech-Graphics__/graphics/icons/alloy-gunmetal.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/alloy-gunmetal.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-alloys",
     order = "gunmetal",

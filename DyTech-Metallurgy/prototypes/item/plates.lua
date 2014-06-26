@@ -4,7 +4,7 @@ data:extend(
   {
     type = "item",
     name = "zinc-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-zinc.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-zinc.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "zinc",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "tin-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-tin.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-tin.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tin",
@@ -22,7 +22,7 @@ data:extend(
   {
     type = "item",
     name = "silver-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-silver.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-silver.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "silver",
@@ -31,7 +31,7 @@ data:extend(
   {
     type = "item",
     name = "lead-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-lead.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-lead.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "lead",
@@ -40,7 +40,7 @@ data:extend(
   {
     type = "item",
     name = "tungsten-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-tungsten.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-tungsten.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tungsten",
@@ -49,7 +49,7 @@ data:extend(
   {
     type = "item",
     name = "gold-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/plate-gold.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/plate-gold.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "gold",
@@ -58,7 +58,7 @@ data:extend(
   --[[{
     type = "item",
     name = "silicon-steel-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/silicon-steel-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/silicon-steel-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-s-s",
@@ -67,7 +67,7 @@ data:extend(
   {
     type = "item",
     name = "ferro-nickel-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/ferro-nickel-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/ferro-nickel-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-n-f",
@@ -76,7 +76,7 @@ data:extend(
   {
     type = "item",
     name = "goloid-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/goloid-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/goloid-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-g",
@@ -85,7 +85,7 @@ data:extend(
   {
     type = "item",
     name = "brass-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/brass-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/brass-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-b",
@@ -94,7 +94,7 @@ data:extend(
   {
     type = "item",
     name = "bronze-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/bronze-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/bronze-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-b",
@@ -103,7 +103,7 @@ data:extend(
   {
     type = "item",
     name = "electrum-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/electrum-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/electrum-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-e",
@@ -112,7 +112,7 @@ data:extend(
   {
     type = "item",
     name = "invar-plate",
-    icon = "__DyTech-Graphics__/graphics/icons/invar-plate.png",
+    icon = "__DyTech-Metallurgy__/graphics/icons/invar-plate.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "m-p-i",
