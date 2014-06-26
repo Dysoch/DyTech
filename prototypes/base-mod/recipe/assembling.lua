@@ -22,17 +22,5 @@ data:extend(
     },
     result = "unpacking"
   },
-  {
-    type = "recipe",
-    name = "compressor",
-    enabled = false,
-    ingredients =
-    {
-      {"steel-plate", 25},
-	  {"iron-plate", 25},
-      {"assembling-machine-2", 2},
-    },
-    result = "compressor"
-  },
 }
 )

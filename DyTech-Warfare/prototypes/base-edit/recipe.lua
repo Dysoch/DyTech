@@ -1,0 +1,1 @@
+table.insert(data.raw["recipe"]["laser-turret"].ingredients,{"stone-gear-wheel", 5})

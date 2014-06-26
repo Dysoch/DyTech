@@ -20,15 +20,5 @@ data:extend(
     place_result = "unpacking",
     stack_size = 4
   },
-  {
-	type= "item",
-	name= "compressor",
-	icon= "__DyTech-Graphics__/graphics/icons/gem-cutter.png",
-	flags= {"goes-to-quickbar"},
-	subgroup = "assembling",
-	order= "compressor",
-	place_result= "compressor",
-	stack_size= 10,
-  },
 }
 )

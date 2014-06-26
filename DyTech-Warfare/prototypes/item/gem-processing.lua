@@ -3,7 +3,7 @@ data:extend(
   {
 	type= "item",
 	name= "gem-crusher",
-	icon= "__DyTech-Graphics__/graphics/icons/gem-crusher.png",
+	icon= "__DyTech-Warfare__/graphics/icons/gem-crusher.png",
 	flags= {"goes-to-quickbar"},
 	subgroup = "assembling",
 	order= "g-c",
@@ -13,7 +13,7 @@ data:extend(
   {
 	type= "item",
 	name= "gem-grinder",
-	icon= "__DyTech-Graphics__/graphics/icons/gem-grinder.png",
+	icon= "__DyTech-Warfare__/graphics/icons/gem-grinder.png",
 	flags= {"goes-to-quickbar"},
 	subgroup = "assembling",
 	order= "g-g",
@@ -23,11 +23,21 @@ data:extend(
   {
 	type= "item",
 	name= "gem-polisher",
-	icon= "__DyTech-Graphics__/graphics/icons/gem-polisher.png",
+	icon= "__DyTech-Warfare__/graphics/icons/gem-polisher.png",
 	flags= {"goes-to-quickbar"},
 	subgroup = "assembling",
 	order= "g-p",
 	place_result= "gem-polisher",
+	stack_size= 10,
+  },
+  {
+	type= "item",
+	name= "compressor",
+	icon= "__DyTech-Warfare__/graphics/icons/gem-cutter.png",
+	flags= {"goes-to-quickbar"},
+	subgroup = "assembling",
+	order= "compressor",
+	place_result= "compressor",
 	stack_size= 10,
   },
 }

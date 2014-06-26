@@ -49,7 +49,7 @@ game.onload(function()
 		glob.compatibility.treefarm=true
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then
 			local errorMsg = remote.call("treefarm", "addSeed", allInOne)
-			if errorMsg ~= nil then game.player.print (errorMsg) end
+			--if errorMsg ~= nil then game.player.print (errorMsg) end
 		end
 	else
 		glob.compatibility.treefarm=false
