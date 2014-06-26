@@ -119,7 +119,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__DyTech__/sound/railgun.wav",
+          filename = "__base__/sound/railgun.ogg",
           volume = 0.3
         }
       }
@@ -212,7 +212,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -304,7 +304,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -397,7 +397,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -489,7 +489,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -581,7 +581,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -674,7 +674,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -766,7 +766,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -858,7 +858,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -951,7 +951,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -1043,7 +1043,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }
@@ -1135,7 +1135,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       }

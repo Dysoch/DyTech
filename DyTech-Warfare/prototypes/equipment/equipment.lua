@@ -5,7 +5,7 @@ data:extend(
     name = "basic-laser-defense-equipment-2",
     sprite = 
     {
-      filename = "__DyTech-Graphics__/graphics/equipment/basic-laser-defense-equipment-2.png",
+      filename = "__DyTech-Warfare__/graphics/equipment/basic-laser-defense-equipment-2.png",
       width = 64,
       height = 96,
       priority = "medium"
@@ -33,7 +33,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       },
@@ -67,7 +67,7 @@ data:extend(
     name = "basic-laser-defense-equipment-3",
     sprite = 
     {
-      filename = "__DyTech-Graphics__/graphics/equipment/basic-laser-defense-equipment-3.png",
+      filename = "__DyTech-Warfare__/graphics/equipment/basic-laser-defense-equipment-3.png",
       width = 64,
       height = 96,
       priority = "medium"
@@ -95,7 +95,7 @@ data:extend(
       sound =
       {
         {
-          filename = "__base__/sound/laser.wav",
+          filename = "__base__/sound/laser.ogg",
           volume = 0.4
         }
       },

@@ -7,7 +7,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"tungsten-gear-wheel", 5},
+      {"steel-gear-wheel", 5},
       {"assembling-machine-3", 1},
     },
     result = "gem-crusher"
@@ -18,9 +18,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"brass-alloy", 15},
+      {"steel-plate", 15},
       {"assembling-machine-2", 2},
-	  {"tungsten-gear-wheel", 5}
+	  {"steel-gear-wheel", 5}
     },
     result = "gem-grinder"
   },
@@ -30,8 +30,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"tungsten-plate", 25},
-	  {"copper-tungsten-alloy", 15},
+      {"steel-plate", 40},
       {"assembling-machine-3", 2},
 	  {"diamond-4", 5}
     },

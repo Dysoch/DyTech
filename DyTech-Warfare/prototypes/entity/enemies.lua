@@ -17,6 +17,17 @@ data:extend(
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(50),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
       animation =
       {
         frame_width = 279,
@@ -59,19 +70,19 @@ data:extend(
     dying_sound =
     {
       {
-        filename = "__base__/sound/creeper-death-1.wav",
+        filename = "__base__/sound/creatures/creeper-death-1.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-2.wav",
+        filename = "__base__/sound/creatures/creeper-death-2.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-3.wav",
+        filename = "__base__/sound/creatures/creeper-death-3.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-4.wav",
+        filename = "__base__/sound/creatures/creeper-death-4.ogg",
         volume = 0.7
       }
     },
@@ -136,6 +147,17 @@ data:extend(
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(75),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
       animation =
       {
         scale = 1.5,
@@ -179,19 +201,19 @@ data:extend(
     dying_sound =
     {
       {
-        filename = "__base__/sound/creeper-death-1.wav",
+        filename = "__base__/sound/creatures/creeper-death-1.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-2.wav",
+        filename = "__base__/sound/creatures/creeper-death-2.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-3.wav",
+        filename = "__base__/sound/creatures/creeper-death-3.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-4.wav",
+        filename = "__base__/sound/creatures/creeper-death-4.ogg",
         volume = 0.7
       }
     },
@@ -256,6 +278,17 @@ data:extend(
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(75),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
       animation =
       {
         scale = 2,
@@ -299,19 +332,19 @@ data:extend(
     dying_sound =
     {
       {
-        filename = "__base__/sound/creeper-death-1.wav",
+        filename = "__base__/sound/creatures/creeper-death-1.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-2.wav",
+        filename = "__base__/sound/creatures/creeper-death-2.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-3.wav",
+        filename = "__base__/sound/creatures/creeper-death-3.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-4.wav",
+        filename = "__base__/sound/creatures/creeper-death-4.ogg",
         volume = 0.7
       }
     },
@@ -376,6 +409,17 @@ data:extend(
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(5),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
       animation =
       {
         scale = 2.5,
@@ -419,19 +463,19 @@ data:extend(
     dying_sound =
     {
       {
-        filename = "__base__/sound/creeper-death-1.wav",
+        filename = "__base__/sound/creatures/creeper-death-1.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-2.wav",
+        filename = "__base__/sound/creatures/creeper-death-2.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-3.wav",
+        filename = "__base__/sound/creatures/creeper-death-3.ogg",
         volume = 0.7
       },
       {
-        filename = "__base__/sound/creeper-death-4.wav",
+        filename = "__base__/sound/creatures/creeper-death-4.ogg",
         volume = 0.7
       }
     },
@@ -657,68 +701,6 @@ data:extend(
         }
       },
     }
-  },
-  {
-    type = "unit-spawner",
-    name = "biter-spawner-1",
-    icon = "__base__/graphics/icons/biter-spawner.png",
-    flags = {"placeable-player", "placeable-enemy"},
-    minable = {mining_time = 1, result = "biter-spawner"},
-    max_health = 500,
-	order = "b-b-g",
-    resistances =
-    {
-      {
-        type = "physical",
-        decrease = 2,
-      },
-      {
-        type = "explosion",
-        decrease = 5,
-        percent = 15,
-      }
-    },
-    healing_per_tick = 0.02,
-    collision_box = {{-3.2, -2.2}, {2.2, 2.2}},
-    selection_box = {{-3.5, -2.5}, {2.5, 2.5}},
-    -- in ticks per 1 pu
-    pollution_cooldown = 10,
-    corpse = "biter-spawner-corpse",
-    loot =
-    {
-      {
-        count_max = 10,
-        count_min = 2,
-        item = "alien-artifact",
-        probability = 1
-      },
-    },
-    maximum_count_of_owned_units = 10,
-    animations =
-    {
-      biterspawneranimation(0),
-      biterspawneranimation(1),
-      biterspawneranimation(2),
-      biterspawneranimation(3)
-    },
-    result_units = (function()
-                     local res = {}
-                     res[1] = {"small-biter", 0.10}
-                     if not data.isdemo then
-                       res[2] = {"medium-biter", 0.15}
-                       res[3] = {"big-biter", 0.15}
-					   res[4] = {"berserk-biter", 0.15}
-					   res[5] = {"elder-biter", 0.15}
-					   res[6] = {"king-biter", 0.15}
-					   res[7] = {"queen-biter", 0.15}
-                     end
-                     return res
-                   end)(),
-    spawning_cooldown = {300, 150}, -- With zero evolution the spawn rate is 5 seconds, with max evolution it is 2.5 seconds
-    spawning_radius = 15,
-    spawning_spacing = 2,
-    max_spawn_shift = 0.65,
-    max_richness_for_spawn_shift = 100,
   },
 }
 )

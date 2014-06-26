@@ -7,7 +7,6 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "raw-material",
     order = "b-q-e",
-    place_result = "biter-spawner-1",
     stack_size = 64
   },
 }
