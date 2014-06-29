@@ -1,2 +1,9 @@
 data.raw["item"]["iron-gear-wheel"].subgroup = "dytechgears"
 data.raw["item"]["iron-gear-wheel"].order = "[b]iron"
+data.raw["item"]["copper-plate"].stack_size = 200
+data.raw["item"]["iron-plate"].stack_size = 200
+data.raw["item"]["steel-plate"].stack_size = 200
+data.raw["item"]["copper-ore"].stack_size = 200
+data.raw["item"]["iron-ore"].stack_size = 200
+data.raw["item"]["coal"].stack_size = 200
+data.raw["item"]["stone"].stack_size = 200
