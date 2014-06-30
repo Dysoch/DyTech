@@ -13,7 +13,7 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	
+	 
 end)
 
 remote.addinterface("DyTech-Metallurgy",
