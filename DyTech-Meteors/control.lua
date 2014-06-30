@@ -13,9 +13,10 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.dytech.meteors=false then glob.dytech.meteors=true end
+	if glob.dytech.meteors==false then glob.dytech.meteors=true end
 end)
 
 remote.addinterface("DyTech-Meteors",
+	{
 
 })
