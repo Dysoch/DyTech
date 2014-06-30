@@ -57,5 +57,10 @@ require("prototypes.recipe.pipes")
 require("prototypes.resource.lava")
 require("prototypes.resource.sand")
 
+-- tech
+require("prototypes.technology.lava")
+require("prototypes.technology.lava-smelting")
+require("prototypes.technology.molds")
+
 
 require("prototypes.autoplace-controls")

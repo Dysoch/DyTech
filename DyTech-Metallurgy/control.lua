@@ -1,7 +1,7 @@
 require "defines"
 
 game.oninit(function()
-	
+	remote.call("DyTech-Core", "addModule", "metallurgy")
 end)
 
 game.onsave(function()
@@ -13,9 +13,13 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.dytech.metallurgy=false then glob.dytech.metallurgy=true end
+
 end)
 
 remote.addinterface("DyTech-Metallurgy",
-
+{
+  Regenerate = function()
+	game.regenerateentity("sand")
+	game.regenerateentity("lava-600")
+  end
 })

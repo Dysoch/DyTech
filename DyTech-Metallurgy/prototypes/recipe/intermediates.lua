@@ -6,6 +6,7 @@ data:extend(
 	category = "crafting-with-fluid",
     subgroup = "metallurgy-intermediates",
     energy_required = 2,
+	enabled = false,
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
