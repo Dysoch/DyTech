@@ -1,3 +1,8 @@
+-- fmod edit
+if data.raw.item["stone-pile"] then
+require("prototypes.mod-edit.fmod")
+end
+
 -- entity 
 require("prototypes.entity.assemblers-molds")
 require("prototypes.entity.lava-machines")
