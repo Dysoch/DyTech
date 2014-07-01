@@ -163,6 +163,10 @@ craftitems =
 	["steam-engine-terciary"]={["stone-gear-wheel"]=5, ["pipe"]=5, plates=5, machine=1, energy=1},
 	["solar-panel-secondary"]={["electronic-circuit"]=15, plates=10, energy=1, machine=1},
 	["solar-panel-terciary"]={["electronic-circuit"]=15, plates=10, energy=1, machine=1},
+	["small-pump-mk2"]={["small-pump"]=1, ["electric-engine-unit"]=1, ["pipe-mk2"]=1, plates=1, energy=1},
+	["small-pump-mk3"]={["small-pump-mk2"]=1, ["electric-engine-unit"]=1, ["pipe-mk3"]=1, plates=1, energy=1},
+	["small-pump-mk4"]={["small-pump-mk3"]=1, ["electric-engine-unit"]=1, ["pipe-mk4"]=1, plates=1, energy=1},
+	["small-pump-mk5"]={["small-pump-mk4"]=1, ["electric-engine-unit"]=1, ["pipe-mk5"]=1, plates=1, energy=1},
 	-- DyTech Inserters --
 	["inserter-half"]={inserter=1, ["electronic-circuit"]=1, ["iron-gear-wheel"]=1, plates=1},
 	["inserter-long"]={inserter=2, plates=2, ["basic-inserter"]=1, ["electronic-circuit"]=2},

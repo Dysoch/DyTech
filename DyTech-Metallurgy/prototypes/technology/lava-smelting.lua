@@ -30,6 +30,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "forge"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "metallurgy-copper-plate"
+      },
     },
     prerequisites = {"lava-01"},
     unit =
@@ -62,6 +66,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "lava-1600"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "metallurgy-iron-plate"
       },
     },
     prerequisites = {"lava-smelting-01"},
@@ -107,6 +115,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "centrifuge"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "metallurgy-steel-plate"
       },
     },
     prerequisites = {"lava-smelting-02"},
