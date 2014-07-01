@@ -2,16 +2,28 @@ data:extend(
 {
   {
     type = "technology",
-    name = "boiler-2",
-    icon = "__DyTech-Energy__/graphics/technology/boiler.png",
+    name = "energy-1",
+    icon = "__DyTech-Energy__/graphics/technology/energy.png",
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "boiler-mk2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-mk2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-to-ground-mk2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "small-pump-mk2"
+      },
     },
-    prerequisites = {"miner-2"},
+    prerequisites = {"oil-processing"},
     unit =
     {
       count = 50,
@@ -26,16 +38,28 @@ data:extend(
   },
   {
     type = "technology",
-    name = "boiler-3",
-    icon = "__DyTech-Energy__/graphics/technology/boiler.png",
+    name = "energy-2",
+    icon = "__DyTech-Energy__/graphics/technology/energy.png",
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "boiler-mk3"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-to-ground-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "small-pump-mk3"
+      },
     },
-    prerequisites = {"boiler-2"},
+    prerequisites = {"energy-1"},
     unit =
     {
       count = 75,
@@ -51,16 +75,28 @@ data:extend(
   },
   {
     type = "technology",
-    name = "boiler-4",
-    icon = "__DyTech-Energy__/graphics/technology/boiler.png",
+    name = "energy-3",
+    icon = "__DyTech-Energy__/graphics/technology/energy.png",
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "boiler-mk4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-mk4"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-to-ground-mk4"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "small-pump-mk4"
+      },
     },
-    prerequisites = {"boiler-3"},
+    prerequisites = {"energy-2"},
     unit =
     {
       count = 100,
@@ -77,16 +113,28 @@ data:extend(
   },
   {
     type = "technology",
-    name = "boiler-5",
-    icon = "__DyTech-Energy__/graphics/technology/boiler.png",
+    name = "energy-4",
+    icon = "__DyTech-Energy__/graphics/technology/energy.png",
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "boiler-mk5"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pipe-to-ground-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "small-pump-mk5"
+      },
     },
-    prerequisites = {"boiler-4"},
+    prerequisites = {"energy-3"},
     unit =
     {
       count = 200,
