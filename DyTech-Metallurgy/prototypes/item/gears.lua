@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechgears",
     order = "brass",
-    stack_size = 128
+    stack_size = 100
   },
   {
     type = "item",
@@ -16,7 +16,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechgears",
     order = "copper-tungsten",
-    stack_size = 128
+    stack_size = 100
   },
   {
     type = "item",
@@ -25,7 +25,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechgears",
     order = "tungsten",
-    stack_size = 128
+    stack_size = 100
   },
 }
 )

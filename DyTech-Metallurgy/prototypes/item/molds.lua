@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-gear",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -16,7 +16,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-wire",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -25,7 +25,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-circuit",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -34,7 +34,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-ammo-1-basic",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -43,7 +43,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-ammo-2-advanced",
-    stack_size = 64
+    stack_size = 50
   },
   {
 	type= "item",
@@ -52,7 +52,7 @@ data:extend(
 	flags = {"goes-to-main-inventory"},
 	subgroup = "molds",
 	order= "mold-tool",
-	stack_size= 64
+	stack_size= 50
   },
 }
 )

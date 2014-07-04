@@ -8,7 +8,7 @@ data:extend(
     subgroup = "energy-pipe-distribution",
     order = "a[pipe]-a[pipe]",
     place_result = "pipe-mainline",
-    stack_size = 32
+    stack_size = 50
   },
   {
     type = "item",
@@ -18,7 +18,7 @@ data:extend(
     subgroup = "energy-pipe-distribution",
     order = "a[pipe]-a[pipe]",
     place_result = "pump-to-mainline",
-    stack_size = 32
+    stack_size = 50
   },
   {
     type = "item",
@@ -28,7 +28,7 @@ data:extend(
     subgroup = "energy-pipe-distribution",
     order = "a[pipe]-a[pipe]",
     place_result = "pump-from-mainline",
-    stack_size = 32
+    stack_size = 50
   },
   {
     type = "item",
@@ -38,7 +38,7 @@ data:extend(
     subgroup = "energy-pipe-distribution",
     order = "a[pipe]-a[pipe]",
     place_result = "pump-inline-mainline",
-    stack_size = 32
+    stack_size = 50
   },
 }
 )
