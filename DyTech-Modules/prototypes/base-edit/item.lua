@@ -16,3 +16,12 @@ data.raw["module"]["productivity-module-3"].icon = "__DyTech-Modules__/graphics/
 data.raw["module"]["productivity-module"].effect = { productivity = {bonus = 0.05}, consumption = {bonus = 0.2}, pollution = {bonus = 0.2}}
 data.raw["module"]["productivity-module-2"].effect = { productivity = {bonus = 0.1}, consumption = {bonus = 0.4}, pollution = {bonus = 0.4}}
 data.raw["module"]["productivity-module-3"].effect = { productivity = {bonus = 0.15}, consumption = {bonus = 0.6}, pollution = {bonus = 0.6}}
+data.raw["module"]["speed-module"].subgroup = "speed-module"
+data.raw["module"]["speed-module-2"].subgroup = "speed-module"
+data.raw["module"]["speed-module-3"].subgroup = "speed-module"
+data.raw["module"]["effectivity-module"].subgroup = "effectivity-module"
+data.raw["module"]["effectivity-module-2"].subgroup = "effectivity-module"
+data.raw["module"]["effectivity-module-3"].subgroup = "effectivity-module"
+data.raw["module"]["productivity-module"].subgroup = "productivity-module"
+data.raw["module"]["productivity-module-2"].subgroup = "productivity-module"
+data.raw["module"]["productivity-module-3"].subgroup = "productivity-module"

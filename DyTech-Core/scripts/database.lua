@@ -218,6 +218,16 @@ craftitems =
 	["sand-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
 	["coal-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
 	-- DyTech Metallurgy --
+	["empty-temptyungsten-barrel"]={plates=8},
+	["metallurgy-machine-gear"]={tech=5, machine=1},
+	["metallurgy-machine-wire"]={tech=5, machine=1},
+	["metallurgy-machine-circuit"]={tech=5, machine=1},
+	["metallurgy-machine-tools"]={tech=5, machine=1},
+	["metallurgy-machine-ammo-basic"]={tech=5, machine=1},
+	["metallurgy-machine-ammo-advanced"]={tech=5, machine=1},
+	["brass-gear-wheel"]={plates=1, gear=1},
+	["copper-tungsten-gear-wheel"]={plates=1, gear=1},
+	["tungsten-gear-wheel"]={plates=1, gear=1},
 	-- DyTech Meteors --
 	-- DyTech Mining --
 	["basic-mining-drill-mk2"]={["basic-mining-drill"]=1, ["rotor1"]=2, ["item-exit1"]=1, ["frame1"]=1, mining=1},
@@ -323,7 +333,7 @@ craftitems =
 	["basic-laser-defense-equipment-2"]={["speed-module-3"]=2, ["laser-turret-5"]=5, plates=15, armor=1},
 	["basic-laser-defense-equipment-3"]={["speed-module-3"]=8, ["laser-turret-8"]=5, plates=45, armor=1},
 	["sniper-magazine"]={resource=3, plates=5, ammo=1},
-	[""]={[""]=1, [""]=25, [""]=5, plates=25, turret=1},
+	["sniper-turret"]={["sniper"]=1, ["advanced-circuit"]=25, ["advanced-processing-unit"]=5, plates=25, turret=1},
 	["laser-turret-2"]={["battery"]=6, ["stone-gear-wheel"]=10, ["electronic-circuit"]=10, plates=10, gems=8, turret=1},
 	["laser-turret-3"]={["battery"]=12, ["stone-gear-wheel"]=20, ["electronic-circuit"]=20, plates=20, gems=20, turret=1},
 	["laser-turret-4"]={["battery"]=3, ["advanced-circuit"]=5, ["steel-gear-wheel"]=5, plates=5, gems=3, turret=1},
