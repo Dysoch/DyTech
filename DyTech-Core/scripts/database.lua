@@ -1,9 +1,7 @@
 module("database")
 
 --  [""]={},
---to add to craftitems
 --  [""]={resource=1},
---to add to mineitems
 
 --[[CRAFTED ITEMS]]--
 
