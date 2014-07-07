@@ -146,6 +146,10 @@ game.onevent(defines.events.ontick, function(event)
 		fs.CollectByPosition("coal", 1.5, false)
 		fs.CollectByPosition("coal", 1.5, true)
 	end
+	--[[DyTech Item Collector]]--
+	if glob.dytechitem~=nil and event.tick%12==0 then
+		fs.DyTechItemCollect(dytechitem, 25)
+	end
 	if glob.gem~=nil and game.tick%60==0 then
 		for i,_ in pairs(glob.gem) do
 			local entities=game.findentities({{glob.gem[i].position.x-1,glob.gem[i].position.y-1},{glob.gem[i].position.x+1,glob.gem[i].position.y+1}})
@@ -178,12 +182,8 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 	glob.counter2.build = glob.counter2.build + 1
-	if database.meteor[event.createdentity.name] then
-		for counter, ingredients in pairs(database.meteor[event.createdentity.name]) do 
-			glob.meteor[counter]=glob.meteor[counter] + ingredients
-		end
-	elseif glob.compatibility.treefarm == false then
-		if event.createdentity.type == "tree" then
+	if event.createdentity.type == "tree" then
+		if glob.compatibility.treefarm == false then
 			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
 			if currentSeedTypeName ~= nil then
 				fs.seedPlaced(event.createdentity, currentSeedTypeName)
@@ -191,14 +191,19 @@ game.onevent(defines.events.onbuiltentity, function(event)
 			end
 		end
 	--[[Stone Collector Build]]--
-	elseif event.createdentity.name == "stone-collector-1" or event.createdentity.name == "stone-collector" then				
-		if glob.stone==nil then
-			glob.stone={}
-			glob.stonecount=0
-		end
+	elseif event.createdentity.name == "stone-collector-1" or event.createdentity.name == "stone-collector" then
 		glob.stonecount=glob.stonecount+1
 		glob.stone[glob.stonecount]={}
 		glob.stone[glob.stonecount].position=event.createdentity.position
+		--[[Coal Collector Build]]--
+	elseif event.createdentity.name == "coal-collector-1" or event.createdentity.name == "coal-collector" then	
+		glob.coalcount=glob.coalcount+1
+		glob.coal[glob.coalcount]={}
+		glob.coal[glob.coalcount].position=event.createdentity.position
+	elseif event.createdentity.name == "dytech-item-collector" then				
+		glob.dytechitemcount=glob.dytechitemcount+1
+		glob.dytechitem[glob.dytechitemcount]={}
+		glob.dytechitem[glob.dytechitemcount].position=event.createdentity.position
 	--[[Sand Collector Build]]--
 --	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
 --		if glob.sand==nil then
@@ -208,23 +213,6 @@ game.onevent(defines.events.onbuiltentity, function(event)
 --		glob.sandcount=glob.sandcount+1
 --		glob.sand[glob.sandcount]={}
 --		glob.sand[glob.sandcount].position=event.createdentity.position
-	--[[Coal Collector Build]]--
-	elseif event.createdentity.name == "coal-collector-1" or event.createdentity.name == "coal-collector" then				
-		if glob.coal==nil then
-			glob.coal={}
-			glob.coalcount=0
-		end
-		glob.coalcount=glob.coalcount+1
-		glob.coal[glob.coalcount]={}
-		glob.coal[glob.coalcount].position=event.createdentity.position
-	elseif event.createdentity.name == "gem-collector" then				
-		if glob.gem==nil then
-			glob.gem={}
-			glob.gemcount=0
-		end
-		glob.gemcount=glob.gemcount+1
-		glob.gem[glob.gemcount]={}
-		glob.gem[glob.gemcount].position=event.createdentity.position
 	end
 end)
 

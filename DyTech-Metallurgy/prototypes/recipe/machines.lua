@@ -3,7 +3,7 @@ data:extend(
   {
    	type = "recipe",
    	name = "air-intake",
-	energy_required = 60,
+	energy_required = 10,
     enabled = false,
     subgroup = "metallurgy-machines",
 	ingredients = 
@@ -16,7 +16,7 @@ data:extend(
   {
    	type = "recipe",
    	name = "centrifuge",
-	energy_required = 60,
+	energy_required = 20,
     enabled = false,
     subgroup = "metallurgy-machines",
 	ingredients = 

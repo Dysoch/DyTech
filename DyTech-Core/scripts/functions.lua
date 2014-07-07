@@ -119,8 +119,8 @@ function OnLoad()
 --	if not glob.sandcount then glob.sandcount=0 end
 	if not glob.coal then glob.coal={} end
 	if not glob.coalcount then glob.coalcount=0 end
-	if not glob.gem then glob.gem={} end
-	if not glob.gemcount then glob.gemcount=0 end
+	if not glob.dytechitem then glob.dytechitem={} end
+	if not glob.dytechitemcount then glob.dytechitemcount=0 end
 	if not glob.trees then glob.trees = {} end
 	if not glob.trees.seedTypes then glob.trees.seedTypes = {} end
 	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes = {RubberTree = {
@@ -158,8 +158,8 @@ glob.stonecount=0
 --glob.sandcount=0
 glob.coal={}
 glob.coalcount=0
-glob.gem={}
-glob.gemcount=0
+glob.dytechitem={}
+glob.dytechitemcount=0
 glob.compatibility={treefarm=false, Fmod=false}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
@@ -290,6 +290,29 @@ function CollectByPosition(name, radius, ext)
 					game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
 					item.destroy()
 				break
+				end
+			end
+		end
+	end
+end
+
+function DyTechItemCollect(name, radius)
+	local realname="dytech-item-collector"
+	for i, value in pairs(glob.dytechitem) do
+	local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
+		if not foundcollector[1] then
+		table.remove(glob.dytechitem, i)
+		break
+		else
+		local insertable=game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}
+			for _, item in pairs(insertable) do
+				if game.findentitiesfiltered{type="transport-belt", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="transport-belt-to-ground", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="splitter", area={getboundingbox(item.position, 0.5)}}[1]==nil then
+					if item.stack and foundcollector[1].caninsert(item.stack) then
+						foundcollector[1].insert(item.stack)
+						game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
+						item.destroy()
+					break
+					end
 				end
 			end
 		end

@@ -24,11 +24,14 @@ require("prototypes.base-edit.recipe")
 require("prototypes.base-edit.tech")
 
 -- Entity
+require("prototypes.entity.collector")
 require("prototypes.entity.explosion")
 require("prototypes.entity.nature")
 
 -- Item
+require("prototypes.item.collector")
 require("prototypes.item.intermediate")
 
 -- Recipe
+require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")

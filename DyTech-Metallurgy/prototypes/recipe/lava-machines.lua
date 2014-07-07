@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "geothermal-extractor",
-    energy_required = 20,
+    energy_required = 10,
     subgroup = "metallurgy-machines",
     ingredients =
     {
@@ -18,7 +18,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-handler",
-    energy_required = 20,
+    energy_required = 10,
     subgroup = "metallurgy-machines",
     ingredients =
     {
