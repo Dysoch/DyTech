@@ -1,3 +1,13 @@
 data.raw["recipe"]["molten-iron"].enabled = false
+data.raw["recipe"]["molten-iron"].hidden = true
+data.raw["recipe"]["forgeiron"].hidden = true
 data.raw["recipe"]["molten-copper"].enabled = false
-data.raw["technology"]["Advanced-metal-processing"].enabled = false
+data.raw["recipe"]["molten-copper"].hidden = true
+data.raw["recipe"]["forgecopper"].hidden = true
+data.raw["recipe"]["molten-gold"].enabled = false
+data.raw["recipe"]["molten-gold"].hidden = true
+data.raw["recipe"]["forgegold"].hidden = true
+data.raw["recipe"]["molten-silver"].enabled = false
+data.raw["recipe"]["molten-silver"].hidden = true
+data.raw["recipe"]["forgesilver"].hidden = true
+data.raw["recipe"]["forgetin"].hidden = true

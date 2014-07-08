@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Metallurgy",
 	"author":"Dysoch",
-	"version":"0.9.9",
+	"version":"1.0.0",
 	"title":"DyTech-Metallurgy",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Metallurgy",
-	"dependencies": ["DyTech-Core >= 0.7.0", "? F-mod >= 1.10.5"]
+	"dependencies": ["DyTech-Core >= 0.8.0", "? F-mod >= 1.10.5", "? DyTech-Warfare >= 1.0.0"]
 }

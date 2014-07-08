@@ -84,6 +84,39 @@ data:extend(
   },
   {
     type = "technology",
+    name = "molds-07",
+    icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-gear-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-gear-4"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-gear-5"
+      },
+    },
+    prerequisites = {"molds-02", "lava-smelting-06"},
+    unit =
+    {
+      count = 450,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 30
+    },
+    order = "molds-07",
+	upgrade = true,
+  },
+  {
+    type = "technology",
     name = "molds-03",
     icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
     effects =
@@ -117,6 +150,31 @@ data:extend(
       time = 30
     },
     order = "molds-03",
+	upgrade = true,
+  },
+  {
+    type = "technology",
+    name = "molds-08",
+    icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-wire-4"
+      },
+    },
+    prerequisites = {"molds-03", "lava-smelting-06"},
+    unit =
+    {
+      count = 450,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 30
+    },
+    order = "molds-08",
 	upgrade = true,
   },
   {
