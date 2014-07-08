@@ -16,8 +16,8 @@ require("prototypes.technology.tools-gems")
 end
 
 -- Active When DyTech-Metallurgy is installed!
-if data.raw.item["tungsten-ore"] then
-require("prototypes.item.tools-metallurgy")
-require("prototypes.recipe.tools-metallurgy")
+--if data.raw.item["tungsten-ore"] then
+--require("prototypes.item.tools-metallurgy")
+--require("prototypes.recipe.tools-metallurgy")
 --require("prototypes.technology.tools-metallurgy")
-end
+--end

@@ -85,8 +85,9 @@ game.onevent(defines.events.onplayermineditem, function(event)
 		end
 	end
 	if event.itemstack.name == "raw-wood" then
-		if math.random(100) == 50 then
+		if math.random(50) == 25 then
 			game.player.insert{name="resin",count=math.random(1,4)}
+			game.player.print("You found some Rubber Resin!")
 		end
 	end
 end)

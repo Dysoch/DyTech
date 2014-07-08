@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Tools",
 	"author":"Dysoch",
-	"version":"1.0.0",
+	"version":"1.0.1",
 	"title":"DyTech-Tools",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Tools",
-	"dependencies": ["DyTech-Core >= 0.6.0", "? DyTech-Metallurgy >= 1.0.0"]
+	"dependencies": ["DyTech-Core >= 0.8.0", "? DyTech-Metallurgy >= 1.0.0"]
 }

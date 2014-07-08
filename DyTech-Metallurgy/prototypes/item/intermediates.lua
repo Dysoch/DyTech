@@ -35,7 +35,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw-material",
     order = "sand",
-    stack_size = 100
+    stack_size = 5000
   },
 }
 )

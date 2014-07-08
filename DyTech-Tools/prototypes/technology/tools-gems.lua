@@ -8,7 +8,23 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "advanced-steel-axe"
+        recipe = "ruby-axe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "sapphire-axe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "emerald-axe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "topaz-axe"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "diamond-axe"
       },
     },
     prerequisites = {"tools-04", "gem-processing"},
