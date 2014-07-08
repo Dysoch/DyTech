@@ -59,8 +59,14 @@ require("prototypes.recipe.ore-smelting-basic")
 require("prototypes.recipe.pipes")
 
 -- resource 
+require("prototypes.resource.gold")
 require("prototypes.resource.lava")
+require("prototypes.resource.lead")
 require("prototypes.resource.sand")
+require("prototypes.resource.silver")
+require("prototypes.resource.tin")
+require("prototypes.resource.tungsten")
+require("prototypes.resource.zinc")
 
 -- tech
 require("prototypes.technology.lava")

@@ -11,6 +11,12 @@ data:extend(
     name = "sand",
     richness = true,
     order = "s"
-  }
+  },
+  {
+    type = "autoplace-control",
+    name = "metallurgy-ores",
+    richness = true,
+    order = "m-o"
+  },
 }
 )

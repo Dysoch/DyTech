@@ -3,12 +3,12 @@ data:extend(
   {
 	type = "resource",
 	name = "lead-ore",
-	icon = "__OreTech__/graphics/lead-icon.png",
+	icon = "__DyTech-Metallurgy__/graphics/icons/ore-lead.png",
 	flags = {"placeable-neutral"},
 	order= "z-o",
 	minable = 
 	{
-	  hardness = 0.9,
+	  hardness = 1.2,
 	  mining_particle = "sand-particle",
 	  mining_time = 2,
 	  result = "lead-ore"
@@ -17,10 +17,11 @@ data:extend(
 	selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	autoplace =
     {
-      control = "lead-ore",
+      control = "metallurgy-ores",
       sharpness = 1,
+      max_probability = 0.04,
       richness_multiplier = 11000,
-      richness_base = 5,
+      richness_base = 11,
       size_control_multiplier = 0.06,
       peaks = {
         {
@@ -56,28 +57,28 @@ data:extend(
         {
           influence = -0.2,
           max_influence = 0,
-          noise_layer = "stone",
+          noise_layer = "metallurgy-ores",
           noise_octaves_difference = -3,
           noise_persistence = 0.45,
         },
         {
           influence = -0.2,
           max_influence = 0,
-          noise_layer = "copper-ore",
+          noise_layer = "metallurgy-ores",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
         {
           influence = -0.2,
           max_influence = 0,
-          noise_layer = "iron-ore",
+          noise_layer = "metallurgy-ores",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
         {
           influence = -0.2,
           max_influence = 0,
-          noise_layer = "coal",
+          noise_layer = "metallurgy-ores",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
@@ -86,7 +87,7 @@ data:extend(
     stage_counts = {1000, 750, 500, 400, 200, 100, 50, 20},
 	stages = 
 	{
-	  filename = "__OreTech__/graphics/lead-ore.png",
+	  filename = "__DyTech-Metallurgy__/graphics/entity/ores/lead-ore.png",
 	  priority = "extra-high",
 	  frame_width = 38,
 	  frame_height = 38,

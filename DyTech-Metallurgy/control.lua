@@ -18,8 +18,19 @@ end)
 
 remote.addinterface("DyTech-Metallurgy",
 {
-  Regenerate = function()
+  RegenerateOres = function()
 	game.regenerateentity("sand")
+	game.regenerateentity("gold-ore")
+	game.regenerateentity("lead-ore")
+	game.regenerateentity("tungsten-ore")
+	game.regenerateentity("silver-ore")
+	game.regenerateentity("tin-ore")
+	game.regenerateentity("zinc-ore")
+  end,
+  
+  RegenerateFluids = function()
 	game.regenerateentity("lava-600")
+	game.regenerateentity("lava-1400")
+	game.regenerateentity("lava-2800")
   end
 })
