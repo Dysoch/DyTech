@@ -5,7 +5,7 @@ data:extend(
     name = "metallurgy-iron-plate",
 	enabled = false,
 	category = "forge",
-    energy_required = 0.4,
+    energy_required = 0.2,
     subgroup = "metallurgy-plates",
     ingredients =
     {
@@ -22,7 +22,7 @@ data:extend(
     name = "metallurgy-copper-plate",
 	enabled = false,
 	category = "forge",
-    energy_required = 0.4,
+    energy_required = 0.2,
     subgroup = "metallurgy-plates",
     ingredients =
     {
@@ -39,7 +39,7 @@ data:extend(
     name = "metallurgy-steel-plate",
 	enabled = false,
 	category = "forge",
-    energy_required = 0.8,
+    energy_required = 0.4,
     subgroup = "metallurgy-plates",
     ingredients =
     {
