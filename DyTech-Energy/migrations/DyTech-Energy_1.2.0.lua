@@ -19,6 +19,9 @@ for index, force in pairs(game.forces) do
 		force.recipes["steam-engine-secondary-mk5"].enabled = true
 		force.recipes["steam-engine-terciary-mk5"].enabled = true
 	end
+	if force.technologies["solar-energy"].researched then
+		force.recipes["solar-panel-secondary"].enabled = true
+	end
 end
 
 game.player.force.resettechnologies()
