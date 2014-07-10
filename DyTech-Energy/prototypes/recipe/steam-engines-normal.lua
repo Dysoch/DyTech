@@ -28,9 +28,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-primary", 1},
+      {"pipe-mk2", 5},
+      {"electronic-circuit", 5}
     },
     result = "steam-engine-primary-mk2"
   },
@@ -40,9 +40,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine", 1},
+      {"pipe-mk2", 5},
+      {"electronic-circuit", 5}
     },
     result = "steam-engine-secondary-mk2"
   },
@@ -52,9 +52,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-terciary", 1},
+      {"pipe-mk2", 5},
+      {"electronic-circuit", 5}
     },
     result = "steam-engine-terciary-mk2"
   },
@@ -64,9 +64,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-primary-mk2", 1},
+      {"pipe-mk3", 5},
+      {"advanced-circuit", 5}
     },
     result = "steam-engine-primary-mk3"
   },
@@ -76,9 +76,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-secondary-mk2", 1},
+      {"pipe-mk3", 5},
+      {"advanced-circuit", 5}
     },
     result = "steam-engine-secondary-mk3"
   },
@@ -88,9 +88,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-terciary-mk2", 1},
+      {"pipe-mk3", 5},
+      {"advanced-circuit", 5}
     },
     result = "steam-engine-terciary-mk3"
   },
@@ -100,9 +100,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-primary-mk3", 1},
+      {"pipe-mk4", 5},
+      {"processing-unit", 5}
     },
     result = "steam-engine-primary-mk4"
   },
@@ -112,9 +112,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-secondary-mk3", 1},
+      {"pipe-mk4", 5},
+      {"processing-unit", 5}
     },
     result = "steam-engine-secondary-mk4"
   },
@@ -124,9 +124,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-terciary-mk3", 1},
+      {"pipe-mk4", 5},
+      {"processing-unit", 5}
     },
     result = "steam-engine-terciary-mk4"
   },
@@ -136,9 +136,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-primary-mk4", 1},
+      {"pipe-mk5", 5},
+      {"advanced-processing-unit", 5}
     },
     result = "steam-engine-primary-mk5"
   },
@@ -148,9 +148,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-secondary-mk4", 1},
+      {"pipe-mk5", 5},
+      {"advanced-processing-unit", 5}
     },
     result = "steam-engine-secondary-mk5"
   },
@@ -160,9 +160,9 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"stone-gear-wheel", 5},
-      {"pipe", 5},
-      {"iron-plate", 5}
+      {"steam-engine-terciary-mk4", 1},
+      {"pipe-mk5", 5},
+      {"advanced-processing-unit", 5}
     },
     result = "steam-engine-terciary-mk5"
   },

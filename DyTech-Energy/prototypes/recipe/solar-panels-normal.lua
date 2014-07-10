@@ -18,9 +18,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel", 1},
+      {"advanced-circuit", 15},
+      {"copper-plate", 10}
     },
     result = "solar-panel-primary-mk2"
   },
@@ -30,9 +30,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-secondary", 1},
+      {"advanced-circuit", 15},
+      {"copper-plate", 10}
     },
     result = "solar-panel-secondary-mk2"
   },
@@ -42,9 +42,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-primary-mk2", 1},
+      {"processing-unit", 15},
+      {"copper-plate", 20}
     },
     result = "solar-panel-primary-mk3"
   },
@@ -54,9 +54,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-secondary-mk2", 1},
+      {"processing-unit", 15},
+      {"copper-plate", 20}
     },
     result = "solar-panel-secondary-mk3"
   },
@@ -66,9 +66,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-primary-mk3", 1},
+      {"advanced-processing-unit", 15},
+      {"copper-plate", 40}
     },
     result = "solar-panel-primary-mk4"
   },
@@ -78,9 +78,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-secondary-mk3", 1},
+      {"advanced-processing-unit", 15},
+      {"copper-plate", 40}
     },
     result = "solar-panel-secondary-mk4"
   },
@@ -90,9 +90,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-primary-mk4", 1},
+      {"advanced-processing-unit", 45},
+      {"copper-plate", 80}
     },
     result = "solar-panel-primary-mk5"
   },
@@ -102,9 +102,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 5},
-      {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"solar-panel-secondary-mk4", 1},
+      {"advanced-processing-unit", 45},
+      {"copper-plate", 80}
     },
     result = "solar-panel-secondary-mk5"
   },
