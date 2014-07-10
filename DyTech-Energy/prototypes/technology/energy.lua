@@ -22,6 +22,18 @@ data:extend(
         type = "unlock-recipe",
         recipe = "small-pump-mk2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-primary-mk2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-secondary-mk2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-terciary-mk2"
+      },
     },
     prerequisites = {"oil-processing"},
     unit =
@@ -57,6 +69,18 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "small-pump-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-primary-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-secondary-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-terciary-mk3"
       },
     },
     prerequisites = {"energy-1"},
@@ -95,6 +119,18 @@ data:extend(
         type = "unlock-recipe",
         recipe = "small-pump-mk4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-primary-mk4"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-secondary-mk4"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-terciary-mk4"
+      },
     },
     prerequisites = {"energy-2"},
     unit =
@@ -132,6 +168,18 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "small-pump-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-primary-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-secondary-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-engine-terciary-mk5"
       },
     },
     prerequisites = {"energy-3"},

@@ -196,7 +196,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "terciary-output"
+      usage_priority = "terciary"
     },
     horizontal_animation =
     {
@@ -436,7 +436,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "terciary-output"
+      usage_priority = "terciary"
     },
     horizontal_animation =
     {
@@ -676,7 +676,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "terciary-output"
+      usage_priority = "terciary"
     },
     horizontal_animation =
     {
@@ -916,7 +916,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "terciary-output"
+      usage_priority = "terciary"
     },
     horizontal_animation =
     {
@@ -1156,7 +1156,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "terciary-output"
+      usage_priority = "terciary"
     },
     horizontal_animation =
     {
