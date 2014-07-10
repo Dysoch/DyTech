@@ -9,55 +9,55 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "steam-small",
     group = "dytech-energy",
     order = "1"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "steam-normal",
     group = "dytech-energy",
     order = "2"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "steam-large",
     group = "dytech-energy",
     order = "3"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "solar-small",
     group = "dytech-energy",
     order = "4"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "solar-normal",
     group = "dytech-energy",
     order = "5"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "solar-large",
     group = "dytech-energy",
     order = "6"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "accu-small",
     group = "dytech-energy",
     order = "7"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "accu-normal",
     group = "dytech-energy",
     order = "8"
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "accu-large",
     group = "dytech-energy",
     order = "9"
   },
