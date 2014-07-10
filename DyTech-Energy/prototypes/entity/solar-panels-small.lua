@@ -7,10 +7,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -18,6 +18,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -32,10 +33,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -43,6 +44,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -57,10 +59,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk2-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -68,6 +70,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -82,10 +85,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk2-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -93,6 +96,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -107,10 +111,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk3-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -118,6 +122,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -132,10 +137,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk3-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -143,6 +148,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -157,10 +163,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk4-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -168,6 +174,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -182,10 +189,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk4-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -193,6 +200,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -207,10 +215,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk5-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -218,6 +226,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -232,10 +241,10 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk5-small"},
     max_health = 100,
-    corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    corpse = "small-remnants",
+    collision_box = {{-0.45, -0.45}, {0.45, 0.45}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group =  "solar-panel-small",
     energy_source =
     {
       type = "electric",
@@ -243,6 +252,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 0.33,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,

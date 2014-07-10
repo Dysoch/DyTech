@@ -8,9 +8,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -18,6 +18,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -33,9 +34,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -43,6 +44,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -58,9 +60,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk2-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -68,6 +70,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -83,9 +86,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk2-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -93,6 +96,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -108,9 +112,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk3-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -118,6 +122,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -133,9 +138,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk3-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -143,6 +148,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -158,9 +164,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk4-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -168,6 +174,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -183,9 +190,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk4-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -193,6 +200,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -208,9 +216,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk5-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -218,6 +226,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
@@ -233,9 +242,9 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk5-large"},
     max_health = 100,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fast_replaceable_group =  "solar-panel",
+    collision_box = {{-2.9, -2.9}, {2.9, 2.9}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+	fast_replaceable_group =  "solar-panel-large",
     energy_source =
     {
       type = "electric",
@@ -243,6 +252,7 @@ data:extend(
     },
     picture =
     {
+	  scale = 2,
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
       priority = "high",
       width = 104,
