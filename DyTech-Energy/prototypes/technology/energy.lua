@@ -34,6 +34,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "steam-engine-terciary-mk2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "offshore-pump-mk2"
+      },
     },
     prerequisites = {"oil-processing"},
     unit =
@@ -81,6 +85,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "steam-engine-terciary-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "offshore-pump-mk3"
       },
     },
     prerequisites = {"energy-1"},
@@ -131,6 +139,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "steam-engine-terciary-mk4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "offshore-pump-mk4"
+      },
     },
     prerequisites = {"energy-2"},
     unit =
@@ -180,6 +192,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "steam-engine-terciary-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "offshore-pump-mk5"
       },
     },
     prerequisites = {"energy-3"},

@@ -197,6 +197,10 @@ craftitems =
 	["basic-accumulator-mk4"]={["basic-accumulator-mk2"]=1, ["battery"]=10, ["processing-unit"]=5, energy=10, machine=1},
 	["basic-accumulator-mk5"]={["basic-accumulator-mk3"]=1, ["battery"]=10, ["processing-unit"]=5, energy=10, machine=1},
 	["basic-accumulator-mk6"]={["basic-accumulator-mk4"]=1, ["basic-accumulator-mk5"]=1, ["battery"]=110, ["advanced-processing-unit"]=25, energy=50, machine=1},
+	["offshore-pump-mk2"]={["offshore-pump"]=1, ["pipe-mk2"]=1, ["iron-gear-wheel"]=1, machine=1, energy=1},
+	["offshore-pump-mk3"]={["offshore-pump-mk2"]=1, ["pipe-mk3"]=1, ["iron-gear-wheel"]=4, machine=1, energy=1},
+	["offshore-pump-mk4"]={["offshore-pump-mk3"]=1, ["pipe-mk4"]=1, ["steel-gear-wheel"]=1, machine=1, energy=1},
+	["offshore-pump-mk5"]={["offshore-pump-mk4"]=1, ["pipe-mk5"]=1, ["steel-gear-wheel"]=4, machine=1, energy=1},
 	-- DyTech Inserters --
 	["inserter-half"]={inserter=1, ["electronic-circuit"]=1, ["iron-gear-wheel"]=1, plates=1},
 	["inserter-long"]={inserter=2, plates=2, ["basic-inserter"]=1, ["electronic-circuit"]=2},

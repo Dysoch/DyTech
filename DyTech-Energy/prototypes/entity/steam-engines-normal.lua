@@ -9,7 +9,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.75,
     resistances = 
     {
       {
@@ -85,7 +85,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.75,
     resistances = 
     {
       {
@@ -155,13 +155,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-primary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.6,
     resistances = 
     {
       {
@@ -231,13 +231,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-secondary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.6,
     resistances = 
     {
       {
@@ -307,13 +307,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-terciary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.6,
     resistances = 
     {
       {
@@ -383,13 +383,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-primary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.45,
     resistances = 
     {
       {
@@ -459,13 +459,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-secondary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.45,
     resistances = 
     {
       {
@@ -535,13 +535,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-terciary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.45,
     resistances = 
     {
       {
@@ -611,13 +611,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-primary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.3,
     resistances = 
     {
       {
@@ -687,13 +687,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-secondary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.3,
     resistances = 
     {
       {
@@ -763,13 +763,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-terciary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.3,
     resistances = 
     {
       {
@@ -839,13 +839,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-primary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.15,
     resistances = 
     {
       {
@@ -915,13 +915,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-secondary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.15,
     resistances = 
     {
       {
@@ -991,13 +991,13 @@ data:extend(
   {
     type = "generator",
     name = "steam-engine-terciary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.15,
     resistances = 
     {
       {

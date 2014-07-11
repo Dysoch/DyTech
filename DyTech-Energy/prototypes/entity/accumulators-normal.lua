@@ -3,7 +3,7 @@ data:extend(
   {
     type = "accumulator",
     name = "basic-accumulator-mk2",
-    icon = "__base__/graphics/icons/basic-accumulator.png",
+    icon = "__DyTech-Energy__/graphics/icons/basic-accumulator2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk2"},
     max_health = 150,
@@ -68,7 +68,7 @@ data:extend(
   {
     type = "accumulator",
     name = "basic-accumulator-mk3",
-    icon = "__base__/graphics/icons/basic-accumulator.png",
+    icon = "__DyTech-Energy__/graphics/icons/basic-accumulator3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk3"},
     max_health = 150,
@@ -133,7 +133,7 @@ data:extend(
   {
     type = "accumulator",
     name = "basic-accumulator-mk4",
-    icon = "__base__/graphics/icons/basic-accumulator.png",
+    icon = "__DyTech-Energy__/graphics/icons/basic-accumulator4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk4"},
     max_health = 150,
@@ -198,7 +198,7 @@ data:extend(
   {
     type = "accumulator",
     name = "basic-accumulator-mk5",
-    icon = "__base__/graphics/icons/basic-accumulator.png",
+    icon = "__DyTech-Energy__/graphics/icons/basic-accumulator5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk5"},
     max_health = 150,
@@ -263,7 +263,7 @@ data:extend(
   {
     type = "accumulator",
     name = "basic-accumulator-mk6",
-    icon = "__base__/graphics/icons/basic-accumulator.png",
+    icon = "__DyTech-Energy__/graphics/icons/basic-accumulator6.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk6"},
     max_health = 150,

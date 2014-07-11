@@ -16,6 +16,7 @@ data:extend({
     },
     collision_box = {{-0.29, -0.29}, {0.29, 0.2}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
       base_area = 2,
@@ -85,6 +86,7 @@ data:extend({
     },
     collision_box = {{-0.29, -0.29}, {0.29, 0.2}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
       base_area = 4,
@@ -154,6 +156,7 @@ data:extend({
     },
     collision_box = {{-0.29, -0.29}, {0.29, 0.2}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
       base_area = 8,
@@ -223,6 +226,7 @@ data:extend({
     },
     collision_box = {{-0.29, -0.29}, {0.29, 0.2}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
       base_area = 16,

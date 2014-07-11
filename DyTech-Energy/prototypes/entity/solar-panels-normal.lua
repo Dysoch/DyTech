@@ -28,7 +28,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk2",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk2"},
     max_health = 100,
@@ -53,7 +53,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk2",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk2"},
     max_health = 100,
@@ -78,7 +78,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk3",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk3"},
     max_health = 100,
@@ -103,7 +103,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk3",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk3"},
     max_health = 100,
@@ -128,7 +128,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk4",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk4"},
     max_health = 100,
@@ -153,7 +153,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk4",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk4"},
     max_health = 100,
@@ -178,7 +178,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk5",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk5"},
     max_health = 100,
@@ -203,7 +203,7 @@ data:extend(
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk5",
-    icon = "__base__/graphics/icons/solar-panel.png",
+    icon = "__DyTech-Energy__/graphics/icons/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk5"},
     max_health = 100,

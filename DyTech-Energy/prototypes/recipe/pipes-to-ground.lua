@@ -6,10 +6,11 @@ data:extend(
 	enabled = false,
     ingredients = 
 	{
-	  {"pipe-to-ground", 1},
+	  {"pipe-to-ground", 2},
       {"steel-plate", 4},
 	},
-    result = "pipe-to-ground-mk2"
+    result = "pipe-to-ground-mk2",
+	result_count = 2
   },
   {
     type = "recipe",
@@ -17,10 +18,11 @@ data:extend(
 	enabled = false,
     ingredients = 
 	{
-	  {"pipe-to-ground-mk2", 1},
+	  {"pipe-to-ground-mk2", 2},
       {"steel-plate", 8},
 	},
-    result = "pipe-to-ground-mk3"
+    result = "pipe-to-ground-mk3",
+	result_count = 2
   },
   {
     type = "recipe",
@@ -28,10 +30,11 @@ data:extend(
 	enabled = false,
     ingredients = 
 	{
-	  {"pipe-to-ground-mk3", 1},
+	  {"pipe-to-ground-mk3", 2},
       {"steel-plate", 16},
 	},
-    result = "pipe-to-ground-mk4"
+    result = "pipe-to-ground-mk4",
+	result_count = 2
   },
   {
     type = "recipe",
@@ -39,10 +42,11 @@ data:extend(
 	enabled = false,
     ingredients = 
 	{
-	  {"pipe-to-ground-mk4", 1},
+	  {"pipe-to-ground-mk4", 2},
       {"steel-plate", 32},
 	},
-    result = "pipe-to-ground-mk5"
+    result = "pipe-to-ground-mk5",
+	result_count = 2
   },
 }
 )

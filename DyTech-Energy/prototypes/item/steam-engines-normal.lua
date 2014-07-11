@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-primary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "b[mk2]-a[primary]",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-secondary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "b[mk2]-b[secondary]",
@@ -43,7 +43,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-terciary-mk2",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "b[mk2]-c[terciary]",
@@ -53,7 +53,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-primary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "c[mk3]-a[primary]",
@@ -63,7 +63,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-secondary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "c[mk3]-b[secondary]",
@@ -73,7 +73,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-terciary-mk3",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "c[mk3]-c[terciary]",
@@ -83,7 +83,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-primary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "d[mk4]-a[primary]",
@@ -93,7 +93,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-secondary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "d[mk4]-b[secondary]",
@@ -103,7 +103,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-terciary-mk4",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine4.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "d[mk4]-c[terciary]",
@@ -113,7 +113,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-primary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "e[mk5]-a[primary]",
@@ -123,7 +123,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-secondary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "e[mk5]-b[secondary]",
@@ -133,7 +133,7 @@ data:extend(
   {
     type = "item",
     name = "steam-engine-terciary-mk5",
-    icon = "__base__/graphics/icons/steam-engine.png",
+    icon = "__DyTech-Energy__/graphics/icons/steam-engine5.png",
     flags = {"goes-to-quickbar"},
     subgroup = "steam-normal",
     order = "e[mk5]-c[terciary]",
