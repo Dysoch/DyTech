@@ -2,40 +2,64 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "basic-accumulator-primary",
+    name = "basic-accumulator-mk2",
     enabled = false,
     ingredients =
     {
-      {"iron-plate", 2},
-      {"copper-plate", 5},
-      {"electronic-circuit", 20}
-    },
-    result = "basic-accumulator-primary"
-  },
-  {
-    type = "recipe",
-    name = "basic-accumulator-secondary",
-    enabled = false,
-    ingredients =
-    {
-      {"iron-plate", 2},
-      {"copper-plate", 5},
-      {"electronic-circuit", 20}
-    },
-    result = "basic-accumulator-secondary"
-  },
-  {
-    type = "recipe",
-    name = "advanced-accumulator-terciary",
-    enabled = false,
-    ingredients =
-    {
-      {"tungsten-plate", 2},
-      {"copper-tungsten-alloy", 5},
       {"basic-accumulator", 1},
-      {"circuit3", 20}
+      {"battery", 5},
+      {"advanced-circuit", 5},
     },
-    result = "advanced-accumulator-terciary"
+    result = "basic-accumulator-mk2"
+  },
+  {
+    type = "recipe",
+    name = "basic-accumulator-mk3",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-accumulator", 1},
+      {"battery", 5},
+      {"advanced-circuit", 5},
+    },
+    result = "basic-accumulator-mk3"
+  },
+  {
+    type = "recipe",
+    name = "basic-accumulator-mk4",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-accumulator-mk2", 1},
+      {"battery", 10},
+      {"processing-unit", 5},
+    },
+    result = "basic-accumulator-mk4"
+  },
+  {
+    type = "recipe",
+    name = "basic-accumulator-mk5",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-accumulator-mk3", 1},
+      {"battery", 10},
+      {"processing-unit", 5},
+    },
+    result = "basic-accumulator-mk5"
+  },
+  {
+    type = "recipe",
+    name = "basic-accumulator-mk6",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-accumulator-mk4", 1},
+      {"basic-accumulator-mk5", 1},
+      {"battery", 110},
+      {"advanced-processing-unit", 25},
+    },
+    result = "basic-accumulator-mk6"
   },
 }
 )
