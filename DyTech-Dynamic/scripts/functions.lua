@@ -46,6 +46,12 @@ glob.crafted.miners={}
 glob.crafted.furnaces={}
 glob.crafted.logistics={}
 glob.crafted.transport={}
+glob.crafted.energy={boiler1=0, boiler2=0, boiler3=0, boiler4=0, boiler5=0, smallpole=0, mediumpole=0, largepole=0, substation=0, solar1=0, solar2=0, solar3=0, solar4=0, solar5=0, accu1=0, accu2=0, accu3=0, accu4=0, accu5=0, accu6=0}
+glob.crafted.inserter={burner=0, basic=0, long=0, smart=0, half=0, veryfast=0}
+glob.crafted.intermediates={stick=0, wood=0, circuit1=0, circuit2=0, circuit3=0, circuit4=0, battery=0, cable=0, wirered=0, wiregreen=0, bundledwire=0, gear1=0, gear2=0, gear3=0}
+glob.crafted.guns={pistol=0, submachine=0, shotgun=0, combatshotgun=0, sniper=0, railgun=0, flamethrower=0}
+glob.crafted.chests={wood=0, iron=0, steel=0, smart=0, logistic=0, medium=0, big=0}
+
 end
 
 function ModuleCheck()
