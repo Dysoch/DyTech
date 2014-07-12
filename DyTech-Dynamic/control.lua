@@ -39,5 +39,7 @@ end)
 
 remote.addinterface("DyTech-Dynamic",
 {
-
+  CounterPrinterIntermediates = function() 
+	fs.CounterPrinterIntermediates()
+  end
 })

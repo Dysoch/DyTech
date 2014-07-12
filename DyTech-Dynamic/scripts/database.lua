@@ -5,7 +5,7 @@ module("database")
 craftitems =
 {
 	-- Base Game Items --
-	["wood"]={resource=0.5},
+	["wood"]={intermediates.wood=1},
 	["wooden-chest"]={["wood"]=4, chest=1},
 	["iron-stick"]={plates=0.5, tech=0.5},
 	["iron-axe"]={plates=3, mining=1, ["iron-stick"]=2},
