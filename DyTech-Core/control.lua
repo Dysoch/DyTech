@@ -1,6 +1,7 @@
 require "defines"
 require "scripts/database"
 require "scripts/functions"
+require "scripts/recycler-database"
 
 local RubberSeedTypeName = "RubberTree"
 local RubberGrowingStates = {
@@ -76,6 +77,38 @@ incrementDynamicCounters = function(stack)
 end
 incrementDynamicCounters(event.itemstack)
 end)
+
+-- processItem is still a stack, just better named
+ProcessRecycling = function(processItem, recycler, recursive)
+  if recursive and type(recursive) == "table" then
+    local baseItems = recursive
+  else
+    local baseItems = {}
+  end
+  
+  if RecyclerDatabase.recycleitems[processItem.name] then
+    for baseItem, count in pairs(RecyclerDatabase.recycleitems[processItem.name]) do
+      if RecyclerDatabase.recycleitems[baseItem] then
+        ProcessRecycling({name=baseItem, count=count}, nil, baseItems)
+      else
+        table.insert(baseItems, {name=baseItem, count=(processItem.count*count)})
+      end
+    end
+  end
+  
+  -- will not run for recursive call since recycler is nil
+  if recycler and recycler.valid then
+    -- possible bug V since the baseItems aren't inserted yet...
+    recycler.remove(processItem)
+    for index, baseItem in pairs(baseItems) do
+      -- additional standard checks for room, if false maybe return the baseItem table...
+      -- this is why I chose to insert them as a stack in the else above, a tiny bit easier
+      recycler.insert(baseItem)
+    end
+  else
+    return baseItems
+  end
+end
 
 game.onevent(defines.events.onplayermineditem, function(event)
 	glob.counter2.mine = glob.counter2.mine + event.itemstack.count

@@ -33,7 +33,7 @@ data:extend({
     {
       effectivity = 0.75,
       fuel_inventory_size = 2,
-      emissions = 0.3 / 6.5,
+      emissions = 0.65 / 6.5,
       smoke =
       {
         {
@@ -151,7 +151,7 @@ data:extend({
     {
       effectivity = 1.0,
       fuel_inventory_size = 3,
-      emissions = 0.5 / 6.5,
+      emissions = 0.4 / 6.5,
       smoke =
       {
         {
@@ -269,7 +269,7 @@ data:extend({
     {
       effectivity = 1.25,
       fuel_inventory_size = 4,
-      emissions = 0.8 / 6.5,
+      emissions = 0.25 / 6.5,
       smoke =
       {
         {
@@ -387,7 +387,7 @@ data:extend({
     {
       effectivity = 1.5,
       fuel_inventory_size = 5,
-      emissions = 1.0 / 6.5,
+      emissions = 0.1 / 6.5,
       smoke =
       {
         {

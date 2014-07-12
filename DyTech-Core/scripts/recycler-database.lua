@@ -1,4 +1,4 @@
-module("recycler")
+module("RecyclerDatabase")
 
 --  [""]={},
 
