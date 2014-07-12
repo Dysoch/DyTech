@@ -92,6 +92,7 @@ data:extend(
     animation_speed_coefficient = 32,
     distance_to_enter = 0.35,
     ending_patch = ending_patch_prototype,
+    max_distance = 20,
     belt_horizontal =
     {
       filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
@@ -214,6 +215,7 @@ data:extend(
     animation_speed_coefficient = 64,
     distance_to_enter = 0.35,
     ending_patch = ending_patch_prototype,
+    max_distance = 25,
     belt_horizontal =
     {
       filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",

@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Transportation",
 	"author":"Dysoch",
-	"version":"1.0.1",
+	"version":"1.1.0",
 	"title":"DyTech-Transportation",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Transportation",
-	"dependencies": ["DyTech-Core >= 0.8.0"]
+	"dependencies": ["DyTech-Core >= 0.9.0"]
 }

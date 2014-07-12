@@ -1,3 +1,4 @@
+require("prototypes.base-edit.entity")
 require("prototypes.entity.transport")
 require("prototypes.entity.transport-belt")
 require("prototypes.item.transport")
