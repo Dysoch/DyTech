@@ -29,7 +29,7 @@ incrementDynamicCounters = function(stack)
 			if database.craftitems[counter] then
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
-				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
+				glob.crafted[counter]=glob.crafted[counter]+(stack.count*ingredients)
 			end
 		end
 	end
