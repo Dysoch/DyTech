@@ -42,12 +42,39 @@ glob.crafted.transport={}
 glob.crafted.capsules={}
 glob.crafted.armor={}
 glob.crafted.science={}
-glob.crafted.energy={dytech=0, boiler1=0, boiler2=0, boiler3=0, boiler4=0, boiler5=0, smallpole=0, mediumpole=0, largepole=0, substation=0, solar1=0, solar2=0, solar3=0, solar4=0, solar5=0, accu1=0, accu2=0, accu3=0, accu4=0, accu5=0, accu6=0}
-glob.crafted.inserter={dytech=0, burner=0, basic=0, long=0, smart=0, half=0, veryfast=0}
-glob.crafted.intermediates={dytech=0, stick=0, wood=0, circuit1=0, circuit2=0, circuit3=0, circuit4=0, battery=0, cable=0, wirered=0, wiregreen=0, bundledwire=0, gear1=0, gear2=0, gear3=0}
-glob.crafted.guns={dytech=0, pistol=0, submachine=0, shotgun=0, combatshotgun=0, sniper=0, railgun=0, flamethrower=0}
-glob.crafted.chests={dytech=0, wood=0, iron=0, steel=0, smart=0, logistic=0, medium=0, big=0}
-
+glob.crafted.ammo={}
+glob.crafted.crafters={}
+glob.crafted.others={} -- last of the line, when they cant be added to an other group!
+glob.crafted.energy={
+dytech=0, boiler1=0, boiler2=0, boiler3=0, boiler4=0, boiler5=0, smallpole=0, mediumpole=0, largepole=0, substation=0, solar1=0, solar2=0, solar3=0, solar4=0, solar5=0, accu1=0, accu2=0, accu3=0, accu4=0, accu5=0, accu6=0, steam1=0, steam2=0, steam3=0, steam4=0, steam5=0}
+glob.crafted.inserter={
+dytech=0, burner=0, basic=0, long=0, smart=0, half=0, veryfast=0}
+glob.crafted.intermediates={
+dytech=0, stick=0, wood=0, circuit1=0, circuit2=0, circuit3=0, circuit4=0, battery=0, cable=0, wirered=0, wiregreen=0, bundledwire=0, gear1=0, gear2=0, gear3=0, plastic=0}
+glob.crafted.guns={
+dytech=0, pistol=0, submachine=0, shotgun=0, combatshotgun=0, sniper=0, railgun=0, flamethrower=0, rocket=0}
+glob.crafted.ammo={
+dytech=0, basic=0, piercing=0, shotgun=0, piershotgun=0, sniper=0, railgun=0, rocket=0}
+glob.crafted.chests={
+dytech=0, wood=0, iron=0, steel=0, smart=0, logistic=0, medium=0, big=0}
+glob.crafted.tools={
+dytech=0, wooden=0, stone=0, copper=0, iron=0, steel=0, advsteel=0, sapphire=0, ruby=0, emerald=0, topaz=0, diamond=0, metallurgy=0}
+glob.crafted.furnaces={
+dytech=0, stone=0, steel=0, electric=0, forge=0, blastfurnace=0}
+glob.crafted.transport={
+dytech=0, belt1=0, belt2=0, belt3=0, belt4=0, belt5=0, underbelt1=0, underbelt2=0, underbelt3=0, underbelt4=0, underbelt5=0, splitter1=0, splitter2=0, splitter3=0, splitter4=0, splitter5=0, pipe1=0, pipe2=0, pipe3=0, pipe4=0, pipe5=0, underpipe1=0, underpipe2=0, underpipe3=0, underpipe4=0, underpipe5=0, pump1=0, pump2=0, pump3=0, pump4=0, pump5=0}
+glob.crafted.miners={
+dytech=0, burner=0, basic1=0, basic2=0, basic3=0, basic4=0, basic5=0, basic6=0, gems=0}
+glob.crafted.armor={
+dytech=0, basic=0}
+glob.crafted.capsules={
+dytech=0, poison=0, slowdown=0, grenade=0, defender=0, distractor=0, destroyer=0, discharge=0}
+glob.crafted.crafters={
+dytech=0, assem1=0, assem2=0, assem3=0}
+glob.crafted.logistics={
+dytech=0, repair1=0, repair2=0, repair3=0}
+glob.crafted.others={
+dytech=0, radar=0, lamp=0}
 end
 
 function ModuleCheck()
