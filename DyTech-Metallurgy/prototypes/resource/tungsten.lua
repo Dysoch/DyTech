@@ -9,7 +9,7 @@ data:extend(
 	minable = 
 	{
 	  hardness = 2.9,
-	  mining_particle = "sand-particle",
+	  mining_particle = "stone-particle",
 	  mining_time = 2,
 	  result = "tungsten-ore"
 	},

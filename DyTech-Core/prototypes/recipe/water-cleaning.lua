@@ -3,7 +3,9 @@ data:extend(
   {
     type = "recipe",
     name = "dirty-water-sand",
+    icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
 	category = "crafting-with-fluid",
+    subgroup = "metallurgy-intermediates",
     ingredients =
     {
 	  {type="fluid", name="dirty-water", amount=2},
@@ -17,7 +19,9 @@ data:extend(
   {
     type = "recipe",
     name = "dirty-water-stone",
+    icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
 	category = "crafting-with-fluid",
+    subgroup = "metallurgy-intermediates",
     ingredients =
     {
 	  {type="fluid", name="dirty-water", amount=5},
