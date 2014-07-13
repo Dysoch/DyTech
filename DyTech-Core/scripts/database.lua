@@ -303,7 +303,7 @@ craftitems =
 	["pollution-create-module-4"]={plates=5, modules=1, ["advanced-circuit"]=5, ["pollution-create-module-3"]=1},
 	["speed-module-4"]={plates=5, modules=1, ["advanced-circuit"]=5, ["speed-module-3"]=1},
 	["effectivity-module-4"]={plates=5, modules=1, ["advanced-circuit"]=5, ["effectivity-module-3"]=1},
-	["productivity-module-4"]={plates=5, modules=1, ["advanced-circuit"]=5, ["productivity-module-43"]=1},
+	["productivity-module-4"]={plates=5, modules=1, ["advanced-circuit"]=5, ["productivity-module-3"]=1},
 	["pollution-clean-module-5"]={plates=5, modules=1, ["processing-unit"]=5, ["pollution-clean-module-4"]=1},
 	["pollution-create-module-5"]={plates=5, modules=1, ["processing-unit"]=5, ["pollution-create-module-4"]=1},
 	["speed-module-5"]={plates=5, modules=1, ["processing-unit"]=5, ["speed-module-4"]=1},

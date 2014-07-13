@@ -18,3 +18,13 @@ inserters=true,storage=true,core=true,dynamic=false,modules=true,mining=true,com
 counter2={
 sectorscanned=4490,build=115404,mine=45467,dytech=258350,died=61395,pickup=27289,chunks=4306}}
 
+SuperSandro2000 = {
+counter={
+gear=12266,wall=0,alien=900,energy=725,chest=220,machine=766,gems=0,belt=4613,sectorscanned=0,modules=0,capsule=30,armor=9,inserter=1272,dytech=97618.5,mining=124,science=116,ammo=427,plates=53217.5,gun=2,tech=13089.5,robot=280,resource=9408.5,turret=153}
+combat={
+king=0,elder=0,berserker=0,big=0,queen=0,bird=0,medium=188,dytech=598,dog=0,small=410}
+counter2={
+mine=11473,pickup=5279,sectorscanned=758,build=7226,chunks=3094,dytech=28490,died=660}
+dytech={
+warfare=true,compatibility=false,meteors=false,core=true,dynamic=false,mining=true,modules=true,logistic=true,inserters=true,metallurgy=true,transportation=true,energy=true,tools=true,storage=true}
+}
