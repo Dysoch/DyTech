@@ -39,3 +39,4 @@ require("prototypes.item.intermediate")
 -- Recipe
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
+require("prototypes.recipe.water-cleaning")

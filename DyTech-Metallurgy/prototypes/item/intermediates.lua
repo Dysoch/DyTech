@@ -28,14 +28,5 @@ data:extend(
     order = "clay",
     stack_size = 100
   },
-  {
-    type = "item",
-    name = "sand",
-    icon = "__DyTech-Metallurgy__/graphics/icons/sand.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "raw-material",
-    order = "sand",
-    stack_size = 5000
-  },
 }
 )
