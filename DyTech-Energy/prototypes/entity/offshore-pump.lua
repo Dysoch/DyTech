@@ -7,7 +7,7 @@ data:extend({
     minable = {mining_time = 1, result = "offshore-pump-mk2"},
     max_health = 160,
     corpse = "small-remnants",
-    fluid = "water",
+    fluid = "dirty-water",
     resistances =
     {
       {
@@ -76,7 +76,7 @@ data:extend({
     minable = {mining_time = 1, result = "offshore-pump-mk3"},
     max_health = 240,
     corpse = "small-remnants",
-    fluid = "water",
+    fluid = "dirty-water",
     resistances =
     {
       {
@@ -145,7 +145,7 @@ data:extend({
     minable = {mining_time = 1, result = "offshore-pump-mk4"},
     max_health = 320,
     corpse = "small-remnants",
-    fluid = "water",
+    fluid = "dirty-water",
     resistances =
     {
       {
@@ -214,7 +214,7 @@ data:extend({
     minable = {mining_time = 1, result = "offshore-pump-mk5"},
     max_health = 400,
     corpse = "small-remnants",
-    fluid = "water",
+    fluid = "dirty-water",
     resistances =
     {
       {
