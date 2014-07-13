@@ -29,6 +29,9 @@ require("prototypes.entity.collector")
 require("prototypes.entity.explosion")
 require("prototypes.entity.nature")
 
+-- Fluids
+require("prototypes.fluid.water")
+
 -- Item
 require("prototypes.item.collector")
 require("prototypes.item.intermediate")
