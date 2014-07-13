@@ -20,6 +20,10 @@ game.onevent(defines.events.ontick, function(event)
 	if event.tick%18000==0 then
 		fs.ModuleCheck()
 	end
+	--[[Dynamic System unlocks]]--
+	ds.dynamicUnlocks(event, ds.dsttime(), ds.eventtime)
+	--[[Rewards]]--
+	ds.dynamicRewards(event, ds.dsttime(), ds.eventtime)
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
@@ -37,7 +41,7 @@ incrementDynamicCounters = function(stack)
 					glob.crafted[it()]=glob.crafted[it2()]+(stack.count*ingredients)
 				elseif count == 2 then
 					glob.crafted[it()][it()]=glob.crafted[it2()][it2()]+(stack.count*ingredients)
-				else -- this is why it's ugly! more ifs must be added manually.
+				else -- more ifs must be added manually.
 					game.player.print("Tell Dysoch he needs more dynamic iterator statements for" .. stack.name)
 				end
 			end
@@ -53,11 +57,12 @@ remote.addinterface("DyTech-Dynamic",
 	fs.CounterPrinterIntermediates()
   end,
   
+  --temp call --
+  CounterPrint = function() 
+	fs.CounterPrinter()
+  end,
+  
   ToggleDynamicSystem = function()
-	if glob.dynamic==true then
-		glob.dynamic = false
-	else
-		glob.dynamic = true
-	end
+	fs.DynamicToggle()
   end
 })

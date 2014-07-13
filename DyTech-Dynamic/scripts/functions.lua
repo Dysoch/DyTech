@@ -22,10 +22,50 @@ end
 
 function OnLoad()
 	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
+	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
+	if not glob.counter.dytech then glob.counter.dytech=0 end
+	if not glob.counter.gear then glob.counter.gear=0 end
+	if not glob.counter.resource then glob.counter.resource=0 end
+	if not glob.counter.mining then glob.counter.mining=0 end
+	if not glob.counter.robot then glob.counter.robot=0 end
+	if not glob.counter.ammo then glob.counter.ammo=0 end
+	if not glob.counter.gun then glob.counter.gun=0 end
+	if not glob.counter.machine then glob.counter.machine=0 end
+	if not glob.counter.capsule then glob.counter.capsule=0 end
+	if not glob.counter.tech then glob.counter.tech=0 end
+	if not glob.counter.plates then glob.counter.plates=0 end
+	if not glob.counter.inserter then glob.counter.inserter=0 end
+	if not glob.counter.energy then glob.counter.energy=0 end
+	if not glob.counter.chest then glob.counter.chest=0 end
+	if not glob.counter.armor then glob.counter.armor=0 end
+	if not glob.counter.gems then glob.counter.gems=0 end
+	if not glob.counter.belt then glob.counter.belt=0 end
+	if not glob.counter.turret then glob.counter.turret=0 end
+	if not glob.counter.alien then glob.counter.alien=0 end
+	if not glob.counter.science then glob.counter.science=0 end
+	if not glob.counter.wall then glob.counter.wall=0 end
+	if not glob.counter.modules then glob.counter.modules=0 end
+	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0} end
+	if not glob.combat.dytech then glob.combat.dytech=0 end
+	if not glob.combat.small then glob.combat.small=0 end
+	if not glob.combat.medium then glob.combat.medium=0 end
+	if not glob.combat.big then glob.combat.big=0 end
+	if not glob.combat.berserker then glob.combat.berserker=0 end
+	if not glob.combat.elder then glob.combat.elder=0 end
+	if not glob.combat.king then glob.combat.king=0 end
+	if not glob.combat.queen then glob.combat.queen=0 end
+	if not glob.combat.dog then glob.combat.dog=0 end
+	if not glob.combat.bird then glob.combat.bird=0 end
+	if not glob.reward then glob.reward={axe1=false} end
+	if not glob.reward.axe1 then glob.reward.axe1=false end
 end
 
 function OnInit()
+	game.player.print("Dynamic System starts Offline! You have to manually start it via the console command found at the Forum Topic 'Console Commands'")
 glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
+glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0}
+glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
+glob.reward={axe1=false}
 glob.dynamic=true
 glob.crafted={}
 glob.crafted.energy={}
@@ -87,6 +127,67 @@ glob.crafted.others={
 dytech=0, radar=0, lamp=0, port=0, wall=0, rocketdefense=0, beacon=0, plane=0, barrel=0, collectors=0, alien=0}
 end
 
+function DynamicToggle()
+	if glob.dynamic==true then
+		glob.dynamic = false
+		game.player.print("Dynamic System is now offline. Technologies however won't return!")
+	else
+		glob.dynamic = true
+		game.player.print("Dynamic System is now online. Enjoy the System!")
+	end
+end
+
+function CounterTransfer()
+glob.counter.dytech=0 
+glob.counter.gear=0 
+glob.counter.resource=0 
+glob.counter.mining=0 
+glob.counter.robot=0 
+glob.counter.ammo=0 
+glob.counter.gun=0 
+glob.counter.machine=0 
+glob.counter.capsule=0 
+glob.counter.tech=0 
+glob.counter.plates=0 
+glob.counter.inserter=0 
+glob.counter.energy=0 
+glob.counter.chest=0 
+glob.counter.armor=0 
+glob.counter.gems=0 
+glob.counter.belt=0 
+glob.counter.turret=0 
+glob.counter.alien=0 
+glob.counter.science=0 
+glob.counter.wall=0 
+glob.counter.modules=0 
+glob.counter.dytech = glob.counter.dytech + CoreDynamicInterface(dytech)
+glob.counter.gear = glob.counter.gear + CoreDynamicInterface(gear)
+glob.counter.resource = glob.counter.resource + CoreDynamicInterface(resource)
+glob.counter.mining = glob.counter.mining + CoreDynamicInterface(mining)
+glob.counter.robot = glob.counter.robot + CoreDynamicInterface(robot)
+glob.counter.ammo = glob.counter.ammo + CoreDynamicInterface(ammo)
+glob.counter.gun = glob.counter.gun + CoreDynamicInterface(gun)
+glob.counter.machine = glob.counter.machine + CoreDynamicInterface(machine)
+glob.counter.capsule = glob.counter.capsule + CoreDynamicInterface(capsule)
+glob.counter.tech = glob.counter.tech + CoreDynamicInterface(tech)
+glob.counter.plates = glob.counter.plates + CoreDynamicInterface(plates)
+glob.counter.inserter = glob.counter.inserter + CoreDynamicInterface(inserter)
+glob.counter.energy = glob.counter.energy + CoreDynamicInterface(energy)
+glob.counter.chest = glob.counter.chest + CoreDynamicInterface(chest)
+glob.counter.armor = glob.counter.armor + CoreDynamicInterface(armor)
+glob.counter.gems = glob.counter.gems + CoreDynamicInterface(gems)
+glob.counter.belt = glob.counter.belt + CoreDynamicInterface(belt)
+glob.counter.turret = glob.counter.turret + CoreDynamicInterface(turret)
+glob.counter.alien = glob.counter.alien + CoreDynamicInterface(alien)
+glob.counter.science = glob.counter.science + CoreDynamicInterface(science)
+glob.counter.wall = glob.counter.wall + CoreDynamicInterface(wall)
+glob.counter.modules = glob.counter.modules + CoreDynamicInterface(modules)
+end
+
+function CoreDynamicInterface(counter)
+remote.call("DyTech-Core", "checkCounter", [counter])
+end
+
 function ModuleCheck()
 	if remote.call("DyTech-Core", "detectModule", "core")==true then glob.modules.core = true else glob.modules.core = false end 
 	if remote.call("DyTech-Core", "detectModule", "compatibility")==true then glob.modules.compatibility = true else glob.modules.compatibility = false end 
@@ -101,4 +202,31 @@ function ModuleCheck()
 	if remote.call("DyTech-Core", "detectModule", "tools")==true then glob.modules.tools = true else glob.modules.tools = false end 
 	if remote.call("DyTech-Core", "detectModule", "transportation")==true then glob.modules.transportation = true else glob.modules.transportation = false end 
 	if remote.call("DyTech-Core", "detectModule", "warfare")==true then glob.modules.warfare = true else glob.modules.warfare = false end 
+end
+
+-- temp functions
+function CounterPrinter()
+	game.player.print("Here are all your counters with their current status!")
+	game.player.print("Gear:".." "..tostring(glob.counter.gear))
+	game.player.print("Resource:".." "..tostring(glob.counter.resource))
+	game.player.print("Mining:".." "..tostring(glob.counter.mining))
+	game.player.print("Robot:".." "..tostring(glob.counter.robot))
+	game.player.print("Machine:".." "..tostring(glob.counter.machine))
+	game.player.print("Gun:".." "..tostring(glob.counter.gun))
+	game.player.print("Ammo:".." "..tostring(glob.counter.ammo))
+	game.player.print("Capsule:".." "..tostring(glob.counter.capsule))
+	game.player.print("Tech:".." "..tostring(glob.counter.tech))
+	game.player.print("Plates:".." "..tostring(glob.counter.plates))
+	game.player.print("Inserter:".." "..tostring(glob.counter.inserter))
+	game.player.print("Energy:".." "..tostring(glob.counter.energy))
+	game.player.print("Chest:".." "..tostring(glob.counter.chest))
+	game.player.print("Armor:".." "..tostring(glob.counter.armor))
+	game.player.print("Gems:".." "..tostring(glob.counter.gems))
+	game.player.print("Belt:".." "..tostring(glob.counter.belt))
+	game.player.print("Turret:".." "..tostring(glob.counter.turret))
+	game.player.print("Alien:".." "..tostring(glob.counter.alien))
+	game.player.print("Science:".." "..tostring(glob.counter.science))
+	game.player.print("Wall:".." "..tostring(glob.counter.wall))
+	game.player.print("Modules:".." "..tostring(glob.counter.modules))
+	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end

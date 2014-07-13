@@ -1,20 +1,27 @@
 module("ds", package.seeall)
+require "scripts/functions"
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 74
+dstotalevents = 300 --[[This makes 5 minutes before the entire unlock and reward event start again]]--
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
 
---[[The functions essential for the Dynamic System!]]--
+-- Unlocks range from 1 to 200
+-- Rewards range from 201 to 300
+-- These values will be increased when needed
 
---[[Dynamic System unlock event themself!]]--
-function dynamicUnlocks(event, ttime, r)   
-	
+--[[Dynamic System Unlock events!]]--
+function dynamicUnlocks(event, ttime, r) 
+	--[[This first event makes sure the latest counters from DyTech-Core are transfered here! They will be reset to there newest numbers everytime the loop starts again! This is an essential event!!! DO NOT MODIFY THIS!]]--
+	if event.tick%ttime==(r*1) then
+		fs.CounterTransfer()
+	end
 end
 
-function dynamicRewards(event)
-	if event.tick%3600==0 then
+--[[Dynamic System Reward Events!]]--
+function dynamicRewards(event, ttime, r)
+	if event.tick%ttime==(r*201) then
 		if not glob.reward.axe1 then 
 			if glob.counter.dytech > math.random(5000,7500) then
 				game.player.insert{name="steel-axe",count=1}
