@@ -26,6 +26,7 @@ end
 
 function OnInit()
 glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
+glob.dynamic=true
 glob.crafted={}
 glob.crafted.energy={}
 glob.crafted.inserters={}

@@ -16,8 +16,8 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	--[[Checking to see which modules are installed. This happens every hour!]]--
-	if event.tick%216000==0 then
+	--[[Checking to see which modules are installed. This happens every 5 Minutes!]]--
+	if event.tick%18000==0 then
 		fs.ModuleCheck()
 	end
 end)
@@ -51,5 +51,13 @@ remote.addinterface("DyTech-Dynamic",
 {
   CounterPrinterIntermediates = function() 
 	fs.CounterPrinterIntermediates()
+  end,
+  
+  ToggleDynamicSystem = function()
+	if glob.dynamic==true then
+		glob.dynamic = false
+	else
+		glob.dynamic = true
+	end
   end
 })
