@@ -220,8 +220,8 @@ craftitems =
 	["inserter-fast-half-smart"]={inserter=4, ["processing-unit"]=10, ["inserter-long-filter"]=1, plates=15},
 	["inserter-veryfast-smart"]={inserter=4, ["processing-unit"]=10, ["inserter-long-filter"]=1, plates=15},
 	["inserter-veryfast-half-smart"]={inserter=4, ["processing-unit"]=10, ["inserter-long-filter"]=1, plates=15},
-	["dytech-inserter"]={inserter=5, ["iron-gear-wheel"]=10, ["circuit3"]=10, plates=10},
-	["dytech-inserter-fast"]={inserter=6, ["circuit3"]=25, ["steel-gear-wheel"]=25, plates=15},
+	["dytech-inserter"]={inserter=5, ["iron-gear-wheel"]=10, ["advanced-processing-unit"]=10, plates=10},
+	["dytech-inserter-fast"]={inserter=6, ["advanced-processing-unit"]=25, ["steel-gear-wheel"]=25, plates=15},
 	["long-handed-inserter-filter"]={inserter=1, ["iron-gear-wheel"]=1, ["advanced-circuit"]=2, ["basic-inserter"]=1, plates=1},
 	-- DyTech Logistic --
 	["logistic-robot-1"]={["processing-unit"]=5, ["logistic-robot"]=1, robot=1},
