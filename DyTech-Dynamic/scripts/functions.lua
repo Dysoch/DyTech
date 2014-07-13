@@ -104,7 +104,7 @@ dytech=0, wooden=0, stone=0, copper=0, iron=0, steel=0, advsteel=0, sapphire=0, 
 glob.crafted.furnaces={
 dytech=0, stone=0, steel=0, electric=0, forge=0, blastfurnace=0}
 glob.crafted.transport={
-dytech=0, belt1=0, belt2=0, belt3=0, belt4=0, belt5=0, underbelt1=0, underbelt2=0, underbelt3=0, underbelt4=0, underbelt5=0, splitter1=0, splitter2=0, splitter3=0, splitter4=0, splitter5=0, pipe1=0, pipe2=0, pipe3=0, pipe4=0, pipe5=0, underpipe1=0, underpipe2=0, underpipe3=0, underpipe4=0, underpipe5=0, pump1=0, pump2=0, pump3=0, pump4=0, pump5=0, car1=0, car2=0, rail1=0, rail2=0, diesel1=0, diesel2=0, diesel3=0, wagon1=0, wagon2=0, wagon3=0, wagon4=0, stop=0, signal=0, tank1=0. pipebig=0, pumpbig=0}
+dytech=0, belt1=0, belt2=0, belt3=0, belt4=0, belt5=0, underbelt1=0, underbelt2=0, underbelt3=0, underbelt4=0, underbelt5=0, splitter1=0, splitter2=0, splitter3=0, splitter4=0, splitter5=0, pipe1=0, pipe2=0, pipe3=0, pipe4=0, pipe5=0, underpipe1=0, underpipe2=0, underpipe3=0, underpipe4=0, underpipe5=0, pump1=0, pump2=0, pump3=0, pump4=0, pump5=0, car1=0, car2=0, rail1=0, rail2=0, diesel1=0, diesel2=0, diesel3=0, wagon1=0, wagon2=0, wagon3=0, wagon4=0, stop=0, signal=0, tank1=0, pipebig=0, pumpbig=0}
 glob.crafted.miners={
 dytech=0, burner=0, basic1=0, basic2=0, basic3=0, basic4=0, basic5=0, basic6=0, gems=0}
 glob.crafted.armor={
@@ -160,32 +160,28 @@ glob.counter.alien=0
 glob.counter.science=0 
 glob.counter.wall=0 
 glob.counter.modules=0 
-glob.counter.dytech = glob.counter.dytech + CoreDynamicInterface(dytech)
-glob.counter.gear = glob.counter.gear + CoreDynamicInterface(gear)
-glob.counter.resource = glob.counter.resource + CoreDynamicInterface(resource)
-glob.counter.mining = glob.counter.mining + CoreDynamicInterface(mining)
-glob.counter.robot = glob.counter.robot + CoreDynamicInterface(robot)
-glob.counter.ammo = glob.counter.ammo + CoreDynamicInterface(ammo)
-glob.counter.gun = glob.counter.gun + CoreDynamicInterface(gun)
-glob.counter.machine = glob.counter.machine + CoreDynamicInterface(machine)
-glob.counter.capsule = glob.counter.capsule + CoreDynamicInterface(capsule)
-glob.counter.tech = glob.counter.tech + CoreDynamicInterface(tech)
-glob.counter.plates = glob.counter.plates + CoreDynamicInterface(plates)
-glob.counter.inserter = glob.counter.inserter + CoreDynamicInterface(inserter)
-glob.counter.energy = glob.counter.energy + CoreDynamicInterface(energy)
-glob.counter.chest = glob.counter.chest + CoreDynamicInterface(chest)
-glob.counter.armor = glob.counter.armor + CoreDynamicInterface(armor)
-glob.counter.gems = glob.counter.gems + CoreDynamicInterface(gems)
-glob.counter.belt = glob.counter.belt + CoreDynamicInterface(belt)
-glob.counter.turret = glob.counter.turret + CoreDynamicInterface(turret)
-glob.counter.alien = glob.counter.alien + CoreDynamicInterface(alien)
-glob.counter.science = glob.counter.science + CoreDynamicInterface(science)
-glob.counter.wall = glob.counter.wall + CoreDynamicInterface(wall)
-glob.counter.modules = glob.counter.modules + CoreDynamicInterface(modules)
-end
-
-function CoreDynamicInterface(counter)
-remote.call("DyTech-Core", "checkCounter", [counter])
+glob.counter.dytech = glob.counter.dytech + remote.call("DyTech-Core", "checkCounter", "dytech")
+glob.counter.gear = glob.counter.gear + remote.call("DyTech-Core", "checkCounter", "gear")
+glob.counter.resource = glob.counter.resource + remote.call("DyTech-Core", "checkCounter", "resource")
+glob.counter.mining = glob.counter.mining + remote.call("DyTech-Core", "checkCounter", "mining")
+glob.counter.robot = glob.counter.robot + remote.call("DyTech-Core", "checkCounter", "robot")
+glob.counter.ammo = glob.counter.ammo + remote.call("DyTech-Core", "checkCounter", "ammo")
+glob.counter.gun = glob.counter.gun + remote.call("DyTech-Core", "checkCounter", "gun")
+glob.counter.machine = glob.counter.machine + remote.call("DyTech-Core", "checkCounter", "machine")
+glob.counter.capsule = glob.counter.capsule + remote.call("DyTech-Core", "checkCounter", "capsule")
+glob.counter.tech = glob.counter.tech + remote.call("DyTech-Core", "checkCounter", "tech")
+glob.counter.plates = glob.counter.plates + remote.call("DyTech-Core", "checkCounter", "plates")
+glob.counter.inserter = glob.counter.inserter + remote.call("DyTech-Core", "checkCounter", "inserter")
+glob.counter.energy = glob.counter.energy + remote.call("DyTech-Core", "checkCounter", "energy")
+glob.counter.chest = glob.counter.chest + remote.call("DyTech-Core", "checkCounter", "chest")
+glob.counter.armor = glob.counter.armor + remote.call("DyTech-Core", "checkCounter", "armor")
+glob.counter.gems = glob.counter.gems + remote.call("DyTech-Core", "checkCounter", "gems")
+glob.counter.belt = glob.counter.belt + remote.call("DyTech-Core", "checkCounter", "belt")
+glob.counter.turret = glob.counter.turret + remote.call("DyTech-Core", "checkCounter", "turret")
+glob.counter.alien = glob.counter.alien + remote.call("DyTech-Core", "checkCounter", "alien")
+glob.counter.science = glob.counter.science + remote.call("DyTech-Core", "checkCounter", "science")
+glob.counter.wall = glob.counter.wall + remote.call("DyTech-Core", "checkCounter", "wall")
+glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
 end
 
 function ModuleCheck()
@@ -202,31 +198,4 @@ function ModuleCheck()
 	if remote.call("DyTech-Core", "detectModule", "tools")==true then glob.modules.tools = true else glob.modules.tools = false end 
 	if remote.call("DyTech-Core", "detectModule", "transportation")==true then glob.modules.transportation = true else glob.modules.transportation = false end 
 	if remote.call("DyTech-Core", "detectModule", "warfare")==true then glob.modules.warfare = true else glob.modules.warfare = false end 
-end
-
--- temp functions
-function CounterPrinter()
-	game.player.print("Here are all your counters with their current status!")
-	game.player.print("Gear:".." "..tostring(glob.counter.gear))
-	game.player.print("Resource:".." "..tostring(glob.counter.resource))
-	game.player.print("Mining:".." "..tostring(glob.counter.mining))
-	game.player.print("Robot:".." "..tostring(glob.counter.robot))
-	game.player.print("Machine:".." "..tostring(glob.counter.machine))
-	game.player.print("Gun:".." "..tostring(glob.counter.gun))
-	game.player.print("Ammo:".." "..tostring(glob.counter.ammo))
-	game.player.print("Capsule:".." "..tostring(glob.counter.capsule))
-	game.player.print("Tech:".." "..tostring(glob.counter.tech))
-	game.player.print("Plates:".." "..tostring(glob.counter.plates))
-	game.player.print("Inserter:".." "..tostring(glob.counter.inserter))
-	game.player.print("Energy:".." "..tostring(glob.counter.energy))
-	game.player.print("Chest:".." "..tostring(glob.counter.chest))
-	game.player.print("Armor:".." "..tostring(glob.counter.armor))
-	game.player.print("Gems:".." "..tostring(glob.counter.gems))
-	game.player.print("Belt:".." "..tostring(glob.counter.belt))
-	game.player.print("Turret:".." "..tostring(glob.counter.turret))
-	game.player.print("Alien:".." "..tostring(glob.counter.alien))
-	game.player.print("Science:".." "..tostring(glob.counter.science))
-	game.player.print("Wall:".." "..tostring(glob.counter.wall))
-	game.player.print("Modules:".." "..tostring(glob.counter.modules))
-	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end

@@ -1,5 +1,6 @@
 require "defines"
 require "scripts/database"
+require "scripts/dynamic-system"
 require "scripts/functions"
 
 game.oninit(function()
@@ -55,11 +56,6 @@ remote.addinterface("DyTech-Dynamic",
 {
   CounterPrinterIntermediates = function() 
 	fs.CounterPrinterIntermediates()
-  end,
-  
-  --temp call --
-  CounterPrint = function() 
-	fs.CounterPrinter()
   end,
   
   ToggleDynamicSystem = function()
