@@ -21,7 +21,8 @@ function CounterPrinterIntermediates()
 end
 
 function OnLoad()
-	if not glob.dynamic then glob.dynamic=false end
+	if not glob.DynamicSystem then glob.DynamicSystem=false end
+	if not glob.HardMode then glob.HardMode=false end
 	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
@@ -74,7 +75,8 @@ glob.modules={core=false, energy=false, inserters=false, logistic=false, metallu
 glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0}
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
 glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false}
-glob.dynamic=false
+glob.DynamicSystem=false
+glob.HardMode=false
 glob.crafted={}
 glob.crafted.energy={}
 glob.crafted.inserters={}
@@ -136,14 +138,24 @@ dytech=0, radar=0, lamp=0, port=0, wall=0, rocketdefense=0, beacon=0, plane=0, b
 end
 
 function DynamicToggle()
-	if glob.dynamic==true then
-		glob.dynamic = false
+	if glob.DynamicSystem==true then
+		glob.DynamicSystem = false
 		game.player.print("Dynamic System is now offline. Technologies however won't return! It's a shame to see you go :(")
 	else
-		glob.dynamic = true
+		glob.DynamicSystem = true
 		game.player.print("Dynamic System is now online. Enjoy the System!")
 	end
 end
+
+function HardModeToggle()
+	if glob.HardMode==true then
+		glob.HardMode = false
+		game.player.print("Dynamic System Hard Mode is now offline. The normal System has been activated once again!")
+	else
+		glob.HardMode = true
+		game.player.print("Dynamic System Hard Mode is now online. Enjoy the very hard System!")
+	end
+end	
 
 function CounterTransfer()
 glob.counter.dytech=0 

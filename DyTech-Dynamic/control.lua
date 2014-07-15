@@ -1,6 +1,7 @@
 require "defines"
 require "scripts/database"
 require "scripts/dynamic-system"
+require "scripts/dynamic-system-hard"
 require "scripts/functions"
 
 game.oninit(function()
@@ -17,11 +18,18 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.dynamic==true then
+	if glob.DynamicSystem==true then
+		if glob.HardMode==false then
 		--[[Dynamic System unlocks]]--
-		ds.dynamicUnlocks(event, ds.dsttime(), ds.eventtime)
+		Dynamic.dynamicUnlocks(event, Dynamic.dsttime(), Dynamic.eventtime)
 		--[[Rewards]]--
-		ds.dynamicRewards(event, ds.dsttime(), ds.eventtime)
+		Dynamic.dynamicRewards(event, Dynamic.dsttime(), Dynamic.eventtime)
+		elseif glob.HardMode==true then
+		--[[Dynamic System Hard Mode unlocks]]--
+		DynamicHard.dynamicUnlocks(event, DynamicHard.dsttime(), DynamicHard.eventtime)
+		--[[Rewards Hard Mode]]--
+		DynamicHard.dynamicRewards(event, DynamicHard.dsttime(), DynamicHard.eventtime)
+		end
 	end
 end)
 
@@ -58,5 +66,9 @@ remote.addinterface("DyTech-Dynamic",
   
   ToggleDynamicSystem = function()
 	fs.DynamicToggle()
+  end,
+  
+  ToggleHardMode = function()
+	fs.HardModeToggle()
   end
 })

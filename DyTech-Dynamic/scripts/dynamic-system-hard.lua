@@ -1,4 +1,4 @@
-module("Dynamic", package.seeall)
+module("DynamicHard", package.seeall)
 require "scripts/functions"
 
 --[[ The Calculators for the time to check the events!]]--
@@ -27,7 +27,7 @@ end
 function dynamicRewards(event, ttime, r)
 	if event.tick%ttime==(r*201) then
 		if not glob.reward.axe1 then 
-			if glob.counter.dytech > math.random(5000,7500) then
+			if glob.counter.dytech > math.random(15000,22500) then
 				game.player.insert{name="steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
 				glob.reward.axe1=true
@@ -36,7 +36,7 @@ function dynamicRewards(event, ttime, r)
 	end
 	if event.tick%ttime==(r*202) then
 		if not glob.reward.axe2 and glob.modules.tools==true then 
-			if glob.counter.mining > math.random(250,750) then
+			if glob.counter.mining > math.random(750,2250) then
 				game.player.insert{name="advanced-steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-2"))
 				glob.reward.axe2=true
@@ -45,7 +45,7 @@ function dynamicRewards(event, ttime, r)
 	end
 	if event.tick%ttime==(r*203) then
 		if not glob.reward.axe3 and glob.modules.tools==true then 
-			if glob.counter.mining > math.random(10,25) then
+			if glob.counter.mining > math.random(30,75) then
 				game.player.insert{name="copper-axe",count=3}
 				game.player.print(game.gettext("msg-reward-3"))
 				glob.reward.axe3=true
