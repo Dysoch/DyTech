@@ -7,7 +7,7 @@ craftitems =
 	-- Base Game Items --
 	["wood"]={["intermediates.wood"]=1},
 	["wooden-chest"]={["wood"]=4, ["chests.wood"]=1},
-	["iron-stick"]={["intermediates.sticks"]=1},
+	["iron-stick"]={["intermediates.stick"]=1},
 	["iron-axe"]={["iron-stick"]=2, ["tools.iron"]=1},
 	["stone-furnace"]={["furnaces.stone"]=1},
 	["boiler"]={["stone-furnace"]=1, ["pipe"]=1, ["energy.boiler1"]=1},
