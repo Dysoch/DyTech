@@ -17,6 +17,10 @@ function dynamicUnlocks(event, ttime, r)
 	if event.tick%ttime==(r*1) then
 		fs.CounterTransfer()
 	end
+	--[[This second event checks which modules are installed. DO NOT MODIFY THIS!]]--
+	if event.tick%ttime==(r*2) then
+		fs.ModuleCheck()
+	end
 end
 
 --[[Dynamic System Reward Events!]]--
@@ -27,6 +31,24 @@ function dynamicRewards(event, ttime, r)
 				game.player.insert{name="steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
 				glob.reward.axe1=true
+			end
+		end
+	end
+	if event.tick%ttime==(r*202) then
+		if not glob.reward.axe2 and glob.modules.tools==true then 
+			if glob.counter.mining > math.random(250,750) then
+				game.player.insert{name="advanced-steel-axe",count=1}
+				game.player.print(game.gettext("msg-reward-2"))
+				glob.reward.axe2=true
+			end
+		end
+	end
+	if event.tick%ttime==(r*203) then
+		if not glob.reward.axe3 and glob.modules.tools==true then 
+			if glob.counter.mining > math.random(10,25) then
+				game.player.insert{name="copper-axe",count=3}
+				game.player.print(game.gettext("msg-reward-3"))
+				glob.reward.axe3=true
 			end
 		end
 	end

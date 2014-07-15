@@ -17,14 +17,12 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	--[[Checking to see which modules are installed. This happens every 5 Minutes!]]--
-	if event.tick%18000==0 then
-		fs.ModuleCheck()
+	if glob.dynamic==true then
+		--[[Dynamic System unlocks]]--
+		ds.dynamicUnlocks(event, ds.dsttime(), ds.eventtime)
+		--[[Rewards]]--
+		ds.dynamicRewards(event, ds.dsttime(), ds.eventtime)
 	end
-	--[[Dynamic System unlocks]]--
-	ds.dynamicUnlocks(event, ds.dsttime(), ds.eventtime)
-	--[[Rewards]]--
-	ds.dynamicRewards(event, ds.dsttime(), ds.eventtime)
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)

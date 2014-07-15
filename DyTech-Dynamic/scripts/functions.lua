@@ -21,6 +21,7 @@ function CounterPrinterIntermediates()
 end
 
 function OnLoad()
+	if not glob.dynamic then glob.dynamic=false end
 	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
@@ -56,8 +57,15 @@ function OnLoad()
 	if not glob.combat.queen then glob.combat.queen=0 end
 	if not glob.combat.dog then glob.combat.dog=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
-	if not glob.reward then glob.reward={axe1=false} end
+	if not glob.reward then glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false} end
 	if not glob.reward.axe1 then glob.reward.axe1=false end
+	if not glob.reward.axe2 then glob.reward.axe2=false end
+	if not glob.reward.axe3 then glob.reward.axe3=false end
+	if not glob.reward.armor1 then glob.reward.armor1=false end
+	if not glob.reward.armor2 then glob.reward.armor2=false end
+	if not glob.reward.armor3 then glob.reward.armor3=false end
+	if not glob.reward.ammo1 then glob.reward.ammo1=false end
+	if not glob.reward.ammo2 then glob.reward.ammo2=false end
 end
 
 function OnInit()
@@ -65,8 +73,8 @@ function OnInit()
 glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
 glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0}
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
-glob.reward={axe1=false}
-glob.dynamic=true
+glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false}
+glob.dynamic=false
 glob.crafted={}
 glob.crafted.energy={}
 glob.crafted.inserters={}
@@ -130,7 +138,7 @@ end
 function DynamicToggle()
 	if glob.dynamic==true then
 		glob.dynamic = false
-		game.player.print("Dynamic System is now offline. Technologies however won't return!")
+		game.player.print("Dynamic System is now offline. Technologies however won't return! It's a shame to see you go :(")
 	else
 		glob.dynamic = true
 		game.player.print("Dynamic System is now online. Enjoy the System!")
