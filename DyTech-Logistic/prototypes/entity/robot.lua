@@ -162,9 +162,9 @@ data:extend(
     max_payload_size = 11,
     speed = 0.20,
     transfer_distance = 0.5,
-	max_energy = "3000J",
-    energy_per_tick = "0.01J",
-    energy_per_move = "0.6J",
+	max_energy = "3000kJ",
+    energy_per_tick = "0.01kJ",
+    energy_per_move = "0.6kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
     picture =
