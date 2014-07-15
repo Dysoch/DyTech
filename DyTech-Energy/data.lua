@@ -1,3 +1,10 @@
+-- Dirty Water Check
+if data.raw.fluid["dirty-water"] then
+require("prototypes.entity.offshore-pump-dirty-water")
+else
+require("prototypes.entity.offshore-pump-water")
+end
+
 require("prototypes.base-edit.entity")
 require("prototypes.base-edit.item")
 --require("prototypes.base-edit.tech")
@@ -6,7 +13,6 @@ require("prototypes.base-edit.item")
 require("prototypes.entity.accumulators-normal")
 --require("prototypes.entity.accumulators-small")
 require("prototypes.entity.boiler")
-require("prototypes.entity.offshore-pump")
 require("prototypes.entity.pipes")
 require("prototypes.entity.pipes-to-ground")
 require("prototypes.entity.pumps")

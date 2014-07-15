@@ -18,7 +18,7 @@ craftitems =
 	["basic-mining-drill"]={["electronic-circuit"]=3, ["iron-gear-wheel"]=5, ["miners.basic1"]=1},
 	["burner-mining-drill"]={["iron-gear-wheel"]=3, ["stone-furnace"]=1, ["miners.burner"]=1},
 	["basic-inserter"]={["electronic-circuit"]=1, ["iron-gear-wheel"]=1, ["inserters.basic"]=1},
-	["burner-inserter"]={plates=1, ["iron-gear-wheel"]=1, ["inserters.burner"]=1},
+	["burner-inserter"]={["iron-gear-wheel"]=1, ["inserters.burner"]=1},
 	["pipe"]={["transport.pipe1"]=1},
 	["offshore-pump"]={["electronic-circuit"]=2, ["pipe"]=1, ["iron-gear-wheel"]=1, ["transport.pump1"]=1},
 	["copper-cable"]={["intermediates.cable"]=1},

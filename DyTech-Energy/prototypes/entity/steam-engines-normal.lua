@@ -161,7 +161,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.25,
+    fluid_usage_per_tick = 0.11,
     resistances = 
     {
       {
@@ -237,7 +237,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.25,
+    fluid_usage_per_tick = 0.11,
     resistances = 
     {
       {
@@ -313,7 +313,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 2,
-    fluid_usage_per_tick = 0.25,
+    fluid_usage_per_tick = 0.11,
     resistances = 
     {
       {
@@ -389,7 +389,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.4,
+    fluid_usage_per_tick = 0.12,
     resistances = 
     {
       {
@@ -465,7 +465,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.4,
+    fluid_usage_per_tick = 0.12,
     resistances = 
     {
       {
@@ -541,7 +541,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 3,
-    fluid_usage_per_tick = 0.4,
+    fluid_usage_per_tick = 0.12,
     resistances = 
     {
       {
@@ -617,7 +617,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.55,
+    fluid_usage_per_tick = 0.13,
     resistances = 
     {
       {
@@ -693,7 +693,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.55,
+    fluid_usage_per_tick = 0.13,
     resistances = 
     {
       {
@@ -769,7 +769,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 5,
-    fluid_usage_per_tick = 0.55,
+    fluid_usage_per_tick = 0.13,
     resistances = 
     {
       {
@@ -845,7 +845,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.7,
+    fluid_usage_per_tick = 0.14,
     resistances = 
     {
       {
@@ -921,7 +921,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.7,
+    fluid_usage_per_tick = 0.14,
     resistances = 
     {
       {
@@ -997,7 +997,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 8,
-    fluid_usage_per_tick = 0.7,
+    fluid_usage_per_tick = 0.14,
     resistances = 
     {
       {

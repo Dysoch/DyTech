@@ -29,7 +29,6 @@ end)
 remote.addinterface("DyTech-Metallurgy",
 {
   RegenerateOres = function()
-	game.regenerateentity("sand")
 	game.regenerateentity("gold-ore")
 	game.regenerateentity("lead-ore")
 	game.regenerateentity("tungsten-ore")

@@ -1,3 +1,26 @@
+-- This is where you can toggle the Dirty Water on and Off
+-- True is active, false is inactive!
+water = true
+
+-- Here will be experimental features!
+-- These are unbalanced, and not fully implemented. But they will work
+-- True is active, false is inactive!
+experimental = true
+
+-- Dirty Water add --
+if water==true then
+require("prototypes.fluid.water")
+require("prototypes.recipe.water-cleaning")
+data.raw["offshore-pump"]["offshore-pump"].fluid = "dirty-water"
+data.raw["fluid"]["water"].heat_capacity = "1250J"
+end
+
+-- Experimental Check
+if experimental==true then
+
+end
+
+
 -- Items Groups
 require("prototypes.item-group.dytechbundles")
 require("prototypes.item-group.dytechgem")
@@ -30,7 +53,6 @@ require("prototypes.entity.explosion")
 require("prototypes.entity.nature")
 
 -- Fluids
-require("prototypes.fluid.water")
 
 -- Item
 require("prototypes.item.collector")
@@ -39,4 +61,3 @@ require("prototypes.item.intermediate")
 -- Recipe
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
-require("prototypes.recipe.water-cleaning")
