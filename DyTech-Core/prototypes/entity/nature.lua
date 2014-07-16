@@ -35,7 +35,7 @@ data:extend(
 	icon = "__DyTech-Core__/graphics/icons/rubber-tree.png",
 	order = "b-b-g",
 	flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
-	emissions_per_tick = -0.0002,
+	emissions_per_tick = -0.02,
 	minable =
 	{
 	  count = 2,
@@ -64,7 +64,7 @@ data:extend(
 	icon = "__DyTech-Core__/graphics/icons/rubber-tree.png",
 	order = "b-b-g",
 	flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
-	emissions_per_tick = -0.0004,
+	emissions_per_tick = -0.014,
 	minable =
 	{
 	  count = 3,
@@ -93,7 +93,7 @@ data:extend(
 	icon = "__DyTech-Core__/graphics/icons/rubber-tree.png",
 	order = "b-b-h",
 	flags = {"placeable-neutral", "placeable-off-grid", "breaths-air"},
-	emissions_per_tick = -0.0005,
+	emissions_per_tick = -0.009,
 	minable =
 	{
 	  count = 3,

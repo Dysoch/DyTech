@@ -22,8 +22,8 @@ local RubberTileEfficiency = {
 	["sand-dark"] = 0.25,
 	["other"] = 0
 }
-local RubberBasicGrowingTime = 3600
-local RubberRandomGrowingTime = 1800
+local RubberBasicGrowingTime = 5400
+local RubberRandomGrowingTime = 2700
 local RubberFertilizerBoost = 1.25
 local allInOne = {
 	["name"] = RubberSeedTypeName,
@@ -120,7 +120,7 @@ game.onevent(defines.events.onplayermineditem, function(event)
 	if event.itemstack.name == "raw-wood" then
 		if math.random(50) == 25 then
 			game.player.insert{name="resin",count=math.random(1,4)}
-			game.player.print("You found some Rubber Resin!")
+			game.player.print(game.gettext("msg-rubber"))
 		end
 	end
 end)
@@ -181,41 +181,12 @@ game.onevent(defines.events.ontick, function(event)
 		fs.CollectByPosition("coal", 1.5, true)
 	end
 	--[[DyTech Item Collector]]--
-	if glob.dytechitem~=nil and event.tick%12==0 then
+	if glob.dytechitem~=nil and event.tick%30==0 then
 		fs.DyTechItemCollect(dytechitem, 25)
-	end
-	if glob.gem~=nil and game.tick%60==0 then
-		for i,_ in pairs(glob.gem) do
-			local entities=game.findentities({{glob.gem[i].position.x-1,glob.gem[i].position.y-1},{glob.gem[i].position.x+1,glob.gem[i].position.y+1}})
-			for x,_ in pairs(entities) do
-				if entities[x].valid and entities[x].name=="gem-collector" then
-					local gem=game.findentities({{glob.gem[i].position.x-25,glob.gem[i].position.y-25},{glob.gem[i].position.x+25,glob.gem[i].position.y+25}})
-					for z,_ in pairs(gem) do 
-						if gem[z].name=="item-on-ground" and gem[z].stack.name=="ruby-3" and entities[x].caninsert{name="ruby-3",count=1} then
-							entities[x].insert{name="ruby-3",count=1}
-							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
-							gem[z].destroy()
-						break
-						elseif gem[z].name=="item-on-ground" and gem[z].stack.name=="sapphire-3" and entities[x].caninsert{name="sapphire-3",count=1} then
-							entities[x].insert{name="sapphire-3",count=1}
-							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
-							gem[z].destroy()
-						break
-						elseif gem[z].name=="item-on-ground" and gem[z].stack.name=="emerald-3" and entities[x].caninsert{name="emerald-3",count=1} then
-							entities[x].insert{name="emerald-3",count=1}
-							 game.createentity({name="item-pickup-dytech",position={gem[z].position.x,gem[z].position.y+0.5}})
-							gem[z].destroy()
-						break
-						end
-					end
-				end
-			end
-		end
 	end
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
-	glob.counter2.build = glob.counter2.build + 1
 	if event.createdentity.type == "tree" then
 		if glob.compatibility.treefarm == false then
 			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
@@ -248,6 +219,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 --		glob.sand[glob.sandcount]={}
 --		glob.sand[glob.sandcount].position=event.createdentity.position
 	end
+	glob.counter2.build = glob.counter2.build + 1
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)

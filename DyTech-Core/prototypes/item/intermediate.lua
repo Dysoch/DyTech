@@ -34,6 +34,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechinter",
     order = "resin",
+    fuel_value = "1MJ",
     stack_size = 50
   },
   {
