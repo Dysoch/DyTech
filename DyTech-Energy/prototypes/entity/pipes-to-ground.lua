@@ -26,7 +26,7 @@ data:extend({
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 10
+          max_underground_distance = 15
         }
       },
     },
@@ -96,7 +96,7 @@ data:extend({
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 10
+          max_underground_distance = 20
         }
       },
     },
@@ -166,7 +166,7 @@ data:extend({
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 10
+          max_underground_distance = 25
         }
       },
     },
@@ -236,7 +236,7 @@ data:extend({
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 10
+          max_underground_distance = 30
         }
       },
     },
