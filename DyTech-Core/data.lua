@@ -18,6 +18,10 @@ end
 
 -- Experimental Check
 if experimental==true then
+require("prototypes.experimental.robot-entity")
+require("prototypes.experimental.robot-item")
+require("prototypes.experimental.robot-recipe")
+require("prototypes.experimental.robot-tech")
 require("prototypes.experimental.science-item")
 require("prototypes.experimental.science-recipe")
 require("prototypes.experimental.science-tech")

@@ -1,18 +1,30 @@
 data:extend(
 {
   {
-    type = "recipe",
-    name = "science-pack-4",
-    enabled = false,
-    energy_required = 20,
-    ingredients =
+    type = "technology",
+    name = "advanced-electronics-3",
+    icon = "__base__/graphics/technology/advanced-electronics.png",
+    prerequisites = {"advanced-electronics-2"},
+    effects =
     {
-      {"science-pack-1", 4},
-      {"science-pack-2", 2},
-      {"science-pack-3", 1},
-      {"advanced-processing-unit", 5},
+      {
+        type = "unlock-recipe",
+        recipe = "science-pack-4"
+      },
     },
-    result = "science-pack-4"
+    unit =
+    {
+      count = 100,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "a-d-c",
   },
 }
 )
