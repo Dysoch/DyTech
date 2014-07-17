@@ -6,7 +6,7 @@ water = true
 -- These are unbalanced, and not fully implemented. But they will work
 -- They have also been yet to be added to another module!
 -- True is active, false is inactive!
-experimental = true
+experimental = false
 
 -- Dirty Water add --
 if water==true then
@@ -18,7 +18,10 @@ end
 
 -- Experimental Check
 if experimental==true then
-
+require("prototypes.experimental.science-item")
+require("prototypes.experimental.science-recipe")
+require("prototypes.experimental.science-tech")
+table.insert(data.raw["lab"]["lab"].inputs,{"science-pack-4"})
 end
 
 
