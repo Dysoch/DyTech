@@ -329,7 +329,7 @@ craftitems =
 	["wooden-chest-big"]={["wood"]=36, ["chests.wooden"]=1},
 	["steel-chest-medium"]={["chests.steel"]=1},
 	["steel-chest-big"]={["chests.steel"]=1},
-	["iron-chest-medium"]={["chests.rion"]=1},
+	["iron-chest-medium"]={["chests.iron"]=1},
 	["iron-chest-big"]={["chests.iron"]=1},
 	-- DyTech Tools --
 	["wooden-axe"]={["wood"]=4, ["tools.wooden"]=1},

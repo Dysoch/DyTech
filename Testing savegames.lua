@@ -28,3 +28,26 @@ mine=11473,pickup=5279,sectorscanned=758,build=7226,chunks=3094,dytech=28490,die
 dytech={
 warfare=true,compatibility=false,meteors=false,core=true,dynamic=false,mining=true,modules=true,logistic=true,inserters=true,metallurgy=true,transportation=true,energy=true,tools=true,storage=true}
 }
+
+hoho = {
+counter={
+gun=3,energy=310,machine=370,modules=263,dytech=44821.5,resource=8366.5,inserter=747,armor=1,chest=67,plates=20830,belt=920,mining=49,tech=10465,science=21,robot=29,capsule=0,gear=2194,turret=0,gems=0,ammo=186,wall=0,alien=0}
+dytech={
+energy=true,storage=true,modules=true,warfare=true,inserters=true,logistic=true,transportation=true,core=true,tools=true,mining=true,meteors=false,metallurgy=true,compatibility=false,dynamic=false}
+combat={
+elder=0,dog=0,berserker=0,dytech=213,queen=0,small=211,king=0,medium=2,big=0,bird=0}
+counter2={
+mine=8402,pickup=1635,died=239,sectorscanned=2474,chunks=2475,dytech=17416,build=2191}
+}
+
+scrangos = {
+combat={
+small=29,medium=0,bird=0,queen=0,elder=0,big=0,king=0,berserker=0,dytech=29,dog=0}
+dytech={
+transportation=true,metallurgy=true,dynamic=false,warfare=true,storage=true,tools=true,meteors=false,logistic=true,inserters=true,compatibility=false,core=true,mining=true,energy=true,modules=true}
+counter2={
+mine=1507,sectorscanned=0,build=1158,died=35,pickup=496,dytech=5086,chunks=1890}
+counter={
+gear=926,turret=6,capsule=0,belt=552,gems=0,wall=0,machine=137,gun=1,resource=1091.5,tech=1033.5,alien=0,inserter=184,ammo=26,mining=41,robot=0,sectorscanned=0,dytech=8366.5,modules=0,plates=4184.5,chest=23,armor=0,energy=151,science=10}
+}
+
