@@ -36,7 +36,8 @@ inserters={
 dytech=0,half=0,long=10,smart=50,fast=198,veryfast=0,basic=916,burner=80},
 nature={
 rubberseed=57,dytech=0},
-transport={pump4=0,diesel3=0,signal=0,belt4=0,wagon2=0,underpipe4=0,underpipe3=0,underpipe2=0,pump3=0,pipe5=0,pipe3=0,underbelt3=10,underpipe5=0,belt3=4,rail2=0,stop=0,pipe2=250,pipe4=0,pump2=0,diesel1=0,belt2=356,underpipe1=52,tank1=30,wagon4=0,splitter1=0,underbelt1=10,pump1=9,underbelt5=0,car2=0,splitter3=1,splitter2=0,dytech=0,diesel2=0,wagon3=0,pipe1=1714,splitter5=0,pump5=0,rail1=0,belt5=0,underbelt2=10,pumpbig=0,belt1=2576,pipebig=0,wagon1=0,car1=0,underbelt4=0,splitter4=0},
+transport={
+pump4=0,diesel3=0,signal=0,belt4=0,wagon2=0,underpipe4=0,underpipe3=0,underpipe2=0,pump3=0,pipe5=0,pipe3=0,underbelt3=10,underpipe5=0,belt3=4,rail2=0,stop=0,pipe2=250,pipe4=0,pump2=0,diesel1=0,belt2=356,underpipe1=52,tank1=30,wagon4=0,splitter1=0,underbelt1=10,pump1=9,underbelt5=0,car2=0,splitter3=1,splitter2=0,dytech=0,diesel2=0,wagon3=0,pipe1=1714,splitter5=0,pump5=0,rail1=0,belt5=0,underbelt2=10,pumpbig=0,belt1=2576,pipebig=0,wagon1=0,car1=0,underbelt4=0,splitter4=0},
 chests={
 dytech=0,medium=0,big=0,smart=140,steel=148,wood=6,iron=14,logistic=0},
 energy={

@@ -32,7 +32,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -48,7 +48,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
@@ -109,7 +109,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -125,7 +125,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
@@ -186,7 +186,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -202,7 +202,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
@@ -263,7 +263,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -279,7 +279,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
@@ -340,7 +340,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -356,7 +356,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true
@@ -417,7 +417,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {0, 2} }}
       },
 	  {
@@ -433,7 +433,7 @@ data:extend(
         --pipe_picture = assembler3pipepictures(),
         --pipe_covers = pipecoverspictures(),
         base_area = 16,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{ type="input", position = {2, 0} }}
       },
       off_when_no_fluid_recipe = true

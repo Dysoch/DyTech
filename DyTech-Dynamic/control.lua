@@ -1,5 +1,5 @@
 require "defines"
-require "scripts/database"
+--require "scripts/database"
 require "scripts/dynamic-system"
 require "scripts/dynamic-system-hard"
 require "scripts/functions"
@@ -34,34 +34,41 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-incrementDynamicCounters = function(stack)
-   if database.craftitems[stack.name] then
-		for counter, ingredients in pairs(database.craftitems[stack.name]) do
-			if database.craftitems[counter] then
-				incrementDynamicCounters({name=counter, count=ingredients})
-			else
-			local count=0
-			for w in counter:gmatch("([%w%-]+)%.?") do count = count+1 end
-			it = counter:gmatch("([%w%-]+)%.?")
-			it2 = counter:gmatch("([%w%-]+)%.?")
-				if count == 1 then
-					glob.crafted[it()]=glob.crafted[it2()]+(stack.count*ingredients)
-				elseif count == 2 then
-					glob.crafted[it()][it()]=glob.crafted[it2()][it2()]+(stack.count*ingredients)
-				else -- more ifs must be added manually.
-					game.player.print("Tell Dysoch he needs more dynamic iterator statements for" .. stack.name)
-				end
-			end
-		end
+	if not glob.CraftedItems[event.itemstack.name] then
+		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.CraftedItems[event.itemstack.name] = glob.CraftedItems[event.itemstack.name] + event.itemstack.count
 	end
-end
-incrementDynamicCounters(event.itemstack)
+end)
+
+game.onevent(defines.events.onpickedupitem, function(event)
+	if not glob.PickedItems[event.itemstack.name] then
+		glob.PickedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.PickedItems[event.itemstack.name] = glob.PickedItems[event.itemstack.name] + event.itemstack.count
+	end
+end)
+
+game.onevent(defines.events.onplayermineditem, function(event)
+	if not glob.MinedItems[event.itemstack.name] then
+		glob.MinedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.MinedItems[event.itemstack.name] = glob.MinedItems[event.itemstack.name] + event.itemstack.count
+	end
 end)
 
 remote.addinterface("DyTech-Dynamic",
 {
-  CounterPrinterIntermediates = function() 
-	fs.CounterPrinterIntermediates()
+  CraftedItems = function() 
+	fs.CraftedItems()
+  end,
+  
+  PickedItems = function() 
+	fs.PickedItems()
+  end,
+  
+  MinedItems = function() 
+	fs.MinedItems()
   end,
   
   ToggleDynamicSystem = function()
