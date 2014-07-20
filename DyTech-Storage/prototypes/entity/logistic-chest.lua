@@ -24,10 +24,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/requester-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-requester-medium.png",
       priority = "extra-high",
-      width = 96,
-      height = 68,
+      width = 78,
+      height = 64,
       shift = {0.4, 0}
     }
   },
@@ -55,10 +55,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/storage-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-storage-medium.png",
       priority = "extra-high",
-      width = 96,
-      height = 68,
+      width = 76,
+      height = 64,
       shift = {0.4, 0}
     }
   },
@@ -86,10 +86,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/active-provider-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-active-providermedium.png",
       priority = "extra-high",
-      width = 96,
-      height = 68,
+      width = 78,
+      height = 64,
       shift = {0.4, 0}
     }
   },
@@ -117,10 +117,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/passive-provider-chest-medium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-passive-provider-medium.png",
       priority = "extra-high",
-      width = 96,
-      height = 68,
+      width = 78,
+      height = 66,
       shift = {0.4, 0}
     }
   },
@@ -141,10 +141,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/requester-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-requester-big.png",
       priority = "extra-high",
-      width = 144,
-      height = 102,
+      width = 117,
+      height = 96,
       shift = {0.8, 0}
     }
   },
@@ -172,10 +172,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/storage-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-storage-big.png",
       priority = "extra-high",
-      width = 144,
-      height = 102,
+      width = 114,
+      height = 96,
       shift = {0.8, 0}
     }
   },
@@ -203,10 +203,10 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/active-provider-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-active-provider-big.png",
       priority = "extra-high",
-      width = 144,
-      height = 102,
+      width = 117,
+      height = 96,
       shift = {0.8, 0}
     }
   },
@@ -234,17 +234,17 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/passive-provider-chest-big.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-passive-provider-big.png",
       priority = "extra-high",
-      width = 144,
-      height = 102,
+      width = 116,
+      height = 99,
       shift = {0.8, 0}
     }
   },
   {
     type = "smart-container",
     name = "smart-chest-medium",
-    icon = "__base__/graphics/icons/logistic-chest-passive-provider.png",
+    icon = "__base__/graphics/icons/smart-chest.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "smart-chest-medium"},
     max_health = 200,
@@ -266,15 +266,15 @@ data:extend(
     {
       filename = "__DyTech-Storage__/graphics/entity/chest/smart-chest-medium.png",
       priority = "extra-high",
-      width = 96,
-      height = 68,
+      width = 124,
+      height = 82,
       shift = {0.4, 0}
     }
   },
   {
     type = "smart-container",
     name = "smart-chest-big",
-    icon = "__base__/graphics/icons/logistic-chest-requester.png",
+    icon = "__base__/graphics/icons/smart-chest.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "smart-chest-big"},
     max_health = 200,
@@ -289,8 +289,8 @@ data:extend(
     {
       filename = "__DyTech-Storage__/graphics/entity/chest/smart-chest-big.png",
       priority = "extra-high",
-      width = 144,
-      height = 102,
+      width = 186,
+      height = 123,
       shift = {0.8, 0}
     }
   },
