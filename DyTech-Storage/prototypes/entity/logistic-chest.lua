@@ -28,7 +28,7 @@ data:extend(
       priority = "extra-high",
       width = 78,
       height = 64,
-      shift = {0.4, 0}
+      shift = {0.2, 0}
     }
   },
   {
@@ -59,7 +59,7 @@ data:extend(
       priority = "extra-high",
       width = 76,
       height = 64,
-      shift = {0.4, 0}
+      shift = {0.2, 0}
     }
   },
   {
@@ -86,11 +86,11 @@ data:extend(
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-active-providermedium.png",
+      filename = "__DyTech-Storage__/graphics/entity/chest/logistic-chest-active-provider-medium.png",
       priority = "extra-high",
       width = 78,
       height = 64,
-      shift = {0.4, 0}
+      shift = {0.2, 0}
     }
   },
   {
@@ -121,7 +121,7 @@ data:extend(
       priority = "extra-high",
       width = 78,
       height = 66,
-      shift = {0.4, 0}
+      shift = {0.2, 0}
     }
   },
   {
@@ -145,7 +145,7 @@ data:extend(
       priority = "extra-high",
       width = 117,
       height = 96,
-      shift = {0.8, 0}
+      shift = {0.3, 0}
     }
   },
   {
@@ -176,7 +176,7 @@ data:extend(
       priority = "extra-high",
       width = 114,
       height = 96,
-      shift = {0.8, 0}
+      shift = {0.3, 0}
     }
   },
   {
@@ -207,7 +207,7 @@ data:extend(
       priority = "extra-high",
       width = 117,
       height = 96,
-      shift = {0.8, 0}
+      shift = {0.3, 0}
     }
   },
   {
@@ -238,7 +238,7 @@ data:extend(
       priority = "extra-high",
       width = 116,
       height = 99,
-      shift = {0.8, 0}
+      shift = {0.3, 0}
     }
   },
   {
@@ -268,7 +268,7 @@ data:extend(
       priority = "extra-high",
       width = 124,
       height = 82,
-      shift = {0.4, 0}
+      shift = {0.9, 0}
     }
   },
   {
@@ -291,7 +291,7 @@ data:extend(
       priority = "extra-high",
       width = 186,
       height = 123,
-      shift = {0.8, 0}
+      shift = {1.3, 0}
     }
   },
 }
