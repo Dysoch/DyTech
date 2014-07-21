@@ -165,7 +165,7 @@ function ModuleCheck()
 end
 
 function FailureMessage(ItemName)
-	game.player.print(game.gettext("msg-failure-1").." "..game.getlocaliseditemname(ItemName).." "..game.gettext("msg-failure-2"))
+	game.player.print(game.gettext("msg-failure-1").." "..ItemName.." "..game.gettext("msg-failure-2"))
 end
 
 function FailureReduction(CounterName, Number)

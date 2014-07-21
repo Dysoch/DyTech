@@ -22,16 +22,32 @@ function dynamicUnlocks(event, ttime, r)
 		fs.ModuleCheck()
 	end
 	if event.tick%ttime==(r*3) and glob.modules.core==true then 
-	local UnlockRecipe = "science-pack-1-dytech-1"
-	local LocaleName = "science-pack-1"
-		if not game.player.force.recipes[UnlockRecipe].enabled then 
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
+	local LocaleName = game.getlocaliseditemname("science-pack-1")
+		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(50,150) and glob.counter.gear > math.random(150,500) then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction(science, 4)
 					fs.FailureMessage(LocaleName)
 				else
-					game.player.force.recipes[UnlockRecipe].enabled = true
-					game.player.print(game.gettext("msg-science-1").." "..game.getlocaliseditemname(LocaleName))
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-science-1").." "..LocaleName)
+					game.player.force.resetrecipes(UnlockRecipe)
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*4) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-2"]
+	local LocaleName = game.getlocaliseditemname("science-pack-1")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.science > math.random(125,300) and glob.counter.gear > math.random(450,1500) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction(science, 3)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-science-2").." "..LocaleName)
 					game.player.force.resetrecipes(UnlockRecipe)
 				end
 			end

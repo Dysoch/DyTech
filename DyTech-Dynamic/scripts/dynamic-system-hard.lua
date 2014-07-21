@@ -21,6 +21,38 @@ function dynamicUnlocks(event, ttime, r)
 	if event.tick%ttime==(r*2) then
 		fs.ModuleCheck()
 	end
+	if event.tick%ttime==(r*3) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
+	local LocaleName = game.getlocaliseditemname("science-pack-1")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.science > math.random(200,600) and glob.counter.gear > math.random(600,2000) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction(science, 2)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-science-1").." "..LocaleName)
+					game.player.force.resetrecipes(UnlockRecipe)
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*4) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-2"]
+	local LocaleName = game.getlocaliseditemname("science-pack-1")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.science > math.random(500,1200) and glob.counter.gear > math.random(1800,6000) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction(science, 1.5)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-science-2").." "..LocaleName)
+					game.player.force.resetrecipes(UnlockRecipe)
+				end
+			end
+		end
+	end
 end
 
 --[[Dynamic System Reward Events!]]--
