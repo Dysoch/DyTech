@@ -163,3 +163,7 @@ function ModuleCheck()
 	if remote.call("DyTech-Core", "detectModule", "transportation")==true then glob.modules.transportation = true else glob.modules.transportation = false end 
 	if remote.call("DyTech-Core", "detectModule", "warfare")==true then glob.modules.warfare = true else glob.modules.warfare = false end 
 end
+
+function FailureMessage(ItemName)
+	game.player.print(game.gettext("msg-failure-1").." "..game.getlocaliseditemname(ItemName).." "..game.gettext("msg-failure-2"))
+end
