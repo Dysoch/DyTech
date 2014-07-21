@@ -27,12 +27,12 @@ function dynamicUnlocks(event, ttime, r)
 		if not game.player.force.recipes[UnlockRecipe].enabled then 
 			if glob.counter.science > math.random(50,150) and glob.counter.gear > math.random(150,500) then
 				if DynamicFailure(glob.counter.dytech) then
-					glob.counter.science =(glob.counter.science-math.random(glob.counter.science/4))
+					fs.FailureReduction(science, 4)
 					fs.FailureMessage(LocaleName)
 				else
 					game.player.force.recipes[UnlockRecipe].enabled = true
 					game.player.print(game.gettext("msg-science-1").." "..game.getlocaliseditemname(LocaleName))
-					game.player.force.resetrecipes()
+					game.player.force.resetrecipes(UnlockRecipe)
 				end
 			end
 		end
