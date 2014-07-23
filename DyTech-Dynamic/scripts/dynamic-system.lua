@@ -22,8 +22,7 @@ function dynamicUnlocks(event, ttime, r)
 		fs.ModuleCheck()
 	end
 	if event.tick%ttime==(r*3) and glob.modules.core==true then  
-	local Recipe = "science-pack-1-dytech-1"
-	local UnlockRecipe = game.player.force.recipes[Recipe]
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(50,150) and glob.counter.gear > math.random(150,500) then
@@ -33,14 +32,13 @@ function dynamicUnlocks(event, ttime, r)
 				else
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-science-1").." "..LocaleName)
-					game.player.force.resetrecipes(Recipe)
+					game.player.force.resetrecipes()
 				end
 			end
 		end
 	end
 	if event.tick%ttime==(r*4) and glob.modules.core==true then 
-	local Recipe = "science-pack-1-dytech-2"
-	local UnlockRecipe = game.player.force.recipes[Recipe]
+	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(125,300) and glob.counter.gear > math.random(450,1500) then
@@ -50,7 +48,7 @@ function dynamicUnlocks(event, ttime, r)
 				else
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-science-2").." "..LocaleName)
-					game.player.force.resetrecipes(Recipe)
+					game.player.force.resetrecipes()
 				end
 			end
 		end

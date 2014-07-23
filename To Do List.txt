@@ -1,0 +1,56 @@
+To Do List
+
+Legend:
+1 - Not really important. But will happen eventually.
+2 - Somewhat important, but it will take a while before it happens.
+3 - Its normal, its kinda coming soon.
+4 - Kinda important! Happening real soon.
+5 - Important. This will happen first!
+
+To Do List:
+2 - Balance Recipes of Core
+2 - Balance Entities of Core
+2 - Add to Dynamic System all Recipes of Core
+2 - Balance Recipes of Energy
+2 - Balance Entities of Energy
+2 - Add to Dynamic System all Recipes of Energy
+2 - Balance Recipes of Inserters
+2 - Balance Entities of Inserters
+2 - Add to Dynamic System all Recipes of Inserters
+2 - Balance Recipes of Logistic
+2 - Balance Entities of Logistic
+2 - Add to Dynamic System all Recipes of Logistic
+2 - Balance Recipes of Metallurgy
+2 - Balance Entities of Metallurgy
+2 - Add to Dynamic System all Recipes of Metallurgy
+2 - Balance Recipes of Mining
+2 - Balance Entities of Mining
+2 - Add to Dynamic System all Recipes of Mining
+2 - Balance Recipes of Modules
+2 - Balance Entities of Modules
+2 - Add to Dynamic System all Recipes of Modules
+2 - Balance Recipes of Storage
+2 - Balance Entities of Storage
+2 - Add to Dynamic System all Recipes of Storage
+2 - Balance Recipes of Tools
+2 - Balance Entities of Tools
+2 - Add to Dynamic System all Recipes of Tools
+2 - Balance Recipes of Transportation
+2 - Balance Entities of Transportation
+2 - Add to Dynamic System all Recipes of Transportatin
+2 - Balance Recipes of Warfare
+2 - Balance Entities of Warfare
+2 - Add to Dynamic System all Recipes of Warfare
+2 - Add timer to Dynamic.
+2 - Add tables to see when something is unlocked (uses timer)
+4 - Advanced Assembling Machines
+1 - Add Gas
+1 - Underground Oil Reserves
+3 - When Close to lava, you will take damage
+2 - Release Meteors
+2 - Adding Meteor Shield
+4 - Add Sandwalls
+3 - Tiered Furnaces (both burner and Electric)
+5 - Remove Fuel Value from resin and add it to seed.
+3 - Adding a water hog (something that uses a lot of water)
+4 - Long input inserter
