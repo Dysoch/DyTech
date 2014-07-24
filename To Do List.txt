@@ -50,8 +50,7 @@ To Do List:
 2 - Release Meteors
 2 - Adding Meteor Shield
 4 - Add Sandwalls
-3 - Tiered Furnaces (both burner and Electric)
-5 - Remove Fuel Value from resin and add it to seed.
+3 - Tiered Furnaces (both burner and electric)
 3 - Adding a water hog (something that uses a lot of water)
 4 - Long input inserter
 5 - Fix underground belts being stuck
@@ -62,3 +61,5 @@ To Do List:
 4 - Update Signature Banner with a Modular One
 555555555555 - Complete Counter Calculator!
 4 - Create Banner for other people to use.
+5 - Properly make repair packs for each construction robot. (1 simple for player, and 3 for bots)
+4 - make bug thread with reported and/or soon to be fixed bugs
