@@ -283,6 +283,7 @@ remote.addinterface("DyTech-Core",
 	else
 		glob.debug = true
 		game.player.print("Debugger on")
+       end
   end,
   
   checkCounter = function(name)
