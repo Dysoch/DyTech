@@ -63,3 +63,4 @@ To Do List:
 4 - Create Banner for other people to use.
 5 - Properly make repair packs for each construction robot. (1 simple for player, and 3 for bots)
 4 - make bug thread with reported and/or soon to be fixed bugs
+4 - make burner small pumps (if possible)
