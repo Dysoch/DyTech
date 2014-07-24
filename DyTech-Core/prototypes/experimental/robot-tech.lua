@@ -11,7 +11,7 @@ data:extend(
         recipe = "capacity-logistic-robot-1"
       },
     },
-    prerequisites = {"advanced-electronics-2"},
+    prerequisites = {"advanced-electronics-3"},
     unit = 
 	{
       count = 500,

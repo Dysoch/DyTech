@@ -117,6 +117,7 @@ function OnLoad()
 	if not glob.stonecount then glob.stonecount=0 end
 --	if not glob.sand then glob.sand={} end
 --	if not glob.sandcount then glob.sandcount=0 end
+	if not glob.debug then glob.debug = false end
 	if not glob.coal then glob.coal={} end
 	if not glob.coalcount then glob.coalcount=0 end
 	if not glob.dytechitem then glob.dytechitem={} end
@@ -161,6 +162,7 @@ glob.coalcount=0
 glob.dytechitem={}
 glob.dytechitemcount=0
 glob.compatibility={treefarm=false, Fmod=false}
+glob.debug=false
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {
@@ -302,15 +304,18 @@ function DyTechItemCollect(name, radius)
 	local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
 		if not foundcollector[1] then
 		table.remove(glob.dytechitem, i)
+		if glob.debug==true then game.player.print("DEBUG: Item Collector Not Found") end
 		break
 		else
 		local insertable=game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}
 			for _, item in pairs(insertable) do
 				if game.findentitiesfiltered{type="transport-belt", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="transport-belt-to-ground", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="splitter", area={getboundingbox(item.position, 0.5)}}[1]==nil then
+					if glob.debug==true then game.player.print("DEBUG: Item Collector Belt check passed") end
 					if item.stack and foundcollector[1].caninsert(item.stack) then
 						foundcollector[1].insert(item.stack)
 						game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
 						item.destroy()
+						if glob.debug==true then game.player.print("DEBUG: ITem Collector Pick up done") end
 					break
 					end
 				end

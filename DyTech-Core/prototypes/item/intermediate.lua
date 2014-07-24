@@ -34,7 +34,6 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechinter",
     order = "resin",
-    fuel_value = "1MJ",
     stack_size = 50
   },
   {
@@ -45,6 +44,7 @@ data:extend(
     subgroup = "raw-material",
     order = "rubber-seed",
     place_result = "rubber-seed",
+    fuel_value = "1MJ",
     stack_size = 50
   },
   {

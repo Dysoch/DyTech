@@ -181,8 +181,8 @@ game.onevent(defines.events.ontick, function(event)
 		fs.CollectByPosition("coal", 1.5, true)
 	end
 	--[[DyTech Item Collector]]--
-	if glob.dytechitem~=nil and event.tick%30==0 then
-		fs.DyTechItemCollect(dytechitem, 25)
+	if glob.dytechitem~=nil and event.tick%60==0 then
+		fs.DyTechItemCollect(dytechitem, 50)
 	end
 end)
 
@@ -274,6 +274,15 @@ remote.addinterface("DyTech-Core",
   
   CombatPrint = function() 
 	fs.CombatPrinter()
+  end,
+  
+  Debugger = function() 
+	if glob.debug==true then
+		glob.debug = false
+		game.player.print("Debugger off")
+	else
+		glob.debug = true
+		game.player.print("Debugger on")
   end,
   
   checkCounter = function(name)

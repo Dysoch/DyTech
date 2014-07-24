@@ -90,7 +90,7 @@ data:extend(
     collision_box = {{-0.4, -0.15}, {0.4, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 32,
-    distance_to_enter = 0.35,
+    distance_to_enter = 0.37,
     ending_patch = ending_patch_prototype,
     max_distance = 20,
     belt_horizontal =
@@ -213,7 +213,7 @@ data:extend(
     collision_box = {{-0.2, -0.2}, {0.2, 0.05}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
-    distance_to_enter = 0.35,
+    distance_to_enter = 0.38,
     ending_patch = ending_patch_prototype,
     max_distance = 25,
     belt_horizontal =

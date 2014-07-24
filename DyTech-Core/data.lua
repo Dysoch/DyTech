@@ -6,7 +6,7 @@ water = true
 -- These are unbalanced, and not fully implemented. But they will work
 -- They have also been yet to be added to another module!
 -- True is active, false is inactive!
-experimental = false
+experimental = true
 
 -- Dirty Water add --
 if water==true then

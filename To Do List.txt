@@ -54,8 +54,11 @@ To Do List:
 5 - Remove Fuel Value from resin and add it to seed.
 3 - Adding a water hog (something that uses a lot of water)
 4 - Long input inserter
-5 - fix underground belts being stuck
-3 - adding tiered walls (metallurgy-warfare compatibility)
-1 - wildlife (Story)
-1 - story mode (Story)
-1 - genetics. (Own biters, dogs, birds, etc)
+5 - Fix underground belts being stuck
+3 - Adding tiered walls (metallurgy-warfare compatibility)
+1 - Wildlife (Story)
+1 - Story mode (Story)
+1 - Genetics. (Own biters, dogs, birds, etc)
+4 - Update Signature Banner with a Modular One
+555555555555 - Complete Counter Calculator!
+4 - Create Banner for other people to use.
