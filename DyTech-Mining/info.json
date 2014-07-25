@@ -1,9 +1,0 @@
-{
-	"name":"DyTech-Mining",
-	"author":"Dysoch",
-	"version":"1.0.0",
-	"title":"DyTech-Mining",
-	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
-	"description":"The DyTech Module for the Mining Machines",
-	"dependencies": ["DyTech-Core >= 0.6.0"]
-}

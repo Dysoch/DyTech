@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-2",
-    icon = "__DyTech-Mining__/graphics/technology/miner.png",
+    icon = "__DyTech-Automation__/graphics/technology/miner.png",
     effects =
     {
       {
@@ -42,7 +42,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-3",
-    icon = "__DyTech-Mining__/graphics/technology/miner.png",
+    icon = "__DyTech-Automation__/graphics/technology/miner.png",
     effects =
     {
       {
@@ -83,7 +83,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-4",
-    icon = "__DyTech-Mining__/graphics/technology/miner.png",
+    icon = "__DyTech-Automation__/graphics/technology/miner.png",
     effects =
     {
       {
@@ -114,7 +114,7 @@ data:extend(
       ingredients =
       {
         {"science-pack-2", 2},
-        {"science-pack-2", 2},
+        {"science-pack-3", 2},
         {"alien-science-pack", 2},
       },
       time = 45
@@ -125,7 +125,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-5",
-    icon = "__DyTech-Mining__/graphics/technology/miner.png",
+    icon = "__DyTech-Automation__/graphics/technology/miner.png",
     effects =
     {
       {
@@ -152,7 +152,7 @@ data:extend(
       ingredients =
       {
         {"science-pack-2", 2},
-        {"science-pack-2", 2},
+        {"science-pack-3", 2},
         {"alien-science-pack", 2},
       },
       time = 60
@@ -163,7 +163,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-6",
-    icon = "__DyTech-Mining__/graphics/technology/miner.png",
+    icon = "__DyTech-Automation__/graphics/technology/miner.png",
     effects =
     {
       {
@@ -178,7 +178,7 @@ data:extend(
       ingredients =
       {
         {"science-pack-2", 10},
-        {"science-pack-2", 10},
+        {"science-pack-3", 10},
         {"alien-science-pack", 10},
 --        {"science-pack-4", 10}, to be added in a future version!
       },

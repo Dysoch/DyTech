@@ -3,7 +3,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "basic-mining-drill-mk2",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill2.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk2"},
     max_health = 350,
@@ -21,7 +21,7 @@ data:extend(
         frame_height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/north2.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north2.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -33,7 +33,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.45, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/east2.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east2.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -45,7 +45,7 @@ data:extend(
         frame_height = 111,
         line_length = 8,
         shift = {0.15, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/south2.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south2.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -57,7 +57,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.25, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/west2.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west2.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -78,7 +78,7 @@ data:extend(
     module_slots = 1,
 	radius_visualisation_picture =
     {
-      filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
+      filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
       width = 12,
       height = 12
     }
@@ -86,7 +86,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "basic-mining-drill-mk3",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill3.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk3"},
     max_health = 450,
@@ -104,7 +104,7 @@ data:extend(
         frame_height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/north3.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north3.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -116,7 +116,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.45, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/east3.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east3.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -128,7 +128,7 @@ data:extend(
         frame_height = 111,
         line_length = 8,
         shift = {0.15, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/south3.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south3.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -140,7 +140,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.25, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/west3.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west3.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -161,7 +161,7 @@ data:extend(
     module_slots = 4,
     radius_visualisation_picture =
     {
-      filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
+      filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
       width = 12,
       height = 12
     }
@@ -170,7 +170,7 @@ data:extend(
     type = "mining-drill",
     name = "basic-mining-drill-mk4",
 	fast_replaceable_group =  "drill",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill4.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk4"},
     max_health = 800,
@@ -187,7 +187,7 @@ data:extend(
         frame_height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/north4.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north4.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -199,7 +199,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.45, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/east4.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east4.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -211,7 +211,7 @@ data:extend(
         frame_height = 111,
         line_length = 8,
         shift = {0.15, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/south4.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south4.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -223,7 +223,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.25, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/west4.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west4.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -244,7 +244,7 @@ data:extend(
     module_slots = 4,
     radius_visualisation_picture =
     {
-      filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
+      filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
       width = 12,
       height = 12
     }
@@ -252,7 +252,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "basic-mining-drill-mk5",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill5.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk5"},
     max_health = 1500,
@@ -270,7 +270,7 @@ data:extend(
         frame_height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/north5.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north5.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -282,7 +282,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.45, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/east5.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east5.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -294,7 +294,7 @@ data:extend(
         frame_height = 111,
         line_length = 8,
         shift = {0.15, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/south5.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south5.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -306,7 +306,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.25, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/west5.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west5.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -327,7 +327,7 @@ data:extend(
     module_slots = 5,
     radius_visualisation_picture =
     {
-      filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
+      filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
       width = 12,
       height = 12
     }
@@ -335,7 +335,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "basic-mining-drill-mk6",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill6.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill6.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk6"},
     max_health = 4500,
@@ -354,7 +354,7 @@ data:extend(
         frame_height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/north6.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north6.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -366,7 +366,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.45, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/east6.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east6.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -378,7 +378,7 @@ data:extend(
         frame_height = 111,
         line_length = 8,
         shift = {0.15, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/south6.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south6.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -390,7 +390,7 @@ data:extend(
         frame_height = 100,
         line_length = 8,
         shift = {0.25, 0},
-        filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/west6.png",
+        filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west6.png",
         frame_count = 64,
 		animation_speed = 0.5,
 		run_mode = "forward-then-backward",
@@ -410,7 +410,7 @@ data:extend(
     vector_to_place_result = {0, -1.85},
     radius_visualisation_picture =
     {
-      filename = "__DyTech-Mining__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
+      filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
       width = 12,
       height = 12
     }

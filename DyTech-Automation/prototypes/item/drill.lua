@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "basic-mining-drill-mk2",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill2.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "mining",
     order = "b-m-d-mk-2",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "basic-mining-drill-mk3",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill3.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "mining",
     order = "b-m-d-mk-3",
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "item",
     name = "basic-mining-drill-mk4",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill4.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill4.png",
     flags = {"goes-to-quickbar"},
     subgroup = "mining",
     order = "b-m-d-mk-4",
@@ -33,7 +33,7 @@ data:extend(
   {
     type = "item",
     name = "basic-mining-drill-mk5",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill5.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill5.png",
     flags = {"goes-to-quickbar"},
     subgroup = "mining",
     order = "b-m-d-mk-5",
@@ -43,7 +43,7 @@ data:extend(
   {
     type = "item",
     name = "basic-mining-drill-mk6",
-    icon = "__DyTech-Mining__/graphics/icons/basic-mining-drill6.png",
+    icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill6.png",
     flags = {"goes-to-quickbar"},
     subgroup = "mining",
     order = "b-m-d-mk-6",
