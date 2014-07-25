@@ -95,8 +95,9 @@ function OnLoad()
 	if not glob.counter2.died then glob.counter2.died=0 end
 	if not glob.counter2.pickup then glob.counter2.pickup=0 end
 	if not glob.counter2.chunks then glob.counter2.chunks=0 end
-	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, mining=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
+	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
 	if not glob.dytech.core then glob.dytech.core=true end
+	if not glob.dytech.automation then glob.dytech.automation=false end
 	if not glob.dytech.compatibility then glob.dytech.compatibility=false end
 	if not glob.dytech.dynamic then glob.dytech.dynamic=false end
 	if not glob.dytech.energy then glob.dytech.energy=false end
@@ -104,7 +105,6 @@ function OnLoad()
 	if not glob.dytech.logistic then glob.dytech.logistics=false end
 	if not glob.dytech.metallurgy then glob.dytech.metallurgy=false end
 	if not glob.dytech.meteors then glob.dytech.meteors=false end
-	if not glob.dytech.mining then glob.dytech.mining=false end
 	if not glob.dytech.modules then glob.dytech.modules=false end
 	if not glob.dytech.storage then glob.dytech.storage=false end
 	if not glob.dytech.tools then glob.dytech.tools=false end

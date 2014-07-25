@@ -1,7 +1,7 @@
 require "defines"
 
 game.oninit(function()
-	remote.call("DyTech-Core", "addModule", "mining")
+	remote.call("DyTech-Core", "addModule", "automation")
 end)
 
 game.onsave(function()
@@ -16,7 +16,7 @@ game.onevent(defines.events.ontick, function(event)
 
 end)
 
-remote.addinterface("DyTech-Mining",
+remote.addinterface("DyTech-Automation",
 {
 
 })
