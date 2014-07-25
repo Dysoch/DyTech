@@ -184,10 +184,21 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"processing-unit", 1},
+      {"advanced-circuit", 1},
       {"iron-gear-wheel", 1}
     },
     result = "repair-pack-2"
+  },
+  {
+    type = "recipe",
+    name = "repair-pack-3",
+	enabled = false,
+    ingredients =
+    {
+      {"processing-unit", 1},
+      {"steel-gear-wheel", 1}
+    },
+    result = "repair-pack-3"
   },
 }
 )

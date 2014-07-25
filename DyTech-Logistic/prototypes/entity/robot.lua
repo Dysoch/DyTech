@@ -490,7 +490,7 @@ data:extend(
       width = 52,
       height = 37
     },
-    repair_pack = "repair-pack"
+    repair_pack = "repair-pack-2"
   },
   {
     type = "construction-robot",
@@ -524,7 +524,7 @@ data:extend(
       width = 52,
       height = 37
     },
-    repair_pack = "repair-pack-2"
+    repair_pack = "repair-pack-3"
   },
 }
 )

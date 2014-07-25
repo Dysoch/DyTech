@@ -146,21 +146,31 @@ data:extend(
     icon = "__base__/graphics/icons/repair-pack.png",
     flags = {"goes-to-quickbar"},
     subgroup = "tool",
-    order = "d-e",
+    order = "b[repair]-a[repair-pack-0]",
     speed = 0.5,
     durability = 25,
     stack_size = 50
   },
-  
   {
     type = "repair-tool",
     name = "repair-pack-2",
     icon = "__base__/graphics/icons/repair-pack.png",
     flags = {"goes-to-quickbar"},
     subgroup = "tool",
-    order = "d-e",
+    order = "b[repair]-c[repair-pack-2]",
     speed = 2,
     durability = 250,
+    stack_size = 50
+  },
+  {
+    type = "repair-tool",
+    name = "repair-pack-3",
+    icon = "__base__/graphics/icons/repair-pack.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "tool",
+    order = "b[repair]-d[repair-pack-3]",
+    speed = 3,
+    durability = 500,
     stack_size = 50
   },
 }

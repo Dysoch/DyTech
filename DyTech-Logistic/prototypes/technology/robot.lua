@@ -112,6 +112,10 @@ data:extend(
         recipe = "construction-robot-1"
       },
       {
+        type = "unlock-recipe",
+        recipe = "repair-pack-2"
+      },
+      {
         type = "ghost-time-to-live",
         modifier = 60 * 60 * 10
       }
@@ -148,6 +152,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "construction-robot-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "repair-pack-3"
       },
       {
         type = "ghost-time-to-live",
