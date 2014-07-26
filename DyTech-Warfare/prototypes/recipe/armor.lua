@@ -11,7 +11,8 @@ data:extend(
 	  {"power-armor-mk2", 2},
 	  {"speed-module-3", 30},
 	  {"steel-plate", 100},
-	  {"alien-artifact", 150}
+	  {"alien-artifact", 150},
+	  {"chitin", 150},
 	},
     result = "power-armor-mk3"
   },
