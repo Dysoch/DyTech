@@ -27,7 +27,7 @@ function dynamicUnlocks(event, ttime, r)
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(50,150) and glob.counter.gear > math.random(150,500) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction(science, 4)
+					fs.FailureReduction(glob.counter.science, 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -43,7 +43,7 @@ function dynamicUnlocks(event, ttime, r)
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(125,300) and glob.counter.gear > math.random(450,1500) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction(science, 3)
+					fs.FailureReduction(glob.counter.science, 3)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
