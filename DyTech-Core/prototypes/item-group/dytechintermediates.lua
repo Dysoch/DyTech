@@ -25,5 +25,11 @@ data:extend(
     group = "dytechintermediates",
     order = "3"
   },
+  {
+    type = "item-subgroup",
+    name = "dytechbiteritems",
+    group = "dytechintermediates",
+    order = "4"
+  },
 }
 )
