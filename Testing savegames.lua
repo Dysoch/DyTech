@@ -51,3 +51,13 @@ counter={
 gear=926,turret=6,capsule=0,belt=552,gems=0,wall=0,machine=137,gun=1,resource=1091.5,tech=1033.5,alien=0,inserter=184,ammo=26,mining=41,robot=0,sectorscanned=0,dytech=8366.5,modules=0,plates=4184.5,chest=23,armor=0,energy=151,science=10}
 }
 
+Hafuu = {
+counter={
+machine=487,inserter=385,turret=17,gems=51,dytech=406538,capsule=0,belt=243,gear=4540,modules=272,plates=57997.5,mining=7,ammo=0,tech=27073.5,armor=217,gun=0,wall=0,alien=250526,resource=61718,sectorscanned=0,energy=948,chest=882,robot=1174,science=0},
+counter2={
+sectorscanned=24635,chunks=1167,dytech=182018,build=23443,pickup=13396,mine=96670,died=22708},
+dytech={
+warfare=true,logistic=true,transportation=true,modules=true,dynamic=false,tools=true,core=true,inserters=true,mining=true,metallurgy=false,energy=true,meteors=false,storage=true,compatibility=false}
+combat={
+medium=4155,small=5162,bird=0,big=3160,king=1608,dytech=17519,queen=925,dog=0,elder=2509,berserker=0}
+}

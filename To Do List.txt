@@ -43,17 +43,15 @@ To Do List:
 2 - Add to Dynamic System all Recipes of Warfare
 2 - Add timer to Dynamic.
 2 - Add tables to see when something is unlocked (uses timer)
-4 - Advanced Assembling Machines
 1 - Add Gas
 1 - Underground Oil Reserves
 3 - When Close to lava, you will take damage
 2 - Release Meteors
 2 - Adding Meteor Shield
 4 - Add Sandwalls
-3 - Tiered Furnaces (both burner and electric)
 3 - Adding a water hog (something that uses a lot of water)
 4 - Long input inserter
-5 - Fix underground belts being stuck
+5 - Fix underground belts being stuck (kinda done)
 3 - Adding tiered walls (metallurgy-warfare compatibility)
 1 - Wildlife (Story)
 1 - Story mode (Story)
@@ -61,6 +59,14 @@ To Do List:
 4 - Update Signature Banner with a Modular One
 555555555555 - Complete Counter Calculator!
 4 - Create Banner for other people to use.
-5 - Properly make repair packs for each construction robot. (1 simple for player, and 3 for bots)
 4 - make bug thread with reported and/or soon to be fixed bugs
 4 - make burner small pumps (if possible)
+2 - Empty bullet cartridges, that can be smelted back into bullets (but its not effecient)
+2 - Collectors use construction robots to pick up items
+5 - Gem Bullets for both gun turrets and guns.
+4/5 - Tiered Gun Turrets (something like the laser turrets, but different)
+1 - Loot of biters not letting drop when suicide
+5 - Loot of Biters change to carcasses
+5 - Carcasses can be processed into different items (including gems)
+1 - Turntables?
+1 - Modular armor with only 1 exoskeleton
