@@ -54,5 +54,46 @@ data:extend(
     },
     order = "m-6"
   },
+  {
+    type = "technology",
+    name = "military-7",
+    icon = "__DyTech-Warfare__/graphics/technology/military.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "diamond-bullet-magazine"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "emerald-bullet-magazine"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "topaz-bullet-magazine"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ruby-bullet-magazine"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "sapphire-bullet-magazine"
+      },
+    },
+    prerequisites = {"military-5", "gem-processing"},
+    unit =
+    {
+      count = 150,
+      ingredients =
+      {
+	    {"science-pack-1", 1}, 
+		{"science-pack-2", 1}, 
+		{"science-pack-3", 1}
+      },
+      time = 90
+    },
+    order = "m-7"
+  },
 }
 )
