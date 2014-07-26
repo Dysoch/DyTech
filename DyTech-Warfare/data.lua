@@ -37,10 +37,10 @@ require("prototypes.autoplace-controls")
 
 local loot1 =
 {
-  item = "ruby-3",
+  item = "biter-berserk-corpse",
   probability = 1,
-  count_min = 2,
-  count_max = 4 
+  count_min = 1,
+  count_max = 1 
 }
 
 if data.raw.unit~=nil then
@@ -52,10 +52,10 @@ end
 
 local loot2 =
 {
-  item = "sapphire-3",
+  item = "biter-elder-corpse",
   probability = 1,
   count_min = 1,
-  count_max = 3 
+  count_max = 1 
 }
 
 if data.raw.unit~=nil then
@@ -67,10 +67,10 @@ end
 
  local loot3 =
 {
-  item = "emerald-3",
+  item = "biter-king-corpse",
   probability = 1,
-  count_min = 0,
-  count_max = 2,
+  count_min = 1,
+  count_max = 1,
 }
 
 if data.raw.unit~=nil then
@@ -82,10 +82,10 @@ end
 
 local loot4 =
 {
-  item = "biter-queen-egg",
+  item = "biter-queen-corpse",
   probability = 1,
   count_min = 1,
-  count_max = 2,
+  count_max = 1,
 }
 
 if data.raw.unit~=nil then
