@@ -282,7 +282,7 @@ remote.addinterface("DyTech-Core",
   end,
   
   CounterPrintExport = function()
-	game.makefile("Counters.txt", serpent.block(glob.counter))
+	game.makefile("DyTech-Counters.txt", serpent.block(glob.counter))
   end,
   
   CounterPrint2 = function() 
@@ -290,7 +290,7 @@ remote.addinterface("DyTech-Core",
   end,
   
   CounterPrint2Export = function()
-	game.makefile("AdvancedCounters.txt", serpent.block(glob.counter2))
+	game.makefile("DyTech-AdvancedCounters.txt", serpent.block(glob.counter2))
   end,
   
   CombatPrint = function() 
@@ -298,14 +298,15 @@ remote.addinterface("DyTech-Core",
   end,
   
   CombatPrintExport = function()
-	game.makefile("CombatCounters.txt", serpent.block(glob.combat))
+	game.makefile("DyTech-CombatCounters.txt", serpent.block(glob.combat))
   end,
   
   ExportAll = function()
 	remote.call("DyTech-Core", "CounterPrintExport")
 	remote.call("DyTech-Core", "CounterPrint2Export")
 	remote.call("DyTech-Core", "CombatPrintExport")
-	game.makefile("Timer.txt", serpent.block(glob.timer))
+	game.makefile("DyTech-Timer.txt", serpent.block(glob.timer))
+	game.makefile("DyTech-ModulesInstalled.txt", serpent.block(glob.dytech))
 		if glob.dytech.dynamic==true then
 			remote.call("DyTech-Dynamic", "CraftedItemsExport")
 			remote.call("DyTech-Dynamic", "PickedItemsExport")

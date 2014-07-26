@@ -72,21 +72,15 @@ remote.addinterface("DyTech-Dynamic",
   end,
   
   CraftedItemsExport = function()
-	game.makefile("CraftedItems.txt", serpent.block(glob.CraftedItems))
+	game.makefile("DyTech-CraftedItems.txt", serpent.block(glob.CraftedItems))
   end,
   
   PickedItemsExport = function()
-	game.makefile("PickedItems.txt", serpent.block(glob.PickedItems))
+	game.makefile("DyTech-PickedItems.txt", serpent.block(glob.PickedItems))
   end,
   
   MinedItemsExport = function()
-	game.makefile("MinedItems.txt", serpent.block(glob.MinedItems))
-  end,
-  
-  ExportAll = function()
-	remote.call("DyTech-Dynamic", "CraftedItemsExport")
-	remote.call("DyTech-Dynamic", "PickedItemsExport")
-	remote.call("DyTech-Dynamic", "MinedItemsExport")
+	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
   end,
   
   ToggleDynamicSystem = function()
