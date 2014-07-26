@@ -19,5 +19,11 @@ data:extend(
     group = "dytechintermediates",
     order = "2"
   },
+  {
+    type = "item-subgroup",
+    name = "dytechloot",
+    group = "dytechintermediates",
+    order = "3"
+  },
 }
 )
