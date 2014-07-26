@@ -380,7 +380,7 @@ craftitems =
 	["cargo-wagon-fast"]={["steel-gear-wheel"]=10, plates=20, resource=5, tech=1},
 	["cargo-wagon-large"]={plates=20, tech=1, resource=5, ["steel-gear-wheel"]=10},
 	-- DyTech Warfare --
-	["alien-artifact"]={alien=50},
+	["alien-artifact"]={alien=4},
 	["sniper"]={["electronic-circuit"]=2, ["advanced-circuit"]=2, plates=45, gun=1},
 	["gem-crusher"]={["steel-gear-wheel"]=5, ["assembling-machine-3"]=1, machine=1},
 	["gem-grinder"]={["assembling-machine-2"]=2, ["steel-gear-wheel"]=5, plates=15, machine=1},
@@ -403,6 +403,11 @@ craftitems =
 	["laser-turret-sniper-1"]={["battery"]=12, ["electronic-circuit"]=20, ["steel-gear-wheel"]=20, plates=20, gems=12, turret=1},
 	["laser-turret-sniper=2"]={["battery"]=12, ["advanced-circuit"]=20, ["steel-gear-wheel"]=20, plates=40, gems=16, turret=1},
 	["laser-turret-sniper=3"]={["battery"]=12, ["advanced-processing-unit"]=20, ["steel-gear-wheel"]=20, plates=80, gems=20, turret=1},
+	["emerald-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
+	["diamond-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
+	["topaz-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
+	["sapphire-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
+	["ruby-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
 }
 
 --[[MINED ITEMS]]--
