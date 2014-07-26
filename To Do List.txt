@@ -38,7 +38,7 @@ To Do List:
 2 - Balance Recipes of Transportation
 2 - Balance Entities of Transportation
 2 - Add to Dynamic System all Recipes of Transportatin
-2 - Balance Recipes of Warfare
+2 - Balance Recipes of Warfare - 20% done
 2 - Balance Entities of Warfare
 2 - Add to Dynamic System all Recipes of Warfare
 2 - Add timer to Dynamic.
@@ -63,10 +63,7 @@ To Do List:
 4 - make burner small pumps (if possible)
 2 - Empty bullet cartridges, that can be smelted back into bullets (but its not effecient)
 2 - Collectors use construction robots to pick up items
-5 - Gem Bullets for both gun turrets and guns.
 4/5 - Tiered Gun Turrets (something like the laser turrets, but different)
 1 - Loot of biters not letting drop when suicide
-5 - Loot of Biters change to carcasses
-5 - Carcasses can be processed into different items (including gems)
 1 - Turntables?
 1 - Modular armor with only 1 exoskeleton
