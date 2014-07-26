@@ -169,5 +169,5 @@ function FailureMessage(ItemName)
 end
 
 function FailureReduction(CounterName, Number)
-	glob.counter[CounterName] =(glob.counter[CounterName]-math.random(glob.counter[CounterName]/Number))
+	CounterName =(CounterName-math.random(CounterName/Number))
 end 
