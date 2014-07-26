@@ -1,6 +1,8 @@
 require "defines"
 require "scripts/database"
 require "scripts/functions"
+require "scripts/oninit"
+require "scripts/onload"
 require "scripts/recycler-database"
 
 local RubberSeedTypeName = "RubberTree"
@@ -36,7 +38,7 @@ local allInOne = {
 }
 
 game.oninit(function()
-	fs.OnInit()
+	Init.OnInit()
 	
 end)
 
@@ -45,7 +47,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	fs.OnLoad()
+	Load.OnLoad()
 	if game.itemprototypes.charcoal and glob.compatibility.treefarm == false then --checks for Treefarm mod and if it has already detected it
 		glob.compatibility.treefarm=true
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then
@@ -143,6 +145,17 @@ game.onevent(defines.events.onpickedupitem, function(event)
 end)
 
 game.onevent(defines.events.ontick, function(event)
+	if event.tick%60==0 then
+		glob.timer.seconds = glob.timer.seconds + 1
+	end
+	if event.tick%3600==0 then
+		glob.timer.seconds = 0
+		glob.timer.minutes = glob.timer.minutes + 1
+	end
+	if event.tick%216000==0 then
+		glob.timer.minutes = 0
+		glob.timer.hours = glob.timer.hours + 1
+	end
 	if game.tick%60==1 then
 		glob.counter.dytech=0
 		glob.combat.dytech=0
@@ -292,6 +305,7 @@ remote.addinterface("DyTech-Core",
 	remote.call("DyTech-Core", "CounterPrintExport")
 	remote.call("DyTech-Core", "CounterPrint2Export")
 	remote.call("DyTech-Core", "CombatPrintExport")
+	game.makefile("Timer.txt", serpent.block(glob.timer))
 		if glob.dytech.dynamic==true then
 			remote.call("DyTech-Dynamic", "CraftedItemsExport")
 			remote.call("DyTech-Dynamic", "PickedItemsExport")
