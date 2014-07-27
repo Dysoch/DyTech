@@ -53,6 +53,38 @@ function dynamicUnlocks(event, ttime, r)
 			end
 		end
 	end
+	if event.tick%ttime==(r*5) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["basic-inserter-dytech-1"]
+	local LocaleName = game.getlocaliseditemname("basic-inserter")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.inserter > math.random(600,1200) and glob.counter.gear > math.random(1000,4000) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction(glob.counter.inserter, 2)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-inserter-1").." "..LocaleName)
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*6) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["basic-inserter-dytech-2"]
+	local LocaleName = game.getlocaliseditemname("basic-inserter")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.inserter > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction(glob.counter.inserter, 1.5)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-inserter-2").." "..LocaleName)
+					game.player.force.resetrecipes()
+				end
+			end
+		end
+	end
 end
 
 --[[Dynamic System Reward Events!]]--

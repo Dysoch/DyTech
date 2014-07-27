@@ -66,6 +66,10 @@ function OnLoad()
 	if not glob.reward.armor3 then glob.reward.armor3=false end
 	if not glob.reward.ammo1 then glob.reward.ammo1=false end
 	if not glob.reward.ammo2 then glob.reward.ammo2=false end
+	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
+	if not glob.timer.seconds then glob.timer.seconds=0 end
+	if not glob.timer.minutes then glob.timer.minutes=0 end
+	if not glob.timer.hours then glob.timer.hours=0 end
 end
 
 function OnInit()
@@ -79,6 +83,7 @@ glob.HardMode=false
 glob.CraftedItems = {}
 glob.PickedItems = {}
 glob.MinedItems = {}
+glob.timer={seconds=0, minutes=0, hours=0}
 end
 
 function DynamicToggle()
@@ -146,6 +151,12 @@ glob.counter.alien = glob.counter.alien + remote.call("DyTech-Core", "checkCount
 glob.counter.science = glob.counter.science + remote.call("DyTech-Core", "checkCounter", "science")
 glob.counter.wall = glob.counter.wall + remote.call("DyTech-Core", "checkCounter", "wall")
 glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
+glob.timer.hours=0 
+glob.timer.minutes=0 
+glob.timer.seconds=0 
+glob.timer.hours = glob.timer.hours + remote.call("DyTech-Core", "checkTimer", "hours")
+glob.timer.minutes = glob.timer.minutes + remote.call("DyTech-Core", "checkTimer", "minutes")
+glob.timer.seconds = glob.timer.seconds + remote.call("DyTech-Core", "checkTimer", "seconds")
 end
 
 function ModuleCheck()
@@ -169,5 +180,6 @@ function FailureMessage(ItemName)
 end
 
 function FailureReduction(CounterName, Number)
-	CounterName =(CounterName-math.random(CounterName/Number))
+	local Random = math.random(CounterName/Number)
+	remote.call("DyTech-Core", "removefromCounter", "CounterName", Random)
 end 
