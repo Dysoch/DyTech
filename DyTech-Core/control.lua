@@ -307,11 +307,14 @@ remote.addinterface("DyTech-Core",
 	remote.call("DyTech-Core", "CombatPrintExport")
 	game.makefile("DyTech-Timer.txt", serpent.block(glob.timer))
 	game.makefile("DyTech-ModulesInstalled.txt", serpent.block(glob.dytech))
+	game.player.print("Exported all data from Core!")
 		if glob.dytech.dynamic==true then
 			remote.call("DyTech-Dynamic", "CraftedItemsExport")
 			remote.call("DyTech-Dynamic", "PickedItemsExport")
 			remote.call("DyTech-Dynamic", "MinedItemsExport")
+			game.player.print("Exported all data from Dynamic aswell!")
 		end
+	game.player.print("You can find all relevant data in the script-output folder!")
   end,
   
   Debugger = function() 
@@ -338,12 +341,26 @@ remote.addinterface("DyTech-Core",
 	end
   end,
   
-  removefromCounter = function(name, number)
-	glob.counter[name] = glob.counter[name] - number
+  checkTimer = function(name)
+	if type(name) == "string" then
+		return glob.timer[name]
+	elseif type(name) == "table" then
+		local result = {}
+			for _, name in ipairs(name) do
+			result[name] = glob.timer[name]
+			end
+	return result
+	else
+    return false -- could also use error("unknown name type", 2)
+	end
   end,
   
-  addtoCounter = function(name, number)
-	glob.counter[name] = glob.counter[name] + number
+  removefromCounter = function(CounterName, Number)
+	CounterName = CounterName - Number
+  end,
+  
+  addtoCounter = function(CounterName, Number)
+	CounterName = CounterName + Number
   end
   
 })
