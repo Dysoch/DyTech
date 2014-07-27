@@ -1,6 +1,20 @@
 module("fs", package.seeall)
 require("util")
 
+function Timer()
+	if event.tick%60==0 then
+		glob.timer.seconds = glob.timer.seconds + 1
+	end
+	if glob.timer.seconds==60 then
+		glob.timer.seconds = 1
+		glob.timer.minutes = glob.timer.minutes + 1
+	end
+	if glob.timer.minutes==60 then
+		glob.timer.minutes = 1
+		glob.timer.hours = glob.timer.hours + 1
+	end
+end
+
 function CounterPrinter()
 	game.player.print("Here are all your counters with their current status!")
 	game.player.print("Gear:".." "..tostring(glob.counter.gear))

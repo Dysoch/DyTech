@@ -145,17 +145,7 @@ game.onevent(defines.events.onpickedupitem, function(event)
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if event.tick%60==0 then
-		glob.timer.seconds = glob.timer.seconds + 1
-	end
-	if event.tick%3600==0 then
-		glob.timer.seconds = 0
-		glob.timer.minutes = glob.timer.minutes + 1
-	end
-	if event.tick%216000==0 then
-		glob.timer.minutes = 0
-		glob.timer.hours = glob.timer.hours + 1
-	end
+	fs.Timer()
 	if game.tick%60==1 then
 		glob.counter.dytech=0
 		glob.combat.dytech=0
