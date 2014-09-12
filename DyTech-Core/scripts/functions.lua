@@ -155,7 +155,7 @@ function CollectByPosition(name, radius, ext)
     local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
 		if not foundcollector[1] then
 		table.remove(glob[name], i)
-		break
+		--break
 		else
 			for _, item in pairs(game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}) do
 				if item.stack.name==name and foundcollector[1].caninsert{name=name, count=1} then
@@ -175,18 +175,15 @@ function DyTechItemCollect(name, radius)
 	local foundcollector=game.findentitiesfiltered{name=realname, area={getboundingbox(value.position, 1)}}
 		if not foundcollector[1] then
 		table.remove(glob.dytechitem, i)
-		if glob.debug==true then game.player.print("DEBUG: Item Collector Not Found") end
-		break
+		--break
 		else
 		local insertable=game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}
 			for _, item in pairs(insertable) do
 				if game.findentitiesfiltered{type="transport-belt", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="transport-belt-to-ground", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="splitter", area={getboundingbox(item.position, 0.5)}}[1]==nil then
-					if glob.debug==true then game.player.print("DEBUG: Item Collector Belt check passed") end
 					if item.stack and foundcollector[1].caninsert(item.stack) then
 						foundcollector[1].insert(item.stack)
 						game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
 						item.destroy()
-						if glob.debug==true then game.player.print("DEBUG: ITem Collector Pick up done") end
 					break
 					end
 				end
