@@ -1,5 +1,150 @@
 require ("prototypes.functions")
 
+super_belt_horizontal =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32
+  }
+super_belt_vertical =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 40
+  }
+super_belt_ending_top =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 80
+  }
+super_belt_ending_bottom =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 120
+  }
+super_belt_ending_side =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 160
+  }
+super_belt_starting_top =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 200
+  }
+super_belt_starting_bottom =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 240
+  }
+super_belt_starting_side =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/super-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 280
+  }
+  
+  
+extreme_belt_horizontal =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32
+  }
+extreme_belt_vertical =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 40
+  }
+extreme_belt_ending_top =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 80
+  }
+extreme_belt_ending_bottom =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 120
+  }
+extreme_belt_ending_side =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 160
+  }
+extreme_belt_starting_top =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 200
+  }
+extreme_belt_starting_bottom =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 240
+  }
+extreme_belt_starting_side =
+  {
+    filename = "__DyTech-Transportation__/graphics/entity/transport-belt/extreme-transport-belt.png",
+    priority = "extra-high",
+    frame_width = 40,
+    frame_height = 40,
+    frame_count = 32,
+    y = 280
+  }
+
 data:extend(
 {
   {
@@ -29,6 +174,14 @@ data:extend(
       frame_count = 32,
       direction_count = 12
     },
+	belt_horizontal = super_belt_horizontal,
+    belt_vertical = super_belt_vertical,
+    ending_top = super_belt_ending_top,
+    ending_bottom = super_belt_ending_bottom,
+    ending_side = super_belt_ending_side,
+    starting_top = super_belt_starting_top,
+    starting_bottom = super_belt_starting_bottom,
+    starting_side = super_belt_starting_side,
     ending_patch = ending_patch_prototype,
     fast_replaceable_group = "transport-belt",
     speed = 0.133
@@ -60,6 +213,15 @@ data:extend(
       frame_count = 32,
       direction_count = 12
     },
+	belt_horizontal = extreme_belt_horizontal,
+    belt_vertical = extreme_belt_vertical,
+    ending_top = extreme_belt_ending_top,
+    ending_bottom = extreme_belt_ending_bottom,
+    ending_side = extreme_belt_ending_side,
+    starting_top = extreme_belt_starting_top,
+    starting_bottom = extreme_belt_starting_bottom,
+    starting_side = extreme_belt_starting_side,
+    ending_patch = ending_patch_prototype,
     ending_patch = ending_patch_prototype,
     fast_replaceable_group = "transport-belt",
     speed = 0.18
@@ -90,7 +252,7 @@ data:extend(
     collision_box = {{-0.4, -0.15}, {0.4, 0.1}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 32,
-    distance_to_enter = 0.37,
+    distance_to_enter = 0.5,
     ending_patch = ending_patch_prototype,
     max_distance = 20,
     belt_horizontal =
@@ -213,7 +375,7 @@ data:extend(
     collision_box = {{-0.2, -0.2}, {0.2, 0.05}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 64,
-    distance_to_enter = 0.38,
+    distance_to_enter = 0.5,
     ending_patch = ending_patch_prototype,
     max_distance = 25,
     belt_horizontal =
