@@ -191,3 +191,30 @@ function DyTechItemCollect(name, radius)
 		end
 	end
 end
+
+function craftModularTool(name)
+  local main = defines.inventory.playermain
+  local quick = defines.inventory.playerquickbar
+  local tools = defines.inventory.playertools
+  
+  local maincount = game.player.getinventory(main).getitemcount(name)
+  local quickcount = game.player.getinventory(quick).getitemcount(name)
+  local toolscount = game.player.getinventory(tools).getitemcount(name)
+  
+  game.player.insert{name=name, count=1}
+  
+  local maincount2 = game.player.getinventory(main).getitemcount(name)
+  local quickcount2 = game.player.getinventory(quick).getitemcount(name)
+  local toolscount2 = game.player.getinventory(tools).getitemcount(name)
+  
+  if ((maincount2 > maincount) or (quickcount2 > quickcount) or (toolscount2 > toolscount)) then
+    -- insert successful
+  else
+    -- unsuccessful
+  end
+end
+
+function getModularToolname(handle, rod, head)
+  local sep = "-"
+  return handle..sep..rod..sep..head..sep.."dytech"..sep.."axe"
+end

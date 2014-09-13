@@ -67,6 +67,7 @@ require("prototypes.entity.wall")
 require("prototypes.item.collector")
 require("prototypes.item.intermediate")
 require("prototypes.item.wall")
+require("prototypes.item.modulartools")
 
 -- Recipe
 require("prototypes.recipe.collector")
