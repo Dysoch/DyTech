@@ -76,6 +76,10 @@ tools.material.stone={
 	-- durability: 4500*1.2 = 5400
 	-- mining speed: 3*0.4*0.2 = 0.24
 }
+-- STone head with wooden rod and handle:
+	-- damage value(mining level): 2*0.6*1.2 = 1.44
+	-- durability: 4500*0.4 = 1800
+	-- mining speed: 3*0.4*0.6 = 0.72
 
 --[[function tool(handle, rod, head)
 	local sep = "-"
