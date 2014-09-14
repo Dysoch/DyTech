@@ -177,7 +177,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.4"
+        modifier = "0.2"
       }
     },
     prerequisites = {"laser-turret-damage-12"},
@@ -205,7 +205,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.4"
+        modifier = "0.2"
       }
     },
     prerequisites = {"laser-turret-damage-13"},
@@ -233,7 +233,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.5"
+        modifier = "0.25"
       }
     },
     prerequisites = {"laser-turret-damage-14"},
@@ -261,7 +261,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.5"
+        modifier = "0.25"
       }
     },
     prerequisites = {"laser-turret-damage-15"},
@@ -289,7 +289,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.6"
+        modifier = "0.3"
       }
     },
     prerequisites = {"laser-turret-damage-16"},
@@ -317,7 +317,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.7"
+        modifier = "0.35"
       }
     },
     prerequisites = {"laser-turret-damage-17"},
@@ -345,7 +345,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "0.8"
+        modifier = "0.4"
       }
     },
     prerequisites = {"laser-turret-damage-18"},
@@ -373,7 +373,7 @@ data:extend(
       {
         type = "ammo-damage",
         ammo_category = "laser-turret",
-        modifier = "1.0"
+        modifier = "0.5"
       }
     },
     prerequisites = {"laser-turret-damage-19"},

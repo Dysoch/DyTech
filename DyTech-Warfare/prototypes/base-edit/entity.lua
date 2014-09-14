@@ -1,4 +1,7 @@
-data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 10
+data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 20
+data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 14
+data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {600, 30}
+data.raw["unit-spawner"]["biter-spawner"].max_health = 2500
 data.raw["unit-spawner"]["biter-spawner"].result_units = (function()
                      local res = {}
                      res[1] = {"small-biter", 0.25} --25%
@@ -12,7 +15,7 @@ data.raw["unit-spawner"]["biter-spawner"].result_units = (function()
                      end
                      return res
                    end)()
-data.raw["unit-spawner"]["biter-spawner"].spawning_radius = 15
+data.raw["unit-spawner"]["biter-spawner"].spawning_radius = 20
 data.raw["unit-spawner"]["biter-spawner"].spawning_spacing = 2
 data.raw["unit-spawner"]["biter-spawner"].max_spawn_shift = 0.65
 data.raw["projectile"]["laser"].damage = { amount = 4, type = "laser"}
