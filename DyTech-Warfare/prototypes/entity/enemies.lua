@@ -5,9 +5,9 @@ data:extend(
     name = "berserk-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 1000,
+    max_health = 1500,
 	order = "b-b-d",
-    healing_per_tick = 0.05,
+    healing_per_tick = 0.08,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.7, -1.5}, {0.7, 0.3}},
     sticker_box = {{-0.6, -0.8}, {0.6, 0}},
@@ -16,7 +16,7 @@ data:extend(
       range = 1.5,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(50),
+      ammo_type = make_unit_melee_ammo_type(60),
       sound =
       {
         {
@@ -115,7 +115,7 @@ data:extend(
     name = "elder-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 750,
+    max_health = 1000,
 	order = "b-b-e",
 	resistances = 
     {
@@ -136,7 +136,7 @@ data:extend(
         percent = 20,
       },
     },
-    healing_per_tick = 0.07,
+    healing_per_tick = 0.09,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.7, -1.5}, {0.7, 0.3}},
     sticker_box = {{-0.6, -0.8}, {0.6, 0}},
@@ -193,7 +193,7 @@ data:extend(
       },
     },
 	vision_distance = 30,
-    movement_speed = 0.25,
+    movement_speed = 0.3,
     distance_per_frame = 0.2,
     pollution_to_join_attack = 2500,
 	distraction_cooldown = 300,
@@ -247,7 +247,7 @@ data:extend(
     name = "king-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 10000,
+    max_health = 15000,
 	order = "b-b-f",
 	resistances = 
     {
@@ -269,12 +269,12 @@ data:extend(
       },
     },
     healing_per_tick = 0.12,
-    collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-1.4, -3.0}, {1.4, 0.6}},
     sticker_box = {{-1.2, -1.6}, {1.2, 0}},
     attack_parameters =
     {
-      range = 1.5,
+      range = 4.5,
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(75),
@@ -323,8 +323,8 @@ data:extend(
         },
       },
     },
-	vision_distance = 30,
-    movement_speed = 0.03,
+	vision_distance = 50,
+    movement_speed = 0.1,
     distance_per_frame = 0.2,
     pollution_to_join_attack = 5000,
 	distraction_cooldown = 300,
@@ -378,25 +378,25 @@ data:extend(
     name = "queen-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 250,
+    max_health = 500,
 	order = "b-b-g",
 	resistances = 
     {
       {
         type = "physical",
-        percent = 90,
+        percent = 95,
       },
 	  {
         type = "fire",
-        percent = 90,
+        percent = 95,
       },
 	  {
         type = "laser",
-        percent = 90,
+        percent = 95,
       },
       {
         type = "explosion",
-        percent = 90,
+        percent = 95,
       },
     },
     healing_per_tick = 0.12,
@@ -408,7 +408,7 @@ data:extend(
       range = 1.5,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(5),
+      ammo_type = make_unit_melee_ammo_type(25),
       sound =
       {
         {
