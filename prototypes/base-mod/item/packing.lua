@@ -27,14 +27,5 @@ data:extend(
     order = "s-p-1",
     stack_size = 150
   },
-  {
-    type = "item",
-    name = "sandbag",
-    icon = "__DyTech-Graphics__/graphics/icons/sandbag.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "soft",
-    order = "s-b-1",
-    stack_size = 500
-  },
 }
 )

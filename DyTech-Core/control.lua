@@ -47,15 +47,19 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	Load.OnLoad()
-	if game.itemprototypes.charcoal and glob.compatibility.treefarm == false then --checks for Treefarm mod and if it has already detected it
-		glob.compatibility.treefarm=true
-		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then
-			local errorMsg = remote.call("treefarm", "addSeed", allInOne)
-			--if errorMsg ~= nil then game.player.print (errorMsg) end
+	fs.OnLoad()
+	if game.itemprototypes.charcoal then -- item "charcoal" is available, that means treefarm-mod is probably used
+		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then -- check if script-interfaces are available
+        local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
+            -- the remote function will return nil on success, otherwise a string with the error-msg
+			if errorMsg == nil then -- everything worked fine
+				glob.compatibility.treefarm = true
+			else
+				if errorMsg ~= "seed type already present" then game.player.print(errorMsg) end
+			end
 		end
-	else
-		glob.compatibility.treefarm=false
+	else -- charcoal isn't available, so treefarm-mod isn't installed
+		glob.compatibility.treefarm = false
 		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
 			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
 				glob.trees.isGrowing[seedTypeName] = nil
@@ -145,7 +149,7 @@ game.onevent(defines.events.onpickedupitem, function(event)
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	fs.Timer()
+	fs.Timer(event)
 	if game.tick%60==1 then
 		glob.counter.dytech=0
 		glob.combat.dytech=0

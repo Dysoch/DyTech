@@ -66,5 +66,14 @@ data:extend(
     },
     result = "steel-gear-wheel"
   },
+  {
+    type = "recipe",
+    name = "sandbag",
+    ingredients =
+    {
+      {"sand", 100},
+    },
+    result = "sandbag"
+  },
 }
 )

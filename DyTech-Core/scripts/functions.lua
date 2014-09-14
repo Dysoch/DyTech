@@ -1,16 +1,16 @@
 module("fs", package.seeall)
 require("util")
 
-function Timer()
+function Timer(event)
 	if event.tick%60==0 then
 		glob.timer.seconds = glob.timer.seconds + 1
 	end
 	if glob.timer.seconds==60 then
-		glob.timer.seconds = 1
+		glob.timer.seconds = 0
 		glob.timer.minutes = glob.timer.minutes + 1
 	end
 	if glob.timer.minutes==60 then
-		glob.timer.minutes = 1
+		glob.timer.minutes = 0
 		glob.timer.hours = glob.timer.hours + 1
 	end
 end

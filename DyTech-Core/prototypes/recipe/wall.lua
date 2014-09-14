@@ -3,8 +3,8 @@ data:extend(
   {
     type = "recipe",
     name = "sandwall",
-	enabled = false,
-    energy_required = 20,
+	enabled = true,
+    energy_required = 2.5,
     ingredients =
     {
       {"sandbag", 2},

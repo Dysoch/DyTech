@@ -30,15 +30,5 @@ data:extend(
     },
     result = "steel-plate-1"
   },
-  {
-    type = "recipe",
-    name = "sandbag",
-	category = "packing",
-    ingredients =
-    {
-      {"sand", 100},
-    },
-    result = "sandbag"
-  },
 }
 )

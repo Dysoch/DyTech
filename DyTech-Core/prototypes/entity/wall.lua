@@ -3,9 +3,8 @@ data:extend(
   {
     type = "wall",
     name = "sandwall",
-    icon = "__DyTech-Graphics__/graphics/icons/sandwall.png",
+    icon = "__DyTech-Core__/graphics/icons/sandwall.png",
     flags = {"placeable-neutral", "player-creation"},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     minable = {mining_time = 1, result = "sandwall"},
     max_health = 750,
     corpse = "sandwall-remnants",
@@ -37,7 +36,7 @@ data:extend(
       single =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-single.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-single.png",
           priority = "extra-high",
           width = 33,
           height = 58,
@@ -47,14 +46,14 @@ data:extend(
       straight_vertical =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-vertical-1.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-vertical-1.png",
           priority = "extra-high",
           width = 51,
           height = 32,
           shift = {0.296875, 0}
         },
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-vertical-2.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-vertical-2.png",
           priority = "extra-high",
           width = 51,
           height = 32,
@@ -64,7 +63,7 @@ data:extend(
       straight_vertical_under_ending =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-vertical-under-ending.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-vertical-under-ending.png",
           priority = "extra-high",
           width = 51,
           height = 32,
@@ -74,21 +73,21 @@ data:extend(
       straight_horizontal =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-horizontal-1.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-horizontal-1.png",
           priority = "extra-high",
           width = 32,
           height = 57,
           shift = {0, 0.078125}
         },
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-horizontal-2.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-horizontal-2.png",
           priority = "extra-high",
           width = 32,
           height = 57,
           shift = {0, 0.078125}
         },
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-straight-horizontal-3.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-straight-horizontal-3.png",
           priority = "extra-high",
           width = 32,
           height = 55,
@@ -98,7 +97,7 @@ data:extend(
       corner_right_up =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-corner-right-up.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-corner-right-up.png",
           priority = "extra-high",
           width = 32,
           height = 53,
@@ -108,7 +107,7 @@ data:extend(
       corner_right_down =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-corner-right-down.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-corner-right-down.png",
           priority = "extra-high",
           width = 32,
           height = 42,
@@ -118,7 +117,7 @@ data:extend(
       corner_left_down =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-corner-left-down.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-corner-left-down.png",
           priority = "extra-high",
           width = 46,
           height = 42,
@@ -128,7 +127,7 @@ data:extend(
       corner_left_up =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-corner-left-up.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-corner-left-up.png",
           priority = "extra-high",
           width = 51,
           height = 58,
@@ -138,7 +137,7 @@ data:extend(
       t_up =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-t-up.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-t-up.png",
           priority = "extra-high",
           width = 32,
           height = 44,
@@ -148,7 +147,7 @@ data:extend(
       t_down =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-t-down.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-t-down.png",
           priority = "extra-high",
           width = 32,
           height = 53,
@@ -158,7 +157,7 @@ data:extend(
       t_right =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-t-right.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-t-right.png",
           priority = "extra-high",
           width = 51,
           height = 38,
@@ -168,7 +167,7 @@ data:extend(
       t_left =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-t-left.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-t-left.png",
           priority = "extra-high",
           width = 32,
           height = 38,
@@ -178,7 +177,7 @@ data:extend(
       cross =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-cross.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-cross.png",
           priority = "extra-high",
           width = 32,
           height = 38,
@@ -188,7 +187,7 @@ data:extend(
       ending_up =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-ending-up.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-ending-up.png",
           priority = "extra-high",
           width = 64,
           height = 47,
@@ -198,7 +197,7 @@ data:extend(
       ending_down =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-ending-down.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-ending-down.png",
           priority = "extra-high",
           width = 51,
           height = 36,
@@ -208,7 +207,7 @@ data:extend(
       ending_right =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-ending-right.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-ending-right.png",
           priority = "extra-high",
           width = 32,
           height = 58,
@@ -218,7 +217,7 @@ data:extend(
       ending_left =
       {
         {
-          filename = "__DyTech-Graphics__/graphics/entity/sandwall/sandwall-ending-left.png",
+          filename = "__DyTech-Core__/graphics/entity/sandwall/sandwall-ending-left.png",
           priority = "extra-high",
           width = 44,
           height = 57,
@@ -230,7 +229,7 @@ data:extend(
   {
     type = "corpse",
     name = "sandwall-remnants",
-    icon = "__DyTech-Graphics__/graphics/icons/sandwall-remnants.png",
+    icon = "__DyTech-Core__/graphics/icons/sandwall-remnants.png",
     flags = {"placeable-neutral", "player-creation"},
 	order = "sw-r",
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -244,56 +243,56 @@ data:extend(
         frame_height = 36,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-01.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-01.png"
       },
       {
         frame_width = 38,
         frame_height = 35,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-02.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-02.png"
       },
       {
         frame_width = 35,
         frame_height = 36,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-03.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-03.png"
       },
       {
         frame_width = 41,
         frame_height = 36,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-04.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-04.png"
       },
       {
         frame_width = 35,
         frame_height = 35,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-05.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-05.png"
       },
       {
         frame_width = 50,
         frame_height = 37,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-06.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-06.png"
       },
       {
         frame_width = 54,
         frame_height = 40,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-07.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-07.png"
       },
       {
         frame_width = 43,
         frame_height = 45,
         frame_count = 1,
         direction_count = 1,
-        filename = "__DyTech-Graphics__/graphics/entity/sandwall/remains/sandwall-remain-08.png"
+        filename = "__DyTech-Core__/graphics/entity/sandwall/remains/sandwall-remain-08.png"
       }
     }
   },

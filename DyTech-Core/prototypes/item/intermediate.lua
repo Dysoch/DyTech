@@ -74,5 +74,14 @@ data:extend(
     order = "sand",
     stack_size = 5000
   },
+  {
+    type = "item",
+    name = "sandbag",
+    icon = "__DyTech-Core__/graphics/icons/sandbag.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechinter",
+    order = "sandbag",
+    stack_size = 500
+  },
 }
 )

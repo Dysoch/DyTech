@@ -3,12 +3,12 @@ data:extend(
   {
     type = "item",
     name = "sandwall",
-    icon = "__DyTech-Graphics__/graphics/icons/sandwall.png",
+    icon = "__DyTech-Core__/graphics/icons/sandwall.png",
     flags = {"goes-to-quickbar"},
     subgroup = "defensive-structure",
-    order = "sw",
+    order = "[wall]-[sand]",
     place_result = "sandwall",
-    stack_size = 64
+    stack_size = 50
   },
 }
 )

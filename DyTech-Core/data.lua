@@ -59,13 +59,16 @@ require("prototypes.base-edit.tech")
 require("prototypes.entity.collector")
 require("prototypes.entity.explosion")
 require("prototypes.entity.nature")
+require("prototypes.entity.wall")
 
 -- Fluids
 
 -- Item
 require("prototypes.item.collector")
 require("prototypes.item.intermediate")
+require("prototypes.item.wall")
 
 -- Recipe
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
+require("prototypes.recipe.wall")
