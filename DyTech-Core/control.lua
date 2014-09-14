@@ -4,7 +4,6 @@ require "scripts/functions"
 require "scripts/oninit"
 require "scripts/onload"
 require "scripts/recycler-database"
-require "scripts/tools-database"
 
 local RubberSeedTypeName = "RubberTree"
 local RubberGrowingStates = {
@@ -356,9 +355,5 @@ remote.addinterface("DyTech-Core",
   
   addtoCounter = function(CounterName, Number)
 	CounterName = CounterName + Number
-  end,
-  
-  craftModularTool = function(name) fs.craftModularTool(name) end,
-  
-  getModularToolname = function(handle, rod, head) return fs.getModularToolname(handle, rod, head) end
+  end
 })

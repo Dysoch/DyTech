@@ -23,6 +23,7 @@ end
 --end
 
 -- This next portion is a work in progress!!!!!!!!
+require("prototypes.item.modulartools")
 
 -- Database: Work in progress!!!!
 -- Strength, Hold, Flexibility and Density have a number for 0 to 10. 0 means a modifier of 0.2 (reduces the stat) and 10 means modifier of 2. 5 is neither an increase or reduction!

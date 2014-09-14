@@ -1,6 +1,8 @@
 module("ToolsDatabase", package.seeall)
 require("util")
 
+-- durability and damage = handle + rod
+-- speed = head
 rods = {
     wood = 500,
     stone = 1000,
@@ -40,8 +42,7 @@ function clearDatabases()
 end
 
 function CreateModularTool(handle, rod, head)
-  local sep = "-"
-  local name = handle..sep..rod..sep..head..sep.."dytech"..sep.."axe"
+  local name = getModularToolname(handle, rod, head)
   local newTool = util.table.deepcopy(baseTool)
   
   newTool.name = name
@@ -67,10 +68,38 @@ function CreateModularTools()
   clearDatabases() -- empty databases for other mods to use
 end
 
+function craftModularTool(name)
+  local main = defines.inventory.playermain
+  local quick = defines.inventory.playerquickbar
+  local tools = defines.inventory.playertools
+  
+  local maincount = game.player.getinventory(main).getitemcount(name)
+  local quickcount = game.player.getinventory(quick).getitemcount(name)
+  local toolscount = game.player.getinventory(tools).getitemcount(name)
+  
+  game.player.insert{name=name, count=1}
+  
+  local maincount2 = game.player.getinventory(main).getitemcount(name)
+  local quickcount2 = game.player.getinventory(quick).getitemcount(name)
+  local toolscount2 = game.player.getinventory(tools).getitemcount(name)
+  
+  if ((maincount2 > maincount) or (quickcount2 > quickcount) or (toolscount2 > toolscount)) then
+    -- insert successful
+  else
+    -- unsuccessful
+  end
+end
+
+function getModularToolname(handle, rod, head)
+  local sep = "-"
+  return handle..sep..rod..sep..head..sep.."dytech"..sep.."axe"
+end
+
+
 baseTool = {
   type = "mining-tool",
   name = "GenericDyTechTool",
-  icon = "__DyTech-Core__/graphics/icons/",
+  icon = "__DyTech-Tools__/graphics/icons/",
   flags = {"goes-to-main-inventory"},
   action =
   {
@@ -97,7 +126,7 @@ function createPartItems(namePrefix, modpath, iconExt, orderPrefix, orderSuffix,
   local basePartItem = {
     type = "item",
     name = "DyTechToolPart",
-    icon = "__DyTech-Core__/graphics/icons/",
+    icon = "__DyTech-Tools__/graphics/icons/",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechinter",
     order = "DyTechToolPart-[",
