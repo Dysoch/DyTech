@@ -1,0 +1,11 @@
+{
+  ["basic-transport-belt"] = 2,
+  coal = 93,
+  ["copper-ore"] = 75,
+  ["copper-plate"] = 23,
+  ["iron-ore"] = 76,
+  ["iron-plate"] = 24,
+  ["raw-wood"] = 4,
+  ["small-electric-pole"] = 1,
+  ["steel-chest-big"] = 4
+} --[[table: 000000004BB7A790]]

@@ -1,0 +1,5 @@
+{
+  ["basic-transport-belt"] = 152,
+  lab = 1,
+  ["science-pack-1"] = 26
+} --[[table: 000000004BB7A6F0]]

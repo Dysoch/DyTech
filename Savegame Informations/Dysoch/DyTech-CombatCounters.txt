@@ -1,0 +1,12 @@
+{
+  berserker = 0,
+  big = 0,
+  bird = 0,
+  dog = 0,
+  dytech = 0,
+  elder = 0,
+  king = 0,
+  medium = 0,
+  queen = 0,
+  small = 0
+} --[[table: 00000000653CF9B0]]
