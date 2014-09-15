@@ -94,9 +94,9 @@ function OnLoad()
 			["sand"] = 0.25,
 			["sand-dark"] = 0.25,
 			["other"] = 0 },
-		basicGrowingTime = 5400,
-		randomGrowingTime = 2700,
-		fertilizerBoost = 1.25 }} end
+		basicGrowingTime = 7500,
+		randomGrowingTime = 4500,
+		fertilizerBoost = 1.45 }} end
 	if not glob.trees.isGrowing then glob.trees.isGrowing = {RubberTree = {}} end
 	if not glob.trees.tmpData then glob.trees.tmpData = {} end
 end

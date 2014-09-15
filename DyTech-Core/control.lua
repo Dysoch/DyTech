@@ -24,9 +24,9 @@ local RubberTileEfficiency = {
 	["sand-dark"] = 0.25,
 	["other"] = 0
 }
-local RubberBasicGrowingTime = 5400
-local RubberRandomGrowingTime = 2700
-local RubberFertilizerBoost = 1.25
+local RubberBasicGrowingTime = 7500
+local RubberRandomGrowingTime = 4500
+local RubberFertilizerBoost = 1.45
 local allInOne = {
 	["name"] = RubberSeedTypeName,
 	["states"] = RubberGrowingStates,

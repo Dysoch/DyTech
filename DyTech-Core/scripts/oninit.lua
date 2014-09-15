@@ -36,9 +36,9 @@ glob.trees.seedTypes.RubberTree = {
 		["sand"] = 0.25,
 		["sand-dark"] = 0.25,
 		["other"] = 0 },
-	basicGrowingTime = 5400,
-	randomGrowingTime = 2700,
-	fertilizerBoost = 1.25 }
+	basicGrowingTime = 7500,
+	randomGrowingTime = 4500,
+	fertilizerBoost = 1.45 }
 glob.trees.isGrowing = {RubberTree = {}}
 glob.trees.tmpData = {}
 for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
