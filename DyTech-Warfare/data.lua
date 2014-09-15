@@ -100,3 +100,9 @@ if data.raw.unit~=nil then
 	end
 	table.insert(data.raw.unit["queen-biter"].loot, loot4)
 end
+
+if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
+  require("prototypes.item.modularTools")
+else
+  error("DyTech-Tools not found! If this is release code then open DyTech-Warefare and comment out line 104 then tell Dysoch that FreeER left in stupid debug code instead of fixing this properly... HI :)")
+end

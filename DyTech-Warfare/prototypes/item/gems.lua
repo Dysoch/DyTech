@@ -36,14 +36,26 @@ data:extend(
     order = "r-4",
     stack_size = 64
   },
-  {
+  { -- mostly testing
     type = "item",
     name = "ruby-5",
     icon = "__DyTech-Warfare__/graphics/icons/ruby-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "polished",
     order = "r-5",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = {
+      handle = true, --if it can be a handle!
+      rod = true, --if it can be a rod!
+      head = true, --if it can be a head!
+      durability = 1000, --the main durability before it is modified. only applies when used as head!
+      mininglevel = 1000, --main damage value (aka mining level) before modifiers!
+      miningspeed = 1000, --main speed value before modifiers!
+      strength = 1000,    --mining level*0.4 (reduction)(when used as head)
+                  --durability*0.4 (reduction)(when used as rod)
+      hold = 1000, --mining speed*0.4 (reduction)
+      flexibility = 1
+    }
   },
   {
     type = "item",
@@ -273,3 +285,8 @@ data:extend(
   },
 }
 )
+
+if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
+  require("scripts/tools-database")
+  ToolsDatabase.makeModularPart(data.raw["item"]["ruby-5"])
+end
