@@ -124,4 +124,3 @@ for k, v in pairs(data.raw["recipe"]["basic-transport-belt"].ingredients) do
 end
 table.insert(data.raw["recipe"]["basic-transport-belt"].ingredients,{"stone-gear-wheel", 1})
 data.raw["recipe"]["iron-axe"].enabled = false
-data.raw["recipe"]["repair-pack"].enabled = false
