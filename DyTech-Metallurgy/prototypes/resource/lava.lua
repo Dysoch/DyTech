@@ -6,10 +6,10 @@ data:extend(
     icon = "__DyTech-Metallurgy__/graphics/fluid/lava-600.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
-    order = "lava-0600",
+    order = "lava-1",
     infinite = true,
     minimum = 1000,
-    normal = 25000,
+    normal = 250000,
     minable =
     {
       hardness = 1,
@@ -73,10 +73,10 @@ data:extend(
     icon = "__DyTech-Metallurgy__/graphics/fluid/lava-1400.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
-    order = "lava-1400",
+    order = "lava-2",
     infinite = false,
     minimum = 1000,
-    normal = 25000,
+    normal = 250000,
     minable =
     {
       hardness = 1,
@@ -140,10 +140,10 @@ data:extend(
     icon = "__DyTech-Metallurgy__/graphics/fluid/lava-2800.png",
     flags = {"placeable-neutral"},
     category = "lava-magma",
-    order = "lava-2800",
+    order = "lava-3",
     infinite = false,
     minimum = 1000,
-    normal = 25000,
+    normal = 250000,
     minable =
     {
       hardness = 1,
