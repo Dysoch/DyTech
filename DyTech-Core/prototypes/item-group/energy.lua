@@ -63,7 +63,7 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "pipes",
+    name = "boiler",
     group = "dytech-energy",
     order = "10"
   },
