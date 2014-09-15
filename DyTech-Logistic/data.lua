@@ -1,4 +1,6 @@
-data.raw["repair-tool"]["repair-pack"].order = "b[repair]-b[repair-pack-1]"
+require("prototypes.base-edit.item")
+require("prototypes.base-edit.recipe")
+require("prototypes.base-edit.tech")
 require("prototypes.entity.collector")
 require("prototypes.item.collector")
 require("prototypes.recipe.collector")
