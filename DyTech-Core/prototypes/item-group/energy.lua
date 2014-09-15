@@ -73,5 +73,11 @@ data:extend(
     group = "dytech-energy",
     order = "11"
   },
+  {
+    type = "item-subgroup",
+    name = "pipes",
+    group = "dytech-energy",
+    order = "12"
+  },
 }
 )
