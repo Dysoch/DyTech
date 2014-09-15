@@ -47,7 +47,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	fs.OnLoad()
+	Load.OnLoad()
 	if game.itemprototypes.charcoal then -- item "charcoal" is available, that means treefarm-mod is probably used
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then -- check if script-interfaces are available
         local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
@@ -302,7 +302,7 @@ remote.addinterface("DyTech-Core",
 	game.makefile("DyTech-Timer.txt", serpent.block(glob.timer))
 	game.makefile("DyTech-ModulesInstalled.txt", serpent.block(glob.dytech))
 	game.player.print("Exported all data from Core!")
-		if glob.dytech.dynamic==true then
+		if glob.dytech.dynamic==true and remote.call("DyTech-Dynamic", "CraftedItemsExport")==true then
 			remote.call("DyTech-Dynamic", "CraftedItemsExport")
 			remote.call("DyTech-Dynamic", "PickedItemsExport")
 			remote.call("DyTech-Dynamic", "MinedItemsExport")
