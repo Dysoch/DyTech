@@ -43,7 +43,7 @@ require("prototypes.item.modulartools")
 -- strength of 9: 10000 durability before modifiers
 -- strength of 10: 12500 durability before modifiers
 
-tools.material.wood={
+--[[tools.material.wood={
 	handle = true, --if it can be a handle!
 	rod = true, --if it can be a rod!
 	head = true, --if it can be a head!
@@ -80,7 +80,7 @@ tools.material.stone={
 -- STone head with wooden rod and handle:
 	-- damage value(mining level): 2*0.6*1.2 = 1.44
 	-- durability: 4500*0.4 = 1800
-	-- mining speed: 3*0.4*0.6 = 0.72
+	-- mining speed: 3*0.4*0.6 = 0.72]]
 
 --[[function tool(handle, rod, head)
 	local sep = "-"
