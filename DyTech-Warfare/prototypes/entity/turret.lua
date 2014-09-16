@@ -297,7 +297,7 @@ data:extend(
     {
       ammo_category = "electric",
       cooldown = 24,
-      damage = 6,
+      damage = 9,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 21,
@@ -574,7 +574,7 @@ data:extend(
     {
       ammo_category = "electric",
       cooldown = 17,
-      damage = 12,
+      damage = 17,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 26,
@@ -801,7 +801,7 @@ data:extend(
             {
               type = "projectile",
               projectile = "laser-emerald-3",
-              starting_speed = 0.28
+              starting_speed = 0.30
             }
           }
         }
@@ -851,7 +851,7 @@ data:extend(
     {
       ammo_category = "electric",
       cooldown = 10,
-      damage = 20,
+      damage = 25,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 32,
