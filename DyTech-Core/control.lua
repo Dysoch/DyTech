@@ -356,5 +356,4 @@ remote.addinterface("DyTech-Core",
   addtoCounter = function(CounterName, Number)
 	CounterName = CounterName + Number
   end
-  
 })

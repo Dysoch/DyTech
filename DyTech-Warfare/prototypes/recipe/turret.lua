@@ -53,7 +53,7 @@ data:extend(
       {"electronic-circuit", 20},
       {"iron-gear-wheel", 20},
       {"battery", 12},
-	  {"ruby-5", 4} 
+      {"ruby-5", 4} 
     },
     result = "laser-turret-3"
   },
