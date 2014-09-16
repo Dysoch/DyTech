@@ -46,8 +46,8 @@ data:extend(
     stack_size = 64,
     modularInfo = 
 	{
-      handle = true,
-      rod = true,
+      handle = false,
+      rod = false,
       head = true, 
       durability = 1000,
       mininglevel = 1000,

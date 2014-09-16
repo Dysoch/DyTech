@@ -36,8 +36,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"piercing-bullet-magazine", 2},
-	  {"diamond-4", 3},
+      {"piercing-bullet-magazine", 1},
+	  {"diamond-4", 1},
     },
     result = "diamond-bullet-magazine"
   },
@@ -48,8 +48,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"piercing-bullet-magazine", 2},
-	  {"emerald-4", 3},
+      {"piercing-bullet-magazine", 1},
+	  {"emerald-4", 1},
     },
     result = "emerald-bullet-magazine"
   },
@@ -60,8 +60,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"piercing-bullet-magazine", 2},
-	  {"ruby-4", 3},
+      {"piercing-bullet-magazine", 1},
+	  {"ruby-4", 1},
     },
     result = "ruby-bullet-magazine"
   },
@@ -72,8 +72,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"piercing-bullet-magazine", 2},
-	  {"sapphire-4", 3},
+      {"piercing-bullet-magazine", 1},
+	  {"sapphire-4", 1},
     },
     result = "sapphire-bullet-magazine"
   },
@@ -84,8 +84,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"piercing-bullet-magazine", 2},
-	  {"topaz-4", 3},
+      {"piercing-bullet-magazine", 1},
+	  {"topaz-4", 1},
     },
     result = "topaz-bullet-magazine"
   },
