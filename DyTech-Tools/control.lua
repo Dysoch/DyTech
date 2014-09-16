@@ -27,6 +27,14 @@ game.onevent(defines.events.onguiclick, function(event)
     ToolsDatabase.updateGUILabel(toCraft)
   elseif event.element.name == ToolsDatabase.guiNames.craftButton then
     local name = ToolsDatabase.getModularToolname(toCraft)
+    if not name then
+      -- probably didn't have all the needed parts selected, so failed to match a valid toolname
+      -- no 'real' work here but maybe some additional feedback for the player
+      if not (toCraft["handles"] and toCraft["rods"] and toCraft["heads"]) then
+        game.player.print("Make sure you've selected a material for each part!")
+      end
+      return
+    end
     local reqs = {}
     local handle, rod, head = ToolsDatabase.getPartsFromToolName(name)
     reqs[handle] = (reqs[handle] or 0) + 1
@@ -38,7 +46,7 @@ game.onevent(defines.events.onguiclick, function(event)
     for name, needed in pairs(reqs) do
       local count = main.getitemcount(name) + quick.getitemcount(name)
       if count < needed then
-        game.player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n"..serpent.block(reqs))
+        game.player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
         return
       end
     end

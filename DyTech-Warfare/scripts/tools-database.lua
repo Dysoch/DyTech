@@ -116,6 +116,7 @@ function getModularToolname(handle, rod, head)
   if type(handle) == "string" and type(rod) == "string" and type(head) == "string" then
     return handle..sep..rod..sep..head..sep..suffix
   elseif type(handle) == "table" then
+    if not (handle["handles"] and handle["rods"] and handle["heads"]) then return false end
     return handle["handles"]..sep..handle["rods"]..sep..handle["heads"]..sep..suffix
   else
     return false
@@ -123,7 +124,7 @@ function getModularToolname(handle, rod, head)
 end
 
 function getPartsFromToolName(name)
-  if not name:find("modular%-axe") then error("invalid modular tool name!", 2) end -- sanity check
+  if not (name and type(name) == "string" and name:find("modular%-axe")) then error("invalid modular tool name: "..tostring(name), 2) end -- sanity check
   local sep = "%[%-%]"
   local suffix = "modular%-axe$"
   local partName = ".-"
