@@ -31,5 +31,11 @@ data:extend(
     group = "dytechintermediates",
     order = "4"
   },
+  {
+    type = "item-subgroup",
+    name = "genetics",
+    group = "dytechintermediates",
+    order = "5"
+  },
 }
 )

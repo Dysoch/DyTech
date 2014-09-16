@@ -48,12 +48,13 @@ function OnLoad()
 	if not glob.counter2.died then glob.counter2.died=0 end
 	if not glob.counter2.pickup then glob.counter2.pickup=0 end
 	if not glob.counter2.chunks then glob.counter2.chunks=0 end
-	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
+	if not glob.dytech then glob.dytech={core=true, compatibility=false, dynamic=false, energy=false, genetics=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false} end 
 	if not glob.dytech.core then glob.dytech.core=true end
 	if not glob.dytech.automation then glob.dytech.automation=false end
 	if not glob.dytech.compatibility then glob.dytech.compatibility=false end
 	if not glob.dytech.dynamic then glob.dytech.dynamic=false end
 	if not glob.dytech.energy then glob.dytech.energy=false end
+	if not glob.dytech.genetics then glob.dytech.genetics=false end
 	if not glob.dytech.inserters then glob.dytech.inserters=false end
 	if not glob.dytech.logistic then glob.dytech.logistics=false end
 	if not glob.dytech.metallurgy then glob.dytech.metallurgy=false end
