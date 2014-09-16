@@ -5,7 +5,7 @@ data:extend(
     name = "guard-dog-player",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
-    max_health = 250,
+    max_health = 150,
 	order = "g-d-1",
     healing_per_tick = 0.05,
     collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
@@ -15,7 +15,7 @@ data:extend(
       range = 1,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(5),
+      ammo_type = make_unit_melee_ammo_type(4),
       sound =
       {
         {
@@ -43,7 +43,7 @@ data:extend(
       }
     },
 	vision_distance = 30,
-    movement_speed = 0.4,
+    movement_speed = 0.3,
     distance_per_frame = 0.2,
     pollution_to_join_attack = 1500,
 	distraction_cooldown = 300,
@@ -123,7 +123,7 @@ data:extend(
       }
     },
 	vision_distance = 30,
-    movement_speed = 0.4,
+    movement_speed = 0.35,
     distance_per_frame = 0.2,
     pollution_to_join_attack = 1500,
 	distraction_cooldown = 300,
