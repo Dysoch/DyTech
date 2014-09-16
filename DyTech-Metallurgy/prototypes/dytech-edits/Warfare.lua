@@ -42,14 +42,3 @@ for k, v in pairs(data.raw["recipe"]["power-armor-mk3"].ingredients) do
 	if v[1] == "steel-gear-wheel" then table.remove(data.raw["recipe"]["power-armor-mk3"].ingredients, k) end
 end
 table.insert(data.raw["recipe"]["power-armor-mk3"].ingredients,{"gunmetal-alloy", 80})
-for k, v in pairs(data.raw["recipe"]["sniper-magazine"].ingredients) do
-	if v[1] == "steel-plate" then table.remove(data.raw["recipe"]["sniper-magazine"].ingredients, k) end
-end
-for k, v in pairs(data.raw["recipe"]["sniper-magazine"].ingredients) do
-	if v[1] == "copper-plate" then table.remove(data.raw["recipe"]["sniper-magazine"].ingredients, k) end
-end
-for k, v in pairs(data.raw["recipe"]["sniper-magazine"].ingredients) do
-	if v[1] == "coal" then table.remove(data.raw["recipe"]["sniper-magazine"].ingredients, k) end
-end
-table.insert(data.raw["recipe"]["sniper-magazine"].ingredients,{"gunmetal-alloy", 1})
-table.insert(data.raw["recipe"]["sniper-magazine"].ingredients,{"electrum-alloy", 1})
