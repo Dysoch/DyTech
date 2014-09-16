@@ -68,3 +68,4 @@ ToolsDatabase.makeModularPart(data.raw.item.stone)
 ToolsDatabase.makeModularPart(data.raw.item["iron-plate"])
 ToolsDatabase.makeModularPart(data.raw.item["copper-plate"])
 ToolsDatabase.makeModularPart(data.raw.item["steel-plate"])
+ToolsDatabase.CreateModularTools() -- create tools for all defined parts
