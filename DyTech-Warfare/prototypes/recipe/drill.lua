@@ -9,7 +9,7 @@ data:extend(
     {
       {"basic-mining-drill", 1},
       {"ruby-3", 2},
-	  {"steel-plate", 10},
+	  {"bronze-alloy", 10},
     },
     result = "basic-mining-drill-gem"
   },

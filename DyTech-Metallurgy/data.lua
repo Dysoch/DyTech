@@ -3,10 +3,6 @@ if data.raw.item["stone-pile"] then
 require("prototypes.mod-edit.fmod")
 end
 -- DyTech Edits --
--- Warfare
-if data.raw.item["sniper-turret"] then
-require("prototypes.dytech-edits.Warfare")
-end
 
 -- entity 
 require("prototypes.entity.assemblers-molds")

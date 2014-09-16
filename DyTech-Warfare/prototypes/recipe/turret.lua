@@ -109,9 +109,9 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"steel-plate", 5},
+      {"gunmetal-alloy", 5},
       {"advanced-processing-unit", 5},
-      {"steel-gear-wheel", 5},
+      {"tungsten-gear-wheel", 5},
       {"battery", 3},
 	  {"emerald-3", 1} 
     },
@@ -124,9 +124,9 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"steel-plate", 10},
+      {"gunmetal-alloy", 10},
       {"advanced-processing-unit", 10},
-      {"steel-gear-wheel", 10},
+      {"tungsten-gear-wheel", 10},
       {"battery", 6},
 	  {"emerald-4", 2} 
     },
@@ -139,9 +139,9 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"steel-plate", 20},
+      {"gunmetal-alloy", 20},
       {"advanced-processing-unit", 20},
-      {"steel-gear-wheel", 20},
+      {"tungsten-gear-wheel", 20},
       {"battery", 12},
 	  {"emerald-5", 4} 
     },
@@ -184,9 +184,9 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"steel-plate", 80},
+      {"gunmetal-alloy", 80},
       {"advanced-processing-unit", 20},
-      {"steel-gear-wheel", 20},
+      {"tungsten-gear-wheel", 20},
       {"battery", 12},
 	  {"topaz-5", 4} 
     },
