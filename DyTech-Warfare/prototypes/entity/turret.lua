@@ -1207,7 +1207,7 @@ data:extend(
         starting_frame_speed = 0.2,
         starting_frame_speed_deviation = 0.1
       },
-      range = 10,
+      range = 6,
       sound =
       {
         {

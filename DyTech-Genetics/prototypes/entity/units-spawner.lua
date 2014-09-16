@@ -72,12 +72,7 @@ data:extend(
     corpse = "dog-lair-corpse",
     loot =
     {
-      {
-        count_max = 3,
-        count_min = 1,
-        item = "alien-artifact",
-        probability = 1
-      }
+
     },
     max_count_of_owned_units = 15,
     max_friends_around_to_spawn = 5,
@@ -95,6 +90,98 @@ data:extend(
     spawning_spacing = 2,
     max_spawn_shift = 0.65,
     max_richness_for_spawn_shift = 100,
+  },
+  {
+    type = "unit-spawner",
+    name = "dog-lair-enemy",
+    icon = "__base__/graphics/icons/biter-spawner.png",
+    flags = {"placeable-player", "placeable-neutral", "placeable-enemy", "not-repairable"},
+    max_health = 1000,
+	order="b-b-g",
+    resistances =
+    {
+      {
+        type = "physical",
+        decrease = 2,
+      },
+      {
+        type = "explosion",
+        decrease = 5,
+        percent = 15,
+      }
+    },
+    healing_per_tick = 0.02,
+    collision_box = {{-4.0, -3.0}, {3.0, 3.0}},
+    selection_box = {{-4.0, -3.0}, {3.0, 3.0}},
+    -- in ticks per 1 pu
+    pollution_cooldown = 10,
+    corpse = "dog-lair-corpse",
+    loot =
+    {
+      {
+        count_max = 3,
+        count_min = 1,
+        item = "alien-artifact",
+        probability = 1
+      }
+    },
+    max_count_of_owned_units = 10,
+    max_friends_around_to_spawn = 5,
+    animations =
+    {
+	  doglairanimation(1)
+    },
+    result_units = (function()
+                     local res = {}
+                     res[1] = {"guard-dog-enemy", 1} --25%
+                     return res
+                   end)(),
+    spawning_cooldown = {600, 30}, 
+    spawning_radius = 15,
+    spawning_spacing = 2,
+    max_spawn_shift = 0.65,
+    max_richness_for_spawn_shift = 100,
+    autoplace =
+    {
+      sharpness = 0.4,
+      control = "enemy-base",
+      order = "b[enemy]-b[dog-lair]",
+      richness_multiplier = 0.2,
+      richness_base = 0,
+      force = "enemy",
+      peaks =
+      {
+        {
+          influence = 0,
+          richness_influence = 100,
+          tier_from_start_optimal = 20,
+          tier_from_start_top_property_limit = 20,
+          tier_from_start_max_range = 40,
+        },
+        {
+          influence = -10.0,
+          starting_area_weight_optimal = 1,
+          starting_area_weight_range = 0,
+          starting_area_weight_max_range = 2,
+        },
+        {
+          influence = 0.425,
+          noise_layer = "enemy-base",
+          noise_octaves_difference = -1.8,
+          noise_persistence = 0.5,
+        },
+        -- increase the size when moving further away
+        {
+          influence = 0.5,
+          noise_layer = "enemy-base",
+          noise_octaves_difference = -1.8,
+          noise_persistence = 0.5,
+          tier_from_start_optimal = 20,
+          tier_from_start_top_property_limit = 20,
+          tier_from_start_max_range = 40,
+        },
+      }
+    }
   },
   --[[{
     type = "unit-spawner",
