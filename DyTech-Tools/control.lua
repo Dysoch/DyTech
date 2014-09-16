@@ -4,6 +4,7 @@ require "scripts/tools-database"
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "tools")
   toCraft = toCraft or {}
+  game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
 end)
 
 game.onsave(function()
@@ -25,6 +26,8 @@ game.onevent(defines.events.onguiclick, function(event)
   elseif event.element.name:find(ToolsDatabase.guiNames.partPrefix) then
     toCraft[ToolsDatabase.selectedPart] = event.element.name:match(ToolsDatabase.guiNames.partPrefix.."%[(.+)%]$")
     ToolsDatabase.updateGUILabel(toCraft)
+  elseif event.element.name == "showModularCraftingGUI" then
+    ToolsDatabase.toggleCraftingGUI()
   elseif event.element.name == ToolsDatabase.guiNames.craftButton then
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
@@ -72,4 +75,5 @@ remote.addinterface("DyTech-Tools",
   craftModularTool = ToolsDatabase.craftModularTool,
   getModularToolname = ToolsDatabase.getModularToolname,
   showCraftingGUI = ToolsDatabase.showCraftingGUI,
+  CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
 })
