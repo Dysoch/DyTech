@@ -71,6 +71,22 @@ function CreateModularTools()
   end
 end
 
+function CreateModularToolLocales()
+  populateDatabaseRuntime()
+  names = {}
+  for handle, handleValue in pairs(materials.handles) do
+    for rod, rodValue in pairs(materials.rods) do
+      for head, headValue in pairs(materials.heads) do
+        local name = getModularToolname(handle, rod, head)
+        if "Unknown key:\"item-name."..name.."\"" == game.getlocaliseditemname(name) then -- not already localised
+          table.insert(names, name)
+        end
+      end
+    end
+  end
+  game.makefile("DyTechModularToolLocales.cfg", "[item-name]\n"..table.concat(names, "=Modular DyTech Tool\n").."=Modular DyTech Tool")
+end
+
 function craftModularTool(name)
   local main = game.player.getinventory(defines.inventory.playermain)
   local quick = game.player.getinventory(defines.inventory.playerquickbar)
@@ -258,6 +274,14 @@ function showCraftingGUI()
   mainFrame.add({type="label", name=guiNames.label, caption=oldLabel}) -- should display currently selected parts...
   mainFrame.add({type="table", name=guiNames.parts, colspan=ITEM_COLSPAN})
   populateGUIPartsTable(selectedPart)
+end
+
+function toggleCraftingGUI()
+  if game.player.gui.center[guiNames.mainFlow] then
+    closeCraftingGUI()
+  else
+    showCraftingGUI()
+  end
 end
 
 function populateGUIPartsTable(selectedPart)
