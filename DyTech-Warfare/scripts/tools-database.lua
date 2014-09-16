@@ -237,9 +237,9 @@ function getModularInfo(prototype)
         head = match:sub(5,5)
       }
     }
-    if Part.modularInfo.handle == 1 then modularInfo.handle = true end
-    if Part.modularInfo.rod == 1 then modularInfo.rod = true end
-    if Part.modularInfo.head == 1 then modularInfo.head = true end
+    if Part.modularInfo.handle == "1" then Part.modularInfo.handle = true else Part.modularInfo.handle = false end
+    if Part.modularInfo.rod == "1" then Part.modularInfo.rod = true else Part.modularInfo.rod = false end
+    if Part.modularInfo.head == "1" then Part.modularInfo.head = true else Part.modularInfo.head = false end
     return Part
   else
     return false
@@ -288,6 +288,9 @@ end
 
 function populateGUIPartsTable(selectedPart)
   if mainFrame and mainFrame.valid then
+    while #mainFrame[guiNames.parts].childrennames ~= 0 do -- childrennames only returns a table of the LAST child...why???
+      mainFrame[guiNames.parts][mainFrame[guiNames.parts].childrennames[1]].destroy()
+    end
     for name, info in pairs(materials[selectedPart]) do
       mainFrame[guiNames.parts].add({type="button", name=guiNames.partPrefix.."["..name.."]", caption=game.getlocaliseditemname(name)})
     end
@@ -313,10 +316,12 @@ end
 
 function updateGUISelectedPart(partType)
   if not partType then return end
+  if partType == selectedPart then return end
   selectedPart = partType
   if mainFrame and mainFrame.valid then -- just a little sanity check...
     mainFrame[guiNames.buttonFlow][guiNames.currentSelectionLabel].caption = "Currently Selected: " .. selectedPart
   end
+  populateGUIPartsTable(selectedPart)
 end
 
 function closeCraftingGUI()
