@@ -32,7 +32,8 @@ function populateDatabaseRuntime()
     stone = {modularInfo = {handle = true, rod=true, head=true}},
     ["iron-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
     ["copper-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
-    ["steel-plate"] = {modularInfo = {handle = true, rod=true, head=true}}
+    ["steel-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
+    rubber = {modularInfo = {handle = true, rod=true, head=true}}
   }
   for name, prototype in pairs(baseMaterials) do
       if prototype.modularInfo.handle then materials.handles[name] = prototype.modularInfo end -- modularInfo could theorecically be extended with more info
@@ -114,7 +115,7 @@ function getModularToolname(handle, rod, head)
   local sep = "[-]"
   local suffix = "modular-axe"
   if type(handle) == "string" and type(rod) == "string" and type(head) == "string" then
-    return handle..sep..rod..sep..head..sep..suffix
+    return "..handle..sep..rod..sep..head..sep..suffix.."
   elseif type(handle) == "table" then
     if not (handle["handles"] and handle["rods"] and handle["heads"]) then return false end
     return handle["handles"]..sep..handle["rods"]..sep..handle["heads"]..sep..suffix
