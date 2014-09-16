@@ -71,20 +71,22 @@ function CreateModularTools()
   end
 end
 
-function CreateModularToolLocales()
+function CreateModularToolLocales(force)
   populateDatabaseRuntime()
   names = {}
   for handle, handleValue in pairs(materials.handles) do
     for rod, rodValue in pairs(materials.rods) do
       for head, headValue in pairs(materials.heads) do
         local name = getModularToolname(handle, rod, head)
-        if "Unknown key:\"item-name."..name.."\"" == game.getlocaliseditemname(name) then -- not already localised
+        if ("Unknown key:\"item-name."..name.."\"" == game.getlocaliseditemname(name)) or force then -- not already localised
           table.insert(names, name)
+          table.insert(names, "=Modular Tool with a "..game.getlocaliseditemname(handle).." handle, a "..game.getlocaliseditemname(rod).." rod, and a "..game.getlocaliseditemname(head).." head\n")
         end
       end
     end
   end
-  game.makefile("DyTechModularToolLocales.cfg", "[item-name]\n"..table.concat(names, "=Modular DyTech Tool\n").."=Modular DyTech Tool")
+  
+  game.makefile("DyTechModularToolLocales.cfg", "[item-name]\n"..table.concat(names, ""))
 end
 
 function craftModularTool(name)
