@@ -14,18 +14,6 @@ game.oninit(function()
 	game.player.print("Do not worry if you see an Written error here. This is for migrations, and it means F-mod is not installed")
 end)
 
-game.onsave(function()
-
-end)
-
-game.onload(function()
-
-end)
-
-game.onevent(defines.events.ontick, function(event)
-
-end)
-
 remote.addinterface("DyTech-Metallurgy",
 {
   RegenerateOres = function()

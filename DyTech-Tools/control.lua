@@ -71,5 +71,5 @@ remote.addinterface("DyTech-Tools",
 {
   craftModularTool = ToolsDatabase.craftModularTool,
   getModularToolname = ToolsDatabase.getModularToolname,
-  showCraftingGUI = ToolsDatabase.showCraftingGUI
+  showCraftingGUI = ToolsDatabase.showCraftingGUI,
 })

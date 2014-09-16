@@ -45,14 +45,5 @@ data:extend(
     order = "mold-ammo-2-advanced",
     stack_size = 50
   },
-  {
-	type= "item",
-	name= "mold-tool",
-	icon= "__DyTech-Metallurgy__/graphics/icons/mold-tool.png",
-	flags = {"goes-to-main-inventory"},
-	subgroup = "molds",
-	order= "mold-tool",
-	stack_size= 50
-  },
 }
 )

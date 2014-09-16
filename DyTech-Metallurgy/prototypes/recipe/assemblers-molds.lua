@@ -55,16 +55,5 @@ data:extend(
     },
     result = "metallurgy-machine-ammo-advanced"
   },
-  {
-    type = "recipe",
-    name = "metallurgy-machine-tool",
-    enabled = false,
-    ingredients =
-    {
-      {"mold-tool", 5},
-      {"assembling-machine-2", 1}
-    },
-    result = "metallurgy-machine-tool"
-  },
 }
 )

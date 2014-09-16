@@ -50,15 +50,5 @@ data:extend(
     place_result = "metallurgy-machine-ammo-advanced",
     stack_size = 32
   },
-  {
-	type= "item",
-	name= "metallurgy-machine-tool",
-	icon= "__DyTech-Metallurgy__/graphics/icons/mold-tool-machine.png",
-	flags= {"goes-to-quickbar"},
-	subgroup = "assembling-molds",
-	order= "metallurgy-machine-tool",
-	place_result= "metallurgy-machine-tool",
-	stack_size= 10,
-  },
 }
 )

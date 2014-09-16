@@ -9,7 +9,7 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "recycled",
+    name = "modular-tools",
     group = "recycler",
     order = "1"
   },

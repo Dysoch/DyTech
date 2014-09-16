@@ -57,16 +57,5 @@ data:extend(
     },
     result = "mold-ammo-advanced"
   },
-  {
-    type = "recipe",
-    name = "mold-tool",
-    enabled = false,
-    ingredients =
-    {
-      {"clay", 5},
-      {"steel-axe", 2}
-    },
-    result = "mold-tool"
-  },
 }
 )

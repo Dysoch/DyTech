@@ -163,7 +163,7 @@ baseTool = {
     }
   },
   durability = 5000,
-  subgroup = "tool",
+  subgroup = "modular-tools",
   speed = 2,
   order = "a[mining]-dytech[",
   stack_size = 20

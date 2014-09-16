@@ -30,10 +30,6 @@ data:extend(
         type = "unlock-recipe",
         recipe = "mold-ammo-advanced"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-tool"
-      },
     },
     prerequisites = {"lava-smelting-03"},
     unit =
@@ -84,7 +80,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "molds-07",
+    name = "molds-06",
     icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
     effects =
     {
@@ -112,7 +108,7 @@ data:extend(
       },
       time = 30
     },
-    order = "molds-07",
+    order = "molds-06",
 	upgrade = true,
   },
   {
@@ -154,7 +150,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "molds-08",
+    name = "molds-07",
     icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
     effects =
     {
@@ -174,7 +170,7 @@ data:extend(
       },
       time = 30
     },
-    order = "molds-08",
+    order = "molds-07",
 	upgrade = true,
   },
   {
@@ -265,39 +261,6 @@ data:extend(
       time = 30
     },
     order = "molds-05",
-	upgrade = true,
-  },
-  {
-    type = "technology",
-    name = "molds-06",
-    icon = "__DyTech-Metallurgy__/graphics/technology/mold.png",
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "metallurgy-machine-tool"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-tool-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-tool-2"
-      },
-    },
-    prerequisites = {"molds-01"},
-    unit =
-    {
-      count = 250,
-      ingredients =
-      {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-      },
-      time = 30
-    },
-    order = "molds-06",
 	upgrade = true,
   },
 }
