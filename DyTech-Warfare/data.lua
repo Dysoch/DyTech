@@ -101,6 +101,51 @@ if data.raw.unit~=nil then
 	table.insert(data.raw.unit["queen-biter"].loot, loot4)
 end
 
+local loot5 =
+{
+  item = "biter-small-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["small-biter"].loot == nil then 
+		data.raw.unit["small-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["small-biter"].loot, loot5)
+end
+
+local loot6 =
+{
+  item = "biter-medium-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["medium-biter"].loot == nil then 
+		data.raw.unit["medium-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["medium-biter"].loot, loot6)
+end
+
+local loot7 =
+{
+  item = "biter-big-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["big-biter"].loot == nil then 
+		data.raw.unit["big-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["big-biter"].loot, loot7)
+end
+
 if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
   require("prototypes.item.modularTools")
 end

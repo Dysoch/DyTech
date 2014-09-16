@@ -1,5 +1,7 @@
 table.insert(data.raw["technology"]["laser-turrets"].effects,{type = "unlock-recipe",recipe = "laser-turret-2"})
 table.insert(data.raw["technology"]["laser-turrets"].effects,{type = "unlock-recipe",recipe = "laser-turret-3"})
+table.insert(data.raw["technology"]["military-3"].effects,{type = "unlock-recipe",recipe = "sniper"})
+table.insert(data.raw["technology"]["military-3"].effects,{type = "unlock-recipe",recipe = "sniper-magazine-1"})
 table.insert(data.raw["technology"]["bullet-damage-1"].effects,{type = "ammo-damage",ammo_category = "sniper-ammo",modifier = "0.1"})
 table.insert(data.raw["technology"]["bullet-damage-2"].effects,{type = "ammo-damage",ammo_category = "sniper-ammo",modifier = "0.1"})
 table.insert(data.raw["technology"]["bullet-damage-3"].effects,{type = "ammo-damage",ammo_category = "sniper-ammo",modifier = "0.2"})

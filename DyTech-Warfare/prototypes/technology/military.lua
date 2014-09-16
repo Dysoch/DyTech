@@ -6,13 +6,9 @@ data:extend(
     icon = "__DyTech-Warfare__/graphics/technology/military.png",
     effects =
     {
-      {
+	  {
         type = "unlock-recipe",
-        recipe = "sniper"
-      },
-	        {
-        type = "unlock-recipe",
-        recipe = "sniper-magazine"
+        recipe = "sniper-magazine-2"
       }
     },
     prerequisites = {"military-4"},

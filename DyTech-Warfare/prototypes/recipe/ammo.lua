@@ -2,7 +2,7 @@ data:extend(
 { 
   {
     type = "recipe",
-    name = "sniper-magazine",
+    name = "sniper-magazine-1",
     enabled = false,
     energy_required = 15,
     ingredients =
@@ -13,6 +13,21 @@ data:extend(
       {"coal", 2},
     },
     result = "sniper-magazine"
+  },
+  {
+    type = "recipe",
+    name = "sniper-magazine-2",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"electrum-alloy", 1},
+	  {"gunmetal-alloy", 1},
+      {"rubber", 1},
+      {"coal", 2},
+    },
+    result = "sniper-magazine",
+	result_count = 5
   },
   {
     type = "recipe",
