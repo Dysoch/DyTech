@@ -7,6 +7,7 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "sandwall"},
     max_health = 750,
+    repair_speed_modifier = 2,
     corpse = "sandwall-remnants",
     resistances =
     {
@@ -29,8 +30,10 @@ data:extend(
         percent = 100
       }
     },
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+    mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     pictures =
     {
       single =
