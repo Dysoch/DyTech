@@ -26,24 +26,6 @@ function populateDatabase()
 end
 
 function populateDatabaseRuntime()
-<<<<<<< HEAD
-  -- add base game materials since changing their names would be poor form :)
-  baseMaterials = {
-    wood = {modularInfo = {handle = true, rod=true, head=true}},
-    stone = {modularInfo = {handle = true, rod=true, head=true}},
-    ["iron-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
-    ["copper-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
-    ["steel-plate"] = {modularInfo = {handle = true, rod=true, head=true}}
-  }
-  for name, prototype in pairs(baseMaterials) do
-      if prototype.modularInfo.handle then materials.handles[name] = prototype.modularInfo end -- modularInfo could theorecically be extended with more info
-      if prototype.modularInfo.rod then materials.rods[name] = prototype.modularInfo end
-      if prototype.modularInfo.head then materials.heads[name] = prototype.modularInfo end
-  end
-  
-  -- now do the "real" work
-=======
->>>>>>> origin/master
   for name, prototype in pairs(game.player.force.recipes) do
     local Part = getModularInfo(prototype)
     if Part then
