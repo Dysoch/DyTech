@@ -26,14 +26,14 @@ function populateDatabase()
 end
 
 function populateDatabaseRuntime()
+<<<<<<< HEAD
   -- add base game materials since changing their names would be poor form :)
   baseMaterials = {
     wood = {modularInfo = {handle = true, rod=true, head=true}},
     stone = {modularInfo = {handle = true, rod=true, head=true}},
     ["iron-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
     ["copper-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
-    ["steel-plate"] = {modularInfo = {handle = true, rod=true, head=true}},
-    rubber = {modularInfo = {handle = true, rod=true, head=true}}
+    ["steel-plate"] = {modularInfo = {handle = true, rod=true, head=true}}
   }
   for name, prototype in pairs(baseMaterials) do
       if prototype.modularInfo.handle then materials.handles[name] = prototype.modularInfo end -- modularInfo could theorecically be extended with more info
@@ -42,6 +42,8 @@ function populateDatabaseRuntime()
   end
   
   -- now do the "real" work
+=======
+>>>>>>> origin/master
   for name, prototype in pairs(game.player.force.recipes) do
     local Part = getModularInfo(prototype)
     if Part then
@@ -302,6 +304,7 @@ function updateGUILabel(toCraft)
 end
 
 function updateGUISelectedPart(partType)
+  if not partType then return end
   selectedPart = partType
   if mainFrame and mainFrame.valid then -- just a little sanity check...
     mainFrame[guiNames.buttonFlow][guiNames.currentSelectionLabel].caption = "Currently Selected: " .. selectedPart
