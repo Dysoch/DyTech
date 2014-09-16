@@ -33,7 +33,7 @@ data:extend(
       sharpness = 0.8,
       max_probability = 0.04,
       richness_multiplier = 150000,
-      richness_base = 5000,
+      richness_base = 15000,
       size_control_multiplier = 0.06,
       peaks =
       {
