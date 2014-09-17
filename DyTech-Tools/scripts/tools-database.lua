@@ -263,7 +263,7 @@ oldLabel = "No parts currently selected" -- placeholder
 function showCraftingGUI()
   populateDatabaseRuntime()
   game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
-  game.player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Modular Crafting Bench!"})
+  game.player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Tools!"})
   mainFrame = game.player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
   mainFrame.add({type="flow", direction="horizontal", name=guiNames.buttonFlow})
   for name, _ in pairs(materials) do
