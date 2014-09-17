@@ -35,8 +35,66 @@ data:extend(
     },
     magazine_size = 5,
     subgroup = "ammo",
-    order = "s-m",
+    order = "i[sniper]",
     stack_size = 25
+  },
+  {
+    type = "ammo",
+    name = "battery-2",
+    icon = "__base__/graphics/icons/battery.png",
+    flags = {"goes-to-main-inventory"},
+    ammo_type =
+    {
+      category = "battery",
+      action =
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "projectile",
+          projectile = "laser-sapphire-1",
+          starting_speed = 0.1,
+          source_effects =
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          }
+        }
+      }
+    },
+    magazine_size = 75,
+    subgroup = "ammo",
+    order = "i[battery-2]",
+    stack_size = 100
+  },
+  {
+    type = "ammo",
+    name = "battery-3",
+    icon = "__base__/graphics/icons/battery.png",
+    flags = {"goes-to-main-inventory"},
+    ammo_type =
+    {
+      category = "battery",
+      action =
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "projectile",
+          projectile = "laser-emerald-1",
+          starting_speed = 0.1,
+          source_effects =
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          }
+        }
+      }
+    },
+    magazine_size = 75,
+    subgroup = "ammo",
+    order = "i[battery-3]",
+    stack_size = 100
   },
   {
     type = "ammo",

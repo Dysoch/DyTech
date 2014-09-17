@@ -31,6 +31,32 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "battery-2",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"sapphire-4", 1},
+      {"battery", 1},
+    },
+    result = "battery-2",
+	result_count = 1
+  },
+  {
+    type = "recipe",
+    name = "battery-3",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"emerald-4", 1},
+      {"battery-2", 1},
+    },
+    result = "battery-3",
+	result_count = 1
+  },
+  {
+    type = "recipe",
     name = "diamond-bullet-magazine",
     enabled = false,
     energy_required = 5,
