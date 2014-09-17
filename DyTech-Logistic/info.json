@@ -5,5 +5,5 @@
 	"title":"DyTech-Logistic",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Logistic",
-	"dependencies": ["DyTech-Core >= 0.10.4"]
+	"dependencies": ["DyTech-Core >= 0.11.0"]
 }

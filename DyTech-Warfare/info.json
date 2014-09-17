@@ -5,5 +5,5 @@
 	"title":"DyTech-Warfare",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Warfare",
-	"dependencies": ["DyTech-Core >= 0.10.5", "DyTech-Metallurgy >= 1.2.0", "? DyTech-Tools >= 1.0.1"]
+	"dependencies": ["DyTech-Core >= 0.10.5", "DyTech-Metallurgy >= 1.2.0", "? DyTech-Tools >= 2.0.0"]
 }
