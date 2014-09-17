@@ -12,5 +12,9 @@ data:extend(
     type = "ammo-category",
     name = "battery"
   },
+  {
+    type = "ammo-category",
+    name = "battery-shotgun"
+  },
 }
 )
