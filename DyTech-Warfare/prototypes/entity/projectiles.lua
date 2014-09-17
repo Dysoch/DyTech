@@ -374,5 +374,117 @@ data:extend(
     },
     speed = 0.5
   },
+  {
+    type = "projectile",
+    name = "laser-shotgun-ruby-1",
+    acceleration = 0.005,
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.005,
+    direction_only = true,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 6, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__DyTech-Warfare__/graphics/entity/laser/laser-ruby.png",
+      frame_count = 1,
+      frame_width = 7,
+      frame_height = 14,
+      priority = "high"
+    },
+    speed = 0.10
+  },
+  {
+    type = "projectile",
+    name = "laser-shotgun-sapphire-1",
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.010,
+    direction_only = true,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 10, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__DyTech-Warfare__/graphics/entity/laser/laser-sapphire.png",
+      frame_count = 1,
+      frame_width = 7,
+      frame_height = 14,
+      priority = "high"
+    },
+    speed = 0.15
+  },
+  {
+    type = "projectile",
+    name = "laser-shotgun-emerald-1",
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.015,
+    direction_only = true,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 20, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__DyTech-Warfare__/graphics/entity/laser/laser-emerald.png",
+      frame_count = 1,
+      frame_width = 7,
+      frame_height = 14,
+      priority = "high"
+    },
+    speed = 0.25
+  },
 }
 )

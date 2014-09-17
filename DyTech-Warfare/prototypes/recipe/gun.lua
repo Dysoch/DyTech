@@ -27,5 +27,18 @@ data:extend(
     },
     result = "laser-gun"
   },
+  {
+    type = "recipe",
+    name = "laser-shotgun",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+	  {"laser-gun", 1},
+      {"advanced-circuit", 15},
+      {"glass", 22},
+    },
+    result = "laser-shotgun"
+  },
 }
 )

@@ -57,6 +57,45 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "battery-shotgun-1",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"ruby-5", 1},
+      {"battery", 1},
+    },
+    result = "battery-shotgun-1",
+	result_count = 1
+  },
+  {
+    type = "recipe",
+    name = "battery-shotgun-2",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"sapphire-5", 1},
+      {"battery-2", 1},
+    },
+    result = "battery-shotgun-2",
+	result_count = 1
+  },
+  {
+    type = "recipe",
+    name = "battery-shotgun-3",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"emerald-5", 1},
+      {"battery-3", 1},
+    },
+    result = "battery-shotgun-3",
+	result_count = 1
+  },
+  {
+    type = "recipe",
     name = "diamond-bullet-magazine",
     enabled = false,
     energy_required = 5,
