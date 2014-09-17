@@ -34,7 +34,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw",
     order = "r-4",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 10000,
+      mininglevel = 6,
+      miningspeed = 5,
+      strength = 11,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -49,12 +61,12 @@ data:extend(
       handle = false,
       rod = false,
       head = true, 
-      durability = 1000,
-      mininglevel = 1000,
-      miningspeed = 1000,
-      strength = 1000,
-      hold = 1000,
-      flexibility = 1
+      durability = 12500,
+      mininglevel = 7,
+      miningspeed = 5,
+      strength = 11,
+      hold = 5,
+      flexibility = 5
     }
   },
   {
@@ -91,7 +103,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw",
     order = "e-4",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 20000,
+      mininglevel = 12,
+      miningspeed = 5,
+      strength = 16,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -100,7 +124,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "polished",
     order = "e-5",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 25000,
+      mininglevel = 14,
+      miningspeed = 6,
+      strength = 17,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -136,7 +172,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw",
     order = "s-4",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 16000,
+      mininglevel = 10,
+      miningspeed = 6,
+      strength = 14,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -145,7 +193,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "polished",
     order = "s-5",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 18000,
+      mininglevel = 11,
+      miningspeed = 6,
+      strength = 15,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -181,7 +241,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw",
     order = "d-4",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 27500,
+      mininglevel = 18,
+      miningspeed = 8,
+      strength = 19,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -190,7 +262,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "polished",
     order = "d-5",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 30000,
+      mininglevel = 20,
+      miningspeed = 9,
+      strength = 20,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -226,7 +310,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "raw",
     order = "t-4",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 20000,
+      mininglevel = 16,
+      miningspeed = 12,
+      strength = 16,
+      hold = 5,
+      flexibility = 5
+    }
   },
   {
     type = "item",
@@ -235,7 +331,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "polished",
     order = "t-5",
-    stack_size = 64
+    stack_size = 64,
+    modularInfo = 
+	{
+      handle = false,
+      rod = false,
+      head = true, 
+      durability = 25000,
+      mininglevel = 17,
+      miningspeed = 14,
+      strength = 18,
+      hold = 5,
+      flexibility = 5
+    }
   },
   --[[USELESS ORES]]--
   {
@@ -288,5 +396,14 @@ data:extend(
 
 if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
   require("scripts/tools-database")
+  ToolsDatabase.makeModularPart(data.raw["item"]["ruby-4"])
   ToolsDatabase.makeModularPart(data.raw["item"]["ruby-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["emerald-4"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["emerald-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["sapphire-4"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["sapphire-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["diamond-4"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["diamond-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["topaz-4"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["topaz-5"])
 end
