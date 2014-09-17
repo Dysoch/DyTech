@@ -83,5 +83,14 @@ data:extend(
     order = "sandbag",
     stack_size = 500
   },
+  {
+    type = "item",
+    name = "glass",
+    icon = "__DyTech-Core__/graphics/icons/glass.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechinter",
+    order = "g",
+    stack_size = 128
+  },
 }
 )
