@@ -43,7 +43,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-2.png",
       priority = "high",
       width = 104,
       height = 96
@@ -68,7 +68,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-2.png",
       priority = "high",
       width = 104,
       height = 96
@@ -93,7 +93,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-3.png",
       priority = "high",
       width = 104,
       height = 96
@@ -118,7 +118,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-3.png",
       priority = "high",
       width = 104,
       height = 96
@@ -143,7 +143,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-4.png",
       priority = "high",
       width = 104,
       height = 96
@@ -168,7 +168,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-4.png",
       priority = "high",
       width = 104,
       height = 96
@@ -193,7 +193,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-5.png",
       priority = "high",
       width = 104,
       height = 96
@@ -218,7 +218,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
+      filename = "__DyTech-Energy__/graphics/entity/solar-panel/solar-panel-5.png",
       priority = "high",
       width = 104,
       height = 96

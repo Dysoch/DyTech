@@ -189,7 +189,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-2.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -198,7 +198,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-2.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -265,7 +265,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-2.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -274,7 +274,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-2.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -341,7 +341,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-2.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -350,7 +350,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-2.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -417,7 +417,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-3.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -426,7 +426,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-3.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -493,7 +493,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-3.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -502,7 +502,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-3.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -569,7 +569,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-3.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -578,7 +578,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-3.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -645,7 +645,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-4.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -654,7 +654,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-4.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -721,7 +721,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-4.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -730,7 +730,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-4.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -797,7 +797,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-4.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -806,7 +806,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-4.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -873,7 +873,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-5.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -882,7 +882,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-5.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -949,7 +949,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-5.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -958,7 +958,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-5.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,
@@ -1025,7 +1025,7 @@ data:extend(
     },
     horizontal_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-horizontal-5.png",
       frame_width = 246,
       frame_height = 137,
       frame_count = 32,
@@ -1034,7 +1034,7 @@ data:extend(
     },
     vertical_animation =
     {
-      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      filename = "__DyTech-Energy__/graphics/entity/steam-engine/steam-engine-vertical-5.png",
       frame_width = 155,
       frame_height = 186,
       frame_count = 32,

@@ -21,7 +21,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-2.png",
       priority = "extra-high",
       width = 124,
       height = 103,
@@ -29,7 +29,7 @@ data:extend(
     },
     charge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation-2.png",
       frame_width = 138,
       frame_height = 135,
       line_length = 8,
@@ -41,7 +41,7 @@ data:extend(
     charge_light = {intensity = 0.3, size = 7},
     discharge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation-2.png",
       frame_width = 147,
       frame_height = 128,
       line_length = 8,
@@ -86,7 +86,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-3.png",
       priority = "extra-high",
       width = 124,
       height = 103,
@@ -94,7 +94,7 @@ data:extend(
     },
     charge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation-3.png",
       frame_width = 138,
       frame_height = 135,
       line_length = 8,
@@ -106,7 +106,7 @@ data:extend(
     charge_light = {intensity = 0.3, size = 7},
     discharge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation-3.png",
       frame_width = 147,
       frame_height = 128,
       line_length = 8,
@@ -151,7 +151,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-4.png",
       priority = "extra-high",
       width = 124,
       height = 103,
@@ -159,7 +159,7 @@ data:extend(
     },
     charge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation-4.png",
       frame_width = 138,
       frame_height = 135,
       line_length = 8,
@@ -171,7 +171,7 @@ data:extend(
     charge_light = {intensity = 0.3, size = 7},
     discharge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation-4.png",
       frame_width = 147,
       frame_height = 128,
       line_length = 8,
@@ -216,7 +216,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-5.png",
       priority = "extra-high",
       width = 124,
       height = 103,
@@ -224,7 +224,7 @@ data:extend(
     },
     charge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation-5.png",
       frame_width = 138,
       frame_height = 135,
       line_length = 8,
@@ -236,7 +236,7 @@ data:extend(
     charge_light = {intensity = 0.3, size = 7},
     discharge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation-5.png",
       frame_width = 147,
       frame_height = 128,
       line_length = 8,
@@ -281,7 +281,7 @@ data:extend(
     },
     picture =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-6.png",
       priority = "extra-high",
       width = 124,
       height = 103,
@@ -289,7 +289,7 @@ data:extend(
     },
     charge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation-6.png",
       frame_width = 138,
       frame_height = 135,
       line_length = 8,
@@ -301,7 +301,7 @@ data:extend(
     charge_light = {intensity = 0.3, size = 7},
     discharge_animation =
     {
-      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      filename = "__DyTech-Energy__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation-6.png",
       frame_width = 147,
       frame_height = 128,
       line_length = 8,

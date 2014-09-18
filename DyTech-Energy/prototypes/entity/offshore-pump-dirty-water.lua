@@ -33,7 +33,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-2.png",
         priority = "high",
         shift = {0.9, 0.05},
         width = 160,
@@ -41,7 +41,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-2.png",
         priority = "high",
         shift = {0.9, 0.05},
         x = 160,
@@ -50,7 +50,7 @@ data:extend({
       },
       south =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-2.png",
         priority = "high",
         shift = {0.9, 0.65},
         x = 320,
@@ -59,7 +59,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-2.png",
         priority = "high",
         shift = {1.0, 0.05},
         x = 480,
@@ -102,7 +102,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-3.png",
         priority = "high",
         shift = {0.9, 0.05},
         width = 160,
@@ -110,7 +110,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-3.png",
         priority = "high",
         shift = {0.9, 0.05},
         x = 160,
@@ -119,7 +119,7 @@ data:extend({
       },
       south =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-3.png",
         priority = "high",
         shift = {0.9, 0.65},
         x = 320,
@@ -128,7 +128,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-3.png",
         priority = "high",
         shift = {1.0, 0.05},
         x = 480,
@@ -171,7 +171,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-4.png",
         priority = "high",
         shift = {0.9, 0.05},
         width = 160,
@@ -179,7 +179,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-4.png",
         priority = "high",
         shift = {0.9, 0.05},
         x = 160,
@@ -188,7 +188,7 @@ data:extend({
       },
       south =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-4.png",
         priority = "high",
         shift = {0.9, 0.65},
         x = 320,
@@ -197,7 +197,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-4.png",
         priority = "high",
         shift = {1.0, 0.05},
         x = 480,
@@ -240,7 +240,7 @@ data:extend({
     {
       north =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-5.png",
         priority = "high",
         shift = {0.9, 0.05},
         width = 160,
@@ -248,7 +248,7 @@ data:extend({
       },
       east =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-5.png",
         priority = "high",
         shift = {0.9, 0.05},
         x = 160,
@@ -257,7 +257,7 @@ data:extend({
       },
       south =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-5.png",
         priority = "high",
         shift = {0.9, 0.65},
         x = 320,
@@ -266,7 +266,7 @@ data:extend({
       },
       west =
       {
-        filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+        filename = "__DyTech-Energy__/graphics/entity/offshore-pump/offshore-pump-5.png",
         priority = "high",
         shift = {1.0, 0.05},
         x = 480,
