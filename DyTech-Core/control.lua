@@ -70,6 +70,11 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
+	if not glob.CraftedItems[event.itemstack.name] then
+		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.CraftedItems[event.itemstack.name] = glob.CraftedItems[event.itemstack.name] + event.itemstack.count
+	end
 incrementDynamicCounters = function(stack)
 	if database.craftitems[stack.name] then
 		for counter, ingredients in pairs(database.craftitems[stack.name]) do
@@ -129,6 +134,11 @@ game.onevent(defines.events.onplayermineditem, function(event)
 			game.player.print(game.gettext("msg-rubber"))
 		end
 	end
+	if not glob.MinedItems[event.itemstack.name] then
+		glob.MinedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.MinedItems[event.itemstack.name] = glob.MinedItems[event.itemstack.name] + event.itemstack.count
+	end
 end)
 
 game.onevent(defines.events.onentitydied, function(event)
@@ -146,6 +156,11 @@ end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
 	glob.counter2.pickup = glob.counter2.pickup + event.itemstack.count
+	if not glob.PickedItems[event.itemstack.name] then
+		glob.PickedItems[event.itemstack.name] = event.itemstack.count
+	else
+		glob.PickedItems[event.itemstack.name] = glob.PickedItems[event.itemstack.name] + event.itemstack.count
+	end
 end)
 
 game.onevent(defines.events.ontick, function(event)
@@ -271,43 +286,16 @@ remote.addinterface("DyTech-Core",
 			game.player.print("DyTech-Warfare:".." "..tostring(glob.dytech.warfare))
   end,
   
-  CounterPrint = function() 
-	fs.CounterPrinter()
-  end,
-  
-  CounterPrintExport = function()
-	game.makefile("DyTech-Counters.txt", serpent.block(glob.counter))
-  end,
-  
-  CounterPrint2 = function() 
-	fs.CounterPrinter2()
-  end,
-  
-  CounterPrint2Export = function()
-	game.makefile("DyTech-AdvancedCounters.txt", serpent.block(glob.counter2))
-  end,
-  
-  CombatPrint = function() 
-	fs.CombatPrinter()
-  end,
-  
-  CombatPrintExport = function()
-	game.makefile("DyTech-CombatCounters.txt", serpent.block(glob.combat))
-  end,
-  
   ExportAll = function()
-	remote.call("DyTech-Core", "CounterPrintExport")
-	remote.call("DyTech-Core", "CounterPrint2Export")
-	remote.call("DyTech-Core", "CombatPrintExport")
+	game.makefile("DyTech-Counters.txt", serpent.block(glob.counter))
+	game.makefile("DyTech-AdvancedCounters.txt", serpent.block(glob.counter2))
+	game.makefile("DyTech-CombatCounters.txt", serpent.block(glob.combat))
 	game.makefile("DyTech-Timer.txt", serpent.block(glob.timer))
 	game.makefile("DyTech-ModulesInstalled.txt", serpent.block(glob.dytech))
+	game.makefile("DyTech-CraftedItems.txt", serpent.block(glob.CraftedItems))
+	game.makefile("DyTech-PickedItems.txt", serpent.block(glob.PickedItems))
+	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
 	game.player.print("Exported all data from Core!")
-		if glob.dytech.dynamic==true and remote.call("DyTech-Dynamic", "CraftedItemsExport")==true then
-			remote.call("DyTech-Dynamic", "CraftedItemsExport")
-			remote.call("DyTech-Dynamic", "PickedItemsExport")
-			remote.call("DyTech-Dynamic", "MinedItemsExport")
-			game.player.print("Exported all data from Dynamic aswell!")
-		end
 	game.player.print("You can find all relevant data in the script-output folder!")
   end,
   

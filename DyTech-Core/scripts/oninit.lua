@@ -17,6 +17,9 @@ glob.dytechitem={}
 glob.dytechitemcount=0
 glob.compatibility={treefarm=false, Fmod=false}
 glob.debug=false
+glob.CraftedItems = {}
+glob.PickedItems = {}
+glob.MinedItems = {}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {

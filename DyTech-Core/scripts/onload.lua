@@ -100,4 +100,7 @@ function OnLoad()
 		fertilizerBoost = 1.45 }} end
 	if not glob.trees.isGrowing then glob.trees.isGrowing = {RubberTree = {}} end
 	if not glob.trees.tmpData then glob.trees.tmpData = {} end
+	if not glob.CraftedItems then glob.CraftedItems = {} end
+	if not glob.PickedItems then glob.PickedItems = {} end
+	if not glob.MinedItems then glob.MinedItems = {} end
 end
