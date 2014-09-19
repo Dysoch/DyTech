@@ -34,55 +34,17 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-	if not glob.CraftedItems[event.itemstack.name] then
-		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
-	else
-		glob.CraftedItems[event.itemstack.name] = glob.CraftedItems[event.itemstack.name] + event.itemstack.count
-	end
+
 end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
-	if not glob.PickedItems[event.itemstack.name] then
-		glob.PickedItems[event.itemstack.name] = event.itemstack.count
-	else
-		glob.PickedItems[event.itemstack.name] = glob.PickedItems[event.itemstack.name] + event.itemstack.count
-	end
+
 end)
 
-game.onevent(defines.events.onplayermineditem, function(event)
-	if not glob.MinedItems[event.itemstack.name] then
-		glob.MinedItems[event.itemstack.name] = event.itemstack.count
-	else
-		glob.MinedItems[event.itemstack.name] = glob.MinedItems[event.itemstack.name] + event.itemstack.count
-	end
-end)
+game.onevent(defines.events.onplayermineditem, function(event)end)
 
 remote.addinterface("DyTech-Dynamic",
-{
-  CraftedItems = function() 
-	fs.CraftedItems()
-  end,
-  
-  PickedItems = function() 
-	fs.PickedItems()
-  end,
-  
-  MinedItems = function() 
-	fs.MinedItems()
-  end,
-  
-  CraftedItemsExport = function()
-	game.makefile("DyTech-CraftedItems.txt", serpent.block(glob.CraftedItems))
-  end,
-  
-  PickedItemsExport = function()
-	game.makefile("DyTech-PickedItems.txt", serpent.block(glob.PickedItems))
-  end,
-  
-  MinedItemsExport = function()
-	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
-  end,
-  
+{  
   ToggleDynamicSystem = function()
 	fs.DynamicToggle()
   end,

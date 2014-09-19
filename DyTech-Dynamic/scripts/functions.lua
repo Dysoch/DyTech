@@ -19,9 +19,6 @@ end
 function OnLoad()
 	if not glob.DynamicSystem then glob.DynamicSystem=false end
 	if not glob.HardMode then glob.HardMode=false end
-	if not glob.CraftedItems then glob.CraftedItems = {} end
-	if not glob.PickedItems then glob.PickedItems = {} end
-	if not glob.MinedItems then glob.MinedItems = {} end
 	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
@@ -80,9 +77,6 @@ glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, q
 glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false}
 glob.DynamicSystem=false
 glob.HardMode=false
-glob.CraftedItems = {}
-glob.PickedItems = {}
-glob.MinedItems = {}
 glob.timer={seconds=0, minutes=0, hours=0}
 end
 
