@@ -16,8 +16,8 @@ data:extend(
       type = "electric",
       buffer_capacity = "10MJ",
       usage_priority = "terciary",
-      input_flow_limit = "250kW",
-      output_flow_limit = "800kW"
+      input_flow_limit = "350kW",
+      output_flow_limit = "1000kW"
     },
     picture =
     {
@@ -81,8 +81,8 @@ data:extend(
       type = "electric",
       buffer_capacity = "10MJ",
       usage_priority = "terciary",
-      input_flow_limit = "800kW",
-      output_flow_limit = "200kW"
+      input_flow_limit = "1000kW",
+      output_flow_limit = "350kW"
     },
     picture =
     {
@@ -146,8 +146,8 @@ data:extend(
       type = "electric",
       buffer_capacity = "20MJ",
       usage_priority = "terciary",
-      input_flow_limit = "500kW",
-      output_flow_limit = "1600kW"
+      input_flow_limit = "750kW",
+      output_flow_limit = "2000kW"
     },
     picture =
     {
@@ -211,8 +211,8 @@ data:extend(
       type = "electric",
       buffer_capacity = "20MJ",
       usage_priority = "terciary",
-      input_flow_limit = "1600kW",
-      output_flow_limit = "400kW"
+      input_flow_limit = "2000kW",
+      output_flow_limit = "750kW"
     },
     picture =
     {
@@ -276,8 +276,8 @@ data:extend(
       type = "electric",
       buffer_capacity = "150MJ",
       usage_priority = "terciary",
-      input_flow_limit = "500kW",
-      output_flow_limit = "500kW"
+      input_flow_limit = "750kW",
+      output_flow_limit = "750kW"
     },
     picture =
     {

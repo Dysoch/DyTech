@@ -48,7 +48,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "90kW"
+    production = "100kW"
   },
   {
     type = "solar-panel",
@@ -73,7 +73,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "90kW"
+    production = "100kW"
   },
   {
     type = "solar-panel",
@@ -98,7 +98,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "120kW"
+    production = "150kW"
   },
   {
     type = "solar-panel",
@@ -123,7 +123,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "120kW"
+    production = "150kW"
   },
   {
     type = "solar-panel",
@@ -148,7 +148,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "150kW"
+    production = "210kW"
   },
   {
     type = "solar-panel",
@@ -173,7 +173,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "150kW"
+    production = "210kW"
   },
   {
     type = "solar-panel",
@@ -198,7 +198,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "200kW"
+    production = "280kW"
   },
   {
     type = "solar-panel",
@@ -223,7 +223,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "200kW"
+    production = "280kW"
   },
 }
 )
