@@ -9,7 +9,7 @@ data:extend(
     subgroup = "storage",
     order = "c-m-1",
     place_result = "wooden-chest-medium",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -19,7 +19,7 @@ data:extend(
     subgroup = "storage",
     order = "c-m-2",
     place_result = "iron-chest-medium",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -29,7 +29,7 @@ data:extend(
     subgroup = "storage",
     order = "c-m-3",
     place_result = "steel-chest-medium",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -40,7 +40,7 @@ data:extend(
     subgroup = "storage",
     order = "c-ml-1",
     place_result = "wooden-chest-big",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -50,7 +50,7 @@ data:extend(
     subgroup = "storage",
     order = "c-ml-2",
     place_result = "iron-chest-big",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -60,7 +60,44 @@ data:extend(
     subgroup = "storage",
     order = "c-ml-3",
     place_result = "steel-chest-big",
-    stack_size = 64
+    stack_size = 50
   },
+  {
+	type = "item",
+	name = "compression-chest",
+	icon = "__DyTech-Storage__/graphics/icons/compression-chest.png",
+	flags = {"goes-to-quickbar"},
+	subgroup = "storage",
+	order = "t[compression-chest]",
+	place_result = "compression-chest",
+	stack_size = 50
+  },
+  {
+	type = "item",
+	name = "compression-power-pole",
+	icon = "__DyTech-Storage__/graphics/icons/compression-power.png",
+	flags = {"goes-to-quickbar"},
+	subgroup = "storage",
+	order = "t[compression-chest]",
+	place_result = "compression-power-pole-field",
+	stack_size = 50
+  },
+  {
+	type = "item",
+	name = "compression-mover",
+	icon = "__DyTech-Storage__/graphics/icons/move.png",
+	flags = {"goes-to-quickbar"},
+	subgroup = "storage",
+	order = "t[compression-chest]",
+	stack_size = 50
+  },
+  {
+	type = "item",
+	name = "reset-compression-chests",
+	icon = "__DyTech-Storage__/graphics/icons/compression-chest.png",
+	flags = {"goes-to-quickbar"},
+	order = "t[compression-chest]",
+	stack_size = 1
+  }
 }
 )
