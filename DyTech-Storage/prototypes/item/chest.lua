@@ -62,42 +62,5 @@ data:extend(
     place_result = "steel-chest-big",
     stack_size = 50
   },
-  {
-	type = "item",
-	name = "compression-chest",
-	icon = "__DyTech-Storage__/graphics/icons/compression-chest.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "storage",
-	order = "t[compression-chest]",
-	place_result = "compression-chest",
-	stack_size = 50
-  },
-  {
-	type = "item",
-	name = "compression-power-pole",
-	icon = "__DyTech-Storage__/graphics/icons/compression-power.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "storage",
-	order = "t[compression-chest]",
-	place_result = "compression-power-pole-field",
-	stack_size = 50
-  },
-  {
-	type = "item",
-	name = "compression-mover",
-	icon = "__DyTech-Storage__/graphics/icons/move.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "storage",
-	order = "t[compression-chest]",
-	stack_size = 50
-  },
-  {
-	type = "item",
-	name = "reset-compression-chests",
-	icon = "__DyTech-Storage__/graphics/icons/compression-chest.png",
-	flags = {"goes-to-quickbar"},
-	order = "t[compression-chest]",
-	stack_size = 1
-  }
 }
 )

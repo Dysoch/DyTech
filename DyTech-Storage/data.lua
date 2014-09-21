@@ -12,9 +12,5 @@ require("prototypes.recipe.logistic-chest")
 require("prototypes.recipe.tanks")
 require("prototypes.technology.chest")
 require("prototypes.technology.tanks")
-require("prototypes.sub-entities")
-require("prototypes.sub-items")
 
-table.insert(data.raw["technology"]["logistics-3"].effects,{type="unlock-recipe",recipe="compression-chest"})
-table.insert(data.raw["technology"]["logistics-3"].effects,{type="unlock-recipe",recipe="compression-power-pole"})
 data.raw["storage-tank"]["storage-tank"].fast_replaceable_group = "storage-tanks"
