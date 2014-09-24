@@ -1,0 +1,12 @@
+{
+  berserker = 347,
+  big = 501,
+  bird = 0,
+  dog = 0,
+  dytech = 3484,
+  elder = 216,
+  king = 91,
+  medium = 694,
+  queen = 47,
+  small = 1588
+} --[[table: 000000006229D540]]

@@ -1,0 +1,9 @@
+{
+  build = 7273,
+  chunks = 9724,
+  died = 6168,
+  dytech = 154269,
+  mine = 109250,
+  pickup = 14089,
+  sectorscanned = 7765
+} --[[table: 000000006229D5E0]]
