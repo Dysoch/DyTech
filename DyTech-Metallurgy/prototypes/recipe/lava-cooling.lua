@@ -4,7 +4,7 @@ data:extend(
     type = "recipe",
     name = "lava-800-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2,
     ingredients =
     {
@@ -19,7 +19,7 @@ data:extend(
     type = "recipe",
     name = "lava-1000",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2.5,
     ingredients =
     {
@@ -34,7 +34,7 @@ data:extend(
     type = "recipe",
     name = "lava-1200-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 3,
     ingredients =
     {
@@ -49,7 +49,7 @@ data:extend(
     type = "recipe",
     name = "lava-1400-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 3.5,
     ingredients =
     {
@@ -64,7 +64,7 @@ data:extend(
     type = "recipe",
     name = "lava-1600-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 4,
     ingredients =
     {
@@ -79,7 +79,7 @@ data:extend(
     type = "recipe",
     name = "lava-1800-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 4.5,
     ingredients =
     {
@@ -94,7 +94,7 @@ data:extend(
     type = "recipe",
     name = "lava-2000-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 5,
     ingredients =
     {
@@ -109,7 +109,7 @@ data:extend(
     type = "recipe",
     name = "lava-2200-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 5.5,
     ingredients =
     {
@@ -124,7 +124,7 @@ data:extend(
     type = "recipe",
     name = "lava-2400-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 6,
     ingredients =
     {
@@ -139,7 +139,7 @@ data:extend(
     type = "recipe",
     name = "lava-2600-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 6.5,
     ingredients =
     {
@@ -154,7 +154,7 @@ data:extend(
     type = "recipe",
     name = "lava-2800-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 7,
     ingredients =
     {
@@ -169,7 +169,7 @@ data:extend(
     type = "recipe",
     name = "lava-3000-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 7.5,
     ingredients =
     {
@@ -184,7 +184,7 @@ data:extend(
     type = "recipe",
     name = "lava-3200-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 8,
     ingredients =
     {
@@ -199,7 +199,7 @@ data:extend(
     type = "recipe",
     name = "lava-3400-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 8.5,
     ingredients =
     {
@@ -214,7 +214,7 @@ data:extend(
     type = "recipe",
     name = "lava-3600-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 9,
     ingredients =
     {
@@ -229,7 +229,7 @@ data:extend(
     type = "recipe",
     name = "lava-3800-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 9.5,
     ingredients =
     {
@@ -244,7 +244,7 @@ data:extend(
     type = "recipe",
     name = "lava-4000-cooling",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 10,
     ingredients =
     {

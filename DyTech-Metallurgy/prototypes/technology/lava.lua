@@ -8,22 +8,10 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "air-intake"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "geothermal-extractor"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "lava-handler"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "metallurgy-liquid-air"
-      },
     },
-    prerequisites = {"oil-processing"},
+    prerequisites = {"oil-processing", "centrifuge"},
     unit =
     {
       count = 150,

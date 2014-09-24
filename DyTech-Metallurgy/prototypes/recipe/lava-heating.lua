@@ -4,7 +4,7 @@ data:extend(
     type = "recipe",
     name = "lava-800",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 0.2,
     ingredients =
     {
@@ -20,7 +20,7 @@ data:extend(
     type = "recipe",
     name = "lava-1000",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 0.4,
     ingredients =
     {
@@ -36,7 +36,7 @@ data:extend(
     type = "recipe",
     name = "lava-1200",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 0.6,
     ingredients =
     {
@@ -52,7 +52,7 @@ data:extend(
     type = "recipe",
     name = "lava-1400",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 0.8,
     ingredients =
     {
@@ -68,7 +68,7 @@ data:extend(
     type = "recipe",
     name = "lava-1600",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 1,
     ingredients =
     {
@@ -84,7 +84,7 @@ data:extend(
     type = "recipe",
     name = "lava-1800",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 1.2,
     ingredients =
     {
@@ -100,7 +100,7 @@ data:extend(
     type = "recipe",
     name = "lava-2000",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 1.4,
     ingredients =
     {
@@ -116,7 +116,7 @@ data:extend(
     type = "recipe",
     name = "lava-2200",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 1.6,
     ingredients =
     {
@@ -132,7 +132,7 @@ data:extend(
     type = "recipe",
     name = "lava-2400",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 1.8,
     ingredients =
     {
@@ -148,7 +148,7 @@ data:extend(
     type = "recipe",
     name = "lava-2600",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2,
     ingredients =
     {
@@ -164,7 +164,7 @@ data:extend(
     type = "recipe",
     name = "lava-2800",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2.2,
     ingredients =
     {
@@ -180,7 +180,7 @@ data:extend(
     type = "recipe",
     name = "lava-3000",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2.4,
     ingredients =
     {
@@ -196,7 +196,7 @@ data:extend(
     type = "recipe",
     name = "lava-3200",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2.6,
     ingredients =
     {
@@ -212,7 +212,7 @@ data:extend(
     type = "recipe",
     name = "lava-3400",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 2.8,
     ingredients =
     {
@@ -228,7 +228,7 @@ data:extend(
     type = "recipe",
     name = "lava-3600",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 3,
     ingredients =
     {
@@ -244,7 +244,7 @@ data:extend(
     type = "recipe",
     name = "lava-3800",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 3.2,
     ingredients =
     {
@@ -260,7 +260,7 @@ data:extend(
     type = "recipe",
     name = "lava-4000",
 	enabled = false,
-	category = "lava",
+	category = "liquid-handler",
     energy_required = 3.4,
     ingredients =
     {

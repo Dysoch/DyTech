@@ -15,20 +15,5 @@ data:extend(
     result = "geothermal-extractor",
     enabled = false
   },
-  {
-    type = "recipe",
-    name = "lava-handler",
-    energy_required = 10,
-    subgroup = "metallurgy-machines",
-    ingredients =
-    {
-      {"boiler", 2},
-      {"steel-gear-wheel", 5},
-      {"advanced-circuit", 8},
-      {"pipe", 8},
-    },
-    result = "lava-handler",
-    enabled = false
-  },
 }
 )

@@ -41,7 +41,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-liquid-air",
-	category = "air-collection",
+	category = "liquid-handler",
 	enabled = false,
     ingredients = {},
     results = 

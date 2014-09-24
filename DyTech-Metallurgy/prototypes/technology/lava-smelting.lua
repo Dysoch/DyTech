@@ -34,6 +34,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "metallurgy-copper-plate"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "metallurgy-liquid-air"
+      },
     },
     prerequisites = {"lava-01"},
     unit =
@@ -111,10 +115,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "coal-splitting"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "centrifuge"
       },
       {
         type = "unlock-recipe",
