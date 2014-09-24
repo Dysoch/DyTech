@@ -4,8 +4,9 @@ data:extend(
     type = "recipe",
     name = "dirty-water-sand",
     icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
-	category = "crafting-with-fluid",
+	category = "liquid-handler",
     subgroup = "metallurgy-intermediates",
+    enabled = false,
     ingredients =
     {
 	  {type="fluid", name="dirty-water", amount=25},
@@ -20,8 +21,9 @@ data:extend(
     type = "recipe",
     name = "dirty-water-stone",
     icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
-	category = "crafting-with-fluid",
+	category = "liquid-handler",
     subgroup = "metallurgy-intermediates",
+    enabled = false,
     ingredients =
     {
 	  {type="fluid", name="dirty-water", amount=50},
@@ -36,8 +38,9 @@ data:extend(
     type = "recipe",
     name = "dirty-water-to-water",
     icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
-	category = "crafting-with-fluid",
+	category = "liquid-handler",
     subgroup = "metallurgy-intermediates",
+    enabled = false,
     ingredients =
     {
 	  {type="fluid", name="dirty-water", amount=50},
@@ -45,6 +48,22 @@ data:extend(
     results = 
 	{
 	  {type="fluid", name="water", amount=40},
+	}
+  },
+  {
+    type = "recipe",
+    name = "dirty-water-to-water-2",
+    icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
+	category = "liquid-handler",
+    subgroup = "metallurgy-intermediates",
+    enabled = false,
+    ingredients =
+    {
+	  {type="fluid", name="dirty-water", amount=100},
+    },
+    results = 
+	{
+	  {type="fluid", name="water", amount=85},
 	}
   },
 }

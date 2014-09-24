@@ -1,0 +1,227 @@
+[b][i][size=150]DyTech-Core:[/size][/i][/b]
+[b]Current Experimental Features: (these can/will be removed at any time! You can enabled them by setting experimental to true inside DyTech-Core/data.lua[/b]
+- Science Pack 4!
+- Large Capacity Logistic Robot! Can carry 200 items! But is extremely slow. But it has enough energy to last a lifetime! Got the idea from watching Arumba Lets Play on Youtube! Love his series :P
+[b]Next Version:[/b]
+[b]v0.11.1:[/b] September 18th 2014
+- Cleaned up some code.
+- Properly added the advanced counters!
+[b]v0.11.0:[/b] September 17th 2014
+- added back Sandwall and Sandbag!
+- Fixed Treefarm bug
+- Added Glass. Needed in Warfare for now.
+- New advanced counters. they log everything! check console commands for the command
+[b]v0.10.4:[/b] July 25th 2014
+- Fixed error unexpected ","
+- Added new entries to the database for Automation
+[b]v0.10.3:[/b] July 24th 2014
+- Fixed bug with resin and rubber seeds. the fuel value is now properly at the seeds to automate it at Mk 1 field of tree farm.
+- Reduced the timer on the Item Collector, which seems like it makes it working.
+- Increased the Radius of the item collector to compensate.
+[b]v0.10.2:[/b] July 17th 2014
+- Increased pollution cleaning of Rubber Trees. Small ones have the most cleaning value, since they are only there a short time.
+- Increased time for the rubber trees to grow. (they were a little fast grown)
+- Hope to have fixed item collectors. 
+- Added fuel value to resin, so it can be semi-automated through Treefarms mk1 field
+- Added in a check for experimental Features. Check the section above to see which are available. Remember, they are way overpowered and unbalanced!
+- Added First experimental features. See if you like them.
+[b]v0.10.1:[/b]
+- Added a toggle for the dirty water. Read beginners guide to see how.
+- Balanced dirty water better.
+- Balanced dirty water recipes better.
+- Upped the fuel value of Water
+[b]v0.10.0:[/b]
+- Dirty water! Clean it to gain an advantage in power, and receive stone or sand in the process!
+[b]v0.8.0[/b]
+- Added an universal item collector. this wont pick up items from belts, splitters or underground belts. only the ground. has a radius of 25
+[b]v0.1.0 to v0.9.0:[/b]
+- Primary releases, that have no specific changes for you to know. only script wise changes needed to interface between the modules!
+
+[b][i][size=150]DyTech-Automation:[/size][/i][/b]
+[b]Next Version:[/b]
+[b]v1.1.0:[/b]
+- Added fast replaceable to Mining Drills. Quickly Replace them now!
+- Fixed Technology bug which required 2 fields of the same science pack
+- Added 4 new tiers of Assembling Machine. Faster and Can use more ingredients!
+- Added 4 new tiers of Steel Furnaces (burner) They smelt faster, and use less fuel!
+- Added 4 new tiers of Electric Furnaces (electric) They are fast then the original, and the Steel Furnaces, and use less energy! 
+- Added 4 new tiers of Radars! They scan faster and further. They use more energy though!
+[b]v1.0.0:[/b]
+- Official initial release which was known as DyTech-Mining!
+
+[b][i][size=150]DyTech-Compatibility:[/size][/i][/b]
+
+[b][i][size=150]DyTech-Dynamic:[/size][/i][/b]
+[b]Next Version:[/b]
+- Fixed error in dynamic failure.
+[b]v0.0.3:[/b] July 22th 2014
+- Rewrite of the Dynamic Counters. So no more errors that would exit the game!
+- Added a new message: When you failed to unlock something, it will now be shown what!
+- Total of 2 Unlock events and 3 Reward events.
+[b]v0.0.2:[/b] July 17th 2014
+Experimental release. Expect bugs
+- Completed Toggle to turn system off. Check [url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=4657]Console Commands[/url] to see the code for it.
+- Added Hard More. Makes the system that much harder! Check [url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=4657]Console Commands[/url] to see the code for it.
+- Total of 3 rewards events. (2 are experimental, that require another module!)
+- Fixed error in the database with sticks and burner inserters.
+[b]v0.0.1:[/b]
+Experimental release. Expect bugs
+- Total of 1 reward event.
+- toggle to turn system off (though it wont work yet xD)
+
+[b][i][size=150]DyTech-Energy:[/size][/i][/b]
+[b]Next version:[/b]
+[b]v1.3.1:[/b] September 18th 2014
+- Added new graphics for: Steam Engines, Solar Panels, Offshore Pumps and Accumulators!
+- Added the new icons for pipes.
+- Increased pumping speed of Offshore Pumps.
+- Increased Energy output and input of Accumulators.
+- Increased energy output of Solar Panels (a lot!)
+- Decreased Fluid Usage of Steam Engines
+[b]v1.3.0:[/b] September 17th 2014
+- Changed pipe to ground to have increased range with each new tier.
+- Moved boilers to energy tab.
+- Moved pipes back to transportation tab.
+[b]v1.2.2:[/b] July 15th 2014
+- fixed wrong output of steam engines (they are a little high xd)
+- fixed water usage of steam engines
+- changed offshore pumps to work with dirty water when dirty water is found (when toggle is true, otherwise they work with water instead)
+- Changed pollution of boilers
+[b]v1.2.1:[/b] July 12th 2014
+- Fixed wrong energy output of steam engines
+[b]v1.2.0:[/b] July 12th 2014
+- Added Tiered Steam Engines.
+- Added Tiered Solar Panels.
+- Added Tiered Accumulators.
+- Added Tiered Offshore Pumps. They pump more liquid, and faster.
+- Balanced Boilers. The Mk 1 has the worst pollution now. The Mk 5 has the best, and lowest pollution!
+[b]v1.1.0:[/b] July 1st 2014
+- Added tiered Small Pumps. They can hold more liquid, and pump way faster
+- Added new tiered Pipes and Pipe to Grounds. They can hold more liquid.
+- Balanced boilers. They can now hold the same amount of liquid as a tiered pipe or pump.
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Genetics:[/size][/i][/b]
+[b]First release:[/b]
+- Dependency of Warfare!!!!!!!!!!!!!! 
+- Mobile Defenses :P
+- Dogs!!!!
+
+[b][i][size=150]DyTech-Inserters:[/size][/i][/b] 
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Logistic:[/size][/i][/b] 
+[b]Next Version:[/b]
+[b]v1.1.0:[/b] September 17th 2014
+- Added repair pack 3!
+- Renabled all old repair packs. Construction Robots use them accordingly
+[b]v1.0.1:[/b] July 17th 2014
+- Fixed Chests not being able to fast replace with base chests.
+- Fixed wrong energy usage of logistic robot mk 2.
+- Fixed possible bug. They shouldnt die out anymore, but instead they now should slow down when low on energy!
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Metallurgy:[/size][/i][/b]
+[b]Next Version:[/b]
+[b]v1.2.0:[/b] September 17th 2014
+- Balanced Lava Heating Recipes. Greatly reduced the time to heat the lava (first tier recipe takes 1/5th of a second, and the rest is increased by 1/5th of second)
+- Added Lava cooling recipes. They take a lot longer!!!!!!!!!!!!!!!!!!!!!
+- Fixed mold machines input at wrong level (internal level, which allows fluids to enter)
+- Fixed lava generation!
+[b]v1.1.0:[/b] July 15th 2014
+- Removed all traces of sand! No more resource found in the world.
+- Fixed Mold machines not being able to craft with more then 2 liquids
+[b]v1.0.0:[/b]
+- Official release!
+- Added migration script for Fmod, dont worry if Fmod is not installed, then an error occurs. This is written and wont effect your game.
+- Added ores for the advanced metals.
+- Added barrel to hold lava. It can only hold lava till a degree of 3000 C
+- If Warfare is installed, recipes will be changed to work with Metallurgy!
+
+[b][i][size=150]DyTech-Meteors:[/size][/i][/b]
+
+[b][i][size=150]DyTech-Modules:[/size][/i][/b]
+[b]v1.1.0:[/b] July 13th 2014
+- New graphics for modules.
+- Changed item tabs of modules
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Storage:[/size][/i][/b]
+[b]v1.1.0:[/b] July 20th 2014
+- Redone Graphics of large chest. No more pixelated chests!
+- Added Large and Extra Large Smart Chests!
+- Added all 4 logistic chests in Large and Extra Large Variants!
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Tools:[/size][/i][/b]
+[b]Next Version:[/b]
+[b]v2.0.0:[/b] September 17th 2014
+- New tools! (about 500 or so)
+- all new crafting recipes. you now have handles, rods and heads. they can be of almost all materials!
+- Removed Both iron and steel axe and all others!
+[b]v1.0.1:[/b]
+- Fixed dependencies.
+- Fixed technology not unlocking gemstone axes.
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Transportation:[/size][/i][/b]
+[b]Next Version:[/b]
+[b]v1.2.0:[/b] September 17th 2014
+- Ported to factorio 0.10.8 and above
+- Fixed lights on Car, Locomotives and Wagons
+- Added sounds to Car, Locomotives and Wagons.
+- Fixed no path finding bug of fast locomotive
+- Fixed underground bug
+[b]v1.1.0:[/b] July 12th 2014
+- Changed the underground belts. They now have increase range the higher tier you get. Express has 15, extreme has 25!
+[b]v1.0.1:[/b]
+- Fixed bug with underground belts. They will no longer stop items on the belt.
+[b]v1.0.0:[/b]
+- Official initial release
+
+[b][i][size=150]DyTech-Warfare:[/size][/i][/b]
+[b]Next Version:[/b]
+- New biter type! Watch out for the sky!
+[b]v1.9.9:[/b] September 17th 2014 EXPERIMENTAL!!!!!!!!!!!!!!!!!!!!!!
+[size=150]NOTE. BECAUSE OF AN INTERNAL CHANGE TO BATTERIES, YOU NEED TO START A NEW GAME!!!!!!! THERE IS NO FIX FOR THIS!!!!!!! USING IN A SAVE WITH THE PREVIOUS VERSION WILL CRASH THE GAME!!!!![/size]
+- Added dependency to Metallurgy!!! YOU NOW NEED IT TO PLAY WARFARE!
+- Added Flamethrower Turret (courtesy of FreeER)
+- Increased Biter Spawner health: 350>2500
+- Increased Biter Spawner max units owned: 10>20
+- Increased spawn cooldown for zero evolution: 6 sec > 10 sec
+- Decreased spawn cooldown for max evolution: 2.5 sec > 0.5 sec
+- Increased Emerald King health: 10000>15000
+- Increased Emerald King speed: 0.03>0.1
+- Increased Vision range of Emerald Kings (the distance they will start to attack you when getting close): 30>50
+- Decreased Emerald King collision box so he can fix into 1x1 spaces.
+- Increased attack range of Emerald King: 1.5>4.5
+- Increased Healing of Berserker Biter: 0.05>0.08 per tick
+- Increased Damage of Berserker Biter: 50>60
+- Increased Health of Elder Biter: 750>1000
+- Increased Healing of Elder Biter: 0.07>0.09 per tick
+- Increased Speed of Elder Biter: 0.25>0.3
+- Increased Health of Queen Biter: 250>500
+- Increased all Resistances of Queen Biter: 90>95%
+- Increased Damage of Queen Biter: 5>25
+- Decreased laser attack damage for the last 6 technologies by halve!
+- Added corpses to small, medium and big biters. they wont process into gems!
+- Added a second recipe for sniper bullets.
+- Made sniper easier to get.
+- Added 2 new guns (laser gun and laser shotgun)
+- Changed battery to be an ammo (dont worry, they are still usable for the rest)
+- Added 5 new batteries for the laser guns
+- Added Chitin WallS! They are really strong!
+[b]v1.1.0:[/b] July 26th 2014
+- Reworked the loot fof the biters. They now drop a corpse.
+- Added chitin. Used for armor.
+- Added bones and bone charcoal. Bones have to be smelted in a furnace to produce bone charcoal, which is a fuel item.
+- Added 5 tiers of gem bullets. All the gems have there own bullets now, they are extremely powerfull. The bullet damage and speed increases with the upgrades technologies. This makes gun turrets a viable defence against the powerfull king and queen biter!
+- Balanced biter queen egg recipe to alien artifacts. You now get 4 instead of 50!
+[b]v1.0.0:[/b]
+- Official initial release
