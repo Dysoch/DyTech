@@ -10,13 +10,13 @@ experimental = false
 
 -- Dirty Water add --
 if water==true then
-require("prototypes.base-edit.tech-dirty-water")
 require("prototypes.entity.liquid-handler")
 require("prototypes.item.liquid-handler")
 require("prototypes.fluid.water")
 require("prototypes.recipe.liquid-handler")
 require("prototypes.recipe.water-cleaning")
 require("prototypes.technology.cleaning")
+require("prototypes.base-edit.tech-dirty-water")
 data.raw["offshore-pump"]["offshore-pump"].fluid = "dirty-water"
 data.raw["fluid"]["water"].heat_capacity = "1250J"
 end
