@@ -44,6 +44,7 @@ require("prototypes.item-group.energy")
 require("prototypes.item-group.metallurgy-1")
 require("prototypes.item-group.metallurgy-2")
 require("prototypes.item-group.metallurgy-3")
+require("prototypes.item-group.others")
 require("prototypes.item-group.recycler")
 
 -- Noise Layers
