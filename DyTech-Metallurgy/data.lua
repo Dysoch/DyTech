@@ -2,6 +2,10 @@
 if data.raw.item["stone-pile"] then
 require("prototypes.mod-edit.fmod")
 end
+
+-- Base edit --
+require("prototypes.base-edit.item")
+
 -- DyTech Edits --
 
 -- entity 
@@ -29,6 +33,7 @@ require("prototypes.item.machines")
 require("prototypes.item.molds")
 require("prototypes.item.molten-metal-machines")
 require("prototypes.item.ores")
+require("prototypes.item.ores-clean")
 require("prototypes.item.pipes")
 require("prototypes.item.plates")
 
@@ -37,6 +42,7 @@ require("prototypes.recipe.assemblers-molds")
 require("prototypes.recipe.barrels")
 require("prototypes.recipe.barrels-filling")
 require("prototypes.recipe.barrels-unfilling")
+require("prototypes.recipe.centrifuge")
 require("prototypes.recipe.gears")
 require("prototypes.recipe.intermediates")
 require("prototypes.recipe.lava-cooling")

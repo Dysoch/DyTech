@@ -31,7 +31,7 @@ data:extend(
         recipe = "mold-ammo-advanced"
       },
     },
-    prerequisites = {"lava-smelting-03"},
+    prerequisites = {"lava-smelting-03", "water-cleaning"},
     unit =
     {
       count = 150,

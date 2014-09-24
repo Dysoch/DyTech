@@ -8,7 +8,7 @@ data:extend(
     energy_required = 0.25,
     ingredients =
     {
-      {type="item", name="iron-ore", amount=1},
+      {type="item", name="clean-iron-ore", amount=1},
 	  {type="fluid", name="lava-1600", amount=0.2}
     },
     results = 
@@ -24,7 +24,7 @@ data:extend(
     energy_required = 0.25,
     ingredients =
     {
-      {type="item", name="copper-ore", amount=1},
+      {type="item", name="clean-copper-ore", amount=1},
 	  {type="fluid", name="lava-1200", amount=0.2}
     },
     results = 
