@@ -28,5 +28,14 @@ data:extend(
     order = "clay",
     stack_size = 100
   },
+  {
+    type = "item",
+    name = "brick",
+    icon = "__DyTech-Metallurgy__/graphics/icons/brick.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-intermediates",
+    order = "brick",
+    stack_size = 100
+  },
 }
 )

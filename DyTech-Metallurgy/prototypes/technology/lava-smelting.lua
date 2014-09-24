@@ -243,6 +243,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "lava-3600"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "tungsten-wall"
+      },
     },
     prerequisites = {"lava-smelting-04"},
     unit =

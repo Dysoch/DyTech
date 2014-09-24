@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "clean-iron-ore",
+    icon = "__base__/graphics/icons/iron-ore.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
     energy_required = 2,
@@ -21,6 +22,7 @@ data:extend(
   {
     type = "recipe",
     name = "clean-copper-ore",
+    icon = "__base__/graphics/icons/copper-ore.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
     energy_required = 2,

@@ -49,5 +49,32 @@ data:extend(
 	  {type="fluid", name="liquid-air", amount=1}
 	}
   },
+  {
+    type = "recipe",
+    name = "copper-plate-01",
+    category = "smelting",
+    energy_required = 3.5,
+    ingredients = {{ "clean-copper-ore", 1}},
+    result = "copper-plate"
+  },
+  {
+    type = "recipe",
+    name = "iron-plate-01",
+    category = "smelting",
+    energy_required = 3.5,
+    ingredients = {{"clean-iron-ore", 1}},
+    result = "iron-plate"
+  },
+  {
+    type = "recipe",
+    name = "brick",
+    category = "smelting",
+    energy_required = 2,
+    ingredients = 
+	{
+	  {"clay", 1}
+	},
+    result = "brick"
+  },
 }
 )

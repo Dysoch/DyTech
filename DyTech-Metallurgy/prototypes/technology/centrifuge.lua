@@ -10,6 +10,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "centrifuge"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-iron-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-copper-ore"
+      },
     },
     prerequisites = {"oil-processing", "water-cleaning"},
     unit =

@@ -14,6 +14,8 @@ require("prototypes.entity.lava-machines")
 require("prototypes.entity.machines")
 require("prototypes.entity.molten-metal-machines")
 require("prototypes.entity.pipes")
+require("prototypes.entity.wall-brick")
+require("prototypes.entity.wall-tungsten")
 
 -- fluid 
 require("prototypes.fluid.intermediates")
@@ -36,6 +38,8 @@ require("prototypes.item.ores")
 require("prototypes.item.ores-clean")
 require("prototypes.item.pipes")
 require("prototypes.item.plates")
+require("prototypes.item.wall-brick")
+require("prototypes.item.wall-tungsten")
 
 -- recipe 
 require("prototypes.recipe.assemblers-molds")
@@ -64,6 +68,8 @@ require("prototypes.recipe.molten-metal-machines")
 require("prototypes.recipe.ore-smelting-base")
 require("prototypes.recipe.ore-smelting-basic")
 require("prototypes.recipe.pipes")
+require("prototypes.recipe.wall-brick")
+require("prototypes.recipe.wall-tungsten")
 
 -- resource 
 require("prototypes.resource.gold")
@@ -75,6 +81,7 @@ require("prototypes.resource.tungsten")
 require("prototypes.resource.zinc")
 
 -- tech
+require("prototypes.technology.centrifuge")
 require("prototypes.technology.lava")
 require("prototypes.technology.lava-smelting")
 require("prototypes.technology.molds")

@@ -8,7 +8,7 @@ data:extend(
     category = "lava-magma",
     order = "lava-1",
     infinite = true,
-    minimum = 1000,
+    minimum = 10000,
     normal = 250000,
     minable =
     {
@@ -19,8 +19,8 @@ data:extend(
         {
           type = "fluid",
           name = "lava-600",
-          amount_min = 1,
-          amount_max = 2,
+          amount_min = 2,
+          amount_max = 10,
           probability = 1
         }
       }
@@ -32,9 +32,9 @@ data:extend(
       control = "magma",
       sharpness = 0.8,
       max_probability = 0.04,
-      richness_multiplier = 150000,
-      richness_base = 15000,
-      size_control_multiplier = 0.06,
+      richness_multiplier = 1500000,
+      richness_base = 200000,
+      size_control_multiplier = 1,
       peaks =
       {
         {
@@ -86,8 +86,8 @@ data:extend(
         {
           type = "fluid",
           name = "lava-1400",
-          amount_min = 1,
-          amount_max = 2,
+          amount_min = 2,
+          amount_max = 8,
           probability = 1
         }
       }
@@ -98,9 +98,9 @@ data:extend(
     {
       control = "magma",
       sharpness = 0.8,
-      max_probability = 0.04,
-      richness_multiplier = 150000,
-      richness_base = 1000,
+      max_probability = 0.02,
+      richness_multiplier = 1500000,
+      richness_base = 150000,
       size_control_multiplier = 0.06,
       peaks =
       {
@@ -153,8 +153,8 @@ data:extend(
         {
           type = "fluid",
           name = "lava-2800",
-          amount_min = 1,
-          amount_max = 2,
+          amount_min = 2,
+          amount_max = 6,
           probability = 1
         }
       }
@@ -165,9 +165,9 @@ data:extend(
     {
       control = "magma",
       sharpness = 0.8,
-      max_probability = 0.04,
-      richness_multiplier = 150000,
-      richness_base = 1000,
+      max_probability = 0.01,
+      richness_multiplier = 1500000,
+      richness_base = 100000,
       size_control_multiplier = 0.06,
       peaks =
       {

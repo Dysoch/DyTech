@@ -12,6 +12,14 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "brick"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "brickwall"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "mold-gear"
       },
       {
