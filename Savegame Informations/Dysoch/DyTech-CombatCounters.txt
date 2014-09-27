@@ -3,10 +3,10 @@
   big = 0,
   bird = 0,
   dog = 0,
-  dytech = 0,
+  dytech = 32,
   elder = 0,
   king = 0,
   medium = 0,
   queen = 0,
-  small = 0
-} --[[table: 00000000653CF9B0]]
+  small = 32
+} --[[table: 00000000517A3D70]]

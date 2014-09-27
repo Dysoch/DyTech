@@ -1,9 +1,9 @@
 {
-  build = 182,
-  chunks = 1460,
-  died = 0,
-  dytech = 1991,
-  mine = 302,
-  pickup = 0,
-  sectorscanned = 48
-} --[[table: 00000000653CFA00]]
+  build = 2976,
+  chunks = 2900,
+  died = 62,
+  dytech = 8939,
+  mine = 1379,
+  pickup = 251,
+  sectorscanned = 1371
+} --[[table: 00000000517A3E60]]

@@ -4,6 +4,7 @@
   core = true,
   dynamic = true,
   energy = true,
+  genetics = true,
   inserters = true,
   logistic = true,
   metallurgy = true,
@@ -14,4 +15,4 @@
   tools = true,
   transportation = true,
   warfare = true
-} --[[table: 00000000653CFA50]]
+} --[[table: 00000000517A43B0]]

@@ -1,1 +1,8 @@
-{} --[[table: 000000004BB7A740]]
+{
+  ["biter-small-corpse"] = 17,
+  ["bone-charcoal"] = 22,
+  coal = 44,
+  ["iron-ore"] = 1,
+  ["raw-wood"] = 133,
+  stone = 16
+} --[[table: 00000000517A4310]]
