@@ -174,7 +174,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -250,7 +250,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -326,7 +326,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -402,7 +402,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -478,7 +478,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -554,7 +554,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -630,7 +630,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -706,7 +706,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -782,7 +782,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -858,7 +858,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -934,7 +934,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -1010,7 +1010,7 @@ data:extend(
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {

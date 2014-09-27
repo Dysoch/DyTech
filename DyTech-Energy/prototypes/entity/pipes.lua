@@ -19,7 +19,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_connections =
       {
         { position = {0, -1} },
@@ -63,7 +63,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_connections =
       {
         { position = {0, -1} },
@@ -107,7 +107,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_connections =
       {
         { position = {0, -1} },
@@ -151,7 +151,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_connections =
       {
         { position = {0, -1} },

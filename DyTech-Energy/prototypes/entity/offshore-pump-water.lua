@@ -20,7 +20,7 @@ data:extend({
 	fast_replaceable_group = "offshore-pump",
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -89,7 +89,7 @@ data:extend({
 	fast_replaceable_group = "offshore-pump",
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -158,7 +158,7 @@ data:extend({
 	fast_replaceable_group = "offshore-pump",
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -227,7 +227,7 @@ data:extend({
 	fast_replaceable_group = "offshore-pump",
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {

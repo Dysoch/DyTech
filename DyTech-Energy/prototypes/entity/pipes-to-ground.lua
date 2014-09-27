@@ -19,14 +19,14 @@ data:extend({
 	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
-      base_area = 2,
+      base_area = 2.5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 15
+          max_underground_distance = 20
         }
       },
     },
@@ -89,14 +89,14 @@ data:extend({
 	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
-      base_area = 4,
+      base_area = 5,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 20
+          max_underground_distance = 30
         }
       },
     },
@@ -159,14 +159,14 @@ data:extend({
 	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
-      base_area = 8,
+      base_area = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 25
+          max_underground_distance = 40
         }
       },
     },
@@ -229,14 +229,14 @@ data:extend({
 	fast_replaceable_group = "pipe-to-ground",
     fluid_box =
     {
-      base_area = 16,
+      base_area = 20,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
         { position = {0, -1} },
         {
           position = {0, 1},
-          max_underground_distance = 30
+          max_underground_distance = 50
         }
       },
     },
