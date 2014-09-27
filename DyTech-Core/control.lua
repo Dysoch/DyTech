@@ -343,5 +343,10 @@ remote.addinterface("DyTech-Core",
   
   addtoCounter = function(CounterName, Number)
 	CounterName = CounterName + Number
+  end,
+  
+  ResetAll = function()
+	game.player.force.resettechnologies()
+	game.player.force.resetrecipes()
   end
 })

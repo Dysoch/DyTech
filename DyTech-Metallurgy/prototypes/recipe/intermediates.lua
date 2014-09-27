@@ -28,14 +28,12 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="water", amount=0.2},
-	  {type="fluid", name="lava-2000", amount=0.2},
 	  {type="item", name="coal", amount=1},
     },
     results = 
 	{
-	  {type="item", name="carbon", amount=7},
+	  {type="item", name="carbon", amount=8},
 	  {type="item", name="sulfur", amount=2},
-	  {type="fluid", name="liquid-air", amount=1},
 	}
   },
   {
