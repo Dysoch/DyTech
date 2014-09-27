@@ -17,7 +17,7 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "lava-1000",
+    name = "lava-1000-cooling",
 	enabled = false,
 	category = "liquid-handler",
     energy_required = 11,

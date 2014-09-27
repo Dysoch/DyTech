@@ -24,6 +24,18 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "lava-800-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-1000-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-1200-cooling"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "blast-furnace"
       },
       {
@@ -73,6 +85,14 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "lava-1400-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-1600-cooling"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "metallurgy-iron-plate"
       },
     },
@@ -107,6 +127,14 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "lava-2000"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-1800-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-2000-cooling"
       },
       {
         type = "unlock-recipe",
@@ -189,6 +217,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "lava-2400"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-2200-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-2400-cooling"
+      },
     },
     prerequisites = {"lava-smelting-03"},
     unit =
@@ -242,6 +278,30 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "lava-3600"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-2600-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-2800-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-3000-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-3200-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-3400-cooling"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "lava-3600-cooling"
       },
       {
         type = "unlock-recipe",
