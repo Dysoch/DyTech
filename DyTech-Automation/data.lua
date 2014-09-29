@@ -1,3 +1,11 @@
+-- DyTech-Dynamic Check. Disables Technologies if Dynamic Is installed!!! --
+if not data.raw.item["dytech-dynamic-checker-item"] then
+require("prototypes.technology.assembling")
+require("prototypes.technology.furnace")
+require("prototypes.technology.mining")
+require("prototypes.technology.radar")
+end
+
 require("prototypes.base-edit.entity")
 require("prototypes.base-edit.item")
 require("prototypes.entity.assembling")
@@ -17,7 +25,3 @@ require("prototypes.recipe.furnace-burner")
 require("prototypes.recipe.furnace-electric")
 require("prototypes.recipe.intermediate")
 require("prototypes.recipe.radar")
-require("prototypes.technology.assembling")
-require("prototypes.technology.furnace")
-require("prototypes.technology.mining")
-require("prototypes.technology.radar")
