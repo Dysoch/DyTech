@@ -4,7 +4,8 @@ require("util")
 function OnLoad()
 	if not glob.DynamicSystem then glob.DynamicSystem=false end
 	if not glob.HardMode then glob.HardMode=false end
-	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
+	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false, genetics=false} end
+	if not glob.modules.genetics then glob.modules.genetics=false end
 	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end

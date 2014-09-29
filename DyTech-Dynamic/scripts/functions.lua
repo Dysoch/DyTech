@@ -86,6 +86,7 @@ function ModuleCheck()
 	if remote.call("DyTech-Core", "detectModule", "automation")==true then glob.modules.automation = true else glob.modules.automation = false end 
 	if remote.call("DyTech-Core", "detectModule", "compatibility")==true then glob.modules.compatibility = true else glob.modules.compatibility = false end 
 	if remote.call("DyTech-Core", "detectModule", "energy")==true then glob.modules.energy = true else glob.modules.energy = false end 
+	if remote.call("DyTech-Core", "detectModule", "genetics")==true then glob.modules.genetics = true else glob.modules.genetics = false end 
 	if remote.call("DyTech-Core", "detectModule", "inserters")==true then glob.modules.inserters = true else glob.modules.inserters = false end 
 	if remote.call("DyTech-Core", "detectModule", "logistic")==true then glob.modules.logistic = true else glob.modules.logistic = false end 
 	if remote.call("DyTech-Core", "detectModule", "metallurgy")==true then glob.modules.metallurgy = true else glob.modules.metallurgy = false end 
