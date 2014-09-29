@@ -7,8 +7,9 @@ eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
 
--- Unlocks range from 1 to 200
--- Rewards range from 201 to 300
+-- Unlocks range from 3 to 200
+-- Rewards range from 201 to 299
+-- Event 1, 2 and 300 are essentials! Its smart not to edit those!
 -- These values will be increased when needed
 
 --[[Dynamic System Unlock events!]]--
@@ -16,10 +17,12 @@ function dynamicUnlocks(event, ttime, r)
 	--[[This first event makes sure the latest counters from DyTech-Core are transfered here! They will be reset to there newest numbers everytime the loop starts again! This is an essential event!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*1) then
 		fs.CounterTransfer()
+		glob.EventCheck.event001 = true
 	end
-	--[[This second event checks which modules are installed. DO NOT MODIFY THIS!]]--
+	--[[This second event checks which modules are installed. This is essential. If modified, errors will occur!!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*2) then
 		fs.ModuleCheck()
+		glob.EventCheck.event002 = true
 	end
 	if event.tick%ttime==(r*3) and glob.modules.core==true then 
 	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
@@ -33,6 +36,7 @@ function dynamicUnlocks(event, ttime, r)
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-science-1").." "..LocaleName)
 					game.player.force.resetrecipes()
+					glob.EventCheck.event003 = true
 				end
 			end
 		end
@@ -49,6 +53,7 @@ function dynamicUnlocks(event, ttime, r)
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-science-2").." "..LocaleName)
 					game.player.force.resetrecipes()
+					glob.EventCheck.event004 = true
 				end
 			end
 		end
@@ -65,6 +70,7 @@ function dynamicUnlocks(event, ttime, r)
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-inserter-1").." "..LocaleName)
 					game.player.force.resetrecipes()
+					glob.EventCheck.event005 = true
 				end
 			end
 		end
@@ -81,6 +87,7 @@ function dynamicUnlocks(event, ttime, r)
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-inserter-2").." "..LocaleName)
 					game.player.force.resetrecipes()
+					glob.EventCheck.event006 = true
 				end
 			end
 		end
@@ -90,30 +97,22 @@ end
 --[[Dynamic System Reward Events!]]--
 function dynamicRewards(event, ttime, r)
 	if event.tick%ttime==(r*201) then
-		if not glob.reward.axe1 then 
+		if not glob.EventCheck.event201 then 
 			if glob.counter.dytech > math.random(15000,22500) then
 				game.player.insert{name="steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
-				glob.reward.axe1=true
+				glob.EventCheck.event201 = true
 			end
 		end
 	end
-	if event.tick%ttime==(r*202) then
-		if not glob.reward.axe2 and glob.modules.tools==true then 
-			if glob.counter.mining > math.random(750,2250) then
-				game.player.insert{name="advanced-steel-axe",count=1}
-				game.player.print(game.gettext("msg-reward-2"))
-				glob.reward.axe2=true
-			end
-		end
-	end
-	if event.tick%ttime==(r*203) then
-		if not glob.reward.axe3 and glob.modules.tools==true then 
-			if glob.counter.mining > math.random(30,75) then
-				game.player.insert{name="copper-axe",count=3}
-				game.player.print(game.gettext("msg-reward-3"))
-				glob.reward.axe3=true
-			end
+	--[[This event will shutdown the Dynamic System when the player has called for it to go off, while it was running. This will always be the last event!!!]]--
+	if event.tick%ttime==(r*300) then
+		glob.EventCheck.event001 = false
+		glob.EventCheck.event002 = false
+		if glob.SystemShutoff==true then
+			glob.DynamicSystem = false
+			glob.SystemShutoff = false
+			game.player.print("Dynamic System has finished its loop. The System has now shut down!!! Technologies however won't return! It's a shame to see you go :(")
 		end
 	end
 end

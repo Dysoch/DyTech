@@ -1,92 +1,20 @@
 module("fs", package.seeall)
 require("util")
 
-function CraftedItems()
-	game.player.print("Here are all your crafted Items!")
-	game.player.print(serpent.block(glob.CraftedItems))
-end
-
-function PickedItems()
-	game.player.print("Here are all your Picked Up Items!")
-	game.player.print(serpent.block(glob.PickedItems))
-end
-
-function MinedItems()
-	game.player.print("Here are all your Mined Items!")
-	game.player.print(serpent.block(glob.MinedItems))
-end
-
-function OnLoad()
-	if not glob.DynamicSystem then glob.DynamicSystem=false end
-	if not glob.HardMode then glob.HardMode=false end
-	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false} end
-	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
-	if not glob.counter.dytech then glob.counter.dytech=0 end
-	if not glob.counter.gear then glob.counter.gear=0 end
-	if not glob.counter.resource then glob.counter.resource=0 end
-	if not glob.counter.mining then glob.counter.mining=0 end
-	if not glob.counter.robot then glob.counter.robot=0 end
-	if not glob.counter.ammo then glob.counter.ammo=0 end
-	if not glob.counter.gun then glob.counter.gun=0 end
-	if not glob.counter.machine then glob.counter.machine=0 end
-	if not glob.counter.capsule then glob.counter.capsule=0 end
-	if not glob.counter.tech then glob.counter.tech=0 end
-	if not glob.counter.plates then glob.counter.plates=0 end
-	if not glob.counter.inserter then glob.counter.inserter=0 end
-	if not glob.counter.energy then glob.counter.energy=0 end
-	if not glob.counter.chest then glob.counter.chest=0 end
-	if not glob.counter.armor then glob.counter.armor=0 end
-	if not glob.counter.gems then glob.counter.gems=0 end
-	if not glob.counter.belt then glob.counter.belt=0 end
-	if not glob.counter.turret then glob.counter.turret=0 end
-	if not glob.counter.alien then glob.counter.alien=0 end
-	if not glob.counter.science then glob.counter.science=0 end
-	if not glob.counter.wall then glob.counter.wall=0 end
-	if not glob.counter.modules then glob.counter.modules=0 end
-	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0} end
-	if not glob.combat.dytech then glob.combat.dytech=0 end
-	if not glob.combat.small then glob.combat.small=0 end
-	if not glob.combat.medium then glob.combat.medium=0 end
-	if not glob.combat.big then glob.combat.big=0 end
-	if not glob.combat.berserker then glob.combat.berserker=0 end
-	if not glob.combat.elder then glob.combat.elder=0 end
-	if not glob.combat.king then glob.combat.king=0 end
-	if not glob.combat.queen then glob.combat.queen=0 end
-	if not glob.combat.dog then glob.combat.dog=0 end
-	if not glob.combat.bird then glob.combat.bird=0 end
-	if not glob.reward then glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false} end
-	if not glob.reward.axe1 then glob.reward.axe1=false end
-	if not glob.reward.axe2 then glob.reward.axe2=false end
-	if not glob.reward.axe3 then glob.reward.axe3=false end
-	if not glob.reward.armor1 then glob.reward.armor1=false end
-	if not glob.reward.armor2 then glob.reward.armor2=false end
-	if not glob.reward.armor3 then glob.reward.armor3=false end
-	if not glob.reward.ammo1 then glob.reward.ammo1=false end
-	if not glob.reward.ammo2 then glob.reward.ammo2=false end
-	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
-	if not glob.timer.seconds then glob.timer.seconds=0 end
-	if not glob.timer.minutes then glob.timer.minutes=0 end
-	if not glob.timer.hours then glob.timer.hours=0 end
-end
-
-function OnInit()
-	game.player.print("Dynamic System starts Offline! You have to manually start it via the console command found at the Forum Topic 'Console Commands'")
-glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false}
-glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0}
-glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0}
-glob.reward={axe1=false, axe2=false, axe3=false, armor1=false, armor2=false, armor3=false, ammo1=false, ammo2=false}
-glob.DynamicSystem=false
-glob.HardMode=false
-glob.timer={seconds=0, minutes=0, hours=0}
-end
-
 function DynamicToggle()
-	if glob.DynamicSystem==true then
-		glob.DynamicSystem = false
-		game.player.print("Dynamic System is now offline. Technologies however won't return! It's a shame to see you go :(")
+	if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
+		glob.SystemShutoff = true
+		game.player.print("Dynamic System is still running!!! Shutting off now might cause errors!")
+		game.player.print("The System will shutdown after the loop is done!!!")
 	else
-		glob.DynamicSystem = true
-		game.player.print("Dynamic System is now online. Enjoy the System!")
+		if glob.DynamicSystem==true then
+			glob.DynamicSystem = false
+			game.player.print("Dynamic System is now offline. Technologies however won't return! It's a shame to see you go :(")
+		else
+			glob.DynamicSystem = true
+			game.player.print("Dynamic System is now online. Enjoy the System!")
+			game.player.print("Ready for a challenge? Try the Hard Dynamic System! Command to activate it can be found in 'Console Commands' topic in the forum!")
+		end
 	end
 end
 
