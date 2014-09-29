@@ -9,10 +9,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "modular-tools",
+    name = "checker-items",
     group = "recycler",
     order = "1"
   },
-
+  {
+    type = "item-subgroup",
+    name = "modular-tools",
+    group = "recycler",
+    order = "2"
+  },
 }
 )
