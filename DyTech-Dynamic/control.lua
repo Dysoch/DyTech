@@ -3,10 +3,12 @@ require "defines"
 require "scripts/dynamic-system"
 require "scripts/dynamic-system-hard"
 require "scripts/functions"
+require "scripts/oninit"
+require "scripts/onload"
 
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "dynamic")
-	fs.OnInit()
+	OnInit.OnInit()
 end)
 
 game.onsave(function()
@@ -14,7 +16,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	fs.OnLoad()
+	OnLoad.OnLoad()
 end)
 
 game.onevent(defines.events.ontick, function(event)
@@ -33,15 +35,6 @@ game.onevent(defines.events.ontick, function(event)
 	end
 end)
 
-game.onevent(defines.events.onplayercrafteditem, function(event)
-
-end)
-
-game.onevent(defines.events.onpickedupitem, function(event)
-
-end)
-
-game.onevent(defines.events.onplayermineditem, function(event)end)
 
 remote.addinterface("DyTech-Dynamic",
 {  
