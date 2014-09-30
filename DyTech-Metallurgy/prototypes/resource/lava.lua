@@ -30,8 +30,8 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.8,
-      max_probability = 0.04,
+      sharpness = 0.85,
+      max_probability = 0.03,
       richness_multiplier = 1500000,
       richness_base = 200000,
       size_control_multiplier = 1,
@@ -41,13 +41,13 @@ data:extend(
           influence = 0.1
         },
         {
-          influence = 0.105,
+          influence = 0.075,
           starting_area_weight_optimal = 1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.67,
+          influence = 0.54,
           noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
@@ -97,7 +97,7 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.8,
+      sharpness = 0.85,
       max_probability = 0.02,
       richness_multiplier = 1500000,
       richness_base = 150000,
@@ -108,13 +108,13 @@ data:extend(
           influence = 0.1
         },
         {
-          influence = 0.105,
+          influence = 0.075,
           starting_area_weight_optimal = 1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.67,
+          influence = 0.54,
           noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
@@ -164,7 +164,7 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.8,
+      sharpness = 0.85,
       max_probability = 0.01,
       richness_multiplier = 1500000,
       richness_base = 100000,
@@ -175,13 +175,13 @@ data:extend(
           influence = 0.1
         },
         {
-          influence = 0.105,
+          influence = 0.075,
           starting_area_weight_optimal = 1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.67,
+          influence = 0.54,
           noise_layer = "lava",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
