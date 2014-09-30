@@ -148,6 +148,11 @@ game.onevent(defines.events.onentitydied, function(event)
 			glob.combat[counter]=glob.combat[counter] + ingredients
 		end
 	end
+	if not glob.EntityDied[event.entity.name] then
+		glob.EntityDied[event.entity.name] = 1
+	else
+		glob.EntityDied[event.entity.name] = glob.EntityDied[event.entity.name] + 1
+	end
 end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
@@ -295,7 +300,11 @@ remote.addinterface("DyTech-Core",
 	game.makefile("DyTech-CraftedItems.txt", serpent.block(glob.CraftedItems))
 	game.makefile("DyTech-PickedItems.txt", serpent.block(glob.PickedItems))
 	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
+	game.makefile("DyTech-EntityDied.txt", serpent.block(glob.EntityDied))
 	game.player.print("Exported all data from Core!")
+	if remote.call("DyTech-Dynamic", "Export") and glob.dytech.dynamic==true then
+		remote.call("DyTech-Dynamic", "Export")
+	end
 	game.player.print("You can find all relevant data in the script-output folder!")
   end,
   

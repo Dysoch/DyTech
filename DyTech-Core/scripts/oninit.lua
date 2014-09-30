@@ -20,6 +20,7 @@ glob.debug=false
 glob.CraftedItems = {}
 glob.PickedItems = {}
 glob.MinedItems = {}
+glob.EntityDied = {}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {
