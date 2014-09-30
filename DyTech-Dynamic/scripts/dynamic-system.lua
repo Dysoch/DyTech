@@ -597,7 +597,7 @@ end
 --[[Dynamic System Reward Events!]]--
 function dynamicRewards(event, ttime, r)
 if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
-	if event.tick%ttime==(r*201) then
+	if event.tick%ttime==(r*201) and glob.modules.tools==false then
 		if not glob.EventCheck.event201 then 
 			if glob.counter.dytech > math.random(5000,7500) then
 				game.player.insert{name="steel-axe",count=1}

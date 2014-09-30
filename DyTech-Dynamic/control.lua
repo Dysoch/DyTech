@@ -38,6 +38,11 @@ end)
 
 remote.addinterface("DyTech-Dynamic",
 {  
+  Export = function()
+	game.makefile("DyTech-Events.txt", serpent.block(glob.EventCheck) .. serpent.block(fs.EventCheckNames))
+	game.player.print("Exported all data from Dynamic as well!")
+  end,
+  
   ToggleDynamicSystem = function()
 	fs.DynamicToggle()
   end,
