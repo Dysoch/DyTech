@@ -347,11 +347,11 @@ remote.addinterface("DyTech-Core",
   end,
   
   removefromCounter = function(CounterName, Number)
-	CounterName = CounterName - Number
+	CounterName = (CounterName-Number)
   end,
   
   addtoCounter = function(CounterName, Number)
-	CounterName = CounterName + Number
+	CounterName = (CounterName+Number)
   end,
   
   ResetAll = function()
