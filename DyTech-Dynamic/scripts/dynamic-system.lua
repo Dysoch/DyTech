@@ -2,7 +2,7 @@ module("Dynamic", package.seeall)
 require "scripts/functions"
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 300 --[[This makes 5 minutes before the entire unlock and reward event start again]]--
+dstotalevents = 301 --[[This makes 5 minutes before the entire unlock and reward event start again]]--
 eventtime = 60
 function dsttime()
 return (dstotalevents*eventtime) end
