@@ -15,6 +15,21 @@ function Timer(event)
 	end
 end
 
+function ItemNameLocale(name)
+return
+	game.getlocaliseditemname(name)
+end
+
+function EntityNameLocale(name)
+return
+	game.getlocalisedentityname(name)
+end
+
+function TechNameLocale(name)
+return
+	game.getlocalisedtechnologyname(name)
+end
+
 function CounterPrinter()
 	game.player.print("Here are all your counters with their current status!")
 	game.player.print("Gear:".." "..tostring(glob.counter.gear))
