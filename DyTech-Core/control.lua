@@ -1,5 +1,8 @@
 require "defines"
-require "scripts/database"
+require "databases/buildingdatabase"
+require "databases/craftingdatabase"
+require "databases/killingdatabase"
+require "databases/miningdatabase"
 require "scripts/functions"
 require "scripts/oninit"
 require "scripts/onload"
@@ -76,9 +79,9 @@ game.onevent(defines.events.onplayercrafteditem, function(event)
 		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
 	end
 incrementDynamicCounters = function(stack)
-	if database.craftitems[stack.name] then
-		for counter, ingredients in pairs(database.craftitems[stack.name]) do
-			if database.craftitems[counter] then
+	if ItemDatabase.craftitems[stack.name] then
+		for counter, ingredients in pairs(ItemDatabase.craftitems[stack.name]) do
+			if ItemDatabase.craftitems[counter] then
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
 				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
@@ -123,8 +126,8 @@ end
 
 game.onevent(defines.events.onplayermineditem, function(event)
 	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
-	if database.mineitems[event.itemstack.name] then
-		for counter, ingredients in pairs(database.mineitems[event.itemstack.name]) do 
+	if MineDatabase.mineitems[event.itemstack.name] then
+		for counter, ingredients in pairs(MineDatabase.mineitems[event.itemstack.name]) do 
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
 		end
 	end
@@ -143,8 +146,8 @@ end)
 
 game.onevent(defines.events.onentitydied, function(event)
 	glob.counter2.died = glob.counter2.died + 1
-	if database.kill[event.entity.name] and event.entity.force.name == "enemy" then
-		for counter, ingredients in pairs(database.kill[event.entity.name]) do 
+	if KillDatabase.kill[event.entity.name] and event.entity.force.name == "enemy" then
+		for counter, ingredients in pairs(KillDatabase.kill[event.entity.name]) do 
 			glob.combat[counter]=glob.combat[counter] + ingredients
 		end
 	end
@@ -247,6 +250,18 @@ game.onevent(defines.events.onbuiltentity, function(event)
 --		glob.sand[glob.sandcount].position=event.createdentity.position
 	end
 	glob.counter2.build = glob.counter2.build + 1
+incrementDynamicCounters = function(stack)
+	if BuildDatabase.craftitems[stack.name] then
+		for counter, ingredients in pairs(BuildDatabase.craftitems[stack.name]) do
+			if BuildDatabase.craftitems[counter] then
+				incrementDynamicCounters({name=counter, count=ingredients})
+			else
+				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
+			end
+		end
+	end
+end
+incrementDynamicCounters(event.createdentity)
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
@@ -346,12 +361,16 @@ remote.addinterface("DyTech-Core",
 	end
   end,
   
-  removefromCounter = function(CounterName, Number)
-	CounterName = (CounterName-Number)
+  removefromCounter = function(name, Number)
+	if type(name) == "string" then
+		glob.counter[name] = (glob.counter[name]-Number)
+	end
   end,
   
-  addtoCounter = function(CounterName, Number)
-	CounterName = (CounterName+Number)
+  addtoCounter = function(name, Number)
+	if type(name) == "string" then
+		glob.counter[name] = (glob.counter[name]-Number)
+	end
   end,
   
   ResetAll = function()

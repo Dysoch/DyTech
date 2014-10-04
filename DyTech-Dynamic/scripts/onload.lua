@@ -31,7 +31,7 @@ function OnLoad()
 	if not glob.counter.modules then glob.counter.modules=0 end
 	if not glob.counter.pipes then glob.counter.pipes=0 end
 	if not glob.counter.transport then glob.counter.transport=0 end
-	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogenemy=0, dogenemy=0, bird=0} end
+	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogenemy=0, dogplayer=0, bird=0} end
 	if not glob.combat.dytech then glob.combat.dytech=0 end
 	if not glob.combat.small then glob.combat.small=0 end
 	if not glob.combat.medium then glob.combat.medium=0 end

@@ -1,4 +1,4 @@
-module("database")
+module("ItemDatabase")
 
 --  [""]={},
 --  [""]={resource=1}, =,
@@ -408,71 +408,4 @@ craftitems =
 	["topaz-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
 	["sapphire-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
 	["ruby-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
-}
-
---[[MINED ITEMS]]--
-
-mineitems =
-{
-	["sand"]={resource=1},
-	["coal"]={resource=1},
-	["stone"]={resource=1},
-	["iron-ore"]={resource=1},
-	["copper-ore"]={resource=1},
-	["gold-ore"]={resource=1},
-	["silver-ore"]={resource=1},
-	["zinc-ore"]={resource=1},
-	["tungsten-ore"]={resource=1},
-	["tin-ore"]={resource=1},
-	["raw-wood"]={resource=1},
-	["ruby-ore"]={gems=5},
-	["sapphire-ore"]={gems=5},
-	["diamond-ore"]={gems=5},
-	["topaz-ore"]={gems=5},
-	["emerald-ore"]={gems=5},
-	["ruby-orex"]={gems=1},
-	["sapphire-orex"]={gems=1},
-	["diamond-orex"]={gems=1},
-	["topaz-orex"]={gems=1},
-	["emerald-orex"]={gems=1}
-}
-
---[[KILLED ENTITIES]]--
-
-kill =
-{
-	["small-biter"]={small=1},
-	["medium-biter"]={medium=1},
-	["big-biter"]={big=1},
-	["berserk-biter"]={berserker=1},
-	["elder-biter"]={elder=1},
-	["king-biter"]={king=1},
-	["queen-biter"]={queen=1}
-}
-
---[[Meteor spawns]]--
-
-meteor = 
-{ 
-	["meteor-small-1"]={small=1},
-	["meteor-small-2"]={small=1},
-	["meteor-small-3"]={small=1},
-	["meteor-small-4"]={small=1},
-	["meteor-small-5"]={small=1},
-	["meteor-medium-1"]={medium=1},
-	["meteor-medium-2"]={medium=1},
-	["meteor-medium-3"]={medium=1},
-	["meteor-medium-4"]={medium=1},
-	["meteor-medium-5"]={medium=1},
-	["meteor-large-1"]={large=1},
-	["meteor-large-2"]={large=1},
-	["meteor-large-3"]={large=1},
-	["meteor-large-4"]={large=1},
-	["meteor-large-5"]={large=1},
-	["meteor-comet-1"]={comet=1},
-	["meteor-comet-2"]={comet=1},
-	["meteor-comet-3"]={comet=1},
-	["meteor-comet-4"]={comet=1},
-	["meteor-comet-5"]={comet=1},
-	["meteor-asteroid-1"]={asteroid=1}
 }
