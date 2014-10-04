@@ -51,6 +51,8 @@ glob.counter.alien=0
 glob.counter.science=0 
 glob.counter.wall=0 
 glob.counter.modules=0 
+glob.counter.pipes=0 
+glob.counter.transport=0 
 glob.counter.dytech = glob.counter.dytech + remote.call("DyTech-Core", "checkCounter", "dytech")
 glob.counter.gear = glob.counter.gear + remote.call("DyTech-Core", "checkCounter", "gear")
 glob.counter.resource = glob.counter.resource + remote.call("DyTech-Core", "checkCounter", "resource")
@@ -73,6 +75,8 @@ glob.counter.alien = glob.counter.alien + remote.call("DyTech-Core", "checkCount
 glob.counter.science = glob.counter.science + remote.call("DyTech-Core", "checkCounter", "science")
 glob.counter.wall = glob.counter.wall + remote.call("DyTech-Core", "checkCounter", "wall")
 glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
+glob.counter.pipes = glob.counter.pipes + remote.call("DyTech-Core", "checkCounter", "pipes")
+glob.counter.transport = glob.counter.transport + remote.call("DyTech-Core", "checkCounter", "transport")
 glob.timer.hours=0 
 glob.timer.minutes=0 
 glob.timer.seconds=0 
@@ -102,8 +106,8 @@ function FailureMessage(ItemName)
 	game.player.print(game.gettext("msg-failure-1").." "..ItemName.." "..game.gettext("msg-failure-2"))
 end
 
-function FailureReduction(CounterName, Number)
-	local Random = math.random(CounterName/Number)
+function FailureReduction(CounterName, Counter, Number)
+	local Random = math.random(Counter\Number)
 	remote.call("DyTech-Core", "removefromCounter", "CounterName", Random)
 end 
 

@@ -6,7 +6,7 @@ function OnLoad()
 	if not glob.HardMode then glob.HardMode=false end
 	if not glob.modules then glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false, genetics=false} end
 	if not glob.modules.genetics then glob.modules.genetics=false end
-	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0} end
+	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, pipes=0, transport=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
 	if not glob.counter.resource then glob.counter.resource=0 end
@@ -29,7 +29,9 @@ function OnLoad()
 	if not glob.counter.science then glob.counter.science=0 end
 	if not glob.counter.wall then glob.counter.wall=0 end
 	if not glob.counter.modules then glob.counter.modules=0 end
-	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dog=0, bird=0} end
+	if not glob.counter.pipes then glob.counter.pipes=0 end
+	if not glob.counter.transport then glob.counter.transport=0 end
+	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogenemy=0, dogenemy=0, bird=0} end
 	if not glob.combat.dytech then glob.combat.dytech=0 end
 	if not glob.combat.small then glob.combat.small=0 end
 	if not glob.combat.medium then glob.combat.medium=0 end
@@ -38,7 +40,8 @@ function OnLoad()
 	if not glob.combat.elder then glob.combat.elder=0 end
 	if not glob.combat.king then glob.combat.king=0 end
 	if not glob.combat.queen then glob.combat.queen=0 end
-	if not glob.combat.dog then glob.combat.dog=0 end
+	if not glob.combat.dogenemy then glob.combat.dogenemy=0 end
+	if not glob.combat.dogplayer then glob.combat.dogplayer=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
 	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
 	if not glob.timer.seconds then glob.timer.seconds=0 end
