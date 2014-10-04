@@ -14,7 +14,7 @@ end)
 
 game.onload(function()
   toCraft = toCraft or {}
-  game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
+  if not game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"}) then game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"}) end
 end)
 
 game.onevent(defines.events.ontick, function(event)

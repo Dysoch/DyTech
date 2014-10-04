@@ -107,7 +107,7 @@ function FailureMessage(ItemName)
 end
 
 function FailureReduction(CounterName, Counter, Number)
-	local Random = math.random(Counter\Number)
+	local Random = math.random(Counter/Number)
 	remote.call("DyTech-Core", "removefromCounter", "CounterName", Random)
 end 
 
