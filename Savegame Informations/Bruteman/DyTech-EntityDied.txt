@@ -1,0 +1,8 @@
+{
+  ["dark-green-thin-tree"] = 4,
+  ["green-thin-tree"] = 2,
+  ["guard-dog-enemy"] = 3,
+  ["small-biter"] = 35,
+  ["stone-rock"] = 3,
+  wall = 2
+} --[[table: 000000005E64A820]]

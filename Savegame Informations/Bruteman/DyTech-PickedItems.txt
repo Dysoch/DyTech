@@ -1,0 +1,17 @@
+{
+  ["basic-inserter"] = 21,
+  ["biter-small-corpse"] = 16,
+  ["clean-iron-ore"] = 53,
+  ["coke-coal"] = 276,
+  ["copper-ore"] = 20,
+  ["copper-plate"] = 2500,
+  germling = 87,
+  ["iron-gear-wheel"] = 4,
+  ["iron-ore"] = 457,
+  ["iron-plate"] = 6547,
+  ["plastic-bar"] = 254,
+  ["raw-wood"] = 425,
+  ["small-alien-artifact"] = 16,
+  ["steel-plate"] = 4423,
+  stone = 342
+} --[[table: 000000005E64A870]]
