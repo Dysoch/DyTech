@@ -363,13 +363,13 @@ remote.addinterface("DyTech-Core",
   
   removefromCounter = function(name, Number)
 	if type(name) == "string" then
-		glob.counter[name] = (glob.counter[name]-Number)
+		glob.counter[name] = (glob.counter[name]-math.random(glob.counter[name]/Number))
 	end
   end,
   
   addtoCounter = function(name, Number)
 	if type(name) == "string" then
-		glob.counter[name] = (glob.counter[name]-Number)
+		glob.counter[name] = (glob.counter[name]+Number)
 	end
   end,
   
