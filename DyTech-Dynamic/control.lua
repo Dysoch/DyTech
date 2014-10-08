@@ -43,6 +43,10 @@ remote.addinterface("DyTech-Dynamic",
 	game.player.print("Exported all data from Dynamic as well!")
   end,
   
+  FailureTest = function()
+	Dynamic.DynamicFailureTest()
+  end,
+  
   ToggleDynamicSystem = function()
 	fs.DynamicToggle()
   end,

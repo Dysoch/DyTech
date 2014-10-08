@@ -634,3 +634,15 @@ function DynamicFailure(counter)
         return false
     end
 end
+
+function DynamicFailureTest()
+	if DynamicFailure(glob.counter.dytech) then
+		game.player.print("Failure check succesfull!")
+		fs.FailureReduction("science", glob.counter.science, 4)
+		game.player.print("Failure reduced science!")
+		fs.FailureReduction("gear", glob.counter.gear, 4)
+		game.player.print("Failure reduced gear!")
+	else
+		game.player.print("Failure check failed!")
+	end
+end

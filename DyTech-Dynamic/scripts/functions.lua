@@ -49,7 +49,7 @@ glob.counter.belt=0
 glob.counter.turret=0 
 glob.counter.alien=0 
 glob.counter.science=0 
-glob.counter.wall=0 
+glob.counter.walls=0 
 glob.counter.modules=0 
 glob.counter.pipes=0 
 glob.counter.transport=0 
@@ -73,7 +73,7 @@ glob.counter.belt = glob.counter.belt + remote.call("DyTech-Core", "checkCounter
 glob.counter.turret = glob.counter.turret + remote.call("DyTech-Core", "checkCounter", "turret")
 glob.counter.alien = glob.counter.alien + remote.call("DyTech-Core", "checkCounter", "alien")
 glob.counter.science = glob.counter.science + remote.call("DyTech-Core", "checkCounter", "science")
-glob.counter.wall = glob.counter.wall + remote.call("DyTech-Core", "checkCounter", "wall")
+glob.counter.walls = glob.counter.walls + remote.call("DyTech-Core", "checkCounter", "walls")
 glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
 glob.counter.pipes = glob.counter.pipes + remote.call("DyTech-Core", "checkCounter", "pipes")
 glob.counter.transport = glob.counter.transport + remote.call("DyTech-Core", "checkCounter", "transport")
@@ -108,7 +108,7 @@ end
 
 function FailureReduction(CounterName, Counter, Number)
 	local Random = math.random(Counter/Number)
-	remote.call("DyTech-Core", "removefromCounter", "CounterName", Random)
+	remote.call("DyTech-Core", "removefromCounter", CounterName, Random)
 end 
 
 EventCheckNames=
