@@ -31,8 +31,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(50,150) and glob.counter.gear > math.random(150,500) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("science", glob.counter.science, 4)
-					fs.FailureReduction("gear", glob.counter.gear, 4)
+					fs.FailureReduction("science", 4)
+					fs.FailureReduction("gear", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -49,8 +49,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.science > math.random(125,300) and glob.counter.gear > math.random(450,1500) and glob.EventCheck.event003==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("science", glob.counter.science, 3)
-					fs.FailureReduction("gear", glob.counter.gear, 3)
+					fs.FailureReduction("science", 3)
+					fs.FailureReduction("gear", 3)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -67,8 +67,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.inserter > math.random(150,300) and glob.counter.gear > math.random(250,1000) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("inserter", glob.counter.inserter, 3)
-					fs.FailureReduction("gear", glob.counter.gear, 3)
+					fs.FailureReduction("inserter", 3)
+					fs.FailureReduction("gear", 3)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -85,8 +85,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.inserter > math.random(450,900) and glob.counter.gear > math.random(750,3000) and glob.EventCheck.event005==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("inserter", glob.counter.inserter, 3)
-					fs.FailureReduction("gear", glob.counter.gear, 3)
+					fs.FailureReduction("inserter", 3)
+					fs.FailureReduction("gear", 3)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -105,8 +105,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(150,400) and glob.counter.plates > math.random(150,1000) and glob.EventCheck015==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 10)
-					fs.FailureReduction("plates", glob.counter.plates, 10)
+					fs.FailureReduction("machine", 10)
+					fs.FailureReduction("plates", 10)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -123,8 +123,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(300,800) and glob.counter.plates > math.random(300,2000) and glob.EventCheck016==true and glob.EventCheck.event007==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
+					fs.FailureReduction("machine", 8)
+					fs.FailureReduction("plates", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -141,8 +141,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.EventCheck017==true and glob.EventCheck.event008==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
+					fs.FailureReduction("machine", 6)
+					fs.FailureReduction("plates", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -159,8 +159,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.EventCheck018==true and glob.EventCheck.event009==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 4)
-					fs.FailureReduction("plates", glob.counter.plates, 4)
+					fs.FailureReduction("machine", 4)
+					fs.FailureReduction("plates", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -178,9 +178,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(150,400) and glob.counter.plates > math.random(150,1000) and glob.counter.tech > math.random(500,1000) and glob.EventCheck015==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 10)
-					fs.FailureReduction("plates", glob.counter.plates, 10)
-					fs.FailureReduction("tech", glob.counter.tech, 10)
+					fs.FailureReduction("machine", 10)
+					fs.FailureReduction("plates", 10)
+					fs.FailureReduction("tech", 10)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -197,9 +197,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(300,800) and glob.counter.plates > math.random(300,2000) and glob.counter.tech > math.random(1000,2000) and glob.EventCheck016==true and glob.EventCheck.event011==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
-					fs.FailureReduction("tech", glob.counter.tech, 8)
+					fs.FailureReduction("machine", 8)
+					fs.FailureReduction("plates", 8)
+					fs.FailureReduction("tech", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -216,9 +216,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.counter.tech > math.random(2000,4000) and glob.EventCheck017==true and glob.EventCheck.event012==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
-					fs.FailureReduction("tech", glob.counter.tech, 6)
+					fs.FailureReduction("machine", 6)
+					fs.FailureReduction("plates", 6)
+					fs.FailureReduction("tech", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -235,9 +235,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.counter.tech > math.random(4000,8000) and glob.EventCheck018==true and glob.EventCheck.event013==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 4)
-					fs.FailureReduction("plates", glob.counter.plates, 4)
-					fs.FailureReduction("tech", glob.counter.tech, 4)
+					fs.FailureReduction("machine", 4)
+					fs.FailureReduction("plates", 4)
+					fs.FailureReduction("tech", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -255,9 +255,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.gear > math.random(200,400) and glob.counter.plates > math.random(200,800) and glob.counter.tech > math.random(400,800) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("gear", glob.counter.gear, 10)
-					fs.FailureReduction("plates", glob.counter.plates, 10)
-					fs.FailureReduction("tech", glob.counter.tech, 10)
+					fs.FailureReduction("gear", 10)
+					fs.FailureReduction("plates", 10)
+					fs.FailureReduction("tech", 10)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -277,9 +277,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.gear > math.random(400,800) and glob.counter.plates > math.random(400,1600) and glob.counter.tech > math.random(800,1600) and glob.EventCheck.event015==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("gear", glob.counter.gear, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
-					fs.FailureReduction("tech", glob.counter.tech, 8)
+					fs.FailureReduction("gear", 8)
+					fs.FailureReduction("plates", 8)
+					fs.FailureReduction("tech", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -299,9 +299,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.gear > math.random(800,1600) and glob.counter.plates > math.random(800,3200) and glob.counter.tech > math.random(1600,3200) and glob.EventCheck.event016==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("gear", glob.counter.gear, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
-					fs.FailureReduction("tech", glob.counter.tech, 6)
+					fs.FailureReduction("gear", 6)
+					fs.FailureReduction("plates", 6)
+					fs.FailureReduction("tech", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -321,9 +321,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.gear > math.random(1600,3200) and glob.counter.plates > math.random(1600,6400) and glob.counter.tech > math.random(3200,6400) and glob.EventCheck.event017==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("gear", glob.counter.gear, 3)
-					fs.FailureReduction("plates", glob.counter.plates, 3)
-					fs.FailureReduction("tech", glob.counter.tech, 3)
+					fs.FailureReduction("gear", 3)
+					fs.FailureReduction("plates", 3)
+					fs.FailureReduction("tech", 3)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -343,9 +343,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(500,800) and glob.counter.plates > math.random(1000,2500) and glob.counter.tech > math.random(1000,3000) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
-					fs.FailureReduction("tech", glob.counter.tech, 8)
+					fs.FailureReduction("machine", 8)
+					fs.FailureReduction("plates", 8)
+					fs.FailureReduction("tech", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -362,9 +362,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(1000,1600) and glob.counter.plates > math.random(2000,5000) and glob.counter.tech > math.random(2000,6000) and glob.EventCheck.event019==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
-					fs.FailureReduction("tech", glob.counter.tech, 6)
+					fs.FailureReduction("machine", 6)
+					fs.FailureReduction("plates", 6)
+					fs.FailureReduction("tech", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -381,9 +381,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 			if glob.counter.machine > math.random(2000,3200) and glob.counter.plates > math.random(4000,10000) and glob.counter.tech > math.random(4000,12000) and glob.EventCheck.event020==true then
 		if not UnlockRecipe.enabled then 
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 4)
-					fs.FailureReduction("plates", glob.counter.plates, 4)
-					fs.FailureReduction("tech", glob.counter.tech, 4)
+					fs.FailureReduction("machine", 4)
+					fs.FailureReduction("plates", 4)
+					fs.FailureReduction("tech", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -400,9 +400,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(4000,6400) and glob.counter.plates > math.random(8000,20000) and glob.counter.tech > math.random(8000,24000) and glob.EventCheck.event021==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 2)
-					fs.FailureReduction("plates", glob.counter.plates, 2)
-					fs.FailureReduction("tech", glob.counter.tech, 2)
+					fs.FailureReduction("machine", 2)
+					fs.FailureReduction("plates", 2)
+					fs.FailureReduction("tech", 2)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -420,10 +420,10 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(500,1000) and glob.counter.plates > math.random(2000,5000) and glob.counter.mining > math.random(300,500) and glob.counter.resource > math.random(5000,10000) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 10)
-					fs.FailureReduction("plates", glob.counter.plates, 10)
-					fs.FailureReduction("mining", glob.counter.mining, 10)
-					fs.FailureReduction("resource", glob.counter.resource, 10)
+					fs.FailureReduction("machine", 10)
+					fs.FailureReduction("plates", 10)
+					fs.FailureReduction("mining", 10)
+					fs.FailureReduction("resource", 10)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -440,10 +440,10 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(1000,2000) and glob.counter.plates > math.random(4000,10000) and glob.counter.mining > math.random(600,1000) and glob.counter.resource > math.random(10000,20000) and glob.EventCheck.event023==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
-					fs.FailureReduction("mining", glob.counter.mining, 8)
-					fs.FailureReduction("resource", glob.counter.resource, 8)
+					fs.FailureReduction("machine", 8)
+					fs.FailureReduction("plates", 8)
+					fs.FailureReduction("mining", 8)
+					fs.FailureReduction("resource", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -460,10 +460,10 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(2000,4000) and glob.counter.plates > math.random(8000,20000) and glob.counter.mining > math.random(1200,2000) and glob.counter.resource > math.random(20000,40000) and glob.EventCheck.event024==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
-					fs.FailureReduction("mining", glob.counter.mining, 6)
-					fs.FailureReduction("resource", glob.counter.resource, 6)
+					fs.FailureReduction("machine", 6)
+					fs.FailureReduction("plates", 6)
+					fs.FailureReduction("mining", 6)
+					fs.FailureReduction("resource", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -480,10 +480,10 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(16000,40000) and glob.counter.mining > math.random(2400,4000) and glob.counter.resource > math.random(40000,80000) and glob.EventCheck.event025==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 4)
-					fs.FailureReduction("plates", glob.counter.plates, 4)
-					fs.FailureReduction("mining", glob.counter.mining, 4)
-					fs.FailureReduction("resource", glob.counter.resource, 4)
+					fs.FailureReduction("machine", 4)
+					fs.FailureReduction("plates", 4)
+					fs.FailureReduction("mining", 4)
+					fs.FailureReduction("resource", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -500,10 +500,10 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(12000,24000) and glob.counter.plates > math.random(64000,120000) and glob.counter.mining > math.random(8000,12000) and glob.counter.resource > math.random(100000,1000000) and glob.EventCheck.event026==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 1)
-					fs.FailureReduction("plates", glob.counter.plates, 1)
-					fs.FailureReduction("mining", glob.counter.mining, 1)
-					fs.FailureReduction("resource", glob.counter.resource, 1)
+					fs.FailureReduction("machine", 1)
+					fs.FailureReduction("plates", 1)
+					fs.FailureReduction("mining", 1)
+					fs.FailureReduction("resource", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -521,9 +521,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(500,1000) and glob.counter.plates > math.random(1250,4000) and glob.counter.tech > math.random(1500,4000) then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 10)
-					fs.FailureReduction("plates", glob.counter.plates, 10)
-					fs.FailureReduction("tech", glob.counter.tech, 10)
+					fs.FailureReduction("machine", 10)
+					fs.FailureReduction("plates", 10)
+					fs.FailureReduction("tech", 10)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -540,9 +540,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(1000,2000) and glob.counter.plates > math.random(2500,8000) and glob.counter.tech > math.random(3000,8000) and glob.EventCheck.event028==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 8)
-					fs.FailureReduction("plates", glob.counter.plates, 8)
-					fs.FailureReduction("tech", glob.counter.tech, 8)
+					fs.FailureReduction("machine", 8)
+					fs.FailureReduction("plates", 8)
+					fs.FailureReduction("tech", 8)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -559,9 +559,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(2000,4000) and glob.counter.plates > math.random(5000,16000) and glob.counter.tech > math.random(6000,16000) and glob.EventCheck.event029==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 6)
-					fs.FailureReduction("plates", glob.counter.plates, 6)
-					fs.FailureReduction("tech", glob.counter.tech, 6)
+					fs.FailureReduction("machine", 6)
+					fs.FailureReduction("plates", 6)
+					fs.FailureReduction("tech", 6)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -578,9 +578,9 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 		if not UnlockRecipe.enabled then 
 			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(10000,32000) and glob.counter.tech > math.random(12000,32000) and glob.EventCheck.event029==true then
 				if DynamicFailure(glob.counter.dytech) then
-					fs.FailureReduction("machine", glob.counter.machine, 4)
-					fs.FailureReduction("plates", glob.counter.plates, 4)
-					fs.FailureReduction("tech", glob.counter.tech, 4)
+					fs.FailureReduction("machine", 4)
+					fs.FailureReduction("plates", 4)
+					fs.FailureReduction("tech", 4)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
@@ -633,18 +633,6 @@ function DynamicFailure(counter)
     else
         return false
     end
-end
-
-function DynamicFailureTest()
-	if DynamicFailure(glob.counter.dytech) then
-		game.player.print("Failure check succesfull!")
-		fs.FailureReduction("science", glob.counter.science, 4)
-		game.player.print("Failure reduced science!")
-		fs.FailureReduction("gear", glob.counter.gear, 4)
-		game.player.print("Failure reduced gear!")
-	else
-		game.player.print("Failure check failed!")
-	end
 end
 
 function DynamicFailureTest()
