@@ -2,7 +2,7 @@ module("Load", package.seeall)
 require("util")
 
 function OnLoad()
-	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, wall=0, modules=0, pipes=0, transport=0} end
+	if not glob.counter then glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, walls=0, modules=0, pipes=0, transport=0} end
 	if not glob.counter.dytech then glob.counter.dytech=0 end
 	if not glob.counter.gear then glob.counter.gear=0 end
 	if not glob.counter.resource then glob.counter.resource=0 end
@@ -23,7 +23,7 @@ function OnLoad()
 	if not glob.counter.turret then glob.counter.turret=0 end
 	if not glob.counter.alien then glob.counter.alien=0 end
 	if not glob.counter.science then glob.counter.science=0 end
-	if not glob.counter.wall then glob.counter.wall=0 end
+	if not glob.counter.walls then glob.counter.walls=0 end
 	if not glob.counter.modules then glob.counter.modules=0 end
 	if not glob.counter.pipes then glob.counter.pipes=0 end
 	if not glob.counter.transport then glob.counter.transport=0 end

@@ -51,7 +51,7 @@ function CounterPrinter()
 	game.player.print("Turret:".." "..tostring(glob.counter.turret))
 	game.player.print("Alien:".." "..tostring(glob.counter.alien))
 	game.player.print("Science:".." "..tostring(glob.counter.science))
-	game.player.print("Wall:".." "..tostring(glob.counter.wall))
+	game.player.print("Wall:".." "..tostring(glob.counter.walls))
 	game.player.print("Modules:".." "..tostring(glob.counter.modules))
 	game.player.print("All Counters Combined:".." "..tostring(glob.counter.dytech))
 end

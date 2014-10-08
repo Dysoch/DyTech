@@ -45,7 +45,7 @@ craftitems =
 	["iron-chest"]={chest=1},
 	["steel-chest"]={chest=1},
 	["smart-chest"]={chest=1, tech=1},
-	["wall"]={wall=1, resource=5},
+	["wall"]={walls=1, resource=5},
 	["land-mine"]={ammo=1},
 	["lab"]={machine=1, science=1},
 	["red-wire"]={tech=1},

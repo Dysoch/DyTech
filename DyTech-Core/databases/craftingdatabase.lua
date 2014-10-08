@@ -93,7 +93,7 @@ craftitems =
 	["iron-chest"]={chest=1, plates=8},
 	["steel-chest"]={chest=1, plates=8},
 	["smart-chest"]={chest=1, ["electronic-circuit"]=3, ["steel-chest"]=1},
---	["wall"]={wall=1, resource=5},
+	["wall"]={walls=1, resource=5},
 	["land-mine"]={ammo=1, plates=1, ["explosives"]=2},
 	["flame-thrower"]={gun=1, plates=5, ["iron-gear-wheel"]=10},
 	["rocket-launcher"]={gun=1, plates=5, ["iron-gear-wheel"]=5, ["electronic-circuit"]=5},
