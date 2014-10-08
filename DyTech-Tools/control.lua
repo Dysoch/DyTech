@@ -3,8 +3,8 @@ require "scripts/tools-database"
 
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "tools")
-  toCraft = toCraft or {}
-  game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
+	toCraft = toCraft or {}
+	game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
 end)
 
 game.onsave(function()
@@ -13,10 +13,11 @@ game.onsave(function()
 end)
 
 game.onload(function()
-  toCraft = toCraft or {}
-   if game.player.gui.left.showModularCraftingGUI == nil then 
-     game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
-   end
+	toCraft = toCraft or {}
+	if game.player.gui.left.showModularCraftingGUI==nil then 
+		game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
+	end
+end)
 
 game.onevent(defines.events.ontick, function(event)
 
