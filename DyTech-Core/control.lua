@@ -363,7 +363,9 @@ remote.addinterface("DyTech-Core",
   
   removefromCounter = function(name, Number)
 	if type(name) == "string" then
-		glob.counter[name] = (glob.counter[name]-math.random(glob.counter[name]/Number))
+	local RandomNumber = math.random(glob.counter[name]/Number)
+		glob.counter[name] = (glob.counter[name]-RandomNumber)
+		game.player.print(game.gettext("msg-reduction-1").." "..name.." "..game.gettext("msg-reduction-2").." "..tostring(glob.counter[name]).." "..game.gettext("msg-reduction-3").." "..RandomNumber)
 	end
   end,
   
