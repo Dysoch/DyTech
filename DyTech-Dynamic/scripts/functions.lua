@@ -106,9 +106,8 @@ function FailureMessage(ItemName)
 	game.player.print(game.gettext("msg-failure-1").." "..ItemName.." "..game.gettext("msg-failure-2"))
 end
 
-function FailureReduction(CounterName, Counter, Number)
-	local Random = math.random(Counter/Number)
-	remote.call("DyTech-Core", "removefromCounter", CounterName, Random)
+function FailureReduction(CounterName, RandomNumber)
+	remote.call("DyTech-Core", "removefromCounter", CounterName, RandomNumber)
 end 
 
 EventCheckNames=
