@@ -4,7 +4,7 @@ require "scripts/tools-database"
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "tools")
 	toCraft = toCraft or {}
-	game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
+	game.player.insert{name="tool-crafting-bench",count=1}
 end)
 
 game.onsave(function()
@@ -14,13 +14,18 @@ end)
 
 game.onload(function()
 	toCraft = toCraft or {}
-	if game.player.gui.left.showModularCraftingGUI==nil then 
-		game.player.gui.left.add({type="button", name="showModularCraftingGUI", caption="Craft Modular Tool!"})
-	end
 end)
 
 game.onevent(defines.events.ontick, function(event)
 
+end)
+
+game.onevent(defines.events.onbuiltentity, function(event)
+	if event.createdentity.name == "tool-crafting-bench" then
+		ToolsDatabase.toggleCraftingGUI()
+		event.createdentity.destroy()
+		game.player.insert{name="tool-crafting-bench",count=1}
+	end
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
