@@ -375,6 +375,10 @@ remote.addinterface("DyTech-Core",
 	end
   end,
   
+  RevealArea = function(Number)
+	game.forces.player.chart({lefttop = {x = -Number, y = -Number}, rightbottom = {x = Number, y = Number}})
+  end,
+  
   ResetAll = function()
 	game.player.force.resettechnologies()
 	game.player.force.resetrecipes()
