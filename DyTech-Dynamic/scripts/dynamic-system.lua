@@ -591,6 +591,43 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 			end
 		end
 	end
+	--[[Basic Transport Belts Extra Recipes]]--
+	if event.tick%ttime==(r*32) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["basic-transport-belt-dytech-1"]
+	local LocaleName = game.getlocaliseditemname("basic-transport-belt")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.belt > math.random(450,900) and glob.counter.gear > math.random(750,3000) then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("belt", 4)
+					fs.FailureReduction("gear", 4)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-belt-1").." "..LocaleName)
+					game.player.force.resetrecipes()
+					glob.EventCheck.event032 = true
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*33) and glob.modules.core==true then 
+	local UnlockRecipe = game.player.force.recipes["basic-transport-belt-dytech-2"]
+	local LocaleName = game.getlocaliseditemname("basic-transport-belt")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.belt > math.random(900,1800) and glob.counter.gear > math.random(1500,6000) and glob.EventCheck.event032==true then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("belt", 3)
+					fs.FailureReduction("gear", 3)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-belt-2").." "..LocaleName)
+					game.player.force.resetrecipes()
+					glob.EventCheck.event033 = true
+				end
+			end
+		end
+	end
 end
 end
 
