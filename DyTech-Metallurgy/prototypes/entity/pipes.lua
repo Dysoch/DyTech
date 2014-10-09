@@ -17,7 +17,7 @@ data:extend(
         percent = 90
       }
     },
-    collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
@@ -50,7 +50,7 @@ data:extend(
         percent = 70
       }
     },
-    collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
@@ -140,7 +140,7 @@ data:extend(
         percent = 70
       }
     },
-    collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
@@ -228,7 +228,7 @@ data:extend(
         percent = 70
       }
     },
-    collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box =
     {
