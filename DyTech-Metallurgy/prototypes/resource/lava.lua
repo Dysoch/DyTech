@@ -34,7 +34,7 @@ data:extend(
       max_probability = 0.03,
       richness_multiplier = 1500000,
       richness_base = 200000,
-      size_control_multiplier = 1,
+      size_control_multiplier = 0.1,
       peaks =
       {
         {
