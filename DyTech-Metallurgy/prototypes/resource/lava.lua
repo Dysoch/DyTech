@@ -42,7 +42,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 1,
+          starting_area_weight_optimal = 0.1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -109,7 +109,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 1,
+          starting_area_weight_optimal = 0.07,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -176,7 +176,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 1,
+          starting_area_weight_optimal = 0.05,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },

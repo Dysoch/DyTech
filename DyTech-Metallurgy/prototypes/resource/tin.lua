@@ -26,8 +26,8 @@ data:extend(
       peaks = {
         {
           influence = 0.2,
-          starting_area_weight_optimal = 0,
-          starting_area_weight_range = 0,
+          starting_area_weight_optimal = 0.01,
+          starting_area_weight_range = 0.01,
           starting_area_weight_max_range = 2,
         },
         {
