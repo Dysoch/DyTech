@@ -43,9 +43,9 @@ data:extend(
       durability = 10000,
       mininglevel = 6,
       miningspeed = 5,
-      strength = 11,
-      hold = 5,
-      flexibility = 5
+      strength = 2.2,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -64,9 +64,9 @@ data:extend(
       durability = 12500,
       mininglevel = 7,
       miningspeed = 5,
-      strength = 11,
-      hold = 5,
-      flexibility = 5
+      strength = 2.2,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -112,9 +112,9 @@ data:extend(
       durability = 20000,
       mininglevel = 12,
       miningspeed = 5,
-      strength = 16,
-      hold = 5,
-      flexibility = 5
+      strength = 3.2,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -133,9 +133,9 @@ data:extend(
       durability = 25000,
       mininglevel = 14,
       miningspeed = 6,
-      strength = 17,
-      hold = 5,
-      flexibility = 5
+      strength = 3.4,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -181,9 +181,9 @@ data:extend(
       durability = 16000,
       mininglevel = 10,
       miningspeed = 6,
-      strength = 14,
-      hold = 5,
-      flexibility = 5
+      strength = 2.8,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -202,9 +202,9 @@ data:extend(
       durability = 18000,
       mininglevel = 11,
       miningspeed = 6,
-      strength = 15,
-      hold = 5,
-      flexibility = 5
+      strength = 3,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -250,9 +250,9 @@ data:extend(
       durability = 27500,
       mininglevel = 18,
       miningspeed = 8,
-      strength = 19,
-      hold = 5,
-      flexibility = 5
+      strength = 2.8,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -271,9 +271,9 @@ data:extend(
       durability = 30000,
       mininglevel = 20,
       miningspeed = 9,
-      strength = 20,
-      hold = 5,
-      flexibility = 5
+      strength = 4,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -319,9 +319,9 @@ data:extend(
       durability = 20000,
       mininglevel = 16,
       miningspeed = 12,
-      strength = 16,
-      hold = 5,
-      flexibility = 5
+      strength = 3.2,
+      hold = 1,
+      flexibility = 1
     }
   },
   {
@@ -340,9 +340,9 @@ data:extend(
       durability = 25000,
       mininglevel = 17,
       miningspeed = 14,
-      strength = 18,
-      hold = 5,
-      flexibility = 5
+      strength = 3.6,
+      hold = 1,
+      flexibility = 1
     }
   },
   --[[USELESS ORES]]--
