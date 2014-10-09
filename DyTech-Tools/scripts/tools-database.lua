@@ -89,7 +89,7 @@ function CreateModularToolLocales(force)
   game.makefile("DyTechModularToolLocales.cfg", "[item-name]\n"..table.concat(names, ""))
 end
 
-function craftModularTool(name)
+function craftModularTool(name, amount)
   local main = game.player.getinventory(defines.inventory.playermain)
   local quick = game.player.getinventory(defines.inventory.playerquickbar)
   local tools = game.player.getinventory(defines.inventory.playertools)
@@ -98,7 +98,7 @@ function craftModularTool(name)
   local quickcount = quick.getitemcount(name)
   local toolscount = tools.getitemcount(name)
   
-  game.player.insert{name=name, count=1}
+  game.player.insert{name=name, count=amount}
   
   local maincount2 = main.getitemcount(name)
   local quickcount2 = quick.getitemcount(name)
@@ -184,7 +184,7 @@ baseTool = {
   subgroup = "modular-tools",
   speed = 2,
   order = "a[mining]-dytech[",
-  stack_size = 20
+  stack_size = 50
 }
 
 function makeModularPart(prototype)
@@ -246,7 +246,7 @@ function getModularInfo(prototype)
   end
 end
 
-local ITEM_COLSPAN = 20 -- copied from testing mode mod
+local ITEM_COLSPAN = 6 -- copied from testing mode mod
 guiNames = {mainFlow="ModularCraftingGUIFlow",
             mainFrame="ModularCraftingGUIFrame",
             buttonFlow="ModularCraftingGUIPartFlow",
@@ -255,15 +255,28 @@ guiNames = {mainFlow="ModularCraftingGUIFlow",
             label="ModularCraftingGUILabel",
             partPrefix="ModularCraftingPart",
             craftButton="ModularCraftingGUICraft!",
-            cancelButton="ModularCraftingGUICancel!"
+            cancelButton="ModularCraftingGUICancel!",
+			-- the next portion is for the actual craft window
+			mainFlowCraft="ModularCraftedGUIFlow",
+            mainFrameCraft="ModularCraftedGUIFrame",
+            buttonFlowCraft="ModularCraftedGUIPartFlow",
+            craft1x="ModularCraftedGUICraft1x!",
+            craft2x="ModularCraftedGUICraft2x!",
+            craft3x="ModularCraftedGUICraft3x!",
+            craft5x="ModularCraftedGUICraft5x!",
+            craft10x="ModularCraftedGUICraft10x!",
+            craft20x="ModularCraftedGUICraft20x!",
+            craft50x="ModularCraftedGUICraft50x!",
+            cancelButtonCraft="ModularCraftedGUICancel!",
             }
 mainFrame = nil -- placeholder
 selectedPart = nil -- placeholder
 oldLabel = "No parts currently selected" -- placeholder
+oldLabelCraft = "Select an amount to craft!" -- placeholder
 function showCraftingGUI()
   populateDatabaseRuntime()
   game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
-  game.player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Tools!"})
+  game.player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Tools Selection Window!"})
   mainFrame = game.player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
   mainFrame.add({type="flow", direction="horizontal", name=guiNames.buttonFlow})
   for name, _ in pairs(materials) do
@@ -277,12 +290,34 @@ function showCraftingGUI()
   mainFrame.add({type="table", name=guiNames.parts, colspan=ITEM_COLSPAN})
   populateGUIPartsTable(selectedPart)
 end
+function showCraftedGUI()
+  populateDatabaseRuntime()
+  game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowCraft})
+  game.player.gui.center[guiNames.mainFlowCraft].add({type="frame", direction="vertical", name=guiNames.mainFrameCraft, caption="How many Tools?"})
+  mainFrameCraft = game.player.gui.center[guiNames.mainFlowCraft][guiNames.mainFrameCraft]
+  mainFrameCraft.add({type="flow", direction="horizontal", name=guiNames.buttonFlowCraft})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft1x, caption="1x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft2x, caption="2x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft3x, caption="3x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft5x, caption="5x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft10x, caption="10x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft20x, caption="20x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft50x, caption="50x!"})
+  mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.cancelButtonCraft, caption="Cancel!"})
+  mainFrameCraft.add({type="label", name=guiNames.label, caption=oldLabelCraft})
+end
 
 function toggleCraftingGUI()
   if game.player.gui.center[guiNames.mainFlow] then
     closeCraftingGUI()
   else
     showCraftingGUI()
+  end
+end
+
+function toggleCraftedGUI()
+  if game.player.gui.center[guiNames.mainFlow] then
+    showCraftedGUI()
   end
 end
 
@@ -327,5 +362,11 @@ end
 function closeCraftingGUI()
   if game.player.gui.center[ToolsDatabase.guiNames.mainFlow] and game.player.gui.center[ToolsDatabase.guiNames.mainFlow].valid then
     game.player.gui.center[ToolsDatabase.guiNames.mainFlow].destroy()
+  end
+end
+
+function closeCraftedGUI()
+  if game.player.gui.center[ToolsDatabase.guiNames.mainFlowCraft] and game.player.gui.center[ToolsDatabase.guiNames.mainFlowCraft].valid then
+    game.player.gui.center[ToolsDatabase.guiNames.mainFlowCraft].destroy()
   end
 end

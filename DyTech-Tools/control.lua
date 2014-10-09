@@ -32,6 +32,41 @@ game.onevent(defines.events.onguiclick, function(event)
   elseif event.element.name == "showModularCraftingGUI" then
     ToolsDatabase.toggleCraftingGUI()
   elseif event.element.name == ToolsDatabase.guiNames.craftButton then
+    ToolsDatabase.toggleCraftedGUI()
+	ToolsDatabase.closeCraftingGUI()
+  elseif event.element.name == ToolsDatabase.guiNames.craft1x then
+	ToolCrafting(1)
+  elseif event.element.name == ToolsDatabase.guiNames.craft2x then
+	ToolCrafting(2)
+  elseif event.element.name == ToolsDatabase.guiNames.craft3x then
+	ToolCrafting(3)
+  elseif event.element.name == ToolsDatabase.guiNames.craft5x then
+	ToolCrafting(5)
+  elseif event.element.name == ToolsDatabase.guiNames.craft10x then
+	ToolCrafting(10)
+  elseif event.element.name == ToolsDatabase.guiNames.craft20x then
+	ToolCrafting(20)
+  elseif event.element.name == ToolsDatabase.guiNames.craft50x then
+	ToolCrafting(50)
+  elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
+    ToolsDatabase.closeCraftingGUI()
+	ToolsDatabase.closeCraftedGUI()
+  elseif event.element.name == ToolsDatabase.guiNames.cancelButtonCraft then
+    ToolsDatabase.closeCraftedGUI()
+	ToolsDatabase.closeCraftingGUI()
+  end
+  
+end)
+
+remote.addinterface("DyTech-Tools",
+{
+  craftModularTool = ToolsDatabase.craftModularTool,
+  getModularToolname = ToolsDatabase.getModularToolname,
+  showCraftingGUI = ToolsDatabase.showCraftingGUI,
+  CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
+})
+
+function ToolCrafting(amount)
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
       -- probably didn't have all the needed parts selected, so failed to match a valid toolname
@@ -43,9 +78,9 @@ game.onevent(defines.events.onguiclick, function(event)
     end
     local reqs = {}
     local handle, rod, head = ToolsDatabase.getPartsFromToolName(name)
-    reqs[handle] = (reqs[handle] or 0) + 1
-    reqs[rod] = (reqs[rod] or 0) + 1
-    reqs[head] = (reqs[head] or 0) + 1
+    reqs[handle] = (reqs[handle] or 0) + amount
+    reqs[rod] = (reqs[rod] or 0) + amount
+    reqs[head] = (reqs[head] or 0) + amount
     local main = game.player.getinventory(defines.inventory.playermain)
     local quick = game.player.getinventory(defines.inventory.playerquickbar)
     
@@ -61,22 +96,11 @@ game.onevent(defines.events.onguiclick, function(event)
       game.player.removeitem{name=name, count=needed}
     end
     
-    if ToolsDatabase.craftModularTool(name) == true then
+    if ToolsDatabase.craftModularTool(name, amount) == true then
       ToolsDatabase.closeCraftingGUI() -- if craft successful then close
-      toCraft = {} -- clear selected parts
+      ToolsDatabase.closeCraftedGUI()
+	  toCraft = {} -- clear selected parts
     else -- failed
       error("UM...Crafting failed due to a technical reason. Sorry!, Please tell Dysoch. Info:\nToolname: "..name .. "\nhandle: "..handle.."\nrod: "..rod.."\nhead: "..head)
     end
-  elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
-    ToolsDatabase.closeCraftingGUI()
-  end
-  
-end)
-
-remote.addinterface("DyTech-Tools",
-{
-  craftModularTool = ToolsDatabase.craftModularTool,
-  getModularToolname = ToolsDatabase.getModularToolname,
-  showCraftingGUI = ToolsDatabase.showCraftingGUI,
-  CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
-})
+end
