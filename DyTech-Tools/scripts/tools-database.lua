@@ -50,8 +50,8 @@ function CreateModularTool(handle, rod, head)
   newTool.icon = baseTool.icon .. "modularTool.png"
   
   -- um...I don't really know how 1 -> 0.4 and 6 -> 1.2 in such a way to make it an equation here...
-  newTool.action.action_delivery.target_effects.damage.amount = (ToolsDatabase.materials.heads[head].mininglevel*ToolsDatabase.materials.rods[rod].strength) -- no modifiers
-  newTool.durability = (ToolsDatabase.materials.heads[head].durability*ToolsDatabase.materials.rods[rod].strength) or 5400 -- default is really more to prevent errors...
+  newTool.action.action_delivery.target_effects.damage.amount = (ToolsDatabase.materials.heads[head].mininglevel*ToolsDatabase.materials.rods[rod].strength)
+  newTool.durability = (ToolsDatabase.materials.heads[head].durability*ToolsDatabase.materials.rods[rod].strength) or 5400
   newTool.speed = ((ToolsDatabase.materials.heads[head].miningspeed*ToolsDatabase.materials.handles[handle].hold)+ToolsDatabase.materials.rods[rod].flexibility)
   newTool.order = baseTool.order .. name .. "]["
   local stats = newTool.action.action_delivery.target_effects.damage.amount*1000 .. "-" .. newTool.durability * 1000 .. "-" .. newTool.speed * 1000 .. "]"  -- multiply by 1000 to prevent '.' characters in string (crashes Factorio)
