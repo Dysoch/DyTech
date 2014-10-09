@@ -56,7 +56,7 @@ data:extend(
     subgroup = "polished",
     order = "r-5",
     stack_size = 64,
-    --[[modularInfo = 
+    modularInfo = 
 	{
       handle = false,
       rod = false,
@@ -67,7 +67,7 @@ data:extend(
       strength = 11,
       hold = 5,
       flexibility = 5
-    }]]--
+    }
   },
   {
     type = "item",
@@ -125,7 +125,7 @@ data:extend(
     subgroup = "polished",
     order = "e-5",
     stack_size = 64,
-    --[[modularInfo = 
+    modularInfo = 
 	{
       handle = false,
       rod = false,
@@ -136,7 +136,7 @@ data:extend(
       strength = 17,
       hold = 5,
       flexibility = 5
-    }]]--
+    }
   },
   {
     type = "item",
@@ -194,7 +194,7 @@ data:extend(
     subgroup = "polished",
     order = "s-5",
     stack_size = 64,
-    --[[modularInfo = 
+    modularInfo = 
 	{
       handle = false,
       rod = false,
@@ -205,7 +205,7 @@ data:extend(
       strength = 15,
       hold = 5,
       flexibility = 5
-    }]]--
+    }
   },
   {
     type = "item",
@@ -263,7 +263,7 @@ data:extend(
     subgroup = "polished",
     order = "d-5",
     stack_size = 64,
-    --[[modularInfo = 
+    modularInfo = 
 	{
       handle = false,
       rod = false,
@@ -274,7 +274,7 @@ data:extend(
       strength = 20,
       hold = 5,
       flexibility = 5
-    }]]--
+    }
   },
   {
     type = "item",
@@ -332,7 +332,7 @@ data:extend(
     subgroup = "polished",
     order = "t-5",
     stack_size = 64,
-    --[[modularInfo = 
+    modularInfo = 
 	{
       handle = false,
       rod = false,
@@ -343,7 +343,7 @@ data:extend(
       strength = 18,
       hold = 5,
       flexibility = 5
-    }]]--
+    }
   },
   --[[USELESS ORES]]--
   {
@@ -397,13 +397,13 @@ data:extend(
 if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
   require("scripts/tools-database")
   ToolsDatabase.makeModularPart(data.raw["item"]["ruby-4"])
-  --ToolsDatabase.makeModularPart(data.raw["item"]["ruby-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["ruby-5"])
   ToolsDatabase.makeModularPart(data.raw["item"]["emerald-4"])
-  --ToolsDatabase.makeModularPart(data.raw["item"]["emerald-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["emerald-5"])
   ToolsDatabase.makeModularPart(data.raw["item"]["sapphire-4"])
-  --ToolsDatabase.makeModularPart(data.raw["item"]["sapphire-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["sapphire-5"])
   ToolsDatabase.makeModularPart(data.raw["item"]["diamond-4"])
-  --ToolsDatabase.makeModularPart(data.raw["item"]["diamond-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["diamond-5"])
   ToolsDatabase.makeModularPart(data.raw["item"]["topaz-4"])
-  --ToolsDatabase.makeModularPart(data.raw["item"]["topaz-5"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["topaz-5"])
 end
