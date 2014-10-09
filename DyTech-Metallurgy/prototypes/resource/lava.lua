@@ -30,7 +30,7 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.85,
+      sharpness = 0.80,
       max_probability = 0.03,
       richness_multiplier = 1500000,
       richness_base = 200000,
@@ -42,7 +42,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 0.1,
+          starting_area_weight_optimal = 0.4,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -64,7 +64,7 @@ data:extend(
       frame_count = 4,
       direction_count = 1
     },
-    map_color = {r=72, g=60, b=50},
+    map_color = {r=80, g=10, b=10},
     map_grid = false
   },
   {
@@ -97,7 +97,7 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.85,
+      sharpness = 0.80,
       max_probability = 0.02,
       richness_multiplier = 1500000,
       richness_base = 150000,
@@ -109,7 +109,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 0.07,
+          starting_area_weight_optimal = 0.28,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -131,7 +131,7 @@ data:extend(
       frame_count = 4,
       direction_count = 1
     },
-    map_color = {r=72, g=60, b=50},
+    map_color = {r=80, g=10, b=10},
     map_grid = false
   },
   {
@@ -164,11 +164,11 @@ data:extend(
     autoplace =
     {
       control = "magma",
-      sharpness = 0.85,
+      sharpness = 0.80,
       max_probability = 0.01,
       richness_multiplier = 1500000,
       richness_base = 100000,
-      size_control_multiplier = 0.06,
+      size_control_multiplier = 0.05,
       peaks =
       {
         {
@@ -176,7 +176,7 @@ data:extend(
         },
         {
           influence = 0.075,
-          starting_area_weight_optimal = 0.05,
+          starting_area_weight_optimal = 0.20,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -198,7 +198,7 @@ data:extend(
       frame_count = 4,
       direction_count = 1
     },
-    map_color = {r=72, g=60, b=50},
+    map_color = {r=80, g=10, b=10},
     map_grid = false
   },
 }

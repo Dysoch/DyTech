@@ -26,7 +26,7 @@ data:extend(
       peaks = {
         {
           influence = 0.2,
-          starting_area_weight_optimal = 0,
+          starting_area_weight_optimal = 0.3,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -94,7 +94,7 @@ data:extend(
 	  frame_count = 3,
 	  direction_count = 8
 	},
-    map_color = { r = 0.8, g = 0.8, b = 0.8 }
+    map_color = { r = 217, g = 216, b = 155 }
   }
 }
 )

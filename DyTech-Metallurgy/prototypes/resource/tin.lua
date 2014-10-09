@@ -20,19 +20,13 @@ data:extend(
       control = "metallurgy-ores",
       sharpness = 1,
       max_probability = 0.04,
-      richness_multiplier = 11000,
+      richness_multiplier = 4000,
       richness_base = 11,
-      size_control_multiplier = 0.06,
+      size_control_multiplier = 0.07,
       peaks = {
         {
-          influence = 0.2,
-          starting_area_weight_optimal = 0.01,
-          starting_area_weight_range = 0.01,
-          starting_area_weight_max_range = 2,
-        },
-        {
-          influence = 0.3,
-          starting_area_weight_optimal = -1,
+          influence = 0.20,
+          starting_area_weight_optimal = 0,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -42,6 +36,12 @@ data:extend(
           noise_octaves_difference = -1.8,
           noise_persistence = 0.8,
           starting_area_weight_optimal = 0,
+          starting_area_weight_range = 0,
+          starting_area_weight_max_range = 2,
+        },
+        {
+          influence = 0.25,
+          starting_area_weight_optimal = 1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
@@ -94,7 +94,7 @@ data:extend(
 	  frame_count = 3,
 	  direction_count = 8
 	},
-    map_color = { r = 0.8, g = 0.5, b = 0.7 }
+    map_color = { r = 239, g = 227, b = 200 }
   }
 }
 )
