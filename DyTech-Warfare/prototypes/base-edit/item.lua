@@ -10,3 +10,4 @@ data.raw["item"]["battery"].ammo_type.action.action_delivery = { type = "project
 data.raw["item"]["battery"].ammo_type.action.action_delivery.source_effects = { type = "create-entity", entity_name = "laser-bubble" }
 data.raw["ammo"]["battery"] = data.raw["item"]["battery"]
 data.raw.item["battery"] = nil
+data.raw["item"]["basic-grenade"].order = "a[basic-grenade-1]"

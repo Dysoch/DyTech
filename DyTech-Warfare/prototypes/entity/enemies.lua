@@ -64,7 +64,7 @@ data:extend(
 	vision_distance = 30,
     movement_speed = 0.2,
     distance_per_frame = 0.2,
-    pollution_to_join_attack = 1500,
+    pollution_to_join_attack = 5000,
 	distraction_cooldown = 300,
     corpse = "berserk-biter-corpse",
     dying_sound =
@@ -195,7 +195,7 @@ data:extend(
 	vision_distance = 30,
     movement_speed = 0.3,
     distance_per_frame = 0.2,
-    pollution_to_join_attack = 2500,
+    pollution_to_join_attack = 10000,
 	distraction_cooldown = 300,
     corpse = "elder-biter-corpse",
     dying_sound =
@@ -247,7 +247,7 @@ data:extend(
     name = "king-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 15000,
+    max_health = 10000,
 	order = "b-b-f",
 	resistances = 
     {
@@ -326,7 +326,7 @@ data:extend(
 	vision_distance = 50,
     movement_speed = 0.1,
     distance_per_frame = 0.2,
-    pollution_to_join_attack = 5000,
+    pollution_to_join_attack = 20000,
 	distraction_cooldown = 300,
     corpse = "king-biter-corpse",
     dying_sound =
@@ -378,25 +378,25 @@ data:extend(
     name = "queen-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 500,
+    max_health = 1000,
 	order = "b-b-g",
 	resistances = 
     {
       {
         type = "physical",
-        percent = 95,
+        percent = 99,
       },
 	  {
         type = "fire",
-        percent = 95,
+        percent = 99,
       },
 	  {
         type = "laser",
-        percent = 95,
+        percent = 99,
       },
       {
         type = "explosion",
-        percent = 95,
+        percent = 99,
       },
     },
     healing_per_tick = 0.12,
