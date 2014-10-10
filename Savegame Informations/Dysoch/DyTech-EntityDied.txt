@@ -1,0 +1,5 @@
+{
+  ["Dark green thin tree"] = 4,
+  ["Green thin tree"] = 4,
+  ["Wild Dog"] = 15
+} --[[table: 0000000051F704C0]]

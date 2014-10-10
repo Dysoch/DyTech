@@ -1,8 +1,14 @@
 {
-  ["biter-small-corpse"] = 17,
+  ["Copper Plate"] = 6,
+  ["Iron Plate"] = 6,
+  ["Raw wood"] = 15,
+  ["biter-small-corpse"] = 21,
   ["bone-charcoal"] = 22,
+  ["clean-copper-ore"] = 4,
+  ["clean-iron-ore"] = 5,
   coal = 44,
-  ["iron-ore"] = 1,
-  ["raw-wood"] = 133,
-  stone = 16
-} --[[table: 00000000517A4310]]
+  ["copper-ore"] = 6,
+  ["iron-ore"] = 2,
+  ["raw-wood"] = 213,
+  stone = 24
+} --[[table: 0000000051C83710]]
