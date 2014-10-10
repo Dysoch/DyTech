@@ -4,9 +4,9 @@ require "databases/craftingdatabase"
 require "databases/killingdatabase"
 require "databases/miningdatabase"
 require "scripts/functions"
-require "scripts/gui"
 require "scripts/oninit"
 require "scripts/onload"
+require "scripts/gui"
 require "scripts/recycler-database"
 
 local RubberSeedTypeName = "RubberTree"
@@ -269,6 +269,15 @@ game.onevent(defines.events.onchunkgenerated, function(event)
 	glob.counter2.chunks = glob.counter2.chunks + 1
 end)
 
+game.onevent(defines.events.onguiclick, function(event)
+	if event.element.name:find(CoreGUI.guiNames.ExportButton) then
+		remote.call("DyTech-Core", "ExportAll")
+		CoreGUI.closeCoreGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.ExitButton) then
+		CoreGUI.closeCoreGUI()
+	end
+end)
+
 remote.addinterface("DyTech-Core",
 {
   detectModule = function(name)
@@ -380,8 +389,8 @@ remote.addinterface("DyTech-Core",
 	game.forces.player.chart({lefttop = {x = -Number, y = -Number}, rightbottom = {x = Number, y = Number}})
   end,
   
-  GUI = function(Number)
-	-- reveal the GUI to show the counters, timer, etc
+  GUI = function()
+	CoreGUI.toggleCoreGUI()
   end,
   
   ResetAll = function()

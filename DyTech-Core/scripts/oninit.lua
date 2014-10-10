@@ -51,4 +51,17 @@ for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
 		glob.trees.seedTypes[seedTypeName] = nil
 	end
 end
+Counter1 = "Alien Counter is at:".." "..tostring(glob.counter.alien).."          ".."Ammo Counter is at:".." "..tostring(glob.counter.ammo)
+Counter2 = "Armor Counter is at:".." "..tostring(glob.counter.armor).."          ".."Belt Counter is at:".." "..tostring(glob.counter.belt)
+Counter3 = "Capsule Counter is at:".." "..tostring(glob.counter.capsule).."          ".."Chest Counter is at:".." "..tostring(glob.counter.chest)
+Counter4 = "Energy Counter is at:".." "..tostring(glob.counter.energy).."          ".."Gear Counter is at:".." "..tostring(glob.counter.gear)
+Counter5 = "Gems Counter is at:".." "..tostring(glob.counter.gems).."          ".."Gun Counter is at:".." "..tostring(glob.counter.gun)
+Counter6 = "Inserter Counter is at:".." "..tostring(glob.counter.inserter).."          ".."Machine Counter is at:".." "..tostring(glob.counter.machine)
+Counter7 = "Mining Counter is at:".." "..tostring(glob.counter.mining).."          ".."Modules Counter is at:".." "..tostring(glob.counter.modules)
+Counter8 = "Pipes Counter is at:".." "..tostring(glob.counter.pipes).."          ".."Plates Counter is at:".." "..tostring(glob.counter.plates)
+Counter9 = "Resource Counter is at:".." "..tostring(glob.counter.resource).."          ".."Robot Counter is at:".." "..tostring(glob.counter.robot)
+Counter10 = "Science Counter is at:".." "..tostring(glob.counter.science).."          ".."Tech Counter is at:".." "..tostring(glob.counter.tech)
+Counter11 = "Transport Counter is at:".." "..tostring(glob.counter.transport).."          ".."Turrets Counter is at:".." "..tostring(glob.counter.turret)
+Counter12 = "Walls Counter is at:".." "..tostring(glob.counter.walls).."          ".."DyTech Global Counter is at:".." "..tostring(glob.counter.dytech)
+Timer = "You have played".." "..tostring(glob.timer.hours).." ".."Hours,".." "..tostring(glob.timer.minutes).." ".."Minutes and".." "..tostring(glob.timer.seconds).." ".."seconds!"
 end
