@@ -116,22 +116,6 @@ data:extend(
         pipe_connections = {{ type="input", position = {0, 1} }}
       },
       {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 16,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {1, 0} }},
-        off_when_no_fluid_recipe = true
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        base_area = 16,
-        base_level = -1,
-        pipe_connections = {{ type="input", position = {-1, 0} }},
-        off_when_no_fluid_recipe = true
-      },
-      {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         base_level = 16,

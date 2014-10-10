@@ -4,6 +4,7 @@ require "databases/craftingdatabase"
 require "databases/killingdatabase"
 require "databases/miningdatabase"
 require "scripts/functions"
+require "scripts/gui"
 require "scripts/oninit"
 require "scripts/onload"
 require "scripts/recycler-database"
@@ -377,6 +378,10 @@ remote.addinterface("DyTech-Core",
   
   RevealArea = function(Number)
 	game.forces.player.chart({lefttop = {x = -Number, y = -Number}, rightbottom = {x = Number, y = Number}})
+  end,
+  
+  GUI = function(Number)
+	-- reveal the GUI to show the counters, timer, etc
   end,
   
   ResetAll = function()

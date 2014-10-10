@@ -9,11 +9,11 @@ data:extend(
     enabled = false,
     ingredients =
     {
-	  {type="fluid", name="dirty-water", amount=25},
+	  {type="fluid", name="dirty-water", amount=10},
     },
     results = 
 	{
-	  {type="fluid", name="water", amount=20},
+	  {type="fluid", name="water", amount=9},
 	  {type="item", name="sand", amount=1},
 	}
   },

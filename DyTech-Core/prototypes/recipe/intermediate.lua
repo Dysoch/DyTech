@@ -71,7 +71,7 @@ data:extend(
     name = "sandbag",
     ingredients =
     {
-      {"sand", 100},
+      {"sand", 20},
     },
     result = "sandbag"
   },
