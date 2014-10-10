@@ -275,6 +275,15 @@ game.onevent(defines.events.onguiclick, function(event)
 		CoreGUI.closeCoreGUI()
 	elseif event.element.name:find(CoreGUI.guiNames.ExitButton) then
 		CoreGUI.closeCoreGUI()
+		CoreGUI.closeCounterGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.BackButton) then
+		CoreGUI.closeCounterGUI()
+		CoreGUI.showCoreGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.DynamicButton) then
+		remote.call("DyTech-Dynamic", "ToggleDynamicSystem")
+	elseif event.element.name:find(CoreGUI.guiNames.CounterButton) then
+		CoreGUI.closeCoreGUI()
+		CoreGUI.showCounterGUI()
 	end
 end)
 
