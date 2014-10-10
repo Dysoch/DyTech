@@ -63,7 +63,7 @@ data:extend(
     subgroup = "dytechbiteritems",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="sulfuric-acid", amount=0.25},
 	  {type="item", name="biter-berserk-corpse", amount=1},
     },
     results = 
@@ -82,7 +82,7 @@ data:extend(
     subgroup = "dytechbiteritems",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="sulfuric-acid", amount=0.5},
 	  {type="item", name="biter-elder-corpse", amount=1},
     },
     results = 
@@ -120,7 +120,7 @@ data:extend(
     subgroup = "dytechbiteritems",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="sulfuric-acid", amount=0.75},
 	  {type="item", name="biter-king-corpse", amount=1},
     },
     results = 
@@ -139,7 +139,7 @@ data:extend(
     subgroup = "dytechbiteritems",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="sulfuric-acid", amount=1},
 	  {type="item", name="biter-queen-corpse", amount=1},
     },
     results = 
