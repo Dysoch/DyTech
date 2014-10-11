@@ -2,8 +2,6 @@ module("OnInit", package.seeall)
 require("util")
 
 function OnInit()
-	game.player.print("Dynamic System starts Offline! You have to manually start it via the console command found at the Forum Topic 'Console Commands'")
-	game.player.print("It is best to start it!!! Otherwise all Recipes from installed DyTech Modules will not unlock!")
 glob.modules={core=false, energy=false, inserters=false, logistic=false, metallurgy=false, meteors=false, automation=false, modules=false, storage=false, tools=false, transportation=false, warfare=false, compatibility=false, genetics=false}
 glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, machine=0, capsule=0, tech=0, plates=0, inserter=0, energy=0, chest=0, armor=0, gems=0, belt=0, turret=0, alien=0, science=0, walls=0, modules=0, pipes=0, transport=0}
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogenemy=0, dogplayer=0, bird=0}

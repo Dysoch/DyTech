@@ -8,6 +8,7 @@ require "scripts/onload"
 
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "dynamic")
+	remote.call("DyTech-Core", "DynamicGUI")
 	OnInit.OnInit()
 end)
 
