@@ -43,7 +43,6 @@ local allInOne = {
 
 game.oninit(function()
 	Init.OnInit()
-	
 end)
 
 game.onsave(function()
@@ -52,6 +51,7 @@ end)
 
 game.onload(function()
 	Load.OnLoad()
+	fs.ModuleChecker()
 	if game.itemprototypes.charcoal then -- item "charcoal" is available, that means treefarm-mod is probably used
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then -- check if script-interfaces are available
         local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
