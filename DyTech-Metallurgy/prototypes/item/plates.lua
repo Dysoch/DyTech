@@ -12,7 +12,7 @@ data:extend(
     modularInfo = 
 	{
       handle = true,
-      rod = true,
+      rod = false,
       head = true, 
       durability = 4000,
       mininglevel = 2,
@@ -33,7 +33,7 @@ data:extend(
     modularInfo = 
 	{
       handle = true,
-      rod = true,
+      rod = false,
       head = true, 
       durability = 5000,
       mininglevel = 2,
@@ -55,7 +55,7 @@ data:extend(
 	{
       handle = true,
       rod = true,
-      head = true, 
+      head = false, 
       durability = 10000,
       mininglevel = 1,
       miningspeed = 3,
@@ -74,7 +74,7 @@ data:extend(
     stack_size = 200,
     modularInfo = 
 	{
-      handle = true,
+      handle = false,
       rod = true,
       head = true, 
       durability = 7500,
@@ -95,7 +95,7 @@ data:extend(
     stack_size = 200,
     modularInfo = 
 	{
-      handle = true,
+      handle = false,
       rod = true,
       head = true, 
       durability = 10000,
@@ -117,7 +117,7 @@ data:extend(
     modularInfo = 
 	{
       handle = true,
-      rod = true,
+      rod = false,
       head = false, 
       durability = 1500,
       mininglevel = 1,
