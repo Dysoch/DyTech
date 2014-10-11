@@ -29,6 +29,7 @@ function HardModeToggle()
 end	
 
 function CounterTransfer()
+remote.call("DyTech-Core", "ModuleChecker")
 glob.counter.dytech=0 
 glob.counter.gear=0 
 glob.counter.resource=0 
