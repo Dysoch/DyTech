@@ -263,6 +263,11 @@ incrementDynamicCounters = function(stack)
 	end
 end
 incrementDynamicCounters(event.createdentity)
+	if not glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] then
+		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = 1
+	else
+		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] + 1
+	end
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
@@ -272,15 +277,39 @@ end)
 game.onevent(defines.events.onguiclick, function(event)
 	if event.element.name:find(CoreGUI.guiNames.ExportButton) then
 		remote.call("DyTech-Core", "ExportAll")
-		CoreGUI.closeCoreGUI()
+		CoreGUI.closeAllGUI()
+		game.player.print("Be sure to send the files from the script-output folder to Dysoch so he can use that for balancing!")
 	elseif event.element.name:find(CoreGUI.guiNames.ExitButton) then
-		CoreGUI.closeCoreGUI()
-		CoreGUI.closeCounterGUI()
+		CoreGUI.closeAllGUI()
 	elseif event.element.name:find(CoreGUI.guiNames.BackButton) then
-		CoreGUI.closeCounterGUI()
+		CoreGUI.closeAllGUI()
+		CoreGUI.showMasterGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.CoreButton) then
+		CoreGUI.closeMasterGUI()
 		CoreGUI.showCoreGUI()
 	elseif event.element.name:find(CoreGUI.guiNames.DynamicButton) then
+		CoreGUI.closeMasterGUI()
+		CoreGUI.showDynamicGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.DynamicSystemButton) then
 		remote.call("DyTech-Dynamic", "ToggleDynamicSystem")
+	elseif event.element.name:find(CoreGUI.guiNames.DynamicSystemHardButton) then
+		remote.call("DyTech-Dynamic", "ToggleHardMode")
+	elseif event.element.name:find(CoreGUI.guiNames.ToolsButton) then
+		CoreGUI.closeMasterGUI()
+		CoreGUI.showToolsGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.ToolsCraftingButton) then
+		CoreGUI.closeAllGUI()
+		remote.call("DyTech-Tools", "showCraftingGUI")
+	elseif event.element.name:find(CoreGUI.guiNames.ToolsItemButton) then
+		CoreGUI.closeAllGUI()
+		game.player.insert{name="tool-crafting-bench",count=1}
+	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyButton) then
+		CoreGUI.closeMasterGUI()
+		CoreGUI.showMetallurgyGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyFluidsButton) then
+		remote.call("DyTech-Metallurgy", "RegenerateFluids")
+	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyOresButton) then
+		remote.call("DyTech-Metallurgy", "RegenerateOres")
 	elseif event.element.name:find(CoreGUI.guiNames.CounterButton) then
 		CoreGUI.closeCoreGUI()
 		CoreGUI.showCounterGUI()
@@ -335,6 +364,7 @@ remote.addinterface("DyTech-Core",
 	game.makefile("DyTech-PickedItems.txt", serpent.block(glob.PickedItems))
 	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
 	game.makefile("DyTech-EntityDied.txt", serpent.block(glob.EntityDied))
+	game.makefile("DyTech-BuildEntity.txt", serpent.block(glob.BuildEntity))
 	game.player.print("Exported all data from Core!")
 	if remote.call("DyTech-Dynamic", "Export") and glob.dytech.dynamic==true then
 		remote.call("DyTech-Dynamic", "Export")
@@ -399,7 +429,11 @@ remote.addinterface("DyTech-Core",
   end,
   
   GUI = function()
-	CoreGUI.toggleCoreGUI()
+	CoreGUI.showMasterGUI()
+  end,
+  
+  DynamicGUI = function()
+	CoreGUI.showDynamicGUI()
   end,
   
   ResetAll = function()

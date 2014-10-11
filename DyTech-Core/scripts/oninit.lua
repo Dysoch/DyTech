@@ -21,6 +21,7 @@ glob.CraftedItems = {}
 glob.PickedItems = {}
 glob.MinedItems = {}
 glob.EntityDied = {}
+glob.BuildEntity = {}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {

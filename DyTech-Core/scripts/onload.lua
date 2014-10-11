@@ -107,4 +107,5 @@ function OnLoad()
 	if not glob.PickedItems then glob.PickedItems = {} end
 	if not glob.MinedItems then glob.MinedItems = {} end
 	if not glob.EntityDied then glob.EntityDied = {} end
+	if not glob.BuildEntity then glob.BuildEntity = {} end
 end
