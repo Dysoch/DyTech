@@ -15,6 +15,23 @@ function Timer(event)
 	end
 end
 
+function ModuleChecker()
+	if remote.interfaces["DyTech-Automation"] then glob.dytech.automation=true else glob.dytech.automation=false end
+	if remote.interfaces["DyTech-Compatibility"] then glob.dytech.compatibility=true else glob.dytech.compatibility=false end
+	if remote.interfaces["DyTech-Dynamic"] then glob.dytech.dynamic=true else glob.dytech.dynamic=false end
+	if remote.interfaces["DyTech-Energy"] then glob.dytech.energy=true else glob.dytech.energy=false end
+	if remote.interfaces["DyTech-Genetics"] then glob.dytech.genetics=true else glob.dytech.genetics=false end
+	if remote.interfaces["DyTech-Inserters"] then glob.dytech.inserters=true else glob.dytech.inserters=false end
+	if remote.interfaces["DyTech-Logistic"] then glob.dytech.logistic=true else glob.dytech.logistic=false end
+	if remote.interfaces["DyTech-Metallurgy"] then glob.dytech.metallurgy=true else glob.dytech.metallurgy=false end
+	if remote.interfaces["DyTech-Meteors"] then glob.dytech.meteors=true else glob.dytech.meteors=false end
+	if remote.interfaces["DyTech-Modules"] then glob.dytech.modules=true else glob.dytech.modules=false end
+	if remote.interfaces["DyTech-Storage"] then glob.dytech.storage=true else glob.dytech.storage=false end
+	if remote.interfaces["DyTech-Tools"] then glob.dytech.tools=true else glob.dytech.tools=false end
+	if remote.interfaces["DyTech-Transportation"] then glob.dytech.transportation=true else glob.dytech.transportation=false end
+	if remote.interfaces["DyTech-Warfare"] then glob.dytech.warfare=true else glob.dytech.warfare=false end
+end
+
 function ItemNameLocale(name)
 return
 	game.getlocaliseditemname(name)

@@ -174,6 +174,9 @@ end)
 
 game.onevent(defines.events.ontick, function(event)
 	fs.Timer(event)
+	if game.tick%300==0 then
+		fs.ModuleChecker()
+	end
 	if game.tick%60==1 then
 		glob.counter.dytech=0
 		glob.combat.dytech=0
@@ -434,6 +437,10 @@ remote.addinterface("DyTech-Core",
   
   DynamicGUI = function()
 	CoreGUI.showDynamicGUI()
+  end,
+  
+  ModuleChecker = function()
+	fs.ModuleChecker()
   end,
   
   ResetAll = function()
