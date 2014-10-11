@@ -87,5 +87,8 @@ require("prototypes.technology.lava-smelting")
 require("prototypes.technology.molds")
 require("prototypes.technology.others")
 
+if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
+  require("prototypes.item.modularTools")
+end
 
 require("prototypes.autoplace-controls")

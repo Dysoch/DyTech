@@ -8,7 +8,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "zinc",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = true, 
+      durability = 4000,
+      mininglevel = 2,
+      miningspeed = 4,
+      strength = 1.2,
+      hold = 0.8,
+      flexibility = 0.4
+    }
   },
   {
     type = "item",
@@ -17,7 +29,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tin",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = true, 
+      durability = 5000,
+      mininglevel = 2,
+      miningspeed = 3,
+      strength = 0.7,
+      hold = 1.7,
+      flexibility = 1.4
+    }
   },
   {
     type = "item",
@@ -26,7 +50,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "silver",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = true, 
+      durability = 10000,
+      mininglevel = 1,
+      miningspeed = 3,
+      strength = 0.8,
+      hold = 1,
+      flexibility = 1
+    }
   },
   {
     type = "item",
@@ -35,7 +71,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "lead",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = true, 
+      durability = 7500,
+      mininglevel = 2,
+      miningspeed = 4,
+      strength = 1.3,
+      hold = 0.6,
+      flexibility = 0.4
+    }
   },
   {
     type = "item",
@@ -44,7 +92,19 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "tungsten",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = true, 
+      durability = 10000,
+      mininglevel = 4,
+      miningspeed = 4,
+      strength = 1.9,
+      hold = 0.2,
+      flexibility = 0.2
+    }
   },
   {
     type = "item",
@@ -53,70 +113,29 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "metallurgy-plates",
     order = "gold",
-    stack_size = 256
+    stack_size = 200,
+    modularInfo = 
+	{
+      handle = true,
+      rod = true,
+      head = false, 
+      durability = 1500,
+      mininglevel = 1,
+      miningspeed = 1,
+      strength = 0.2,
+      hold = 1.4,
+      flexibility = 1.4
+    }
   },
-  --[[{
-    type = "item",
-    name = "silicon-steel-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/silicon-steel-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-s-s",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "ferro-nickel-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/ferro-nickel-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-n-f",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "goloid-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/goloid-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-g",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "brass-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/brass-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-b",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "bronze-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/bronze-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-b",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "electrum-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/electrum-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-e",
-    stack_size = 256
-  },
-  {
-    type = "item",
-    name = "invar-plate",
-    icon = "__DyTech-Metallurgy__/graphics/icons/invar-plate.png",
-    flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-plates",
-    order = "m-p-i",
-    stack_size = 256
-  },]]--
 }
 )
+
+if data.raw["recipe"]["wood-ModularToolPart[1-1-1]"] then
+  require("scripts/tools-database")
+  ToolsDatabase.makeModularPart(data.raw["item"]["zinc-plate"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["tin-plate"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["silver-plate"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["lead-plate"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["tungsten-plate"])
+  ToolsDatabase.makeModularPart(data.raw["item"]["gold-plate"])
+end

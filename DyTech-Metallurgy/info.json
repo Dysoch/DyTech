@@ -5,5 +5,5 @@
 	"title":"DyTech-Metallurgy",
 	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
 	"description":"The DyTech Module for the Metallurgy",
-	"dependencies": ["DyTech-Core >= 0.12.0", "? F-mod >= 1.10.5"]
+	"dependencies": ["DyTech-Core >= 0.12.0", "? F-mod >= 1.10.5", "? DyTech-Tools >= 2.1.0"]
 }
