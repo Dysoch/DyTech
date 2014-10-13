@@ -1,8 +1,10 @@
 -- All files who dont care if dytech is installed or not --
+require("prototypes.base-edit.item")
 require("prototypes.entity.normal-inserter")
 require("prototypes.entity.smart-inserter")
 require("prototypes.item.normal-inserter")
 require("prototypes.item.smart-inserter")
+require("prototypes.item-group.inserter")
 require("prototypes.technology.inserter")
 
 -- Check if DyTech is installed, and determine which file to load --
