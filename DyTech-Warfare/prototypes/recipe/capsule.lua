@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "basic-grenade-2",
-    enabled = true, --temporary
+    enabled = false, --temporary
     energy_required = 11,
     ingredients =
     {
@@ -16,7 +16,7 @@ data:extend(
   {
     type = "recipe",
     name = "basic-grenade-3",
-    enabled = true, --temporary
+    enabled = false, --temporary
     energy_required = 11,
     ingredients =
     {
