@@ -14,6 +14,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "steel-furnace-mk2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "item-exit1"
+      },
     },
     prerequisites = {"advanced-material-processing-2"},
     unit =
@@ -43,6 +47,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "steel-furnace-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "item-exit2"
       },
     },
     prerequisites = {"advanced-material-processing-3"},
@@ -74,6 +82,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "steel-furnace-mk4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "item-exit3"
+      },
     },
     prerequisites = {"advanced-material-processing-4"},
     unit =
@@ -103,6 +115,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "steel-furnace-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "item-exit4"
       },
     },
     prerequisites = {"advanced-material-processing-5"},
