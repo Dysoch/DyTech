@@ -29,14 +29,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.science > math.random(200,600) and glob.counter.gear > math.random(600,2000) then
+			if glob.counter.science > math.random(200,600) and glob.counter.gear > math.random(600,2000) and game.player.force.technologies["automation"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("science", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-science-1").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event003 = true
 				end
@@ -47,14 +47,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.science > math.random(500,1200) and glob.counter.gear > math.random(1800,6000) then
+			if glob.counter.science > math.random(500,1200) and glob.counter.gear > math.random(1800,6000) and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("science", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-science-2").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event004 = true
 				end
@@ -65,14 +65,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-inserter-dytech-1"]
 	local LocaleName = game.getlocaliseditemname("basic-inserter")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.inserter > math.random(600,1200) and glob.counter.gear > math.random(1000,4000) then
+			if glob.counter.inserter > math.random(600,1200) and glob.counter.gear > math.random(1000,4000) and game.player.force.technologies["automation"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("inserter", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-inserter-1").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event005 = true
 				end
@@ -83,14 +83,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-inserter-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("basic-inserter")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.inserter > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) then
+			if glob.counter.inserter > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("inserter", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-inserter-2").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event006 = true
 				end
@@ -103,14 +103,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["steel-furnace-mk2"]
 	local LocaleName = game.getlocaliseditemname("steel-furnace-mk2")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.EventCheck015==true then
+			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.EventCheck015==true and game.player.force.technologies["advanced-material-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-01").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event007 = true
 				end
@@ -128,7 +128,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-02").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event008 = true
 				end
@@ -146,7 +146,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-03").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event009 = true
 				end
@@ -164,7 +164,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-04").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event010 = true
 				end
@@ -176,7 +176,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["electric-furnace-mk2"]
 	local LocaleName = game.getlocaliseditemname("electric-furnace-mk2")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.counter.tech > math.random(2000,4000) and glob.EventCheck015==true then
+			if glob.counter.machine > math.random(600,1600) and glob.counter.plates > math.random(600,4000) and glob.counter.tech > math.random(2000,4000) and glob.EventCheck015==true and game.player.force.technologies["advanced-material-processing-2"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -184,7 +184,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-05").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event011 = true
 				end
@@ -203,7 +203,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-06").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event012 = true
 				end
@@ -222,7 +222,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-07").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event013 = true
 				end
@@ -241,7 +241,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-08").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event014 = true
 				end
@@ -264,7 +264,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["blade1"].enabled = true
 					game.player.force.recipes["rotor1"].enabled = true
 					game.player.force.recipes["item-exit1"].enabled = true
-					game.player.print(game.gettext("msg-automation-09").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event015 = true
 				end
@@ -286,7 +286,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["blade2"].enabled = true
 					game.player.force.recipes["rotor2"].enabled = true
 					game.player.force.recipes["item-exit2"].enabled = true
-					game.player.print(game.gettext("msg-automation-10").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event016 = true
 				end
@@ -308,7 +308,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["blade3"].enabled = true
 					game.player.force.recipes["rotor3"].enabled = true
 					game.player.force.recipes["item-exit3"].enabled = true
-					game.player.print(game.gettext("msg-automation-11").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event017 = true
 				end
@@ -329,7 +329,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.force.recipes["rotor4"].enabled = true
 					game.player.force.recipes["item-exit4"].enabled = true
-					game.player.print(game.gettext("msg-automation-12").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event018 = true
 				end
@@ -349,7 +349,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-13").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event019 = true
 				end
@@ -368,7 +368,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-14").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event020 = true
 				end
@@ -387,7 +387,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-15").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event021 = true
 				end
@@ -406,7 +406,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-16").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event022 = true
 				end
@@ -427,7 +427,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-17").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event023 = true
 				end
@@ -447,7 +447,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-18").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event024 = true
 				end
@@ -467,7 +467,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-19").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event025 = true
 				end
@@ -487,7 +487,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-20").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event026 = true
 				end
@@ -507,7 +507,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-21").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event027 = true
 				end
@@ -519,7 +519,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["assembling-machine-4"]
 	local LocaleName = game.getlocaliseditemname("assembling-machine-4")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(2000,4000) and glob.counter.plates > math.random(5000,16000) and glob.counter.tech > math.random(6000,16000) then
+			if glob.counter.machine > math.random(2000,4000) and glob.counter.plates > math.random(5000,16000) and glob.counter.tech > math.random(6000,16000) and game.player.force.technologies["automation-3"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -527,7 +527,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-22").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event028 = true
 				end
@@ -546,7 +546,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-23").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event029 = true
 				end
@@ -565,7 +565,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-24").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event030 = true
 				end
@@ -584,7 +584,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-automation-25").." "..LocaleName)
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event031 = true
 				end
@@ -596,14 +596,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-transport-belt-dytech-1"]
 	local LocaleName = game.getlocaliseditemname("basic-transport-belt")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.belt > math.random(900,1800) and glob.counter.gear > math.random(1500,6000) then
+			if glob.counter.belt > math.random(900,1800) and glob.counter.gear > math.random(1500,6000) and game.player.force.technologies["automation"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("belt", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-belt-1").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event032 = true
 				end
@@ -614,14 +614,14 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-transport-belt-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("basic-transport-belt")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.belt > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and glob.EventCheck.event032==true then
+			if glob.counter.belt > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and glob.EventCheck.event032==true and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("belt", 1)
 					fs.FailureReduction("gear", 1)
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-belt-2").." "..LocaleName)
+					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					glob.EventCheck.event033 = true
 				end
