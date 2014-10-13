@@ -84,16 +84,16 @@ Tools = "These are the Options for DyTech-Tools!"
 Metallurgy = "These are the Options for DyTech-Metallurgy!"
 Tools1 = "Lost the item for the Crafting Bench? Click the Give Button to get it again!"
 Metallurgy1 = "Regeneration of Fluids or Ores Takes some time, prepare for some Lag!"
-About1 = "test"
-About2 = "test"
-About3 = "test"
-About4 = "test"
-About5 = "test"
-About6 = "test"
-About7 = "test"
-About8 = "test"
-About9 = "test"
-About10 = "test"
+About7 = "All DyTech modules are made by Dysoch!"
+About8 = "Usage of code from the modules is only allowed with permission from Dysoch"
+About9 = ""
+About10 = ""
+About1 = "Special Thanks To:"
+About2 = "FreeER, for helping me when i started out, and with the start of the Dynamic System."
+About3 = "drs9999, for lending me his tree growing codes."
+About4 = "TheBruteMan, for updating Inserters, and making videos for me!"
+About5 = "The Devs: For making this great game, and allowing it to be easily moddable."
+About6 = "Everybody for has donated the information from the Export function!"
 function showMasterGUI()
   game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMaster, colspan=BUTTON_COLSPAN})
   game.player.gui.center[guiNames.mainFlowMaster].add({type="frame", direction="vertical", name=guiNames.mainFrameMaster, caption="DyTech Control Center!"})
@@ -115,16 +115,16 @@ function showAboutGUI()
   mainFrameAbout = game.player.gui.center[guiNames.mainFlowAbout][guiNames.mainFrameAbout]
   mainFrameAbout.add({type="flow", direction="horizontal", name=guiNames.buttonFlowAbout})
   mainFrameAbout[guiNames.buttonFlowAbout].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout7, caption=About7})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout8, caption=About8})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout9, caption=About9})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout10, caption=About10})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout1, caption=About1})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout2, caption=About2})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout3, caption=About3})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout4, caption=About4})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout5, caption=About5})
   mainFrameAbout.add({type="label", name=guiNames.labelAbout6, caption=About6})
-  mainFrameAbout.add({type="label", name=guiNames.labelAbout7, caption=About7})
-  mainFrameAbout.add({type="label", name=guiNames.labelAbout8, caption=About8})
-  mainFrameAbout.add({type="label", name=guiNames.labelAbout9, caption=About9})
-  mainFrameAbout.add({type="label", name=guiNames.labelAbout10, caption=About10})
 end
 
 function showCoreGUI()
