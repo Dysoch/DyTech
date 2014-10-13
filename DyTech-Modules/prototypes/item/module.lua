@@ -1,3 +1,38 @@
+function productivitymodulelimitation()
+return {"sulfuric-acid",
+        "basic-oil-processing",
+        "advanced-oil-processing",
+        "heavy-oil-cracking",
+        "light-oil-cracking",
+        "solid-fuel-from-light-oil",
+        "solid-fuel-from-heavy-oil",
+        "solid-fuel-from-petroleum-gas",
+        "lubricant",
+        "iron-plate",
+        "copper-plate",
+        "steel-plate",
+        "stone-brick",
+        "sulfur",
+        "plastic-bar",
+        "empty-barrel",
+        "iron-stick",
+        "iron-gear-wheel",
+        "copper-cable",
+        "electronic-circuit",
+        "advanced-circuit",
+        "engine-unit",
+        "electric-engine-unit",
+        "processing-unit",
+        "explosives",
+        "battery",
+        "flying-robot-frame",
+        "science-pack-1",
+        "science-pack-2",
+        "science-pack-3",
+        "alien-science-pack",
+      }
+end
+
 data:extend(
 {
   --[[Pollution Cleaning Modules]]--
@@ -273,7 +308,9 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-4",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.2}, consumption = {bonus = 0.8}, pollution = {bonus = 0.8}}
+    effect = { productivity = {bonus = 0.2}, consumption = {bonus = 0.8}, pollution = {bonus = 0.8}},
+    limitation = productivitymodulelimitation(),
+    limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
   {
     type = "module",
@@ -283,7 +320,9 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-5",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.25}, consumption = {bonus = 1.0}, pollution = {bonus = 1.0}}
+    effect = { productivity = {bonus = 0.25}, consumption = {bonus = 1.0}, pollution = {bonus = 1.0}},
+    limitation = productivitymodulelimitation(),
+    limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
   {
     type = "module",
@@ -293,7 +332,9 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-6",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.3}, consumption = {bonus = 1.2}, pollution = {bonus = 1.2}}
+    effect = { productivity = {bonus = 0.3}, consumption = {bonus = 1.2}, pollution = {bonus = 1.2}},
+    limitation = productivitymodulelimitation(),
+    limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
   {
     type = "module",
@@ -303,7 +344,9 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-7",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.4}, consumption = {bonus = 1.6}, pollution = {bonus = 1.6}}
+    effect = { productivity = {bonus = 0.4}, consumption = {bonus = 1.6}, pollution = {bonus = 1.6}},
+    limitation = productivitymodulelimitation(),
+    limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
   {
     type = "module",
@@ -313,7 +356,9 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-8",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.5}, consumption = {bonus = 2.0}, pollution = {bonus = 2.0}}
+    effect = { productivity = {bonus = 0.5}, consumption = {bonus = 2.0}, pollution = {bonus = 2.0}},
+    limitation = productivitymodulelimitation(),
+    limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
 }
 )
