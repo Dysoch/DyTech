@@ -78,3 +78,14 @@ require("prototypes.item.wall")
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
 require("prototypes.recipe.wall")
+
+for k, v in pairs(data.raw.module) do
+	if v.name:find("productivity%-module") and v.limitation then
+		table.insert(v.limitation, "advanced-processing-unit")
+		table.insert(v.limitation, "bundled-wire")
+		table.insert(v.limitation, "stone-gear-wheel")
+		table.insert(v.limitation, "steel-gear-wheel")
+		table.insert(v.limitation, "glass")
+		table.insert(v.limitation, "rubber")
+	end
+end
