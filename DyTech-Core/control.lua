@@ -287,6 +287,9 @@ game.onevent(defines.events.onguiclick, function(event)
 	elseif event.element.name:find(CoreGUI.guiNames.BackButton) then
 		CoreGUI.closeAllGUI()
 		CoreGUI.showMasterGUI()
+	elseif event.element.name:find(CoreGUI.guiNames.AboutButton) then
+		CoreGUI.closeAllGUI()
+		CoreGUI.showAboutGUI()
 	elseif event.element.name:find(CoreGUI.guiNames.CoreButton) then
 		CoreGUI.closeMasterGUI()
 		CoreGUI.showCoreGUI()

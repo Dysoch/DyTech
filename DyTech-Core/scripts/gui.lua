@@ -21,7 +21,11 @@ guiNames = {mainFlowMaster="MasterGUIFlow",
 			mainFlowCounter="CounterGUIFlow",
             mainFrameCounter="CounterGUIFrame",
             buttonFlowCounter="CounterGUIPartFlow",
+			mainFlowAbout="AboutGUIFlow",
+            mainFrameAbout="AboutGUIFrame",
+            buttonFlowAbout="AboutGUIPartFlow",
             ExportButton="CoreGUIExport!",
+            AboutButton="MasterGUIAbout!",
             ExitButton="MasterGUIExit!",
             BackButton="CoreGUIBack!",
             CounterButton="CoreGUICounter!",
@@ -55,6 +59,16 @@ guiNames = {mainFlowMaster="MasterGUIFlow",
             label12="CoreGUILabel12",
             label13="ToolsGUILabel1",
             label14="MetallurgyGUILabel1",
+            labelAbout1="AboutGUILabel1",
+            labelAbout2="AboutGUILabel2",
+            labelAbout3="AboutGUILabel3",
+            labelAbout4="AboutGUILabel4",
+            labelAbout5="AboutGUILabel5",
+            labelAbout6="AboutGUILabel6",
+            labelAbout7="AboutGUILabel7",
+            labelAbout8="AboutGUILabel8",
+            labelAbout9="AboutGUILabel9",
+            labelAbout10="AboutGUILabel10",
             }
 mainFrameMaster = nil -- placeholder
 mainFrameCore = nil -- placeholder
@@ -62,6 +76,7 @@ mainFrameDynamic = nil -- placeholder
 mainFrameTools = nil -- placeholder
 mainFrameMetallurgy = nil -- placeholder
 mainFrameCounter = nil -- placeholder
+mainFrameAbout = nil -- placeholder
 MainScreen = "Click the Module you want to use Commands for!"
 Core = "These are the Options for DyTech-Core!"
 Dynamic = "These are the Options for DyTech-Dynamic!"
@@ -69,6 +84,16 @@ Tools = "These are the Options for DyTech-Tools!"
 Metallurgy = "These are the Options for DyTech-Metallurgy!"
 Tools1 = "Lost the item for the Crafting Bench? Click the Give Button to get it again!"
 Metallurgy1 = "Regeneration of Fluids or Ores Takes some time, prepare for some Lag!"
+About1 = "test"
+About2 = "test"
+About3 = "test"
+About4 = "test"
+About5 = "test"
+About6 = "test"
+About7 = "test"
+About8 = "test"
+About9 = "test"
+About10 = "test"
 function showMasterGUI()
   game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMaster, colspan=BUTTON_COLSPAN})
   game.player.gui.center[guiNames.mainFlowMaster].add({type="frame", direction="vertical", name=guiNames.mainFrameMaster, caption="DyTech Control Center!"})
@@ -78,9 +103,28 @@ function showMasterGUI()
   if glob.dytech.dynamic then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DynamicButton, caption="DyTech-Dynamic!"}) end
   if glob.dytech.tools then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ToolsButton, caption="DyTech-Tools!"}) end
   if glob.dytech.metallurgy then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.MetallurgyButton, caption="DyTech-Metallurgy!"}) end
+  mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.AboutButton, caption="About!"})
   mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ExitButton, caption="Close!"})
   mainFrameMaster.add({type="label", name=guiNames.label0, caption=MainScreen})
   mainFrameMaster.add({type="label", name=guiNames.label, caption="You have played".." "..tostring(glob.timer.hours).." ".."Hours,".." "..tostring(glob.timer.minutes).." ".."Minutes and".." "..tostring(glob.timer.seconds).." ".."Seconds!"}) 
+end
+
+function showAboutGUI()
+  game.player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowAbout, colspan=BUTTON_COLSPAN})
+  game.player.gui.center[guiNames.mainFlowAbout].add({type="frame", direction="vertical", name=guiNames.mainFrameAbout, caption="About!"})
+  mainFrameAbout = game.player.gui.center[guiNames.mainFlowAbout][guiNames.mainFrameAbout]
+  mainFrameAbout.add({type="flow", direction="horizontal", name=guiNames.buttonFlowAbout})
+  mainFrameAbout[guiNames.buttonFlowAbout].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout1, caption=About1})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout2, caption=About2})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout3, caption=About3})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout4, caption=About4})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout5, caption=About5})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout6, caption=About6})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout7, caption=About7})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout8, caption=About8})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout9, caption=About9})
+  mainFrameAbout.add({type="label", name=guiNames.labelAbout10, caption=About10})
 end
 
 function showCoreGUI()
@@ -174,6 +218,9 @@ function closeAllGUI()
   if game.player.gui.center[CoreGUI.guiNames.mainFlowCounter] and game.player.gui.center[CoreGUI.guiNames.mainFlowCounter].valid then
     game.player.gui.center[CoreGUI.guiNames.mainFlowCounter].destroy()
   end
+  if game.player.gui.center[CoreGUI.guiNames.mainFlowAbout] and game.player.gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
+    game.player.gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
+  end
 end
 
 function closeMasterGUI()
@@ -209,5 +256,11 @@ end
 function closeCounterGUI()
   if game.player.gui.center[CoreGUI.guiNames.mainFlowCounter] and game.player.gui.center[CoreGUI.guiNames.mainFlowCounter].valid then
     game.player.gui.center[CoreGUI.guiNames.mainFlowCounter].destroy()
+  end
+end
+
+function closeAboutGUI()
+  if game.player.gui.center[CoreGUI.guiNames.mainFlowAbout] and game.player.gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
+    game.player.gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
   end
 end
