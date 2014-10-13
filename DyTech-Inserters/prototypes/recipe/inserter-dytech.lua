@@ -2,160 +2,391 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "inserter-half-filter",
+    name = "inserter-close",
     ingredients = 
 	{
-      {"advanced-circuit", 1},
-      {"inserter-half", 1},
-      {"steel-plate", 1}
+      {"basic-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"iron-plate", 10},
     },
-    result = "inserter-half-filter",
+    result = "inserter-close",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-long-filter",
+    name = "inserter-long-short",
     ingredients = 
 	{
-      {"inserter-long", 1},
-      {"steel-plate", 1},
-      {"advanced-circuit", 2}
+      {"inserter-close", 1},
+      {"long-handed-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"iron-plate", 10},
     },
-    result = "inserter-long-filter",
+    result = "inserter-long-short",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-long-half-filter",
+    name = "inserter-long-short-close",
     ingredients = 
 	{
-      {"inserter-long-half", 1},
-      {"steel-plate", 1},
-      {"advanced-circuit", 2}
+      {"inserter-close", 1},
+      {"inserter-long-short", 1},
+      {"electronic-circuit", 2},
+	  {"iron-plate", 10},
     },
-    result = "inserter-long-half-filter",
+    result = "inserter-long-short-close",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-fast-half-filter",
+    name = "inserter-fast-close",
     ingredients = 
 	{
-      {"advanced-circuit", 2},
-      {"steel-plate", 1},
-      {"inserter-fast-half", 1}
+      {"inserter-close", 1},
+      {"fast-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"iron-plate", 10},
     },
-    result = "inserter-fast-half-filter",
+    result = "inserter-fast-close",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-veryfast-filter",
+    name = "inserter-veryfast",
     ingredients = 
 	{
-      {"advanced-circuit", 2},
-      {"steel-plate", 1},
-      {"inserter-veryfast", 1}
+      {"fast-inserter", 1},
+      {"fast-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-veryfast-filter",
+    result = "inserter-veryfast",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-veryfast-half-filter",
+    name = "inserter-veryfast-close",
     ingredients = 
 	{
-      {"advanced-circuit", 2},
-      {"steel-plate", 1},
-      {"inserter-veryfast-half", 1}
+      {"inserter-veryfast", 1},
+      {"inserter-fast-close", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-veryfast-half-filter",
+    result = "inserter-veryfast-close",
     enabled = false
   },
   {
     type = "recipe",
-    name = "inserter-half-smart",
-    ingredients = 
-	{
-      {"circuit3", 2},
-      {"inserter-half-filter", 1},
-      {"steel-plate", 3},
+    name = "inserter-close-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-close", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-half-smart",
-    enabled = false
+    result = "inserter-close-smart"
   },
   {
     type = "recipe",
-    name = "inserter-long-smart",
-    ingredients = 
-	{
-      {"inserter-long-filter", 1},
-      {"steel-plate", 3},
-      {"circuit3", 3}
+    name = "inserter-long-short-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-short", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-long-smart",
-    enabled = false
+    result = "inserter-long-short-smart"
   },
   {
     type = "recipe",
-    name = "inserter-long-half-smart",
-    ingredients = 
-	{
-      {"inserter-long-half-filter", 1},
-      {"steel-plate", 3},
-      {"circuit3", 3}
+    name = "inserter-long-close-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-close", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-long-half-smart",
-    enabled = false
+    result = "inserter-long-close-smart"
   },
   {
     type = "recipe",
-    name = "inserter-fast-half-smart",
-    ingredients = 
-	{
-      {"circuit3", 4},
-      {"steel-plate", 3},
-      {"inserter-fast-half-filter", 1}
+    name = "inserter-long-short-close-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-short-close", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
     },
-    result = "inserter-fast-half-smart",
-    enabled = false
+    result = "inserter-long-short-close-smart"
+  },
+  {
+    type = "recipe",
+    name = "inserter-fast-close-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-fast-close", 1},
+      {"smart-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-fast-close-smart"
   },
   {
     type = "recipe",
     name = "inserter-veryfast-smart",
-    ingredients = 
-	{
-      {"circuit3", 4},
-      {"steel-plate", 3},
-      {"inserter-veryfast-filter", 1}
-    },
-    result = "inserter-veryfast-smart",
-    enabled = false
-  },
-  {
-    type = "recipe",
-    name = "inserter-veryfast-half-smart",
-    ingredients = 
-	{
-      {"circuit3", 4},
-      {"steel-plate", 3},
-      {"inserter-veryfast-half-filter", 1}
-    },
-    result = "inserter-veryfast-half-smart",
-    enabled = false
-  },
-  {
-    type = "recipe",
-    name = "long-handed-inserter-filter",
     enabled = false,
     ingredients =
     {
-      {"iron-gear-wheel", 1},
-	  {"advanced-circuit", 2},
-      {"iron-plate", 1},
-      {"basic-inserter", 1}
+      {"inserter-veryfast", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
     },
-    result = "long-handed-inserter-filter"
+    result = "inserter-veryfast-smart"
   },
-}
+  {
+    type = "recipe",
+    name = "inserter-veryfast-close-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-veryfast-close", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-veryfast-close-smart"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-close",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-close", 1},
+      {"long-handed-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"iron-plate", 10},
+    },
+    result = "inserter-long-close"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast",
+    enabled = false,
+    ingredients =
+    {
+      {"fast-inserter", 1},
+      {"long-handed-inserter", 1},
+      {"advanced-circuit", 2},
+	  {"iron-plate", 10},
+    },
+    result = "inserter-long-fast"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-short",
+    enabled = false,
+    ingredients =
+    {
+      {"fast-inserter", 1},
+      {"inserter-long-short", 1},
+      {"advanced-circuit", 2},
+	  {"iron-plate", 10},
+    },
+    result = "inserter-long-fast-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-close",
+    enabled = false,
+    ingredients =
+    {
+      {"fast-inserter", 1},
+      {"inserter-long-close", 1},
+      {"advanced-circuit", 2},
+	  {"iron-plate", 10},
+    },
+    result = "inserter-long-fast-close"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-close-short",
+    enabled = false,
+    ingredients =
+    {
+      {"fast-inserter", 1},
+      {"inserter-long-short-close", 1},
+      {"advanced-circuit", 2},
+	  {"iron-plate", 10},
+    },
+    result = "inserter-long-fast-close-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast", 1},
+      {"smart-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-fast-smart"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-smart-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast-short", 1},
+      {"smart-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-fast-smart-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-smart-close",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast-close", 1},
+      {"smart-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-fast-smart-close"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-fast-smart-close-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast-close-short", 1},
+      {"smart-inserter", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-fast-smart-close-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast", 2},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast", 1},
+      {"inserter-long-fast-short", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-close",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast", 1},
+      {"inserter-long-fast-close", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-close"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-close-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-fast", 1},
+      {"inserter-long-fast-close-short", 1},
+      {"processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-close-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-veryfast", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-smart"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-smart-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-veryfast-short", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-smart-short"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-smart-close",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-veryfast-close", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-smart-close"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-veryfast-smart-close-short",
+    enabled = false,
+    ingredients =
+    {
+      {"inserter-long-veryfast-close-short", 1},
+      {"smart-inserter", 1},
+      {"advanced-processing-unit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-veryfast-smart-close-short"
+  },
+ }
 )

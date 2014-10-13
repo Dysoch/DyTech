@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "dytech-inserter",
-    icon = "__DyTech-Inserters__/graphics/icons/dytech-inserter.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-superfast.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "d-i",
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "item",
     name = "dytech-inserter-fast",
-    icon = "__DyTech-Inserters__/graphics/icons/dytech-inserter.png",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-superfast.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserter",
     order = "d-i-f",

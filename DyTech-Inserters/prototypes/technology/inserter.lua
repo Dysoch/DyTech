@@ -8,15 +8,19 @@ data:extend(
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "inserter-half"
+        recipe = "inserter-close"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-long"
+        recipe = "inserter-long-short"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-long-half"
+        recipe = "inserter-long-short-close"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-close"
       }
     },
     unit = 
@@ -31,23 +35,47 @@ data:extend(
   },
   {
     type = "technology",
-    name = "inserter-optimization-adv",
+    name = "inserter-optimization-adv", --fast + all smart versions of tier before
     icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
-    prerequisites = {"logistics-2", "inserter-optimization"},
+    prerequisites = {"logistics-2", "electronics", "inserter-optimization"},
     effects = 
 	{
       {
         type = "unlock-recipe",
-        recipe = "inserter-fast-half"
+        recipe = "inserter-fast-close"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-veryfast"
+        recipe = "inserter-long-fast"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-veryfast-half"
-      }
+        recipe = "inserter-long-fast-short"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-close"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-close-short"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-close-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-short-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-close-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-short-close-smart"
+      },
     },
     unit = 
 	{
@@ -62,38 +90,54 @@ data:extend(
   },
   {
     type = "technology",
-    name = "inserter-optimization-filter",
-    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
-    prerequisites = {"inserter-optimization-adv"},
+    name = "inserter-optimization-fast", -- very fast + all smart versions of tier before
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_highly_adv.png",
+    prerequisites = {"logistics-3", "inserter-optimization-adv"},
     effects = 
 	{
       {
         type = "unlock-recipe",
-        recipe = "inserter-fast-half-filter"
+        recipe = "inserter-veryfast"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-veryfast-filter"
+        recipe = "inserter-veryfast-close"
       },
       {
         type = "unlock-recipe",
-        recipe = "inserter-veryfast-half-filter"
+        recipe = "inserter-long-veryfast"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-half-filter"
+        recipe = "inserter-long-veryfast-short"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-long-filter"
+        recipe = "inserter-long-veryfast-close"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-long-half-filter"
+        recipe = "inserter-long-veryfast-close-short"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "long-handed-inserter-filter"
+        recipe = "inserter-fast-close-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-smart-short"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-smart-close"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "inserter-long-fast-smart-close-short"
       },
     },
     unit = 
@@ -109,34 +153,34 @@ data:extend(
   },
   {
     type = "technology",
-    name = "inserter-optimization-smart",
-    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_adv.png",
-    prerequisites = {"inserter-optimization-filter"},
+    name = "inserter-optimization-smart", -- all smart versions of tier before
+    icon = "__DyTech-Inserters__/graphics/technology/inserter_optimization_highly_adv2.png",
+    prerequisites = {"inserter-optimization-fast"},
     effects = 
 	{
-      {
-        type = "unlock-recipe",
-        recipe = "inserter-fast-half-smart"
-      },
-      {
+	  {
         type = "unlock-recipe",
         recipe = "inserter-veryfast-smart"
       },
-      {
+	  {
         type = "unlock-recipe",
-        recipe = "inserter-veryfast-half-smart"
+        recipe = "inserter-veryfast-close-smart"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-half-smart"
+        recipe = "inserter-long-veryfast-smart"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-long-smart"
+        recipe = "inserter-long-veryfast-smart-short"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "inserter-long-half-smart"
+        recipe = "inserter-long-veryfast-smart-close"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "inserter-long-veryfast-smart-close-short"
       },
     },
     unit = 

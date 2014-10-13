@@ -2,20 +2,140 @@ data:extend(
 {
   {
     type = "inserter",
-    name = "inserter-half-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_half.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-half-smart"
+    name = "inserter-close-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-close-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-close-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
     },
-    max_health = 20,
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
     energy_per_movement = 5000,
     energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.028,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-basic-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-basic-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-basic-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-basic-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-basic-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/basic-inserter/basic-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 33
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/basic-inserter/basic-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/basic-inserter/basic-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    insert_distance = 0.3,
+    pickup_distance = 1,
+    pickup_position = {0, -1},
+    insert_position = {0, 0.65},
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+	rotation_speed = 0.014
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-short-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-long-short-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-short-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 2.35},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    programmable = true,
+	filter_count = 5,
+	hand_size = 1.5,
     energy_source =
     {
       type = "electric",
@@ -24,176 +144,322 @@ data:extend(
     },
     extension_speed = 0.04,
     fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-base.png",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-long-handed-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-closed.png",
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/half-hand-open.png",
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    insert_distance = 0.3,
-    pickup_distance = 1,
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    }
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-short-close-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-long-short-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-short-close-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    programmable = true,
+	filter_count = 5,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.04,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-long-handed-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    }
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-close-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-long-close-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-close-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -2},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    programmable = true,
+	filter_count = 5,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.04,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-long-handed-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-long-handed-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    }
+  },
+  {
+    type = "inserter",
+    name = "inserter-fast-close-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-fast-close-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-fast-close-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
     pickup_position = {0, -1},
     insert_position = {0, 0.65},
-    platform_picture = 
-	{
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
-    },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.02
-  },
-  {
-    type = "inserter",
-    name = "inserter-long-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_long.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-long-smart"
-    },
-    max_health = 20,
-    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
-    energy_per_movement = 5000,
-    energy_per_rotation = 5000,
-    energy_source =
-    {
-      type = "electric",
-      usage_priority = "secondary-input",
-      drain = "0.4kW"
-    },
-    extension_speed = 0.08,
-    fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-base.png",
-      priority = "extra-high",
-      width = 8,
-      height = 34
-    },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-closed.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-hand-open.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    insert_distance = 1.7,
-    pickup_distance = 1,
-    pickup_position = {0, -1},
-    insert_position = {0, 2.35},
-    platform_picture = 
-	{
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
-    },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.02
-  },
-  {
-    type = "inserter",
-    name = "inserter-long-half-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_long_half.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-long-half-smart"
-    },
-    max_health = 20,
-    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
-    energy_per_movement = 5000,
-    energy_per_rotation = 5000,
-    energy_source =
-    {
-      type = "electric",
-      usage_priority = "secondary-input",
-      drain = "0.4kW"
-    },
-    extension_speed = 0.08,
-    fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-base.png",
-      priority = "extra-high",
-      width = 8,
-      height = 34
-    },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-closed.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/long-half-hand-open.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    insert_distance = 1.3,
-    pickup_distance = 1,
-    pickup_position = {0, -1},
-    insert_position = {0, 1.65},
-    platform_picture = 
-	{
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
-    },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.02
-  },
-  {
-    type = "inserter",
-    name = "inserter-fast-half-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_fast_half.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-fast-half-smart"
-    },
-    max_health = 20,
-    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
     energy_per_movement = 5000,
     energy_per_rotation = 5000,
     energy_source =
@@ -204,116 +470,105 @@ data:extend(
     },
     extension_speed = 0.07,
     fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-base.png",
-      priority = "extra-high",
-      width = 8,
-      height = 34
-    },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-closed.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/fast-half-hand-open.png",
-      priority = "extra-high",
-      width = 13,
-      height = 41
-    },
-    insert_distance = 0.3,
-    pickup_distance = 1,
-    pickup_position = {0, -1},
-    insert_position = {0, 0.65},
-    platform_picture = 
-	{
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
-    },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.03
-  },
-  {
-    type = "inserter",
-    name = "inserter-veryfast-half-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast_half.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-veryfast-half-smart"
-    },
-    max_health = 20,
-    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
-    energy_per_movement = 5000,
-    energy_per_rotation = 5000,
-    energy_source =
+    working_sound =
     {
-      type = "electric",
-      usage_priority = "secondary-input",
-      drain = "0.4kW"
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
     },
-    extension_speed = 0.14,
-    fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-base.png",
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-closed.png",
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-closed.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-half-hand-open.png",
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-open.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    insert_distance = 0.3,
-    pickup_distance = 1,
-    pickup_position = {0, -1},
-    insert_position = {0, 0.65},
-    platform_picture = 
-	{
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
     },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.06
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.035
   },
   {
     type = "inserter",
     name = "inserter-veryfast-smart",
-    icon = "__DyTech-Inserters__/graphics/icons/inserter_veryfast.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = 
-	{
-      hardness = 0.2,
-      mining_time = 0.5,
-      result = "inserter-veryfast-smart"
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-veryfast-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-veryfast-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
     },
-    max_health = 20,
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+    pickup_position = {0, -1},
+    insert_position = {0, 1.35},
     energy_per_movement = 5000,
     energy_per_rotation = 5000,
     energy_source =
@@ -324,41 +579,1074 @@ data:extend(
     },
     extension_speed = 0.14,
     fast_replaceable_group = "inserter",
-    hand_base_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-base.png",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
-    hand_closed_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-closed.png",
+    hand_closed_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-closed.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    hand_open_picture = 
-	{
-      filename = "__DyTech-Inserters__/graphics/entity/inserter/very-fast-hand-open.png",
+    hand_open_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-open.png",
       priority = "extra-high",
-      width = 13,
+      width = 18,
       height = 41
     },
-    insert_distance = 0.85,
-    pickup_distance = 1,
-    pickup_position = {0, -1},
-    insert_position = {0, 1.35},
-    platform_picture = 
-	{
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
       priority = "extra-high",
       width = 46,
       height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/smart-platform.png"
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
     },
-		programmable = true,
-    filter_count = 5,
-    rotation_speed = 0.06
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
   },
-}
+  {
+    type = "inserter",
+    name = "inserter-veryfast-close-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/inserter-veryfast-close-smart.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-veryfast-close-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+    pickup_position = {0, -1},
+    insert_position = {0, 0.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.14,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-fast-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/long-fast-smart-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+    pickup_position = {0, -2},
+    insert_position = {0, 2.35},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.07,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.035
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-fast-smart-short",
+    icon = "__DyTech-Inserters__/graphics/icons/long-fast-smart-short-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-smart-short"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 2.35},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.07,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.035
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-fast-smart-close",
+    icon = "__DyTech-Inserters__/graphics/icons/long-fast-smart-close-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-smart-close"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -2},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.07,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.035
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-fast-smart-close-short",
+    icon = "__DyTech-Inserters__/graphics/icons/long-fast-smart-close-short-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-smart-close-short"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances = 
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    rotation_speed = 0.02,
+    hand_size = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.07,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__base__/graphics/entity/fast-inserter/fast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.035
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-veryfast-smart",
+    icon = "__DyTech-Inserters__/graphics/icons/long-veryfast-smart-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-smart"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+    pickup_position = {0, -2},
+    insert_position = {0, 2.35},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.14,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-veryfast-smart-short",
+    icon = "__DyTech-Inserters__/graphics/icons/long-veryfast-smart-short-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-smart-short"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 2.35},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.14,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-veryfast-smart-close",
+    icon = "__DyTech-Inserters__/graphics/icons/long-veryfast-smart-close-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-smart-close"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -2},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.14,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
+  },
+  {
+    type = "inserter",
+    name = "inserter-long-veryfast-smart-close-short",
+    icon = "__DyTech-Inserters__/graphics/icons/long-veryfast-smart-close-short-inserter.png",
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-smart-close-short"},
+    max_health = 40,
+    corpse = "small-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
+	pickup_position = {0, -1},
+    insert_position = {0, 1.65},
+    energy_per_movement = 5000,
+    energy_per_rotation = 5000,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "0.4kW"
+    },
+    extension_speed = 0.14,
+    fast_replaceable_group = "inserter",
+    working_sound =
+    {
+      match_progress_to_activity = true,
+      sound =
+      {
+        {
+          filename = "__base__/sound/inserter-fast-1.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-2.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-3.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-4.ogg",
+          volume = 0.75
+        },
+        {
+          filename = "__base__/sound/inserter-fast-5.ogg",
+          volume = 0.75
+        }
+      }
+    },
+    hand_base_picture =
+    {
+      filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-hand-base.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-closed.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_picture =
+    {
+      filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-open.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_base_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+      priority = "extra-high",
+      width = 8,
+      height = 34
+    },
+    hand_closed_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    hand_open_shadow =
+    {
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+      priority = "extra-high",
+      width = 18,
+      height = 41
+    },
+    platform_picture =
+    {
+      priority = "extra-high",
+      width = 46,
+      height = 46,
+      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+    },
+    programmable = true,
+	filter_count = 5,
+    rotation_speed = 0.07
+  },
+ }
 )

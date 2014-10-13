@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "marauder-capsule",
-    enabled = true, --temporary!
+    enabled = false, --temporary!
     energy_required = 20,
     ingredients =
     {
@@ -15,7 +15,7 @@ data:extend(
   {
     type = "recipe",
     name = "sharpshooter-capsule",
-    enabled = true, --temporary!
+    enabled = false, --temporary!
     energy_required = 25,
     ingredients =
     {
@@ -27,7 +27,7 @@ data:extend(
   {
     type = "recipe",
     name = "frenzy-capsule",
-    enabled = true, --temporary!
+    enabled = false, --temporary!
     energy_required = 30,
     ingredients =
     {

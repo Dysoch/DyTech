@@ -38,6 +38,18 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "inserter-long-short", -- Added by Brute
+    ingredients = 
+	{
+      {"basic-inserter", 1},
+      {"iron-plate", 2},
+      {"electronic-circuit", 2}
+    },
+    result = "inserter-long-short",
+    enabled = false
+  },
+  {
+    type = "recipe",
     name = "inserter-fast-half",
     ingredients = 
 	{
