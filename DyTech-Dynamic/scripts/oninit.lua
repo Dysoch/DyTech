@@ -7,7 +7,6 @@ glob.counter={dytech=0, gear=0, resource=0, mining=0, robot=0, ammo=0, gun=0, ma
 glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogenemy=0, dogplayer=0, bird=0}
 glob.DynamicSystem=false
 glob.HardMode=false
-glob.timer={seconds=0, minutes=0, hours=0}
 glob.SystemShutoff=false
 glob.EventCheck={
 	event001={done=false, hours=0, minutes=0, seconds=0, description="Main Crucial Event"}, 

@@ -43,10 +43,6 @@ function OnLoad()
 	if not glob.combat.dogenemy then glob.combat.dogenemy=0 end
 	if not glob.combat.dogplayer then glob.combat.dogplayer=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
-	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
-	if not glob.timer.seconds then glob.timer.seconds=0 end
-	if not glob.timer.minutes then glob.timer.minutes=0 end
-	if not glob.timer.hours then glob.timer.hours=0 end
 	if not glob.SystemShutoff then glob.SystemShutoff=false end
 	if glob.EventCheck.event001==true or glob.EventCheck.event001==false then error("You have an old setup of internal tables. You will need to start a new game to keep playing. You probably shouldnt have taken the latest dev build from Github! Friendly Greetings, Dysoch :D") end
 	if not glob.EventCheck then glob.EventCheck=

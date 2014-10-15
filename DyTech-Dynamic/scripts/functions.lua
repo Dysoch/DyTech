@@ -78,12 +78,6 @@ glob.counter.walls = glob.counter.walls + remote.call("DyTech-Core", "checkCount
 glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
 glob.counter.pipes = glob.counter.pipes + remote.call("DyTech-Core", "checkCounter", "pipes")
 glob.counter.transport = glob.counter.transport + remote.call("DyTech-Core", "checkCounter", "transport")
-glob.timer.hours=0 
-glob.timer.minutes=0 
-glob.timer.seconds=0 
-glob.timer.hours = glob.timer.hours + remote.call("DyTech-Core", "checkTimer", "hours")
-glob.timer.minutes = glob.timer.minutes + remote.call("DyTech-Core", "checkTimer", "minutes")
-glob.timer.seconds = glob.timer.seconds + remote.call("DyTech-Core", "checkTimer", "seconds")
 end
 
 function ModuleCheck()
