@@ -80,5 +80,29 @@ data:extend(
     result = "basic-transport-belt",
     result_count = 9
   },
+  {
+    type = "recipe",
+    name = "copper-cable-dytech-1",
+    enabled = false,
+    energy_required = 1,
+    ingredients = 
+	{
+	  {"copper-plate", 3}
+	},
+    result = "copper-cable",
+    result_count = 7
+  },
+  {
+    type = "recipe",
+    name = "copper-cable-dytech-2",
+    enabled = false,
+    energy_required = 2,
+    ingredients = 
+	{
+	  {"copper-plate", 4}
+	},
+    result = "copper-cable",
+    result_count = 15
+  },
 }
 )
