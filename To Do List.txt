@@ -1,65 +1,1 @@
-To Do List
-
-Legend:
-1 - Not really important. But will happen eventually.
-2 - Somewhat important, but it will take a while before it happens.
-3 - Its normal, its kinda coming soon.
-4 - Kinda important! Happening real soon.
-5 - Important. This will happen first!
-
-To Do List:
-2 - Balance Recipes of Core
-2 - Balance Entities of Core
-2 - Add to Dynamic System all Recipes of Core
-2 - Balance Recipes of Energy
-2 - Balance Entities of Energy
-2 - Add to Dynamic System all Recipes of Energy
-2 - Balance Recipes of Inserters
-2 - Balance Entities of Inserters
-2 - Add to Dynamic System all Recipes of Inserters
-2 - Balance Recipes of Logistic
-2 - Balance Entities of Logistic
-2 - Add to Dynamic System all Recipes of Logistic
-2 - Balance Recipes of Metallurgy
-2 - Balance Entities of Metallurgy
-2 - Add to Dynamic System all Recipes of Metallurgy
-2 - Balance Recipes of Modules
-2 - Balance Entities of Modules
-2 - Add to Dynamic System all Recipes of Modules
-2 - Balance Recipes of Storage
-2 - Balance Entities of Storage
-2 - Add to Dynamic System all Recipes of Storage
-2 - Balance Recipes of Tools
-2 - Balance Entities of Tools
-2 - Add to Dynamic System all Recipes of Tools
-2 - Balance Recipes of Transportation
-2 - Balance Entities of Transportation
-2 - Add to Dynamic System all Recipes of Transportatin
-2 - Balance Recipes of Warfare - 20% done
-2 - Balance Entities of Warfare
-2 - Add to Dynamic System all Recipes of Warfare
-1 - Add Gas
-1 - Underground Oil Reserves
-3 - When Close to lava, you will take damage
-2 - Release Meteors
-2 - Adding Meteor Shield
-3 - Adding a water hog (something that uses a lot of water)
-5 - Fix underground belts being stuck (kinda done)
-1 - Wildlife (Story)
-1 - Story mode (Story)
-1 - Genetics. (Own biters, dogs, birds, etc) 50% done
-5 - Complete Counter Calculator!
-4 - Create Banner for other people to use.
-4 - make burner small pumps (if possible)
-2 - Empty bullet cartridges, that can be smelted back into bullets (but its not effecient)
-2 - Collectors use construction robots to pick up items (adding for Factorio 0.11)
-4/5 - Tiered Gun Turrets (something like the laser turrets, but different)
-1 - Loot of biters not letting drop when suicide
-1 - Turntables?
-1 - Modular armor with only 1 exoskeleton
-4 - Roboport Alternate radius (less logistic range, and less power)
-4 - Robo charging port
-5 - Add check for recipes already unlocked in dynamic
-2 - removal of usage of productivity modules from recipes
-2 - Redo ore cleaning. You will get sludge when cleaning the ore, that will give stone or sand (same as dirty water, but with incredible slow flow rate)
-2 - Add Metallurgy ores to Ore cleaning
+To Do ListLegend:1 - Not really important. But will happen eventually.2 - Somewhat important, but it will take a while before it happens.3 - Its normal, its kinda coming soon.4 - Kinda important! Happening real soon.5 - Important. This will happen first!To Do List:2 - Balance Recipes of Core2 - Balance Entities of Core2 - Add to Dynamic System all Recipes of Core2 - Balance Recipes of Energy2 - Balance Entities of Energy2 - Add to Dynamic System all Recipes of Energy2 - Balance Recipes of Inserters2 - Balance Entities of Inserters2 - Add to Dynamic System all Recipes of Inserters2 - Balance Recipes of Logistic2 - Balance Entities of Logistic2 - Add to Dynamic System all Recipes of Logistic2 - Balance Recipes of Metallurgy2 - Balance Entities of Metallurgy2 - Add to Dynamic System all Recipes of Metallurgy2 - Balance Recipes of Modules2 - Balance Entities of Modules2 - Add to Dynamic System all Recipes of Modules2 - Balance Recipes of Storage2 - Balance Entities of Storage2 - Add to Dynamic System all Recipes of Storage2 - Balance Recipes of Tools2 - Balance Entities of Tools2 - Add to Dynamic System all Recipes of Tools2 - Balance Recipes of Transportation2 - Balance Entities of Transportation2 - Add to Dynamic System all Recipes of Transportatin2 - Balance Recipes of Warfare - 20% done2 - Balance Entities of Warfare2 - Add to Dynamic System all Recipes of Warfare1 - Add Gas1 - Underground Oil Reserves3 - When Close to lava, you will take damage2 - Release Meteors2 - Adding Meteor Shield3 - Adding a water hog (something that uses a lot of water)5 - Fix underground belts being stuck (kinda done)1 - Wildlife (Story)1 - Story mode (Story)1 - Genetics. (Own biters, dogs, birds, etc) 50% done3 - Complete Counter Calculator!4 - Create Banner for other people to use.4 - make burner small pumps (if possible)2 - Empty bullet cartridges, that can be smelted back into bullets (but its not effecient)2 - Collectors use construction robots to pick up items (adding for Factorio 0.11)3 - Tiered Gun Turrets (something like the laser turrets, but different)1 - Loot of biters not letting drop when suicide1 - Turntables?1 - Modular armor with only 1 exoskeleton3 - Roboport Alternate radius (less logistic range, and less power)3 - Robo charging port5 - Add check for recipes already unlocked in dynamic2 - removal of usage of productivity modules from recipes2 - Redo ore cleaning. You will get sludge when cleaning the ore, that will give stone or sand (same as dirty water, but with incredible slow flow rate)2 - Add Metallurgy ores to Ore cleaning5 - Clean up database of core, and add new recipes.3 - port the database over to factorio 0.11
