@@ -17,14 +17,14 @@ function dynamicUnlocks(event, ttime, r)
 	--[[This first event makes sure the latest counters from DyTech-Core are transfered here! They will be reset to there newest numbers everytime the loop starts again! This is an essential event!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*1) then
 		fs.CounterTransfer()
-		glob.EventCheck.event001 = true
+		fs.EventFinish("event001")
 	end
 	--[[This second event checks which modules are installed. This is essential. If modified, errors will occur!!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*2) then
 		fs.ModuleCheck()
-		glob.EventCheck.event002 = true
+		fs.EventFinish("event002")
 	end
-if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
+if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true then
 	if event.tick%ttime==(r*3) and glob.modules.core==true then 
 	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-1"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
@@ -38,7 +38,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event003 = true
+					fs.EventFinish("event003")
 				end
 			end
 		end
@@ -47,7 +47,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["science-pack-1-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("science-pack-1")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.science > math.random(500,1200) and glob.counter.gear > math.random(1800,6000) and game.player.force.technologies["steel-processing"].researched then
+			if glob.counter.science > math.random(500,1200) and glob.counter.gear > math.random(1800,6000) and glob.EventCheck.event003.done==true and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("science", 1)
 					fs.FailureReduction("gear", 1)
@@ -56,7 +56,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event004 = true
+					fs.EventFinish("event004")
 				end
 			end
 		end
@@ -74,7 +74,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event005 = true
+					fs.EventFinish("event005")
 				end
 			end
 		end
@@ -83,7 +83,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-inserter-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("basic-inserter")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.inserter > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and game.player.force.technologies["steel-processing"].researched then
+			if glob.counter.inserter > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and glob.EventCheck.event005.done==true and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("inserter", 1)
 					fs.FailureReduction("gear", 1)
@@ -92,7 +92,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event006 = true
+					fs.EventFinish("event006")
 				end
 			end
 		end
@@ -112,7 +112,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event007 = true
+					fs.EventFinish("event007")
 				end
 			end
 		end
@@ -121,7 +121,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["steel-furnace-mk3"]
 	local LocaleName = game.getlocaliseditemname("steel-furnace-mk3")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.EventCheck016==true and glob.EventCheck.event007==true then
+			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.EventCheck016.done==true and glob.EventCheck.event007.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -130,7 +130,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event008 = true
+					fs.EventFinish("event008")
 				end
 			end
 		end
@@ -139,7 +139,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["steel-furnace-mk4"]
 	local LocaleName = game.getlocaliseditemname("steel-furnace-mk4")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(2400,6400) and glob.counter.plates > math.random(2400,16000) and glob.EventCheck017==true and glob.EventCheck.event008==true then
+			if glob.counter.machine > math.random(2400,6400) and glob.counter.plates > math.random(2400,16000) and glob.EventCheck017.done==true and glob.EventCheck.event008.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -148,7 +148,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event009 = true
+					fs.EventFinish("event009")
 				end
 			end
 		end
@@ -157,7 +157,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["steel-furnace-mk5"]
 	local LocaleName = game.getlocaliseditemname("steel-furnace-mk5")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(4800,12800) and glob.counter.plates > math.random(4800,32000) and glob.EventCheck018==true and glob.EventCheck.event009==true then
+			if glob.counter.machine > math.random(4800,12800) and glob.counter.plates > math.random(4800,32000) and glob.EventCheck018.done==true and glob.EventCheck.event009.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -166,7 +166,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event010 = true
+					fs.EventFinish("event010")
 				end
 			end
 		end
@@ -186,7 +186,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event011 = true
+					fs.EventFinish("event011")
 				end
 			end
 		end
@@ -195,7 +195,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["electric-furnace-mk3"]
 	local LocaleName = game.getlocaliseditemname("electric-furnace-mk3")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.counter.tech > math.random(4000,8000) and glob.EventCheck016==true and glob.EventCheck.event011==true then
+			if glob.counter.machine > math.random(1200,3200) and glob.counter.plates > math.random(1200,8000) and glob.counter.tech > math.random(4000,8000) and glob.EventCheck016==true and glob.EventCheck.event011.true==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -205,7 +205,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event012 = true
+					fs.EventFinish("event012")
 				end
 			end
 		end
@@ -214,7 +214,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["electric-furnace-mk4"]
 	local LocaleName = game.getlocaliseditemname("electric-furnace-mk4")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(2400,6400) and glob.counter.plates > math.random(2400,16000) and glob.counter.tech > math.random(8000,16000) and glob.EventCheck017==true and glob.EventCheck.event012==true then
+			if glob.counter.machine > math.random(2400,6400) and glob.counter.plates > math.random(2400,16000) and glob.counter.tech > math.random(8000,16000) and glob.EventCheck017.done==true and glob.EventCheck.event012.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -224,7 +224,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event013 = true
+					fs.EventFinish("event013")
 				end
 			end
 		end
@@ -233,7 +233,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["electric-furnace-mk5"]
 	local LocaleName = game.getlocaliseditemname("electric-furnace-mk5")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(4800,12800) and glob.counter.plates > math.random(4800,32000) and glob.counter.tech > math.random(16000,32000) and glob.EventCheck018==true and glob.EventCheck.event013==true then
+			if glob.counter.machine > math.random(4800,12800) and glob.counter.plates > math.random(4800,32000) and glob.counter.tech > math.random(16000,32000) and glob.EventCheck018.done==true and glob.EventCheck.event013.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -243,7 +243,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event014 = true
+					fs.EventFinish("event014")
 				end
 			end
 		end
@@ -266,7 +266,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["item-exit1"].enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event015 = true
+					fs.EventFinish("event015")
 				end
 			end
 		end
@@ -275,7 +275,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["frame2"]
 	local LocaleName = game.getlocaliseditemname("frame2")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.gear > math.random(1600,3200) and glob.counter.plates > math.random(1600,6400) and glob.counter.tech > math.random(3200,6400) and glob.EventCheck.event015==true then
+			if glob.counter.gear > math.random(1600,3200) and glob.counter.plates > math.random(1600,6400) and glob.counter.tech > math.random(3200,6400) and glob.EventCheck.event015.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("gear", 1)
 					fs.FailureReduction("plates", 1)
@@ -288,7 +288,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["item-exit2"].enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event016 = true
+					fs.EventFinish("event016")
 				end
 			end
 		end
@@ -297,7 +297,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["frame3"]
 	local LocaleName = game.getlocaliseditemname("frame3")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.gear > math.random(3200,6400) and glob.counter.plates > math.random(3200,12800) and glob.counter.tech > math.random(6400,12800) and glob.EventCheck.event016==true then
+			if glob.counter.gear > math.random(3200,6400) and glob.counter.plates > math.random(3200,12800) and glob.counter.tech > math.random(6400,12800) and glob.EventCheck.event016.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("gear", 1)
 					fs.FailureReduction("plates", 1)
@@ -310,7 +310,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["item-exit3"].enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event017 = true
+					fs.EventFinish("event017")
 				end
 			end
 		end
@@ -319,7 +319,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["frame4"]
 	local LocaleName = game.getlocaliseditemname("frame4")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.gear > math.random(6400,12800) and glob.counter.plates > math.random(12800,25600) and glob.counter.tech > math.random(12800,25600) and glob.EventCheck.event017==true then
+			if glob.counter.gear > math.random(6400,12800) and glob.counter.plates > math.random(12800,25600) and glob.counter.tech > math.random(12800,25600) and glob.EventCheck.event017.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("gear", 1)
 					fs.FailureReduction("plates", 1)
@@ -331,7 +331,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					game.player.force.recipes["item-exit4"].enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event018 = true
+					fs.EventFinish("event018")
 				end
 			end
 		end
@@ -351,7 +351,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event019 = true
+					fs.EventFinish("event019")
 				end
 			end
 		end
@@ -360,7 +360,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["radar-mk3"]
 	local LocaleName = game.getlocaliseditemname("radar-mk3")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(4000,6400) and glob.counter.plates > math.random(8000,20000) and glob.counter.tech > math.random(8000,24000) and glob.EventCheck.event019==true then
+			if glob.counter.machine > math.random(4000,6400) and glob.counter.plates > math.random(8000,20000) and glob.counter.tech > math.random(8000,24000) and glob.EventCheck.event019.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -370,7 +370,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event020 = true
+					fs.EventFinish("event020")
 				end
 			end
 		end
@@ -378,8 +378,8 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	if event.tick%ttime==(r*21) and glob.modules.automation==true then 
 	local UnlockRecipe = game.player.force.recipes["radar-mk4"]
 	local LocaleName = game.getlocaliseditemname("radar-mk4")
-			if glob.counter.machine > math.random(8000,12800) and glob.counter.plates > math.random(16000,40000) and glob.counter.tech > math.random(16000,48000) and glob.EventCheck.event020==true then
 		if not UnlockRecipe.enabled then 
+			if glob.counter.machine > math.random(8000,12800) and glob.counter.plates > math.random(16000,40000) and glob.counter.tech > math.random(16000,48000) and glob.EventCheck.event020.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -389,7 +389,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event021 = true
+					fs.EventFinish("event021")
 				end
 			end
 		end
@@ -398,7 +398,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["radar-mk5"]
 	local LocaleName = game.getlocaliseditemname("radar-mk5")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(16000,25600) and glob.counter.plates > math.random(32000,80000) and glob.counter.tech > math.random(32000,96000) and glob.EventCheck.event021==true then
+			if glob.counter.machine > math.random(16000,25600) and glob.counter.plates > math.random(32000,80000) and glob.counter.tech > math.random(32000,96000) and glob.EventCheck.event021.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -408,7 +408,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event022 = true
+					fs.EventFinish("event022")
 				end
 			end
 		end
@@ -429,7 +429,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event023 = true
+					fs.EventFinish("event023")
 				end
 			end
 		end
@@ -438,7 +438,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-mining-drill-mk3"]
 	local LocaleName = game.getlocaliseditemname("basic-mining-drill-mk3")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(16000,40000) and glob.counter.mining > math.random(2400,4000) and glob.counter.resource > math.random(20000,40000) and glob.EventCheck.event023==true then
+			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(16000,40000) and glob.counter.mining > math.random(2400,4000) and glob.counter.resource > math.random(20000,40000) and glob.EventCheck.event023.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -449,7 +449,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event024 = true
+					fs.EventFinish("event024")
 				end
 			end
 		end
@@ -458,7 +458,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-mining-drill-mk4"]
 	local LocaleName = game.getlocaliseditemname("basic-mining-drill-mk4")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(8000,16000) and glob.counter.plates > math.random(32000,80000) and glob.counter.mining > math.random(4800,8000) and glob.counter.resource > math.random(40000,80000) and glob.EventCheck.event024==true then
+			if glob.counter.machine > math.random(8000,16000) and glob.counter.plates > math.random(32000,80000) and glob.counter.mining > math.random(4800,8000) and glob.counter.resource > math.random(40000,80000) and glob.EventCheck.event024.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -469,7 +469,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event025 = true
+					fs.EventFinish("event025")
 				end
 			end
 		end
@@ -478,7 +478,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-mining-drill-mk5"]
 	local LocaleName = game.getlocaliseditemname("basic-mining-drill-mk5")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(16000,32000) and glob.counter.plates > math.random(64000,160000) and glob.counter.mining > math.random(9600,16000) and glob.counter.resource > math.random(80000,160000) and glob.EventCheck.event025==true then
+			if glob.counter.machine > math.random(16000,32000) and glob.counter.plates > math.random(64000,160000) and glob.counter.mining > math.random(9600,16000) and glob.counter.resource > math.random(80000,160000) and glob.EventCheck.event025.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -489,7 +489,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event026 = true
+					fs.EventFinish("event026")
 				end
 			end
 		end
@@ -498,7 +498,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-mining-drill-mk6"]
 	local LocaleName = game.getlocaliseditemname("basic-mining-drill-mk6")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(48000,96000) and glob.counter.plates > math.random(256000,480000) and glob.counter.mining > math.random(32000,48000) and glob.counter.resource > math.random(200000,2000000) and glob.EventCheck.event026==true then
+			if glob.counter.machine > math.random(48000,96000) and glob.counter.plates > math.random(256000,480000) and glob.counter.mining > math.random(32000,48000) and glob.counter.resource > math.random(200000,2000000) and glob.EventCheck.event026.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -509,7 +509,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event027 = true
+					fs.EventFinish("event027")
 				end
 			end
 		end
@@ -529,7 +529,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event028 = true
+					fs.EventFinish("event028")
 				end
 			end
 		end
@@ -538,7 +538,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["assembling-machine-5"]
 	local LocaleName = game.getlocaliseditemname("assembling-machine-5")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(10000,32000) and glob.counter.tech > math.random(12000,32000) and glob.EventCheck.event028==true then
+			if glob.counter.machine > math.random(4000,8000) and glob.counter.plates > math.random(10000,32000) and glob.counter.tech > math.random(12000,32000) and glob.EventCheck.event028.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -548,7 +548,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event029 = true
+					fs.EventFinish("event029")
 				end
 			end
 		end
@@ -557,7 +557,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["assembling-machine-6"]
 	local LocaleName = game.getlocaliseditemname("assembling-machine-6")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(8000,16000) and glob.counter.plates > math.random(20000,64000) and glob.counter.tech > math.random(24000,64000) and glob.EventCheck.event029==true then
+			if glob.counter.machine > math.random(8000,16000) and glob.counter.plates > math.random(20000,64000) and glob.counter.tech > math.random(24000,64000) and glob.EventCheck.event029.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -567,7 +567,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event030 = true
+					fs.EventFinish("event030")
 				end
 			end
 		end
@@ -576,7 +576,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["assembling-machine-7"]
 	local LocaleName = game.getlocaliseditemname("assembling-machine-7")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.machine > math.random(16000,32000) and glob.counter.plates > math.random(40000,128000) and glob.counter.tech > math.random(48000,128000) and glob.EventCheck.event029==true then
+			if glob.counter.machine > math.random(16000,32000) and glob.counter.plates > math.random(40000,128000) and glob.counter.tech > math.random(48000,128000) and glob.EventCheck.event030.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("machine", 1)
 					fs.FailureReduction("plates", 1)
@@ -586,7 +586,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event031 = true
+					fs.EventFinish("event031")
 				end
 			end
 		end
@@ -605,7 +605,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event032 = true
+					fs.EventFinish("event032")
 				end
 			end
 		end
@@ -614,7 +614,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["basic-transport-belt-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("basic-transport-belt")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.belt > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and glob.EventCheck.event032==true and game.player.force.technologies["steel-processing"].researched then
+			if glob.counter.belt > math.random(1800,3600) and glob.counter.gear > math.random(3000,12000) and glob.EventCheck.event032.done==true and game.player.force.technologies["steel-processing"].researched then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("belt", 1)
 					fs.FailureReduction("gear", 1)
@@ -623,7 +623,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event033 = true
+					fs.EventFinish("event033")
 				end
 			end
 		end
@@ -642,7 +642,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event034 = true
+					fs.EventFinish("event034")
 				end
 			end
 		end
@@ -651,7 +651,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 	local UnlockRecipe = game.player.force.recipes["copper-cable-dytech-2"]
 	local LocaleName = game.getlocaliseditemname("copper-cable")
 		if not UnlockRecipe.enabled then 
-			if glob.counter.plates > math.random(7200,14400) and glob.counter.tech > math.random(12000,48000) and glob.EventCheck.event034==true then
+			if glob.counter.plates > math.random(7200,14400) and glob.counter.tech > math.random(12000,48000) and glob.EventCheck.event034.done==true then
 				if DynamicFailure(glob.counter.dytech) then
 					fs.FailureReduction("plates", 1)
 					fs.FailureReduction("tech", 1)
@@ -660,7 +660,7 @@ if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
 					UnlockRecipe.enabled = true
 					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
-					glob.EventCheck.event035 = true
+					fs.EventFinish("event035")
 				end
 			end
 		end
@@ -670,20 +670,20 @@ end
 
 --[[Dynamic System Reward Events!]]--
 function dynamicRewards(event, ttime, r)
-if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
+if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true then
 	if event.tick%ttime==(r*201) then
-		if not glob.EventCheck.event201 then 
+		if not glob.EventCheck.event201.done then 
 			if glob.counter.dytech > math.random(15000,22500) then
 				game.player.insert{name="steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
-				glob.EventCheck.event201 = true
+				fs.EventFinish("event201")
 			end
 		end
 	end
 	--[[This event will shutdown the Dynamic System when the player has called for it to go off, while it was running. This will always be the last event!!!]]--
 	if event.tick%ttime==(r*300) then
-		glob.EventCheck.event001 = false
-		glob.EventCheck.event002 = false
+		glob.EventCheck.event001.done = false
+		glob.EventCheck.event002.done = false
 		if glob.SystemShutoff==true then
 			glob.DynamicSystem = false
 			glob.SystemShutoff = false

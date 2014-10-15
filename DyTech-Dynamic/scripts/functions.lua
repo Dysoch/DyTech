@@ -107,7 +107,7 @@ end
 
 function EventFinish(EventName)
 	glob.EventCheck[EventName].done = true
-	glob.EventCheck[EventName].hours = glob.EventCheck[EventName].hours + remote.call("DyTech-Core", "checkTimer", "hours")
-	glob.EventCheck[EventName].minutes = glob.EventCheck[EventName].minutes + remote.call("DyTech-Core", "checkTimer", "minutes")
-	glob.EventCheck[EventName].seconds = glob.EventCheck[EventName].seconds + remote.call("DyTech-Core", "checkTimer", "seconds")
+	glob.EventCheck[EventName].hours = remote.call("DyTech-Core", "checkTimer", "hours")
+	glob.EventCheck[EventName].minutes = remote.call("DyTech-Core", "checkTimer", "minutes")
+	glob.EventCheck[EventName].seconds = remote.call("DyTech-Core", "checkTimer", "seconds")
 end 
