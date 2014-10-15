@@ -58,6 +58,8 @@ guiNames = {mainFlowMaster="MasterGUIFlow",
             label11="CoreGUILabel11",
             label12="CoreGUILabel12",
             label13="ToolsGUILabel1",
+            label15="CoreGUILabel13",
+            label16="CoreGUILabel14",
             label14="MetallurgyGUILabel1",
             labelAbout1="AboutGUILabel1",
             labelAbout2="AboutGUILabel2",
@@ -149,6 +151,8 @@ function showDynamicGUI()
   mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.BackButton, caption="Back!"})
   mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.ExitButton, caption="Close!"})
   mainFrameDynamic.add({type="label", name=guiNames.labelDynamic, caption=Dynamic})
+  mainFrameDynamic.add({type="label", name=guiNames.label15, caption="Dynamic System is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystem"))})
+  mainFrameDynamic.add({type="label", name=guiNames.label16, caption="Dynamic System Hard Mode is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystemHard"))})
 end
 
 function showToolsGUI()

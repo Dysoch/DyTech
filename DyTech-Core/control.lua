@@ -403,17 +403,7 @@ remote.addinterface("DyTech-Core",
   end,
   
   checkTimer = function(name)
-	if type(name) == "string" then
-		return glob.timer[name]
-	elseif type(name) == "table" then
-		local result = {}
-			for _, name in ipairs(name) do
-			result[name] = glob.timer[name]
-			end
-	return result
-	else
-    return false -- could also use error("unknown name type", 2)
-	end
+	return glob.timer[name]
   end,
   
   removefromCounter = function(name, Number)

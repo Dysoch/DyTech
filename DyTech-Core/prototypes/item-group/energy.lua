@@ -9,19 +9,19 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "steam-small",
+    name = "steam-primary",
     group = "dytech-energy",
     order = "01"
   },
   {
     type = "item-subgroup",
-    name = "steam-normal",
+    name = "steam-secondary",
     group = "dytech-energy",
     order = "02"
   },
   {
     type = "item-subgroup",
-    name = "steam-large",
+    name = "steam-tertiary",
     group = "dytech-energy",
     order = "03"
   },
