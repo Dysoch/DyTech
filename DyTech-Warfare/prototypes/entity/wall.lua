@@ -6,7 +6,7 @@ data:extend(
     icon = "__DyTech-Warfare__/graphics/icons/chitin-wall.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "chitin-wall"},
-    max_health = 1500,
+    max_health = 2500,
     repair_speed_modifier = 2,
     corpse = "chitin-wall-remnants",
     resistances =

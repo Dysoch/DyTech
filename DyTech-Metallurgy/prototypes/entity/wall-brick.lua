@@ -6,7 +6,7 @@ data:extend(
     icon = "__DyTech-Metallurgy__/graphics/icons/brickwall.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "brickwall"},
-    max_health = 2500,
+    max_health = 1500,
     repair_speed_modifier = 2,
     corpse = "brickwall-remnants",
     resistances =
