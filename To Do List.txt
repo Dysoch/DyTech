@@ -38,8 +38,6 @@ To Do List:
 2 - Balance Recipes of Warfare - 20% done
 2 - Balance Entities of Warfare
 2 - Add to Dynamic System all Recipes of Warfare
-2 - Add timer to Dynamic.
-2 - Add tables to see when something is unlocked (uses timer)
 1 - Add Gas
 1 - Underground Oil Reserves
 3 - When Close to lava, you will take damage
@@ -63,3 +61,5 @@ To Do List:
 4 - Robo charging port
 5 - Add check for recipes already unlocked in dynamic
 2 - removal of usage of productivity modules from recipes
+2 - Redo ore cleaning. You will get sludge when cleaning the ore, that will give stone or sand (same as dirty water, but with incredible slow flow rate)
+2 - Add Metallurgy ores to Ore cleaning
