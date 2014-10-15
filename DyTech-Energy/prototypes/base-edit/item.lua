@@ -1,5 +1,5 @@
-data.raw["item"]["steam-engine"].order = "a[mk1]-b[secondary]"
-data.raw["item"]["steam-engine"].subgroup = "steam-normal"
+data.raw["item"]["steam-engine"].order = "[mk1]"
+data.raw["item"]["steam-engine"].subgroup = "steam-secondary"
 data.raw["item"]["solar-panel"].order = "a[mk1]-a[primary]"
 data.raw["item"]["solar-panel"].subgroup = "solar-normal"
 data.raw["item"]["basic-accumulator"].order = "a[mk1]"
