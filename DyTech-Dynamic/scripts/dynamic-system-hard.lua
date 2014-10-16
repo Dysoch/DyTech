@@ -22,6 +22,7 @@ function dynamicUnlocks(event, ttime, r)
 	--[[This second event checks which modules are installed. This is essential. If modified, errors will occur!!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*2) then
 		fs.ModuleCheck()
+		fs.EventAlreadyDoneCheck()		
 		fs.EventFinish("event002")
 	end
 if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true then

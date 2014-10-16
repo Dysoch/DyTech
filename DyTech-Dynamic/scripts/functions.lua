@@ -30,7 +30,7 @@ end
 
 function CounterTransfer()
 remote.call("DyTech-Core", "ModuleChecker")
-glob.counter.dytech=0 
+--[[glob.counter.dytech=0 
 glob.counter.gear=0 
 glob.counter.resource=0 
 glob.counter.mining=0 
@@ -53,31 +53,31 @@ glob.counter.science=0
 glob.counter.walls=0 
 glob.counter.modules=0 
 glob.counter.pipes=0 
-glob.counter.transport=0 
-glob.counter.dytech = glob.counter.dytech + remote.call("DyTech-Core", "checkCounter", "dytech")
-glob.counter.gear = glob.counter.gear + remote.call("DyTech-Core", "checkCounter", "gear")
-glob.counter.resource = glob.counter.resource + remote.call("DyTech-Core", "checkCounter", "resource")
-glob.counter.mining = glob.counter.mining + remote.call("DyTech-Core", "checkCounter", "mining")
-glob.counter.robot = glob.counter.robot + remote.call("DyTech-Core", "checkCounter", "robot")
-glob.counter.ammo = glob.counter.ammo + remote.call("DyTech-Core", "checkCounter", "ammo")
-glob.counter.gun = glob.counter.gun + remote.call("DyTech-Core", "checkCounter", "gun")
-glob.counter.machine = glob.counter.machine + remote.call("DyTech-Core", "checkCounter", "machine")
-glob.counter.capsule = glob.counter.capsule + remote.call("DyTech-Core", "checkCounter", "capsule")
-glob.counter.tech = glob.counter.tech + remote.call("DyTech-Core", "checkCounter", "tech")
-glob.counter.plates = glob.counter.plates + remote.call("DyTech-Core", "checkCounter", "plates")
-glob.counter.inserter = glob.counter.inserter + remote.call("DyTech-Core", "checkCounter", "inserter")
-glob.counter.energy = glob.counter.energy + remote.call("DyTech-Core", "checkCounter", "energy")
-glob.counter.chest = glob.counter.chest + remote.call("DyTech-Core", "checkCounter", "chest")
-glob.counter.armor = glob.counter.armor + remote.call("DyTech-Core", "checkCounter", "armor")
-glob.counter.gems = glob.counter.gems + remote.call("DyTech-Core", "checkCounter", "gems")
-glob.counter.belt = glob.counter.belt + remote.call("DyTech-Core", "checkCounter", "belt")
-glob.counter.turret = glob.counter.turret + remote.call("DyTech-Core", "checkCounter", "turret")
-glob.counter.alien = glob.counter.alien + remote.call("DyTech-Core", "checkCounter", "alien")
-glob.counter.science = glob.counter.science + remote.call("DyTech-Core", "checkCounter", "science")
-glob.counter.walls = glob.counter.walls + remote.call("DyTech-Core", "checkCounter", "walls")
-glob.counter.modules = glob.counter.modules + remote.call("DyTech-Core", "checkCounter", "modules")
-glob.counter.pipes = glob.counter.pipes + remote.call("DyTech-Core", "checkCounter", "pipes")
-glob.counter.transport = glob.counter.transport + remote.call("DyTech-Core", "checkCounter", "transport")
+glob.counter.transport=0 ]]--
+glob.counter.dytech = remote.call("DyTech-Core", "checkCounter", "dytech")
+glob.counter.gear = remote.call("DyTech-Core", "checkCounter", "gear")
+glob.counter.resource = remote.call("DyTech-Core", "checkCounter", "resource")
+glob.counter.mining = remote.call("DyTech-Core", "checkCounter", "mining")
+glob.counter.robot = remote.call("DyTech-Core", "checkCounter", "robot")
+glob.counter.ammo = remote.call("DyTech-Core", "checkCounter", "ammo")
+glob.counter.gun = remote.call("DyTech-Core", "checkCounter", "gun")
+glob.counter.machine = remote.call("DyTech-Core", "checkCounter", "machine")
+glob.counter.capsule = remote.call("DyTech-Core", "checkCounter", "capsule")
+glob.counter.tech = remote.call("DyTech-Core", "checkCounter", "tech")
+glob.counter.plates = remote.call("DyTech-Core", "checkCounter", "plates")
+glob.counter.inserter = remote.call("DyTech-Core", "checkCounter", "inserter")
+glob.counter.energy = remote.call("DyTech-Core", "checkCounter", "energy")
+glob.counter.chest = remote.call("DyTech-Core", "checkCounter", "chest")
+glob.counter.armor = remote.call("DyTech-Core", "checkCounter", "armor")
+glob.counter.gems = remote.call("DyTech-Core", "checkCounter", "gems")
+glob.counter.belt = remote.call("DyTech-Core", "checkCounter", "belt")
+glob.counter.turret = remote.call("DyTech-Core", "checkCounter", "turret")
+glob.counter.alien = remote.call("DyTech-Core", "checkCounter", "alien")
+glob.counter.science = remote.call("DyTech-Core", "checkCounter", "science")
+glob.counter.walls = remote.call("DyTech-Core", "checkCounter", "walls")
+glob.counter.modules = remote.call("DyTech-Core", "checkCounter", "modules")
+glob.counter.pipes = remote.call("DyTech-Core", "checkCounter", "pipes")
+glob.counter.transport = remote.call("DyTech-Core", "checkCounter", "transport")
 end
 
 function ModuleCheck()
@@ -111,3 +111,33 @@ function EventFinish(EventName)
 	glob.EventCheck[EventName].minutes = remote.call("DyTech-Core", "checkTimer", "minutes")
 	glob.EventCheck[EventName].seconds = remote.call("DyTech-Core", "checkTimer", "seconds")
 end 
+
+function EventAlreadyDoneCheck()
+	if glob.modules.automation==true then
+		if game.player.force.recipes["steel-furnace-mk2"]==true and glob.EventCheck.event007.done==false then EventFinish("event007") end
+		if game.player.force.recipes["steel-furnace-mk3"]==true and glob.EventCheck.event008.done==false then EventFinish("event008") end
+		if game.player.force.recipes["steel-furnace-mk4"]==true and glob.EventCheck.event009.done==false then EventFinish("event009") end
+		if game.player.force.recipes["steel-furnace-mk5"]==true and glob.EventCheck.event010.done==false then EventFinish("event010") end
+		if game.player.force.recipes["electric-furnace-mk2"]==true and glob.EventCheck.event011.done==false then EventFinish("event011") end
+		if game.player.force.recipes["electric-furnace-mk3"]==true and glob.EventCheck.event012.done==false then EventFinish("event012") end
+		if game.player.force.recipes["electric-furnace-mk4"]==true and glob.EventCheck.event013.done==false then EventFinish("event013") end
+		if game.player.force.recipes["electric-furnace-mk5"]==true and glob.EventCheck.event014.done==false then EventFinish("event014") end
+		if game.player.force.recipes["frame1"]==true and glob.EventCheck.event015.done==false then EventFinish("event015") end
+		if game.player.force.recipes["frame2"]==true and glob.EventCheck.event016.done==false then EventFinish("event016") end
+		if game.player.force.recipes["frame3"]==true and glob.EventCheck.event017.done==false then EventFinish("event017") end
+		if game.player.force.recipes["frame4"]==true and glob.EventCheck.event018.done==false then EventFinish("event018") end
+		if game.player.force.recipes["radar-mk2"]==true and glob.EventCheck.event019.done==false then EventFinish("event019") end
+		if game.player.force.recipes["radar-mk3"]==true and glob.EventCheck.event020.done==false then EventFinish("event020") end
+		if game.player.force.recipes["radar-mk4"]==true and glob.EventCheck.event021.done==false then EventFinish("event021") end
+		if game.player.force.recipes["radar-mk5"]==true and glob.EventCheck.event022.done==false then EventFinish("event022") end
+		if game.player.force.recipes["basic-mining-drill-mk2"]==true and glob.EventCheck.event023.done==false then EventFinish("event023") end
+		if game.player.force.recipes["basic-mining-drill-mk3"]==true and glob.EventCheck.event024.done==false then EventFinish("event024") end
+		if game.player.force.recipes["basic-mining-drill-mk4"]==true and glob.EventCheck.event025.done==false then EventFinish("event025") end
+		if game.player.force.recipes["basic-mining-drill-mk5"]==true and glob.EventCheck.event026.done==false then EventFinish("event026") end
+		if game.player.force.recipes["basic-mining-drill-mk6"]==true and glob.EventCheck.event027.done==false then EventFinish("event027") end
+		if game.player.force.recipes["assembling-machine-4"]==true and glob.EventCheck.event028.done==false then EventFinish("event028") end
+		if game.player.force.recipes["assembling-machine-5"]==true and glob.EventCheck.event029.done==false then EventFinish("event029") end
+		if game.player.force.recipes["assembling-machine-6"]==true and glob.EventCheck.event030.done==false then EventFinish("event030") end
+		if game.player.force.recipes["assembling-machine-7"]==true and glob.EventCheck.event031.done==false then EventFinish("event031") end
+	end
+end
