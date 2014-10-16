@@ -18,7 +18,7 @@ data:extend(
       height = 32
     }
   },
-  --[[{
+  {
     type = "container",
     name = "sand-collector-1",
     icon = "__DyTech-Storage__/graphics/icons/sand-collector.png",
@@ -35,7 +35,7 @@ data:extend(
       width = 32,
       height = 32
     }
-  },]]--
+  },
   {
     type = "container",
     name = "coal-collector-1",

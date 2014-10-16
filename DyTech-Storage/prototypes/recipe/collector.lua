@@ -11,7 +11,7 @@ data:extend(
     },
     result = "stone-collector-1"
   },
-  --[[{
+  {
     type = "recipe",
     name = "sand-collector-1",
     time_needed = 100,
@@ -21,7 +21,7 @@ data:extend(
 	  {"sand", 25},
     },
     result = "sand-collector-1"
-  },]]--
+  },
   {
     type = "recipe",
     name = "coal-collector-1",

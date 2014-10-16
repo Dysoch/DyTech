@@ -10,7 +10,7 @@ data:extend(
 	place_result= "stone-collector-1",
 	stack_size= 10,
   },
-  --[[{
+  {
 	type= "item",
 	name= "sand-collector-1",
 	icon= "__DyTech-Storage__/graphics/icons/sand-collector.png",
@@ -19,7 +19,7 @@ data:extend(
 	order= "c-s",
 	place_result= "sand-collector-1",
 	stack_size= 10,
-  },]]--
+  },
   {
 	type= "item",
 	name= "coal-collector-1",
