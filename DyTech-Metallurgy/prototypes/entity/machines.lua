@@ -75,9 +75,9 @@ data:extend(
       emissions = 0.01 / 0.5
     },
     energy_usage = "125kW",
-    ingredient_count = 4,
-    module_slots = 4,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+    ingredient_count = 15,
+    module_slots = 3,
+    allowed_effects = {"consumption", "speed", "pollution"}
   },
 }
 )
