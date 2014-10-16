@@ -19,7 +19,7 @@ data:extend(
       height = 32
     }
   },
-  --[[{
+  {
     type = "logistic-container",
     name = "sand-collector",
     icon = "__DyTech-Logistic__/graphics/icons/sand-collector.png",
@@ -37,7 +37,7 @@ data:extend(
       width = 32,
       height = 32
     }
-  },]]--
+  },
   {
     type = "logistic-container",
     name = "coal-collector",

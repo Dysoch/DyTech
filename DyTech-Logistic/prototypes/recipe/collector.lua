@@ -12,7 +12,7 @@ data:extend(
     },
     result = "stone-collector"
   },
-  --[[{
+  {
     type = "recipe",
     name = "sand-collector",
     time_needed= 100,
@@ -23,7 +23,7 @@ data:extend(
 	  {"processing-unit", 1},
     },
     result = "sand-collector"
-  },]]--
+  },
   {
     type = "recipe",
     name = "coal-collector",

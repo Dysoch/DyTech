@@ -159,7 +159,7 @@ data:extend(
       },
       {
         type = "ghost-time-to-live",
-        modifier = 60 * 60 * 15
+        modifier = 60 * 60 * 20
       }
     },
     prerequisites = {"construction-robotics-1", "advanced-electronics-2"},
