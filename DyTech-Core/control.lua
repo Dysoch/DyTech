@@ -205,10 +205,10 @@ game.onevent(defines.events.ontick, function(event)
 		fs.CollectByPosition("stone", 1.5, true)
 	end
 	--[[Sand Collector]]--
---	if glob.sand~=nil and event.tick%12==0 then
---		fs.CollectByPosition("sand", 1.5, false)
---		fs.CollectByPosition("sand", 1.5, true)
---	end
+	if glob.sand~=nil and event.tick%12==0 then
+		fs.CollectByPosition("sand", 1.5, false)
+		fs.CollectByPosition("sand", 1.5, true)
+	end
 	--[[Coal Collector]]--
 	if glob.coal~=nil and event.tick%12==0 then
 		fs.CollectByPosition("coal", 1.5, false)
@@ -244,14 +244,10 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		glob.dytechitem[glob.dytechitemcount]={}
 		glob.dytechitem[glob.dytechitemcount].position=event.createdentity.position
 	--[[Sand Collector Build]]--
---	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
---		if glob.sand==nil then
---			glob.sand={}
---			glob.sandcount=0
---		end
---		glob.sandcount=glob.sandcount+1
---		glob.sand[glob.sandcount]={}
---		glob.sand[glob.sandcount].position=event.createdentity.position
+	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
+		glob.sandcount=glob.sandcount+1
+		glob.sand[glob.sandcount]={}
+		glob.sand[glob.sandcount].position=event.createdentity.position
 	end
 	glob.counter2.build = glob.counter2.build + 1
 incrementDynamicCounters = function(stack)

@@ -72,8 +72,8 @@ function OnLoad()
 	if not glob.compatibility.Fmod then glob.compatibility.Fmod=false end
 	if not glob.stone then glob.stone={} end
 	if not glob.stonecount then glob.stonecount=0 end
---	if not glob.sand then glob.sand={} end
---	if not glob.sandcount then glob.sandcount=0 end
+	if not glob.sand then glob.sand={} end
+	if not glob.sandcount then glob.sandcount=0 end
 	if not glob.debug then glob.debug = false end
 	if not glob.coal then glob.coal={} end
 	if not glob.coalcount then glob.coalcount=0 end

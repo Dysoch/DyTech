@@ -150,6 +150,10 @@ craftitems =
 	["rubber-seed"]={resource=1},
 	["stone-gear-wheel"]={resource=1, gear=1},
 	["steel-gear-wheel"]={plates=1, gear=1},
+	["dytech-item-collector"]={["advanced-processing-unit"]=2, ["bundled-wire"]=4, plates=25, gear=1, resource=1},
+	["liquid-handler"]={["iron-gear-wheel"]=5, ["electronic-circuit"]=5, ["pipe"]=5, plates=5, machine=1},
+	["sandbag"]={resource=20},
+	["sandwall"]={["sandbag"]=2, ["wood"]=2, resource=5, walls=1},
 	-- DyTech Automation --
 	["basic-mining-drill-mk2"]={["basic-mining-drill"]=1, ["rotor1"]=2, ["item-exit1"]=1, ["frame1"]=1, mining=1},
 	["basic-mining-drill-mk3"]={["basic-mining-drill-mk2"]=1, ["rotor2"]=2, ["item-exit2"]=1, ["frame2"]=1, mining=1},
@@ -189,6 +193,7 @@ craftitems =
 	["radar-mk5"]={["radar-mk4"]=1, ["advanced-processing-unit"]=10, plates=160, machine=1},
 	-- DyTech Compatibility --
 	-- DyTech Dynamic --
+	--nothing worth adding
 	-- DyTech Energy --
 	["boiler-mk2"]={["boiler"]=1, ["advanced-circuit"]=2, plates=10, energy=1, machine=1},
 	["boiler-mk3"]={["boiler-mk2"]=1, ["advanced-circuit"]=10, plates=2, energy=1, machine=1},
@@ -238,6 +243,8 @@ craftitems =
 	["offshore-pump-mk3"]={["offshore-pump-mk2"]=1, ["pipe-mk3"]=1, ["iron-gear-wheel"]=4, machine=1, energy=1},
 	["offshore-pump-mk4"]={["offshore-pump-mk3"]=1, ["pipe-mk4"]=1, ["steel-gear-wheel"]=1, machine=1, energy=1},
 	["offshore-pump-mk5"]={["offshore-pump-mk4"]=1, ["pipe-mk5"]=1, ["steel-gear-wheel"]=4, machine=1, energy=1},
+	-- DyTech Genetics --
+	["dog-lair"]={alien=1},
 	-- DyTech Inserters --
 	["inserter-half"]={inserter=1, ["electronic-circuit"]=1, ["iron-gear-wheel"]=1, plates=1},
 	["inserter-long"]={inserter=2, plates=2, ["basic-inserter"]=1, ["electronic-circuit"]=2},
@@ -276,7 +283,8 @@ craftitems =
 	["construction-robot-1"]={["advanced-processing-unit"]=5, ["construction-robot"]=1, robot=1},
 	["construction-robot-2"]={["advanced-processing-unit"]=5, ["construction-robot-1"]=1, robot=1},
 	["repair-pack-0"]={plates=1, ["wood"]=1},
-	["repair-pack-2"]={["processing-unit"]=1, ["iron-gear-wheel"]=1},
+	["repair-pack-2"]={["advanced-circuit"]=1, ["iron-gear-wheel"]=1},
+	["repair-pack-3"]={["processing-unit"]=1, ["steel-gear-wheel"]=1},
 	["stone-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
 	["sand-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
 	["coal-collector"]={["processing-unit"]=1, plates=25, resource=25, chest=1, robot=1},
@@ -307,6 +315,9 @@ craftitems =
 	["centrifuge"]={["steel-gear-wheel"]=25, ["copper-cable"]=10, plates=50, machine=1},
 	["geothermal-extractor"]={["iron-gear-wheel"]=10, ["electronic-circuit"]=10, ["pipe"]=10, plates=15, machine=1, mining=1},
 	["lava-handler"]={["boiler"]=2, ["steel-gear-wheel"]=5, ["advanced-circuit"]=8, ["pipe"]=8, machine=1},
+	["brick"]={resource=5},
+	["brickwall"]={["brick"]=5, walls=1},
+	["tungsten-wall"]={plates=10, walls=1},
 	-- DyTech Meteors --
 	-- DyTech Modules --
 	["pollution-clean-module-1"]={plates=10, modules=1, ["electronic-circuit"]=5},
@@ -350,22 +361,22 @@ craftitems =
 	["steel-chest-big"]={plates=72, chest=1},
 	["iron-chest-medium"]={plates=32, chest=1},
 	["iron-chest-big"]={plates=72, chest=1},
+	["storage-tank-2"]={["storage-tank"]=1, plates=15, chest=1},
+	["storage-tank-3"]={["storage-tank-2"]=1, plates=35, chest=1},
+	["storage-tank-4"]={["storage-tank-3"]=1, plates=55, chest=1},
+	["storage-tank-5"]={["storage-tank-4"]=1, plates=85, chest=1},
+	["smart-chest-medium"]={["steel-chest-medium"]=1, ["advanced-circuit"]=5, chest=1},
+	["smart-chest-big"]={["steel-chest-big"]=1, ["processing-unit"]=5, chest=1},
+	["logistic-chest-requester-medium"]={["smart-chest-medium"]=1, ["processing-unit"]=5, chest=1},
+	["logistic-chest-storage-medium"]={["smart-chest-medium"]=1, ["processing-unit"]=5, chest=1},
+	["logistic-chest-active-provider-medium"]={["smart-chest-medium"]=1, ["processing-unit"]=5, chest=1},
+	["logistic-chest-passive-provider-medium"]={["smart-chest-medium"]=1, ["processing-unit"]=5, chest=1},
+	["logistic-chest-requester-big"]={["smart-chest-big"]=1, ["advanced-processing-unit"]=5, chest=1},
+	["logistic-chest-storage-big"]={["smart-chest-big"]=1, ["advanced-processing-unit"]=5, chest=1},
+	["logistic-chest-active-provider-big"]={["smart-chest-big"]=1, ["advanced-processing-unit"]=5, chest=1},
+	["logistic-chest-passive-provider-big"]={["smart-chest-big"]=1, ["advanced-processing-unit"]=5, chest=1},
 	-- DyTech Tools --
-	["wooden-axe"]={["wood"]=4, mining=1},
-	["stone-axe"]={["wood"]=2, resource=4, mining=1},
-	["copper-axe"]={["iron-stick"]=2, plates=3, mining=1},
-	["advanced-steel-axe"]={["iron-stick"]=2, plates=21, mining=1},
-	["ruby-axe"]={["iron-stick"]=2, gems=8, mining=1},
-	["sapphire-axe"]={["iron-stick"]=2, gems=8, mining=1},
-	["emerald-axe"]={["iron-stick"]=2, gems=8, mining=1},
-	["topaz-axe"]={["iron-stick"]=2, gems=8, mining=1},
-	["diamond-axe"]={["iron-stick"]=2, gems=8, mining=1},
-	["brass-axe"]={["iron-stick"]=2, plates=15, mining=1},
-	["bronze-axe"]={["iron-stick"]=2, plates=15, mining=1},
-	["gold-axe"]={["iron-stick"]=2, plates=15, mining=1},
-	["silver-axe"]={["iron-stick"]=2, plates=15, mining=1},
-	["tin-axe"]={["iron-stick"]=2, plates=15, mining=1},
-	["tungsten-axe"]={["iron-stick"]=2, plates=15, mining=1},
+	-- no longer needed since it is modular!
 	-- DyTech Transportation --
 	["super-transport-belt"]={["steel-gear-wheel"]=2, ["express-transport-belt"]=1, belt=1},
 	["super-transport-belt-to-ground"]={plates=20, belt=1, ["super-transport-belt"]=6},
@@ -408,4 +419,15 @@ craftitems =
 	["topaz-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
 	["sapphire-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
 	["ruby-bullet-magazine"]={["piercing-bullet-magazine"]=2, gems=12},
+	["battery-2"]={["battery"]=1, gems=1, ammo=1},
+	["battery-3"]={["battery-2"]=1, gems=1, ammo=1},
+	["battery-shotgun-1"]={["battery"]=1, gems=1, ammo=1},
+	["battery-shotgun-2"]={["battery-2"]=1, gems=1, ammo=1},
+	["battery-shotgun-3"]={["battery-3"]=1, gems=1, ammo=1},
+	["basic-grenade-2"]={["basic-grenade"]=1, ["explosives"]=1, plates=2, capsule=1},
+	["basic-grenade-3"]={["basic-grenade-2"]=1, ["explosives"]=2, plates=2, capsule=1},
+	["marauder-capsule"]={["destroyer-capsule"]=4, ["speed-module-3"]=1, capsule=1},
+	["sharpshooter-capsule"]={["marauder-capsule"]=4, ["speed-module-3"]=2, capsule=1},
+	["frenzy-capsule"]={["sharpshooter-capsule"]=4, ["marauder-capsule"]=4, ["speed-module-3"]=4, capsule=1},
+	["flame-thrower-turret"]={["flame-thrower"]=1, ["gun-turret"]=1, ["steel-gear-wheel"]=20, turret=1},
 }

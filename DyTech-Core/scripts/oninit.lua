@@ -9,8 +9,8 @@ glob.dytech={core=true, dynamic=false, energy=false, genetics=false, inserters=f
 glob.timer={seconds=0, minutes=0, hours=0}
 glob.stone={}
 glob.stonecount=0
---glob.sand={}
---glob.sandcount=0
+glob.sand={}
+glob.sandcount=0
 glob.coal={}
 glob.coalcount=0
 glob.dytechitem={}
