@@ -21,7 +21,7 @@ data:extend(
     type = "recipe",
     name = "mold-crafting-circuit-2",
 	category = "metallurgy-circuit",
-    energy_required = 0.5,
+    energy_required = 2,
     enabled = false,
     subgroup = "assembling-molds-crafting",
     ingredients =
@@ -39,7 +39,7 @@ data:extend(
     type = "recipe",
     name = "mold-crafting-circuit-3",
 	category = "metallurgy-circuit",
-    energy_required = 0.5,
+    energy_required = 6,
     enabled = false,
     subgroup = "assembling-molds-crafting",
     ingredients =
@@ -58,7 +58,7 @@ data:extend(
     type = "recipe",
     name = "mold-crafting-circuit-4",
 	category = "metallurgy-circuit",
-    energy_required = 0.5,
+    energy_required = 12,
     enabled = false,
     subgroup = "assembling-molds-crafting",
     ingredients =
