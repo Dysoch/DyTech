@@ -218,6 +218,27 @@ game.onevent(defines.events.ontick, function(event)
 	if glob.dytechitem~=nil and event.tick%60==0 then
 		fs.DyTechItemCollect(dytechitem, 50)
 	end
+   --[[Radar and Minimap]]--
+	if glob.radar~=nil then
+		for k,v in pairs(glob.radar) do --the first variable is used for the key or index in the table, the second is for the value of that key
+			if v.valid and (v.energy > 0) and glob.minimap~= true then
+				game.disableminimap() --enable map
+			elseif not v.valid then
+            table.remove(glob.radar, k)
+				if glob.minimap==true then
+					game.disableminimap()
+					glob.minimap=false
+					game.player.print("Because of the lack of radar(s), the minimap has been disabled!")
+				end
+			elseif not (v.energy > 0) then 
+				if glob.minimap==true then
+					game.disableminimap()
+					glob.minimap=false
+					game.player.print("Minimap has been disabled to due to radar(s) losing power!")
+				end
+			end
+		end
+	end    
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
