@@ -6,7 +6,7 @@ data:extend(
     icon = "__base__/graphics/icons/iron-ore.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
-    energy_required = 2,
+    energy_required = 1,
 	enabled = false,
     ingredients =
     {
@@ -25,7 +25,7 @@ data:extend(
     icon = "__base__/graphics/icons/copper-ore.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
-    energy_required = 2,
+    energy_required = 1,
 	enabled = false,
     ingredients =
     {

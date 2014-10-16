@@ -104,7 +104,7 @@ data:extend(
     icon = "__base__/graphics/icons/stone.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
-    energy_required = 10,
+    energy_required = 5,
 	enabled = false,
     ingredients =
     {
