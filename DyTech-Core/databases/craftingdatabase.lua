@@ -151,7 +151,7 @@ craftitems =
 	["stone-gear-wheel"]={resource=1, gear=1},
 	["steel-gear-wheel"]={plates=1, gear=1},
 	["dytech-item-collector"]={["advanced-processing-unit"]=2, ["bundled-wire"]=4, plates=25, gear=1, resource=1},
-	["liquid-handler"]={["iron-gear-wheel"]=5, ["electronic-circuit"]=5, ["pipe"]=5, plates=5, machine=1},
+	["liquid-handler"]={["iron-gear-wheel"]=10, ["electronic-circuit"]=3, ["pipe"]=2, machine=1},
 	["sandbag"]={resource=20},
 	["sandwall"]={["sandbag"]=2, ["wood"]=2, resource=5, walls=1},
 	-- DyTech Automation --
