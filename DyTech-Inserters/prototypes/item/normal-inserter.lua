@@ -8,7 +8,7 @@ data:extend(
     subgroup = "inserters-dytech-2",
     order = "i-c",
     place_result = "inserter-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -18,7 +18,7 @@ data:extend(
     subgroup = "inserters-dytech-1",
     order = "i-l",
     place_result = "inserter-long-short",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -28,7 +28,7 @@ data:extend(
     subgroup = "inserters-dytech-2",
     order = "i-l-s-c",
     place_result = "inserter-long-short-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -38,7 +38,7 @@ data:extend(
     subgroup = "inserters-dytech-2",
     order = "i-l-c",
     place_result = "inserter-long-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -48,7 +48,7 @@ data:extend(
     subgroup = "inserters-dytech-2",
     order = "i-f-c",
     place_result = "inserter-fast-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -58,7 +58,7 @@ data:extend(
     subgroup = "inserters-dytech-5",
     order = "i-v-f",
     place_result = "inserter-veryfast",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -68,7 +68,7 @@ data:extend(
     subgroup = "inserters-dytech-5",
     order = "i-v-f-c",
     place_result = "inserter-veryfast-close",
-    stack_size = 64
+    stack_size = 50
   },
   -- BruteMans;s Long Arm Versions
   {
@@ -79,7 +79,7 @@ data:extend(
     subgroup = "inserters-dytech-3",
     order = "i-l-f",
     place_result = "inserter-long-fast",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -89,7 +89,7 @@ data:extend(
     subgroup = "inserters-dytech-3",
     order = "i-l-f-s",
     place_result = "inserter-long-fast-short",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -99,7 +99,7 @@ data:extend(
     subgroup = "inserters-dytech-3",
     order = "i-l-f-c",
     place_result = "inserter-long-fast-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -109,7 +109,7 @@ data:extend(
     subgroup = "inserters-dytech-3",
     order = "i-l-f-c-s",
     place_result = "inserter-long-fast-close-short",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -119,7 +119,7 @@ data:extend(
     subgroup = "inserters-dytech-6",
     order = "i-l-v-f",
     place_result = "inserter-long-veryfast",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -129,7 +129,7 @@ data:extend(
     subgroup = "inserters-dytech-6",
     order = "i-l-v-f-s",
     place_result = "inserter-long-veryfast-short",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -139,7 +139,7 @@ data:extend(
     subgroup = "inserters-dytech-6",
     order = "i-l-v-f-c",
     place_result = "inserter-long-veryfast-close",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -149,7 +149,7 @@ data:extend(
     subgroup = "inserters-dytech-6",
     order = "i-l-v-f-c-s",
     place_result = "inserter-long-veryfast-close-short",
-    stack_size = 64
+    stack_size = 50
   },
 }
 )

@@ -12,6 +12,8 @@ for index, force in pairs(game.forces) do
 		force.recipes["inserter-long-fast-close"].enabled = true
 		force.recipes["inserter-long-fast-close-short"].enabled = true
 		force.recipes["inserter-close-smart"].enabled = true
+		force.recipes["inserter-smart"].enabled = true
+		force.recipes["inserter-long-smart"].enabled = true
 		force.recipes["inserter-long-short-smart"].enabled = true
 		force.recipes["inserter-long-close-smart"].enabled = true
 		force.recipes["inserter-long-short-close-smart"].enabled = true

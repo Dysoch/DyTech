@@ -8,7 +8,7 @@ data:extend(
     subgroup = "inserters-dytech-8",
     order = "d-i",
     place_result = "dytech-inserter",
-    stack_size = 64
+    stack_size = 50
   },
   {
     type = "item",
@@ -18,7 +18,7 @@ data:extend(
     subgroup = "inserters-dytech-8",
     order = "d-i-f",
     place_result = "dytech-inserter-fast",
-    stack_size = 64
+    stack_size = 50
   },
 }
 )

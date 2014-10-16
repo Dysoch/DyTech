@@ -92,6 +92,32 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "inserter-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-inserter", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-smart"
+  },
+  {
+    type = "recipe",
+    name = "inserter-long-smart",
+    enabled = false,
+    ingredients =
+    {
+      {"long-handed-inserter", 1},
+      {"smart-inserter", 1},
+      {"electronic-circuit", 2},
+	  {"steel-plate", 10},
+    },
+    result = "inserter-long-smart"
+  },
+  {
+    type = "recipe",
     name = "inserter-long-short-smart",
     enabled = false,
     ingredients =

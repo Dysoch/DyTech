@@ -66,6 +66,14 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "inserter-smart"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "inserter-long-smart"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "inserter-long-short-smart"
       },
       {
