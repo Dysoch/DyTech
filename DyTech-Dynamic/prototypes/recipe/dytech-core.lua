@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"copper-plate", 2},
-      {"iron-gear-wheel", 1}
+      {"iron-gear-wheel", 2}
     },
     result = "science-pack-1",
 	result_count = 2
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"copper-plate", 3},
-      {"steel-gear-wheel", 1}
+      {"steel-gear-wheel", 2}
     },
     result = "science-pack-1",
 	result_count = 3
@@ -34,7 +34,7 @@ data:extend(
     ingredients =
     {
       {"electronic-circuit", 2},
-      {"iron-gear-wheel", 1},
+      {"iron-gear-wheel", 2},
       {"iron-plate", 2}
     },
     result = "basic-inserter",
@@ -48,7 +48,7 @@ data:extend(
     ingredients =
     {
       {"electronic-circuit", 3},
-      {"steel-gear-wheel", 1},
+      {"steel-gear-wheel", 2},
       {"iron-plate", 3}
     },
     result = "basic-inserter",
@@ -62,7 +62,7 @@ data:extend(
     ingredients =
     {
       {"iron-plate", 2},
-      {"iron-gear-wheel", 1}
+      {"iron-gear-wheel", 2}
     },
     result = "basic-transport-belt",
     result_count = 5
@@ -75,7 +75,7 @@ data:extend(
     ingredients =
     {
       {"iron-plate", 2},
-      {"steel-gear-wheel", 1}
+      {"steel-gear-wheel", 2}
     },
     result = "basic-transport-belt",
     result_count = 9
