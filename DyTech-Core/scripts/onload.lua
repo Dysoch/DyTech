@@ -31,7 +31,7 @@ function OnLoad()
 	if not glob.timer.seconds then glob.timer.seconds=0 end
 	if not glob.timer.minutes then glob.timer.minutes=0 end
 	if not glob.timer.hours then glob.timer.hours=0 end
-	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogplayer=0, dogenemy=0, bird=0} end
+	if not glob.combat then glob.combat={dytech=0, small=0, medium=0, big=0, berserker=0, elder=0, king=0, queen=0, dogplayer=0, dogenemy=0, bird=0, spawner=0} end
 	if not glob.combat.dytech then glob.combat.dytech=0 end
 	if not glob.combat.small then glob.combat.small=0 end
 	if not glob.combat.medium then glob.combat.medium=0 end
@@ -43,6 +43,7 @@ function OnLoad()
 	if not glob.combat.dogenemy then glob.combat.dogenemy=0 end
 	if not glob.combat.dogplayer then glob.combat.dogplayer=0 end
 	if not glob.combat.bird then glob.combat.bird=0 end
+	if not glob.combat.spawner then glob.combat.spawner=0 end
 	if not glob.counter2 then glob.counter2={dytech=0, mine=0, build=0, sectorscanned=0, died=0, pickup=0, chunks=0} end
 	if not glob.counter2.dytech then glob.counter2.dytech=0 end
 	if not glob.counter2.mine then glob.counter2.mine=0 end

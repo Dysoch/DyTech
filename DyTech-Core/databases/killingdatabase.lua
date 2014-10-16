@@ -16,4 +16,5 @@ kill =
 	["queen-biter"]={queen=1},
 	["guard-dog-player"]={dogplayer=1},
 	["guard-dog-enemy"]={dogenemy=1},
+	["biter-spawner"]={spawner=1},
 }

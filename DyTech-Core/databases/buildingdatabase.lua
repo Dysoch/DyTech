@@ -78,6 +78,9 @@ craftitems =
 	["chemical-plant"]={machine=1, resource=10},
 	-- DyTech Core --
 	["rubber-seed"]={resource=1},
+	["dytech-item-collector"]={resource=1, tech=10},
+	["liquid-handler"]={machine=1},
+	["sandwall"]={walls=1},
 	-- DyTech Automation --
 	["basic-mining-drill-mk2"]={mining=4, resource=125, machine=1},
 	["basic-mining-drill-mk3"]={mining=8, resource=250, machine=1},
@@ -151,6 +154,8 @@ craftitems =
 	["offshore-pump-mk3"]={machine=1, energy=1},
 	["offshore-pump-mk4"]={machine=1, energy=1},
 	["offshore-pump-mk5"]={machine=1, energy=1},
+	-- DyTech Genetics --
+	["dog-lair"]={alien=1},
 	-- DyTech Inserters --
 	["inserter-half"]={inserter=1},
 	["inserter-long"]={inserter=2},
@@ -200,6 +205,8 @@ craftitems =
 	["forge"]={plates=50, machine=1},
 	["centrifuge"]={machine=1},
 	["geothermal-extractor"]={machine=1, mining=1},
+	["brickwall"]={walls=1},
+	["tungsten-wall"]={walls=1},
 	-- DyTech Meteors --
 	-- DyTech Modules --
 	-- DyTech Storage --
@@ -222,6 +229,10 @@ craftitems =
 	["logistic-chest-storage-big"]={robot=1, chest=9},
 	["logistic-chest-requester-medium"]={robot=1, chest=4},
 	["logistic-chest-requester-big"]={robot=1, chest=9},
+	["storage-tank-2"]={chest=1, energy=1, tech=1},
+	["storage-tank-3"]={chest=1, energy=1, tech=1},
+	["storage-tank-4"]={chest=1, energy=1, tech=1},
+	["storage-tank-5"]={chest=1, energy=1, tech=1},
 	-- DyTech Tools --
 	-- DyTech Transportation --
 	["super-transport-belt"]={belt=4},
@@ -254,4 +265,10 @@ craftitems =
 	["laser-turret-sniper-1"]={turret=10},
 	["laser-turret-sniper=2"]={turret=11},
 	["laser-turret-sniper=3"]={turret=12},
+	["marauder-capsule"]={capsule=1},
+	["sharpshooter-capsule"]={capsule=1},
+	["frenzy-capsule"]={capsule=1},
+	["flame-thrower-turret"]={turret=1},
+	["basic-grenade-2"]={capsule=1},
+	["basic-grenade-3"]={capsule=1},
 }
