@@ -57,6 +57,7 @@ require("prototypes.categories.resource-category")
 
 -- Base Edits
 require("prototypes.base-edit.entity")
+require("prototypes.base-edit.fluid")
 require("prototypes.base-edit.item")
 require("prototypes.base-edit.recipe")
 require("prototypes.base-edit.tech")

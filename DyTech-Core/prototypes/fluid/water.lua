@@ -10,8 +10,8 @@ data:extend(
     flow_color = {r=0.7, g=0.7, b=0.7},
     icon = "__DyTech-Core__/graphics/fluid/dirty-water.png",
     order = "dirty-water",
-    pressure_to_speed_ratio = 0.4,
-    flow_to_energy_ratio = 0.59,
+    pressure_to_speed_ratio = 0.9,
+    flow_to_energy_ratio = 0.885,
     subgroup = "metallurgy-fluid-intermediate",
   },
 }
