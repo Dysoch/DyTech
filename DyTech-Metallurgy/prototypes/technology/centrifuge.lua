@@ -18,6 +18,18 @@ data:extend(
         type = "unlock-recipe",
         recipe = "clean-copper-ore"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "sludge-processing"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "copper-chunks"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "iron-chunks"
+      },
     },
     prerequisites = {"oil-processing", "water-cleaning"},
     unit =

@@ -18,5 +18,23 @@ data:extend(
     order = "f[copper-ore]",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "iron-chunks",
+    icon = "__DyTech-Metallurgy__/graphics/icons/iron-chunks.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-intermediates",
+    order = "a[iron-chunks]",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "copper-chunks",
+    icon = "__DyTech-Metallurgy__/graphics/icons/copper-chunks.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-intermediates",
+    order = "a[copper-chunks]",
+    stack_size = 200
+  },
 }
 )

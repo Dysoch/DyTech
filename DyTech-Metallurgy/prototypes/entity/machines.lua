@@ -67,7 +67,7 @@ data:extend(
       shift = {0.84, -0.09}
     },
     crafting_categories = {"centrifuge"},
-    crafting_speed = 25,
+    crafting_speed = 1,
     energy_source =
     {
       type = "electric",

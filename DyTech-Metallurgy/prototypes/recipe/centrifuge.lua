@@ -16,7 +16,7 @@ data:extend(
     results = 
     {
       {type="item", name="clean-iron-ore", amount=1},
-      {type="item", name="stone", amount=1},
+      {type="fluid", name="sludge", amount=5},
     },
   },
   {
@@ -35,7 +35,7 @@ data:extend(
     results = 
     {
       {type="item", name="clean-copper-ore", amount=1},
-      {type="item", name="stone", amount=1},
+      {type="fluid", name="sludge", amount=5},
     },
   },
 }
