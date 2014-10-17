@@ -10,7 +10,7 @@ data:extend(
       {"electric-furnace", 1},
       {"steel-plate", 10},
       {"item-exit1", 1},
-      {"processing-unit", 2},
+      {"advanced-circuit", 2},
     },
     result = "electric-furnace-mk2"
   },
@@ -24,7 +24,7 @@ data:extend(
       {"electric-furnace-mk2", 1},
       {"steel-plate", 20},
       {"item-exit2", 1},
-      {"processing-unit", 2},
+      {"advanced-circuit", 5},
     },
     result = "electric-furnace-mk3"
   },
@@ -52,7 +52,7 @@ data:extend(
       {"electric-furnace-mk4", 1},
       {"steel-plate", 80},
       {"item-exit4", 1},
-      {"processing-unit", 2},
+      {"processing-unit", 5},
     },
     result = "electric-furnace-mk5"
   },

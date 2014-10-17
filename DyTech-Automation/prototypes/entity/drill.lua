@@ -12,6 +12,15 @@ data:extend(
 	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-mining-drill.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
+    },
     animations =
     {
       north =
@@ -95,6 +104,15 @@ data:extend(
 	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-mining-drill.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
+    },
     animations =
     {
       north =
@@ -178,6 +196,15 @@ data:extend(
     corpse = "big-remnants",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-mining-drill.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
+    },
     animations =
     {
       north =
@@ -261,6 +288,15 @@ data:extend(
 	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-mining-drill.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
+    },
     animations =
     {
       north =
@@ -345,6 +381,15 @@ data:extend(
 	fast_replaceable_group =  "drill",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-mining-drill.ogg",
+        volume = 0.75
+      },
+      apparent_volume = 1.5,
+    },
     animations =
     {
       north =
