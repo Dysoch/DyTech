@@ -97,7 +97,7 @@ data:extend(
 	fast_replaceable_group = "storage-tanks",
     fluid_box =
     {
-      base_area = 2250,
+      base_area = 2500,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
