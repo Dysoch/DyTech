@@ -24,8 +24,8 @@ data:extend(
     flow_color = {r=0.7, g=0.7, b=0.7},
     icon = "__DyTech-Metallurgy__/graphics/fluid/sludge.png",
     order = "sludge",
-    pressure_to_speed_ratio = 0.1,
-    flow_to_energy_ratio = 0.1475,
+    pressure_to_speed_ratio = 0.2,
+    flow_to_energy_ratio = 0.295,
     subgroup = "metallurgy-fluid-intermediate",
   },
 }
