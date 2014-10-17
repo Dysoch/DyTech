@@ -7,6 +7,7 @@ end
 
 require("prototypes.base-edit.entity")
 require("prototypes.base-edit.item")
+require("prototypes.base-edit.recipe")
 require("prototypes.base-edit.tech")
 
 --require("prototypes.entity.accumulators-large")
