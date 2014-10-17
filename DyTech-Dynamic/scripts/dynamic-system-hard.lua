@@ -666,18 +666,154 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 			end
 		end
 	end
+	--[[DyTech Metallurgy Events]]--
+	--[[Tiered Centrifuges]]--
+	if event.tick%ttime==(r*36) and glob.modules.metallurgy==true then 
+	local UnlockRecipe = game.player.force.recipes["centrifuge-mk2"]
+	local LocaleName = game.getlocaliseditemname("centrifuge-mk2")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.plates > math.random(7200,14400) and glob.counter.tech > math.random(12000,48000) and glob.counter.machine > math.random(4000,8000) and game.player.force.recipes["centrifuge"].enabled==true then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("plates", 1)
+					fs.FailureReduction("tech", 1)
+					fs.FailureReduction("machine", 1)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					game.player.force.resetrecipes()
+					fs.EventFinish("event036")
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*37) and glob.modules.metallurgy==true then 
+	local UnlockRecipe = game.player.force.recipes["centrifuge-mk3"]
+	local LocaleName = game.getlocaliseditemname("centrifuge-mk3")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.plates > math.random(14400,28800) and glob.counter.tech > math.random(24000,96000) and glob.counter.machine > math.random(8000,16000) and glob.EventCheck.event036.done==true then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("plates", 1)
+					fs.FailureReduction("tech", 1)
+					fs.FailureReduction("machine", 1)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					game.player.force.resetrecipes()
+					fs.EventFinish("event037")
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*38) and glob.modules.metallurgy==true then 
+	local UnlockRecipe = game.player.force.recipes["centrifuge-mk4"]
+	local LocaleName = game.getlocaliseditemname("centrifuge-mk4")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.plates > math.random(28800,57600) and glob.counter.tech > math.random(48000,192000) and glob.counter.machine > math.random(16000,32000) and glob.EventCheck.event037.done==true then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("plates", 1)
+					fs.FailureReduction("tech", 1)
+					fs.FailureReduction("machine", 1)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					game.player.force.resetrecipes()
+					fs.EventFinish("event038")
+				end
+			end
+		end
+	end
+	if event.tick%ttime==(r*39) and glob.modules.metallurgy==true then 
+	local UnlockRecipe = game.player.force.recipes["centrifuge-mk5"]
+	local LocaleName = game.getlocaliseditemname("centrifuge-mk5")
+		if not UnlockRecipe.enabled then 
+			if glob.counter.plates > math.random(57600,115200) and glob.counter.tech > math.random(96000,384000) and glob.counter.machine > math.random(32000,64000) and glob.EventCheck.event038.done==true then
+				if DynamicFailure(glob.counter.dytech) then
+					fs.FailureReduction("plates", 1)
+					fs.FailureReduction("tech", 1)
+					fs.FailureReduction("machine", 1)
+					fs.FailureMessage(LocaleName)
+				else
+					UnlockRecipe.enabled = true
+					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					game.player.force.resetrecipes()
+					fs.EventFinish("event039")
+				end
+			end
+		end
+	end
 end
 end
 
 --[[Dynamic System Reward Events!]]--
 function dynamicRewards(event, ttime, r)
 if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true then
-	if event.tick%ttime==(r*201) then
+	if event.tick%ttime==(r*201) and glob.modules.tools==false then
 		if not glob.EventCheck.event201.done then 
 			if glob.counter.dytech > math.random(15000,22500) then
 				game.player.insert{name="steel-axe",count=1}
 				game.player.print(game.gettext("msg-reward-1"))
 				fs.EventFinish("event201")
+			end
+		end
+	end
+	if event.tick%ttime==(r*202) then
+		if not glob.EventCheck.event202.done then 
+			if glob.counter.dytech > 1 then
+				game.player.insert{name="copper-plate",count=10}
+				game.player.insert{name="iron-plate",count=10}
+				game.player.insert{name="steel-plate",count=10}
+				game.player.insert{name="stone",count=10}
+				game.player.insert{name="wood",count=10}
+				game.player.print(game.gettext("msg-reward-2"))
+				fs.EventFinish("event202")
+			end
+		end
+	end
+	if event.tick%ttime==(r*203) then
+		if not glob.EventCheck.event203.done then 
+			if glob.counter.plates > math.random(200000,300000) then
+				game.player.insert{name="copper-plate",count=100}
+				game.player.insert{name="iron-plate",count=100}
+				game.player.insert{name="steel-plate",count=100}
+				game.player.print(game.gettext("msg-reward-3"))
+				fs.EventFinish("event203")
+			end
+		end
+	end
+	if event.tick%ttime==(r*204) and glob.modules.core==true then
+		if not glob.EventCheck.event203.done then 
+			if glob.counter.tech > math.random(200000,300000) then
+				game.player.insert{name="electronic-circuit",count=100}
+				game.player.insert{name="advanced-circuit",count=100}
+				game.player.insert{name="processing-unit",count=100}
+				game.player.insert{name="advanced-processing-unit",count=100}
+				game.player.print(game.gettext("msg-reward-4"))
+				fs.EventFinish("event204")
+			end
+		end
+	end
+	if event.tick%ttime==(r*205) then
+		if not glob.EventCheck.event203.done then 
+			if glob.counter.machine > math.random(50000,100000) then
+				game.player.insert{name="assembling-machine",count=100}
+				game.player.insert{name="assembling-machine-2",count=100}
+				game.player.insert{name="assembling-machine-3",count=100}
+				game.player.print(game.gettext("msg-reward-5"))
+				fs.EventFinish("event205")
+			end
+		end
+	end
+	if event.tick%ttime==(r*206) and glob.modules.modules==true then
+		if not glob.EventCheck.event203.done then 
+			if glob.counter.modules > math.random(2000,10000) then
+				game.player.insert{name="speed-module-8",count=100}
+				game.player.insert{name="effectivity-module-8",count=100}
+				game.player.insert{name="productivity-module-8",count=100}
+				game.player.print(game.gettext("msg-reward-6"))
+				fs.EventFinish("event206")
 			end
 		end
 	end
