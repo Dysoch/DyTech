@@ -3,7 +3,7 @@
 	"author":"Dysoch",
 	"version":"2.1.0",
 	"title":"DyTech-Tools",
-	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Tools",
 	"dependencies": ["DyTech-Core >= 0.12.0"]
 }

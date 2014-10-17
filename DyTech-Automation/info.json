@@ -3,7 +3,7 @@
 	"author":"Dysoch",
 	"version":"1.2.0",
 	"title":"DyTech-Automation",
-	"homepage":"http://www.factorioforums.com/forum/viewtopic.php?f=14&t=1563",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Automation Machines",
 	"dependencies": ["DyTech-Core >= 0.12.0", "? DyTech-Dynamic >= 0.1.0"]
 }

@@ -3,7 +3,7 @@
 	"author":"Dysoch and TheBruteMan",
 	"version":"1.1.0",
 	"title":"DyTech-Inserters",
-	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43&sid=25b1ad3c88b292c9543001dca01cc842",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Inserters",
 	"dependencies": ["base >= 0.10.12", "? DyTech-Core >= 0.12.0", "? DyTech-Transportation >= 1.0.0"]
 }
