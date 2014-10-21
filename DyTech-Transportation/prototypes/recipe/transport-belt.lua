@@ -19,7 +19,6 @@ data:extend(
 	energy_required = 6,
     ingredients =
     {
-      {"advanced-processing-unit", 1},
 	  {"steel-gear-wheel", 5},
       {"super-transport-belt", 1}
     },
