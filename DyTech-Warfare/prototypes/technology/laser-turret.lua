@@ -20,7 +20,7 @@ data:extend(
         recipe = "laser-turret-6"
       },
     },
-    prerequisites = {"laser-turrets"},
+    prerequisites = {"laser-turrets", "military-7"},
     unit =
     {
       count = 450,
@@ -88,7 +88,7 @@ data:extend(
         recipe = "laser-turret-sniper-3"
       },
     },
-    prerequisites = {"laser-turrets-2", "military-6"},
+    prerequisites = {"laser-turrets-2", "military-7"},
     unit =
     {
       count = 1000,
