@@ -9,6 +9,14 @@ require "scripts/onload"
 require "scripts/gui"
 require "scripts/recycler-database"
 
+
+debug_enabled = true
+local function debug(str)
+	if debug_enabled then
+		game.player.print(str)
+	end
+end
+
 local RubberSeedTypeName = "RubberTree"
 local RubberGrowingStates = {
 	"rubber-seed",
@@ -53,6 +61,7 @@ game.onload(function()
 	Load.OnLoad()
 	fs.ModuleChecker()
 	if game.itemprototypes.charcoal then -- item "charcoal" is available, that means treefarm-mod is probably used
+	debug("Treefarm installed")
 		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then -- check if script-interfaces are available
         local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
             -- the remote function will return nil on success, otherwise a string with the error-msg
@@ -63,6 +72,7 @@ game.onload(function()
 			end
 		end
 	else -- charcoal isn't available, so treefarm-mod isn't installed
+	debug("Treefarm not installed")
 		glob.compatibility.treefarm = false
 		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
 			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
@@ -76,16 +86,20 @@ end)
 game.onevent(defines.events.onplayercrafteditem, function(event)
 	if not glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
+		debug("No CraftedItems ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	else
 		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
+		debug("CraftedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	end
 incrementDynamicCounters = function(stack)
 	if ItemDatabase.craftitems[stack.name] then
 		for counter, ingredients in pairs(ItemDatabase.craftitems[stack.name]) do
 			if ItemDatabase.craftitems[counter] then
 				incrementDynamicCounters({name=counter, count=ingredients})
+				debug(counter.." needs to be checked also")
 			else
 				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
+				debug("Crafting: "..counter.." increased by "..(stack.count*ingredients))
 			end
 		end
 	end
@@ -130,18 +144,23 @@ game.onevent(defines.events.onplayermineditem, function(event)
 	if MineDatabase.mineitems[event.itemstack.name] then
 		for counter, ingredients in pairs(MineDatabase.mineitems[event.itemstack.name]) do 
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
+			debug("Mining: "..counter.." increased by "..(event.itemstack.count*ingredients))
 		end
 	end
 	if event.itemstack.name == "raw-wood" then
 		if math.random(50) == 25 then
-			game.player.insert{name="resin",count=math.random(1,4)}
+		local amount = math.random(1,5)
+			game.player.insert{name="resin",count=amount}
 			game.player.print(game.gettext("msg-rubber"))
+			debug("Player given "..amount.." Rubber Resin")
 		end
 	end
 	if not glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
+		debug("MinedItems not found".." ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	else
 		glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
+		debug("MinedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	end
 end)
 
@@ -154,8 +173,10 @@ game.onevent(defines.events.onentitydied, function(event)
 	end
 	if not glob.EntityDied[fs.EntityNameLocale(event.entity.name)] then
 		glob.EntityDied[fs.EntityNameLocale(event.entity.name)] = 1
+		debug("EntityDied not found".." ("..fs.EntityNameLocale(event.entity.name)..")")
 	else
 		glob.EntityDied[fs.EntityNameLocale(event.entity.name)] = glob.EntityDied[fs.EntityNameLocale(event.entity.name)] + 1
+		debug("EntityDied increased by 1".." ("..fs.EntityNameLocale(event.entity.name)..")")
 	end
 end)
 
@@ -167,8 +188,10 @@ game.onevent(defines.events.onpickedupitem, function(event)
 	glob.counter2.pickup = glob.counter2.pickup + event.itemstack.count
 	if not glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
+		debug("PickedItems not found ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	else
 		glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
+		debug("PickedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
 	end
 end)
 
@@ -176,26 +199,32 @@ game.onevent(defines.events.ontick, function(event)
 	fs.Timer(event)
 	if game.tick%300==0 then
 		fs.ModuleChecker()
+		debug("Module Checker activated")
 	end
 	if game.tick%60==1 then
 		glob.counter.dytech=0
 		glob.combat.dytech=0
 		glob.counter2.dytech=0
+		debug("Global Counters set to 0")
 		for _, counter in pairs(glob.counter) do 
 			if (counter~=glob.counter.dytech) then glob.counter.dytech=glob.counter.dytech+counter end
 		end
+		debug("Global Counter set")
 		for _, counter in pairs(glob.counter2) do 
 			if (counter~=glob.counter2.dytech) then glob.counter2.dytech=glob.counter2.dytech+counter end
 		end
+		debug("Global Counter2 set")
 		for _, counter in pairs(glob.combat) do 
 			if (counter~=glob.combat.dytech) then glob.combat.dytech=glob.combat.dytech+counter end
 		end
+		debug("Global Combat Counter set")
 	end
 	if glob.compatibility.treefarm == false then
 		for seedTypeName, seedType in pairs(glob.trees.isGrowing) do
 			if (seedType[1] ~= nil) and (game.tick >= seedType[1].nextUpdate)then
 				local removedEntity = table.remove(seedType, 1)
 				fs.updateEntityState(removedEntity)
+				debug("Trees update entity state")
 			end
 		end
 	end
@@ -203,20 +232,24 @@ game.onevent(defines.events.ontick, function(event)
     if glob.stone~=nil and event.tick%12==0 then
 		fs.CollectByPosition("stone", 1.5, false)
 		fs.CollectByPosition("stone", 1.5, true)
+		debug("Stone Collector done")
 	end
 	--[[Sand Collector]]--
 	if glob.sand~=nil and event.tick%12==0 then
 		fs.CollectByPosition("sand", 1.5, false)
 		fs.CollectByPosition("sand", 1.5, true)
+		debug("Sand Collector done")
 	end
 	--[[Coal Collector]]--
 	if glob.coal~=nil and event.tick%12==0 then
 		fs.CollectByPosition("coal", 1.5, false)
 		fs.CollectByPosition("coal", 1.5, true)
+		debug("Coal Collector done")
 	end
 	--[[DyTech Item Collector]]--
 	if glob.dytechitem~=nil and event.tick%60==0 then
 		fs.DyTechItemCollect(dytechitem, 50)
+		debug("DyTech Item Collector done")
 	end
    --[[Radar and Minimap]]--
 	if glob.radar~=nil then
@@ -247,6 +280,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
 			if currentSeedTypeName ~= nil then
 				fs.seedPlaced(event.createdentity, currentSeedTypeName)
+				debug("Tree Seed Placed")
 				return
 			end
 		end
@@ -255,20 +289,24 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		glob.stonecount=glob.stonecount+1
 		glob.stone[glob.stonecount]={}
 		glob.stone[glob.stonecount].position=event.createdentity.position
+		debug("Stone Collector Build at "..event.createdentity.position)
 		--[[Coal Collector Build]]--
 	elseif event.createdentity.name == "coal-collector-1" or event.createdentity.name == "coal-collector" then	
 		glob.coalcount=glob.coalcount+1
 		glob.coal[glob.coalcount]={}
 		glob.coal[glob.coalcount].position=event.createdentity.position
+		debug("Coal Collector Build at "..event.createdentity.position)
 	elseif event.createdentity.name == "dytech-item-collector" then				
 		glob.dytechitemcount=glob.dytechitemcount+1
 		glob.dytechitem[glob.dytechitemcount]={}
 		glob.dytechitem[glob.dytechitemcount].position=event.createdentity.position
+		debug("DyTech Item Collector Build at "..event.createdentity.position)
 	--[[Sand Collector Build]]--
 	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
 		glob.sandcount=glob.sandcount+1
 		glob.sand[glob.sandcount]={}
 		glob.sand[glob.sandcount].position=event.createdentity.position
+		debug("Sand Collector Build at "..event.createdentity.position)
 	end
 	glob.counter2.build = glob.counter2.build + 1
 incrementDynamicCounters = function(stack)
@@ -278,6 +316,7 @@ incrementDynamicCounters = function(stack)
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
 				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
+				debug("Build Database called, "..counter.." increased by "..(1*ingredients))
 			end
 		end
 	end
@@ -285,13 +324,16 @@ end
 incrementDynamicCounters(event.createdentity)
 	if not glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] then
 		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = 1
+		debug("BuildEntity not found ("..fs.EntityNameLocale(event.createdentity.name)..")")
 	else
 		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] + 1
+		debug("BuildEntity increased by 1 ("..fs.EntityNameLocale(event.createdentity.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
 	glob.counter2.chunks = glob.counter2.chunks + 1
+	debug("Chunk Generated, chunks counter is now "..glob.counter2.chunks)
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
@@ -393,16 +435,6 @@ remote.addinterface("DyTech-Core",
 		remote.call("DyTech-Dynamic", "Export")
 	end
 	game.player.print("You can find all relevant data in the script-output folder!")
-  end,
-  
-  Debugger = function() 
-	if glob.debug==true then
-		glob.debug = false
-		game.player.print("Debugger off")
-	else
-		glob.debug = true
-		game.player.print("Debugger on")
-    end
   end,
   
   checkCounter = function(name)
