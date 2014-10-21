@@ -1,14 +1,14 @@
 {
-  berserker = 0,
-  big = 0,
+  berserker = 151,
+  big = 640,
   bird = 0,
-  dog = 0,
-  dogenemy = 11,
+  dogenemy = 1340,
   dogplayer = 0,
-  dytech = 63,
+  dytech = 6021,
   elder = 0,
   king = 0,
-  medium = 0,
+  medium = 1095,
   queen = 0,
-  small = 52
-} --[[table: 0000000051C83940]]
+  small = 2778,
+  spawner = 17
+} --[[table: 000000005857DA40]]
