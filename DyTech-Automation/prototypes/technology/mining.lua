@@ -12,6 +12,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "pumpjack-mk2"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "rotor1"
       },
       {
@@ -27,7 +31,7 @@ data:extend(
         recipe = "item-exit1"
       },
     },
-    prerequisites = {"steel-processing"},
+    prerequisites = {"steel-processing", "oil-processing"},
     unit =
     {
       count = 200,
@@ -48,6 +52,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "basic-mining-drill-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pumpjack-mk3"
       },
       {
         type = "unlock-recipe",
@@ -92,6 +100,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "pumpjack-mk4"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "rotor3"
       },
       {
@@ -131,6 +143,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "basic-mining-drill-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "pumpjack-mk5"
       },
       {
         type = "unlock-recipe",
