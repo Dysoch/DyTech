@@ -25,6 +25,7 @@ guiNames = {mainFlowMaster="MasterGUIFlow",
             mainFrameAbout="AboutGUIFrame",
             buttonFlowAbout="AboutGUIPartFlow",
             ExportButton="CoreGUIExport!",
+            DebugButton="CoreGUIDebug!",
             AboutButton="MasterGUIAbout!",
             ExitButton="MasterGUIExit!",
             BackButton="CoreGUIBack!",
@@ -107,6 +108,7 @@ function showMasterGUI()
   if glob.dytech.metallurgy then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.MetallurgyButton, caption="DyTech-Metallurgy!"}) end
   mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.AboutButton, caption="About!"})
   mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+  if debug_master then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DebugButton, caption="Debug!"}) end
   mainFrameMaster.add({type="label", name=guiNames.label0, caption=MainScreen})
   mainFrameMaster.add({type="label", name=guiNames.label, caption="You have played".." "..tostring(glob.timer.hours).." ".."Hours,".." "..tostring(glob.timer.minutes).." ".."Minutes and".." "..tostring(glob.timer.seconds).." ".."Seconds!"}) 
 end
