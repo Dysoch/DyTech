@@ -1,5 +1,0 @@
-{
-  hours = 0,
-  minutes = 47,
-  seconds = 53
-} --[[table: 000000A3817A7280]]
