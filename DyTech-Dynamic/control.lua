@@ -6,6 +6,14 @@ require "scripts/functions"
 require "scripts/oninit"
 require "scripts/onload"
 
+--[[Debug Functions]]--
+debug_master = false -- Master switch for debugging, shows most things!
+local function debug(str)
+	if debug_master then
+		game.player.print(str)
+	end
+end
+
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "dynamic")
 	remote.call("DyTech-Core", "DynamicGUI")
@@ -24,8 +32,8 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.DynamicSystem==true then
-		if glob.HardMode==false then
+	if glob.DynamicSystem then
+		if not glob.HardMode then
 		--[[Dynamic System unlocks]]--
 		Dynamic.dynamicUnlocks(event, Dynamic.dsttime(), Dynamic.eventtime)
 		--[[Rewards]]--

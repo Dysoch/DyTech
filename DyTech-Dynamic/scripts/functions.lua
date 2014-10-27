@@ -2,12 +2,12 @@ module("fs", package.seeall)
 require("util")
 
 function DynamicToggle()
-	if glob.EventCheck.event001==true and glob.EventCheck.event002==true then
+	if glob.EventCheck.event001 and glob.EventCheck.event002 then
 		glob.SystemShutoff = true
 		game.player.print("Dynamic System is still running!!! Shutting off now might cause errors!")
 		game.player.print("The System will shutdown after the loop is done!!!")
 	else
-		if glob.DynamicSystem==true then
+		if glob.DynamicSystem then
 			glob.DynamicSystem = false
 			game.player.print("Dynamic System is now offline. Technologies however won't return! It's a shame to see you go :(")
 		else
@@ -19,7 +19,7 @@ function DynamicToggle()
 end
 
 function HardModeToggle()
-	if glob.HardMode==true then
+	if glob.HardMode then
 		glob.HardMode = false
 		game.player.print("Dynamic System Hard Mode is now offline. The normal System has been activated once again!")
 	else
@@ -110,6 +110,7 @@ function EventFinish(EventName)
 	glob.EventCheck[EventName].hours = remote.call("DyTech-Core", "checkTimer", "hours")
 	glob.EventCheck[EventName].minutes = remote.call("DyTech-Core", "checkTimer", "minutes")
 	glob.EventCheck[EventName].seconds = remote.call("DyTech-Core", "checkTimer", "seconds")
+	debug("event finished and completed: "..EventName)
 end 
 
 function EventAlreadyDoneCheck()
@@ -139,5 +140,6 @@ function EventAlreadyDoneCheck()
 		if game.player.force.recipes["assembling-machine-5"]==true and glob.EventCheck.event029.done==false then EventFinish("event029") end
 		if game.player.force.recipes["assembling-machine-6"]==true and glob.EventCheck.event030.done==false then EventFinish("event030") end
 		if game.player.force.recipes["assembling-machine-7"]==true and glob.EventCheck.event031.done==false then EventFinish("event031") end
+		debug("Recipe check Automation done")
 	end
 end

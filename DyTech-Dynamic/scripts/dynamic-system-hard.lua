@@ -18,12 +18,14 @@ function dynamicUnlocks(event, ttime, r)
 	if event.tick%ttime==(r*1) then
 		fs.CounterTransfer()
 		fs.EventFinish("event001")
+		debug("counters taken from Core")
 	end
 	--[[This second event checks which modules are installed. This is essential. If modified, errors will occur!!!! DO NOT MODIFY THIS!]]--
 	if event.tick%ttime==(r*2) then
 		fs.ModuleCheck()
 		fs.EventAlreadyDoneCheck()		
 		fs.EventFinish("event002")
+		debug("Checked Modules installed, and recipes unlocked.")
 	end
 if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true then
 	if event.tick%ttime==(r*3) and glob.modules.core==true then 
@@ -841,7 +843,9 @@ function DynamicFailure(counter)
     normalCounter = basePercent-(normalCounter*(basePercent-minPercent))
     if math.random() < normalCounter then
         return true
+		debug("Failure True")
     else
         return false
+		debug("Failure False")
     end
 end
