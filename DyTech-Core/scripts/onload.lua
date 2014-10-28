@@ -109,4 +109,8 @@ function OnLoad()
 	if not glob.MinedItems then glob.MinedItems = {} end
 	if not glob.EntityDied then glob.EntityDied = {} end
 	if not glob.BuildEntity then glob.BuildEntity = {} end
+	if not glob.CanceledDeconstruction then glob.CanceledDeconstruction = {} end
+	if not glob.MarkedForDeconstruction then glob.MarkedForDeconstruction = {} end
+	if not glob.RobotBuildEntity then glob.RobotBuildEntity = {} end
+	if not glob.RobotMinedItems then glob.RobotMinedItems = {} end
 end

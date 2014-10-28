@@ -22,6 +22,10 @@ glob.PickedItems = {}
 glob.MinedItems = {}
 glob.EntityDied = {}
 glob.BuildEntity = {}
+glob.CanceledDeconstruction = {}
+glob.MarkedForDeconstruction = {}
+glob.RobotBuildEntity = {}
+glob.RobotMinedItems = {}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {

@@ -166,6 +166,25 @@ game.onevent(defines.events.onplayermineditem, function(event)
 	end
 end)
 
+game.onevent(defines.events.onrobotmined, function(event)
+	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
+	if event.itemstack.name == "raw-wood" then
+		if math.random(50) == 25 then
+		local amount = math.random(1,5)
+			game.player.insert{name="resin",count=amount}
+			game.player.print(game.gettext("msg-rubber"))
+			debug("Player given "..amount.." Rubber Resin")
+		end
+	end
+	if not glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] then
+		glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
+		debug("RobotMinedItems not found".." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+	else
+		glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
+		debug("RobotMinedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+	end
+end)
+
 game.onevent(defines.events.onentitydied, function(event)
 	glob.counter2.died = glob.counter2.died + 1
 	if KillDatabase.kill[event.entity.name] and event.entity.force.name == "enemy" then
@@ -184,6 +203,26 @@ end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
 	glob.counter2.sectorscanned = glob.counter2.sectorscanned + 1
+end)
+
+game.onevent(defines.events.onmarkedfordeconstruction, function(event)
+	if not glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] then
+		glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] = 1
+		debug("MarkedForDeconstruction not found ("..fs.EntityNameLocale(event.entity.name)..")")
+	else
+		glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] = glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] + 1
+		debug("MarkedForDeconstruction increased by 1 ("..fs.EntityNameLocale(event.entity.name)..")")
+	end	
+end)
+
+game.onevent(defines.events.oncanceleddeconstruction, function(event)
+	if not glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] then
+		glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] = 1
+		debug("CanceledDeconstruction not found ("..fs.EntityNameLocale(event.entity.name)..")")
+	else
+		glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] = glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] + 1
+		debug("CanceledDeconstruction increased by 1 ("..fs.EntityNameLocale(event.entity.name)..")")
+	end	
 end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
@@ -278,6 +317,65 @@ game.onevent(defines.events.ontick, function(event)
 	end    
 end)
 
+game.onevent(defines.events.onrobotbuiltentity, function(event)
+	if event.createdentity.type == "tree" then
+		if glob.compatibility.treefarm == false then
+			local currentSeedTypeName = fs.getSeedTypeByEntityName(event.createdentity.name)
+			if currentSeedTypeName ~= nil then
+				fs.seedPlaced(event.createdentity, currentSeedTypeName)
+				debug("Tree Seed Placed")
+				return
+			end
+		end
+	--[[Stone Collector Build]]--
+	elseif event.createdentity.name == "stone-collector-1" or event.createdentity.name == "stone-collector" then
+		glob.stonecount=glob.stonecount+1
+		glob.stone[glob.stonecount]={}
+		glob.stone[glob.stonecount].position=event.createdentity.position
+		debug("Stone Collector Build at "..serpent.block(event.createdentity.position))
+		--[[Coal Collector Build]]--
+	elseif event.createdentity.name == "coal-collector-1" or event.createdentity.name == "coal-collector" then	
+		glob.coalcount=glob.coalcount+1
+		glob.coal[glob.coalcount]={}
+		glob.coal[glob.coalcount].position=event.createdentity.position
+		debug("Coal Collector Build at "..serpent.block(event.createdentity.position))
+	elseif event.createdentity.name == "dytech-item-collector" then				
+		glob.dytechitemcount=glob.dytechitemcount+1
+		glob.dytechitem[glob.dytechitemcount]={}
+		glob.dytechitem[glob.dytechitemcount].position=event.createdentity.position
+		debug("DyTech Item Collector Build at "..serpent.block(event.createdentity.position))
+	--[[Sand Collector Build]]--
+	elseif event.createdentity.name == "sand-collector-1" or event.createdentity.name == "sand-collector" then				
+		glob.sandcount=glob.sandcount+1
+		glob.sand[glob.sandcount]={}
+		glob.sand[glob.sandcount].position=event.createdentity.position
+		debug("Sand Collector Build at "..serpent.block(event.createdentity.position))
+	elseif debug_master==true then
+		debug(fs.EntityNameLocale(event.createdentity.name).." created at "..serpent.block(event.createdentity.position))
+	end
+	glob.counter2.build = glob.counter2.build + 1
+incrementDynamicCounters = function(stack)
+	if BuildDatabase.craftitems[stack.name] then
+		for counter, ingredients in pairs(BuildDatabase.craftitems[stack.name]) do
+			if BuildDatabase.craftitems[counter] then
+				incrementDynamicCounters({name=counter, count=ingredients})
+			else
+				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
+				debug("Build Database called, "..counter.." increased by "..(1*ingredients).."(Robots placed)")
+			end
+		end
+	end
+end
+incrementDynamicCounters(event.createdentity)
+	if not glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] then
+		glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] = 1
+		debug("RobotBuildEntity not found ("..fs.EntityNameLocale(event.createdentity.name)..")")
+	else
+		glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] = glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] + 1
+		debug("RobotBuildEntity increased by 1 ("..fs.EntityNameLocale(event.createdentity.name)..")")
+	end	
+end)
+
 game.onevent(defines.events.onbuiltentity, function(event)
 	if event.createdentity.type == "tree" then
 		if glob.compatibility.treefarm == false then
@@ -322,7 +420,7 @@ incrementDynamicCounters = function(stack)
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
 				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
-				debug("Build Database called, "..counter.." increased by "..(1*ingredients))
+				debug("Build Database called, "..counter.." increased by "..(1*ingredients).."(Player placed)")
 			end
 		end
 	end
