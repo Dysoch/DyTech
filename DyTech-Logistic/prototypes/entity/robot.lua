@@ -334,8 +334,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
       priority = "medium",
-      frame_width = 42,
-      frame_height = 31,
+      width = 42,
+      height = 31,
       frame_count = 8,
       animation_speed = 0.5,
       shift = {-0.5315, -1.9375}
@@ -344,8 +344,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-door.png",
       priority = "medium",
-      frame_width = 52,
-      frame_height = 39,
+      width = 52,
+      height = 39,
       frame_count = 16,
       shift = {0, -0.6}
     },
@@ -353,8 +353,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
       priority = "high",
-      frame_width = 37,
-      frame_height = 35,
+      width = 37,
+      height = 35,
       frame_count = 16,
       scale = 1.5,
       animation_speed = 0.5
@@ -417,8 +417,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
       priority = "medium",
-      frame_width = 42,
-      frame_height = 31,
+      width = 42,
+      height = 31,
       frame_count = 8,
       animation_speed = 0.5,
       shift = {-0.5315, -1.9375}
@@ -427,8 +427,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-door.png",
       priority = "medium",
-      frame_width = 52,
-      frame_height = 39,
+      width = 52,
+      height = 39,
       frame_count = 16,
       shift = {0, -0.6}
     },
@@ -436,8 +436,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
       priority = "high",
-      frame_width = 37,
-      frame_height = 35,
+      width = 37,
+      height = 35,
       frame_count = 16,
       scale = 1.5,
       animation_speed = 0.5
