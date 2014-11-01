@@ -9,8 +9,8 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=8},
-	  {type="fluid", name="molten-copper", amount=10},
+	  {type="fluid", name="molten-iron", amount=0.8},
+	  {type="fluid", name="molten-copper", amount=1},
     },
     results = 
 	{
@@ -26,8 +26,8 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=14},
-	  {type="fluid", name="molten-copper", amount=18},
+	  {type="fluid", name="molten-iron", amount=1.4},
+	  {type="fluid", name="molten-copper", amount=1.8},
 	  {type="item", name="plastic-bar", amount=1},
     },
     results = 
@@ -44,10 +44,10 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=150},
-	  {type="fluid", name="molten-copper", amount=200},
+	  {type="fluid", name="molten-iron", amount=15},
+	  {type="fluid", name="molten-copper", amount=20},
 	  {type="item", name="plastic-bar", amount=2},
-      {type="fluid", name = "sulfuric-acid", amount = 1}
+      {type="fluid", name = "sulfuric-acid", amount=0.1}
     },
     results = 
 	{
@@ -63,10 +63,10 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=375},
-	  {type="fluid", name="molten-copper", amount=500},
+	  {type="fluid", name="molten-iron", amount=37.5},
+	  {type="fluid", name="molten-copper", amount=50},
 	  {type="item", name="plastic-bar", amount=8},
-      {type="fluid", name = "sulfuric-acid", amount = 4}
+      {type="fluid", name = "sulfuric-acid", amount=0.4}
     },
     results = 
 	{

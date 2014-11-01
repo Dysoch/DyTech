@@ -13,7 +13,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-tin", amount=10}
+	  {type="fluid", name="molten-tin", amount=1}
 	}
   },
   {
@@ -29,7 +29,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-zinc", amount=10}
+	  {type="fluid", name="molten-zinc", amount=1}
 	}
   },
   {
@@ -45,7 +45,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-lead", amount=10}
+	  {type="fluid", name="molten-lead", amount=1}
 	}
   },
   {
@@ -61,7 +61,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-silver", amount=10}
+	  {type="fluid", name="molten-silver", amount=1}
 	}
   },
   {
@@ -77,7 +77,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-gold", amount=10}
+	  {type="fluid", name="molten-gold", amount=1}
 	}
   },
   {
@@ -93,7 +93,7 @@ data:extend(
     },
     results = 
 	{
-      {type="fluid", name="molten-tungsten", amount=10}
+      {type="fluid", name="molten-tungsten", amount=1}
     },
   },
 }

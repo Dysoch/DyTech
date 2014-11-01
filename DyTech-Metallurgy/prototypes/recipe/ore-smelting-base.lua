@@ -13,7 +13,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-iron", amount=10}
+	  {type="fluid", name="molten-iron", amount=1}
 	}
   },
   {
@@ -29,7 +29,7 @@ data:extend(
     },
     results = 
 	{
-      {type="fluid", name="molten-copper", amount=10}
+      {type="fluid", name="molten-copper", amount=1}
     },
   },
   {
@@ -45,7 +45,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="molten-iron", amount=0.3}
+	  {type="fluid", name="molten-iron", amount=0.03}
 	}
   },
   {
@@ -61,7 +61,7 @@ data:extend(
     },
     results = 
 	{
-      {type="fluid", name="molten-copper", amount=0.3}
+      {type="fluid", name="molten-copper", amount=0.03}
     },
   },
 }

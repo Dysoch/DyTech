@@ -9,7 +9,7 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=15},
+	  {type="fluid", name="molten-iron", amount=1.5},
     },
     results = 
 	{
@@ -25,8 +25,8 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=15},
-	  {type="fluid", name="molten-copper", amount=15},
+	  {type="fluid", name="molten-iron", amount=1.5},
+	  {type="fluid", name="molten-copper", amount=1.5},
     },
     results = 
 	{

@@ -9,7 +9,7 @@ data:extend(
     subgroup = "metallurgy-plates",
     ingredients =
     {
-      {type="fluid", name="molten-iron", amount=7.5},
+      {type="fluid", name="molten-iron", amount=0.75},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -26,7 +26,7 @@ data:extend(
     subgroup = "metallurgy-plates",
     ingredients =
     {
-      {type="fluid", name="molten-copper", amount=7.5},
+      {type="fluid", name="molten-copper", amount=0.75},
       {type="fluid", name="water", amount=1},
     },
     results =
@@ -43,7 +43,7 @@ data:extend(
     subgroup = "metallurgy-plates",
     ingredients =
     {
-      {type="fluid", name="molten-carbonated-iron", amount=37.5},
+      {type="fluid", name="molten-carbonated-iron", amount=3.75},
       {type="fluid", name="water", amount=5},
     },
     results =

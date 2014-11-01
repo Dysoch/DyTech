@@ -9,7 +9,7 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-copper", amount=4},
+	  {type="fluid", name="molten-copper", amount=0.4},
     },
     results = 
 	{
@@ -25,8 +25,8 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=8},
-	  {type="fluid", name="molten-copper", amount=12},
+	  {type="fluid", name="molten-iron", amount=0.8},
+	  {type="fluid", name="molten-copper", amount=1.2},
     },
     results = 
 	{
@@ -42,8 +42,8 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-iron", amount=8},
-	  {type="fluid", name="molten-copper", amount=12},
+	  {type="fluid", name="molten-iron", amount=0.8},
+	  {type="fluid", name="molten-copper", amount=1.2},
     },
     results = 
 	{
@@ -59,7 +59,7 @@ data:extend(
     subgroup = "assembling-molds-crafting",
     ingredients =
     {
-	  {type="fluid", name="molten-copper-tungsten", amount=7.5},
+	  {type="fluid", name="molten-copper-tungsten", amount=0.75},
     },
     results = 
 	{

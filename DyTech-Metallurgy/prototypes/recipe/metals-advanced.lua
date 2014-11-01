@@ -8,7 +8,7 @@ data:extend(
     energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-copper-tungsten", amount=10},
+      {type="fluid", name="molten-copper-tungsten", amount=1},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -24,7 +24,7 @@ data:extend(
     energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-bronze", amount=10},
+      {type="fluid", name="molten-bronze", amount=1},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -40,7 +40,7 @@ data:extend(
     energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-brass", amount=10},
+      {type="fluid", name="molten-brass", amount=1},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -56,7 +56,7 @@ data:extend(
     energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-electrum", amount=10},
+      {type="fluid", name="molten-electrum", amount=1},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -72,7 +72,7 @@ data:extend(
     energy_required = 1.5,
     ingredients =
     {
-      {type="fluid", name="molten-gunmetal", amount=10},
+      {type="fluid", name="molten-gunmetal", amount=1},
       {type="fluid", name="water", amount=1},
     },
     results = 

@@ -8,7 +8,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {type="fluid", name="molten-tin", amount=7.5},
+      {type="fluid", name="molten-tin", amount=0.75},
       {type="fluid", name="water", amount=1},
     },
     results = 
@@ -24,7 +24,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {type="fluid", name="molten-silver", amount=7.5},
+      {type="fluid", name="molten-silver", amount=0.75},
       {type="fluid", name="water", amount=1},
     },
     results =
@@ -40,7 +40,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {type="fluid", name="molten-gold", amount=7.5},
+      {type="fluid", name="molten-gold", amount=0.75},
       {type="fluid", name="water", amount=5},
     },
     results =
@@ -56,7 +56,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {type="fluid", name="molten-lead", amount=7.5},
+      {type="fluid", name="molten-lead", amount=0.75},
       {type="fluid", name="water", amount=5},
     },
     results =
@@ -72,7 +72,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {type="fluid", name="molten-zinc", amount=7.5},
+      {type="fluid", name="molten-zinc", amount=0.75},
       {type="fluid", name="water", amount=5},
     },
     results =
@@ -88,7 +88,7 @@ data:extend(
     energy_required = 2.5,
     ingredients =
     {
-      {type="fluid", name="molten-tungsten", amount=7.5},
+      {type="fluid", name="molten-tungsten", amount=0.75},
       {type="fluid", name="water", amount=5},
     },
     results =
