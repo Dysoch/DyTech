@@ -41,8 +41,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -51,8 +51,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -121,8 +121,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -131,8 +131,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -202,8 +202,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -212,8 +212,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -282,8 +282,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -292,8 +292,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -362,8 +362,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -372,8 +372,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -442,8 +442,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -452,8 +452,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -522,8 +522,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -532,8 +532,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -602,8 +602,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -612,8 +612,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -682,8 +682,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -692,8 +692,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -762,8 +762,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -772,8 +772,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -842,8 +842,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -852,8 +852,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -922,8 +922,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -932,8 +932,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -1002,8 +1002,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -1012,8 +1012,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -1082,8 +1082,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -1092,8 +1092,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}
@@ -1162,8 +1162,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
-      frame_width = 246,
-      frame_height = 137,
+      width = 246,
+      height = 137,
       frame_count = 32,
       line_length = 8,
       shift = {1.34, -0.06}
@@ -1172,8 +1172,8 @@ data:extend(
     {
 	  scale = 2,
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
-      frame_width = 155,
-      frame_height = 186,
+      width = 155,
+      height = 186,
       frame_count = 32,
       line_length = 8,
       shift = {0.812, 0.031}

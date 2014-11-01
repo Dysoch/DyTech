@@ -30,8 +30,8 @@ data:extend(
     charge_animation =
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
-      frame_width = 138,
-      frame_height = 135,
+      width = 138,
+      height = 135,
       line_length = 8,
       frame_count = 24,
       shift = {0.482, -0.638},
@@ -42,8 +42,8 @@ data:extend(
     discharge_animation =
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
-      frame_width = 147,
-      frame_height = 128,
+      width = 147,
+      height = 128,
       line_length = 8,
       frame_count = 24,
       shift = {0.395, -0.525},

@@ -40,8 +40,8 @@ data:extend({
       north =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-up-mk2.png",
-        frame_width = 46,
-        frame_height = 56,
+        width = 46,
+        height = 56,
         frame_count = 8,
         shift = {0.09375, 0.03125},
         animation_speed = 0.5
@@ -49,8 +49,8 @@ data:extend({
       east =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-right-mk2.png",
-        frame_width = 51,
-        frame_height = 56,
+        width = 51,
+        height = 56,
         frame_count = 8,
         shift = {0.265625, -0.21875},
         animation_speed = 0.5
@@ -58,8 +58,8 @@ data:extend({
       south =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-down-mk2.png",
-        frame_width = 61,
-        frame_height = 58,
+        width = 61,
+        height = 58,
         frame_count = 8,
         shift = {0.421875, -0.125},
         animation_speed = 0.5
@@ -67,8 +67,8 @@ data:extend({
       west =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-left-mk2.png",
-        frame_width = 56,
-        frame_height = 44,
+        width = 56,
+        height = 44,
         frame_count = 8,
         shift = {0.3125, 0.0625},
         animation_speed = 0.5
@@ -116,8 +116,8 @@ data:extend({
       north =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-up-mk3.png",
-        frame_width = 46,
-        frame_height = 56,
+        width = 46,
+        height = 56,
         frame_count = 8,
         shift = {0.09375, 0.03125},
         animation_speed = 0.5
@@ -125,8 +125,8 @@ data:extend({
       east =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-right-mk3.png",
-        frame_width = 51,
-        frame_height = 56,
+        width = 51,
+        height = 56,
         frame_count = 8,
         shift = {0.265625, -0.21875},
         animation_speed = 0.5
@@ -134,8 +134,8 @@ data:extend({
       south =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-down-mk3.png",
-        frame_width = 61,
-        frame_height = 58,
+        width = 61,
+        height = 58,
         frame_count = 8,
         shift = {0.421875, -0.125},
         animation_speed = 0.5
@@ -143,8 +143,8 @@ data:extend({
       west =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-left-mk3.png",
-        frame_width = 56,
-        frame_height = 44,
+        width = 56,
+        height = 44,
         frame_count = 8,
         shift = {0.3125, 0.0625},
         animation_speed = 0.5
@@ -192,8 +192,8 @@ data:extend({
       north =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-up-mk4.png",
-        frame_width = 46,
-        frame_height = 56,
+        width = 46,
+        height = 56,
         frame_count = 8,
         shift = {0.09375, 0.03125},
         animation_speed = 0.5
@@ -201,8 +201,8 @@ data:extend({
       east =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-right-mk4.png",
-        frame_width = 51,
-        frame_height = 56,
+        width = 51,
+        height = 56,
         frame_count = 8,
         shift = {0.265625, -0.21875},
         animation_speed = 0.5
@@ -210,8 +210,8 @@ data:extend({
       south =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-down-mk4.png",
-        frame_width = 61,
-        frame_height = 58,
+        width = 61,
+        height = 58,
         frame_count = 8,
         shift = {0.421875, -0.125},
         animation_speed = 0.5
@@ -219,8 +219,8 @@ data:extend({
       west =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-left-mk4.png",
-        frame_width = 56,
-        frame_height = 44,
+        width = 56,
+        height = 44,
         frame_count = 8,
         shift = {0.3125, 0.0625},
         animation_speed = 0.5
@@ -268,8 +268,8 @@ data:extend({
       north =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-up-mk5.png",
-        frame_width = 46,
-        frame_height = 56,
+        width = 46,
+        height = 56,
         frame_count = 8,
         shift = {0.09375, 0.03125},
         animation_speed = 0.5
@@ -277,8 +277,8 @@ data:extend({
       east =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-right-mk5.png",
-        frame_width = 51,
-        frame_height = 56,
+        width = 51,
+        height = 56,
         frame_count = 8,
         shift = {0.265625, -0.21875},
         animation_speed = 0.5
@@ -286,8 +286,8 @@ data:extend({
       south =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-down-mk5.png",
-        frame_width = 61,
-        frame_height = 58,
+        width = 61,
+        height = 58,
         frame_count = 8,
         shift = {0.421875, -0.125},
         animation_speed = 0.5
@@ -295,8 +295,8 @@ data:extend({
       west =
       {
         filename = "__DyTech-Energy__/graphics/entity/small-pump/small-pump-left-mk5.png",
-        frame_width = 56,
-        frame_height = 44,
+        width = 56,
+        height = 44,
         frame_count = 8,
         shift = {0.3125, 0.0625},
         animation_speed = 0.5
