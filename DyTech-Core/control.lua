@@ -10,7 +10,7 @@ require "scripts/gui"
 require "scripts/recycler-database"
 
 --[[Debug Functions]]--
-debug_master = false -- Master switch for debugging, shows most things!
+debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 local function debug(str)
@@ -88,20 +88,20 @@ end)
 game.onevent(defines.events.onplayercrafteditem, function(event)
 	if not glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
-		debug("No CraftedItems ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("No CraftedItems ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	else
 		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
-		debug("CraftedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("CraftedItems increased by "..tostring(event.itemstack.count).." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	end
 incrementDynamicCounters = function(stack)
 	if ItemDatabase.craftitems[stack.name] then
 		for counter, ingredients in pairs(ItemDatabase.craftitems[stack.name]) do
 			if ItemDatabase.craftitems[counter] then
 				incrementDynamicCounters({name=counter, count=ingredients})
-				debug(counter.." needs to be checked also")
+				debug(tostring(counter).." needs to be checked also")
 			else
 				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
-				debug("Crafting: "..counter.." increased by "..(stack.count*ingredients))
+				debug("Crafting: "..tostring(counter).." increased by "..tostring((stack.count*ingredients)))
 			end
 		end
 	end
@@ -146,42 +146,34 @@ game.onevent(defines.events.onplayermineditem, function(event)
 	if MineDatabase.mineitems[event.itemstack.name] then
 		for counter, ingredients in pairs(MineDatabase.mineitems[event.itemstack.name]) do 
 			glob.counter[counter]=glob.counter[counter]+(event.itemstack.count*ingredients)
-			debug("Mining: "..counter.." increased by "..(event.itemstack.count*ingredients))
+			debug("Mining: "..tostring(counter).." increased by "..tostring((event.itemstack.count*ingredients)))
 		end
 	end
 	if event.itemstack.name == "raw-wood" then
 		if math.random(50) == 25 then
 		local amount = math.random(1,5)
 			game.player.insert{name="resin",count=amount}
-			game.player.print(game.gettext("msg-rubber"))
-			debug("Player given "..amount.." Rubber Resin")
+			game.player.print({"msg-rubber"})
+			debug("Player given "..tostring(amount).." Rubber Resin")
 		end
 	end
 	if not glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
-		debug("MinedItems not found".." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("MinedItems not found".." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	else
 		glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.MinedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
-		debug("MinedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("MinedItems increased by "..tostring(event.itemstack.count).." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	end
 end)
 
 game.onevent(defines.events.onrobotmined, function(event)
 	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
-	if event.itemstack.name == "raw-wood" then
-		if math.random(50) == 25 then
-		local amount = math.random(1,5)
-			game.player.insert{name="resin",count=amount}
-			game.player.print(game.gettext("msg-rubber"))
-			debug("Player given "..amount.." Rubber Resin")
-		end
-	end
 	if not glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
-		debug("RobotMinedItems not found".." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("RobotMinedItems not found".." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	else
 		glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.RobotMinedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
-		debug("RobotMinedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("RobotMinedItems increased by "..tostring(event.itemstack.count).." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	end
 end)
 
@@ -194,10 +186,10 @@ game.onevent(defines.events.onentitydied, function(event)
 	end
 	if not glob.EntityDied[fs.EntityNameLocale(event.entity.name)] then
 		glob.EntityDied[fs.EntityNameLocale(event.entity.name)] = 1
-		debug("EntityDied not found".." ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("EntityDied not found".." ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	else
 		glob.EntityDied[fs.EntityNameLocale(event.entity.name)] = glob.EntityDied[fs.EntityNameLocale(event.entity.name)] + 1
-		debug("EntityDied increased by 1".." ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("EntityDied increased by 1".." ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	end
 end)
 
@@ -208,20 +200,20 @@ end)
 game.onevent(defines.events.onmarkedfordeconstruction, function(event)
 	if not glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] then
 		glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] = 1
-		debug("MarkedForDeconstruction not found ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("MarkedForDeconstruction not found ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	else
 		glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] = glob.MarkedForDeconstruction[fs.EntityNameLocale(event.entity.name)] + 1
-		debug("MarkedForDeconstruction increased by 1 ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("MarkedForDeconstruction increased by 1 ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	end	
 end)
 
 game.onevent(defines.events.oncanceleddeconstruction, function(event)
 	if not glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] then
 		glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] = 1
-		debug("CanceledDeconstruction not found ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("CanceledDeconstruction not found ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	else
 		glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] = glob.CanceledDeconstruction[fs.EntityNameLocale(event.entity.name)] + 1
-		debug("CanceledDeconstruction increased by 1 ("..fs.EntityNameLocale(event.entity.name)..")")
+		debug("CanceledDeconstruction increased by 1 ("..tostring(fs.EntityNameLocale(event.entity.name))..")")
 	end	
 end)
 
@@ -229,10 +221,10 @@ game.onevent(defines.events.onpickedupitem, function(event)
 	glob.counter2.pickup = glob.counter2.pickup + event.itemstack.count
 	if not glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] then
 		glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
-		debug("PickedItems not found ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("PickedItems not found ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	else
 		glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.PickedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
-		debug("PickedItems increased by "..event.itemstack.count.." ("..fs.ItemNameLocale(event.itemstack.name)..")")
+		debug("PickedItems increased by "..tostring(event.itemstack.count).." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
 	end
 end)
 
@@ -351,7 +343,7 @@ game.onevent(defines.events.onrobotbuiltentity, function(event)
 		glob.sand[glob.sandcount].position=event.createdentity.position
 		debug("Sand Collector Build at "..serpent.block(event.createdentity.position))
 	elseif debug_master==true then
-		debug(fs.EntityNameLocale(event.createdentity.name).." created at "..serpent.block(event.createdentity.position))
+		debug(tostring(fs.EntityNameLocale(event.createdentity.name)).." created at "..serpent.block(event.createdentity.position))
 	end
 	glob.counter2.build = glob.counter2.build + 1
 incrementDynamicCounters = function(stack)
@@ -361,7 +353,7 @@ incrementDynamicCounters = function(stack)
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
 				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
-				debug("Build Database called, "..counter.." increased by "..(1*ingredients).."(Robots placed)")
+				debug("Build Database called, "..tostring(counter).." increased by "..tostring((1*ingredients)).."(Robots placed)")
 			end
 		end
 	end
@@ -369,10 +361,10 @@ end
 incrementDynamicCounters(event.createdentity)
 	if not glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] then
 		glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] = 1
-		debug("RobotBuildEntity not found ("..fs.EntityNameLocale(event.createdentity.name)..")")
+		debug("RobotBuildEntity not found ("..tostring(fs.EntityNameLocale(event.createdentity.name))..")")
 	else
 		glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] = glob.RobotBuildEntity[fs.EntityNameLocale(event.createdentity.name)] + 1
-		debug("RobotBuildEntity increased by 1 ("..fs.EntityNameLocale(event.createdentity.name)..")")
+		debug("RobotBuildEntity increased by 1 ("..tostring(fs.EntityNameLocale(event.createdentity.name))..")")
 	end	
 end)
 
@@ -410,7 +402,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		glob.sand[glob.sandcount].position=event.createdentity.position
 		debug("Sand Collector Build at "..serpent.block(event.createdentity.position))
 	elseif debug_master==true then
-		debug(fs.EntityNameLocale(event.createdentity.name).." created at "..serpent.block(event.createdentity.position))
+		debug(tostring(fs.EntityNameLocale(event.createdentity.name)).." created at "..serpent.block(event.createdentity.position))
 	end
 	glob.counter2.build = glob.counter2.build + 1
 incrementDynamicCounters = function(stack)
@@ -420,24 +412,24 @@ incrementDynamicCounters = function(stack)
 				incrementDynamicCounters({name=counter, count=ingredients})
 			else
 				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
-				debug("Build Database called, "..counter.." increased by "..(1*ingredients).."(Player placed)")
+				debug("Build Database called, "..tostring(counter).." increased by "..tostring((1*ingredients)).."(Player placed)")
 			end
 		end
 	end
 end
 incrementDynamicCounters(event.createdentity)
-	if not glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] then
-		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = 1
-		debug("BuildEntity not found ("..fs.EntityNameLocale(event.createdentity.name)..")")
+	if glob.BuildEntity[event.createdentity.name] then
+		glob.BuildEntity[event.createdentity.name] = glob.BuildEntity[event.createdentity.name] + 1
+		debug("BuildEntity increased by 1 ("..tostring(event.createdentity.name)..")")
 	else
-		glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] = glob.BuildEntity[fs.EntityNameLocale(event.createdentity.name)] + 1
-		debug("BuildEntity increased by 1 ("..fs.EntityNameLocale(event.createdentity.name)..")")
+		glob.BuildEntity[event.createdentity.name] = 1
+		debug("BuildEntity not found ("..tostring(event.createdentity.name)..")")
 	end	
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
 	glob.counter2.chunks = glob.counter2.chunks + 1
-	if debug_chunks then debug("Chunk Generated, chunks counter is now "..glob.counter2.chunks) end
+	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(glob.counter2.chunks)) end
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
@@ -563,7 +555,7 @@ remote.addinterface("DyTech-Core",
 	if type(name) == "string" then
 	local RandomNumber = math.random(glob.counter[name]/Number)
 		glob.counter[name] = (glob.counter[name]-RandomNumber)
-		game.player.print(game.gettext("msg-reduction-1").." "..name.." "..game.gettext("msg-reduction-2").." "..tostring(glob.counter[name]).." "..game.gettext("msg-reduction-3").." "..RandomNumber)
+		game.player.print({"msg-reduction-1"}.." "..tostring(name).." "..{"msg-reduction-2"}.." "..tostring(glob.counter[name]).." "..{"msg-reduction-3"}.." "..tostring(RandomNumber))
 	end
   end,
   
