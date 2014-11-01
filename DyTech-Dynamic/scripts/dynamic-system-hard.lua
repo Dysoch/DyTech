@@ -843,9 +843,7 @@ function DynamicFailure(counter)
     normalCounter = basePercent-(normalCounter*(basePercent-minPercent))
     if math.random() < normalCounter then
         return true
-		debug("Failure True")
     else
         return false
-		debug("Failure False")
     end
 end
