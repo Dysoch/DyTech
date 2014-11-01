@@ -14,8 +14,7 @@ require("prototypes.entity.lava-machines")
 require("prototypes.entity.machines")
 require("prototypes.entity.molten-metal-machines")
 require("prototypes.entity.pipes")
-require("prototypes.entity.wall-brick")
-require("prototypes.entity.wall-tungsten")
+require("prototypes.entity.walls")
 
 -- fluid 
 require("prototypes.fluid.intermediates")
