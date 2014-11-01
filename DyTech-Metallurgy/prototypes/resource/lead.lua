@@ -89,8 +89,8 @@ data:extend(
 	{
 	  filename = "__DyTech-Metallurgy__/graphics/entity/ores/lead-ore.png",
 	  priority = "extra-high",
-	  frame_width = 38,
-	  frame_height = 38,
+	  width = 38,
+	  height = 38,
 	  frame_count = 3,
 	  direction_count = 8
 	},

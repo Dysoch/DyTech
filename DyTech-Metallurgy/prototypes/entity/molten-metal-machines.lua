@@ -24,8 +24,8 @@ data:extend(
     {
       filename = "__DyTech-Metallurgy__/graphics/entity/metallurgy-machines/forge.png",
       priority = "medium",
-      frame_width = 113,
-      frame_height = 91,
+      width = 113,
+      height = 91,
       line_length = 11,
       frame_count = 33,
       shift = {0.2, 0}
@@ -84,8 +84,8 @@ data:extend(
     {
       filename = "__DyTech-Metallurgy__/graphics/entity/metallurgy-machines/blast-furnace.png",
       priority = "medium",
-      frame_width = 212,
-      frame_height = 180,
+      width = 212,
+      height = 180,
       line_length = 5,
       frame_count = 16,
 	  shift = {0.8, 0.18}

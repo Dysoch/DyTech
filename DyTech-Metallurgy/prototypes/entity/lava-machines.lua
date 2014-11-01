@@ -11,6 +11,7 @@ data:extend(
     resource_categories = {"lava-magma"},
     max_health = 100,
     corpse = "big-remnants",
+    dying_explosion = "huge-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -46,26 +47,34 @@ data:extend(
     },
     base_picture =
     {
-      sheet = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-      priority = "extra-high",
-      width = 114,
-      height = 113,
-      shift = {0.1875, -0.03125}
+      sheet =
+      {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 114,
+        height = 113,
+        shift = {0.1875, -0.03125}
+      }
     },
     animations =
     {
       north =
       {
         priority = "extra-high",
-        frame_width = 116,
-        frame_height = 110,
+        width = 116,
+        height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
         frame_count = 40,
         animation_speed = 0.5
       }
-    }
+    },
+    working_sound =
+    {
+      sound = { filename = "__base__/sound/pumpjack.ogg" },
+      apparent_volume = 1.5,
+    },
   },
 }
 )

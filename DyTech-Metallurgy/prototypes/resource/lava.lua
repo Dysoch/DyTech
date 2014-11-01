@@ -59,8 +59,8 @@ data:extend(
     {
       filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-600-new.png",
       priority = "extra-high",
-      frame_width = 75,
-      frame_height = 61,
+      width = 75,
+      height = 61,
       frame_count = 4,
       direction_count = 1
     },
@@ -126,8 +126,8 @@ data:extend(
     {
       filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-1400-new.png",
       priority = "extra-high",
-      frame_width = 75,
-      frame_height = 61,
+      width = 75,
+      height = 61,
       frame_count = 4,
       direction_count = 1
     },
@@ -193,8 +193,8 @@ data:extend(
     {
       filename = "__DyTech-Metallurgy__/graphics/entity/fluids/lava-2800-new.png",
       priority = "extra-high",
-      frame_width = 75,
-      frame_height = 61,
+      width = 75,
+      height = 61,
       frame_count = 4,
       direction_count = 1
     },

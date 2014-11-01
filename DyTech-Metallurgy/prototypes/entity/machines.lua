@@ -60,8 +60,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
       priority = "high",
-      frame_width = 142,
-      frame_height = 113,
+      width = 142,
+      height = 113,
       frame_count = 32,
       line_length = 8,
       shift = {0.84, -0.09}
@@ -137,8 +137,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
       priority = "high",
-      frame_width = 142,
-      frame_height = 113,
+      width = 142,
+      height = 113,
       frame_count = 32,
       line_length = 8,
       shift = {0.84, -0.09}
@@ -214,8 +214,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
       priority = "high",
-      frame_width = 142,
-      frame_height = 113,
+      width = 142,
+      height = 113,
       frame_count = 32,
       line_length = 8,
       shift = {0.84, -0.09}
@@ -291,8 +291,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
       priority = "high",
-      frame_width = 142,
-      frame_height = 113,
+      width = 142,
+      height = 113,
       frame_count = 32,
       line_length = 8,
       shift = {0.84, -0.09}
@@ -368,8 +368,8 @@ data:extend(
     {
       filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
       priority = "high",
-      frame_width = 142,
-      frame_height = 113,
+      width = 142,
+      height = 113,
       frame_count = 32,
       line_length = 8,
       shift = {0.84, -0.09}
