@@ -1,4 +1,4 @@
-require "defines"
+--[[require "defines"
 require "databases/buildingdatabase"
 require "databases/craftingdatabase"
 require "databases/killingdatabase"
@@ -77,7 +77,7 @@ game.onload(function()
 	debug("Treefarm not installed")
 		glob.compatibility.treefarm = false
 		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
-			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
+			if game.itemprototypes[seedTypeInfo.states[1]]--[[ == nil then
 				glob.trees.isGrowing[seedTypeName] = nil
 				glob.trees.seedTypes[seedTypeName] = nil
 			end
@@ -585,4 +585,4 @@ remote.addinterface("DyTech-Core",
 	game.player.force.resettechnologies()
 	game.player.force.resetrecipes()
   end
-})
+})]]--
