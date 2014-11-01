@@ -22,8 +22,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/gem-crusher/crusher.png",
       priority = "high",
-      frame_width = 160,
-      frame_height = 212,
+      width = 160,
+      height = 212,
       frame_count = 1,
       line_length = 1,
       shift = {0.7, 0.12}
@@ -63,8 +63,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/gem-grinder/grinder.png",
       priority = "high",
-      frame_width = 128,
-      frame_height = 128,
+      width = 128,
+      height = 128,
       frame_count = 1,
       line_length = 1,
       shift = {0.7, 0.12}
@@ -104,8 +104,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/gem-polisher/polisher.png",
       priority = "high",
-      frame_width = 96,
-      frame_height = 163,
+      width = 96,
+      height = 163,
       frame_count = 1,
       line_length = 1,
       shift = {0.7, 0.12}
@@ -145,8 +145,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/gem-cutter/cutter.png",
       priority = "high",
-      frame_width = 92,
-      frame_height = 92,
+      width = 92,
+      height = 92,
       frame_count = 1,
       line_length = 1,
       shift = {0.7, 0.12}

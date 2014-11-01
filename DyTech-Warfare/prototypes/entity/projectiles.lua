@@ -28,8 +28,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-ruby.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.10
@@ -62,8 +62,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-ruby.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.10
@@ -96,8 +96,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-sapphire.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.15
@@ -130,8 +130,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-sapphire.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.15
@@ -164,8 +164,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-sapphire.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.15
@@ -198,8 +198,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-emerald.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.25
@@ -232,8 +232,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-emerald.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.25
@@ -266,8 +266,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-emerald.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.25
@@ -300,8 +300,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.5
@@ -334,8 +334,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.5
@@ -368,8 +368,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-topaz.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.5
@@ -406,8 +406,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-ruby.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.10
@@ -443,8 +443,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-sapphire.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.15
@@ -480,8 +480,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/laser/laser-emerald.png",
       frame_count = 1,
-      frame_width = 7,
-      frame_height = 14,
+      width = 7,
+      height = 14,
       priority = "high"
     },
     speed = 0.25
@@ -532,16 +532,16 @@ data:extend(
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     shadow =
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/combat-robot-capsule-shadow.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     smoke = capsule_smoke
@@ -592,16 +592,16 @@ data:extend(
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     shadow =
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/combat-robot-capsule-shadow.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     smoke = capsule_smoke
@@ -652,16 +652,16 @@ data:extend(
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/destroyer-capsule.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     shadow =
     {
       filename = "__base__/graphics/entity/combat-robot-capsule/combat-robot-capsule-shadow.png",
       frame_count = 1,
-      frame_width = 32,
-      frame_height = 32,
+      width = 32,
+      height = 32,
       priority = "high"
     },
     smoke = capsule_smoke
@@ -714,16 +714,16 @@ data:extend(
     {
       filename = "__base__/graphics/entity/basic-grenade/basic-grenade.png",
       frame_count = 1,
-      frame_width = 24,
-      frame_height = 24,
+      width = 24,
+      height = 24,
       priority = "high"
     },
     shadow =
     {
       filename = "__base__/graphics/entity/basic-grenade/basic-grenade-shadow.png",
       frame_count = 1,
-      frame_width = 24,
-      frame_height = 32,
+      width = 24,
+      height = 32,
       priority = "high"
     }
   },
@@ -775,16 +775,16 @@ data:extend(
     {
       filename = "__base__/graphics/entity/basic-grenade/basic-grenade.png",
       frame_count = 1,
-      frame_width = 24,
-      frame_height = 24,
+      width = 24,
+      height = 24,
       priority = "high"
     },
     shadow =
     {
       filename = "__base__/graphics/entity/basic-grenade/basic-grenade-shadow.png",
       frame_count = 1,
-      frame_width = 24,
-      frame_height = 32,
+      width = 24,
+      height = 32,
       priority = "high"
     }
   },

@@ -9,29 +9,29 @@ data:extend(
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-1.png",
 		priority = "extra-high",
-		frame_width = 5,
-		frame_height = 5,
+		width = 5,
+		height = 5,
 		frame_count = 1
 	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-2.png",
 		priority = "extra-high",
-		frame_width = 7,
-		frame_height = 5,
+		width = 7,
+		height = 5,
 		frame_count = 1
 	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-3.png",
 		priority = "extra-high",
-		frame_width = 6,
-		frame_height = 7,
+		width = 6,
+		height = 7,
 		frame_count = 1
 	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-4.png",
 		priority = "extra-high",
-		frame_width = 9,
-		frame_height = 8,
+		width = 9,
+		height = 8,
 		frame_count = 1
 	  }
 	},
@@ -40,29 +40,29 @@ data:extend(
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-shadow-1.png",
 		priority = "extra-high",
-		frame_width = 5,
-		frame_height = 5,
+		width = 5,
+		height = 5,
 		frame_count = 1
 	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-shadow-2.png",
 		priority = "extra-high",
-		frame_width = 7,
-		frame_height = 5,
+		width = 7,
+		height = 5,
 		frame_count = 1
 	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-shadow-3.png",
 		priority = "extra-high",
-		frame_width = 6,
-		frame_height = 7,
+		width = 6,
+		height = 7,
 		frame_count = 1
    	  },
 	  {
 		filename = "__DyTech-Warfare__/graphics/entity/gem/gem-particle-shadow-4.png",
 		priority = "extra-high",
-		frame_width = 9,
-		frame_height = 8,
+		width = 9,
+		height = 8,
 		frame_count = 1
 	  }
 	}
@@ -221,8 +221,8 @@ data:extend(
     {
       filename = "__DyTech-Warfare__/graphics/entity/gem/gemstone-deposit.png",
       priority = "extra-high",
-      frame_width = 38,
-      frame_height = 38,
+      width = 38,
+      height = 38,
       frame_count = 3,
       direction_count = 8
     },
