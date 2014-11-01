@@ -4,10 +4,11 @@ data:extend(
     type = "car",
     name = "car2",
     icon = "__DyTech-Transportation__/graphics/icons/car2.png",
-    flags = {"pushable", "placeable-neutral", "player-creation"},
+    flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {mining_time = 1, result = "car2"},
     max_health = 2500,
     corpse = "medium-remnants",
+    dying_explosion = "huge-explosion",
     resistances = 
     {
       {
@@ -29,8 +30,8 @@ data:extend(
     },
     collision_box = {{-0.7, -1}, {0.7, 1}},
     selection_box = {{-0.7, -1}, {0.7, 1}},
-    acceleration_per_energy = 0.000001,
-    breaking_speed = 0.01,
+    effectivity = 0.1,
+    braking_power = "300kW",
     burner =
     {
       effectivity = 0.8,
@@ -52,6 +53,7 @@ data:extend(
     },
     consumption = "1200kW",
     friction = 0.05,
+    crash_damage_multiplier = 0.1,
     light =
     {
       {
@@ -85,12 +87,13 @@ data:extend(
         intensity = 0.6
       }
     },
-    pictures =
+    animation =
     {
       filename = "__DyTech-Transportation__/graphics/entity/car/car-sheet.png",
       line_length = 8,
-      frame_width = 130,
-      frame_height = 93,
+      width = 130,
+      height = 93,
+      frame_count = 1,
       shift={0.5, 0},
       axially_symmetrical = false,
       direction_count = 64
@@ -132,9 +135,9 @@ data:extend(
     },
     open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
     close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-    rotation_speed = 0.015,
-    weight = 150,
-    inventory_size = 12
+    rotation_speed = 0.010,
+    weight = 1500,
+    inventory_size = 50
   },
   {
     type = "locomotive",
