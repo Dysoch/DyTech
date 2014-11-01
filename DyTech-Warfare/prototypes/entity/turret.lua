@@ -141,26 +141,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "58kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-ruby-1",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -209,6 +189,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 18,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "58kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-ruby-1",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -233,26 +233,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "66kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-ruby-2",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -301,6 +281,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 21,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "66kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-ruby-2",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -326,26 +326,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "58kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-sapphire-1",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -394,6 +374,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 22,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "58kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-sapphire-1",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -418,26 +418,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "75kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-sapphire-2",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -486,6 +466,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 24,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "75kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-sapphire-2",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -510,26 +510,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "91kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-sapphire-3",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -578,6 +558,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 26,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "91kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-sapphire-3",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -603,26 +603,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "66kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-emerald-1",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -671,6 +651,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 28,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "66kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-emerald-1",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -695,26 +695,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "91kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-emerald-2",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -763,6 +743,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 30,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "91kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-emerald-2",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -787,26 +787,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "133kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-emerald-3",
-              starting_speed = 0.30
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -855,6 +835,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 32,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "133kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-emerald-3",
+              starting_speed = 0.30
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -880,26 +880,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "600kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-topaz-1",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -948,6 +928,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 50,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "600kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-topaz-1",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -972,26 +972,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "450kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-topaz-2",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -1040,6 +1020,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 65,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "450kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-topaz-2",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
@@ -1064,26 +1064,6 @@ data:extend(
     preparing_speed = 0.05,
     dying_explosion = "huge-explosion",
     folding_speed = 0.05,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "300kJ",
-      action =
-      {
-        {
-          type = "direct",
-          action_delivery =
-          {
-            {
-              type = "projectile",
-              projectile = "laser-topaz-3",
-              starting_speed = 0.28
-            }
-          }
-        }
-      }
-    },
     energy_source =
     {
       type = "electric",
@@ -1132,6 +1112,26 @@ data:extend(
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 80,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "300kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-topaz-3",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
       sound =
       {
         {
