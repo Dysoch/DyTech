@@ -1,3 +1,12 @@
+
+DogPlayerScale = 1
+Dog_Player_Tint1 = {r=0.56, g=0.46, b=0.42, a=0.65}
+Dog_Player_Tint2 = {r=1, g=0.63, b=0, a=0.4}
+
+DogEnemyScale = 0.3
+Dog_Enemy_Tint1 = {r=0.56, g=0.46, b=0.42, a=0.65}
+Dog_Enemy_Tint2 = {r=1, g=0.63, b=0, a=0.4}
+
 data:extend(
 {
   {
@@ -11,26 +20,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-repairable", "not-on-map"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation =
-    {
-      frame_width = 142,
-      frame_height = 97,
-      frame_count = 17,
-      direction_count = 16,
-      axially_symetric = false,
-      shift = {0.328125, -0.09375},
-      stripes =
-      {
-        {
-          filename = "__DyTech-Genetics__/graphics/entity/dogs-player/dogs-die-1.png",
-          width_in_frames = 9
-        },
-        {
-          filename = "__DyTech-Genetics__/graphics/entity/dogs-player/dogs-die-2.png",
-          width_in_frames = 8
-        }
-      },
-    },
+    animation = biterdieanimation(DogPlayerScale, Dog_Player_Tint1, Dog_Player_Tint2)
   },
   {
     type = "corpse",
@@ -43,27 +33,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way", "not-repairable", "not-on-map"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation =
-    {
-      scale = 0.6,
-	  frame_width = 142,
-      frame_height = 97,
-      frame_count = 17,
-      direction_count = 16,
-      axially_symetric = false,
-      shift = {0.328125, -0.09375},
-      stripes =
-      {
-        {
-          filename = "__DyTech-Genetics__/graphics/entity/dogs-enemy/dogs-die-1.png",
-          width_in_frames = 9
-        },
-        {
-          filename = "__DyTech-Genetics__/graphics/entity/dogs-enemy/dogs-die-2.png",
-          width_in_frames = 8
-        }
-      },
-    },
+    animation = biterdieanimation(DogEnemyScale, Dog_Enemy_Tint1, Dog_Enemy_Tint2)
   },
 }
 )

@@ -1,6 +1,4 @@
 require("prototypes.entity.units")
 require("prototypes.entity.units-corpses")
-require("prototypes.entity.units-spawner")
-require("prototypes.entity.units-spawner-corpses")
-require("prototypes.item.units-spawner")
-require("prototypes.recipe.units-spawner")
+--require("prototypes.item.units-spawner")
+--require("prototypes.recipe.units-spawner")

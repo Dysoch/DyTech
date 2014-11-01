@@ -1,3 +1,12 @@
+
+DogPlayerScale = 1
+Dog_Player_Tint1 = {r=0.56, g=0.46, b=0.42, a=0.65}
+Dog_Player_Tint2 = {r=1, g=0.63, b=0, a=0.4}
+
+DogEnemyScale = 0.3
+Dog_Enemy_Tint1 = {r=0.56, g=0.46, b=0.42, a=0.65}
+Dog_Enemy_Tint2 = {r=1, g=0.63, b=0, a=0.4}
+
 data:extend(
 {
   {
@@ -10,7 +19,7 @@ data:extend(
     healing_per_tick = 0.05,
     collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
     selection_box = {{-0.4, -0.7}, {0.7, 0.4}},
-   attack_parameters =
+	attack_parameters =
     {
       range = 1,
       cooldown = 35,
@@ -31,16 +40,7 @@ data:extend(
           volume = 0.8
         }
       },
-      animation =
-      {
-        filename = "__DyTech-Genetics__/graphics/entity/dogs-player/dogs-attack.png",
-        frame_width = 139,
-        frame_height = 93,
-        frame_count = 11,
-        direction_count = 16,
-        axially_symmetrical = false,
-        shift = {0.84375, -0.3125}
-      }
+      animation = biterattackanimation(DogPlayerScale, Dog_Player_Tint1, Dog_Player_Tint2)
     },
 	vision_distance = 30,
     movement_speed = 0.3,
@@ -67,17 +67,7 @@ data:extend(
         volume = 0.7
       }
     },
-    run_animation =
-    {
-      filename = "__DyTech-Genetics__/graphics/entity/dogs-player/dogs-run.png",
-      still_frame = 4,
-      frame_width = 86,
-      frame_height = 59,
-      frame_count = 16,
-      direction_count = 16,
-      shift = {0.359375, -0.15625},
-      axially_symmetrical = false
-    }
+    run_animation = biterrunanimation(DogPlayerScale, Dog_Player_Tint1, Dog_Player_Tint2)
   },
   {
     type = "unit",
@@ -89,7 +79,7 @@ data:extend(
     healing_per_tick = 0.05,
     collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
     selection_box = {{-0.4, -0.7}, {0.7, 0.4}},
-   attack_parameters =
+	attack_parameters =
     {
       range = 0.5,
       cooldown = 35,
@@ -110,17 +100,7 @@ data:extend(
           volume = 0.8
         }
       },
-      animation =
-      {
-        scale = 0.6,
-		filename = "__DyTech-Genetics__/graphics/entity/dogs-enemy/dogs-attack.png",
-        frame_width = 139,
-        frame_height = 93,
-        frame_count = 11,
-        direction_count = 16,
-        axially_symmetrical = false,
-        shift = {0.84375, -0.3125}
-      }
+      animation = biterattackanimation(DogEnemyScale, Dog_Enemy_Tint1, Dog_Enemy_Tint2)
     },
 	vision_distance = 30,
     movement_speed = 0.35,
@@ -147,18 +127,7 @@ data:extend(
         volume = 0.7
       }
     },
-    run_animation =
-    {
-      scale = 0.6,
-	  filename = "__DyTech-Genetics__/graphics/entity/dogs-enemy/dogs-run.png",
-      still_frame = 4,
-      frame_width = 86,
-      frame_height = 59,
-      frame_count = 16,
-      direction_count = 16,
-      shift = {0.359375, -0.15625},
-      axially_symmetrical = false
-    }
+    run_animation = biterrunanimation(DogEnemyScale, Dog_Enemy_Tint1, Dog_Enemy_Tint2)
   },
   --[[{
     type = "unit",
