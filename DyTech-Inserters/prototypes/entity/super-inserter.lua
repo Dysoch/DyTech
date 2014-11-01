@@ -100,10 +100,13 @@ data:extend(
     insert_position = {0, 1.35},
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/superfast/superfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/superfast/superfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
 	programmable = true,
     filter_count = 5,
@@ -209,10 +212,13 @@ data:extend(
     insert_position = {0, 1.35},
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/superfast/superfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/superfast/superfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
 	programmable = true,
     rotation_speed = 0.40  

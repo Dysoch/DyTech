@@ -102,10 +102,13 @@ data:extend(
     insert_position = {0, 0.65},
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -213,10 +216,13 @@ data:extend(
     insert_position = {0, 1.35},
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -326,11 +332,14 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
-    }
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
+    },
   },
   {
     type = "inserter",
@@ -436,11 +445,14 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
-    }
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
+    },
   },
   {
     type = "inserter",
@@ -546,11 +558,14 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
-    }
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
+    },
   },
   {
     type = "inserter",
@@ -656,11 +671,14 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
-    }
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
+    },
   },
   {
     type = "inserter",
@@ -762,10 +780,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -871,10 +892,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -980,10 +1004,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1091,10 +1118,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1202,10 +1232,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1313,10 +1346,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1424,10 +1460,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1533,10 +1572,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1642,10 +1684,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1751,10 +1796,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,
@@ -1860,10 +1908,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png"
+      sheet=
+      {
+        filename = "__base__/graphics/entity/smart-inserter/smart-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     programmable = true,
 	filter_count = 5,

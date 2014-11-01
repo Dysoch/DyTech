@@ -100,10 +100,13 @@ data:extend(
     insert_position = {0, 0.65},
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/basic-inserter/basic-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/basic-inserter/basic-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46,
+      }
     },
     rotation_speed = 0.014
   },
@@ -209,10 +212,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     }
   },
   {
@@ -317,10 +323,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     }
   },
   {
@@ -425,10 +434,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/long-handed-inserter/long-handed-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     }
   },
   {
@@ -533,10 +545,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.035
   },
@@ -642,10 +657,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
@@ -751,10 +769,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
@@ -860,10 +881,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.035
   },
@@ -971,10 +995,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.035
   },
@@ -1082,10 +1109,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.035
   },
@@ -1193,10 +1223,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__base__/graphics/entity/fast-inserter/fast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.035
   },
@@ -1300,10 +1333,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
@@ -1409,10 +1445,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
@@ -1518,10 +1557,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
@@ -1627,10 +1669,13 @@ data:extend(
     },
     platform_picture =
     {
-      priority = "extra-high",
-      width = 46,
-      height = 46,
-      sheet = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png"
+      sheet =
+      {
+        filename = "__DyTech-Inserters__/graphics/entity/inserter/veryfast/veryfast-inserter-platform.png",
+        priority = "extra-high",
+        width = 46,
+        height = 46
+      }
     },
     rotation_speed = 0.07
   },
