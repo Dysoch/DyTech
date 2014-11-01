@@ -7,5 +7,5 @@ data.raw["item"]["copper-ore"].stack_size = 200
 data.raw["item"]["iron-ore"].stack_size = 200
 data.raw["item"]["coal"].stack_size = 200
 data.raw["item"]["stone"].stack_size = 200
-data.raw["item"]["wall"].order = "a[base-wall]"
-data.raw["item"]["wall"].subgroup = "defensive-walls"
+data.raw["item"]["stone-wall"].order = "a[base-wall]"
+data.raw["item"]["stone-wall"].subgroup = "defensive-walls"

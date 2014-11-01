@@ -9,8 +9,8 @@ data:extend(
       {
         filename = "__DyTech-Core__/graphics/particles/blank.png",
         priority = "extra-high",
-        frame_width = 16,
-        frame_height = 16,
+        width = 16,
+        height = 16,
         frame_count = 16,
         line_length = 16
       }

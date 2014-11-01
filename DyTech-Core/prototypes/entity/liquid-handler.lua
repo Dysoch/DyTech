@@ -15,32 +15,32 @@ data:extend(
       north =
       {
         filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-up.png",
-        frame_width = 46,
-        frame_height = 56,
+        width = 46,
+        height = 56,
         frame_count = 1,
         shift = {0.09375, 0.03125}
       },
       west =
       {
         filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-left.png",
-        frame_width = 56,
-        frame_height = 44,
+        width = 56,
+        height = 44,
         frame_count = 1,
         shift = {0.3125, 0.0625}
       },
       south =
       {
         filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-down.png",
-        frame_width = 61,
-        frame_height = 58,
+        width = 61,
+        height = 58,
         frame_count = 1,
         shift = {0.421875, -0.125},
       },
       east =
       {
         filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-right.png",
-        frame_width = 51,
-        frame_height = 56,
+        width = 51,
+        height = 56,
         frame_count = 1,
         shift = {0.265625, -0.21875}
       }
@@ -55,8 +55,8 @@ data:extend(
         north_animation =
         {
           filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-up.png",
-          frame_width = 46,
-          frame_height = 56,
+          width = 46,
+          height = 56,
           frame_count = 8,
           shift = {0.09375, 0.03125},
           animation_speed = 0.5,
@@ -65,8 +65,8 @@ data:extend(
         west_animation =
         {
           filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-left.png",
-          frame_width = 56,
-          frame_height = 44,
+          width = 56,
+          height = 44,
           frame_count = 8,
           shift = {0.3125, 0.0625},
           animation_speed = 0.5,
@@ -75,8 +75,8 @@ data:extend(
         south_animation =
         {
           filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-down.png",
-          frame_width = 61,
-          frame_height = 58,
+          width = 61,
+          height = 58,
           frame_count = 8,
           shift = {0.421875, -0.125},
           animation_speed = 0.5,
@@ -85,8 +85,8 @@ data:extend(
         east_animation =
         {
           filename = "__DyTech-Core__/graphics/entity/liquid-handler/liquid-handler-right.png",
-          frame_width = 51,
-          frame_height = 56,
+          width = 51,
+          height = 56,
           frame_count = 8,
           shift = {0.265625, -0.21875},
           animation_speed = 0.5,
