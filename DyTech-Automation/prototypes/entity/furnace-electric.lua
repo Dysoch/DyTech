@@ -45,8 +45,8 @@ data:extend(
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-2.png",
       priority = "high",
       x = 131,
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 12,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -55,8 +55,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-2.png",
       priority = "high",
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 1,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -108,8 +108,8 @@ data:extend(
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-3.png",
       priority = "high",
       x = 131,
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 12,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -118,8 +118,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-3.png",
       priority = "high",
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 1,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -171,8 +171,8 @@ data:extend(
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-4.png",
       priority = "high",
       x = 131,
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 12,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -181,8 +181,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-4.png",
       priority = "high",
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 1,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -234,8 +234,8 @@ data:extend(
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-5.png",
       priority = "high",
       x = 131,
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 12,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }
@@ -244,8 +244,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-5.png",
       priority = "high",
-      frame_width = 131,
-      frame_height = 102,
+      width = 131,
+      height = 102,
       frame_count = 1,
       animation_speed = 0.5,
       shift = {0.5, 0.05 }

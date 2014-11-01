@@ -31,8 +31,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/radar/radar-2.png",
       priority = "low",
-      frame_width = 153,
-      frame_height = 131,
+      width = 153,
+      height = 131,
       axially_symmetrical = false,
       apply_projection = false,
       direction_count = 64,
@@ -80,8 +80,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/radar/radar-3.png",
       priority = "low",
-      frame_width = 153,
-      frame_height = 131,
+      width = 153,
+      height = 131,
       axially_symmetrical = false,
       apply_projection = false,
       direction_count = 64,
@@ -129,8 +129,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/radar/radar-4.png",
       priority = "low",
-      frame_width = 153,
-      frame_height = 131,
+      width = 153,
+      height = 131,
       axially_symmetrical = false,
       apply_projection = false,
       direction_count = 64,
@@ -178,8 +178,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/radar/radar-5.png",
       priority = "low",
-      frame_width = 153,
-      frame_height = 131,
+      width = 153,
+      height = 131,
       axially_symmetrical = false,
       apply_projection = false,
       direction_count = 64,

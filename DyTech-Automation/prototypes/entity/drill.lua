@@ -26,8 +26,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 110,
-        frame_height = 114,
+        width = 110,
+        height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north2.png",
@@ -38,8 +38,8 @@ data:extend(
       east =
       {
         priority = "extra-high",
-        frame_width = 129,
-        frame_height = 100,
+        width = 129,
+        height = 100,
         line_length = 8,
         shift = {0.45, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east2.png",
@@ -50,8 +50,8 @@ data:extend(
       south =
       {
         priority = "extra-high",
-        frame_width = 109,
-        frame_height = 111,
+        width = 109,
+        height = 111,
         line_length = 8,
         shift = {0.15, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south2.png",
@@ -62,8 +62,8 @@ data:extend(
       west =
       {
         priority = "extra-high",
-        frame_width = 128,
-        frame_height = 100,
+        width = 128,
+        height = 100,
         line_length = 8,
         shift = {0.25, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west2.png",
@@ -118,8 +118,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 110,
-        frame_height = 114,
+        width = 110,
+        height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north3.png",
@@ -130,8 +130,8 @@ data:extend(
       east =
       {
         priority = "extra-high",
-        frame_width = 129,
-        frame_height = 100,
+        width = 129,
+        height = 100,
         line_length = 8,
         shift = {0.45, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east3.png",
@@ -142,8 +142,8 @@ data:extend(
       south =
       {
         priority = "extra-high",
-        frame_width = 109,
-        frame_height = 111,
+        width = 109,
+        height = 111,
         line_length = 8,
         shift = {0.15, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south3.png",
@@ -154,8 +154,8 @@ data:extend(
       west =
       {
         priority = "extra-high",
-        frame_width = 128,
-        frame_height = 100,
+        width = 128,
+        height = 100,
         line_length = 8,
         shift = {0.25, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west3.png",
@@ -210,8 +210,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 110,
-        frame_height = 114,
+        width = 110,
+        height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north4.png",
@@ -222,8 +222,8 @@ data:extend(
       east =
       {
         priority = "extra-high",
-        frame_width = 129,
-        frame_height = 100,
+        width = 129,
+        height = 100,
         line_length = 8,
         shift = {0.45, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east4.png",
@@ -234,8 +234,8 @@ data:extend(
       south =
       {
         priority = "extra-high",
-        frame_width = 109,
-        frame_height = 111,
+        width = 109,
+        height = 111,
         line_length = 8,
         shift = {0.15, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south4.png",
@@ -246,8 +246,8 @@ data:extend(
       west =
       {
         priority = "extra-high",
-        frame_width = 128,
-        frame_height = 100,
+        width = 128,
+        height = 100,
         line_length = 8,
         shift = {0.25, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west4.png",
@@ -302,8 +302,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 110,
-        frame_height = 114,
+        width = 110,
+        height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north5.png",
@@ -314,8 +314,8 @@ data:extend(
       east =
       {
         priority = "extra-high",
-        frame_width = 129,
-        frame_height = 100,
+        width = 129,
+        height = 100,
         line_length = 8,
         shift = {0.45, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east5.png",
@@ -326,8 +326,8 @@ data:extend(
       south =
       {
         priority = "extra-high",
-        frame_width = 109,
-        frame_height = 111,
+        width = 109,
+        height = 111,
         line_length = 8,
         shift = {0.15, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south5.png",
@@ -338,8 +338,8 @@ data:extend(
       west =
       {
         priority = "extra-high",
-        frame_width = 128,
-        frame_height = 100,
+        width = 128,
+        height = 100,
         line_length = 8,
         shift = {0.25, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west5.png",
@@ -395,8 +395,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 110,
-        frame_height = 114,
+        width = 110,
+        height = 114,
         line_length = 8,
         shift = {0.2, -0.2},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/north6.png",
@@ -407,8 +407,8 @@ data:extend(
       east =
       {
         priority = "extra-high",
-        frame_width = 129,
-        frame_height = 100,
+        width = 129,
+        height = 100,
         line_length = 8,
         shift = {0.45, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east6.png",
@@ -419,8 +419,8 @@ data:extend(
       south =
       {
         priority = "extra-high",
-        frame_width = 109,
-        frame_height = 111,
+        width = 109,
+        height = 111,
         line_length = 8,
         shift = {0.15, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south6.png",
@@ -431,8 +431,8 @@ data:extend(
       west =
       {
         priority = "extra-high",
-        frame_width = 128,
-        frame_height = 100,
+        width = 128,
+        height = 100,
         line_length = 8,
         shift = {0.25, 0},
         filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west6.png",

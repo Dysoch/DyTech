@@ -47,8 +47,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-2.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -56,8 +56,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-2.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -65,8 +65,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
       priority = "high",
-      frame_width = 36,
-      frame_height = 19,
+      width = 36,
+      height = 19,
       frame_count = 12,
       shift = { -0.05, 0.65}
     },
@@ -119,8 +119,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-3.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -128,8 +128,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-3.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -137,8 +137,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
       priority = "high",
-      frame_width = 36,
-      frame_height = 19,
+      width = 36,
+      height = 19,
       frame_count = 12,
       shift = { -0.05, 0.65}
     },
@@ -191,8 +191,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-4.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -200,8 +200,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-4.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -209,8 +209,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
       priority = "high",
-      frame_width = 36,
-      frame_height = 19,
+      width = 36,
+      height = 19,
       frame_count = 12,
       shift = { -0.05, 0.65}
     },
@@ -263,8 +263,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-5.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -272,8 +272,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-5.png",
       priority = "high",
-      frame_width = 91,
-      frame_height = 69,
+      width = 91,
+      height = 69,
       frame_count = 1,
       shift = {0.5, 0.05 }
     },
@@ -281,8 +281,8 @@ data:extend(
     {
       filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
       priority = "high",
-      frame_width = 36,
-      frame_height = 19,
+      width = 36,
+      height = 19,
       frame_count = 12,
       shift = { -0.05, 0.65}
     },

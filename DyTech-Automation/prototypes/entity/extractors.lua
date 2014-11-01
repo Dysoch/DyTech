@@ -57,8 +57,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 116,
-        frame_height = 110,
+        width = 116,
+        height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
@@ -129,8 +129,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 116,
-        frame_height = 110,
+        width = 116,
+        height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
@@ -201,8 +201,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 116,
-        frame_height = 110,
+        width = 116,
+        height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
@@ -273,8 +273,8 @@ data:extend(
       north =
       {
         priority = "extra-high",
-        frame_width = 116,
-        frame_height = 110,
+        width = 116,
+        height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
