@@ -235,8 +235,8 @@ data:extend(
     pictures =
     {
       priority = "very-low",
-      frame_width = 346,
-      frame_height = 248,
+      width = 346,
+      height = 248,
       axially_symmetrical = false,
       direction_count = 256,
       filenames =
@@ -392,8 +392,8 @@ data:extend(
     pictures =
     {
       priority = "very-low",
-      frame_width = 346,
-      frame_height = 248,
+      width = 346,
+      height = 248,
       axially_symmetrical = false,
       direction_count = 256,
       filenames =
@@ -503,8 +503,8 @@ data:extend(
     pictures =
     {
       priority = "very-low",
-      frame_width = 285,
-      frame_height = 218,
+      width = 285,
+      height = 218,
       axially_symmetrical = false,
       back_equals_front = true,
       direction_count = 128,
@@ -560,8 +560,8 @@ data:extend(
     pictures =
     {
       priority = "very-low",
-      frame_width = 285,
-      frame_height = 218,
+      width = 285,
+      height = 218,
       axially_symmetrical = false,
       back_equals_front = true,
       direction_count = 128,
@@ -617,8 +617,8 @@ data:extend(
     pictures =
     {
       priority = "very-low",
-      frame_width = 285,
-      frame_height = 218,
+      width = 285,
+      height = 218,
       axially_symmetrical = false,
       back_equals_front = true,
       direction_count = 128,
