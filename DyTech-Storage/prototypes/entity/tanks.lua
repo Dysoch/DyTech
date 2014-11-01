@@ -25,12 +25,15 @@ data:extend(
     },
     picture =
     {
-      sheet = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-2.png",
-      priority = "extra-high",
-      frames = 2,
-      width = 140,
-      height = 115,
-      shift = {0.6875, 0.109375}
+      sheet =
+      {
+        filename = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-2.png",
+		priority = "extra-high",
+		frames = 2,
+		width = 140,
+		height = 115,
+		shift = {0.6875, 0.109375}
+	  }
     },
     working_sound =
     {
@@ -67,13 +70,16 @@ data:extend(
     },
     picture =
     {
-      sheet = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-3.png",
-      priority = "extra-high",
-      frames = 2,
-      width = 140,
-      height = 115,
-      shift = {0.6875, 0.109375}
-    },
+      sheet =
+      {
+        filename = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-3.png",
+		priority = "extra-high",
+		frames = 2,
+		width = 140,
+		height = 115,
+		shift = {0.6875, 0.109375}
+      }
+	},
     working_sound =
     {
       sound = {
@@ -109,12 +115,15 @@ data:extend(
     },
     picture =
     {
-      sheet = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-4.png",
-      priority = "extra-high",
-      frames = 2,
-      width = 140,
-      height = 115,
-      shift = {0.6875, 0.109375}
+      sheet =
+      {
+        filename = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-4.png",
+		priority = "extra-high",
+		frames = 2,
+		width = 140,
+		height = 115,
+		shift = {0.6875, 0.109375}
+	  }
     },
     working_sound =
     {
@@ -151,12 +160,15 @@ data:extend(
     },
     picture =
     {
-      sheet = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-5.png",
-      priority = "extra-high",
-      frames = 2,
-      width = 140,
-      height = 115,
-      shift = {0.6875, 0.109375}
+      sheet =
+      {
+        filename = "__DyTech-Storage__/graphics/entity/storage-tank/storage-tank-5.png",
+		priority = "extra-high",
+		frames = 2,
+		width = 140,
+		height = 115,
+		shift = {0.6875, 0.109375}
+	  }
     },
     working_sound =
     {
