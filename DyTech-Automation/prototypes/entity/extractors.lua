@@ -46,11 +46,14 @@ data:extend(
     },
     base_picture =
     {
-      sheet = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-      priority = "extra-high",
-      width = 114,
-      height = 113,
-      shift = {0.1875, -0.03125}
+      sheet =
+      {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 114,
+        height = 113,
+        shift = {0.1875, -0.03125}
+      }
     },
     animations =
     {
@@ -118,11 +121,14 @@ data:extend(
     },
     base_picture =
     {
-      sheet = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-      priority = "extra-high",
-      width = 114,
-      height = 113,
-      shift = {0.1875, -0.03125}
+      sheet =
+      {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 114,
+        height = 113,
+        shift = {0.1875, -0.03125}
+      }
     },
     animations =
     {
@@ -190,11 +196,14 @@ data:extend(
     },
     base_picture =
     {
-      sheet = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-      priority = "extra-high",
-      width = 114,
-      height = 113,
-      shift = {0.1875, -0.03125}
+      sheet =
+      {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 114,
+        height = 113,
+        shift = {0.1875, -0.03125}
+      }
     },
     animations =
     {
@@ -262,11 +271,14 @@ data:extend(
     },
     base_picture =
     {
-      sheet = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
-      priority = "extra-high",
-      width = 114,
-      height = 113,
-      shift = {0.1875, -0.03125}
+      sheet =
+      {
+        filename = "__base__/graphics/entity/pumpjack/pumpjack-base.png",
+        priority = "extra-high",
+        width = 114,
+        height = 113,
+        shift = {0.1875, -0.03125}
+      }
     },
     animations =
     {

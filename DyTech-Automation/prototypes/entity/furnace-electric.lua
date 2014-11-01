@@ -20,10 +20,10 @@ data:extend(
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_slots = 3,
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_speed = 3,
-    smelting_energy_consumption = "160kW",
+    crafting_speed = 3,
+    energy_usage = "160kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -40,26 +40,54 @@ data:extend(
       },
       apparent_volume = 1.5
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-2.png",
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
       priority = "high",
-      x = 131,
-      width = 131,
-      height = 102,
-      frame_count = 12,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
-    },
-    off_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-2.png",
-      priority = "high",
-      width = 131,
-      height = 102,
+      width = 129,
+      height = 100,
       frame_count = 1,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
+      shift = {0.421875, 0}
+    },
+    working_visualisations =
+    {
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          priority = "high",
+          width = 25,
+          height = 15,
+          frame_count = 12,
+          animation_speed = 0.5,
+          shift = {0.015625, 0.890625}
+        },
+        light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}}
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          priority = "high",
+          width = 19,
+          height = 13,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {-0.671875, -0.640625}
+        }
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+          priority = "high",
+          width = 12,
+          height = 9,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {0.0625, -1.234375}
+        }
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -83,10 +111,10 @@ data:extend(
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_slots = 4,
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_speed = 4,
-    smelting_energy_consumption = "140kW",
+    crafting_speed = 4,
+    energy_usage = "140kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -94,35 +122,54 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.01
     },
-    working_sound =
+    animation =
     {
-      sound =
-      {
-        filename = "__base__/sound/electric-furnace.ogg",
-        volume = 0.7
-      },
-      apparent_volume = 1.5
-    },
-    on_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-3.png",
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
       priority = "high",
-      x = 131,
-      width = 131,
-      height = 102,
-      frame_count = 12,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
-    },
-    off_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-3.png",
-      priority = "high",
-      width = 131,
-      height = 102,
+      width = 129,
+      height = 100,
       frame_count = 1,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
+      shift = {0.421875, 0}
+    },
+    working_visualisations =
+    {
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          priority = "high",
+          width = 25,
+          height = 15,
+          frame_count = 12,
+          animation_speed = 0.5,
+          shift = {0.015625, 0.890625}
+        },
+        light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}}
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          priority = "high",
+          width = 19,
+          height = 13,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {-0.671875, -0.640625}
+        }
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+          priority = "high",
+          width = 12,
+          height = 9,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {0.0625, -1.234375}
+        }
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -146,10 +193,10 @@ data:extend(
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_slots = 5,
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_speed = 5,
-    smelting_energy_consumption = "120kW",
+    crafting_speed = 5,
+    energy_usage = "120kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -166,26 +213,54 @@ data:extend(
       },
       apparent_volume = 1.5
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-4.png",
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
       priority = "high",
-      x = 131,
-      width = 131,
-      height = 102,
-      frame_count = 12,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
-    },
-    off_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-4.png",
-      priority = "high",
-      width = 131,
-      height = 102,
+      width = 129,
+      height = 100,
       frame_count = 1,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
+      shift = {0.421875, 0}
+    },
+    working_visualisations =
+    {
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          priority = "high",
+          width = 25,
+          height = 15,
+          frame_count = 12,
+          animation_speed = 0.5,
+          shift = {0.015625, 0.890625}
+        },
+        light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}}
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          priority = "high",
+          width = 19,
+          height = 13,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {-0.671875, -0.640625}
+        }
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+          priority = "high",
+          width = 12,
+          height = 9,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {0.0625, -1.234375}
+        }
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -209,10 +284,10 @@ data:extend(
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_slots = 6,
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_speed = 6,
-    smelting_energy_consumption = "100kW",
+    crafting_speed = 6,
+    energy_usage = "100kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -229,26 +304,54 @@ data:extend(
       },
       apparent_volume = 1.5
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-5.png",
+      filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
       priority = "high",
-      x = 131,
-      width = 131,
-      height = 102,
-      frame_count = 12,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
-    },
-    off_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/electric-furnace/electric-furnace-5.png",
-      priority = "high",
-      width = 131,
-      height = 102,
+      width = 129,
+      height = 100,
       frame_count = 1,
-      animation_speed = 0.5,
-      shift = {0.5, 0.05 }
+      shift = {0.421875, 0}
+    },
+    working_visualisations =
+    {
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+          priority = "high",
+          width = 25,
+          height = 15,
+          frame_count = 12,
+          animation_speed = 0.5,
+          shift = {0.015625, 0.890625}
+        },
+        light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}}
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+          priority = "high",
+          width = 19,
+          height = 13,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {-0.671875, -0.640625}
+        }
+      },
+      {
+        animation =
+        {
+          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+          priority = "high",
+          width = 12,
+          height = 9,
+          frame_count = 4,
+          animation_speed = 0.5,
+          shift = {0.0625, -1.234375}
+        }
+      }
     },
     fast_replaceable_group = "furnace"
   },

@@ -21,10 +21,10 @@ data:extend(
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_energy_consumption = "170kW",
-    smelting_speed = 2.5,
+    energy_usage = "170kW",
+    crafting_speed = 2.5,
     source_inventory_size = 1,
     energy_source =
     {
@@ -43,32 +43,33 @@ data:extend(
         }
       }
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-2.png",
+      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
       priority = "high",
       width = 91,
       height = 69,
       frame_count = 1,
-      shift = {0.5, 0.05 }
+      shift = {0.5, 0.05}
     },
-    off_animation =
+    working_visualisations =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-2.png",
-      priority = "high",
-      width = 91,
-      height = 69,
-      frame_count = 1,
-      shift = {0.5, 0.05 }
-    },
-    fire_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-      priority = "high",
-      width = 36,
-      height = 19,
-      frame_count = 12,
-      shift = { -0.05, 0.65}
+      {
+        north_position = {0.0, 0.0},
+        east_position = {0.0, 0.0},
+        south_position = {0.0, 0.0},
+        west_position = {0.0, 0.0},
+        animation =
+        {
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+          priority = "high",
+          width = 36,
+          height = 19,
+          frame_count = 12,
+          shift = { -0.05, 0.65}
+        },
+        light = {intensity = 1, size = 1}
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -93,10 +94,10 @@ data:extend(
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_energy_consumption = "160kW",
-    smelting_speed = 3,
+    energy_usage = "160kW",
+    crafting_speed = 3,
     source_inventory_size = 1,
     energy_source =
     {
@@ -115,32 +116,33 @@ data:extend(
         }
       }
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-3.png",
+      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
       priority = "high",
       width = 91,
       height = 69,
       frame_count = 1,
-      shift = {0.5, 0.05 }
+      shift = {0.5, 0.05}
     },
-    off_animation =
+    working_visualisations =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-3.png",
-      priority = "high",
-      width = 91,
-      height = 69,
-      frame_count = 1,
-      shift = {0.5, 0.05 }
-    },
-    fire_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-      priority = "high",
-      width = 36,
-      height = 19,
-      frame_count = 12,
-      shift = { -0.05, 0.65}
+      {
+        north_position = {0.0, 0.0},
+        east_position = {0.0, 0.0},
+        south_position = {0.0, 0.0},
+        west_position = {0.0, 0.0},
+        animation =
+        {
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+          priority = "high",
+          width = 36,
+          height = 19,
+          frame_count = 12,
+          shift = { -0.05, 0.65}
+        },
+        light = {intensity = 1, size = 1}
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -165,10 +167,10 @@ data:extend(
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_energy_consumption = "150kW",
-    smelting_speed = 4,
+    energy_usage = "150kW",
+    crafting_speed = 4,
     source_inventory_size = 1,
     energy_source =
     {
@@ -187,32 +189,33 @@ data:extend(
         }
       }
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-4.png",
+      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
       priority = "high",
       width = 91,
       height = 69,
       frame_count = 1,
-      shift = {0.5, 0.05 }
+      shift = {0.5, 0.05}
     },
-    off_animation =
+    working_visualisations =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-4.png",
-      priority = "high",
-      width = 91,
-      height = 69,
-      frame_count = 1,
-      shift = {0.5, 0.05 }
-    },
-    fire_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-      priority = "high",
-      width = 36,
-      height = 19,
-      frame_count = 12,
-      shift = { -0.05, 0.65}
+      {
+        north_position = {0.0, 0.0},
+        east_position = {0.0, 0.0},
+        south_position = {0.0, 0.0},
+        west_position = {0.0, 0.0},
+        animation =
+        {
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+          priority = "high",
+          width = 36,
+          height = 19,
+          frame_count = 12,
+          shift = { -0.05, 0.65}
+        },
+        light = {intensity = 1, size = 1}
+      }
     },
     fast_replaceable_group = "furnace"
   },
@@ -237,10 +240,10 @@ data:extend(
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
-    smelting_categories = {"smelting"},
+    crafting_categories = {"smelting"},
     result_inventory_size = 1,
-    smelting_energy_consumption = "140kW",
-    smelting_speed = 5,
+    energy_usage = "140kW",
+    crafting_speed = 5,
     source_inventory_size = 1,
     energy_source =
     {
@@ -259,32 +262,33 @@ data:extend(
         }
       }
     },
-    on_animation =
+    animation =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-5.png",
+      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
       priority = "high",
       width = 91,
       height = 69,
       frame_count = 1,
-      shift = {0.5, 0.05 }
+      shift = {0.5, 0.05}
     },
-    off_animation =
+    working_visualisations =
     {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-5.png",
-      priority = "high",
-      width = 91,
-      height = 69,
-      frame_count = 1,
-      shift = {0.5, 0.05 }
-    },
-    fire_animation =
-    {
-      filename = "__DyTech-Automation__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-      priority = "high",
-      width = 36,
-      height = 19,
-      frame_count = 12,
-      shift = { -0.05, 0.65}
+      {
+        north_position = {0.0, 0.0},
+        east_position = {0.0, 0.0},
+        south_position = {0.0, 0.0},
+        west_position = {0.0, 0.0},
+        animation =
+        {
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+          priority = "high",
+          width = 36,
+          height = 19,
+          frame_count = 12,
+          shift = { -0.05, 0.65}
+        },
+        light = {intensity = 1, size = 1}
+      }
     },
     fast_replaceable_group = "furnace"
   },
