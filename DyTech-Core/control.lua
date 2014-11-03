@@ -13,19 +13,17 @@ require "scripts/recycler-database"
 debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
-local function debug(str)
+function debug(str)
 	if debug_master then
 		PlayerPrint(str)
 	end
 end
 
-local function PlayerPrint(message)
+function PlayerPrint(message)
 	for _,player in pairs(game.players) do
 		player.print(message)
 	end
 end
-
-local Player = game.players[event.playerindex]
 
 local RubberSeedTypeName = "RubberTree"
 local RubberGrowingStates = {
@@ -94,12 +92,12 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-	if not glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] then
-		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = event.itemstack.count
-		debug("No CraftedItems ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
+	if not glob.CraftedItems[event.itemstack.name] then
+		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
+		debug("No CraftedItems ("..tostring(event.itemstack.name)..")")
 	else
-		glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] = glob.CraftedItems[fs.ItemNameLocale(event.itemstack.name)] + event.itemstack.count
-		debug("CraftedItems increased by "..tostring(event.itemstack.count).." ("..tostring(fs.ItemNameLocale(event.itemstack.name))..")")
+		glob.CraftedItems[event.itemstack.name] = glob.CraftedItems[event.itemstack.name] + event.itemstack.count
+		debug("CraftedItems increased by "..tostring(event.itemstack.count).." ("..tostring(event.itemstack.name)..")")
 	end
 incrementDynamicCounters = function(stack)
 	if ItemDatabase.craftitems[stack.name] then
@@ -150,6 +148,7 @@ ProcessRecycling = function(processItem, recycler, recursive)
 end
 
 game.onevent(defines.events.onplayermineditem, function(event)
+local Player = game.players[event.playerindex]
 	glob.counter2.mine = glob.counter2.mine + event.itemstack.count
 	if MineDatabase.mineitems[event.itemstack.name] then
 		for counter, ingredients in pairs(MineDatabase.mineitems[event.itemstack.name]) do 
@@ -441,6 +440,7 @@ game.onevent(defines.events.onchunkgenerated, function(event)
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
+local Player = game.players[event.playerindex]
 	if event.element.name:find(CoreGUI.guiNames.ExportButton) then
 		remote.call("DyTech-Core", "ExportAll")
 		CoreGUI.closeAllGUI()
