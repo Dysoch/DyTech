@@ -39,7 +39,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event003")
 				end
@@ -57,7 +57,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event004")
 				end
@@ -75,7 +75,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event005")
 				end
@@ -93,7 +93,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event006")
 				end
@@ -113,7 +113,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event007")
 				end
@@ -131,7 +131,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event008")
 				end
@@ -149,7 +149,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event009")
 				end
@@ -167,7 +167,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event010")
 				end
@@ -187,7 +187,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event011")
 				end
@@ -206,7 +206,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event012")
 				end
@@ -225,7 +225,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event013")
 				end
@@ -244,7 +244,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event014")
 				end
@@ -267,7 +267,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					game.player.force.recipes["blade1"].enabled = true
 					game.player.force.recipes["rotor1"].enabled = true
 					game.player.force.recipes["item-exit1"].enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event015")
 				end
@@ -289,7 +289,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					game.player.force.recipes["blade2"].enabled = true
 					game.player.force.recipes["rotor2"].enabled = true
 					game.player.force.recipes["item-exit2"].enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event016")
 				end
@@ -311,7 +311,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					game.player.force.recipes["blade3"].enabled = true
 					game.player.force.recipes["rotor3"].enabled = true
 					game.player.force.recipes["item-exit3"].enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event017")
 				end
@@ -332,7 +332,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					UnlockRecipe.enabled = true
 					game.player.force.recipes["rotor4"].enabled = true
 					game.player.force.recipes["item-exit4"].enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event018")
 				end
@@ -352,7 +352,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event019")
 				end
@@ -371,7 +371,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event020")
 				end
@@ -390,7 +390,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event021")
 				end
@@ -409,7 +409,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event022")
 				end
@@ -430,7 +430,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event023")
 				end
@@ -450,7 +450,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event024")
 				end
@@ -470,7 +470,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event025")
 				end
@@ -490,7 +490,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event026")
 				end
@@ -510,7 +510,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event027")
 				end
@@ -530,7 +530,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event028")
 				end
@@ -549,7 +549,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event029")
 				end
@@ -568,7 +568,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event030")
 				end
@@ -587,7 +587,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event031")
 				end
@@ -606,7 +606,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event032")
 				end
@@ -624,7 +624,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event033")
 				end
@@ -643,7 +643,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-1").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-1").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event034")
 				end
@@ -661,7 +661,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-tier-2").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-tier-2").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event035")
 				end
@@ -682,7 +682,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event036")
 				end
@@ -701,7 +701,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event037")
 				end
@@ -720,7 +720,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event038")
 				end
@@ -739,7 +739,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 					fs.FailureMessage(LocaleName)
 				else
 					UnlockRecipe.enabled = true
-					game.player.print(game.gettext("msg-unlocked").." "..LocaleName)
+					PlayerPrint(game.gettext("msg-unlocked").." "..LocaleName)
 					game.player.force.resetrecipes()
 					fs.EventFinish("event039")
 				end
@@ -756,7 +756,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 		if not glob.EventCheck.event201.done then 
 			if glob.counter.dytech > math.random(5000,7500) then
 				game.player.insert{name="steel-axe",count=1}
-				game.player.print(game.gettext("msg-reward-1"))
+				PlayerPrint(game.gettext("msg-reward-1"))
 				fs.EventFinish("event201")
 			end
 		end
@@ -769,7 +769,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 				game.player.insert{name="steel-plate",count=10}
 				game.player.insert{name="stone",count=10}
 				game.player.insert{name="wood",count=10}
-				game.player.print(game.gettext("msg-reward-2"))
+				PlayerPrint(game.gettext("msg-reward-2"))
 				fs.EventFinish("event202")
 			end
 		end
@@ -780,7 +780,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 				game.player.insert{name="copper-plate",count=100}
 				game.player.insert{name="iron-plate",count=100}
 				game.player.insert{name="steel-plate",count=100}
-				game.player.print(game.gettext("msg-reward-3"))
+				PlayerPrint(game.gettext("msg-reward-3"))
 				fs.EventFinish("event203")
 			end
 		end
@@ -792,7 +792,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 				game.player.insert{name="advanced-circuit",count=100}
 				game.player.insert{name="processing-unit",count=100}
 				game.player.insert{name="advanced-processing-unit",count=100}
-				game.player.print(game.gettext("msg-reward-4"))
+				PlayerPrint(game.gettext("msg-reward-4"))
 				fs.EventFinish("event204")
 			end
 		end
@@ -803,7 +803,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 				game.player.insert{name="assembling-machine",count=100}
 				game.player.insert{name="assembling-machine-2",count=100}
 				game.player.insert{name="assembling-machine-3",count=100}
-				game.player.print(game.gettext("msg-reward-5"))
+				PlayerPrint(game.gettext("msg-reward-5"))
 				fs.EventFinish("event205")
 			end
 		end
@@ -814,7 +814,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 				game.player.insert{name="speed-module-8",count=100}
 				game.player.insert{name="effectivity-module-8",count=100}
 				game.player.insert{name="productivity-module-8",count=100}
-				game.player.print(game.gettext("msg-reward-6"))
+				PlayerPrint(game.gettext("msg-reward-6"))
 				fs.EventFinish("event206")
 			end
 		end
@@ -826,7 +826,7 @@ if glob.EventCheck.event001.done==true and glob.EventCheck.event002.done==true t
 		if glob.SystemShutoff==true then
 			glob.DynamicSystem = false
 			glob.SystemShutoff = false
-			game.player.print("Dynamic System has finished its loop. The System has now shut down!!! Technologies however won't return! It's a shame to see you go :(")
+			PlayerPrint("Dynamic System has finished its loop. The System has now shut down!!! Technologies however won't return! It's a shame to see you go :(")
 		end
 	end
 end
@@ -850,12 +850,12 @@ end
 
 function DynamicFailureTest()
 	if DynamicFailure(glob.counter.dytech) then
-		game.player.print("Failure check succesfull!")
+		PlayerPrint("Failure check succesfull!")
 		fs.FailureReduction("science", 4)
-		game.player.print("Failure reduced science!")
+		PlayerPrint("Failure reduced science!")
 		fs.FailureReduction("gear", 4)
-		game.player.print("Failure reduced gear!")
+		PlayerPrint("Failure reduced gear!")
 	else
-		game.player.print("Failure check failed!")
+		PlayerPrint("Failure check failed!")
 	end
 end

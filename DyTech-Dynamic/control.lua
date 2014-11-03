@@ -6,11 +6,17 @@ require "scripts/functions"
 require "scripts/oninit"
 require "scripts/onload"
 
+local function PlayerPrint(message)
+	for _,player in pairs(game.players) do
+		player.print(message)
+	end
+end
+
 --[[Debug Functions]]--
 debug_master = false -- Master switch for debugging, shows most things!
 local function debug(str)
 	if debug_master then
-		game.player.print(str)
+		PlayerPrint(str)
 	end
 end
 
@@ -19,7 +25,7 @@ game.oninit(function()
 	remote.call("DyTech-Core", "DynamicGUI")
 	OnInit.OnInit()
 	if not remote.interfaces["DyTech-Core"] then
-		game.player.print("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
+		PlayerPrint("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
 	end
 end)
 
@@ -52,7 +58,7 @@ remote.addinterface("DyTech-Dynamic",
 {  
   Export = function()
 	game.makefile("DyTech-Events.txt", serpent.block(glob.EventCheck))
-	game.player.print("Exported all data from Dynamic as well!")
+	PlayerPrint("Exported all data from Dynamic as well!")
   end,
   
   FailureTest = function()
@@ -65,7 +71,7 @@ remote.addinterface("DyTech-Dynamic",
   
   ToggleDynamicSystem = function()
 	if not remote.interfaces["DyTech-Core"] then
-		game.player.print("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
+		PlayerPrint("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
 	else
 		fs.DynamicToggle()
 	end
@@ -81,7 +87,7 @@ remote.addinterface("DyTech-Dynamic",
   
   ToggleHardMode = function()
 	if not remote.interfaces["DyTech-Core"] then
-		game.player.print("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
+		PlayerPrint("DyTech-Dynamic Will Not Run Without DyTech-Core! Install it to let the Dynamic System Work!")
 	else
 		fs.HardModeToggle()
 	end
