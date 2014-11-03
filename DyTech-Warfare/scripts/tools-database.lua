@@ -338,7 +338,7 @@ function updateGUILabel(toCraft)
     for name, _ in pairs(materials) do
       text = text .. name .. ": "
       if toCraft[name] then
-        text = text .. game.getlocaliseditemname(toCraft[name])
+        text = text .. (toCraft[name])
         --toCraft[name] = nil --? prevent 'instant fill' on second craft (since it starts with "No parts currently selected")
       else
         text = text .. "N/A"
