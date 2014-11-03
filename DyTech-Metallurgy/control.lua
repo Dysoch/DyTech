@@ -10,8 +10,7 @@ if remote.interfaces["F-mod"] then
 end
 
 game.oninit(function()
-	--remote.call("DyTech-Core", "addModule", "metallurgy")
-	--game.player.print("Do not worry if you see an Written error here. This is for migrations, and it means F-mod is not installed")
+	remote.call("DyTech-Core", "addModule", "metallurgy")
 end)
 
 remote.addinterface("DyTech-Metallurgy",
