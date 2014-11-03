@@ -43,19 +43,19 @@ game.onevent(defines.events.onguiclick, function(event)
     ToolsDatabase.toggleCraftedGUI()
 	ToolsDatabase.closeCraftingGUI()
   elseif event.element.name == ToolsDatabase.guiNames.craft1x then
-	ToolCrafting(1)
+	ToolCrafting(event, 1)
   elseif event.element.name == ToolsDatabase.guiNames.craft2x then
-	ToolCrafting(2)
+	ToolCrafting(event, 2)
   elseif event.element.name == ToolsDatabase.guiNames.craft3x then
-	ToolCrafting(3)
+	ToolCrafting(event, 3)
   elseif event.element.name == ToolsDatabase.guiNames.craft5x then
-	ToolCrafting(5)
+	ToolCrafting(event, 5)
   elseif event.element.name == ToolsDatabase.guiNames.craft10x then
-	ToolCrafting(10)
+	ToolCrafting(event, 10)
   elseif event.element.name == ToolsDatabase.guiNames.craft20x then
-	ToolCrafting(20)
+	ToolCrafting(event, 20)
   elseif event.element.name == ToolsDatabase.guiNames.craft50x then
-	ToolCrafting(50)
+	ToolCrafting(event, 50)
   elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
     ToolsDatabase.closeCraftingGUI()
 	ToolsDatabase.closeCraftedGUI()
@@ -74,7 +74,7 @@ remote.addinterface("DyTech-Tools",
   CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
 })
 
-function ToolCrafting(amount)
+function ToolCrafting(event, amount)
 local Player = game.players[event.playerindex]
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
