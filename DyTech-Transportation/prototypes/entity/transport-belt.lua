@@ -183,7 +183,7 @@ data:extend(
       frame_count = 32,
       direction_count = 12
     },
-	belt_horizontal = super_belt_horizontal,
+	 belt_horizontal = super_belt_horizontal,
     belt_vertical = super_belt_vertical,
     ending_top = super_belt_ending_top,
     ending_bottom = super_belt_ending_bottom,
@@ -270,9 +270,8 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation_speed_coefficient = 32,
     distance_to_enter = 0.5,
-    ending_patch = ending_patch_prototype,
     max_distance = 20,
-	belt_horizontal = super_belt_horizontal,
+	 belt_horizontal = super_belt_horizontal,
     belt_vertical = super_belt_vertical,
     ending_top = super_belt_ending_top,
     ending_bottom = super_belt_ending_bottom,
@@ -280,6 +279,7 @@ data:extend(
     starting_top = super_belt_starting_top,
     starting_bottom = super_belt_starting_bottom,
     starting_side = super_belt_starting_side,
+    ending_patch = ending_patch_prototype,
     fast_replaceable_group = "transport-belt-to-ground",
     speed = 0.133,
     structure =
