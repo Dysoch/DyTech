@@ -32,21 +32,6 @@ function ModuleChecker()
 	if remote.interfaces["DyTech-Warfare"] then glob.dytech.warfare=true else glob.dytech.warfare=false end
 end
 
-function ItemNameLocale(name)
-return
-	game.getlocaliseditemname(name)
-end
-
-function EntityNameLocale(name)
-return
-	game.getlocalisedentityname(name)
-end
-
-function TechNameLocale(name)
-return
-	game.getlocalisedtechnologyname(name)
-end
-
 function CounterPrinter()
 	PlayerPrint("Here are all your counters with their current status!")
 	PlayerPrint("Gear:".." "..tostring(glob.counter.gear))
@@ -96,6 +81,34 @@ function CombatPrinter()
 	PlayerPrint("Dogs:".." "..tostring(glob.combat.dog))
 	PlayerPrint("Birds:".." "..tostring(glob.combat.bird))
 	PlayerPrint("Global Counter:".." "..tostring(glob.combat.dytech))
+end
+
+
+function incrementDynamicCounters(stack)
+	if ItemDatabase.craftitems[stack.name] then
+		for counter, ingredients in pairs(ItemDatabase.craftitems[stack.name]) do
+			if ItemDatabase.craftitems[counter] then
+				incrementDynamicCounters({name=counter, count=ingredients})
+				debug(tostring(counter).." needs to be checked also")
+			else
+				glob.counter[counter]=glob.counter[counter]+(stack.count*ingredients)
+				debug("Crafting: "..tostring(counter).." increased by "..tostring((stack.count*ingredients)))
+			end
+		end
+	end
+end
+
+function incrementDynamicCountersBuild(stack)
+	if BuildDatabase.craftitems[stack.name] then
+		for counter, ingredients in pairs(BuildDatabase.craftitems[stack.name]) do
+			if BuildDatabase.craftitems[counter] then
+				incrementDynamicCountersBuild({name=counter, count=ingredients})
+			else
+				glob.counter[counter]=glob.counter[counter]+(1*ingredients)
+				debug("Build Database called, "..tostring(counter).." increased by "..tostring((1*ingredients)).."(Player placed)")
+			end
+		end
+	end
 end
 
 function updateEntityState(entInfo)
@@ -212,10 +225,11 @@ function DyTechItemCollect(name, radius)
 		local insertable=game.findentitiesfiltered{name="item-on-ground", area={getboundingbox(value.position, radius)}}
 			for _, item in pairs(insertable) do
 				if game.findentitiesfiltered{type="transport-belt", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="transport-belt-to-ground", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="splitter", area={getboundingbox(item.position, 0.5)}}[1]==nil then
-					if item.stack and foundcollector[1].caninsert(item.stack) then
-						foundcollector[1].insert(item.stack)
-						game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
-						item.destroy()
+					if item.stack then
+						if not item.tobedeconstructed then
+							item.orderdeconstruction(game.forces.player)
+							game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
+						end
 					break
 					end
 				end
@@ -223,3 +237,36 @@ function DyTechItemCollect(name, radius)
 		end
 	end
 end
+
+-- processItem is still a stack, just better named
+ProcessRecycling = function(processItem, recycler, recursive)
+  if recursive and type(recursive) == "table" then
+    local baseItems = recursive
+  else
+    local baseItems = {}
+  end
+  
+  if RecyclerDatabase.recycleitems[processItem.name] then
+    for baseItem, count in pairs(RecyclerDatabase.recycleitems[processItem.name]) do
+      if RecyclerDatabase.recycleitems[baseItem] then
+        ProcessRecycling({name=baseItem, count=count}, nil, baseItems)
+      else
+        table.insert(baseItems, {name=baseItem, count=(processItem.count*count)})
+      end
+    end
+  end
+  
+  -- will not run for recursive call since recycler is nil
+  if recycler and recycler.valid then
+    -- possible bug V since the baseItems aren't inserted yet...
+    recycler.remove(processItem)
+    for index, baseItem in pairs(baseItems) do
+      -- additional standard checks for room, if false maybe return the baseItem table...
+      -- this is why I chose to insert them as a stack in the else above, a tiny bit easier
+      recycler.insert(baseItem)
+    end
+  else
+    return baseItems
+  end
+end
+
