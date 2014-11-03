@@ -1,4 +1,4 @@
---[[require "defines"
+require "defines"
 require "databases/buildingdatabase"
 require "databases/craftingdatabase"
 require "databases/killingdatabase"
@@ -15,9 +15,17 @@ debug_ontick = false -- Ontick switch for debugging, shows all ontick event debu
 debug_chunks = false -- shows the chunks generated with this on
 local function debug(str)
 	if debug_master then
-		game.player.print(str)
+		PlayerPrint(str)
 	end
 end
+
+local function PlayerPrint(message)
+	for _,player in pairs(game.players) do
+		player.print(message)
+	end
+end
+
+local Player = game.players[event.playerindex]
 
 local RubberSeedTypeName = "RubberTree"
 local RubberGrowingStates = {
@@ -70,14 +78,14 @@ game.onload(function()
 			if errorMsg == nil then -- everything worked fine
 				glob.compatibility.treefarm = true
 			else
-				if errorMsg ~= "seed type already present" then game.player.print(errorMsg) end
+				if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
 			end
 		end
 	else -- charcoal isn't available, so treefarm-mod isn't installed
 	debug("Treefarm not installed")
 		glob.compatibility.treefarm = false
 		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
-			if game.itemprototypes[seedTypeInfo.states[1]]--[[ == nil then
+			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
 				glob.trees.isGrowing[seedTypeName] = nil
 				glob.trees.seedTypes[seedTypeName] = nil
 			end
@@ -152,8 +160,8 @@ game.onevent(defines.events.onplayermineditem, function(event)
 	if event.itemstack.name == "raw-wood" then
 		if math.random(50) == 25 then
 		local amount = math.random(1,5)
-			game.player.insert{name="resin",count=amount}
-			game.player.print({"msg-rubber"})
+			Player.insert{name="resin",count=amount}
+			PlayerPrint({"msg-rubber"})
 			debug("Player given "..tostring(amount).." Rubber Resin")
 		end
 	end
@@ -296,13 +304,13 @@ game.onevent(defines.events.ontick, function(event)
 				if glob.minimap==true then
 					game.disableminimap()
 					glob.minimap=false
-					game.player.print("Because of the lack of radar(s), the minimap has been disabled!")
+					PlayerPrint("Because of the lack of radar(s), the minimap has been disabled!")
 				end
 			elseif not (v.energy > 0) then 
 				if glob.minimap==true then
 					game.disableminimap()
 					glob.minimap=false
-					game.player.print("Minimap has been disabled to due to radar(s) losing power!")
+					PlayerPrint("Minimap has been disabled to due to radar(s) losing power!")
 				end
 			end
 		end
@@ -436,7 +444,7 @@ game.onevent(defines.events.onguiclick, function(event)
 	if event.element.name:find(CoreGUI.guiNames.ExportButton) then
 		remote.call("DyTech-Core", "ExportAll")
 		CoreGUI.closeAllGUI()
-		game.player.print("Be sure to send the files from the script-output folder to Dysoch so he can use that for balancing!")
+		PlayerPrint("Be sure to send the files from the script-output folder to Dysoch so he can use that for balancing!")
 	elseif event.element.name:find(CoreGUI.guiNames.ExitButton) then
 		CoreGUI.closeAllGUI()
 	elseif event.element.name:find(CoreGUI.guiNames.BackButton) then
@@ -463,7 +471,7 @@ game.onevent(defines.events.onguiclick, function(event)
 		remote.call("DyTech-Tools", "showCraftingGUI")
 	elseif event.element.name:find(CoreGUI.guiNames.ToolsItemButton) then
 		CoreGUI.closeAllGUI()
-		game.player.insert{name="tool-crafting-bench",count=1}
+		Player.insert{name="tool-crafting-bench",count=1}
 	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyButton) then
 		CoreGUI.closeMasterGUI()
 		CoreGUI.showMetallurgyGUI()
@@ -498,21 +506,21 @@ remote.addinterface("DyTech-Core",
   end,
 
   Modules = function()
-			game.player.print("This shows which module of DyTech is installed:")
-			game.player.print("DyTech-Core:".." "..tostring(glob.dytech.core))
-			game.player.print("DyTech-Automation:".." "..tostring(glob.dytech.automation))
-			game.player.print("DyTech-Compatibility".." "..tostring(glob.dytech.compatibility))
-			game.player.print("DyTech-Dynamic:".." "..tostring(glob.dytech.dynamic))
-			game.player.print("DyTech-Energy:".." "..tostring(glob.dytech.energy))
-			game.player.print("DyTech-Inserters:".." "..tostring(glob.dytech.inserters))
-			game.player.print("DyTech-Logistic:".." "..tostring(glob.dytech.logistic))
-			game.player.print("DyTech-Metallurgy:".." "..tostring(glob.dytech.metallurgy))
-			game.player.print("DyTech-Meteors:".." "..tostring(glob.dytech.meteors))
-			game.player.print("DyTech-Modules:".." "..tostring(glob.dytech.modules))
-			game.player.print("DyTech-Storage:".." "..tostring(glob.dytech.storage))
-			game.player.print("DyTech-Tools:".." "..tostring(glob.dytech.tools))
-			game.player.print("DyTech-Transportation:".." "..tostring(glob.dytech.transportation))
-			game.player.print("DyTech-Warfare:".." "..tostring(glob.dytech.warfare))
+			PlayerPrint("This shows which module of DyTech is installed:")
+			PlayerPrint("DyTech-Core:".." "..tostring(glob.dytech.core))
+			PlayerPrint("DyTech-Automation:".." "..tostring(glob.dytech.automation))
+			PlayerPrint("DyTech-Compatibility".." "..tostring(glob.dytech.compatibility))
+			PlayerPrint("DyTech-Dynamic:".." "..tostring(glob.dytech.dynamic))
+			PlayerPrint("DyTech-Energy:".." "..tostring(glob.dytech.energy))
+			PlayerPrint("DyTech-Inserters:".." "..tostring(glob.dytech.inserters))
+			PlayerPrint("DyTech-Logistic:".." "..tostring(glob.dytech.logistic))
+			PlayerPrint("DyTech-Metallurgy:".." "..tostring(glob.dytech.metallurgy))
+			PlayerPrint("DyTech-Meteors:".." "..tostring(glob.dytech.meteors))
+			PlayerPrint("DyTech-Modules:".." "..tostring(glob.dytech.modules))
+			PlayerPrint("DyTech-Storage:".." "..tostring(glob.dytech.storage))
+			PlayerPrint("DyTech-Tools:".." "..tostring(glob.dytech.tools))
+			PlayerPrint("DyTech-Transportation:".." "..tostring(glob.dytech.transportation))
+			PlayerPrint("DyTech-Warfare:".." "..tostring(glob.dytech.warfare))
   end,
   
   ExportAll = function()
@@ -526,11 +534,11 @@ remote.addinterface("DyTech-Core",
 	game.makefile("DyTech-MinedItems.txt", serpent.block(glob.MinedItems))
 	game.makefile("DyTech-EntityDied.txt", serpent.block(glob.EntityDied))
 	game.makefile("DyTech-BuildEntity.txt", serpent.block(glob.BuildEntity))
-	game.player.print("Exported all data from Core!")
+	PlayerPrint("Exported all data from Core!")
 	if remote.call("DyTech-Dynamic", "Export") and glob.dytech.dynamic==true then
 		remote.call("DyTech-Dynamic", "Export")
 	end
-	game.player.print("You can find all relevant data in the script-output folder!")
+	PlayerPrint("You can find all relevant data in the script-output folder!")
   end,
   
   checkCounter = function(name)
@@ -555,7 +563,7 @@ remote.addinterface("DyTech-Core",
 	if type(name) == "string" then
 	local RandomNumber = math.random(glob.counter[name]/Number)
 		glob.counter[name] = (glob.counter[name]-RandomNumber)
-		game.player.print({"msg-reduction-1"}.." "..tostring(name).." "..{"msg-reduction-2"}.." "..tostring(glob.counter[name]).." "..{"msg-reduction-3"}.." "..tostring(RandomNumber))
+		PlayerPrint({"msg-reduction-1"}.." "..tostring(name).." "..{"msg-reduction-2"}.." "..tostring(glob.counter[name]).." "..{"msg-reduction-3"}.." "..tostring(RandomNumber))
 	end
   end,
   
@@ -563,10 +571,6 @@ remote.addinterface("DyTech-Core",
 	if type(name) == "string" then
 		glob.counter[name] = (glob.counter[name]+Number)
 	end
-  end,
-  
-  RevealArea = function(Number)
-	game.forces.player.chart({lefttop = {x = -Number, y = -Number}, rightbottom = {x = Number, y = Number}})
   end,
   
   GUI = function()
@@ -582,7 +586,7 @@ remote.addinterface("DyTech-Core",
   end,
   
   ResetAll = function()
-	game.player.force.resettechnologies()
-	game.player.force.resetrecipes()
+	game.force.resettechnologies()
+	game.force.resetrecipes()
   end
-})]]--
+})
