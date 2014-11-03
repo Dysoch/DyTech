@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Warfare",
 	"author":"Dysoch",
-	"version":"2.0.0",
+	"version":"2.1.0",
 	"title":"DyTech-Warfare",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Warfare",
-	"dependencies": ["DyTech-Core >= 0.12.0", "DyTech-Metallurgy >= 2.0.0", "? DyTech-Tools >= 2.1.0"]
+	"dependencies": ["DyTech-Core >= 0.13.0", "DyTech-Metallurgy >= 2.1.0", "? DyTech-Tools >= 2.1.0"]
 }

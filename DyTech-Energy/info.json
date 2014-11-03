@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Energy",
 	"author":"Dysoch",
-	"version":"1.4.0",
+	"version":"1.5.0",
 	"title":"DyTech-Energy",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Energy",
-	"dependencies": ["DyTech-Core >= 0.11.1", "? DyTech-Dynamic >= 0.1.0"]
+	"dependencies": ["DyTech-Core >= 0.13.0", "? DyTech-Dynamic >= 0.1.0"]
 }
