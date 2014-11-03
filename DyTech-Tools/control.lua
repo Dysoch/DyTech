@@ -4,7 +4,9 @@ require "scripts/tools-database"
 game.oninit(function()
 	remote.call("DyTech-Core", "addModule", "tools")
 	toCraft = toCraft or {}
-	game.player.insert{name="tool-crafting-bench",count=1}
+	for _,player in pairs(game.players) do
+		player.insert{name="tool-crafting-bench",count=1}
+	end
 end)
 
 game.onsave(function()
@@ -21,10 +23,11 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
+local Player = game.players[event.playerindex]
 	if event.createdentity.name == "tool-crafting-bench" then
 		ToolsDatabase.toggleCraftingGUI()
 		event.createdentity.destroy()
-		game.player.insert{name="tool-crafting-bench",count=1}
+		Player.insert{name="tool-crafting-bench",count=1}
 	end
 end)
 
@@ -72,12 +75,13 @@ remote.addinterface("DyTech-Tools",
 })
 
 function ToolCrafting(amount)
+local Player = game.players[event.playerindex]
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
       -- probably didn't have all the needed parts selected, so failed to match a valid toolname
       -- no 'real' work here but maybe some additional feedback for the player
       if not (toCraft["handles"] and toCraft["rods"] and toCraft["heads"]) then
-        game.player.print("Make sure you've selected a material for each part!")
+        Player.print("Make sure you've selected a material for each part!")
       end
       return
     end
@@ -86,19 +90,19 @@ function ToolCrafting(amount)
     reqs[handle] = (reqs[handle] or 0) + amount
     reqs[rod] = (reqs[rod] or 0) + amount
     reqs[head] = (reqs[head] or 0) + amount
-    local main = game.player.getinventory(defines.inventory.playermain)
-    local quick = game.player.getinventory(defines.inventory.playerquickbar)
+    local main = Player.getinventory(defines.inventory.playermain)
+    local quick = Player.getinventory(defines.inventory.playerquickbar)
     
     for name, needed in pairs(reqs) do
       local count = main.getitemcount(name) + quick.getitemcount(name)
       if count < needed then
-        game.player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
+        Player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
         return
       end
     end
     -- if we made it here then we had enough
     for name, needed in pairs(reqs) do
-      game.player.removeitem{name=name, count=needed}
+      Player.removeitem{name=name, count=needed}
     end
     
     if ToolsDatabase.craftModularTool(name, amount) == true then
