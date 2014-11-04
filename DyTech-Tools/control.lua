@@ -43,19 +43,19 @@ game.onevent(defines.events.onguiclick, function(event)
     ToolsDatabase.toggleCraftedGUI()
 	ToolsDatabase.closeCraftingGUI()
   elseif event.element.name == ToolsDatabase.guiNames.craft1x then
-	ToolCrafting(event, 1)
+	ToolCrafting(1)
   elseif event.element.name == ToolsDatabase.guiNames.craft2x then
-	ToolCrafting(event, 2)
+	ToolCrafting(2)
   elseif event.element.name == ToolsDatabase.guiNames.craft3x then
-	ToolCrafting(event, 3)
+	ToolCrafting(3)
   elseif event.element.name == ToolsDatabase.guiNames.craft5x then
-	ToolCrafting(event, 5)
+	ToolCrafting(5)
   elseif event.element.name == ToolsDatabase.guiNames.craft10x then
-	ToolCrafting(event, 10)
+	ToolCrafting(10)
   elseif event.element.name == ToolsDatabase.guiNames.craft20x then
-	ToolCrafting(event, 20)
+	ToolCrafting(20)
   elseif event.element.name == ToolsDatabase.guiNames.craft50x then
-	ToolCrafting(event, 50)
+	ToolCrafting(50)
   elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
     ToolsDatabase.closeCraftingGUI()
 	ToolsDatabase.closeCraftedGUI()
@@ -74,14 +74,14 @@ remote.addinterface("DyTech-Tools",
   CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
 })
 
-function ToolCrafting(event, amount)
-local Player = game.players[event.playerindex]
+function ToolCrafting(amount)
+for i,player in ipairs(game.players) do
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
       -- probably didn't have all the needed parts selected, so failed to match a valid toolname
       -- no 'real' work here but maybe some additional feedback for the player
       if not (toCraft["handles"] and toCraft["rods"] and toCraft["heads"]) then
-        Player.print("Make sure you've selected a material for each part!")
+        player.print("Make sure you've selected a material for each part!")
       end
       return
     end
@@ -90,19 +90,19 @@ local Player = game.players[event.playerindex]
     reqs[handle] = (reqs[handle] or 0) + amount
     reqs[rod] = (reqs[rod] or 0) + amount
     reqs[head] = (reqs[head] or 0) + amount
-    local main = Player.getinventory(defines.inventory.playermain)
-    local quick = Player.getinventory(defines.inventory.playerquickbar)
+    local main = player.getinventory(defines.inventory.playermain)
+    local quick = player.getinventory(defines.inventory.playerquickbar)
     
     for name, needed in pairs(reqs) do
       local count = main.getitemcount(name) + quick.getitemcount(name)
       if count < needed then
-        Player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
+        player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
         return
       end
     end
     -- if we made it here then we had enough
     for name, needed in pairs(reqs) do
-      Player.removeitem{name=name, count=needed}
+      player.removeitem{name=name, count=needed}
     end
     
     if ToolsDatabase.craftModularTool(name, amount) == true then
@@ -112,4 +112,5 @@ local Player = game.players[event.playerindex]
     else -- failed
       error("UM...Crafting failed due to a technical reason. Sorry!, Please tell Dysoch. Info:\nToolname: "..name .. "\nhandle: "..handle.."\nrod: "..rod.."\nhead: "..head)
     end
+end
 end
