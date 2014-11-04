@@ -410,9 +410,6 @@ local Player = game.players[event.playerindex]
 		remote.call("DyTech-Metallurgy", "RegenerateFluids")
 	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyOresButton) then
 		remote.call("DyTech-Metallurgy", "RegenerateOres")
-	elseif event.element.name:find(CoreGUI.guiNames.CounterButton) then
-		CoreGUI.closeCoreGUI()
-		CoreGUI.showCounterGUI()
 	end
 end)
 
@@ -509,6 +506,7 @@ remote.addinterface("DyTech-Core",
   end,
   
   GUI = function()
+	--local Player = game.players[playerindex]
 	CoreGUI.showMasterGUI()
   end,
   
