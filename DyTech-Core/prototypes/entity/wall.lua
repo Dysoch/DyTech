@@ -1,6 +1,6 @@
 require("prototypes.entity.wall-functions")
 
-SandWall = {r=0.99, g=0.09, b=0.09, a=1}
+SandWall = {r=1, g=1, b=0.35, a=0.9}
 
 data:extend(
 {

@@ -1,6 +1,6 @@
 
-BrickWall = {r=0.99, g=0.09, b=0.09, a=1}
-TungstenWall = {r=0.99, g=0.09, b=0.09, a=1}
+BrickWall = {r=1, g=0.498, b=0.314, a=0.95}
+TungstenWall = {r=0.08, g=0.08, b=0.08, a=0.95}
 
 data:extend(
 {

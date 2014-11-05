@@ -1,5 +1,5 @@
 
-ChitinWalls = {r=0.99, g=0.09, b=0.09, a=1}
+ChitinWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
 
 data:extend(
 {
