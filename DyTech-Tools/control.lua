@@ -23,13 +23,13 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
-local Player = game.players[event.playerindex]
-	if event.createdentity.name == "tool-crafting-bench" and game.players.gui.center[ToolsDatabase.guiNames.mainFlow]==nil then
+local Players = game.players[event.playerindex]
+	if event.createdentity.name == "tool-crafting-bench" and #game.players==1 then
 		ToolsDatabase.showCraftingGUI(event.playerindex)
 		event.createdentity.destroy()
-		Player.insert{name="tool-crafting-bench",count=1}
-	elseif game.players.gui.center[ToolsDatabase.guiNames.mainFlow]==true or game.players.gui.center[guiNames.mainFlowCraft]==true then
-		game.players[event.playerindex].print("GUI is already opened by another player. Wait your turn!")
+		Players.insert{name="tool-crafting-bench",count=1}
+	elseif not #game.players==1 then
+		error("DyTech-Tools has spotted 2 or more players. Please disable DyTech-Tools while playing Multiplayer, cause the GUI is bugged and has to be fixed by the Devs. Apologies, Dysoch")	
 	end
 end)
 
