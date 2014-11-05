@@ -504,11 +504,19 @@ remote.addinterface("DyTech-Core",
   end,
   
   GUI = function()
-	CoreGUI.showMasterGUI()
+	if #game.players==1 then
+		CoreGUI.showMasterGUI()
+	else
+		error("Due to buggyness in the GUI, this function has been disabled. For punishment, the game will crash! This will be fixed with later versions of Factorio(not DyTech). DO NOT USE GUI IN MULTIPLAYER!!! Apologies, Dysoch")
+	end
   end,
   
   DynamicGUI = function()
-	CoreGUI.showDynamicGUI()
+	if #game.players==1 then
+		CoreGUI.showDynamicGUI()
+	else
+		error("Due to buggyness in the GUI, this function has been disabled. For punishment, the game will crash! This will be fixed with later versions of Factorio(not DyTech). DO NOT USE GUI IN MULTIPLAYER!!! Apologies, Dysoch")
+	end
   end,
   
   ModuleChecker = function()

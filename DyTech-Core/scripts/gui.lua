@@ -205,31 +205,31 @@ function closeMasterGUI(PlayerIndex)
 end
 
 function closeCoreGUI(PlayerIndex)
-  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore].valid then
-    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
   end
 end
 
 function closeDynamicGUI(PlayerIndex)
-  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
-    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
   end
 end
 
 function closeToolsGUI(PlayerIndex)
-  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools].valid then
-    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
   end
 end
 
 function closeMetallurgyGUI(PlayerIndex)
-  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
-    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
   end
 end
 
 function closeAboutGUI(PlayerIndex)
-  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
-    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
   end
 end
