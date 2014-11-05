@@ -24,8 +24,8 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 local Player = game.players[event.playerindex]
-	if event.createdentity.name == "tool-crafting-bench" then
-		ToolsDatabase.toggleCraftingGUI()
+	if event.createdentity.name == "tool-crafting-bench" and game.players[event.playerindex].gui.center[ToolsDatabase.guiNames.mainFlow]==nil then
+		ToolsDatabase.showCraftingGUI(event.playerindex)
 		event.createdentity.destroy()
 		Player.insert{name="tool-crafting-bench",count=1}
 	end
@@ -38,32 +38,31 @@ game.onevent(defines.events.onguiclick, function(event)
     toCraft[ToolsDatabase.selectedPart] = event.element.name:match(ToolsDatabase.guiNames.partPrefix.."%[(.+)%]$")
     ToolsDatabase.updateGUILabel(toCraft)
   elseif event.element.name == "showModularCraftingGUI" then
-    ToolsDatabase.toggleCraftingGUI()
+    ToolsDatabase.showCraftingGUI(event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craftButton then
-    ToolsDatabase.toggleCraftedGUI()
-	ToolsDatabase.closeCraftingGUI()
+    ToolsDatabase.showCraftedGUI(event.element.playerindex)
+	ToolsDatabase.closeCraftingGUI(event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft1x then
-	ToolCrafting(1)
+	ToolCrafting(1, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft2x then
-	ToolCrafting(2)
+	ToolCrafting(2, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft3x then
-	ToolCrafting(3)
+	ToolCrafting(3, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft5x then
-	ToolCrafting(5)
+	ToolCrafting(5, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft10x then
-	ToolCrafting(10)
+	ToolCrafting(10, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft20x then
-	ToolCrafting(20)
+	ToolCrafting(20, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.craft50x then
-	ToolCrafting(50)
+	ToolCrafting(50, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
-    ToolsDatabase.closeCraftingGUI()
-	ToolsDatabase.closeCraftedGUI()
+    ToolsDatabase.closeCraftingGUI(event.element.playerindex)
+	ToolsDatabase.closeCraftedGUI(event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.cancelButtonCraft then
-    ToolsDatabase.closeCraftedGUI()
-	ToolsDatabase.closeCraftingGUI()
+    ToolsDatabase.closeCraftedGUI(event.element.playerindex)
+	ToolsDatabase.closeCraftingGUI(event.element.playerindex)
   end
-  
 end)
 
 remote.addinterface("DyTech-Tools",
@@ -74,14 +73,13 @@ remote.addinterface("DyTech-Tools",
   CreateModularToolLocales = ToolsDatabase.CreateModularToolLocales
 })
 
-function ToolCrafting(amount)
-for i,player in ipairs(game.players) do
+function ToolCrafting(amount, playerindex)
     local name = ToolsDatabase.getModularToolname(toCraft)
     if not name then
       -- probably didn't have all the needed parts selected, so failed to match a valid toolname
       -- no 'real' work here but maybe some additional feedback for the player
       if not (toCraft["handles"] and toCraft["rods"] and toCraft["heads"]) then
-        player.print("Make sure you've selected a material for each part!")
+        game.players[playerindex].print("Make sure you've selected a material for each part!")
       end
       return
     end
@@ -90,27 +88,26 @@ for i,player in ipairs(game.players) do
     reqs[handle] = (reqs[handle] or 0) + amount
     reqs[rod] = (reqs[rod] or 0) + amount
     reqs[head] = (reqs[head] or 0) + amount
-    local main = player.getinventory(defines.inventory.playermain)
-    local quick = player.getinventory(defines.inventory.playerquickbar)
+    local main = game.players[playerindex].getinventory(defines.inventory.playermain)
+    local quick = game.players[playerindex].getinventory(defines.inventory.playerquickbar)
     
     for name, needed in pairs(reqs) do
       local count = main.getitemcount(name) + quick.getitemcount(name)
       if count < needed then
-        player.print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
+        game.players[playerindex].print("You don't have enough "..game.getlocaliseditemname(name).."s\n")
         return
       end
     end
     -- if we made it here then we had enough
     for name, needed in pairs(reqs) do
-      player.removeitem{name=name, count=needed}
+      game.players[playerindex].removeitem{name=name, count=needed}
     end
     
     if ToolsDatabase.craftModularTool(name, amount) == true then
-      ToolsDatabase.closeCraftingGUI() -- if craft successful then close
-      ToolsDatabase.closeCraftedGUI()
+      ToolsDatabase.closeCraftingGUI(playerindex) -- if craft successful then close
+      ToolsDatabase.closeCraftedGUI(playerindex)
 	  toCraft = {} -- clear selected parts
     else -- failed
       error("UM...Crafting failed due to a technical reason. Sorry!, Please tell Dysoch. Info:\nToolname: "..name .. "\nhandle: "..handle.."\nrod: "..rod.."\nhead: "..head)
     end
-end
 end

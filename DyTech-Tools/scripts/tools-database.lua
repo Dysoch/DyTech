@@ -26,7 +26,8 @@ function populateDatabase()
 end
 
 function populateDatabaseRuntime()
-  for name, prototype in pairs(game.player.force.recipes) do
+for i,player in ipairs(game.players) do
+  for name, prototype in pairs(player.force.recipes) do
     local Part = getModularInfo(prototype)
     if Part then
       -- modularInfo could theorecically be extended with more info
@@ -36,6 +37,7 @@ function populateDatabaseRuntime()
       if Part.modularInfo.head then materials.heads[Part.name] = Part.modularInfo end
     end
   end
+end
 end
 
 function CreateModularTool(handle, rod, head)
@@ -273,63 +275,40 @@ mainFrame = nil -- placeholder
 selectedPart = nil -- placeholder
 oldLabel = "No parts currently selected" -- placeholder
 oldLabelCraft = "Select an amount to craft!" -- placeholder
-function showCraftingGUI()
-  populateDatabaseRuntime()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
-	player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Tools Selection Window!"})
-	mainFrame = player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrame.add({type="flow", direction="horizontal", name=guiNames.buttonFlow})
-		for name, _ in pairs(materials) do
-			mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.buttonFlow.."["..name.."]", caption=name})
-		end
-		selectedPart = selectedPart or "handles"
-		mainFrame[guiNames.buttonFlow].add({type="label", name=guiNames.currentSelectionLabel, caption="Currently Selected: " .. selectedPart})
-		mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.craftButton, caption="Craft!"})
-		mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.cancelButton, caption="Cancel!"})
-		mainFrame.add({type="label", name=guiNames.label, caption=oldLabel}) -- should display currently selected parts...
-		mainFrame.add({type="table", name=guiNames.parts, colspan=ITEM_COLSPAN})
-		populateGUIPartsTable(selectedPart)
+function showCraftingGUI(PlayerIndex)
+	populateDatabaseRuntime()
+	game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
+	game.players[PlayerIndex].gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption="Tools Selection Window!"})
+	mainFrame = game.players[PlayerIndex].gui.center[guiNames.mainFlow][guiNames.mainFrame]
+	mainFrame.add({type="flow", direction="horizontal", name=guiNames.buttonFlow})
+	for name, _ in pairs(materials) do
+		mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.buttonFlow.."["..name.."]", caption=name})
 	end
-end  
+	selectedPart = selectedPart or "handles"
+	mainFrame[guiNames.buttonFlow].add({type="label", name=guiNames.currentSelectionLabel, caption="Currently Selected: " .. selectedPart})
+	mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.craftButton, caption="Craft!"})
+	mainFrame[guiNames.buttonFlow].add({type="button", name=guiNames.cancelButton, caption="Cancel!"})
+	mainFrame.add({type="label", name=guiNames.label, caption=oldLabel}) -- should display currently selected parts...
+	mainFrame.add({type="table", name=guiNames.parts, colspan=ITEM_COLSPAN})
+	populateGUIPartsTable(selectedPart)
 end
 
-function showCraftedGUI()
-  populateDatabaseRuntime()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowCraft})
-	player.gui.center[guiNames.mainFlowCraft].add({type="frame", direction="vertical", name=guiNames.mainFrameCraft, caption="How many Tools?"})
-	mainFrameCraft = game.player.gui.center[guiNames.mainFlowCraft][guiNames.mainFrameCraft]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameCraft.add({type="flow", direction="horizontal", name=guiNames.buttonFlowCraft})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft1x, caption="1x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft2x, caption="2x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft3x, caption="3x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft5x, caption="5x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft10x, caption="10x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft20x, caption="20x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft50x, caption="50x!"})
-		mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.cancelButtonCraft, caption="Cancel!"})
-		mainFrameCraft.add({type="label", name=guiNames.label, caption=oldLabelCraft})
-	end
-end  
-end
 
-function toggleCraftingGUI()
-  if game.player.gui.center[guiNames.mainFlow] then
-    closeCraftingGUI()
-  else
-    showCraftingGUI()
-  end
-end
-
-function toggleCraftedGUI()
-  if game.player.gui.center[guiNames.mainFlow] then
-    showCraftedGUI()
-  end
+function showCraftedGUI(PlayerIndex)
+	populateDatabaseRuntime()
+	game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowCraft})
+	game.players[PlayerIndex].gui.center[guiNames.mainFlowCraft].add({type="frame", direction="vertical", name=guiNames.mainFrameCraft, caption="How many Tools?"})
+	mainFrameCraft = game.players[PlayerIndex].gui.center[guiNames.mainFlowCraft][guiNames.mainFrameCraft]
+	mainFrameCraft.add({type="flow", direction="horizontal", name=guiNames.buttonFlowCraft})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft1x, caption="1x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft2x, caption="2x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft3x, caption="3x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft5x, caption="5x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft10x, caption="10x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft20x, caption="20x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.craft50x, caption="50x!"})
+	mainFrameCraft[guiNames.buttonFlowCraft].add({type="button", name=guiNames.cancelButtonCraft, caption="Cancel!"})
+	mainFrameCraft.add({type="label", name=guiNames.label, caption=oldLabelCraft})
 end
 
 function populateGUIPartsTable(selectedPart)
@@ -370,18 +349,14 @@ function updateGUISelectedPart(partType)
   populateGUIPartsTable(selectedPart)
 end
 
-function closeCraftingGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[ToolsDatabase.guiNames.mainFlow] and player.gui.center[ToolsDatabase.guiNames.mainFlow].valid then
-    player.gui.center[ToolsDatabase.guiNames.mainFlow].destroy()
+function closeCraftingGUI(PlayerIndex)
+  if game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlow] and game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlow].valid then
+    game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlow].destroy()
   end
-end
 end
 
-function closeCraftedGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[ToolsDatabase.guiNames.mainFlowCraft] and player.gui.center[ToolsDatabase.guiNames.mainFlowCraft].valid then
-    player.gui.center[ToolsDatabase.guiNames.mainFlowCraft].destroy()
+function closeCraftedGUI(PlayerIndex)
+  if game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlowCraft] and game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlowCraft].valid then
+    game.players[PlayerIndex].gui.center[ToolsDatabase.guiNames.mainFlowCraft].destroy()
   end
-end
 end
