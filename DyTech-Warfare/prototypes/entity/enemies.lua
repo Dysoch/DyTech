@@ -20,21 +20,21 @@ function enemydyingsound()
   }
 end
 
-BerserkerBiterScale = 1.0
-Berserker_Biter_Tint1 = {r=0.34, g=0.68, b=0.90, a=0.6}
-Berserker_Biter_Tint2 = {r=0.31, g=0.61, b=0.95, a=0.85}
+BerserkerBiterScale = 1.25
+Berserker_Biter_Tint1 = {r=0.698, g=0.133, b=0.133, a=0.6}
+Berserker_Biter_Tint2 = {r=0.804, g=0.361, b=0.361, a=0.85}
 
-ElderBiterScale = 1.0
-Elder_Biter_Tint1 = {r=0.34, g=0.68, b=0.90, a=0.6}
-Elder_Biter_Tint2 = {r=0.31, g=0.61, b=0.95, a=0.85}
+ElderBiterScale = 1.5
+Elder_Biter_Tint1 = {r=0, g=0, b=0.804, a=0.6}
+Elder_Biter_Tint2 = {r=0.686, g=0.933, b=0.933, a=0.85}
 
-KingBiterScale = 1.0
-King_Biter_Tint1 = {r=0.34, g=0.68, b=0.90, a=0.6}
-King_Biter_Tint2 = {r=0.31, g=0.61, b=0.95, a=0.85}
+KingBiterScale = 2.0
+King_Biter_Tint1 = {r=0, g=1, b=0.498, a=0.6}
+King_Biter_Tint2 = {r=0.486, g=0.988, b=0, a=0.85}
 
-QueenBiterScale = 1.0
-Queen_Biter_Tint1 = {r=0.34, g=0.68, b=0.90, a=0.6}
-Queen_Biter_Tint2 = {r=0.31, g=0.61, b=0.95, a=0.85}
+QueenBiterScale = 2.5
+Queen_Biter_Tint1 = {r=0.729, g=0.333, b=0.827, a=0.6}
+Queen_Biter_Tint2 = {r=0.502, g=0, b=0.502, a=0.85}
 
 data:extend(
 {
@@ -48,8 +48,8 @@ data:extend(
 	order = "b-b-d",
     healing_per_tick = 0.08,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{-0.7, -1.5}, {0.7, 0.3}},
-    sticker_box = {{-0.6, -0.8}, {0.6, 0}},
+    selection_box = {{-0.85, -1.9}, {0.85, 0.37}},
+    sticker_box = {{-1.2, -2.4}, {1.2, 0.5}},
     attack_parameters =
     {
       range = 1.5,
@@ -107,8 +107,8 @@ data:extend(
     },
     healing_per_tick = 0.09,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{-0.7, -1.5}, {0.7, 0.3}},
-    sticker_box = {{-0.6, -0.8}, {0.6, 0}},
+    selection_box = {{-1.0, -2.25}, {1.0, 0.45}},
+    sticker_box = {{-1.25, -2.75}, {1.25, 0.6}},
     distraction_cooldown = 300,
     attack_parameters =
     {
@@ -168,7 +168,7 @@ data:extend(
     healing_per_tick = 0.12,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-1.4, -3.0}, {1.4, 0.6}},
-    sticker_box = {{-1.2, -1.6}, {1.2, 0}},
+    sticker_box = {{-1.7, -3.75}, {1.7, 0.75}},
     attack_parameters =
     {
       range = 4.5,
@@ -226,8 +226,8 @@ data:extend(
     },
     healing_per_tick = 0.12,
     collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
-    selection_box = {{-1.4, -3.0}, {1.4, 0.6}},
-    sticker_box = {{-1.2, -1.6}, {1.2, 0}},
+    selection_box = {{-1.5, -3.75}, {1.5, 0.75}},
+    sticker_box = {{-1.9, -4.75}, {1.9, 1}},
     attack_parameters =
     {
       range = 1.5,
