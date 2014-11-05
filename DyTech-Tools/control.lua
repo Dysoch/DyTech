@@ -24,10 +24,12 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 local Player = game.players[event.playerindex]
-	if event.createdentity.name == "tool-crafting-bench" and game.players[event.playerindex].gui.center[ToolsDatabase.guiNames.mainFlow]==nil then
+	if event.createdentity.name == "tool-crafting-bench" and game.players.gui.center[ToolsDatabase.guiNames.mainFlow]==nil then
 		ToolsDatabase.showCraftingGUI(event.playerindex)
 		event.createdentity.destroy()
 		Player.insert{name="tool-crafting-bench",count=1}
+	elseif game.players.gui.center[ToolsDatabase.guiNames.mainFlow]==true or game.players.gui.center[guiNames.mainFlowCraft]==true then
+		game.players[event.playerindex].print("GUI is already opened by another player. Wait your turn!")
 	end
 end)
 
@@ -57,11 +59,9 @@ game.onevent(defines.events.onguiclick, function(event)
   elseif event.element.name == ToolsDatabase.guiNames.craft50x then
 	ToolCrafting(50, event.element.playerindex)
   elseif event.element.name == ToolsDatabase.guiNames.cancelButton then
-    ToolsDatabase.closeCraftingGUI(event.element.playerindex)
-	ToolsDatabase.closeCraftedGUI(event.element.playerindex)
-  elseif event.element.name == ToolsDatabase.guiNames.cancelButtonCraft then
-    ToolsDatabase.closeCraftedGUI(event.element.playerindex)
 	ToolsDatabase.closeCraftingGUI(event.element.playerindex)
+  elseif event.element.name == ToolsDatabase.guiNames.cancelButtonCraft then
+	ToolsDatabase.closeCraftedGUI(event.element.playerindex)
   end
 end)
 
@@ -103,8 +103,7 @@ function ToolCrafting(amount, playerindex)
       game.players[playerindex].removeitem{name=name, count=needed}
     end
     
-    if ToolsDatabase.craftModularTool(name, amount) == true then
-      ToolsDatabase.closeCraftingGUI(playerindex) -- if craft successful then close
+    if ToolsDatabase.craftModularTool(name, amount, playerindex) == true then
       ToolsDatabase.closeCraftedGUI(playerindex)
 	  toCraft = {} -- clear selected parts
     else -- failed

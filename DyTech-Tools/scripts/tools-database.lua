@@ -26,8 +26,7 @@ function populateDatabase()
 end
 
 function populateDatabaseRuntime()
-for i,player in ipairs(game.players) do
-  for name, prototype in pairs(player.force.recipes) do
+  for name, prototype in pairs(game.forces.player.recipes) do
     local Part = getModularInfo(prototype)
     if Part then
       -- modularInfo could theorecically be extended with more info
@@ -37,7 +36,6 @@ for i,player in ipairs(game.players) do
       if Part.modularInfo.head then materials.heads[Part.name] = Part.modularInfo end
     end
   end
-end
 end
 
 function CreateModularTool(handle, rod, head)
@@ -51,7 +49,6 @@ function CreateModularTool(handle, rod, head)
   --newTool.icon = baseTool.icon .. name .. ".png"
   newTool.icon = baseTool.icon .. "modularTool.png"
   
-  -- um...I don't really know how 1 -> 0.4 and 6 -> 1.2 in such a way to make it an equation here...
   newTool.action.action_delivery.target_effects.damage.amount = (ToolsDatabase.materials.heads[head].mininglevel*ToolsDatabase.materials.rods[rod].strength)
   newTool.durability = (ToolsDatabase.materials.heads[head].durability*ToolsDatabase.materials.rods[rod].strength) or 5400
   newTool.speed = ((ToolsDatabase.materials.heads[head].miningspeed*ToolsDatabase.materials.handles[handle].hold)+ToolsDatabase.materials.rods[rod].flexibility)
@@ -91,16 +88,16 @@ function CreateModularToolLocales(force)
   game.makefile("DyTechModularToolLocales.cfg", "[item-name]\n"..table.concat(names, ""))
 end
 
-function craftModularTool(name, amount)
-  local main = game.player.getinventory(defines.inventory.playermain)
-  local quick = game.player.getinventory(defines.inventory.playerquickbar)
-  local tools = game.player.getinventory(defines.inventory.playertools)
+function craftModularTool(name, amount, PlayerIndex)
+  local main = game.players[PlayerIndex].getinventory(defines.inventory.playermain)
+  local quick = game.players[PlayerIndex].getinventory(defines.inventory.playerquickbar)
+  local tools = game.players[PlayerIndex].getinventory(defines.inventory.playertools)
   
   local maincount = main.getitemcount(name)
   local quickcount = quick.getitemcount(name)
   local toolscount = tools.getitemcount(name)
   
-  game.player.insert{name=name, count=amount}
+  game.players[PlayerIndex].insert{name=name, count=amount}
   
   local maincount2 = main.getitemcount(name)
   local quickcount2 = quick.getitemcount(name)
