@@ -92,188 +92,144 @@ About3 = "drs9999, for lending me his tree growing codes."
 About4 = "TheBruteMan, for updating Inserters, and making videos for me!"
 About5 = "The Devs: For making this great game, and allowing it to be easily moddable."
 About6 = "Everybody for has donated the information from the Export function!"
-function showMasterGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMaster})
-	player.gui.center[guiNames.mainFlowMaster].add({type="frame", direction="vertical", name=guiNames.mainFrameMaster, caption="DyTech Control Center!"})
-	mainFrameMaster = player.gui.center[guiNames.mainFlowMaster][guiNames.mainFrameMaster]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameMaster.add({type="flow", direction="horizontal", name=guiNames.mainFlowMaster})
-		mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.CoreButton, caption="DyTech-Core!"})
-		if glob.dytech.dynamic then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DynamicButton, caption="DyTech-Dynamic!"}) end
-		if glob.dytech.tools then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ToolsButton, caption="DyTech-Tools!"}) end
-		if glob.dytech.metallurgy then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.MetallurgyButton, caption="DyTech-Metallurgy!"}) end
-		mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.AboutButton, caption="About!"})
-		mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		if debug_master then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DebugButton, caption="Debug!"}) end
-		mainFrameMaster.add({type="label", name=guiNames.label0, caption=MainScreen})
-		mainFrameMaster.add({type="label", name=guiNames.label, caption="You have played".." "..tostring(glob.timer.hours).." ".."Hours,".." "..tostring(glob.timer.minutes).." ".."Minutes and".." "..tostring(glob.timer.seconds).." ".."Seconds!"}) 
-	end
-end	
+function showMasterGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMaster})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowMaster].add({type="frame", direction="vertical", name=guiNames.mainFrameMaster, caption="DyTech Control Center!"})
+mainFrameMaster = game.players[PlayerIndex].gui.center[guiNames.mainFlowMaster][guiNames.mainFrameMaster]
+mainFrameMaster.add({type="flow", direction="horizontal", name=guiNames.mainFlowMaster})
+mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.CoreButton, caption="DyTech-Core!"})
+if glob.dytech.dynamic then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DynamicButton, caption="DyTech-Dynamic!"}) end
+if glob.dytech.tools then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ToolsButton, caption="DyTech-Tools!"}) end
+if glob.dytech.metallurgy then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.MetallurgyButton, caption="DyTech-Metallurgy!"}) end
+mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.AboutButton, caption="About!"})
+mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+if debug_master then mainFrameMaster[guiNames.mainFlowMaster].add({type="button", name=guiNames.DebugButton, caption="Debug!"}) end
+mainFrameMaster.add({type="label", name=guiNames.label0, caption=MainScreen})
+mainFrameMaster.add({type="label", name=guiNames.label, caption="You have played".." "..tostring(glob.timer.hours).." ".."Hours,".." "..tostring(glob.timer.minutes).." ".."Minutes and".." "..tostring(glob.timer.seconds).." ".."Seconds!"}) 
 end
 
-function showAboutGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowAbout})
-	player.gui.center[guiNames.mainFlowAbout].add({type="frame", direction="vertical", name=guiNames.mainFrameAbout, caption="About!"})
-	mainFrameAbout = player.gui.center[guiNames.mainFlowAbout][guiNames.mainFrameAbout]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameAbout.add({type="flow", direction="horizontal", name=guiNames.buttonFlowAbout})
-		mainFrameAbout[guiNames.buttonFlowAbout].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout7, caption=About7})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout8, caption=About8})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout9, caption=About9})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout10, caption=About10})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout1, caption=About1})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout2, caption=About2})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout3, caption=About3})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout4, caption=About4})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout5, caption=About5})
-		mainFrameAbout.add({type="label", name=guiNames.labelAbout6, caption=About6})
-	end
-end	
+function showAboutGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowAbout})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowAbout].add({type="frame", direction="vertical", name=guiNames.mainFrameAbout, caption="About!"})
+mainFrameAbout = game.players[PlayerIndex].gui.center[guiNames.mainFlowAbout][guiNames.mainFrameAbout]
+mainFrameAbout.add({type="flow", direction="horizontal", name=guiNames.buttonFlowAbout})
+mainFrameAbout[guiNames.buttonFlowAbout].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout7, caption=About7})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout8, caption=About8})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout9, caption=About9})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout10, caption=About10})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout1, caption=About1})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout2, caption=About2})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout3, caption=About3})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout4, caption=About4})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout5, caption=About5})
+mainFrameAbout.add({type="label", name=guiNames.labelAbout6, caption=About6})
 end
 
-function showCoreGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowCore})
-	player.gui.center[guiNames.mainFlowCore].add({type="frame", direction="vertical", name=guiNames.mainFrameCore, caption="DyTech-Core Control Center!"})
-	mainFrameCore = player.gui.center[guiNames.mainFlowCore][guiNames.mainFrameCore]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameCore.add({type="flow", direction="horizontal", name=guiNames.buttonFlowCore})
-		mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.ExportButton, caption="Export!"})
-		mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.BackButton, caption="Back!"})
-		mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		mainFrameCore.add({type="label", name=guiNames.labelCore, caption=Core})
-	end
-end	  
+function showCoreGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowCore})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowCore].add({type="frame", direction="vertical", name=guiNames.mainFrameCore, caption="DyTech-Core Control Center!"})
+mainFrameCore = game.players[PlayerIndex].gui.center[guiNames.mainFlowCore][guiNames.mainFrameCore]
+mainFrameCore.add({type="flow", direction="horizontal", name=guiNames.buttonFlowCore})
+mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.ExportButton, caption="Export!"})
+mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.BackButton, caption="Back!"})
+mainFrameCore[guiNames.buttonFlowCore].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+mainFrameCore.add({type="label", name=guiNames.labelCore, caption=Core}) 
 end
 
-function showDynamicGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowDynamic})
-	player.gui.center[guiNames.mainFlowDynamic].add({type="frame", direction="vertical", name=guiNames.mainFrameDynamic, caption="DyTech-Core Control Center!"})
-	mainFrameDynamic = player.gui.center[guiNames.mainFlowDynamic][guiNames.mainFrameDynamic]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameDynamic.add({type="flow", direction="horizontal", name=guiNames.buttonFlowDynamic})
-		mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.DynamicSystemButton, caption="Toggle Dynamic System!"})
-		mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.DynamicSystemHardButton, caption="Toggle Dynamic Hard Mode!"})
-		mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.BackButton, caption="Back!"})
-		mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		mainFrameDynamic.add({type="label", name=guiNames.labelDynamic, caption=Dynamic})
-		mainFrameDynamic.add({type="label", name=guiNames.label15, caption="Dynamic System is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystem"))})
-		mainFrameDynamic.add({type="label", name=guiNames.label16, caption="Dynamic System Hard Mode is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystemHard"))})
-	end
-end	
+function showDynamicGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowDynamic})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowDynamic].add({type="frame", direction="vertical", name=guiNames.mainFrameDynamic, caption="DyTech-Core Control Center!"})
+mainFrameDynamic = game.players[PlayerIndex].gui.center[guiNames.mainFlowDynamic][guiNames.mainFrameDynamic]
+mainFrameDynamic.add({type="flow", direction="horizontal", name=guiNames.buttonFlowDynamic})
+mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.DynamicSystemButton, caption="Toggle Dynamic System!"})
+mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.DynamicSystemHardButton, caption="Toggle Dynamic Hard Mode!"})
+mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.BackButton, caption="Back!"})
+mainFrameDynamic[guiNames.buttonFlowDynamic].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+mainFrameDynamic.add({type="label", name=guiNames.labelDynamic, caption=Dynamic})
+mainFrameDynamic.add({type="label", name=guiNames.label15, caption="Dynamic System is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystem"))})
+mainFrameDynamic.add({type="label", name=guiNames.label16, caption="Dynamic System Hard Mode is".." "..tostring(remote.call("DyTech-Dynamic", "CheckSystemHard"))})
 end
 
-function showToolsGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowTools})
-	player.gui.center[guiNames.mainFlowTools].add({type="frame", direction="vertical", name=guiNames.mainFrameTools, caption="DyTech-Core Control Center!"})
-	mainFrameTools = player.gui.center[guiNames.mainFlowTools][guiNames.mainFrameTools]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameTools.add({type="flow", direction="horizontal", name=guiNames.buttonFlowTools})
-		mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ToolsCraftingButton, caption="Tools Crafting!"})
-		mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ToolsItemButton, caption="Give Crafting Bench Item!"})
-		mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.BackButton, caption="Back!"})
-		mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		mainFrameTools.add({type="label", name=guiNames.labelTools, caption=Tools})
-		mainFrameTools.add({type="label", name=guiNames.label13, caption=Tools1})
-	end
-end	
+function showToolsGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowTools})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowTools].add({type="frame", direction="vertical", name=guiNames.mainFrameTools, caption="DyTech-Core Control Center!"})
+mainFrameTools = game.players[PlayerIndex].gui.center[guiNames.mainFlowTools][guiNames.mainFrameTools]
+mainFrameTools.add({type="flow", direction="horizontal", name=guiNames.buttonFlowTools})
+mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ToolsCraftingButton, caption="Tools Crafting!"})
+mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ToolsItemButton, caption="Give Crafting Bench Item!"})
+mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.BackButton, caption="Back!"})
+mainFrameTools[guiNames.buttonFlowTools].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+mainFrameTools.add({type="label", name=guiNames.labelTools, caption=Tools})
+mainFrameTools.add({type="label", name=guiNames.label13, caption=Tools1})
 end
 
-function showMetallurgyGUI()
-for i,player in ipairs(game.players) do
-local center = player.gui.center
-	player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMetallurgy})
-	player.gui.center[guiNames.mainFlowMetallurgy].add({type="frame", direction="vertical", name=guiNames.mainFrameMetallurgy, caption="About!"})
-	mainFrameMetallurgy = player.gui.center[guiNames.mainFlowMetallurgy][guiNames.mainFrameMetallurgy]
-	for ii,pplayer in ipairs(game.players) do
-		mainFrameMetallurgy.add({type="flow", direction="horizontal", name=guiNames.buttonFlowMetallurgy})
-		mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.MetallurgyFluidsButton, caption="Regenerate Fluids!"})
-		mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.MetallurgyOresButton, caption="Regenerate Ores!"})
-		mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.BackButton, caption="Back!"})
-		mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.ExitButton, caption="Close!"})
-		mainFrameMetallurgy.add({type="label", name=guiNames.labelMetallurgy, caption=Metallurgy})
-		mainFrameMetallurgy.add({type="label", name=guiNames.label14, caption=Metallurgy1})
-	end
-end	
+function showMetallurgyGUI(PlayerIndex)
+game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMetallurgy})
+game.players[PlayerIndex].gui.center[guiNames.mainFlowMetallurgy].add({type="frame", direction="vertical", name=guiNames.mainFrameMetallurgy, caption="About!"})
+mainFrameMetallurgy = game.players[PlayerIndex].gui.center[guiNames.mainFlowMetallurgy][guiNames.mainFrameMetallurgy]
+mainFrameMetallurgy.add({type="flow", direction="horizontal", name=guiNames.buttonFlowMetallurgy})
+mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.MetallurgyFluidsButton, caption="Regenerate Fluids!"})
+mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.MetallurgyOresButton, caption="Regenerate Ores!"})
+mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.BackButton, caption="Back!"})
+mainFrameMetallurgy[guiNames.buttonFlowMetallurgy].add({type="button", name=guiNames.ExitButton, caption="Close!"})
+mainFrameMetallurgy.add({type="label", name=guiNames.labelMetallurgy, caption=Metallurgy})
+mainFrameMetallurgy.add({type="label", name=guiNames.label14, caption=Metallurgy1})
 end
 
-function closeAllGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowMaster] and player.gui.center[CoreGUI.guiNames.mainFlowMaster].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowMaster].destroy()
+function closeAllGUI(PlayerIndex)
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster].destroy()
   end
-  if player.gui.center[CoreGUI.guiNames.mainFlowCore] and player.gui.center[CoreGUI.guiNames.mainFlowCore].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
   end
-  if player.gui.center[CoreGUI.guiNames.mainFlowDynamic] and player.gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
   end
-  if player.gui.center[CoreGUI.guiNames.mainFlowTools] and player.gui.center[CoreGUI.guiNames.mainFlowTools].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
   end
-  if player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
   end
-  if player.gui.center[CoreGUI.guiNames.mainFlowAbout] and player.gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
   end
-end
 end
 
-function closeMasterGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowMaster] and player.gui.center[CoreGUI.guiNames.mainFlowMaster].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowMaster].destroy()
+function closeMasterGUI(PlayerIndex)
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster] and game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster].valid then
+    game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowMaster].destroy()
   end
-end
 end
 
-function closeCoreGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowCore] and player.gui.center[CoreGUI.guiNames.mainFlowCore].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
+function closeCoreGUI(PlayerIndex)
+  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore].valid then
+    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowCore].destroy()
   end
-end
 end
 
-function closeDynamicGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowDynamic] and player.gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
+function closeDynamicGUI(PlayerIndex)
+  if game.players[PlayerIndex].gui.center[CoreGUI.guiNames.mainFlowDynamic] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowDynamic].valid then
+    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowDynamic].destroy()
   end
-end
 end
 
-function closeToolsGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowTools] and player.gui.center[CoreGUI.guiNames.mainFlowTools].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
+function closeToolsGUI(PlayerIndex)
+  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools].valid then
+    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowTools].destroy()
   end
-end
 end
 
-function closeMetallurgyGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
+function closeMetallurgyGUI(PlayerIndex)
+  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy].valid then
+    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowMetallurgy].destroy()
   end
-end
 end
 
-function closeAboutGUI()
-for i,player in ipairs(game.players) do
-  if player.gui.center[CoreGUI.guiNames.mainFlowAbout] and player.gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
-    player.gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
+function closeAboutGUI(PlayerIndex)
+  if game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout] and game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout].valid then
+    game.players[PlayerIndex]gui.center[CoreGUI.guiNames.mainFlowAbout].destroy()
   end
-end
 end

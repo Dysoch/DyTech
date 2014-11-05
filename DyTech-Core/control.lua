@@ -7,7 +7,7 @@ require "scripts/functions"
 require "scripts/oninit"
 require "scripts/onload"
 require "scripts/gui"
-require "scripts/recycler-database"
+--require "scripts/recycler-database"
 
 --[[Debug Functions]]--
 debug_master = true -- Master switch for debugging, shows most things!
@@ -92,7 +92,7 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-	if not glob.CraftedItems[localisedname(event.itemstack.name)] then
+	if not glob.CraftedItems[event.itemstack.name] then
 		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
 		debug("No CraftedItems ("..tostring(event.itemstack.name)..")")
 	else
@@ -115,7 +115,7 @@ local Player = game.players[event.playerindex]
 		if math.random(50) == 25 then
 		local amount = math.random(1,5)
 			Player.insert{name="resin",count=amount}
-			PlayerPrint({"msg-rubber"})
+			Player.print({"msg-rubber"})
 			debug("Player given "..tostring(amount).." Rubber Resin")
 		end
 	end
@@ -194,9 +194,7 @@ game.onevent(defines.events.ontick, function(event)
 	fs.Timer(event)
 	if game.tick%300==0 then
 		fs.ModuleChecker()
-		if debug_ontick then
-			debug("Module Checker activated")
-		end
+		if debug_ontick then debug("Module Checker activated") end
 	end
 	if game.tick%60==1 then
 		glob.counter.dytech=0
@@ -371,41 +369,41 @@ game.onevent(defines.events.onchunkgenerated, function(event)
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
-local Player = game.players[event.playerindex]
+local Player = game.players[event.element.playerindex]
 	if event.element.name:find(CoreGUI.guiNames.ExportButton) then
 		remote.call("DyTech-Core", "ExportAll")
-		CoreGUI.closeAllGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
 		PlayerPrint("Be sure to send the files from the script-output folder to Dysoch so he can use that for balancing!")
 	elseif event.element.name:find(CoreGUI.guiNames.ExitButton) then
-		CoreGUI.closeAllGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.BackButton) then
-		CoreGUI.closeAllGUI()
-		CoreGUI.showMasterGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
+		CoreGUI.showMasterGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.AboutButton) then
-		CoreGUI.closeAllGUI()
-		CoreGUI.showAboutGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
+		CoreGUI.showAboutGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.CoreButton) then
-		CoreGUI.closeMasterGUI()
-		CoreGUI.showCoreGUI()
+		CoreGUI.closeMasterGUI(event.element.playerindex)
+		CoreGUI.showCoreGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.DynamicButton) then
-		CoreGUI.closeMasterGUI()
-		CoreGUI.showDynamicGUI()
+		CoreGUI.closeMasterGUI(event.element.playerindex)
+		CoreGUI.showDynamicGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.DynamicSystemButton) then
 		remote.call("DyTech-Dynamic", "ToggleDynamicSystem")
 	elseif event.element.name:find(CoreGUI.guiNames.DynamicSystemHardButton) then
 		remote.call("DyTech-Dynamic", "ToggleHardMode")
 	elseif event.element.name:find(CoreGUI.guiNames.ToolsButton) then
-		CoreGUI.closeMasterGUI()
-		CoreGUI.showToolsGUI()
+		CoreGUI.closeMasterGUI(event.element.playerindex)
+		CoreGUI.showToolsGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.ToolsCraftingButton) then
-		CoreGUI.closeAllGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
 		remote.call("DyTech-Tools", "showCraftingGUI")
 	elseif event.element.name:find(CoreGUI.guiNames.ToolsItemButton) then
-		CoreGUI.closeAllGUI()
+		CoreGUI.closeAllGUI(event.element.playerindex)
 		Player.insert{name="tool-crafting-bench",count=1}
 	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyButton) then
-		CoreGUI.closeMasterGUI()
-		CoreGUI.showMetallurgyGUI()
+		CoreGUI.closeMasterGUI(event.element.playerindex)
+		CoreGUI.showMetallurgyGUI(event.element.playerindex)
 	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyFluidsButton) then
 		remote.call("DyTech-Metallurgy", "RegenerateFluids")
 	elseif event.element.name:find(CoreGUI.guiNames.MetallurgyOresButton) then
@@ -506,7 +504,6 @@ remote.addinterface("DyTech-Core",
   end,
   
   GUI = function()
-	--local Player = game.players[playerindex]
 	CoreGUI.showMasterGUI()
   end,
   
