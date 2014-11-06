@@ -112,7 +112,7 @@ data:extend(
     distraction_cooldown = 300,
     attack_parameters =
     {
-      range = 1.5,
+      range = 1.0,
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(75),
@@ -230,7 +230,7 @@ data:extend(
     sticker_box = {{-1.9, -4.75}, {1.9, 1}},
     attack_parameters =
     {
-      range = 1.5,
+      range = 2.0,
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type(25),
