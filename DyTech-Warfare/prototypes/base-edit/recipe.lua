@@ -1,1 +1,5 @@
 table.insert(data.raw["recipe"]["laser-turret"].ingredients,{"stone-gear-wheel", 5})
+table.insert(data.raw["recipe"]["science-pack-highly-advanced"].ingredients,{"diamond-5", 5})
+table.insert(data.raw["recipe"]["science-pack-war"].ingredients,{"battery-2", 2})
+table.insert(data.raw["recipe"]["science-pack-biter"].ingredients,{"chitin", 15})
+table.insert(data.raw["recipe"]["science-pack-biter"].ingredients,{"bone", 8})
