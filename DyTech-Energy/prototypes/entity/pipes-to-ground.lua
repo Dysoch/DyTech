@@ -1,3 +1,10 @@
+require("prototypes.entity.pipe-functions")
+
+Pipe_mk2 = {r=0, g=0.749, b=1, a=1}
+Pipe_mk3 = {r=0.867, g=0.627, b=0.867, a=1}
+Pipe_mk4 = {r=1, g=0.843, b=0, a=1}
+Pipe_mk5 = {r=0, g=1, b=0.498, a=1}
+
 data:extend({
   {
     type = "pipe-to-ground",
@@ -37,37 +44,7 @@ data:extend({
       width = 32,
       height = 32
     },
-    pictures =
-    {
-      up =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
-        priority = "high",
-        width = 44,
-        height = 32 --, shift = {0.10, -0.04}
-      },
-      down =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-        priority = "high",
-        width = 40,
-        height = 32 --, shift = {0.05, 0}
-      },
-      left =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-        priority = "high",
-        width = 32,
-        height = 42 --, shift = {-0.12, 0.1}
-      },
-      right =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-        priority = "high",
-        width = 32,
-        height = 40 --, shift = {0.1, 0.1}
-      },
-    }
+    pictures = PipeToGroundPicturesDyTech(Pipe_mk2),
   },
   {
     type = "pipe-to-ground",
@@ -107,37 +84,7 @@ data:extend({
       width = 32,
       height = 32
     },
-    pictures =
-    {
-      up =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
-        priority = "high",
-        width = 44,
-        height = 32 --, shift = {0.10, -0.04}
-      },
-      down =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-        priority = "high",
-        width = 40,
-        height = 32 --, shift = {0.05, 0}
-      },
-      left =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-        priority = "high",
-        width = 32,
-        height = 42 --, shift = {-0.12, 0.1}
-      },
-      right =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-        priority = "high",
-        width = 32,
-        height = 40 --, shift = {0.1, 0.1}
-      },
-    }
+    pictures = PipeToGroundPicturesDyTech(Pipe_mk3),
   },
   {
     type = "pipe-to-ground",
@@ -177,37 +124,7 @@ data:extend({
       width = 32,
       height = 32
     },
-    pictures =
-    {
-      up =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
-        priority = "high",
-        width = 44,
-        height = 32 --, shift = {0.10, -0.04}
-      },
-      down =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-        priority = "high",
-        width = 40,
-        height = 32 --, shift = {0.05, 0}
-      },
-      left =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-        priority = "high",
-        width = 32,
-        height = 42 --, shift = {-0.12, 0.1}
-      },
-      right =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-        priority = "high",
-        width = 32,
-        height = 40 --, shift = {0.1, 0.1}
-      },
-    }
+    pictures = PipeToGroundPicturesDyTech(Pipe_mk4),
   },
   {
     type = "pipe-to-ground",
@@ -247,37 +164,7 @@ data:extend({
       width = 32,
       height = 32
     },
-    pictures =
-    {
-      up =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
-        priority = "high",
-        width = 44,
-        height = 32 --, shift = {0.10, -0.04}
-      },
-      down =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
-        priority = "high",
-        width = 40,
-        height = 32 --, shift = {0.05, 0}
-      },
-      left =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
-        priority = "high",
-        width = 32,
-        height = 42 --, shift = {-0.12, 0.1}
-      },
-      right =
-      {
-        filename = "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
-        priority = "high",
-        width = 32,
-        height = 40 --, shift = {0.1, 0.1}
-      },
-    }
+    pictures = PipeToGroundPicturesDyTech(Pipe_mk5),
   },
 }
 )
