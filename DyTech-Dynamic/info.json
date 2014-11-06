@@ -1,9 +1,9 @@
 {
 	"name":"DyTech-Dynamic",
 	"author":"Dysoch",
-	"version":"0.1.1",
+	"version":"0.2.0",
 	"title":"DyTech-Dynamic",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"The DyTech Module for the Dynamic System",
-	"dependencies": ["DyTech-Core >= 0.12.0"]
+	"dependencies": ["DyTech-Core >= 0.13.0"]
 }
