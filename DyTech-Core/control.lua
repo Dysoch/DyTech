@@ -10,7 +10,7 @@ require "scripts/gui"
 --require "scripts/recycler-database"
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 function debug(str)
@@ -68,9 +68,8 @@ end)
 game.onload(function()
 	Load.OnLoad()
 	fs.ModuleChecker()
-	if game.itemprototypes.charcoal then -- item "charcoal" is available, that means treefarm-mod is probably used
+	if game.itemprototypes.charcoal and remote.interfaces["treefarm"] then -- item "charcoal" is available, that means treefarm-mod is probably used
 	debug("Treefarm installed")
-		if (remote.interfaces.treefarm) and (remote.interfaces.treefarm.addSeed) then -- check if script-interfaces are available
         local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
             -- the remote function will return nil on success, otherwise a string with the error-msg
 			if errorMsg == nil then -- everything worked fine
@@ -78,7 +77,6 @@ game.onload(function()
 			else
 				if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
 			end
-		end
 	else -- charcoal isn't available, so treefarm-mod isn't installed
 	debug("Treefarm not installed")
 		glob.compatibility.treefarm = false
