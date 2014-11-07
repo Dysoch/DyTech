@@ -47,6 +47,7 @@ require("prototypes.technology.gem-processing")
 require("prototypes.technology.laser-turret")
 require("prototypes.technology.laser-turret-upgrade")
 require("prototypes.technology.military")
+require("prototypes.technology.tank")
 require("prototypes.autoplace-controls")
 
 local loot1 =
