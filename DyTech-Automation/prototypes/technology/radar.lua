@@ -16,9 +16,10 @@ data:extend(
       count = 200,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
+        {"science-pack-resource", 1},
+        {"science-pack-industrial", 1},
+        {"science-pack-tech", 1},
+        {"science-pack-war", 1},
       },
       time = 30
     },
@@ -42,9 +43,9 @@ data:extend(
       count = 400,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
+        {"science-pack-industrial", 1},
+        {"science-pack-tech", 1},
+        {"science-pack-war", 1},
       },
       time = 30
     },
@@ -65,12 +66,12 @@ data:extend(
     prerequisites = {"radar-2"},
     unit =
     {
-      count = 800,
+      count = 300,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
+        {"science-pack-tech", 2},
+        {"science-pack-war", 2},
+        {"science-pack-advanced", 1},
       },
       time = 30
     },
@@ -91,12 +92,12 @@ data:extend(
     prerequisites = {"radar-3"},
     unit =
     {
-      count = 1600,
+      count = 100,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
+        {"science-pack-war", 10},
+        {"science-pack-advanced", 4},
+        {"science-pack-highly-advanced", 1},
       },
       time = 30
     },

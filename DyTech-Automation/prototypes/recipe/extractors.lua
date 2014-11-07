@@ -11,7 +11,7 @@ data:extend(
       {"pipe-mk2", 10},
     },
     result = "pumpjack-mk2",
-    enabled = true
+    enabled = false
   },
   {
     type = "recipe",
@@ -24,7 +24,7 @@ data:extend(
       {"pipe-mk3", 10},
     },
     result = "pumpjack-mk3",
-    enabled = true
+    enabled = false
   },
   {
     type = "recipe",
@@ -37,7 +37,7 @@ data:extend(
       {"pipe-mk4", 10},
     },
     result = "pumpjack-mk4",
-    enabled = true
+    enabled = false
   },
   {
     type = "recipe",
@@ -50,7 +50,7 @@ data:extend(
       {"pipe-mk5", 10},
     },
     result = "pumpjack-mk5",
-    enabled = true
+    enabled = false
   },
 }
 )
