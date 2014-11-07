@@ -226,11 +226,11 @@ function DyTechItemCollect(name, radius)
 			for _, item in pairs(insertable) do
 				if game.findentitiesfiltered{type="transport-belt", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="transport-belt-to-ground", area={getboundingbox(item.position, 0.5)}}[1]==nil and game.findentitiesfiltered{type="splitter", area={getboundingbox(item.position, 0.5)}}[1]==nil then
 					if item.stack then
-						if not item.tobedeconstructed then
+						if item.tobedeconstructed then
 							item.orderdeconstruction(game.forces.player)
 							game.createentity{name="item-pickup-dytech", position={value.position.x, value.position.y+0.5}}
+						break
 						end
-					break
 					end
 				end
 			end

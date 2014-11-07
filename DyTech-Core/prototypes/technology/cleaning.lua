@@ -33,7 +33,9 @@ data:extend(
       count = 100,
       ingredients =
       {
-        {"science-pack-1", 1},
+        {"science-pack-resource", 1},
+        {"science-pack-industrial", 1},
+        {"science-pack-fluid", 1},
       },
       time = 10
     },
