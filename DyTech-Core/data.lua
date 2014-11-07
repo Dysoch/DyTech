@@ -27,10 +27,6 @@ require("prototypes.experimental.robot-entity")
 require("prototypes.experimental.robot-item")
 require("prototypes.experimental.robot-recipe")
 require("prototypes.experimental.robot-tech")
-require("prototypes.experimental.science-item")
-require("prototypes.experimental.science-recipe")
-require("prototypes.experimental.science-tech")
-table.insert(data.raw["lab"]["lab"].inputs,{"science-pack-4"})
 end
 
 
@@ -66,6 +62,7 @@ require("prototypes.base-edit.tech")
 require("prototypes.entity.collector")
 require("prototypes.entity.explosion")
 require("prototypes.entity.nature")
+require("prototypes.entity.science")
 require("prototypes.entity.wall")
 
 -- Fluids
@@ -73,15 +70,18 @@ require("prototypes.entity.wall")
 -- Item
 require("prototypes.item.collector")
 require("prototypes.item.intermediate")
+require("prototypes.item.science")
 require("prototypes.item.wall")
 
 -- Recipe
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
 require("prototypes.recipe.wall")
+require("prototypes.recipe.science")
 
 -- Tech
 require("prototypes.technology.player")
+require("prototypes.technology.science")
 
 for k, v in pairs(data.raw.module) do
 	if v.name:find("productivity%-module") and v.limitation then

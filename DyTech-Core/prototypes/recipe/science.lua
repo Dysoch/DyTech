@@ -2,6 +2,18 @@ data:extend(
 {
   {
     type = "recipe",
+    name = "lab-dytech",
+    energy_required = 2.5,
+    ingredients =
+    {
+      {"electronic-circuit", 5},
+      {"stone-gear-wheel", 5},
+      {"basic-transport-belt", 3}
+    },
+    result = "lab-dytech"
+  },
+  {
+    type = "recipe",
     name = "science-pack-nature",
     enabled = true,
     energy_required = 1.16,
@@ -32,7 +44,7 @@ data:extend(
     ingredients =
     {
       {"electronic-circuit", 1},
-      {"transport-belt", 1},
+      {"basic-transport-belt", 1},
       {"pipe", 1},
     },
     result = "science-pack-industrial"

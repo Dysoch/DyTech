@@ -23,7 +23,3 @@ for k, v in pairs(data.raw["recipe"]["basic-transport-belt"].ingredients) do
 	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["basic-transport-belt"].ingredients, k) end
 end
 table.insert(data.raw["recipe"]["basic-transport-belt"].ingredients,{"stone-gear-wheel", 1})
-for k, v in pairs(data.raw["recipe"]["lab"].ingredients) do
-	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["lab"].ingredients, k) end
-end
-table.insert(data.raw["recipe"]["lab"].ingredients,{"stone-gear-wheel", 10})
