@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "technology",
-    name = "tanks-1",
+    name = "storage-tanks-1",
     icon = "__DyTech-Storage__/graphics/technology/tanks.png",
     effects =
     {
@@ -26,7 +26,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "tanks-2",
+    name = "storage-tanks-2",
     icon = "__DyTech-Storage__/graphics/technology/tanks.png",
     effects =
     {
@@ -35,7 +35,7 @@ data:extend(
         recipe = "storage-tank-3"
       },
     },
-    prerequisites = {"tanks-1"},
+    prerequisites = {"storage-tanks-1"},
     unit =
     {
       count = 250,
@@ -51,7 +51,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "tanks-3",
+    name = "storage-tanks-3",
     icon = "__DyTech-Storage__/graphics/technology/tanks.png",
     effects =
     {
@@ -60,7 +60,7 @@ data:extend(
         recipe = "storage-tank-4"
       },
     },
-    prerequisites = {"tanks-2"},
+    prerequisites = {"storage-tanks-2"},
     unit =
     {
       count = 450,
@@ -77,7 +77,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "tanks-4",
+    name = "storage-tanks-4",
     icon = "__DyTech-Storage__/graphics/technology/tanks.png",
     effects =
     {
@@ -86,7 +86,7 @@ data:extend(
         recipe = "storage-tank-5"
       },
     },
-    prerequisites = {"tanks-3"},
+    prerequisites = {"storage-tanks-3"},
     unit =
     {
       count = 750,
