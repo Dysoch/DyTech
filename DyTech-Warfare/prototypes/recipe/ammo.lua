@@ -57,6 +57,19 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "battery-tank",
+    enabled = false,
+    energy_required = 5,
+    ingredients =
+    {
+      {"emerald-5", 1},
+      {"battery", 1},
+    },
+    result = "battery-tank",
+	result_count = 1
+  },
+  {
+    type = "recipe",
     name = "battery-shotgun-1",
     enabled = false,
     energy_required = 15,

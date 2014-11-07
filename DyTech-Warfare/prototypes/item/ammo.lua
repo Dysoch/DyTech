@@ -98,6 +98,35 @@ data:extend(
   },
   {
     type = "ammo",
+    name = "battery-tank",
+    icon = "__base__/graphics/icons/battery.png",
+    flags = {"goes-to-main-inventory"},
+    ammo_type =
+    {
+      category = "battery-tank",
+      action =
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "projectile",
+          projectile = "laser-emerald-3",
+          starting_speed = 0.75,
+          source_effects =
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          }
+        }
+      }
+    },
+    magazine_size = 50,
+    subgroup = "ammo",
+    order = "z[tank]-i[battery-1]",
+    stack_size = 100
+  },
+  {
+    type = "ammo",
     name = "battery-shotgun-1",
     icon = "__base__/graphics/icons/battery.png",
     flags = {"goes-to-main-inventory"},

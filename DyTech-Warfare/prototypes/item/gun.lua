@@ -6,7 +6,7 @@ data:extend(
     icon = "__DyTech-Warfare__/graphics/icons/sniper.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "gun",
-    order = "s",
+    order = "s[sniper]",
     attack_parameters =
     {
       ammo_category = "sniper-ammo",
@@ -41,25 +41,38 @@ data:extend(
     icon = "__DyTech-Warfare__/graphics/icons/sniper.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "gun",
-    order = "laser",
+    order = "g[laser]",
     attack_parameters =
     {
       ammo_category = "battery",
       cooldown = 8,
       movement_slow_down_factor = 0.6,
-	  shell_particle =
-      {
-        name = "shell-particle",
-        direction_deviation = 0.1,
-        speed = 0.4,
-        speed_deviation = 0.03,
-        center = {0, 0.6},
-        creation_distance = 0.6,
-        starting_frame_speed = 0.4,
-        starting_frame_speed_deviation = 0.1
-      },
       projectile_creation_distance = 0.6,
       range = 25,
+      sound =
+      {
+        {
+          filename = "__base__/sound/laser.ogg",
+          volume = 0.8
+        }
+      }
+    },
+    stack_size = 1
+  },
+  {
+    type = "gun",
+    name = "laser-gun-tank",
+    icon = "__DyTech-Warfare__/graphics/icons/sniper.png",
+    flags = {"goes-to-main-inventory", "hidden"},
+    subgroup = "gun",
+    order = "z[tank]-g[laser]",
+    attack_parameters =
+    {
+      ammo_category = "battery-tank",
+      cooldown = 8,
+      movement_slow_down_factor = 0.6,
+      projectile_creation_distance = 0.6,
+      range = 30,
       sound =
       {
         {
@@ -76,23 +89,12 @@ data:extend(
     icon = "__DyTech-Warfare__/graphics/icons/sniper.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "gun",
-    order = "laser-shotgun",
+    order = "g[laser]-b[shotgun]",
     attack_parameters =
     {
       ammo_category = "battery-shotgun",
       cooldown = 8,
       movement_slow_down_factor = 0.6,
-	  shell_particle =
-      {
-        name = "shell-particle",
-        direction_deviation = 0.1,
-        speed = 0.4,
-        speed_deviation = 0.03,
-        center = {0, 0.6},
-        creation_distance = 0.6,
-        starting_frame_speed = 0.4,
-        starting_frame_speed_deviation = 0.1
-      },
       projectile_creation_distance = 0.6,
       range = 25,
       sound =
