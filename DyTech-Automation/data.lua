@@ -6,6 +6,11 @@ require("prototypes.technology.furnace")
 require("prototypes.technology.mining")
 require("prototypes.technology.radar")
 end
+if data.raw.item["pipe-mk2"] then
+require("prototypes.recipe.extractors-energy")
+else
+require("prototypes.recipe.extractors")
+end
 
 require("prototypes.base-edit.entity")
 require("prototypes.base-edit.item")
@@ -24,7 +29,6 @@ require("prototypes.item.intermediate")
 require("prototypes.item.radar")
 require("prototypes.recipe.assembling")
 require("prototypes.recipe.drill")
-require("prototypes.recipe.extractors")
 require("prototypes.recipe.furnace-burner")
 require("prototypes.recipe.furnace-electric")
 require("prototypes.recipe.intermediate")
