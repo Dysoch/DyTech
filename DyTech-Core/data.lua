@@ -17,8 +17,11 @@ require("prototypes.recipe.liquid-handler")
 require("prototypes.recipe.water-cleaning")
 require("prototypes.technology.cleaning")
 require("prototypes.base-edit.tech-dirty-water")
+require("prototypes.recipe.science-dirty-water")
 data.raw["offshore-pump"]["offshore-pump"].fluid = "dirty-water"
 data.raw["fluid"]["water"].heat_capacity = "1250J"
+else 
+require("prototypes.recipe.science-water")
 end
 
 -- Experimental Check
@@ -77,7 +80,6 @@ require("prototypes.item.wall")
 require("prototypes.recipe.collector")
 require("prototypes.recipe.intermediate")
 require("prototypes.recipe.wall")
-require("prototypes.recipe.science")
 
 -- Tech
 require("prototypes.technology.player")

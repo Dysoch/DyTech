@@ -59,7 +59,7 @@ data:extend(
     {
       {type="fluid", name="water", amount=15},
       {type="fluid", name="heavy-oil", amount=5},
-      {type="fluid", name="sulfuric-acid", amount=2},
+      {type="fluid", name="light-oil", amount=2},
     },
     results = 
 	{
