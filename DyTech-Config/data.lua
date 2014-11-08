@@ -6,21 +6,21 @@
 -- These switched are here if you mess up, and dont know the normal values of everything.
 -- Setting these to true will use the values below,
 -- False means that it will not use the values below, and just use their own values!
--- Default is false
-Factorio = false
-DyTech_Core = false
-DyTech_Automation = false
-DyTech_Dynamic = false
-DyTech_Energy = false
-DyTech_Genetics = false
-DyTech_Inserters = false
-DyTech_Logistic = false
-DyTech_Metallurgy = false
-DyTech_Modules = false
-DyTech_Storage = false
-DyTech_Tools = false
-DyTech_Transportation = false
-DyTech_Warfare = false
+-- Default is false (meaning not using values below!)
+Factorio = true
+DyTech_Core = false -- NOT USED
+DyTech_Automation = false -- NOT USED
+DyTech_Dynamic = false -- NOT USED
+DyTech_Energy = false -- NOT USED
+DyTech_Genetics = false -- NOT USED
+DyTech_Inserters = false -- NOT USED
+DyTech_Logistic = false -- NOT USED
+DyTech_Metallurgy = false -- NOT USED
+DyTech_Modules = false -- NOT USED
+DyTech_Storage = false -- NOT USED
+DyTech_Tools = false -- NOT USED
+DyTech_Transportation = false -- NOT USED
+DyTech_Warfare = true
 
 
 --[[Factorio Edits:]]--
@@ -77,6 +77,7 @@ data.raw["unit"]["big-biter"].attack_parameters.ammo_type = make_unit_melee_ammo
 end
 --[[DyTech-Warfare]]--
 if data.raw.item["biter-small-corpse"] and DyTech_Warfare==true then
+-- Biters
 data.raw["unit"]["berserk-biter"].max_health = Berserker_Health
 data.raw["unit"]["berserk-biter"].attack_parameters.range = Berserker_Biter_Attack_Range
 data.raw["unit"]["berserk-biter"].attack_parameters.ammo_type = make_unit_melee_ammo_type(Berserker_Biter_Attack_Damage)
@@ -89,4 +90,13 @@ data.raw["unit"]["king-biter"].attack_parameters.ammo_type = make_unit_melee_amm
 data.raw["unit"]["queen-biter"].max_health = Queen_Health
 data.raw["unit"]["queen-biter"].attack_parameters.range = Queen_Biter_Attack_Range
 data.raw["unit"]["queen-biter"].attack_parameters.ammo_type = make_unit_melee_ammo_type(Queen_Biter_Attack_Damage)
+-- Spitters
+data.raw["unit"]["berserk-spitter"].max_health = Berserker_Health
+data.raw["unit"]["berserk-spitter"].attack_parameters.range = Berserker_Spitter_Attack_Range
+data.raw["unit"]["elder-spitter"].max_health = Elder_Health
+data.raw["unit"]["elder-spitter"].attack_parameters.range = Elder_Spitter_Attack_Range
+data.raw["unit"]["king-spitter"].max_health = King_Health
+data.raw["unit"]["king-spitter"].attack_parameters.range = King_Spitter_Attack_Range
+data.raw["unit"]["queen-spitter"].max_health = Queen_Health
+data.raw["unit"]["queen-spitter"].attack_parameters.range = Queen_Spitter_Attack_Range
 end
