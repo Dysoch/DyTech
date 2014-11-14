@@ -18,7 +18,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator", 1},
+      {"basic-accumulator-mk2", 1},
       {"battery", 5},
       {"advanced-circuit", 5},
     },
