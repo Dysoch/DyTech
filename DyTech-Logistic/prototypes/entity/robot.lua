@@ -23,20 +23,94 @@ data:extend(
     energy_per_move = "0.8kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
-    picture =
+    idle =
     {
       filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
       priority = "high",
       width = 37,
-      height = 34
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
     },
-    shadow =
+    idle_with_cargo =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    in_motion =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    in_motion_with_cargo =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    shadow_idle =
     {
       filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
-    }
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 23
+    },
+    shadow_idle_with_cargo =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 23
+    },
+    shadow_in_motion_with_cargo =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    working_sound = flying_robot_sounds(),
+    cargo_centered = {0.0, 0.2},
   },
   {
     type = "logistic-container",
@@ -169,20 +243,94 @@ data:extend(
     energy_per_move = "0.6kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
-    picture =
+    idle =
     {
       filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
       priority = "high",
       width = 37,
-      height = 34
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
     },
-    shadow =
+    idle_with_cargo =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    in_motion =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    in_motion_with_cargo =
+    {
+      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      priority = "high",
+      width = 37,
+      height = 34,
+      frame_count = 1,
+	  direction_count = 1
+    },
+    shadow_idle =
     {
       filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
-    }
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 23
+    },
+    shadow_idle_with_cargo =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 23
+    },
+    shadow_in_motion_with_cargo =
+    {
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 59,
+      height = 23,
+      frame_count = 1,
+      shift = {0.96875, 0.609375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    working_sound = flying_robot_sounds(),
+    cargo_centered = {0.0, 0.2},
   },
   {
     type = "logistic-container",
@@ -330,6 +478,15 @@ data:extend(
       height = 135,
       shift = {0.5, 0.25}
     },
+    base_patch =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-base-patch.png",
+      priority = "medium",
+      width = 69,
+      height = 50,
+      frame_count = 1,
+      shift = {0.03125, 0.203125}
+    },
     base_animation =
     {
       filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
@@ -340,14 +497,23 @@ data:extend(
       animation_speed = 0.5,
       shift = {-0.5315, -1.9375}
     },
-    door_animation =
+    door_animation_up =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-door.png",
+      filename = "__base__/graphics/entity/roboport/roboport-door-up.png",
       priority = "medium",
       width = 52,
-      height = 39,
+      height = 20,
       frame_count = 16,
-      shift = {0, -0.6}
+      shift = {0.015625, -0.890625}
+    },
+    door_animation_down =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-door-down.png",
+      priority = "medium",
+      width = 52,
+      height = 22,
+      frame_count = 16,
+      shift = {0.015625, -0.234375}
     },
     recharging_animation =
     {
@@ -413,6 +579,15 @@ data:extend(
       height = 135,
       shift = {0.5, 0.25}
     },
+    base_patch =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-base-patch.png",
+      priority = "medium",
+      width = 69,
+      height = 50,
+      frame_count = 1,
+      shift = {0.03125, 0.203125}
+    },
     base_animation =
     {
       filename = "__base__/graphics/entity/roboport/roboport-base-animation.png",
@@ -423,14 +598,23 @@ data:extend(
       animation_speed = 0.5,
       shift = {-0.5315, -1.9375}
     },
-    door_animation =
+    door_animation_up =
     {
-      filename = "__base__/graphics/entity/roboport/roboport-door.png",
+      filename = "__base__/graphics/entity/roboport/roboport-door-up.png",
       priority = "medium",
       width = 52,
-      height = 39,
+      height = 20,
       frame_count = 16,
-      shift = {0, -0.6}
+      shift = {0.015625, -0.890625}
+    },
+    door_animation_down =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-door-down.png",
+      priority = "medium",
+      width = 52,
+      height = 22,
+      frame_count = 16,
+      shift = {0.015625, -0.234375}
     },
     recharging_animation =
     {
@@ -476,21 +660,162 @@ data:extend(
     energy_per_move = "1kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
-    picture =
+     idle =
     {
       filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
-      width = 37,
-      height = 34
+      line_length = 16,
+      width = 32,
+      height = 36,
+      frame_count = 1,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16
     },
-    shadow =
+    in_motion =
     {
-      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 16,
+      width = 32,
+      height = 36,
+      frame_count = 1,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 36
     },
-    repair_pack = "repair-pack-2"
+    shadow_idle =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 50,
+      height = 24,
+      frame_count = 1,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 50,
+      height = 24,
+      frame_count = 1,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    working =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-working.png",
+      priority = "high",
+      line_length = 2,
+      width = 28,
+      height = 36,
+      frame_count = 2,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16,
+      animation_speed = 0.3,
+    },
+    shadow_working =
+    {
+      stripes = util.multiplystripes(2,
+      {
+        {
+          filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+          width_in_frames = 16,
+          height_in_frames = 1,
+        }
+      }),
+      priority = "high",
+      width = 50,
+      height = 24,
+      frame_count = 2,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    smoke =
+    {
+      filename = "__base__/graphics/entity/smoke-construction/smoke-01.png",
+      width = 39,
+      height = 32,
+      frame_count = 19,
+      line_length = 19,
+      shift = {0.078125, -0.15625},
+      animation_speed = 0.3,
+    },
+    sparks =
+    {
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-01.png",
+        width = 39,
+        height = 34,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.109375, 0.3125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-02.png",
+        width = 36,
+        height = 32,
+        frame_count = 19,
+        line_length = 19,
+        shift = {0.03125, 0.125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-03.png",
+        width = 42,
+        height = 29,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.0625, 0.203125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-04.png",
+        width = 40,
+        height = 35,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.0625, 0.234375},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-05.png",
+        width = 39,
+        height = 29,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.109375, 0.171875},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-06.png",
+        width = 44,
+        height = 36,
+        frame_count = 19,
+        line_length = 19,
+        shift = {0.03125, 0.3125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+    },
+    repair_pack = "repair-pack-2",
+    cargo_centered = {0.0, 0.2},
+    construction_vector = {0.30, 0.22},
   },
   {
     type = "construction-robot",
@@ -510,21 +835,162 @@ data:extend(
     energy_per_move = "1kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
-    picture =
+    idle =
     {
       filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
-      width = 37,
-      height = 34
+      line_length = 16,
+      width = 32,
+      height = 36,
+      frame_count = 1,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16
     },
-    shadow =
+    in_motion =
     {
-      filename = "__base__/graphics/entity/logistic-robot/logistic-robot-shadow.png",
+      filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 16,
+      width = 32,
+      height = 36,
+      frame_count = 1,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 36
     },
-    repair_pack = "repair-pack-3"
+    shadow_idle =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 50,
+      height = 24,
+      frame_count = 1,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 50,
+      height = 24,
+      frame_count = 1,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    working =
+    {
+      filename = "__base__/graphics/entity/construction-robot/construction-robot-working.png",
+      priority = "high",
+      line_length = 2,
+      width = 28,
+      height = 36,
+      frame_count = 2,
+      shift = {0, -0.15625},
+      axially_symmetrical = false,
+      direction_count = 16,
+      animation_speed = 0.3,
+    },
+    shadow_working =
+    {
+      stripes = util.multiplystripes(2,
+      {
+        {
+          filename = "__base__/graphics/entity/construction-robot/construction-robot-shadow.png",
+          width_in_frames = 16,
+          height_in_frames = 1,
+        }
+      }),
+      priority = "high",
+      width = 50,
+      height = 24,
+      frame_count = 2,
+      shift = {1.09375, 0.59375},
+      axially_symmetrical = false,
+      direction_count = 16
+    },
+    smoke =
+    {
+      filename = "__base__/graphics/entity/smoke-construction/smoke-01.png",
+      width = 39,
+      height = 32,
+      frame_count = 19,
+      line_length = 19,
+      shift = {0.078125, -0.15625},
+      animation_speed = 0.3,
+    },
+    sparks =
+    {
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-01.png",
+        width = 39,
+        height = 34,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.109375, 0.3125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-02.png",
+        width = 36,
+        height = 32,
+        frame_count = 19,
+        line_length = 19,
+        shift = {0.03125, 0.125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-03.png",
+        width = 42,
+        height = 29,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.0625, 0.203125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-04.png",
+        width = 40,
+        height = 35,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.0625, 0.234375},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-05.png",
+        width = 39,
+        height = 29,
+        frame_count = 19,
+        line_length = 19,
+        shift = {-0.109375, 0.171875},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+      {
+        filename = "__base__/graphics/entity/sparks/sparks-06.png",
+        width = 44,
+        height = 36,
+        frame_count = 19,
+        line_length = 19,
+        shift = {0.03125, 0.3125},
+        tint = { r = 1.0, g = 0.9, b = 0.0, a = 1.0 },
+        animation_speed = 0.3,
+      },
+    },
+    repair_pack = "repair-pack-3",
+    cargo_centered = {0.0, 0.2},
+    construction_vector = {0.30, 0.22},
   },
 }
 )
