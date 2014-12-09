@@ -317,7 +317,6 @@ data:extend(
         {"science-pack-1", 2},
         {"science-pack-2", 2},
         {"science-pack-3", 2},
-        {"alien-science-pack", 1},
       },
       time = 30
     },
@@ -374,12 +373,12 @@ data:extend(
     prerequisites = {"lava-smelting-05"},
     unit =
     {
-      count = 1000,
+      count = 500,
       ingredients =
       {
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 2},
+        {"science-pack-1", 4},
+        {"science-pack-2", 4},
+        {"science-pack-3", 4},
         {"alien-science-pack", 1},
       },
       time = 30

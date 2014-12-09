@@ -1,6 +1,6 @@
 data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 25
 data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 14
-data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {600, 30}
+data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {900, 150}
 data.raw["unit-spawner"]["biter-spawner"].max_health = 2500
 data.raw["unit-spawner"]["biter-spawner"].result_units = (function()
                      local res = {}
@@ -22,7 +22,7 @@ data.raw["unit-spawner"]["biter-spawner"].max_spawn_shift = 0.65
 
 data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 15
 data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 14
-data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {600, 45}
+data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {900, 210}
 data.raw["unit-spawner"]["spitter-spawner"].max_health = 3500
 data.raw["unit-spawner"]["spitter-spawner"].result_units = (function()
                      local res = {}

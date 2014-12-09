@@ -28,7 +28,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary", 1},
+      {"steam-engine-primary", 4},
       {"pipe-mk2", 5},
       {"electronic-circuit", 5}
     },
@@ -40,7 +40,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine", 1},
+      {"steam-engine", 4},
       {"pipe-mk2", 5},
       {"electronic-circuit", 5}
     },
@@ -52,7 +52,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary", 1},
+      {"steam-engine-terciary", 4},
       {"pipe-mk2", 5},
       {"electronic-circuit", 5}
     },
@@ -64,7 +64,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk2", 1},
+      {"steam-engine-primary-mk2", 4},
       {"pipe-mk3", 5},
       {"advanced-circuit", 5}
     },
@@ -76,7 +76,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk2", 1},
+      {"steam-engine-secondary-mk2", 4},
       {"pipe-mk3", 5},
       {"advanced-circuit", 5}
     },
@@ -88,7 +88,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk2", 1},
+      {"steam-engine-terciary-mk2", 4},
       {"pipe-mk3", 5},
       {"advanced-circuit", 5}
     },
@@ -100,7 +100,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk3", 1},
+      {"steam-engine-primary-mk3", 4},
       {"pipe-mk4", 5},
       {"processing-unit", 5}
     },
@@ -112,7 +112,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk3", 1},
+      {"steam-engine-secondary-mk3", 4},
       {"pipe-mk4", 5},
       {"processing-unit", 5}
     },
@@ -124,7 +124,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk3", 1},
+      {"steam-engine-terciary-mk3", 4},
       {"pipe-mk4", 5},
       {"processing-unit", 5}
     },
@@ -136,7 +136,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk4", 1},
+      {"steam-engine-primary-mk4", 4},
       {"pipe-mk5", 5},
       {"advanced-processing-unit", 5}
     },
@@ -148,7 +148,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk4", 1},
+      {"steam-engine-secondary-mk4", 4},
       {"pipe-mk5", 5},
       {"advanced-processing-unit", 5}
     },
@@ -160,7 +160,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk4", 1},
+      {"steam-engine-terciary-mk4", 4},
       {"pipe-mk5", 5},
       {"advanced-processing-unit", 5}
     },
