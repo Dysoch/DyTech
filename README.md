@@ -9,3 +9,6 @@ WARNING:
 DO NOT USE GITHUB BUILDS! THERE ARE MOST OF TIMES UNFINISHED AND NOT WORKING CORRECTLY!!!
 
 FOR BUG REPORTS, CHECK AT [https://github.com/Dysoch/DyTech/wiki/Bug-Reporting-Guidelines!]
+
+Credits for changes in this fork
+- TheSAguy modifications http://www.factorioforums.com/forum/viewtopic.php?f=43&t=7021
