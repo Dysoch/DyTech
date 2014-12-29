@@ -42,7 +42,7 @@ data:extend(
     prerequisites = {"oil-processing"},
     unit =
     {
-      count = 50,
+      count = 150,
       ingredients =
       {
         {"science-pack-1", 1},
@@ -94,7 +94,7 @@ data:extend(
     prerequisites = {"energy-1"},
     unit =
     {
-      count = 75,
+      count = 225,
       ingredients =
       {
         {"science-pack-1", 2},
@@ -147,7 +147,7 @@ data:extend(
     prerequisites = {"energy-2"},
     unit =
     {
-      count = 100,
+      count = 300,
       ingredients =
       {
         {"science-pack-1", 2},
@@ -201,7 +201,7 @@ data:extend(
     prerequisites = {"energy-3"},
     unit =
     {
-      count = 200,
+      count = 600,
       ingredients =
       {
         {"science-pack-1", 3},

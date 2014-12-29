@@ -77,14 +77,14 @@ data:extend(
     {
       type = "electric",
       -- will produce this much * energy pollution units per tick
-      emissions = 0.45 / 2.5,
+      emissions = 0.35 / 3.5,
       usage_priority = "secondary-input",
     },
     energy_usage = "180kW",
     mining_power = 4,
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -1.85},
-    module_slots = 1,
+    module_slots = 3,
 	radius_visualisation_picture =
     {
       filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/z-mining-drill-radius-visualization.png",
@@ -169,7 +169,7 @@ data:extend(
     {
       type = "electric",
       -- will produce this much * energy pollution units per tick
-      emissions = 0.35 / 2,
+      emissions = 0.3 / 2.25,
       usage_priority = "secondary-input",
     },
     energy_usage = "275kW",
@@ -261,7 +261,7 @@ data:extend(
     {
       type = "electric",
       -- will produce this much * energy pollution units per tick
-      emissions = 0.3 / 1.75,
+      emissions = 0.3 / 2,
       usage_priority = "secondary-input",
     },
     energy_usage = "450kW",
@@ -353,7 +353,7 @@ data:extend(
     {
       type = "electric",
       -- will produce this much * energy pollution units per tick
-      emissions = 0.2 / 1.5,
+      emissions = 0.25 / 1.25,
       usage_priority = "secondary-input",
     },
     energy_usage = "750kW",
@@ -446,7 +446,7 @@ data:extend(
     {
       type = "electric",
       -- will produce this much * energy pollution units per tick
-      emissions = 0.2 / 1.5,
+      emissions = 0.15 / 1.25,
       usage_priority = "secondary-input",
     },
     energy_usage = "2500kW",

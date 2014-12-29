@@ -23,7 +23,7 @@ data:extend(
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
     crafting_speed = 3,
-    energy_usage = "160kW",
+    energy_usage = "252kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -114,7 +114,7 @@ data:extend(
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
     crafting_speed = 4,
-    energy_usage = "140kW",
+    energy_usage = "324kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -196,7 +196,7 @@ data:extend(
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
     crafting_speed = 5,
-    energy_usage = "120kW",
+    energy_usage = "396kW",
     source_inventory_size = 1,
     energy_source =
     {
@@ -287,7 +287,7 @@ data:extend(
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
     crafting_speed = 6,
-    energy_usage = "100kW",
+    energy_usage = "468kW",
     source_inventory_size = 1,
     energy_source =
     {
