@@ -1,5 +1,0 @@
-data.raw["item"]["burner-inserter"].subgroup = "inserters-dytech-1"
-data.raw["item"]["basic-inserter"].subgroup = "inserters-dytech-1"
-data.raw["item"]["long-handed-inserter"].subgroup = "inserters-dytech-1"
-data.raw["item"]["fast-inserter"].subgroup = "inserters-dytech-1"
-data.raw["item"]["smart-inserter"].subgroup = "inserters-dytech-1"

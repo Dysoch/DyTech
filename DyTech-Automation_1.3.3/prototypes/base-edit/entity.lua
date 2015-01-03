@@ -1,7 +1,0 @@
-data.raw["mining-drill"]["basic-mining-drill"].icon = "__DyTech-Automation__/graphics/icons/basic-mining-drill1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.north.filename ="__DyTech-Automation__/graphics/entity/basic-mining-drill/north1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.east.filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/east1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.south.filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/south1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.west.filename = "__DyTech-Automation__/graphics/entity/basic-mining-drill/west1.png"
-data.raw["mining-drill"]["basic-mining-drill"].fast_replaceable_group =  "drill"
-data.raw["radar"]["radar"].fast_replaceable_group =  "radar"
