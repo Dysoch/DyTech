@@ -1,3 +1,7 @@
+
+LogisticMk1 = {r=1, g=0.843, b=0, a=0.9}
+LogisticMk2 = {r=0, g=0, b=0.804, a=0.9}
+
 data:extend(
 {
   {
@@ -25,39 +29,58 @@ data:extend(
     max_to_charge = 0.95,
     idle =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 42,
+	  tint = LogisticMk1,
     },
     idle_with_cargo =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+	  tint = LogisticMk1,
     },
     in_motion =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 126,
+	  tint = LogisticMk1,
     },
     in_motion_with_cargo =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-1.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 84,
+	  tint = LogisticMk1,
     },
     shadow_idle =
     {
@@ -245,39 +268,58 @@ data:extend(
     max_to_charge = 0.95,
     idle =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 42,
+	  tint = LogisticMk2,
     },
     idle_with_cargo =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+	  tint = LogisticMk2,
     },
     in_motion =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 126,
+	  tint = LogisticMk2,
     },
     in_motion_with_cargo =
     {
-      filename = "__DyTech-Logistic__/graphics/entity/logistic/logistic-robot-2.png",
+      filename = "__base__/graphics/entity/logistic-robot/logistic-robot.png",
       priority = "high",
-      width = 37,
-      height = 34,
+      line_length = 16,
+      width = 41,
+      height = 42,
       frame_count = 1,
-	  direction_count = 1
+      shift = {0.015625, -0.09375},
+      axially_symmetrical = false,
+      direction_count = 16,
+      y = 84,
+	  tint = LogisticMk2,
     },
     shadow_idle =
     {
@@ -471,12 +513,13 @@ data:extend(
     {
       {-1.5, -0.5}, {1.5, -0.5}, {1.5, 1.5}, {-1.5, 1.5},
     },
-	base =
+    base =
     {
       filename = "__base__/graphics/entity/roboport/roboport-base.png",
       width = 143,
       height = 135,
-      shift = {0.5, 0.25}
+      shift = {0.5, 0.25},
+	  tint = LogisticMk1,
     },
     base_patch =
     {
@@ -485,7 +528,8 @@ data:extend(
       width = 69,
       height = 50,
       frame_count = 1,
-      shift = {0.03125, 0.203125}
+      shift = {0.03125, 0.203125},
+	  tint = LogisticMk1,
     },
     base_animation =
     {
@@ -495,7 +539,8 @@ data:extend(
       height = 31,
       frame_count = 8,
       animation_speed = 0.5,
-      shift = {-0.5315, -1.9375}
+      shift = {-0.5315, -1.9375},
+	  tint = LogisticMk1,
     },
     door_animation_up =
     {
@@ -504,7 +549,8 @@ data:extend(
       width = 52,
       height = 20,
       frame_count = 16,
-      shift = {0.015625, -0.890625}
+      shift = {0.015625, -0.890625},
+	  tint = LogisticMk1,
     },
     door_animation_down =
     {
@@ -513,7 +559,8 @@ data:extend(
       width = 52,
       height = 22,
       frame_count = 16,
-      shift = {0.015625, -0.234375}
+      shift = {0.015625, -0.234375},
+	  tint = LogisticMk1,
     },
     recharging_animation =
     {
@@ -525,9 +572,14 @@ data:extend(
       scale = 1.5,
       animation_speed = 0.5
     },
+    working_sound =
+    {
+      sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.6 },
+      max_sounds_per_type = 3
+    },
     recharging_light = {intensity = 0.4, size = 5},
     request_to_open_door_timeout = 15,
-    spawn_and_station_height = 0.33,
+    spawn_and_station_height = -0.1,
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/roboport/roboport-radius-visualization.png",
@@ -539,7 +591,21 @@ data:extend(
       filename = "__base__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
       width = 12,
       height = 12
-    }
+    },
+    open_door_trigger_effect =
+    {
+      {
+        type = "play-sound",
+        sound = { filename = "__base__/sound/roboport-door.ogg", volume = 1.2 }
+      },
+    },
+    close_door_trigger_effect =
+    {
+      {
+        type = "play-sound",
+        sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 }
+      },
+    },
   },
   {
     type = "roboport",
@@ -572,12 +638,13 @@ data:extend(
     {
       {-1.5, -0.5}, {1.5, -0.5}, {1.5, 1.5}, {-1.5, 1.5},
     },
-	base =
+    base =
     {
       filename = "__base__/graphics/entity/roboport/roboport-base.png",
       width = 143,
       height = 135,
-      shift = {0.5, 0.25}
+      shift = {0.5, 0.25},
+	  tint = LogisticMk2,
     },
     base_patch =
     {
@@ -586,7 +653,8 @@ data:extend(
       width = 69,
       height = 50,
       frame_count = 1,
-      shift = {0.03125, 0.203125}
+      shift = {0.03125, 0.203125},
+	  tint = LogisticMk2,
     },
     base_animation =
     {
@@ -596,7 +664,8 @@ data:extend(
       height = 31,
       frame_count = 8,
       animation_speed = 0.5,
-      shift = {-0.5315, -1.9375}
+      shift = {-0.5315, -1.9375},
+	  tint = LogisticMk2,
     },
     door_animation_up =
     {
@@ -605,7 +674,8 @@ data:extend(
       width = 52,
       height = 20,
       frame_count = 16,
-      shift = {0.015625, -0.890625}
+      shift = {0.015625, -0.890625},
+	  tint = LogisticMk2,
     },
     door_animation_down =
     {
@@ -614,7 +684,8 @@ data:extend(
       width = 52,
       height = 22,
       frame_count = 16,
-      shift = {0.015625, -0.234375}
+      shift = {0.015625, -0.234375},
+	  tint = LogisticMk2,
     },
     recharging_animation =
     {
@@ -626,9 +697,14 @@ data:extend(
       scale = 1.5,
       animation_speed = 0.5
     },
+    working_sound =
+    {
+      sound = { filename = "__base__/sound/roboport-working.ogg", volume = 0.6 },
+      max_sounds_per_type = 3
+    },
     recharging_light = {intensity = 0.4, size = 5},
     request_to_open_door_timeout = 15,
-    spawn_and_station_height = 0.33,
+    spawn_and_station_height = -0.1,
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/roboport/roboport-radius-visualization.png",
@@ -640,7 +716,21 @@ data:extend(
       filename = "__base__/graphics/entity/roboport/roboport-construction-radius-visualization.png",
       width = 12,
       height = 12
-    }
+    },
+    open_door_trigger_effect =
+    {
+      {
+        type = "play-sound",
+        sound = { filename = "__base__/sound/roboport-door.ogg", volume = 1.2 }
+      },
+    },
+    close_door_trigger_effect =
+    {
+      {
+        type = "play-sound",
+        sound = { filename = "__base__/sound/roboport-door.ogg", volume = 0.75 }
+      },
+    },
   },
   {
     type = "construction-robot",
@@ -660,7 +750,8 @@ data:extend(
     energy_per_move = "1kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
-     idle =
+    working_light = {intensity = 0.8, size = 3},
+    idle =
     {
       filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
       priority = "high",
@@ -670,7 +761,8 @@ data:extend(
       frame_count = 1,
       shift = {0, -0.15625},
       axially_symmetrical = false,
-      direction_count = 16
+      direction_count = 16,
+	  tint = LogisticMk1,
     },
     in_motion =
     {
@@ -683,7 +775,8 @@ data:extend(
       shift = {0, -0.15625},
       axially_symmetrical = false,
       direction_count = 16,
-      y = 36
+      y = 36,
+	  tint = LogisticMk1,
     },
     shadow_idle =
     {
@@ -813,7 +906,8 @@ data:extend(
         animation_speed = 0.3,
       },
     },
-    repair_pack = "repair-pack-2",
+    repair_pack = "repair-pack",
+    working_sound = flying_robot_sounds(),
     cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
   },
@@ -835,6 +929,7 @@ data:extend(
     energy_per_move = "1kJ",
     min_to_charge = 0.2,
     max_to_charge = 0.95,
+    working_light = {intensity = 0.8, size = 3},
     idle =
     {
       filename = "__base__/graphics/entity/construction-robot/construction-robot.png",
@@ -845,7 +940,8 @@ data:extend(
       frame_count = 1,
       shift = {0, -0.15625},
       axially_symmetrical = false,
-      direction_count = 16
+      direction_count = 16,
+	  tint = LogisticMk2,
     },
     in_motion =
     {
@@ -858,7 +954,8 @@ data:extend(
       shift = {0, -0.15625},
       axially_symmetrical = false,
       direction_count = 16,
-      y = 36
+      y = 36,
+	  tint = LogisticMk2,
     },
     shadow_idle =
     {
@@ -988,7 +1085,8 @@ data:extend(
         animation_speed = 0.3,
       },
     },
-    repair_pack = "repair-pack-3",
+    repair_pack = "repair-pack",
+    working_sound = flying_robot_sounds(),
     cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
   },
