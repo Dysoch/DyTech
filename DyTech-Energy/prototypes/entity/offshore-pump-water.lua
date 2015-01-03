@@ -27,7 +27,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 2,
+    pumping_speed = 2.5,
     tile_width = 1,
     picture =
     {
@@ -96,7 +96,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 3.5,
+    pumping_speed = 4.2,
     tile_width = 1,
     picture =
     {
@@ -165,7 +165,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 5,
+    pumping_speed = 7.3,
     tile_width = 1,
     picture =
     {
@@ -234,7 +234,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 7.5,
+    pumping_speed = 12,
     tile_width = 1,
     picture =
     {

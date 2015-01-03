@@ -9,7 +9,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.125,
     resistances = 
     {
       {
@@ -85,7 +85,7 @@ data:extend(
     max_health = 300,
     corpse = "big-remnants",
     effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    fluid_usage_per_tick = 0.125,
     resistances = 
     {
       {
@@ -160,8 +160,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 2,
-    fluid_usage_per_tick = 0.11,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.250,
     resistances = 
     {
       {
@@ -236,8 +236,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 2,
-    fluid_usage_per_tick = 0.11,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.250,
     resistances = 
     {
       {
@@ -312,8 +312,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 2,
-    fluid_usage_per_tick = 0.11,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.250,
     resistances = 
     {
       {
@@ -388,8 +388,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 3,
-    fluid_usage_per_tick = 0.115,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.420,
     resistances = 
     {
       {
@@ -464,8 +464,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 3,
-    fluid_usage_per_tick = 0.115,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.420,
     resistances = 
     {
       {
@@ -540,8 +540,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 3,
-    fluid_usage_per_tick = 0.115,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.420,
     resistances = 
     {
       {
@@ -616,8 +616,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 5,
-    fluid_usage_per_tick = 0.12,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.730,
     resistances = 
     {
       {
@@ -692,8 +692,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 5,
-    fluid_usage_per_tick = 0.12,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.730,
     resistances = 
     {
       {
@@ -768,8 +768,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 5,
-    fluid_usage_per_tick = 0.12,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.730,
     resistances = 
     {
       {
@@ -844,8 +844,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 8,
-    fluid_usage_per_tick = 0.125,
+    effectivity = 1,
+    fluid_usage_per_tick = 1.200,
     resistances = 
     {
       {
@@ -920,8 +920,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 8,
-    fluid_usage_per_tick = 0.125,
+    effectivity = 1,
+    fluid_usage_per_tick = 1.200,
     resistances = 
     {
       {
@@ -996,8 +996,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 8,
-    fluid_usage_per_tick = 0.125,
+    effectivity = 1,
+    fluid_usage_per_tick = 1.200,
     resistances = 
     {
       {

@@ -31,7 +31,7 @@ data:extend({
     energy_consumption = "450kW",
     burner =
     {
-      effectivity = 0.75,
+      effectivity = 0.60,
       fuel_inventory_size = 2,
       emissions = 0.1 / 6.5,
       smoke =
@@ -149,7 +149,7 @@ data:extend({
     energy_consumption = "550kW",
     burner =
     {
-      effectivity = 1.0,
+      effectivity = 0.75,
       fuel_inventory_size = 3,
       emissions = 0.1 / 6.5,
       smoke =
@@ -267,7 +267,7 @@ data:extend({
     energy_consumption = "750kW",
     burner =
     {
-      effectivity = 1.25,
+      effectivity = 0.95,
       fuel_inventory_size = 4,
       emissions = 0.1 / 6.5,
       smoke =
@@ -385,7 +385,7 @@ data:extend({
     energy_consumption = "1000kW",
     burner =
     {
-      effectivity = 1.5,
+      effectivity = 1.05,
       fuel_inventory_size = 5,
       emissions = 0.1 / 6.5,
       smoke =
