@@ -64,83 +64,46 @@ function OnLoad()
 	if not glob.trees.tmpData then glob.trees.tmpData = {} end
 end
 
-function updateEntityState(entInfo)
-	local newState = entInfo.state + 1
-	local seedTypeName
-	if entInfo.entity.valid then
-		seedTypeName = getSeedTypeByEntityName(entInfo.entity.name)
-	else
-		return
-	end
-	if newState > #glob.trees.seedTypes[seedTypeName].states then
-		return
-	else
-		local tmpPos = entInfo.entity.position
-		local newEnt = game.createentity{name = glob.trees.seedTypes[getSeedTypeByEntityName(entInfo.entity.name)].states[newState], position = tmpPos}
-		entInfo.entity.destroy()
-		local deltaTime = math.ceil((math.random() * glob.trees.seedTypes[seedTypeName].randomGrowingTime + glob.trees.seedTypes[seedTypeName].basicGrowingTime) / entInfo.efficiency)
-		local nextUpdateIn = game.tick + deltaTime
-		local updatedEntry =
-		{
-			entity = newEnt,
-			state = newState,
-			efficiency = entInfo.efficiency,
-			fertilized = entInfo.fertilized,
-			nextUpdate = nextUpdateIn
-		}
-		placeSeedIntoList(updatedEntry, seedTypeName)
-	end
-end
-
-function getSeedTypeByEntityName(entityName)
-	for seedTypeName, seedType in pairs(glob.trees.seedTypes) do
-		for _, stateName in pairs(seedType.states) do
-			if entityName == stateName then
-				return seedTypeName
+function placeSeedIntoList(entInfo, seedTypeName)
+	if #glob.trees.isGrowing[seedTypeName] > 1 then
+		for i = #glob.trees.isGrowing[seedTypeName], 1, -1 do
+			if glob.trees.isGrowing[seedTypeName][i].nextUpdate <= entInfo.nextUpdate then
+				table.insert(glob.trees.isGrowing[seedTypeName], i + 1, entInfo)
+				return
 			end
 		end
-	end
-	return nil
-end
-
-function placeSeedIntoList(entInfo, seedTypeName)
-	for currentIndex,EntityEntry in ipairs(glob.trees.isGrowing[seedTypeName]) do
-		if EntityEntry.nextUpdate > entInfo.nextUpdate then
-			table.insert(glob.trees.isGrowing[seedTypeName], currentIndex, entInfo)
+		table.insert(glob.trees.isGrowing[seedTypeName], 1,  entInfo)
+		return
+	elseif #glob.trees.isGrowing[seedTypeName] == 1 then
+		if glob.trees.isGrowing[seedTypeName][1].nextUpdate > entInfo.nextUpdate then
+			table.insert(glob.trees.isGrowing[seedTypeName], 1,  entInfo)
+			return
+		else
+			table.insert(glob.trees.isGrowing[seedTypeName], entInfo)
 			return
 		end
+	else
+		table.insert(glob.trees.isGrowing[seedTypeName], entInfo)
+		return
 	end
 	table.insert(glob.trees.isGrowing[seedTypeName], entInfo)
 end
 
 function calcEfficiency(entity, fertilizerApplied)
-	local seedType = getSeedTypeByEntityName(entity.name)
+	local seedType = seedTypeLookUpTable[entity.name]
 	local currentTilename = game.gettile(entity.position.x, entity.position.y).name
-	for tilename, value in pairs(glob.trees.seedTypes[seedType].efficiency) do
-		if tilename == currentTilename then
-			local efficiency = value
-			if fertilizerApplied == true then
-				efficiency = efficiency + glob.trees.seedTypes[seedType].fertilizerBoost
-			end
+
+	local efficiency
+	if glob.trees.seedTypes[seedType].efficiency[currentTilename] == nil then
+		return glob.trees.seedTypes[seedType].efficiency.other
+	else
+		efficiency = glob.trees.seedTypes[seedType].efficiency[currentTilename]
+		if fertilizerApplied then
+			return efficiency + glob.trees.seedTypes[seedType].fertilizerBoost
+		else
 			return efficiency
 		end
 	end
-	return glob.trees.seedTypes[seedType].efficiency.other
-end
-
-function seedPlaced(placedSeed, seedTypeName)
-	local newEfficiency = calcEfficiency(placedSeed, false)
-	local deltaTime = math.ceil((math.random() * glob.trees.seedTypes[seedTypeName].randomGrowingTime + glob.trees.seedTypes[seedTypeName].basicGrowingTime) / newEfficiency)
-	local nextUpdateIn = game.tick + deltaTime
-	local entInfo =
-	{
-		entity = placedSeed,
-		state = 1,
-		efficiency = newEfficiency,
-		fertilized = false,
-		nextUpdate = nextUpdateIn
-	}
-	placeSeedIntoList(entInfo, seedTypeName)
 end
 
 function getboundingbox(position, radius)
