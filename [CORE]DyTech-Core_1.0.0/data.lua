@@ -1,3 +1,9 @@
+
+-- Mandatory Stuff!
+require("prototypes.trees.rubber-tree-entity")
+require("prototypes.trees.rubber-tree-item")
+require("prototypes.trees.rubber-tree-recipe")
+
 -- Items Groups
 require("prototypes.item-group.dytechbundles")
 require("prototypes.item-group.dytechgem")
