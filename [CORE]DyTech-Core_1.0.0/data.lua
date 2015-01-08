@@ -1,5 +1,12 @@
 
 -- Mandatory Stuff!
+require("prototypes.resources.metallurgic-ore-gold")
+require("prototypes.resources.metallurgic-ore-items")
+require("prototypes.resources.metallurgic-ore-lead")
+require("prototypes.resources.metallurgic-ore-silver")
+require("prototypes.resources.metallurgic-ore-tin")
+require("prototypes.resources.metallurgic-ore-tungsten")
+require("prototypes.resources.metallurgic-ore-zinc")
 require("prototypes.trees.rubber-tree-entity")
 require("prototypes.trees.rubber-tree-item")
 require("prototypes.trees.rubber-tree-recipe")
