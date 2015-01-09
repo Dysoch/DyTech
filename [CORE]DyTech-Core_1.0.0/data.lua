@@ -1,8 +1,14 @@
 
 -- Mandatory Stuff!
+require("prototypes.intermediates.circuits-item")
+require("prototypes.intermediates.circuits-recipe")
+require("prototypes.intermediates.gears-item")
+require("prototypes.intermediates.gears-recipe")
 require("prototypes.intermediates.machines-item")
 require("prototypes.intermediates.machines-recipe")
 require("prototypes.intermediates.plates-item")
+require("prototypes.intermediates.resources-item")
+require("prototypes.intermediates.resources-recipe")
 require("prototypes.intermediates.smelting")
 require("prototypes.resources.metallurgic-ore-gold")
 require("prototypes.resources.metallurgic-ore-items")
