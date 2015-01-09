@@ -3,7 +3,7 @@ data:extend(
   {
 	type = "resource",
 	name = "gold-ore",
-	icon = "__[CORE]DyTech-Core__/graphics/metallurgic-ores/gold/icon.png",
+	icon = "__[CORE]DyTech-Core__/graphics/metallurgy/gold/ore-icon.png",
 	flags = {"placeable-neutral"},
 	order= "z-o",
 	minable = 
@@ -87,7 +87,7 @@ data:extend(
     stage_counts = {600, 500, 400, 300, 200, 100, 40, 20},
 	stages = 
 	{
-	  filename = "__[CORE]DyTech-Core__/graphics/metallurgic-ores/gold/ore.png",
+	  filename = "__[CORE]DyTech-Core__/graphics/metallurgy/gold/ore.png",
 	  priority = "extra-high",
 	  width = 38,
 	  height = 38,

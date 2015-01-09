@@ -3,7 +3,7 @@ data:extend(
   {
 	type = "resource",
 	name = "zinc-ore",
-	icon = "__[CORE]DyTech-Core__/graphics/metallurgic-ores/zinc/icon.png",
+	icon = "__[CORE]DyTech-Core__/graphics/metallurgy/zinc/ore-icon.png",
 	flags = {"placeable-neutral"},
 	order= "z-o",
 	minable = 
@@ -87,7 +87,7 @@ data:extend(
     stage_counts = {1000, 750, 500, 400, 200, 100, 50, 20},
 	stages = 
 	{
-	  filename = "__[CORE]DyTech-Core__/graphics/metallurgic-ores/zinc/ore.png",
+	  filename = "__[CORE]DyTech-Core__/graphics/metallurgy/zinc/ore.png",
 	  priority = "extra-high",
 	  width = 38,
 	  height = 38,
