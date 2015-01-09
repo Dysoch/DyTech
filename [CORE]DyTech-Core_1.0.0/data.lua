@@ -1,5 +1,7 @@
 
 -- Mandatory Stuff!
+require("prototypes.intermediates.machines-item")
+require("prototypes.intermediates.machines-recipe")
 require("prototypes.intermediates.plates-item")
 require("prototypes.intermediates.smelting")
 require("prototypes.resources.metallurgic-ore-gold")
