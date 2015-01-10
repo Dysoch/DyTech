@@ -1,0 +1,41 @@
+In DyTech Core are many intermediates. Some of which can be used by your mod!
+Lets see what types of intermediates there are:
+
+- Plates and Ores: 
+	- Gold
+	- Silver
+	- Ardite
+	- Cobalt
+	- Lead
+	- Zinc
+	- Tungsten
+	- Tin
+	
+- Machine Intermediates:
+	- Frames:
+		- Frame Mk I
+		- Frame Mk II
+		- Frame Mk III
+		- Frame Mk IV
+	- Rotors:
+		- Rotor Mk I 
+		- Rotor Mk II
+		- Rotor Mk III
+		- Rotor Mk IV
+	- Blades: 
+		- Blade Mk I
+		- Blade Mk II
+		- Blade Mk III
+	- Item Exits:
+		- Item Exit Mk I
+		- Item Exit Mk II 
+		- Item Exit Mk III
+		- Item Exit Mk IV
+
+Circuitry:
+	- Advanced Processing Unit
+	- Bundled Wires
+	- Rubber
+	- Rubber Resin
+	
+There are more coming soon.
