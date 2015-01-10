@@ -126,6 +126,24 @@ data:extend(
       flexibility = 1.4
     }]]--
   },
+  {
+    type = "item",
+    name = "cobalt-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/cobalt/plate-icon.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-plates",
+    order = "cobalt",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "ardite-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/ardite/plate-icon.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-plates",
+    order = "ardite",
+    stack_size = 200,
+  },
 }
 )
 

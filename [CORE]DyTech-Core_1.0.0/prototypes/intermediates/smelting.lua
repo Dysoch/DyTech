@@ -5,6 +5,7 @@ data:extend(
     name = "zinc-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="zinc-ore", amount=1}
@@ -19,6 +20,7 @@ data:extend(
     name = "lead-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="lead-ore", amount=1}
@@ -33,6 +35,7 @@ data:extend(
     name = "tungsten-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="tungsten-ore", amount=1}
@@ -47,6 +50,7 @@ data:extend(
     name = "tin-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="tin-ore", amount=1}
@@ -61,6 +65,7 @@ data:extend(
     name = "gold-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="gold-ore", amount=1}
@@ -75,6 +80,7 @@ data:extend(
     name = "silver-plate",
     category = "smelting",
     energy_required = 3.5,
+    enabled = false,
     ingredients = 
 	{
 	  {type="item", name="silver-ore", amount=1}
@@ -82,6 +88,36 @@ data:extend(
     results = 
 	{
 	  {type="item", name="silver-plate", amount=1}
+	},
+  },
+  {
+    type = "recipe",
+    name = "cobalt-plate",
+    category = "smelting",
+    energy_required = 3.5,
+    enabled = false,
+    ingredients = 
+	{
+	  {type="item", name="cobalt-ore", amount=1}
+	},
+    results = 
+	{
+	  {type="item", name="cobalt-plate", amount=1}
+	},
+  },
+  {
+    type = "recipe",
+    name = "ardite-plate",
+    category = "smelting",
+    energy_required = 3.5,
+    enabled = false,
+    ingredients = 
+	{
+	  {type="item", name="ardite-ore", amount=1}
+	},
+    results = 
+	{
+	  {type="item", name="ardite-plate", amount=1}
 	},
   },
 }

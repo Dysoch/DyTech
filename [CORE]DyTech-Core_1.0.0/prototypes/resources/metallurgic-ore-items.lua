@@ -54,5 +54,23 @@ data:extend(
     order = "tungsten",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "cobalt-ore",
+	icon = "__[CORE]DyTech-Core__/graphics/metallurgy/cobalt/ore-icon.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-ores",
+    order = "cobalt",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "ardite-ore",
+	icon = "__[CORE]DyTech-Core__/graphics/metallurgy/ardite/ore-icon.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "metallurgy-ores",
+    order = "ardite",
+    stack_size = 200
+  },
 }
 )
