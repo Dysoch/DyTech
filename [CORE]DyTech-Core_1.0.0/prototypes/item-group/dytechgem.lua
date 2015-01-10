@@ -45,9 +45,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "meteors",
+    name = "uselessprocessing",
     group = "dytechgem",
     order = "7"
+  },
+  {
+    type = "item-subgroup",
+    name = "meteors",
+    group = "dytechgem",
+    order = "8"
   },
 }
 )
