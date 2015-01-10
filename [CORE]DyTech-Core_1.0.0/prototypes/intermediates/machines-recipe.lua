@@ -31,7 +31,7 @@ data:extend(
     ingredients =
     {
       {"frame2", 1},
-	  {"advanced-circuit", 15},
+      {"lead-plate", 25},
       {"processing-unit", 18},
 	  {"copper-cable", 20}
     },
@@ -45,7 +45,7 @@ data:extend(
     {
       {"frame3", 1},
 	  {"advanced-processing-unit", 10},
-      {"steel-plate", 25},
+      {"tungsten-plate", 25},
 	  {"bundled-wire", 50}
     },
     result = "frame4"
@@ -84,7 +84,7 @@ data:extend(
       {"item-exit2", 1},
 	  {"steel-chest", 1},
       {"bundled-wire", 10},
-	  {"steel-plate", 15}
+	  {"zinc-plate", 15}
     },
     result = "item-exit3"
   },
@@ -123,7 +123,7 @@ data:extend(
       {"rotor1", 1},
 	  {"blade2", 3},
       {"iron-gear-wheel", 4},
-	  {"iron-plate", 6}
+	  {"steel-plate", 6}
     },
     result = "rotor2"
   },
@@ -136,7 +136,7 @@ data:extend(
       {"rotor2", 1},
       {"blade3", 3},
 	  {"steel-gear-wheel", 4},
-	  {"steel-plate", 12}
+	  {"lead-plate", 12}
     },
     result = "rotor3"
   },
@@ -148,7 +148,7 @@ data:extend(
     {
       {"rotor3", 1},
 	  {"blade3", 9},
-      {"steel-gear-wheel", 12},
+      {"lead-gear-wheel", 12},
 	  {"advanced-circuit", 5}
     },
     result = "rotor4"

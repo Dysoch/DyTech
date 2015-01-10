@@ -7,7 +7,7 @@ data:extend(
     ingredients =
     {
       {"processing-unit", 5},
-      {"steel-plate", 2},
+      {"zinc-plate", 1},
 	  {"bundled-wire", 5}
     },
     result = "advanced-processing-unit"
