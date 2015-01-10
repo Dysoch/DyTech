@@ -18,5 +18,50 @@ data:extend(
     order = "[c]steel",
     stack_size = 100
   },
+  {
+    type = "item",
+    name = "tin-gear-wheel",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/tin-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[d]tin",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "zinc-gear-wheel",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/zinc-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[e]zinc",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "lead-gear-wheel",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/lead-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[f]lead",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "cobalt-gear-wheel",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/cobalt-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[g]cobalt",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "tungsten-gear-wheel",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/tungsten-gear-wheel.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechgears",
+    order = "[h]tungsten",
+    stack_size = 100
+  },
 }
 )
