@@ -5,7 +5,7 @@ data:extend(
     name = "dytech-energy",
     order = "d-e",
     inventory_order = "z",
-    icon = "__DyTech-Core__/graphics/item-group/energy.png",
+    icon = "__[CORE]DyTech-Core__/graphics/item-group/energy.png",
   },
   {
     type = "item-subgroup",

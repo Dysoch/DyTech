@@ -48,5 +48,13 @@ data:extend(
     type = "noise-layer",
     name = "tin-ore"
   },
+  {
+    type = "noise-layer",
+    name = "cobalt-ore"
+  },
+  {
+    type = "noise-layer",
+    name = "ardite-ore"
+  },
 }
 )
