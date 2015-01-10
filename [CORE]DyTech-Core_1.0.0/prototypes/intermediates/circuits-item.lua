@@ -5,8 +5,8 @@ data:extend(
     name = "advanced-processing-unit",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "advanced-processing-unit",
+    subgroup = "dytechcircuits",
+    order = "[a]advanced-processing-unit",
     stack_size = 200
   },
   {
@@ -14,8 +14,8 @@ data:extend(
     name = "bundled-wire",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/bundled-wire.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "bundled-wire",
+    subgroup = "dytechcircuits",
+    order = "[b]bundled-wire",
     stack_size = 200
   },
   {
@@ -23,8 +23,8 @@ data:extend(
     name = "rubber",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/rubber.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "rubber",
+    subgroup = "dytechcircuits",
+    order = "[z]rubber",
     stack_size = 200
   },
   {
@@ -32,8 +32,8 @@ data:extend(
     name = "resin",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/resin.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "resin",
+    subgroup = "dytechcircuits",
+    order = "[z]resin",
     stack_size = 50
   },
 }

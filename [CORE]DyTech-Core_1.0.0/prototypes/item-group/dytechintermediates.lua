@@ -9,7 +9,7 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "dytechinter",
+    name = "dytechcircuits",
     group = "dytechintermediates",
     order = "1"
   },
@@ -21,21 +21,45 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "dytechloot",
+    name = "dytechmachineintermediates",
     group = "dytechintermediates",
     order = "3"
   },
   {
     type = "item-subgroup",
-    name = "dytechbiteritems",
+    name = "dytechpowerintermediates",
     group = "dytechintermediates",
     order = "4"
   },
   {
     type = "item-subgroup",
-    name = "genetics",
+    name = "dytechwarintermediates",
     group = "dytechintermediates",
     order = "5"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytechgears",
+    group = "dytechintermediates",
+    order = "6"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytechloot",
+    group = "dytechintermediates",
+    order = "7"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytechbiteritems",
+    group = "dytechintermediates",
+    order = "8"
+  },
+  {
+    type = "item-subgroup",
+    name = "genetics",
+    group = "dytechintermediates",
+    order = "9"
   },
 }
 )

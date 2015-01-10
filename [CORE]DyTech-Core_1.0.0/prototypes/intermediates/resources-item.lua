@@ -14,8 +14,8 @@ data:extend(
     name = "sandbag",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/sandbag.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "sandbag",
+    subgroup = "dytechpowerintermediates",
+    order = "[s]sandbag",
     stack_size = 500
   },
   {
@@ -23,9 +23,9 @@ data:extend(
     name = "glass",
     icon = "__[CORE]DyTech-Core__/graphics/intermediates/glass.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechinter",
-    order = "g",
-    stack_size = 128
+    subgroup = "dytechpowerintermediates",
+    order = "[g]glass",
+    stack_size = 100
   },
 }
 )
