@@ -68,6 +68,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
+	if not Test1 then Test1 = true end
 	Trees.OnLoad()
 	if game.itemprototypes.charcoal and remote.interfaces["treefarm"] then -- item "charcoal" is available, that means treefarm-mod is probably used
 	debug("Treefarm installed")
