@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "steam-1",
-    icon = "__DyTech-Energy__/graphics/technology/energy.png",
+    icon = "__base__/graphics/icons/steam-engine.png",
     effects =
     {
       {
@@ -19,7 +19,7 @@ data:extend(
         recipe = "steam-engine-terciary-mk2"
       },
     },
-    prerequisites = {"oil-processing", "rotor-1", "capacitor-1", "frame-1"},
+    prerequisites = {"oil-processing", "capacitor-1"},
     unit =
     {
       count = 150,
@@ -35,7 +35,7 @@ data:extend(
   {
     type = "technology",
     name = "steam-2",
-    icon = "__DyTech-Energy__/graphics/technology/energy.png",
+    icon = "__base__/graphics/icons/steam-engine.png",
     effects =
     {
       {
@@ -51,7 +51,7 @@ data:extend(
         recipe = "steam-engine-terciary-mk3"
       },
     },
-    prerequisites = {"steam-1", "rotor-2", "capacitor-2", "frame-2"},
+    prerequisites = {"steam-1", "rotor-1", "capacitor-2", "frame-1"},
     unit =
     {
       count = 225,
@@ -68,7 +68,7 @@ data:extend(
   {
     type = "technology",
     name = "steam-3",
-    icon = "__DyTech-Energy__/graphics/technology/energy.png",
+    icon = "__base__/graphics/icons/steam-engine.png",
     effects =
     {
       {
@@ -84,7 +84,7 @@ data:extend(
         recipe = "steam-engine-terciary-mk4"
       },
     },
-    prerequisites = {"steam-2", "rotor-3", "capacitor-3", "frame-3"},
+    prerequisites = {"steam-2", "rotor-2", "capacitor-3", "frame-2"},
     unit =
     {
       count = 300,
@@ -102,7 +102,7 @@ data:extend(
   {
     type = "technology",
     name = "steam-4",
-    icon = "__DyTech-Energy__/graphics/technology/energy.png",
+    icon = "__base__/graphics/icons/steam-engine.png",
     effects =
     {
       {
@@ -118,7 +118,7 @@ data:extend(
         recipe = "steam-engine-terciary-mk5"
       },
     },
-    prerequisites = {"steam-3", "rotor-4", "capacitor-4", "frame-4"},
+    prerequisites = {"steam-3", "rotor-3", "capacitor-4", "frame-3"},
     unit =
     {
       count = 600,

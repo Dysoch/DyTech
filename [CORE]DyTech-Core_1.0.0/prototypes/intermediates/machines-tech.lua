@@ -48,6 +48,7 @@ data:extend(
       time = 100
     },
     order = "frame-2",
+	upgrade = true
   },
   {
     type = "technology",
@@ -73,6 +74,7 @@ data:extend(
       time = 150
     },
     order = "frame-3",
+	upgrade = true
   },
   {
     type = "technology",
@@ -121,6 +123,7 @@ data:extend(
       time = 100
     },
     order = "item-exit-2",
+	upgrade = true
   },
   {
     type = "technology",
@@ -146,6 +149,7 @@ data:extend(
       time = 150
     },
     order = "item-exit-3",
+	upgrade = true
   },
   {
     type = "technology",
@@ -202,6 +206,7 @@ data:extend(
       time = 100
     },
     order = "rotor-2",
+	upgrade = true
   },
   {
     type = "technology",
@@ -227,6 +232,7 @@ data:extend(
       time = 150
     },
     order = "rotor-3",
+	upgrade = true
   },
 }
 )

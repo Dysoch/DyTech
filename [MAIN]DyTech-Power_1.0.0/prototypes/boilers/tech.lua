@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "boilers-1",
-    icon = "__[MAIN]DyTech-Power__/graphics/boilers/tech.png",
+    icon = "__[MAIN]DyTech-Power__/graphics/boilers/boiler2.png",
     effects =
     {
       {
@@ -11,7 +11,7 @@ data:extend(
         recipe = "boiler-mk2"
       },
     },
-    prerequisites = {"tin-processing", "rotor-2"},
+    prerequisites = {"tin-processing", "rotor-1"},
     unit =
     {
       count = 150,
@@ -27,7 +27,7 @@ data:extend(
   {
     type = "technology",
     name = "boilers-2",
-    icon = "__[MAIN]DyTech-Power__/graphics/boilers/tech.png",
+    icon = "__[MAIN]DyTech-Power__/graphics/boilers/boiler2.png",
     effects =
     {
       {
@@ -35,7 +35,7 @@ data:extend(
         recipe = "boiler-mk3"
       },
     },
-    prerequisites = {"boilers-1", "lead-processing", "rotor-3"},
+    prerequisites = {"boilers-1", "lead-processing", "rotor-2"},
     unit =
     {
       count = 225,
@@ -52,7 +52,7 @@ data:extend(
   {
     type = "technology",
     name = "boilers-3",
-    icon = "__[MAIN]DyTech-Power__/graphics/boilers/tech.png",
+    icon = "__[MAIN]DyTech-Power__/graphics/boilers/boiler2.png",
     effects =
     {
       {
@@ -78,7 +78,7 @@ data:extend(
   {
     type = "technology",
     name = "boilers-4",
-    icon = "__[MAIN]DyTech-Power__/graphics/boilers/tech.png",
+    icon = "__[MAIN]DyTech-Power__/graphics/boilers/boiler2.png",
     effects =
     {
       {
@@ -86,7 +86,7 @@ data:extend(
         recipe = "boiler-mk5"
       },
     },
-    prerequisites = {"boilers-3", "zinc-processing", "rotor-4"},
+    prerequisites = {"boilers-3", "zinc-processing", "rotor-3"},
     unit =
     {
       count = 500,

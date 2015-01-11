@@ -1,4 +1,9 @@
 
+--[[ Base Game Override ]]--
+-- If you want to use DyTech-Intermediates to be used in all base game items
+-- Set it to true (default = true)
+BaseOverride = true
+
 -- Mandatory Stuff!
 require("prototypes.intermediates.circuits-item")
 require("prototypes.intermediates.circuits-recipe")
@@ -61,3 +66,7 @@ require("prototypes.categories.resource-category")
 
 -- Autoplace Control
 require("prototypes.autoplace-controls")
+
+if BaseOverride then
+require("prototypes.base-override")
+end

@@ -54,6 +54,7 @@ data:extend(
       time = 125
     },
     order = "capacitor-2",
+	upgrade = true
   },
   {
     type = "technology",
@@ -82,6 +83,7 @@ data:extend(
       time = 150
     },
     order = "capacitor-3",
+	upgrade = true
   },
   {
     type = "technology",
@@ -111,6 +113,7 @@ data:extend(
       time = 200
     },
     order = "capacitor-4",
+	upgrade = true
   },
 }
 )
