@@ -46,7 +46,7 @@ data:extend(
         recipe = "solar-panel-secondary-mk3"
       },
     },
-    prerequisites = {"solar-energy-2", "capacitor-2", "tin-smelting"},
+    prerequisites = {"solar-energy-2", "capacitor-2", "tin-processing"},
     unit =
     {
       count = 300,
@@ -76,7 +76,7 @@ data:extend(
         recipe = "solar-panel-secondary-mk4"
       },
     },
-    prerequisites = {"solar-energy-3", "capacitor-3", "zinc-smelting"},
+    prerequisites = {"solar-energy-3", "capacitor-3", "zinc-processing"},
     unit =
     {
       count = 400,
@@ -106,7 +106,7 @@ data:extend(
         recipe = "solar-panel-secondary-mk5"
       },
     },
-    prerequisites = {"solar-energy-4", "capacitor-4", "gold-smelting"},
+    prerequisites = {"solar-energy-4", "capacitor-4", "gold-processing"},
     unit =
     {
       count = 500,

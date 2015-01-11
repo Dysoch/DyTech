@@ -129,16 +129,16 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "rotor3",
+    name = "rotor-3",
     enabled = false,
     ingredients =
     {
-      {"rotor2", 1},
-      {"blade3", 3},
+      {"rotor-2", 1},
+      {"blade-3", 3},
 	  {"steel-gear-wheel", 4},
 	  {"lead-plate", 12}
     },
-    result = "rotor3"
+    result = "rotor-3"
   },
   {
     type = "recipe",

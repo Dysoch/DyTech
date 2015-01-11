@@ -5,6 +5,7 @@ data:extend(
   {
     type = "recipe",
     name = "ruby-2",
+	category = "crafting",
 	energy_required = 12,
     ingredients =
     {
@@ -16,6 +17,7 @@ data:extend(
   {
     type = "recipe",
     name = "topaz-2",
+	category = "crafting",
 	energy_required = 12,
     ingredients =
     {
@@ -27,6 +29,7 @@ data:extend(
   {
     type = "recipe",
     name = "emerald-2",
+	category = "crafting",
 	energy_required = 12,
     ingredients =
     {
@@ -38,6 +41,7 @@ data:extend(
   {
     type = "recipe",
     name = "diamond-2",
+	category = "crafting",
 	energy_required = 12,
     ingredients =
     {
@@ -49,6 +53,7 @@ data:extend(
   {
     type = "recipe",
     name = "sapphire-2",
+	category = "crafting",
 	energy_required = 12,
     ingredients =
     {
@@ -61,6 +66,7 @@ data:extend(
   {
     type = "recipe",
     name = "ruby-3",
+	category = "crafting",
 	energy_required = 25,
     ingredients =
     {
@@ -72,6 +78,7 @@ data:extend(
   {
     type = "recipe",
     name = "topaz-3",
+	category = "crafting",
 	energy_required = 25,
     ingredients =
     {
@@ -83,6 +90,7 @@ data:extend(
   {
     type = "recipe",
     name = "emerald-3",
+	category = "crafting",
 	energy_required = 25,
     ingredients =
     {
@@ -94,6 +102,7 @@ data:extend(
   {
     type = "recipe",
     name = "diamond-3",
+	category = "crafting",
 	energy_required = 25,
     ingredients =
     {
@@ -105,6 +114,7 @@ data:extend(
   {
     type = "recipe",
     name = "sapphire-3",
+	category = "crafting",
 	energy_required = 25,
     ingredients =
     {
@@ -117,6 +127,7 @@ data:extend(
   {
     type = "recipe",
     name = "ruby-4",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -128,6 +139,7 @@ data:extend(
   {
     type = "recipe",
     name = "topaz-4",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -139,6 +151,7 @@ data:extend(
   {
     type = "recipe",
     name = "emerald-4",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -150,6 +163,7 @@ data:extend(
   {
     type = "recipe",
     name = "diamond-4",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -161,6 +175,7 @@ data:extend(
   {
     type = "recipe",
     name = "sapphire-4",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -173,6 +188,7 @@ data:extend(
   {
     type = "recipe",
     name = "ruby-5",
+	category = "crafting",
 	energy_required = 75,
     ingredients =
     {
@@ -184,6 +200,7 @@ data:extend(
   {
     type = "recipe",
     name = "topaz-5",
+	category = "crafting",
 	energy_required = 75,
     ingredients =
     {
@@ -195,6 +212,7 @@ data:extend(
   {
     type = "recipe",
     name = "emerald-5",
+	category = "crafting",
 	energy_required = 75,
     ingredients =
     {
@@ -206,6 +224,7 @@ data:extend(
   {
     type = "recipe",
     name = "diamond-5",
+	category = "crafting",
 	energy_required = 75,
     ingredients =
     {
@@ -217,6 +236,7 @@ data:extend(
   {
     type = "recipe",
     name = "sapphire-5",
+	category = "crafting",
 	energy_required = 75,
     ingredients =
     {
@@ -231,6 +251,7 @@ data:extend(
     name = "stone-1",
     icon = "__base__/graphics/icons/stone.png",
     subgroup = "uselessprocessing",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -247,6 +268,7 @@ data:extend(
     name = "stone-2",
     icon = "__base__/graphics/icons/stone.png",
     subgroup = "uselessprocessing",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -263,6 +285,7 @@ data:extend(
     name = "stone-3",
     icon = "__base__/graphics/icons/stone.png",
     subgroup = "uselessprocessing",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -279,6 +302,7 @@ data:extend(
     name = "stone-4",
     icon = "__base__/graphics/icons/stone.png",
     subgroup = "uselessprocessing",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {
@@ -295,6 +319,7 @@ data:extend(
     name = "stone-5",
     icon = "__base__/graphics/icons/stone.png",
     subgroup = "uselessprocessing",
+	category = "crafting",
 	energy_required = 50,
     ingredients =
     {

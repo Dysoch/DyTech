@@ -20,7 +20,7 @@ data:extend(
     {
       {"red-wire", 1},
       {"green-wire", 1},
-	  {"copper-cable", 1},
+	  {"zinc-plate", 1},
 	  {"rubber", 2}
     },
     result = "bundled-wire",
