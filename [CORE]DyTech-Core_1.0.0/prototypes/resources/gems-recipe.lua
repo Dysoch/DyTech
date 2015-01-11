@@ -239,7 +239,7 @@ data:extend(
     results = 
 	{
       {type="item", name="stone", amount_min=1, amount_max=6, probability=1},
-      {type="item", name="sand", amount_min=1, amount_max=50, probability=0.2},
+      --{type="item", name="sand", amount_min=1, amount_max=50, probability=0.2},
 	},
   },
   {
@@ -255,7 +255,7 @@ data:extend(
     results = 
 	{
       {type="item", name="stone", amount_min=1, amount_max=4, probability=1},
-      {type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
+      --{type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
 	},
   },
   {
@@ -271,7 +271,7 @@ data:extend(
     results = 
 	{
       {type="item", name="stone", amount_min=1, amount_max=5, probability=1},
-      {type="item", name="sand", amount_min=1, amount_max=100, probability=0.2},
+      --{type="item", name="sand", amount_min=1, amount_max=100, probability=0.2},
 	},
   },
   {
@@ -287,7 +287,7 @@ data:extend(
     results = 
 	{
       {type="item", name="stone", amount_min=1, amount_max=2, probability=1},
-      {type="item", name="sand", amount_min=1, amount_max=250, probability=0.25},
+      --{type="item", name="sand", amount_min=1, amount_max=250, probability=0.25},
 	},
   },
   {
@@ -303,7 +303,7 @@ data:extend(
     results = 
 	{
       {type="item", name="stone", amount_min=1, amount_max=4, probability=1},
-      {type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
+      --{type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
 	},
   },
 }

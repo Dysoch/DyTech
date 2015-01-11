@@ -18,9 +18,9 @@ data:extend(
 	autoplace =
     {
       control = "metallurgy-ores",
-      sharpness = 1,
-      max_probability = 0.04,
-      richness_multiplier = 11000,
+      sharpness = 0.85,
+      max_probability = 0.06,
+      richness_multiplier = 14000,
       richness_base = 11,
       size_control_multiplier = 0.06,
       peaks = {

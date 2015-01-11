@@ -148,14 +148,14 @@ data:extend(
     {
       control = "gemstones",
       sharpness = 1,
-      max_probability = 0.04,
-      richness_multiplier = 2000,
+      max_probability = 0.08,
+      richness_multiplier = 5000,
       richness_base = 25,
       size_control_multiplier = 0.06,
       peaks =
       {
         {
-          influence = 0.1,
+          influence = 0.15,
           starting_area_weight_optimal = 0,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
