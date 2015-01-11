@@ -27,5 +27,14 @@ data:extend(
     order = "[g]glass",
     stack_size = 100
   },
+  {
+    type = "item",
+    name = "obsidian",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/obsidian.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytechmachineintermediates",
+    order = "[o]obsidian",
+    stack_size = 200
+  },
 }
 )

@@ -11,7 +11,21 @@ data:extend(
 	  hardness = 2.9,
 	  mining_particle = "stone-particle",
 	  mining_time = 2,
-	  result = "cobalt-ore"
+	  results =
+      {
+        {
+          name = "cobalt-ore",
+          amount_min = 1,
+          amount_max = 1,
+          probability = 1
+        },
+        {
+          name = "obsidian",
+          amount_min = 1,
+          amount_max = 12,
+          probability = 0.25
+        },
+	  },
 	},
 	collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
