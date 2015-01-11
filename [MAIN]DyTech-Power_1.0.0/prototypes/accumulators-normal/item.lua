@@ -1,5 +1,6 @@
 data.raw["item"]["basic-accumulator"].order = "a[mk1]"
 data.raw["item"]["basic-accumulator"].subgroup = "accu-normal"
+data.raw["item"]["battery"].stack_size = 200
 
 data:extend(
 {

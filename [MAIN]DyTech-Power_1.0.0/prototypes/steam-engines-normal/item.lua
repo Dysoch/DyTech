@@ -1,3 +1,6 @@
+data.raw["item"]["steam-engine"].order = "[mk1]"
+data.raw["item"]["steam-engine"].subgroup = "steam-secondary"
+
 data:extend(
 {
   {

@@ -1,3 +1,5 @@
+data.raw["boiler"]["boiler"].energy_consumption = "488kW"
+
 data:extend({
   {
     type = "boiler",
@@ -28,10 +30,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "450kW",
+    energy_consumption = "1050kW",
     burner =
     {
-      effectivity = 0.60,
+      effectivity = 0.65,
       fuel_inventory_size = 2,
       emissions = 0.1 / 6.5,
       smoke =
@@ -146,10 +148,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "550kW",
+    energy_consumption = "2275kW",
     burner =
     {
-      effectivity = 0.75,
+      effectivity = 0.80,
       fuel_inventory_size = 3,
       emissions = 0.1 / 6.5,
       smoke =
@@ -264,7 +266,7 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "750kW",
+    energy_consumption = "3723kW",
     burner =
     {
       effectivity = 0.95,
@@ -382,10 +384,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "1000kW",
+    energy_consumption = "6825kW",
     burner =
     {
-      effectivity = 1.05,
+      effectivity = 1.1,
       fuel_inventory_size = 5,
       emissions = 0.1 / 6.5,
       smoke =
