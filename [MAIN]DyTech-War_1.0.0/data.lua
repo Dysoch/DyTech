@@ -1,0 +1,3 @@
+-- Welcome to the data.lua file of DyTech-War!
+-- Here you can switch any module on or off!
+-- The general rule is: TRUE is on, FALSE is off!
