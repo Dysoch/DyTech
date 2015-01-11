@@ -43,9 +43,9 @@ Lets see what types of intermediates there are:
 	[*] Capacitor Mk II
 	[*] Capacitor Mk III
 	[*] Capacitor Mk IV
-	[*] Flux[*]Capacitor Mk I
-	[*] Flux[*]Capacitor Mk II
-	[*] Flux[*]Capacitor Mk III
-	[*] Flux[*]Capacitor Mk IV
+	[*] Flux-Capacitor Mk I
+	[*] Flux-Capacitor Mk II
+	[*] Flux-Capacitor Mk III
+	[*] Flux-Capacitor Mk IV
 	
 There are more coming soon.

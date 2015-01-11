@@ -7,9 +7,10 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"iron-gear-wheel", 10},
+      {"rotor-1", 10},
       {"electronic-circuit", 3},
-      {"pipe", 2}
+      {"pipe", 2},
+      {"frame-1", 1},
     },
     result= "liquid-handler"
   },

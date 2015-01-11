@@ -28,8 +28,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary", 4},
-      {"pipe-mk2", 5},
+      {"steam-engine-primary", 1},
+      {"flux-capacitor-1", 2},
+      {"frame-1", 1},
+      {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
     result = "steam-engine-primary-mk2"
@@ -40,8 +42,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine", 4},
-      {"pipe-mk2", 5},
+      {"steam-engine", 1},
+      {"flux-capacitor-1", 2},
+      {"frame-1", 1},
+      {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
     result = "steam-engine-secondary-mk2"
@@ -52,8 +56,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary", 4},
-      {"pipe-mk2", 5},
+      {"steam-engine-terciary", 1},
+      {"flux-capacitor-1", 2},
+      {"frame-1", 1},
+      {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
     result = "steam-engine-terciary-mk2"
@@ -64,8 +70,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk2", 4},
-      {"pipe-mk3", 5},
+      {"steam-engine-primary-mk2", 1},
+      {"flux-capacitor-2", 2},
+      {"frame-2", 1},
+      {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
     result = "steam-engine-primary-mk3"
@@ -76,8 +84,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk2", 4},
-      {"pipe-mk3", 5},
+      {"steam-engine-secondary-mk2", 1},
+      {"flux-capacitor-2", 2},
+      {"frame-2", 1},
+      {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
     result = "steam-engine-secondary-mk3"
@@ -88,8 +98,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk2", 4},
-      {"pipe-mk3", 5},
+      {"steam-engine-terciary-mk2", 1},
+      {"flux-capacitor-2", 2},
+      {"frame-2", 1},
+      {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
     result = "steam-engine-terciary-mk3"
@@ -100,8 +112,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk3", 4},
-      {"pipe-mk4", 5},
+      {"steam-engine-primary-mk3", 1},
+      {"flux-capacitor-3", 5},
+      {"frame-3", 1},
+      {"rotor-3", 4},
       {"processing-unit", 5}
     },
     result = "steam-engine-primary-mk4"
@@ -112,8 +126,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk3", 4},
-      {"pipe-mk4", 5},
+      {"steam-engine-secondary-mk3", 1},
+      {"flux-capacitor-3", 5},
+      {"frame-3", 1},
+      {"rotor-3", 4},
       {"processing-unit", 5}
     },
     result = "steam-engine-secondary-mk4"
@@ -124,8 +140,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk3", 4},
-      {"pipe-mk4", 5},
+      {"steam-engine-terciary-mk3", 1},
+      {"flux-capacitor-3", 5},
+      {"frame-3", 1},
+      {"rotor-3", 4},
       {"processing-unit", 5}
     },
     result = "steam-engine-terciary-mk4"
@@ -136,8 +154,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-primary-mk4", 4},
-      {"pipe-mk5", 5},
+      {"steam-engine-primary-mk4", 1},
+      {"flux-capacitor-4", 10},
+      {"frame-4", 1},
+      {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
     result = "steam-engine-primary-mk5"
@@ -148,8 +168,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-secondary-mk4", 4},
-      {"pipe-mk5", 5},
+      {"steam-engine-secondary-mk4", 1},
+      {"flux-capacitor-4", 10},
+      {"frame-4", 1},
+      {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
     result = "steam-engine-secondary-mk5"
@@ -160,8 +182,10 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"steam-engine-terciary-mk4", 4},
-      {"pipe-mk5", 5},
+      {"steam-engine-terciary-mk4", 1},
+      {"flux-capacitor-4", 10},
+      {"frame-4", 1},
+      {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
     result = "steam-engine-terciary-mk5"

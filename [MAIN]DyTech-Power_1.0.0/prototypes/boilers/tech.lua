@@ -11,7 +11,7 @@ data:extend(
         recipe = "boiler-mk2"
       },
     },
-    prerequisites = {"oil-processing"},
+    prerequisites = {"tin-smelting", "rotor-2"},
     unit =
     {
       count = 150,
@@ -35,7 +35,7 @@ data:extend(
         recipe = "boiler-mk3"
       },
     },
-    prerequisites = {"boilers-1"},
+    prerequisites = {"boilers-1", "lead-smelting", "rotor-3"},
     unit =
     {
       count = 225,
@@ -60,7 +60,7 @@ data:extend(
         recipe = "boiler-mk4"
       },
     },
-    prerequisites = {"boilers-2"},
+    prerequisites = {"boilers-2", "steel-processing"},
     unit =
     {
       count = 300,
@@ -86,15 +86,15 @@ data:extend(
         recipe = "boiler-mk5"
       },
     },
-    prerequisites = {"boilers-3"},
+    prerequisites = {"boilers-3", "zinc-smelting", "rotor-4"},
     unit =
     {
-      count = 600,
+      count = 500,
       ingredients =
       {
         {"science-pack-1", 3},
-        {"science-pack-2", 3},
-        {"science-pack-3", 3},
+        {"science-pack-2", 2},
+        {"science-pack-3", 1},
       },
       time = 60
     },

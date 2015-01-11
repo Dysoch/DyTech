@@ -9,6 +9,8 @@ data:extend(
       {"basic-accumulator", 1},
       {"battery", 5},
       {"advanced-circuit", 5},
+      {"flux-capacitor-1", 5},
+      {"frame-2", 1},
     },
     result = "basic-accumulator-mk2"
   },
@@ -21,6 +23,8 @@ data:extend(
       {"basic-accumulator", 1},
       {"battery", 5},
       {"advanced-circuit", 5},
+      {"flux-capacitor-1", 5},
+      {"frame-2", 1},
     },
     result = "basic-accumulator-mk3"
   },
@@ -33,6 +37,8 @@ data:extend(
       {"basic-accumulator-mk2", 1},
       {"battery", 10},
       {"processing-unit", 5},
+      {"flux-capacitor-2", 5},
+      {"frame-3", 1},
     },
     result = "basic-accumulator-mk4"
   },
@@ -45,6 +51,8 @@ data:extend(
       {"basic-accumulator-mk3", 1},
       {"battery", 10},
       {"processing-unit", 5},
+      {"flux-capacitor-2", 5},
+      {"frame-3", 1},
     },
     result = "basic-accumulator-mk5"
   },
@@ -58,6 +66,8 @@ data:extend(
       {"basic-accumulator-mk5", 1},
       {"battery", 110},
       {"advanced-processing-unit", 25},
+      {"flux-capacitor-4", 5},
+      {"frame-4", 1},
     },
     result = "basic-accumulator-mk6"
   },

@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "item",
-    name = "frame1",
+    name = "frame-1",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/frame1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -11,7 +11,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "frame2",
+    name = "frame-2",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/frame2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -20,7 +20,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "frame3",
+    name = "frame-3",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/frame3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -29,7 +29,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "frame4",
+    name = "frame-4",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/frame4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -38,7 +38,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "item-exit1",
+    name = "item-exit-1",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/item-exit1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -47,7 +47,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "item-exit2",
+    name = "item-exit-2",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/item-exit2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -56,7 +56,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "item-exit3",
+    name = "item-exit-3",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/item-exit3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -65,7 +65,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "item-exit4",
+    name = "item-exit-4",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/item-exit4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -74,7 +74,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "rotor1",
+    name = "rotor-1",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/rotor1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -83,7 +83,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "rotor2",
+    name = "rotor-2",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/rotor2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -92,7 +92,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "rotor3",
+    name = "rotor-3",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/rotor3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -101,7 +101,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "rotor4",
+    name = "rotor-4",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/rotor4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -110,7 +110,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "blade1",
+    name = "blade-1",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/blade1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -119,7 +119,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "blade2",
+    name = "blade-2",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/blade2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",
@@ -128,7 +128,7 @@ data:extend(
   },
   {
     type = "item",
-    name = "blade3",
+    name = "blade-3",
     icon = "__[CORE]DyTech-Core__/graphics/machine-intermediates/blade3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechmachineintermediates",

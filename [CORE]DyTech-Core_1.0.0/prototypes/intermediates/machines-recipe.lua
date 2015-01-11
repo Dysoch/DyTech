@@ -2,7 +2,7 @@ data:extend(
 { 
   {
     type = "recipe",
-    name = "frame1",
+    name = "frame-1",
     enabled = true,
     ingredients =
     {
@@ -10,49 +10,49 @@ data:extend(
 	  {"iron-stick", 30},
 	  {"electronic-circuit", 15}
     },
-    result = "frame1"
+    result = "frame-1"
   },
   {
     type = "recipe",
-    name = "frame2",
+    name = "frame-2",
     enabled = false,
     ingredients =
     {
-      {"frame1", 1},
+      {"frame-1", 1},
       {"steel-plate", 10},
 	  {"advanced-circuit", 5},
     },
-    result = "frame2"
+    result = "frame-2"
   },
   {
     type = "recipe",
-    name = "frame3",
+    name = "frame-3",
     enabled = false,
     ingredients =
     {
-      {"frame2", 1},
+      {"frame-2", 1},
       {"lead-plate", 25},
       {"processing-unit", 18},
 	  {"copper-cable", 20}
     },
-    result = "frame3"
+    result = "frame-3"
   },
   {
     type = "recipe",
-    name = "frame4",
+    name = "frame-4",
     enabled = false,
     ingredients =
     {
-      {"frame3", 1},
+      {"frame-3", 1},
 	  {"advanced-processing-unit", 10},
       {"tungsten-plate", 25},
 	  {"bundled-wire", 50}
     },
-    result = "frame4"
+    result = "frame-4"
   },
   {
     type = "recipe",
-    name = "item-exit1",
+    name = "item-exit-1",
     enabled = true,
     ingredients =
     {
@@ -60,72 +60,72 @@ data:extend(
 	  {"wooden-chest", 1},
 	  {"iron-plate", 12}
     },
-    result = "item-exit1"
+    result = "item-exit-1"
   },
   {
     type = "recipe",
-    name = "item-exit2",
+    name = "item-exit-2",
     enabled = false,
     ingredients =
     {
-      {"item-exit1", 1},
+      {"item-exit-1", 1},
 	  {"rubber", 25},
       {"iron-chest", 1},
 	  {"steel-plate", 12}
     },
-    result = "item-exit2"
+    result = "item-exit-2"
   },
   {
     type = "recipe",
-    name = "item-exit3",
+    name = "item-exit-3",
     enabled = false,
     ingredients =
     {
-      {"item-exit2", 1},
+      {"item-exit-2", 1},
 	  {"steel-chest", 1},
       {"bundled-wire", 10},
 	  {"zinc-plate", 15}
     },
-    result = "item-exit3"
+    result = "item-exit-3"
   },
   {
     type = "recipe",
-    name = "item-exit4",
+    name = "item-exit-4",
     enabled = false,
     ingredients =
     {
-      {"item-exit3", 1},
+      {"item-exit-3", 1},
 	  {"advanced-processing-unit", 5},
       {"smart-chest", 1},
 	  {"smart-inserter", 1}
     },
-    result = "item-exit4"
+    result = "item-exit-4"
   },
   {
     type = "recipe",
-    name = "rotor1",
+    name = "rotor-1",
     enabled = true,
     ingredients =
     {
-      {"blade1", 3},
+      {"blade-1", 3},
       {"stone-gear-wheel", 4},
 	  {"iron-plate", 8},
 	  {"copper-plate", 2}
     },
-    result = "rotor1"
+    result = "rotor-1"
   },
   {
     type = "recipe",
-    name = "rotor2",
+    name = "rotor-2",
     enabled = false,
     ingredients =
     {
-      {"rotor1", 1},
-	  {"blade2", 3},
+      {"rotor-1", 1},
+	  {"blade-2", 3},
       {"iron-gear-wheel", 4},
 	  {"steel-plate", 6}
     },
-    result = "rotor2"
+    result = "rotor-2"
   },
   {
     type = "recipe",
@@ -142,20 +142,20 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "rotor4",
+    name = "rotor-4",
     enabled = false,
     ingredients =
     {
-      {"rotor3", 1},
-	  {"blade3", 9},
+      {"rotor-3", 1},
+	  {"blade-3", 9},
       {"lead-gear-wheel", 12},
 	  {"advanced-circuit", 5}
     },
-    result = "rotor4"
+    result = "rotor-4"
   },
   {
     type = "recipe",
-    name = "blade1",
+    name = "blade-1",
     enabled = true,
     ingredients =
     {
@@ -163,29 +163,29 @@ data:extend(
       {"wood", 1},
 	  {"iron-stick", 1}
     },
-    result = "blade1"
+    result = "blade-1"
   },
   {
     type = "recipe",
-    name = "blade2",
+    name = "blade-2",
     enabled = false,
     ingredients =
     {
       {"iron-plate", 12},
       {"stone-brick", 12},
     },
-    result = "blade2"
+    result = "blade-2"
   },
   {
     type = "recipe",
-    name = "blade3",
+    name = "blade-3",
     enabled = false,
     ingredients =
     {
-      {"blade2", 1},
-      {"steel-plate", 4},
+      {"blade-2", 1},
+      {"lead-plate", 4},
     },
-    result = "blade3"
+    result = "blade-3"
   },
 }
 )

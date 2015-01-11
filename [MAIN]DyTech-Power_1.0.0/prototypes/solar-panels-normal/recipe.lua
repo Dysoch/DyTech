@@ -20,7 +20,7 @@ data:extend(
     {
       {"solar-panel", 1},
       {"advanced-circuit", 15},
-      {"copper-plate", 10}
+      {"flux-capacitor-1", 1},
     },
     result = "solar-panel-primary-mk2"
   },
@@ -32,7 +32,7 @@ data:extend(
     {
       {"solar-panel-secondary", 1},
       {"advanced-circuit", 15},
-      {"copper-plate", 10}
+      {"flux-capacitor-1", 1},
     },
     result = "solar-panel-secondary-mk2"
   },
@@ -44,7 +44,8 @@ data:extend(
     {
       {"solar-panel-primary-mk2", 1},
       {"processing-unit", 15},
-      {"copper-plate", 20}
+      {"tin-plate", 20},
+      {"flux-capacitor-2", 2},
     },
     result = "solar-panel-primary-mk3"
   },
@@ -56,7 +57,8 @@ data:extend(
     {
       {"solar-panel-secondary-mk2", 1},
       {"processing-unit", 15},
-      {"copper-plate", 20}
+      {"tin-plate", 20},
+      {"flux-capacitor-2", 2},
     },
     result = "solar-panel-secondary-mk3"
   },
@@ -68,7 +70,8 @@ data:extend(
     {
       {"solar-panel-primary-mk3", 1},
       {"advanced-processing-unit", 15},
-      {"copper-plate", 40}
+      {"zinc-plate", 40},
+      {"flux-capacitor-3", 5},
     },
     result = "solar-panel-primary-mk4"
   },
@@ -80,7 +83,8 @@ data:extend(
     {
       {"solar-panel-secondary-mk3", 1},
       {"advanced-processing-unit", 15},
-      {"copper-plate", 40}
+      {"zinc-plate", 40},
+      {"flux-capacitor-3", 5},
     },
     result = "solar-panel-secondary-mk4"
   },
@@ -92,7 +96,8 @@ data:extend(
     {
       {"solar-panel-primary-mk4", 1},
       {"advanced-processing-unit", 45},
-      {"copper-plate", 80}
+      {"gold-plate", 80},
+      {"flux-capacitor-4", 10},
     },
     result = "solar-panel-primary-mk5"
   },
@@ -104,7 +109,8 @@ data:extend(
     {
       {"solar-panel-secondary-mk4", 1},
       {"advanced-processing-unit", 45},
-      {"copper-plate", 80}
+      {"gold-plate", 80},
+      {"flux-capacitor-4", 10},
     },
     result = "solar-panel-secondary-mk5"
   },
