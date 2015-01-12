@@ -9,6 +9,10 @@ Pipes = true
 SmallPumps = true
 OffshorePumps = true
 
+[[ Modules ]]
+-- Here is the toggle for the Modules (ingame modules)
+Modules = true
+
 [[ Logistic Related Things ]]
 -- Here are all logistic related stuff, such as robots and inserters.
 Roboports = true
@@ -67,4 +71,11 @@ require("prototypes.inserters.super-inserter-entity")
 require("prototypes.inserters.super-inserter-item")
 require("prototypes.inserters.super-inserter-recipe")
 require("prototypes.inserters.super-inserter-tech")
+end
+
+[[ Modules Check ]]
+if Modules then 
+require("prototypes.modules.item")
+require("prototypes.modules.recipe")
+require("prototypes.modules.tech")
 end
