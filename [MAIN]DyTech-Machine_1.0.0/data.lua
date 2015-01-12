@@ -15,7 +15,9 @@ Roboports = true
 ConstructionRobots = true
 LogisticRobots = true
 Inserters = true
--- NOTE: Construction and Logistic Robots REQUIRE Roboports to be enabled!!!!
+SuperInserters = true
+-- NOTE: Construction and Logistic Robots REQUIRE Roboports to be enabled!!!!!
+-- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
 
 [[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]
 --------------------------------------------------------------------------------------------
@@ -46,4 +48,23 @@ require("prototypes.construction-robots.entity")
 require("prototypes.construction-robots.item")
 require("prototypes.construction-robots.recipe")
 require("prototypes.construction-robots.tech")
+end
+
+[[ Inserters Check ]]
+if Inserters then 
+require("prototypes.inserters.normal-inserter-entity")
+require("prototypes.inserters.normal-inserter-item")
+require("prototypes.inserters.normal-inserter-recipe")
+require("prototypes.inserters.smart-inserter-entity")
+require("prototypes.inserters.smart-inserter-item")
+require("prototypes.inserters.smart-inserter-recipe")
+require("prototypes.inserters.inserter-tech")
+end
+
+[[ Super Inserters Check ]]
+if Inserters and SuperInserters then 
+require("prototypes.inserters.super-inserter-entity")
+require("prototypes.inserters.super-inserter-item")
+require("prototypes.inserters.super-inserter-recipe")
+require("prototypes.inserters.super-inserter-tech")
 end
