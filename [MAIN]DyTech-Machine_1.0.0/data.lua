@@ -40,6 +40,8 @@ Radars = true
 --[[ Transportation ]]--
 -- Here are all transportation goods, such as Cars or Trains!
 ArmoredCar = true
+ArmoredTrain = true
+HighSpeedTrain = true
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -201,4 +203,20 @@ require("prototypes.radars.entity")
 require("prototypes.radars.item")
 require("prototypes.radars.recipe")
 require("prototypes.radars.tech")
+end
+
+--[[ Armored Train Check ]]--
+if ArmoredTrain then 
+require("prototypes.trains.armored-entity")
+require("prototypes.trains.armored-item")
+require("prototypes.trains.armored-recipe")
+require("prototypes.trains.armored-tech")
+end
+
+--[[ High Speed Train Check ]]--
+if HighSpeedTrain then 
+require("prototypes.trains.speed-entity")
+require("prototypes.trains.speed-item")
+require("prototypes.trains.speed-recipe")
+require("prototypes.trains.speed-tech")
 end
