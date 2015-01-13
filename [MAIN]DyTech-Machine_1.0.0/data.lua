@@ -6,8 +6,11 @@
 -- Here are all pipe related stuff, such as pipes, pumps and Pumpjacks.
 Pumpjacks = true
 Pipes = true
-SmallPumps = true
 OffshorePumps = true
+SmallPumps = true
+-- NOTE: Small Pumps REQUIRES Offshore Pumps to be enabled!!!!!
+-- NOTE: If you are using DyTech-Power, i advise you to enable Pipes and both Pumps!
+-- This makes it easier to use the higher tier Steam Engines
 
 --[[ Modules ]]--
 -- Here is the toggle for the Modules (ingame modules)
@@ -140,4 +143,23 @@ require("prototypes.mining-drills.entity")
 require("prototypes.mining-drills.item")
 require("prototypes.mining-drills.recipe")
 require("prototypes.mining-drills.tech")
+end
+
+--[[ Offshore Pumps Check ]]--
+if OffshorePumps then 
+require("prototypes.offshore-pumps.entity")
+require("prototypes.offshore-pumps.item")
+require("prototypes.offshore-pumps.recipe")
+require("prototypes.offshore-pumps.tech")
+end
+
+--[[ Small Pumps Check ]]--
+if OffshorePumps and SmallPumps then 
+require("prototypes.small-pumps.entity")
+require("prototypes.small-pumps.item")
+require("prototypes.small-pumps.recipe")
+table.insert(data.raw["technology"]["pump-1"].effects,{type = "unlock-recipe",recipe = "small-pump-mk2"})
+table.insert(data.raw["technology"]["pump-2"].effects,{type = "unlock-recipe",recipe = "small-pump-mk3"})
+table.insert(data.raw["technology"]["pump-3"].effects,{type = "unlock-recipe",recipe = "small-pump-mk4"})
+table.insert(data.raw["technology"]["pump-4"].effects,{type = "unlock-recipe",recipe = "small-pump-mk5"})
 end
