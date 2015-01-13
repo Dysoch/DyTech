@@ -20,8 +20,16 @@ ConstructionRobots = true
 LogisticRobots = true
 Inserters = true
 SuperInserters = true
--- NOTE: Construction and Logistic Robots REQUIRE Roboports to be enabled!!!!!
+-- NOTE: Construction and Logistic Robots REQUIRES Roboports to be enabled!!!!!
 -- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
+
+[[ Machines ]]
+-- Here are all machines, be that furnaces or assembling machines!
+AssemblingMachines = true
+
+[[ Transportation ]]
+-- Here are all transportation goods, such as Cars or Trains!
+ArmoredCar = true
 
 [[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]
 --------------------------------------------------------------------------------------------
@@ -78,4 +86,20 @@ if Modules then
 require("prototypes.modules.item")
 require("prototypes.modules.recipe")
 require("prototypes.modules.tech")
+end
+
+[[ Assembling Machines Check ]]
+if AssemblingMachines then 
+require("prototypes.assembling-machines.entity")
+require("prototypes.assembling-machines.item")
+require("prototypes.assembling-machines.recipe")
+require("prototypes.assembling-machines.tech")
+end
+
+[[ Armored Car Check ]]
+if ArmoredCar then 
+require("prototypes.cars.entity")
+require("prototypes.cars.item")
+require("prototypes.cars.recipe")
+require("prototypes.cars.tech")
 end
