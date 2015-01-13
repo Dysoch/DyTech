@@ -63,6 +63,13 @@ require("prototypes.construction-robots.entity")
 require("prototypes.construction-robots.item")
 require("prototypes.construction-robots.recipe")
 require("prototypes.construction-robots.tech")
+
+[[ Logistic Robots Check ]]
+if Roboports and LogisticRobots then 
+require("prototypes.logistic-robots.entity")
+require("prototypes.logistic-robots.item")
+require("prototypes.logistic-robots.recipe")
+require("prototypes.logistic-robots.tech")
 end
 
 [[ Inserters Check ]]
