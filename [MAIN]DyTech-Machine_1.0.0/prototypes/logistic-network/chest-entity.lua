@@ -7,7 +7,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-passive-provider-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-passive-provider-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-passive-provider-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -24,7 +24,7 @@ data:extend(
     logistic_mode = "passive-provider",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-passive-provider-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-passive-provider-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -34,7 +34,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-active-provider-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-active-provider-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-active-provider-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -51,7 +51,7 @@ data:extend(
     logistic_mode = "active-provider",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-active-provider-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-active-provider-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -61,7 +61,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-storage-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-storage-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-storage-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -78,7 +78,7 @@ data:extend(
     logistic_mode = "storage",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-storage-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-storage-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -88,7 +88,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-requester-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-requester-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-requester-1.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -105,7 +105,7 @@ data:extend(
     logistic_mode = "requester",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-requester-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-requester-1.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -115,7 +115,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-passive-provider-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-passive-provider-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-passive-provider-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -132,7 +132,7 @@ data:extend(
     logistic_mode = "passive-provider",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-passive-provider-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-passive-provider-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -142,7 +142,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-active-provider-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-active-provider-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-active-provider-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -159,7 +159,7 @@ data:extend(
     logistic_mode = "active-provider",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-active-provider-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-active-provider-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -169,7 +169,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-storage-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-storage-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-storage-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -186,7 +186,7 @@ data:extend(
     logistic_mode = "storage",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-storage-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-storage-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,
@@ -196,7 +196,7 @@ data:extend(
   {
     type = "logistic-container",
     name = "logistic-chest-requester-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/logistic-network/icon/logistic-chest-requester-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-requester-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = 
 	{
@@ -213,7 +213,7 @@ data:extend(
     logistic_mode = "requester",
     picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/logistic-network/logistic-chest-requester-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/logistic-network/logistic-chest-requester-2.png",
       priority = "extra-high",
       width = 38,
       height = 32,

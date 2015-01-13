@@ -3,7 +3,7 @@ data:extend(
   {
     type = "car",
     name = "car2",
-    icon = "__[MAIN]DyTech-Machine/graphics/cars/car2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/cars/car2.png",
     flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {mining_time = 1, result = "car2"},
     max_health = 2500,
@@ -89,7 +89,7 @@ data:extend(
     },
     animation =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/cars/car-sheet.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/cars/car-sheet.png",
       line_length = 8,
       width = 130,
       height = 93,

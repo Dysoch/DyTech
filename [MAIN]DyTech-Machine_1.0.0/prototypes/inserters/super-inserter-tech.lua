@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-super",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/technology/inserter_optimization.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/technology/inserter_optimization.png",
     prerequisites = {"logistics-5", "inserter-optimization-smart", "advanced-electronics-2"},
     effects = {
       {

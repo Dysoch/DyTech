@@ -3,7 +3,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-close.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-close.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-close"},
     max_health = 40,
@@ -113,7 +113,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-short.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-short.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-short"},
     max_health = 40,
@@ -224,7 +224,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-short-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-short-close.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-short-close.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-short-close"},
     max_health = 40,
@@ -335,7 +335,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-close.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-close.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-close"},
     max_health = 40,
@@ -558,7 +558,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-veryfast",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-veryfast.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-veryfast.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-veryfast"},
     max_health = 40,
@@ -615,21 +615,21 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-closed.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-closed.png",
       priority = "extra-high",
       width = 18,
       height = 41
     },
     hand_open_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-open.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-open.png",
       priority = "extra-high",
       width = 18,
       height = 41
@@ -659,7 +659,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46
@@ -670,7 +670,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-veryfast-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-veryfast-close.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-veryfast-close.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-veryfast-close"},
     max_health = 40,
@@ -727,21 +727,21 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
     },
     hand_closed_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-closed.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-closed.png",
       priority = "extra-high",
       width = 18,
       height = 41
     },
     hand_open_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-open.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-open.png",
       priority = "extra-high",
       width = 18,
       height = 41
@@ -771,7 +771,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46
@@ -782,7 +782,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-fast",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast"},
     max_health = 40,
@@ -894,7 +894,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-fast-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-short-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-short"},
     max_health = 40,
@@ -1008,7 +1008,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-fast-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-close-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-close-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-close"},
     max_health = 40,
@@ -1122,7 +1122,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-fast-close-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-close-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-close-short-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast-close-short"},
     max_health = 40,
@@ -1236,7 +1236,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-veryfast",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast"},
     max_health = 40,
@@ -1291,7 +1291,7 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
@@ -1335,7 +1335,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46
@@ -1346,7 +1346,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-veryfast-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-short-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-short"},
     max_health = 40,
@@ -1403,7 +1403,7 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
@@ -1447,7 +1447,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46
@@ -1458,7 +1458,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-veryfast-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-close-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-close-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-close"},
     max_health = 40,
@@ -1515,7 +1515,7 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
@@ -1559,7 +1559,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46
@@ -1570,7 +1570,7 @@ data:extend(
   {
     type = "inserter",
     name = "inserter-long-veryfast-close-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-close-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-close-short-inserter.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-veryfast-close-short"},
     max_health = 40,
@@ -1627,7 +1627,7 @@ data:extend(
     },
     hand_base_picture =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-hand-base.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34
@@ -1671,7 +1671,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/inserters/entity/veryfast-inserter-platform.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/inserters/entity/veryfast-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46

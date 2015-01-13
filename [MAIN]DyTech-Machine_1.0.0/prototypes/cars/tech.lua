@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "automobilism2",
-    icon = "__[MAIN]DyTech-Machine/graphics/cars/car2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/cars/car2.png",
     effects =
     {
       {

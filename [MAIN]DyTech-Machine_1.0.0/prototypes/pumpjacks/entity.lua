@@ -48,7 +48,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-base-2.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-base-2.png",
         priority = "extra-high",
         width = 114,
         height = 113,
@@ -64,7 +64,7 @@ data:extend(
         height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-animation-2.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-animation-2.png",
         frame_count = 40,
         animation_speed = 0.5
       }
@@ -123,7 +123,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-base-3.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-base-3.png",
         priority = "extra-high",
         width = 114,
         height = 113,
@@ -139,7 +139,7 @@ data:extend(
         height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-animation-3.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-animation-3.png",
         frame_count = 40,
         animation_speed = 0.5
       }
@@ -198,7 +198,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-base-4.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-base-4.png",
         priority = "extra-high",
         width = 114,
         height = 113,
@@ -214,7 +214,7 @@ data:extend(
         height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-animation-4.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-animation-4.png",
         frame_count = 40,
         animation_speed = 0.5
       }
@@ -273,7 +273,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-base-5.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-base-5.png",
         priority = "extra-high",
         width = 114,
         height = 113,
@@ -289,7 +289,7 @@ data:extend(
         height = 110,
         line_length = 10,
         shift = {0.125, -0.71875},
-        filename = "__[MAIN]DyTech-Machine/graphics/pumpjacks/pumpjack-animation-5.png",
+        filename = "__[MAIN]DyTech-Machine__/graphics/pumpjacks/pumpjack-animation-5.png",
         frame_count = 40,
         animation_speed = 0.5
       }

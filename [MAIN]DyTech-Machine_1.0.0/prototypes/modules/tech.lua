@@ -24,7 +24,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -47,7 +47,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -72,7 +72,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-3",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -97,7 +97,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -123,7 +123,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -149,7 +149,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -175,7 +175,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -202,7 +202,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-clean-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     effects =
     {
       {
@@ -230,7 +230,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -253,7 +253,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -278,7 +278,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-3",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -303,7 +303,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -329,7 +329,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -355,7 +355,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -381,7 +381,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {
@@ -408,7 +408,7 @@ data:extend(
   {
     type = "technology",
     name = "pollution-create-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     effects =
     {
       {

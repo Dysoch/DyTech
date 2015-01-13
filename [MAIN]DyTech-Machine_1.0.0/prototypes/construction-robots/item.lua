@@ -5,7 +5,7 @@ data:extend(
   {
     type = "item",
     name = "construction-robot-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/icon-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/icon-1.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "k-b",
@@ -15,7 +15,7 @@ data:extend(
   {
     type = "item",
     name = "construction-robot-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/icon-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/icon-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "logistic-network",
     order = "k-b",
@@ -25,7 +25,7 @@ data:extend(
   {
     type = "repair-tool",
     name = "repair-pack-0",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/repair-pack-0.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/repair-pack-0.png",
     flags = {"goes-to-quickbar"},
     subgroup = "tool",
     order = "b[repair]-a[repair-pack-0]",
@@ -36,7 +36,7 @@ data:extend(
   {
     type = "repair-tool",
     name = "repair-pack-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/repair-pack-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/repair-pack-2.png",
     flags = {"goes-to-quickbar"},
     subgroup = "tool",
     order = "b[repair]-c[repair-pack-2]",
@@ -47,7 +47,7 @@ data:extend(
   {
     type = "repair-tool",
     name = "repair-pack-3",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/repair-pack-3.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/repair-pack-3.png",
     flags = {"goes-to-quickbar"},
     subgroup = "tool",
     order = "b[repair]-d[repair-pack-3]",

@@ -26,6 +26,9 @@ SuperInserters = true
 [[ Machines ]]
 -- Here are all machines, be that furnaces or assembling machines!
 AssemblingMachines = true
+SteelFurnaces = true
+ElectricFurnaces = true
+-- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 [[ Transportation ]]
 -- Here are all transportation goods, such as Cars or Trains!
@@ -102,4 +105,23 @@ require("prototypes.cars.entity")
 require("prototypes.cars.item")
 require("prototypes.cars.recipe")
 require("prototypes.cars.tech")
+end
+
+[[ Steel Furnaces Check ]]
+if SteelFurnaces then 
+require("prototypes.steel-furnaces.entity")
+require("prototypes.steel-furnaces.item")
+require("prototypes.steel-furnaces.recipe")
+require("prototypes.steel-furnaces.tech")
+end
+
+[[ Electric Furnaces Check ]]
+if ElectricFurnaces and SteelFurnaces then 
+require("prototypes.electric-furnaces.entity")
+require("prototypes.electric-furnaces.item")
+require("prototypes.electric-furnaces.recipe")
+table.insert(data.raw["technology"]["advanced-material-processing-3"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk2"})
+table.insert(data.raw["technology"]["advanced-material-processing-4"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk3"})
+table.insert(data.raw["technology"]["advanced-material-processing-5"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk4"})
+table.insert(data.raw["technology"]["advanced-material-processing-6"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk5"})
 end

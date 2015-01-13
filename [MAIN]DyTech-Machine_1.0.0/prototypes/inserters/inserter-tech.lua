@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/technology/inserter_optimization.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/technology/inserter_optimization.png",
     prerequisites = {"logistics"},
     effects = {
       {
@@ -36,7 +36,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-adv", --fast + all smart versions of tier before
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/technology/inserter_optimization_adv.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/technology/inserter_optimization_adv.png",
     prerequisites = {"logistics-2", "electronics", "inserter-optimization"},
     effects = 
 	{
@@ -99,7 +99,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-fast", -- very fast + all smart versions of tier before
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/technology/inserter_optimization_highly_adv.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/technology/inserter_optimization_highly_adv.png",
     prerequisites = {"logistics-3", "inserter-optimization-adv"},
     effects = 
 	{
@@ -162,7 +162,7 @@ data:extend(
   {
     type = "technology",
     name = "inserter-optimization-smart", -- all smart versions of tier before
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/technology/inserter_optimization_highly_adv2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/technology/inserter_optimization_highly_adv2.png",
     prerequisites = {"inserter-optimization-fast"},
     effects = 
 	{

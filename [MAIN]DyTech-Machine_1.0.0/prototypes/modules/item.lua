@@ -1,18 +1,18 @@
-data.raw["module"]["speed-module"].icon = "__DyTech-Modules__/graphics/icons/speed-module.png"
-data.raw["module"]["speed-module-2"].icon = "__DyTech-Modules__/graphics/icons/speed-module-2.png"
-data.raw["module"]["speed-module-3"].icon = "__DyTech-Modules__/graphics/icons/speed-module-3.png"
+data.raw["module"]["speed-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module.png"
+data.raw["module"]["speed-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-2.png"
+data.raw["module"]["speed-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-3.png"
 data.raw["module"]["speed-module"].effect = { speed = {bonus = 0.2}, consumption = {bonus = 0.1}}
 data.raw["module"]["speed-module-2"].effect = { speed = {bonus = 0.4}, consumption = {bonus = 0.2}}
 data.raw["module"]["speed-module-3"].effect = { speed = {bonus = 0.6}, consumption = {bonus = 0.3}}
-data.raw["module"]["effectivity-module"].icon = "__DyTech-Modules__/graphics/icons/effectivity-module.png"
-data.raw["module"]["effectivity-module-2"].icon = "__DyTech-Modules__/graphics/icons/effectivity-module-2.png"
-data.raw["module"]["effectivity-module-3"].icon = "__DyTech-Modules__/graphics/icons/effectivity-module-3.png"
+data.raw["module"]["effectivity-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module.png"
+data.raw["module"]["effectivity-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-2.png"
+data.raw["module"]["effectivity-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-3.png"
 data.raw["module"]["effectivity-module"].effect = { consumption = {bonus = -0.25}}
 data.raw["module"]["effectivity-module-2"].effect = { consumption = {bonus = -0.5}}
 data.raw["module"]["effectivity-module-3"].effect = { consumption = {bonus = -0.75}}
-data.raw["module"]["productivity-module"].icon = "__DyTech-Modules__/graphics/icons/productivity-module.png"
-data.raw["module"]["productivity-module-2"].icon = "__DyTech-Modules__/graphics/icons/productivity-module-2.png"
-data.raw["module"]["productivity-module-3"].icon = "__DyTech-Modules__/graphics/icons/productivity-module-3.png"
+data.raw["module"]["productivity-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module.png"
+data.raw["module"]["productivity-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-2.png"
+data.raw["module"]["productivity-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-3.png"
 data.raw["module"]["productivity-module"].effect = { productivity = {bonus = 0.05}, consumption = {bonus = 0.2}, pollution = {bonus = 0.2}}
 data.raw["module"]["productivity-module-2"].effect = { productivity = {bonus = 0.1}, consumption = {bonus = 0.4}, pollution = {bonus = 0.4}}
 data.raw["module"]["productivity-module-3"].effect = { productivity = {bonus = 0.15}, consumption = {bonus = 0.6}, pollution = {bonus = 0.6}}
@@ -32,7 +32,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-1",
@@ -42,7 +42,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-2",
@@ -52,7 +52,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-3",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-3.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-3",
@@ -62,7 +62,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-4.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-4",
@@ -72,7 +72,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-5.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-5",
@@ -82,7 +82,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-6.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-6.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-6",
@@ -92,7 +92,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-7.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-7.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-7",
@@ -102,7 +102,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-clean-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-clean-module-8.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-clean-module-8.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-clean-module",
     order = "m-p-cl-8",
@@ -113,7 +113,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-1.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-1",
@@ -123,7 +123,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-2.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-2",
@@ -133,7 +133,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-3",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-3.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-3.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-3",
@@ -143,7 +143,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-4.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-4",
@@ -153,7 +153,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-5.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-5",
@@ -163,7 +163,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-6.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-6.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-6",
@@ -173,7 +173,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-7.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-7.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-7",
@@ -183,7 +183,7 @@ data:extend(
   {
     type = "module",
     name = "pollution-create-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/pollution-create-module-8.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/pollution-create-module-8.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "pollution-create-module",
     order = "m-p-cr-8",
@@ -194,7 +194,7 @@ data:extend(
   {
     type = "module",
     name = "speed-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/speed-module-4.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "speed-module",
     order = "m-s-4",
@@ -204,7 +204,7 @@ data:extend(
   {
     type = "module",
     name = "speed-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/speed-module-5.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "speed-module",
     order = "m-s-5",
@@ -214,7 +214,7 @@ data:extend(
   {
     type = "module",
     name = "speed-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/speed-module-6.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-6.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "speed-module",
     order = "m-s-6",
@@ -224,7 +224,7 @@ data:extend(
   {
     type = "module",
     name = "speed-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/speed-module-7.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-7.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "speed-module",
     order = "m-s-7",
@@ -234,7 +234,7 @@ data:extend(
   {
     type = "module",
     name = "speed-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/speed-module-8.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-8.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "speed-module",
     order = "m-s-8",
@@ -245,7 +245,7 @@ data:extend(
   {
     type = "module",
     name = "effectivity-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/effectivity-module-4.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "effectivity-module",
     order = "m-e-4",
@@ -255,7 +255,7 @@ data:extend(
   {
     type = "module",
     name = "effectivity-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/effectivity-module-5.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "effectivity-module",
     order = "m-e-5",
@@ -265,7 +265,7 @@ data:extend(
   {
     type = "module",
     name = "effectivity-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/effectivity-module-6.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-6.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "effectivity-module",
     order = "m-e-6",
@@ -275,7 +275,7 @@ data:extend(
   {
     type = "module",
     name = "effectivity-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/effectivity-module-7.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-7.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "effectivity-module",
     order = "m-e-7",
@@ -285,7 +285,7 @@ data:extend(
   {
     type = "module",
     name = "effectivity-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/effectivity-module-8.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-8.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "effectivity-module",
     order = "m-e-8",
@@ -296,7 +296,7 @@ data:extend(
   {
     type = "module",
     name = "productivity-module-4",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/productivity-module-4.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-4.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "productivity-module",
     order = "m-p-4",
@@ -308,7 +308,7 @@ data:extend(
   {
     type = "module",
     name = "productivity-module-5",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/productivity-module-5.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-5.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "productivity-module",
     order = "m-p-5",
@@ -320,7 +320,7 @@ data:extend(
   {
     type = "module",
     name = "productivity-module-6",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/productivity-module-6.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-6.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "productivity-module",
     order = "m-p-6",
@@ -332,7 +332,7 @@ data:extend(
   {
     type = "module",
     name = "productivity-module-7",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/productivity-module-7.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-7.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "productivity-module",
     order = "m-p-7",
@@ -344,7 +344,7 @@ data:extend(
   {
     type = "module",
     name = "productivity-module-8",
-    icon = "__[MAIN]DyTech-Machine/graphics/modules/productivity-module-8.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-8.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "productivity-module",
     order = "m-p-8",

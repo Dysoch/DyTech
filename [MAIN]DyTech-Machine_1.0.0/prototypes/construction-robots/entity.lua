@@ -3,7 +3,7 @@ data:extend(
   {
     type = "construction-robot",
     name = "construction-robot-1",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/icon-1.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/icon-1.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "construction-robot-1"},
     max_health = 200,
@@ -21,7 +21,7 @@ data:extend(
     working_light = {intensity = 0.8, size = 3},
     idle =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/construction-robots/construction-robot-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-1.png",
       priority = "high",
       line_length = 16,
       width = 32,
@@ -70,7 +70,7 @@ data:extend(
     },
     working =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/construction-robots/construction-robot-working-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-working-1.png",
       priority = "high",
       line_length = 2,
       width = 28,
@@ -180,7 +180,7 @@ data:extend(
   {
     type = "construction-robot",
     name = "construction-robot-2",
-    icon = "__[MAIN]DyTech-Machine/graphics/construction-robots/icon-2.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/construction-robots/icon-2.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "construction-robot-2"},
     max_health = 400,
@@ -198,7 +198,7 @@ data:extend(
     working_light = {intensity = 0.8, size = 3},
     idle =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/construction-robots/construction-robot-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-2.png",
       priority = "high",
       line_length = 16,
       width = 32,
@@ -210,7 +210,7 @@ data:extend(
     },
     in_motion =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/construction-robots/construction-robot-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-2.png",
       priority = "high",
       line_length = 16,
       width = 32,
@@ -247,7 +247,7 @@ data:extend(
     },
     working =
     {
-      filename = "__[MAIN]DyTech-Machine/graphics/construction-robots/construction-robot-working-2.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-working-2.png",
       priority = "high",
       line_length = 2,
       width = 28,

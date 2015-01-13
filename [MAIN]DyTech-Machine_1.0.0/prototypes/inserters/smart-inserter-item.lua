@@ -9,7 +9,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-close-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-close-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-close-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-2",
     order = "i-c-s",
@@ -19,7 +19,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-close-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-close-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-2",
     order = "i-b-s",
@@ -29,7 +29,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-close-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-close-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-1",
     order = "i-l-s",
@@ -38,7 +38,7 @@ data:extend(
   },  {
     type = "item",
     name = "inserter-long-short-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-short-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-short-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-1",
     order = "i-l-s-s",
@@ -48,7 +48,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-short-close-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-short-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-short-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-2",
     order = "i-l-s-c-s",
@@ -58,7 +58,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-close-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-long-close-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-long-close-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-2",
     order = "i-l-c-s",
@@ -78,7 +78,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-veryfast-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-veryfast-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-veryfast-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-5",
     order = "i-v-f-s",
@@ -88,7 +88,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-veryfast-close-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/inserter-veryfast-close-smart.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/inserter-veryfast-close-smart.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-5",
     order = "i-v-f-c-s",
@@ -99,7 +99,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-fast-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-smart-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-smart-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-4",
     order = "i-l-f-s",
@@ -109,7 +109,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-fast-smart-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-smart-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-smart-short-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-4",
     order = "i-l-f-s-s",
@@ -119,7 +119,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-fast-smart-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-smart-close-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-smart-close-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-4",
     order = "i-l-f-s-c",
@@ -129,7 +129,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-fast-smart-close-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-fast-smart-close-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-fast-smart-close-short-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-4",
     order = "i-l-f-s-c-s",
@@ -139,7 +139,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-veryfast-smart",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-smart-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-smart-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-7",
     order = "i-l-v-f-s",
@@ -149,7 +149,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-veryfast-smart-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-smart-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-smart-short-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-7",
     order = "i-l-v-f-s-s",
@@ -159,7 +159,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-veryfast-smart-close",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-smart-close-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-smart-close-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-7",
     order = "i-l-v-f-s-c",
@@ -169,7 +169,7 @@ data:extend(
   {
     type = "item",
     name = "inserter-long-veryfast-smart-close-short",
-    icon = "__[MAIN]DyTech-Machine/graphics/inserters/icons/long-veryfast-smart-close-short-inserter.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/inserters/icons/long-veryfast-smart-close-short-inserter.png",
     flags = {"goes-to-quickbar"},
     subgroup = "inserters-dytech-7",
     order = "i-l-v-f-s-c-s",
