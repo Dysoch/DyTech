@@ -1,5 +1,5 @@
 -- Welcome to the data.lua file of DyTech-Machine!
--- Here you can switch any module on or off!
+-- Here you can switch any (sub)module on or off!
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Pipe Related Things ]]--
@@ -27,8 +27,10 @@ Inserters = true
 SuperInserters = true
 TransportBelts = true
 LargeChests = true
+LargeLogisticChests = true
 -- NOTE: Construction and Logistic Robots REQUIRES Roboports to be enabled!!!!!
 -- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
+-- NOTE: Large Logistic Chests REQUIRES Large Chests to be enabled!!!!!
 
 --[[ Machines ]]--
 -- Here are all machines, be that furnaces or assembling machines!
@@ -229,4 +231,20 @@ require("prototypes.storage-tanks.entity")
 require("prototypes.storage-tanks.item")
 require("prototypes.storage-tanks.recipe")
 require("prototypes.storage-tanks.tech")
+end
+
+--[[ Large Chests Check ]]--
+if LargeChests then 
+require("prototypes.chests.chest-entity")
+require("prototypes.chests.chest-item")
+require("prototypes.chests.chest-recipe")
+require("prototypes.chests.chest-tech")
+end
+
+--[[ Large Logistic Chests Check ]]--
+if LargeLogisticChests and LargeChests then 
+require("prototypes.chests.logistic-chest-entity")
+require("prototypes.chests.logistic-chest-item")
+require("prototypes.chests.logistic-chest-recipe")
+require("prototypes.chests.logistic-chest-tech")
 end
