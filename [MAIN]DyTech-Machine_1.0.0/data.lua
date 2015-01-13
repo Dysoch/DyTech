@@ -34,6 +34,7 @@ AssemblingMachines = true
 MiningDrills = true
 SteelFurnaces = true
 ElectricFurnaces = true
+Radars = true
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 --[[ Transportation ]]--
@@ -192,4 +193,12 @@ table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recip
 table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "pipe-mk5"})
 table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "pipe-to-ground-mk5"})
 end
+end
+
+--[[ Radars Check ]]--
+if Radars then 
+require("prototypes.radars.entity")
+require("prototypes.radars.item")
+require("prototypes.radars.recipe")
+require("prototypes.radars.tech")
 end
