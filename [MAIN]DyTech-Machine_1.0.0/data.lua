@@ -8,6 +8,7 @@ Pumpjacks = true
 Pipes = true
 OffshorePumps = true
 SmallPumps = true
+StorageTanks = true
 -- NOTE: Small Pumps REQUIRES Offshore Pumps to be enabled!!!!!
 -- NOTE: If Transport Belts is disabled, Pipe mk 4 and 5 are disabled!
 -- NOTE: If you are using DyTech-Power, i advise you to enable Pipes and both Pumps!
@@ -25,6 +26,7 @@ LogisticRobots = true
 Inserters = true
 SuperInserters = true
 TransportBelts = true
+LargeChests = true
 -- NOTE: Construction and Logistic Robots REQUIRES Roboports to be enabled!!!!!
 -- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
 
@@ -219,4 +221,12 @@ require("prototypes.trains.speed-entity")
 require("prototypes.trains.speed-item")
 require("prototypes.trains.speed-recipe")
 require("prototypes.trains.speed-tech")
+end
+
+--[[ Storage Tanks Check ]]--
+if StorageTanks then 
+require("prototypes.storage-tanks.entity")
+require("prototypes.storage-tanks.item")
+require("prototypes.storage-tanks.recipe")
+require("prototypes.storage-tanks.tech")
 end
