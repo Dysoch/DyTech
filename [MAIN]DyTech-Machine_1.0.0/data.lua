@@ -26,6 +26,7 @@ SuperInserters = true
 --[[ Machines ]]--
 -- Here are all machines, be that furnaces or assembling machines!
 AssemblingMachines = true
+MiningDrills = true
 SteelFurnaces = true
 ElectricFurnaces = true
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
@@ -131,4 +132,12 @@ table.insert(data.raw["technology"]["advanced-material-processing-3"].effects,{t
 table.insert(data.raw["technology"]["advanced-material-processing-4"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk3"})
 table.insert(data.raw["technology"]["advanced-material-processing-5"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk4"})
 table.insert(data.raw["technology"]["advanced-material-processing-6"].effects,{type = "unlock-recipe",recipe = "electric-furnace-mk5"})
+end
+
+--[[ Mining Drills Check ]]--
+if MiningDrills then 
+require("prototypes.mining-drills.entity")
+require("prototypes.mining-drills.item")
+require("prototypes.mining-drills.recipe")
+require("prototypes.mining-drills.tech")
 end
