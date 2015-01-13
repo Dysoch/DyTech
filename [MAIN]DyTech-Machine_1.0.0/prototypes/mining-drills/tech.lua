@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-2",
-    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png",
     effects =
     {
       {
@@ -27,7 +27,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-3",
-    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png",
     effects =
     {
       {
@@ -52,7 +52,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-4",
-    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png",
     effects =
     {
       {
@@ -78,7 +78,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-5",
-    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png",
     effects =
     {
       {
@@ -104,7 +104,7 @@ data:extend(
   {
     type = "technology",
     name = "miner-6",
-    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+    icon = "__[MAIN]DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png",
     effects =
     {
       {

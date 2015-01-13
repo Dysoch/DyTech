@@ -8,9 +8,9 @@ data:extend(
     ingredients =
     {
       {"basic-mining-drill", 1},
-      {"rotor1", 2},
-	  {"item-exit1", 1},
-      {"frame1", 1}
+      {"rotor-1", 2},
+	  {"item-exit-1", 1},
+      {"frame-1", 1}
     },
     result = "basic-mining-drill-mk2"
   },
@@ -22,9 +22,9 @@ data:extend(
     ingredients =
     {
       {"basic-mining-drill-mk2", 1},
-      {"rotor2", 2},
-	  {"item-exit2", 1},
-      {"frame2", 1}
+      {"rotor-2", 2},
+	  {"item-exit-2", 1},
+      {"frame-2", 1}
     },
     result = "basic-mining-drill-mk3"
   },
@@ -36,9 +36,9 @@ data:extend(
     ingredients =
     {
       {"basic-mining-drill-mk3", 1},
-      {"rotor3", 2},
-	  {"item-exit3", 2},
-      {"frame3", 1}
+      {"rotor-3", 2},
+	  {"item-exit-3", 2},
+      {"frame-3", 1}
     },
     result = "basic-mining-drill-mk4"
   },
@@ -50,9 +50,9 @@ data:extend(
     ingredients =
     {
       {"basic-mining-drill-mk4", 1},
-      {"rotor4", 2},
-	  {"item-exit4", 4},
-      {"frame4", 1}
+      {"rotor-4", 2},
+	  {"item-exit-4", 4},
+      {"frame-4", 1}
     },
     result = "basic-mining-drill-mk5"
   },

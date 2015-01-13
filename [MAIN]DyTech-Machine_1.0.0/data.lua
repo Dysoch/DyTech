@@ -47,6 +47,10 @@ ArmoredCar = true
 ArmoredTrain = true
 HighSpeedTrain = true
 
+--[[ Tools ]]--
+-- These are the tools of the game. There are currently 7!
+Tools = true
+
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -76,6 +80,7 @@ require("prototypes.construction-robots.entity")
 require("prototypes.construction-robots.item")
 require("prototypes.construction-robots.recipe")
 require("prototypes.construction-robots.tech")
+end
 
 --[[ Logistic Robots Check ]]--
 if Roboports and LogisticRobots then 
@@ -89,7 +94,7 @@ end
 if Inserters then 
 require("prototypes.inserters.normal-inserter-entity")
 require("prototypes.inserters.normal-inserter-item")
-require("prototypes.inserters.normal-inserter-recipe")
+--require("prototypes.inserters.normal-inserter-recipe")
 require("prototypes.inserters.smart-inserter-entity")
 require("prototypes.inserters.smart-inserter-item")
 require("prototypes.inserters.smart-inserter-recipe")
@@ -247,4 +252,11 @@ require("prototypes.chests.logistic-chest-entity")
 require("prototypes.chests.logistic-chest-item")
 require("prototypes.chests.logistic-chest-recipe")
 require("prototypes.chests.logistic-chest-tech")
+end
+
+--[[ Tools Check ]]--
+if Tools then 
+require("prototypes.tools.item")
+require("prototypes.tools.recipe")
+require("prototypes.tools.tech")
 end

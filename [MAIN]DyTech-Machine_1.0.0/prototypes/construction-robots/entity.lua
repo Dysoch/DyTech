@@ -33,7 +33,7 @@ data:extend(
     },
     in_motion =
     {
-      filename = "__base__/graphics/entity/construction-robot/construction-robot-1.png",
+      filename = "__[MAIN]DyTech-Machine__/graphics/construction-robots/construction-robot-1.png",
       priority = "high",
       line_length = 16,
       width = 32,
