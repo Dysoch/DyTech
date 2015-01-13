@@ -38,7 +38,6 @@ data:extend(
 	  {"small-pump-mk3", 1},
       {"electric-engine-unit", 1},
       {"lead-plate", 1},
-      {"pipe-mk4", 1}
 	},
     result = "small-pump-mk4"
   },

@@ -9,6 +9,7 @@ Pipes = true
 OffshorePumps = true
 SmallPumps = true
 -- NOTE: Small Pumps REQUIRES Offshore Pumps to be enabled!!!!!
+-- NOTE: If Transport Belts is disabled, Pipe mk 4 and 5 are disabled!
 -- NOTE: If you are using DyTech-Power, i advise you to enable Pipes and both Pumps!
 -- This makes it easier to use the higher tier Steam Engines
 
@@ -162,4 +163,24 @@ table.insert(data.raw["technology"]["pump-1"].effects,{type = "unlock-recipe",re
 table.insert(data.raw["technology"]["pump-2"].effects,{type = "unlock-recipe",recipe = "small-pump-mk3"})
 table.insert(data.raw["technology"]["pump-3"].effects,{type = "unlock-recipe",recipe = "small-pump-mk4"})
 table.insert(data.raw["technology"]["pump-4"].effects,{type = "unlock-recipe",recipe = "small-pump-mk5"})
+end
+
+--[[ Pipes Check ]]--
+if Pipes then 
+require("prototypes.pipes.pipes-entity")
+require("prototypes.pipes.pipes-item")
+require("prototypes.pipes.pipes-recipe")
+require("prototypes.pipes.pipes-to-ground-entity")
+require("prototypes.pipes.pipes-to-ground-item")
+require("prototypes.pipes.pipes-to-ground-recipe")
+table.insert(data.raw["technology"]["logistics-2"].effects,{type = "unlock-recipe",recipe = "pipe-mk2"})
+table.insert(data.raw["technology"]["logistics-2"].effects,{type = "unlock-recipe",recipe = "pipe-to-ground-mk2"})
+table.insert(data.raw["technology"]["logistics-3"].effects,{type = "unlock-recipe",recipe = "pipe-mk3"})
+table.insert(data.raw["technology"]["logistics-3"].effects,{type = "unlock-recipe",recipe = "pipe-to-ground-mk3"})
+if TransportBelts then
+table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recipe",recipe = "pipe-mk4"})
+table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recipe",recipe = "pipe-to-ground-mk4"})
+table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "pipe-mk5"})
+table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "pipe-to-ground-mk5"})
+end
 end
