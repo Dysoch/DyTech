@@ -24,6 +24,7 @@ ConstructionRobots = true
 LogisticRobots = true
 Inserters = true
 SuperInserters = true
+TransportBelts = true
 -- NOTE: Construction and Logistic Robots REQUIRES Roboports to be enabled!!!!!
 -- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
 
@@ -163,6 +164,14 @@ table.insert(data.raw["technology"]["pump-1"].effects,{type = "unlock-recipe",re
 table.insert(data.raw["technology"]["pump-2"].effects,{type = "unlock-recipe",recipe = "small-pump-mk3"})
 table.insert(data.raw["technology"]["pump-3"].effects,{type = "unlock-recipe",recipe = "small-pump-mk4"})
 table.insert(data.raw["technology"]["pump-4"].effects,{type = "unlock-recipe",recipe = "small-pump-mk5"})
+end
+
+--[[ Transport Belt Check ]]--
+if TransportBelts then 
+require("prototypes.transport-belts.entity")
+require("prototypes.transport-belts.item")
+require("prototypes.transport-belts.recipe")
+require("prototypes.transport-belts.tech")
 end
 
 --[[ Pipes Check ]]--
