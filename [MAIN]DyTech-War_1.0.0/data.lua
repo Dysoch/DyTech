@@ -4,10 +4,17 @@
 
 --[[ Enemies ]]--
 -- Here you can disable or enable the enemies.
--- Base edit means the change in the spawners, to have more units available.
+-- Base edit means the change in the spawners, to make them stronger!
 EnemiesBaseEdit = true
 Biters = true
 Spitters = true
+
+--[[ Weapons and Ammo ]]--
+-- Here are all forms of weapons and ammo!
+Ammo = true
+SniperRifle = true
+LaserWeapons = true
+-- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -16,7 +23,6 @@ Spitters = true
 --[[ EnemiesBaseEdit Check ]]--
 if EnemiesBaseEdit then 
 require("prototypes.enemies.base-edit")
-require("prototypes.enemies.item")
 end
 
 --[[ Biters Check ]]--
@@ -29,4 +35,30 @@ end
 if Spitters then 
 require("prototypes.enemies.spitters")
 require("prototypes.enemies.spitters-edit")
+end
+
+--[[ Enemies Loot Check ]]--
+if Spitters or Biters then 
+require("prototypes.enemies.item")
+require("prototypes.enemies.recipe")
+end
+
+--[[ Ammo Check ]]--
+if Ammo then 
+require("prototypes.ammo.item")
+require("prototypes.ammo.recipe")
+end
+
+--[[ Sniper Rifle Check ]]--
+if SniperRifle and Ammo then 
+require("prototypes.gun-sniper.item")
+require("prototypes.gun-sniper.recipe")
+require("prototypes.gun-sniper.tech")
+end
+
+--[[ Laser Weapons Check ]]--
+if LaserWeapons and Ammo then 
+require("prototypes.gun-laser.item")
+require("prototypes.gun-laser.recipe")
+require("prototypes.gun-laser.tech")
 end
