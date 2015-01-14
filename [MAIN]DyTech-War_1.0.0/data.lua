@@ -16,6 +16,11 @@ SniperRifle = true
 LaserWeapons = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!
 
+--[[ Turrets ]]--
+-- Here you can find all kinds of Turrets!
+SniperTurret = true
+-- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!
+
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -61,4 +66,20 @@ if LaserWeapons and Ammo then
 require("prototypes.gun-laser.item")
 require("prototypes.gun-laser.recipe")
 require("prototypes.gun-laser.tech")
+end
+
+--[[ Sniper Turret Check ]]--
+if SniperTurret and SniperRifle then 
+require("prototypes.turrets-gun.entity")
+require("prototypes.turrets-gun.item")
+require("prototypes.turrets-gun.recipe")
+require("prototypes.turrets-gun.tech")
+end
+
+--[[ Flamethrower Turret Check ]]--
+if FlameThrowerTurret then 
+require("prototypes.turrets-flame.entity")
+require("prototypes.turrets-flame.item")
+require("prototypes.turrets-flame.recipe")
+require("prototypes.turrets-flame.tech")
 end
