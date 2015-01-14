@@ -11,14 +11,18 @@ Spitters = true
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
+-- Capsules holds stronger grenades and attack robots.
 Ammo = true
 SniperRifle = true
 LaserWeapons = true
+Capsules = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!
 
 --[[ Turrets ]]--
 -- Here you can find all kinds of Turrets!
 SniperTurret = true
+FlameThrowerTurret = true
+LaserTurret = true
 -- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
@@ -85,4 +89,22 @@ require("prototypes.turrets-flame.entity")
 require("prototypes.turrets-flame.item")
 require("prototypes.turrets-flame.recipe")
 require("prototypes.turrets-flame.tech")
+end
+
+--[[ Laser Turret Check ]]--
+if LaserTurret then 
+require("prototypes.turrets-laser.entity")
+require("prototypes.turrets-laser.item")
+require("prototypes.turrets-laser.recipe")
+require("prototypes.turrets-laser.tech")
+require("prototypes.turrets-laser.tech-upgrade")
+end
+
+--[[ Capsules Check ]]--
+if Capsules then 
+require("prototypes.capsules.entity")
+require("prototypes.capsules.item")
+require("prototypes.capsules.projectiles")
+require("prototypes.capsules.recipe")
+require("prototypes.capsules.tech")
 end
