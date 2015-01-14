@@ -57,8 +57,9 @@ data.raw["electric-turret"]["laser-turret"].input_flow_limit = "25000kW"
 data.raw["electric-turret"]["laser-turret"].drain = "25kW"
 data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png"
 data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
-data.raw["electric-turret"]["laser-turret"].cooldown = 30
-data.raw["electric-turret"]["laser-turret"].range = 15
+data.raw["electric-turret"]["laser-turret"].attack_parameters.cooldown = 40
+data.raw["electric-turret"]["laser-turret"].attack_parameters.damage = 8
+data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 15
 
 data:extend(
 {
@@ -121,8 +122,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 27,
-      damage = 4,
+      cooldown = 30,
+      damage = 6,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 18,
@@ -213,8 +214,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 24,
-      damage = 9,
+      cooldown = 20,
+      damage = 5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 21,
@@ -306,8 +307,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 21,
-      damage = 8,
+      cooldown = 35,
+      damage = 15,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 22,
@@ -398,8 +399,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 19,
-      damage = 10,
+      cooldown = 27.5,
+      damage = 12,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 24,
@@ -490,8 +491,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 17,
-      damage = 17,
+      cooldown = 15,
+      damage = 8,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 26,
@@ -583,8 +584,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 15,
-      damage = 14,
+      cooldown = 30,
+      damage = 25,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 28,
@@ -675,8 +676,8 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 13,
-      damage = 16,
+      cooldown = 20,
+      damage = 18,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 30,
@@ -768,7 +769,7 @@ data:extend(
     {
       ammo_category = "electric",
       cooldown = 10,
-      damage = 25,
+      damage = 13,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 32,
