@@ -1,3 +1,93 @@
+local loot1 =
+{
+  item = "biter-small-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["small-biter"].loot == nil then 
+		data.raw.unit["small-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["small-biter"].loot, loot1)
+end
+
+local loot2 =
+{
+  item = "biter-medium-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["medium-biter"].loot == nil then 
+		data.raw.unit["medium-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["medium-biter"].loot, loot2)
+end
+
+local loot3 =
+{
+  item = "biter-big-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["big-biter"].loot == nil then 
+		data.raw.unit["big-biter"].loot = {}
+	end
+	table.insert(data.raw.unit["big-biter"].loot, loot3)
+end
+
+local loot4 =
+{
+  item = "spitter-small-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["small-spitter"].loot == nil then 
+		data.raw.unit["small-spitter"].loot = {}
+	end
+	table.insert(data.raw.unit["small-spitter"].loot, loot4)
+end
+
+local loot5 =
+{
+  item = "spitter-medium-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["medium-spitter"].loot == nil then 
+		data.raw.unit["medium-spitter"].loot = {}
+	end
+	table.insert(data.raw.unit["medium-spitter"].loot, loot5)
+end
+
+local loot6 =
+{
+  item = "spitter-big-corpse",
+  probability = 1,
+  count_min = 1,
+  count_max = 1,
+}
+
+if data.raw.unit~=nil then
+	if data.raw.unit["big-spitter"].loot == nil then 
+		data.raw.unit["big-spitter"].loot = {}
+	end
+	table.insert(data.raw.unit["big-spitter"].loot, loot6)
+end
+
 data:extend(
 {
   {

@@ -46,6 +46,15 @@ data:extend(
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.85, -1.9}, {0.85, 0.37}},
     sticker_box = {{-1.2, -2.4}, {1.2, 0.5}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "spitter-berserk-corpse",
+        probability = 1
+      }
+    },
     distraction_cooldown = 300,
     attack_parameters = spitterattackparameters({range=20,
                                                  cooldown=100,
@@ -93,6 +102,15 @@ data:extend(
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-1.0, -2.25}, {1.0, 0.45}},
     sticker_box = {{-1.25, -2.75}, {1.25, 0.6}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "spitter-elder-corpse",
+        probability = 1
+      }
+    },
     distraction_cooldown = 300,
     attack_parameters = spitterattackparameters({range=25,
                                                  cooldown=200,
@@ -140,6 +158,15 @@ data:extend(
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-1.4, -3.0}, {1.4, 0.6}},
     sticker_box = {{-1.7, -3.75}, {1.7, 0.75}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "spitter-king-corpse",
+        probability = 1
+      }
+    },
     distraction_cooldown = 300,
     attack_parameters = spitterattackparameters({range=28,
                                                  cooldown=400,
@@ -187,6 +214,15 @@ data:extend(
     collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
     selection_box = {{-1.5, -3.75}, {1.5, 0.75}},
     sticker_box = {{-1.9, -4.75}, {1.9, 1}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "spitter-queen-corpse",
+        probability = 1
+      }
+    },
     distraction_cooldown = 300,
     attack_parameters = spitterattackparameters({range=32,
                                                  cooldown=100,
