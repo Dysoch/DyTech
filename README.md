@@ -7,7 +7,7 @@ You can look into the code here, and if you see something unbalanced, or a bug (
 
 Bug Reporting:
 =
-- For bug reports, check at https://github.com/Dysoch/DyTech/wiki/Bug-Reporting-Guidelines
+- For bug reports, check at the [Bug Reporting Guidelines](https://github.com/Dysoch/DyTech/wiki/Bug-Reporting-Guidelines!)
 
 
 
