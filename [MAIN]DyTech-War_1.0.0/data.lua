@@ -20,11 +20,12 @@ Tanks = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
 
---[[ Turrets ]]--
--- Here you can find all kinds of Turrets!
+--[[ Defences ]]--
+-- Here you can find all kinds of defensive items!
 SniperTurret = true
 FlameThrowerTurret = true
 LaserTurret = true
+Walls = true
 -- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!!!
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
@@ -117,4 +118,12 @@ require("prototypes.tanks.entity")
 require("prototypes.tanks.item")
 require("prototypes.tanks.recipe")
 require("prototypes.tanks.tech")
+end
+
+--[[ Walls Check ]]--
+if Walls then 
+require("prototypes.walls.entity")
+require("prototypes.walls.item")
+require("prototypes.walls.recipe")
+require("prototypes.walls.tech")
 end

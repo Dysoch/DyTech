@@ -1,0 +1,1 @@
+table.insert(data.raw["technology"]["tungsten-processing"].effects,{type = "unlock-recipe",recipe = "tungsten-wall"})
