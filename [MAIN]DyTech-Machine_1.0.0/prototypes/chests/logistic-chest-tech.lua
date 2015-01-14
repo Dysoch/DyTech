@@ -69,7 +69,7 @@ data:extend(
         recipe = "logistic-chest-passive-provider-big"
       },
     },
-    prerequisites = {"chest-3", "ardite-processing", "logistic-system-1"},
+    prerequisites = {"chest-3", "ardite-processing"},
     unit =
     {
       count = 250,
