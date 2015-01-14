@@ -44,7 +44,8 @@ data:extend(
       },
       time = 60
     },
-    order = "m-5"
+    order = "m-5",
+	upgrade = true
   },
 }
 )

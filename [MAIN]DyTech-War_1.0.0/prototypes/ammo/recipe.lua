@@ -52,7 +52,7 @@ data:extend(
     {
       {"sapphire-4", 1},
       {"gold-plate", 10},
-      {"laser-clip", 1},
+      {"laser-clip-1", 1},
     },
     result = "laser-clip-2",
 	result_count = 1
@@ -73,19 +73,6 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "laser-clip-tank",
-    enabled = false,
-    energy_required = 5,
-    ingredients =
-    {
-      {"emerald-5", 1},
-      {"laser-clip", 1},
-    },
-    result = "laser-clip-tank",
-	result_count = 1
-  },
-  {
-    type = "recipe",
     name = "laser-clip-shotgun-1",
     enabled = false,
     energy_required = 15,
@@ -93,7 +80,7 @@ data:extend(
     {
       {"ruby-5", 1},
       {"tin-plate", 25},
-      {"laser-clip", 1},
+      {"laser-clip-1", 1},
     },
     result = "laser-clip-shotgun-1",
 	result_count = 1

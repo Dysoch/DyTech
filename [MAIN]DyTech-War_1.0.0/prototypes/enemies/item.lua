@@ -216,5 +216,14 @@ data:extend(
     order = "8-spitter-queen",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "biter-queen-egg",
+    icon = "__[MAIN]DyTech-War__/graphics/enemies/queen-egg.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "raw-material",
+    order = "b-q-e",
+    stack_size = 64
+  },
 }
 )
