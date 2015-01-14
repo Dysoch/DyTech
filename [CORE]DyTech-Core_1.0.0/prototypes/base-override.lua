@@ -90,6 +90,7 @@ AddToRecipe("small-pump", "capacitor-1", 1)
 AddToRecipe("chemical-plant", "capacitor-1", 1)
 AddToRecipe("chemical-plant", "frame-2", 1)
 ChangeRecipe("laser-turret", "battery", "capacitor-1", 2)
+data.raw["recipe"]["iron-gear-wheel"].enabled = false
 
 --[[ Technologies ]]--
 data.raw["technology"]["steel-processing"].prerequisites={"automation"}
