@@ -1,3 +1,5 @@
+data.raw["capsule"]["basic-grenade"].order = "a[basic-grenade-1]"
+
 data:extend(
 {
   {

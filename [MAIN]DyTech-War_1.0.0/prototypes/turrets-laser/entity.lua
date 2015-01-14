@@ -48,6 +48,18 @@ laser_turret_extension_topaz =
 		shift = {1.171875, -0.34375}
 }
 
+data.raw["electric-turret"]["laser-turret"].icon = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
+data.raw["electric-turret"]["laser-turret"].max_health = 150
+data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
+data.raw["electric-turret"]["laser-turret"].energy_consumption = "30kJ"
+data.raw["electric-turret"]["laser-turret"].buffer_capacity = "500kJ"
+data.raw["electric-turret"]["laser-turret"].input_flow_limit = "25000kW"
+data.raw["electric-turret"]["laser-turret"].drain = "25kW"
+data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png"
+data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
+data.raw["electric-turret"]["laser-turret"].cooldown = 30
+data.raw["electric-turret"]["laser-turret"].range = 15
+
 data:extend(
 {
   --[[RUBY TURRETS]]--

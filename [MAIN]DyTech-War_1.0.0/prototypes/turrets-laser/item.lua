@@ -1,3 +1,5 @@
+data.raw["item"]["laser-turret"].icon = "__[MAIN]DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
+
 data:extend(
 {
   --[[RUBY LASER TURRETS]]--

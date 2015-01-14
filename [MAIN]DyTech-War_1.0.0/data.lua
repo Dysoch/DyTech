@@ -17,6 +17,7 @@ SniperRifle = true
 LaserWeapons = true
 Capsules = true
 Tanks = true
+Equipment = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
 
@@ -126,4 +127,12 @@ require("prototypes.walls.entity")
 require("prototypes.walls.item")
 require("prototypes.walls.recipe")
 require("prototypes.walls.tech")
+end
+
+--[[ Equipment Check ]]--
+if Equipment then 
+require("prototypes.equipment.entity")
+require("prototypes.equipment.item")
+require("prototypes.equipment.recipe")
+require("prototypes.equipment.tech")
 end
