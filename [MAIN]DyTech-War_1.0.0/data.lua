@@ -16,14 +16,16 @@ Ammo = true
 SniperRifle = true
 LaserWeapons = true
 Capsules = true
--- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!
+Tanks = true
+-- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
+-- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
 
 --[[ Turrets ]]--
 -- Here you can find all kinds of Turrets!
 SniperTurret = true
 FlameThrowerTurret = true
 LaserTurret = true
--- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!
+-- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!!!
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -107,4 +109,12 @@ require("prototypes.capsules.item")
 require("prototypes.capsules.projectiles")
 require("prototypes.capsules.recipe")
 require("prototypes.capsules.tech")
+end
+
+--[[ Tanks Check ]]--
+if Tanks and LaserWeapons then 
+require("prototypes.tanks.entity")
+require("prototypes.tanks.item")
+require("prototypes.tanks.recipe")
+require("prototypes.tanks.tech")
 end
