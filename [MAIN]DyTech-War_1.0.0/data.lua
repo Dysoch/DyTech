@@ -25,6 +25,9 @@ SniperTurret = true
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
+--[[ Mandatory Stuff ]]--
+require("prototypes.functions.projectiles")
+
 --[[ EnemiesBaseEdit Check ]]--
 if EnemiesBaseEdit then 
 require("prototypes.enemies.base-edit")
