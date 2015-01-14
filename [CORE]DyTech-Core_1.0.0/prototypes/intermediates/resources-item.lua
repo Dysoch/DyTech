@@ -36,5 +36,33 @@ data:extend(
     order = "[o]obsidian",
     stack_size = 200
   },
+  {
+    type = "item",
+    name = "bone",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/bone.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytechbiteritems",
+    order = "bone",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "bone-charcoal",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/bone-charcoal.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytechbiteritems",
+    order = "bone-charcoal",
+    fuel_value = "3.5MJ",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "chitin",
+    icon = "__[CORE]DyTech-Core__/graphics/intermediates/chitin.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytechbiteritems",
+    order = "chitin",
+    stack_size = 200
+  },
 }
 )
