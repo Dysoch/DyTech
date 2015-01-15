@@ -26,6 +26,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "dirty-water-to-water-2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "dirty-water-stone-sand-random"
+      },
     },
     prerequisites = {"automation"},
     unit =
