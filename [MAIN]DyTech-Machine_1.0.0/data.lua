@@ -55,6 +55,7 @@ Tools = true
 -- Here is everything related to metallurgy!
 Metallurgy = true --MASTER SWITCH!
 Lava = true
+MoltenMetals = true
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -277,4 +278,9 @@ require("prototypes.metallurgy.lava.recipe-cooling")
 require("prototypes.metallurgy.lava.recipe-heating")
 require("prototypes.metallurgy.lava.resource")
 require("prototypes.metallurgy.intermediates.item")
+end
+
+--[[ Lava (Metallurgy) Check ]]--
+if Metallurgy and MoltenMetals and Lava then
+require("prototypes.metallurgy.liquids.fluids")
 end
