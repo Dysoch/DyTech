@@ -51,6 +51,11 @@ HighSpeedTrain = true
 -- These are the tools of the game. There are currently 7!
 Tools = true
 
+--[[ Metallurgy ]]--
+-- Here is everything related to metallurgy!
+Metallurgy = true --MASTER SWITCH!
+Lava = true
+
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -259,4 +264,17 @@ if Tools then
 require("prototypes.tools.item")
 require("prototypes.tools.recipe")
 require("prototypes.tools.tech")
+end
+
+--[[ Lava (Metallurgy) Check ]]--
+if Metallurgy and Lava then
+require("prototypes.metallurgy.lava.machines.entity")
+require("prototypes.metallurgy.lava.machines.item")
+require("prototypes.metallurgy.lava.machines.recipe")
+require("prototypes.metallurgy.lava.machines.tech")
+require("prototypes.metallurgy.lava.fluid")
+require("prototypes.metallurgy.lava.recipe-cooling")
+require("prototypes.metallurgy.lava.recipe-heating")
+require("prototypes.metallurgy.lava.resource")
+require("prototypes.metallurgy.intermediates.item")
 end

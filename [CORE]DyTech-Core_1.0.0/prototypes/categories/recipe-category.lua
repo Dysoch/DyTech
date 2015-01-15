@@ -88,5 +88,13 @@ data:extend(
     type = "recipe-category",
     name = "liquid-handler"
   },
+  {
+    type = "recipe-category",
+    name = "lava-heater"
+  },
+  {
+    type = "recipe-category",
+    name = "lava-cooler"
+  },
 }
 )
