@@ -1,21 +1,21 @@
 data.raw["module"]["speed-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module.png"
 data.raw["module"]["speed-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-2.png"
 data.raw["module"]["speed-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/speed-module-3.png"
-data.raw["module"]["speed-module"].effect = { speed = {bonus = 0.2}, consumption = {bonus = 0.1}}
-data.raw["module"]["speed-module-2"].effect = { speed = {bonus = 0.4}, consumption = {bonus = 0.2}}
-data.raw["module"]["speed-module-3"].effect = { speed = {bonus = 0.6}, consumption = {bonus = 0.3}}
+data.raw["module"]["speed-module"].effect = { speed = {bonus = 0.2}, consumption = {bonus = 0.3}}
+data.raw["module"]["speed-module-2"].effect = { speed = {bonus = 0.3}, consumption = {bonus = 0.45}}
+data.raw["module"]["speed-module-3"].effect = { speed = {bonus = 0.5}, consumption = {bonus = 0.75}}
 data.raw["module"]["effectivity-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module.png"
 data.raw["module"]["effectivity-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-2.png"
 data.raw["module"]["effectivity-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/effectivity-module-3.png"
-data.raw["module"]["effectivity-module"].effect = { consumption = {bonus = -0.25}}
-data.raw["module"]["effectivity-module-2"].effect = { consumption = {bonus = -0.5}}
-data.raw["module"]["effectivity-module-3"].effect = { consumption = {bonus = -0.75}}
+data.raw["module"]["effectivity-module"].effect = { consumption = {bonus = -0.1}}
+data.raw["module"]["effectivity-module-2"].effect = { consumption = {bonus = -0.2}}
+data.raw["module"]["effectivity-module-3"].effect = { consumption = {bonus = -0.35}}
 data.raw["module"]["productivity-module"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module.png"
 data.raw["module"]["productivity-module-2"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-2.png"
 data.raw["module"]["productivity-module-3"].icon = "__[MAIN]DyTech-Machine__/graphics/modules/productivity-module-3.png"
-data.raw["module"]["productivity-module"].effect = { productivity = {bonus = 0.05}, consumption = {bonus = 0.2}, pollution = {bonus = 0.2}}
-data.raw["module"]["productivity-module-2"].effect = { productivity = {bonus = 0.1}, consumption = {bonus = 0.4}, pollution = {bonus = 0.4}}
-data.raw["module"]["productivity-module-3"].effect = { productivity = {bonus = 0.15}, consumption = {bonus = 0.6}, pollution = {bonus = 0.6}}
+data.raw["module"]["productivity-module"].effect = { productivity = {bonus = 0.02}, consumption = {bonus = 0.1}, pollution = {bonus = 0.1}, speed = {bonus = -0.03}}
+data.raw["module"]["productivity-module-2"].effect = { productivity = {bonus = 0.04}, consumption = {bonus = 0.2}, pollution = {bonus = 0.2}, speed = {bonus = -0.08}}
+data.raw["module"]["productivity-module-3"].effect = { productivity = {bonus = 0.08}, consumption = {bonus = 0.3}, pollution = {bonus = 0.3}, speed = {bonus = -0.2}}
 data.raw["module"]["speed-module"].subgroup = "speed-module"
 data.raw["module"]["speed-module-2"].subgroup = "speed-module"
 data.raw["module"]["speed-module-3"].subgroup = "speed-module"
@@ -47,7 +47,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-2",
     stack_size = 50,
-    effect = {pollution = {bonus = -0.4}}
+    effect = {pollution = {bonus = -0.3}}
   },
   {
     type = "module",
@@ -57,7 +57,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-3",
     stack_size = 50,
-    effect = {pollution = {bonus = -0.6}}
+    effect = {pollution = {bonus = -0.5}}
   },
   {
     type = "module",
@@ -67,7 +67,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-4",
     stack_size = 50,
-    effect = {pollution = {bonus = -0.8}}
+    effect = {pollution = {bonus = -0.6}}
   },
   {
     type = "module",
@@ -77,7 +77,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-5",
     stack_size = 50,
-    effect = {pollution = {bonus = -1.0}}
+    effect = {pollution = {bonus = -0.8}}
   },
   {
     type = "module",
@@ -87,7 +87,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-6",
     stack_size = 50,
-    effect = {pollution = {bonus = -1.2}}
+    effect = {pollution = {bonus = -0.9}}
   },
   {
     type = "module",
@@ -97,7 +97,7 @@ data:extend(
     subgroup = "pollution-clean-module",
     order = "m-p-cl-7",
     stack_size = 50,
-    effect = {pollution = {bonus = -1.4}}
+    effect = {pollution = {bonus = -1.2}}
   },
   {
     type = "module",
@@ -128,7 +128,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-2",
     stack_size = 50,
-    effect = {pollution = {bonus = 0.4}}
+    effect = {pollution = {bonus = 0.3}}
   },
   {
     type = "module",
@@ -138,7 +138,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-3",
     stack_size = 50,
-    effect = {pollution = {bonus = 0.6}}
+    effect = {pollution = {bonus = 0.5}}
   },
   {
     type = "module",
@@ -148,7 +148,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-4",
     stack_size = 50,
-    effect = {pollution = {bonus = 0.8}}
+    effect = {pollution = {bonus = 0.6}}
   },
   {
     type = "module",
@@ -158,7 +158,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-5",
     stack_size = 50,
-    effect = {pollution = {bonus = 1.0}}
+    effect = {pollution = {bonus = 0.8}}
   },
   {
     type = "module",
@@ -168,7 +168,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-6",
     stack_size = 50,
-    effect = {pollution = {bonus = 1.2}}
+    effect = {pollution = {bonus = 0.9}}
   },
   {
     type = "module",
@@ -178,7 +178,7 @@ data:extend(
     subgroup = "pollution-create-module",
     order = "m-p-cr-7",
     stack_size = 50,
-    effect = {pollution = {bonus = 1.4}}
+    effect = {pollution = {bonus = 1.2}}
   },
   {
     type = "module",
@@ -199,7 +199,7 @@ data:extend(
     subgroup = "speed-module",
     order = "m-s-4",
     stack_size = 50,
-    effect = { speed = {bonus = 0.8}, consumption = {bonus = 0.4}}
+    effect = { speed = {bonus = 0.6}, consumption = {bonus = 0.9}}
   },
   {
     type = "module",
@@ -209,7 +209,7 @@ data:extend(
     subgroup = "speed-module",
     order = "m-s-5",
     stack_size = 50,
-    effect = { speed = {bonus = 1.0}, consumption = {bonus = 0.5}}
+    effect = { speed = {bonus = 0.8}, consumption = {bonus = 1.2}}
   },
   {
     type = "module",
@@ -219,7 +219,7 @@ data:extend(
     subgroup = "speed-module",
     order = "m-s-6",
     stack_size = 50,
-    effect = { speed = {bonus = 1.2}, consumption = {bonus = 0.6}}
+    effect = { speed = {bonus = 0.9}, consumption = {bonus = 1.35}}
   },
   {
     type = "module",
@@ -229,7 +229,7 @@ data:extend(
     subgroup = "speed-module",
     order = "m-s-7",
     stack_size = 50,
-    effect = { speed = {bonus = 1.4}, consumption = {bonus = 0.7}}
+    effect = { speed = {bonus = 1.2}, consumption = {bonus = 1.8}}
   },
   {
     type = "module",
@@ -239,7 +239,7 @@ data:extend(
     subgroup = "speed-module",
     order = "m-s-8",
     stack_size = 50,
-    effect = { speed = {bonus = 1.6}, consumption = {bonus = 0.8}}
+    effect = { speed = {bonus = 1.6}, consumption = {bonus = 2.4}}
   },
   --[[Effectivity Modules]]--
   {
@@ -250,7 +250,7 @@ data:extend(
     subgroup = "effectivity-module",
     order = "m-e-4",
     stack_size = 50,
-    effect = { consumption = {bonus = -1.0}}
+    effect = { consumption = {bonus = -0.45}}
   },
   {
     type = "module",
@@ -260,7 +260,7 @@ data:extend(
     subgroup = "effectivity-module",
     order = "m-e-5",
     stack_size = 50,
-    effect = { consumption = {bonus = -1.25}}
+    effect = { consumption = {bonus = -0.6}}
   },
   {
     type = "module",
@@ -270,7 +270,7 @@ data:extend(
     subgroup = "effectivity-module",
     order = "m-e-6",
     stack_size = 50,
-    effect = { consumption = {bonus = -1.50}}
+    effect = { consumption = {bonus = -0.7}}
   },
   {
     type = "module",
@@ -280,7 +280,7 @@ data:extend(
     subgroup = "effectivity-module",
     order = "m-e-7",
     stack_size = 50,
-    effect = { consumption = {bonus = -1.75}}
+    effect = { consumption = {bonus = -1.0}}
   },
   {
     type = "module",
@@ -290,7 +290,7 @@ data:extend(
     subgroup = "effectivity-module",
     order = "m-e-8",
     stack_size = 50,
-    effect = { consumption = {bonus = -2.0}}
+    effect = { consumption = {bonus = -1.4}}
   },
   --[[Productivity Modules]]--
   {
@@ -301,7 +301,7 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-4",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.2}, consumption = {bonus = 0.8}, pollution = {bonus = 0.8}},
+    effect = { productivity = {bonus = 0.1}, consumption = {bonus = 0.4}, pollution = {bonus = 0.4}, speed = {bonus = -0.3}},
     limitation = productivitymodulelimitation(),
     limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
@@ -313,7 +313,7 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-5",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.25}, consumption = {bonus = 1.0}, pollution = {bonus = 1.0}},
+    effect = { productivity = {bonus = 0.16}, consumption = {bonus = 0.6}, pollution = {bonus = 0.6}, speed = {bonus = -0.56}},
     limitation = productivitymodulelimitation(),
     limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
@@ -325,7 +325,7 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-6",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.3}, consumption = {bonus = 1.2}, pollution = {bonus = 1.2}},
+    effect = { productivity = {bonus = 0.18}, consumption = {bonus = 0.7}, pollution = {bonus = 0.7}, speed = {bonus = -0.72}},
     limitation = productivitymodulelimitation(),
     limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
@@ -337,7 +337,7 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-7",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.4}, consumption = {bonus = 1.6}, pollution = {bonus = 1.6}},
+    effect = { productivity = {bonus = 0.28}, consumption = {bonus = 1.1}, pollution = {bonus = 1.1}, speed = {bonus = -1.26}},
     limitation = productivitymodulelimitation(),
     limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
@@ -349,7 +349,7 @@ data:extend(
     subgroup = "productivity-module",
     order = "m-p-8",
     stack_size = 50,
-    effect = { productivity = {bonus = 0.5}, consumption = {bonus = 2.0}, pollution = {bonus = 2.0}},
+    effect = { productivity = {bonus = 0.4}, consumption = {bonus = 1.6}, pollution = {bonus = 1.6}, speed = {bonus = -2.0}},
     limitation = productivitymodulelimitation(),
     limitation_message_key = "production-module-usable-only-on-intermeidates"
   },
