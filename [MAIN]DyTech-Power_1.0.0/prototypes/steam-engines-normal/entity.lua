@@ -1,6 +1,6 @@
 data.raw["generator"]["steam-engine"].fast_replaceable_group = "steam-engine"
-data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 0.1
-data.raw["generator"]["steam-engine"].effectivity = 1
+data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 0.08
+data.raw["generator"]["steam-engine"].effectivity = 1.1
 
 data:extend(
 {
@@ -12,8 +12,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    effectivity = 1.1,
+    fluid_usage_per_tick = 0.08,
     resistances = 
     {
       {
@@ -88,8 +88,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.1,
+    effectivity = 1.1,
+    fluid_usage_per_tick = 0.08,
     resistances = 
     {
       {
@@ -164,8 +164,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.2,
+    effectivity = 1.0,
+    fluid_usage_per_tick = 0.16,
     resistances = 
     {
       {
@@ -240,8 +240,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.2,
+    effectivity = 1.0,
+    fluid_usage_per_tick = 0.16,
     resistances = 
     {
       {
@@ -316,8 +316,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.2,
+    effectivity = 1.0,
+    fluid_usage_per_tick = 0.16,
     resistances = 
     {
       {
@@ -392,8 +392,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.4,
+    effectivity = 0.9,
+    fluid_usage_per_tick = 0.32,
     resistances = 
     {
       {
@@ -468,8 +468,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.4,
+    effectivity = 0.9,
+    fluid_usage_per_tick = 0.32,
     resistances = 
     {
       {
@@ -544,8 +544,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk3"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.4,
+    effectivity = 0.9,
+    fluid_usage_per_tick = 0.32,
     resistances = 
     {
       {
@@ -620,8 +620,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.6,
+    effectivity = 0.8,
+    fluid_usage_per_tick = 0.64,
     resistances = 
     {
       {
@@ -696,8 +696,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.6,
+    effectivity = 0.8,
+    fluid_usage_per_tick = 0.64,
     resistances = 
     {
       {
@@ -772,8 +772,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk4"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 0.6,
+    effectivity = 0.8,
+    fluid_usage_per_tick = 0.64,
     resistances = 
     {
       {
@@ -848,8 +848,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-primary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 1,
+    effectivity = 0.7,
+    fluid_usage_per_tick = 1.28,
     resistances = 
     {
       {
@@ -924,8 +924,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-secondary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 1,
+    effectivity = 0.7,
+    fluid_usage_per_tick = 1.28,
     resistances = 
     {
       {
@@ -1000,8 +1000,8 @@ data:extend(
     minable = {mining_time = 1, result = "steam-engine-terciary-mk5"},
     max_health = 300,
     corpse = "big-remnants",
-    effectivity = 1,
-    fluid_usage_per_tick = 1,
+    effectivity = 0.7,
+    fluid_usage_per_tick = 1.28,
     resistances = 
     {
       {

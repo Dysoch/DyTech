@@ -1,4 +1,4 @@
-data.raw["pump"]["small-pump"].pumping_speed = 1.25
+data.raw["pump"]["small-pump"].pumping_speed = 0.95
 
 data:extend({
   {
@@ -36,7 +36,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "45kW",
-    pumping_speed = 2.5,
+    pumping_speed = 1.89,
     animations =
     {
       north =
@@ -112,7 +112,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "60kW",
-    pumping_speed = 4.2,
+    pumping_speed = 3.78,
     animations =
     {
       north =
@@ -188,7 +188,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "90kW",
-    pumping_speed = 7.3,
+    pumping_speed = 7.56,
     animations =
     {
       north =
@@ -264,7 +264,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "120kW",
-    pumping_speed = 12,
+    pumping_speed = 15.11,
     animations =
     {
       north =
