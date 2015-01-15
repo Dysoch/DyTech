@@ -98,7 +98,7 @@ data:extend(
     crafting_categories = {"lava-heater"},
     result_inventory_size = 2,
     energy_usage = "180kW",
-    crafting_speed = 2,
+    crafting_speed = 1,
     source_inventory_size = 2,
     energy_source =
     {
@@ -188,7 +188,7 @@ data:extend(
     crafting_categories = {"lava-cooler"},
     result_inventory_size = 2,
     energy_usage = "180kW",
-    crafting_speed = 2,
+    crafting_speed = 0.5,
     source_inventory_size = 2,
     energy_source =
     {
