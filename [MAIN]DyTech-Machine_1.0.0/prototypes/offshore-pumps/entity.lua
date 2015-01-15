@@ -1,5 +1,5 @@
 data.raw["offshore-pump"]["offshore-pump"].fast_replaceable_group = "offshore-pump"
-data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 1.25
+data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 0.95
 
 data:extend({
   {
@@ -30,7 +30,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 2.5,
+    pumping_speed = 1.89,
     tile_width = 1,
     picture =
     {
@@ -99,7 +99,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 4.2,
+    pumping_speed = 3.78,
     tile_width = 1,
     picture =
     {
@@ -168,7 +168,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 7.3,
+    pumping_speed = 7.56,
     tile_width = 1,
     picture =
     {
@@ -237,7 +237,7 @@ data:extend({
         { position = {0, 1} },
       },
     },
-    pumping_speed = 12,
+    pumping_speed = 15.11,
     tile_width = 1,
     picture =
     {
