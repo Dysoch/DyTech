@@ -114,7 +114,7 @@ data:extend(
           name = "ruby-orex",
           amount_min = 1,
           amount_max = 4,
-          probability = 0.45
+          probability = 0.4
         },
         {
           name = "sapphire-orex",
@@ -126,13 +126,13 @@ data:extend(
           name = "emerald-orex",
           amount_min = 1,
           amount_max = 3,
-          probability = 0.28
+          probability = 0.3
         },
         {
           name = "topaz-orex",
           amount_min = 1,
           amount_max = 2,
-          probability = 0.35
+          probability = 0.27
         },
         {
           name = "diamond-orex",
