@@ -54,8 +54,8 @@ Tools = true
 --[[ Metallurgy ]]--
 -- Here is everything related to metallurgy!
 Metallurgy = true --MASTER SWITCH!
-Lava = true
 MoltenMetals = true
+LiquidCrafting = false
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -268,7 +268,7 @@ require("prototypes.tools.tech")
 end
 
 --[[ Lava (Metallurgy) Check ]]--
-if Metallurgy and Lava then
+if Metallurgy and MoltenMetals then
 require("prototypes.metallurgy.lava.machines.entity")
 require("prototypes.metallurgy.lava.machines.item")
 require("prototypes.metallurgy.lava.machines.recipe")
@@ -278,9 +278,24 @@ require("prototypes.metallurgy.lava.recipe-cooling")
 require("prototypes.metallurgy.lava.recipe-heating")
 require("prototypes.metallurgy.lava.resource")
 require("prototypes.metallurgy.intermediates.item")
+require("prototypes.metallurgy.liquids.fluids")
+require("prototypes.metallurgy.liquids.recipe-ardite")
+require("prototypes.metallurgy.liquids.recipe-cobalt")
+require("prototypes.metallurgy.liquids.recipe-copper")
+require("prototypes.metallurgy.liquids.recipe-gold")
+require("prototypes.metallurgy.liquids.recipe-iron")
+require("prototypes.metallurgy.liquids.recipe-lead")
+require("prototypes.metallurgy.liquids.recipe-silver")
+require("prototypes.metallurgy.liquids.recipe-steel")
+require("prototypes.metallurgy.liquids.recipe-tin")
+require("prototypes.metallurgy.liquids.recipe-tungsten")
+require("prototypes.metallurgy.liquids.recipe-zinc")
+require("prototypes.metallurgy.machines-molten.entity")
+require("prototypes.metallurgy.machines-molten.item")
+require("prototypes.metallurgy.machines-molten.recipe")
+require("prototypes.metallurgy.machines-molten.tech")
 end
 
---[[ Lava (Metallurgy) Check ]]--
-if Metallurgy and MoltenMetals and Lava then
-require("prototypes.metallurgy.liquids.fluids")
+--[[ Mold Crafting (Metallurgy) Check ]]--
+if Metallurgy and MoltenMetals and LiquidCrafting then
 end

@@ -1,0 +1,58 @@
+data:extend(
+{
+  {
+    type = "recipe",
+    name = "metallurgy-iron-carbonated",
+	enabled = false,
+	category = "blast-furnace",
+    energy_required = 10,
+    ingredients =
+    {
+      {type="item", name="coal", amount=1},
+	  {type="fluid", name="lava-2000", amount=1},
+	  {type="fluid", name="molten-iron", amount=5},
+    },
+    results = 
+	{
+	  {type="item", name="molten-carbonated-iron", amount=5}
+	}
+  },
+  {
+    type = "recipe",
+    name = "metallurgy-steel-plate-1",
+	enabled = false,
+	category = "forge",
+    energy_required = 7,
+    subgroup = "metallurgy-plates",
+    ingredients =
+    {
+      {type="fluid", name="molten-carbonated-iron", amount=3},
+      {type="item", name="mold-plate", amount=1},
+    },
+    results =
+	{
+      {type="item", name="steel-plate", amount=1},
+      {type="item", name="mold-plate", amount=1},
+    },
+  },
+  {
+    type = "recipe",
+    name = "metallurgy-steel-plate-2",
+	enabled = false,
+	category = "forge",
+    energy_required = 7,
+    subgroup = "metallurgy-plates",
+    ingredients =
+    {
+      {type="item", name="coal", amount=5},
+	  {type="fluid", name="molten-iron", amount=5},
+      {type="item", name="mold-plate", amount=1},
+    },
+    results =
+	{
+      {type="item", name="steel-plate", amount=1},
+      {type="item", name="mold-plate", amount=1},
+    },
+  },
+}
+)

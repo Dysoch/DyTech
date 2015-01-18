@@ -1,0 +1,38 @@
+data:extend(
+{
+  {
+    type = "recipe",
+    name = "metallurgy-ardite-smelt",
+	enabled = false,
+	category = "blast-furnace",
+    energy_required = 7,
+    ingredients =
+    {
+      {type="item", name="ardite-ore", amount=1},
+	  {type="fluid", name="lava-1800", amount=0.2}
+    },
+    results = 
+	{
+	  {type="fluid", name="molten-ardite", amount=1}
+	}
+  },
+  {
+    type = "recipe",
+    name = "metallurgy-ardite-plate",
+	enabled = false,
+	category = "forge",
+    energy_required = 3.5,
+    subgroup = "metallurgy-plates",
+    ingredients =
+    {
+      {type="fluid", name="molten-ardite", amount=0.6},
+      {type="item", name="mold-plate", amount=1},
+    },
+    results = 
+	{
+      {type="item", name="ardite-plate", amount=1},
+      {type="item", name="mold-plate", amount=1},
+    },
+  },
+}
+)
