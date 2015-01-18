@@ -294,6 +294,8 @@ require("prototypes.metallurgy.machines-molten.entity")
 require("prototypes.metallurgy.machines-molten.item")
 require("prototypes.metallurgy.machines-molten.recipe")
 require("prototypes.metallurgy.machines-molten.tech")
+require("prototypes.metallurgy.molds.item-basic")
+require("prototypes.metallurgy.molds.recipe-basic")
 end
 
 --[[ Mold Crafting (Metallurgy) Check ]]--

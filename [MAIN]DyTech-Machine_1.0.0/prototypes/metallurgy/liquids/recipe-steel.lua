@@ -14,12 +14,13 @@ data:extend(
     },
     results = 
 	{
-	  {type="item", name="molten-carbonated-iron", amount=5}
+	  {type="fluid", name="molten-carbonated-iron", amount=5}
 	}
   },
   {
     type = "recipe",
     name = "metallurgy-steel-plate-1",
+    icon = "__base__/graphics/icons/steel-plate.png",
 	enabled = false,
 	category = "forge",
     energy_required = 7,
@@ -38,6 +39,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-steel-plate-2",
+    icon = "__base__/graphics/icons/steel-plate.png",
 	enabled = false,
 	category = "forge",
     energy_required = 7,

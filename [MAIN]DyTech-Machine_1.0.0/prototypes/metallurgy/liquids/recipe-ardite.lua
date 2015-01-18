@@ -19,6 +19,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-ardite-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/ardite/plate-icon.png",
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,

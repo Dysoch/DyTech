@@ -11,7 +11,13 @@ data:extend(
     type = "item-subgroup",
     name = "metallurgy-fluid-lava",
     group = "metallurgy-3",
-    order = "1"
+    order = "1a"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-lava-cooling",
+    group = "metallurgy-3",
+    order = "1b"
   },
   {
     type = "item-subgroup",

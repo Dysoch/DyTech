@@ -19,6 +19,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-iron-plate",
+    icon = "__base__/graphics/icons/iron-plate.png",
 	enabled = false,
 	category = "forge",
     energy_required = 2,

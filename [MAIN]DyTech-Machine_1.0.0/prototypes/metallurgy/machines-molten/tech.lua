@@ -70,6 +70,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "metallurgy-iron-plate"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "clay"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-plate"
+      },
     },
     prerequisites = {"lava-01", "gold-processing", "tin-processing", "zinc-processing", "silver-processing"},
     unit =

@@ -19,20 +19,20 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-tin-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/tin/plate-icon.png",
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-tin", amount=0.6},
       {type="item", name="mold-plate", amount=1},
     },
-    },
     results = 
 	{
       {type="item", name="tin-plate", amount=1},
       {type="item", name="mold-plate", amount=1},
-    },
     },
   },
 }

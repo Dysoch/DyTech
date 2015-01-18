@@ -19,6 +19,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-copper-plate",
+    icon = "__base__/graphics/icons/copper-plate.png",
 	enabled = false,
 	category = "forge",
     energy_required = 2,

@@ -19,9 +19,11 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-gold-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/gold/plate-icon.png",
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-gold", amount=0.6},

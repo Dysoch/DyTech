@@ -19,9 +19,11 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-tungsten-plate",
+    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/tungsten/plate-icon.png",
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,
+    subgroup = "metallurgy-plates",
     ingredients =
     {
       {type="fluid", name="molten-tungsten", amount=0.6},
