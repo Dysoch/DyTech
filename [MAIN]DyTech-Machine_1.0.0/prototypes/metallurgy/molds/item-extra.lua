@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "mold-gear",
-    icon = "__DyTech-Metallurgy__/graphics/icons/mold-gear.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/metallurgy/icons/mold-gear.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-gear",
@@ -12,7 +12,7 @@ data:extend(
   {
     type = "item",
     name = "mold-wire",
-    icon = "__DyTech-Metallurgy__/graphics/icons/mold-wire.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/metallurgy/icons/mold-wire.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-wire",
@@ -21,7 +21,7 @@ data:extend(
   {
     type = "item",
     name = "mold-circuit",
-    icon = "__DyTech-Metallurgy__/graphics/icons/mold-circuit.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/metallurgy/icons/mold-circuit.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-circuit",
@@ -30,7 +30,7 @@ data:extend(
   {
     type = "item",
     name = "mold-ammo-basic",
-    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-basic.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/metallurgy/icons/mold-ammo-basic.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-ammo-1-basic",
@@ -39,7 +39,7 @@ data:extend(
   {
     type = "item",
     name = "mold-ammo-advanced",
-    icon = "__DyTech-Metallurgy__/graphics/icons/mold-ammo-advanced.png",
+    icon = "__[MAIN]DyTech-Machine__/graphics/metallurgy/icons/mold-ammo-advanced.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "molds",
     order = "mold-ammo-2-advanced",

@@ -223,7 +223,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "raw-material",
     order = "b-q-e",
-    stack_size = 64
+    stack_size = 50
   },
 }
 )

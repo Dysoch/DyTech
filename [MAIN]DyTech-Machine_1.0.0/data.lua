@@ -55,7 +55,7 @@ Tools = true
 -- Here is everything related to metallurgy!
 Metallurgy = true --MASTER SWITCH!
 MoltenMetals = true
-LiquidCrafting = false
+LiquidCrafting = true
 
 --[[ DO NOT TOUCH THE REST BELOW THIS LINE!!!! ]]--
 --------------------------------------------------------------------------------------------
@@ -300,4 +300,13 @@ end
 
 --[[ Mold Crafting (Metallurgy) Check ]]--
 if Metallurgy and MoltenMetals and LiquidCrafting then
+require("prototypes.metallurgy.molds.item-extra")
+require("prototypes.metallurgy.molds.recipe-extra")
+require("prototypes.metallurgy.molds.tech-extra")
+require("prototypes.metallurgy.liquid-crafting.ammo-advanced")
+require("prototypes.metallurgy.liquid-crafting.ammo-basic")
+require("prototypes.metallurgy.liquid-crafting.circuit")
+require("prototypes.metallurgy.liquid-crafting.gears")
+require("prototypes.metallurgy.liquid-crafting.wires")
+
 end

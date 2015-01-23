@@ -15,7 +15,7 @@ data:extend(
     crafting_speed = 1,
     module_slots = 5,
     allowed_effects = {"consumption", "speed", "pollution"},
-    source_inventory_size = 3,
+    source_inventory_size = 5,
     result_inventory_size = 2,
     energy_source =
     {
