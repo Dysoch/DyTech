@@ -61,6 +61,7 @@ local allInOne = {
 
 game.oninit(function()
 	Trees.OnInit()
+	resin = false
 end)
 
 game.onsave(function()
@@ -89,6 +90,11 @@ game.onload(function()
 				glob.trees.seedTypes[seedTypeName] = nil
 			end
 		end
+	end
+	if not resin then
+		game.players[1].insert{name="resin",count=1}
+		game.players[1].print("You have just gotten your first resin to start the mod. DONT LOSE IT! You wont get another from cutting trees!")
+		resin = true
 	end
 end)
 
