@@ -69,8 +69,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	if not Test3 then Test3 = true end
-	if Test1 then error("You need to start a new game to test DyTech War. Sorry about this :D") end
+	if Test3 then error("You were either a Balance Tester or you taken the build from Github. You will need to start a new game!!!!!! :D :D :D :D") end
 	Trees.OnLoad()
 	if game.itemprototypes.charcoal and remote.interfaces["treefarm"] then -- item "charcoal" is available, that means treefarm-mod is probably used
 	debug("Treefarm installed")
