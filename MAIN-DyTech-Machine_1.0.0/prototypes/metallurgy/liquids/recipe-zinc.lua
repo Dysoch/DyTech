@@ -19,7 +19,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-zinc-plate",
-    icon = "__[CORE]DyTech-Core__/graphics/metallurgy/zinc/plate-icon.png",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/zinc/plate-icon.png",
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,

@@ -22,7 +22,7 @@ data:extend(
   {
     type = "recipe",
     name = "mold-crafting-gear-2",
-    icon = "__[CORE]DyTech-Core__/graphics/intermediates/steel-gear-wheel.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/steel-gear-wheel.png",
 	category = "forge",
     energy_required = 0.5,
     enabled = false,
@@ -41,7 +41,7 @@ data:extend(
   {
     type = "recipe",
     name = "mold-crafting-gear-3",
-    icon = "__[CORE]DyTech-Core__/graphics/intermediates/tungsten-gear-wheel.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tungsten-gear-wheel.png",
 	category = "forge",
     energy_required = 0.75,
     enabled = false,

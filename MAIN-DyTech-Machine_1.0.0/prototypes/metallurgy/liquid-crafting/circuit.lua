@@ -66,7 +66,7 @@ data:extend(
   {
     type = "recipe",
     name = "mold-crafting-circuit-4",
-    icon = "__[CORE]DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
 	category = "forge",
     energy_required = 12,
     enabled = false,
