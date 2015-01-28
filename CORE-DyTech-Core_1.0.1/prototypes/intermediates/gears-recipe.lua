@@ -1,3 +1,11 @@
+data.raw["recipe"]["iron-gear-wheel"].enabled = false
+for k, v in pairs(data.raw["recipe"]["lab"].ingredients) do
+	if v[1] == "iron-gear-wheel" then table.remove(data.raw["recipe"]["lab"].ingredients, k) end
+end
+table.insert(data.raw["recipe"]["lab"].ingredients,{"stone-gear-wheel", 5})
+table.insert(data.raw["technology"]["automation"].effects,{type = "unlock-recipe",recipe = "iron-gear-wheel"})
+
+
 data:extend(
 { 
   {

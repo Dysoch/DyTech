@@ -1,0 +1,16 @@
+[spoiler=Changelog]
+
+[i][size=150][b]v1.0.1:[/b][/size][/i]
+[list]
+[*] Bugfixes 
+[list] [*] Fixed Iron Gear Wheels being used in the Lab.
+[*] Fixed Stone Gear Wheel not available from the start.[/list]
+[*] Balancing.
+[list] [*] Changed recipe of Mining Drill Mk 1 to use 78 iron plates instead of 98 [/list]
+[/list]
+
+[i][size=150][b]v1.0.0:[/b][/size][/i]
+[list]
+[*] Official Release.[/list]
+
+[/spoiler]

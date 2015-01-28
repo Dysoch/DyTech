@@ -6,7 +6,7 @@ data:extend(
     enabled = true,
     ingredients =
     {
-      {"iron-plate", 45},
+      {"iron-plate", 25},
 	  {"iron-stick", 30},
 	  {"electronic-circuit", 15}
     },

@@ -61,6 +61,7 @@ local allInOne = {
 
 game.oninit(function()
 	Trees.OnInit()
+	DyTechOnInit = false
 	resin = false
 end)
 
@@ -69,7 +70,6 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	if Test3 then error("You were either a Balance Tester or you taken the build from Github. You will need to start a new game!!!!!! :D :D :D :D") end
 	Trees.OnLoad()
 	if game.itemprototypes.charcoal and remote.interfaces["treefarm"] then -- item "charcoal" is available, that means treefarm-mod is probably used
 	debug("Treefarm installed")
@@ -90,14 +90,17 @@ game.onload(function()
 			end
 		end
 	end
-	if not resin then
-		game.players[1].insert{name="resin",count=1}
-		game.players[1].print("You have just gotten your first resin to start the mod. DONT LOSE IT! You wont get another from cutting trees!")
-		resin = true
-	end
 end)
 
 game.onevent(defines.events.ontick, function(event)
+	if not DyTechOnInit then
+		if resin==false then
+			game.players[1].insert{name="resin",count=1}
+			game.players[1].print("You have just gotten your first resin to start the mod. DONT LOSE IT! You wont get another from cutting trees!")
+			resin = true
+		end
+		DyTechOnInit = true
+	end
 	if glob.compatibility.treefarm == false then
 	if (glob.trees.requestLookUpTableUpdate == true) then
 		createSeedTypeLookUpTable()

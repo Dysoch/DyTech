@@ -1,0 +1,13 @@
+[spoiler=Changelog]
+
+[i][size=150][b]v1.0.1:[/b][/size][/i]
+[list]
+[*] Bugfixes 
+[list] [*] Fixed wrong recipe output of Lava Heater and Cooler [/list]
+[/list]
+
+[i][size=150][b]v1.0.0:[/b][/size][/i]
+[list]
+[*] Official Release.[/list]
+
+[/spoiler]

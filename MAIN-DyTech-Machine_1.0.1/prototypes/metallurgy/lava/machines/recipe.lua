@@ -27,7 +27,7 @@ data:extend(
       {"pipe", 5},
       {"frame-2", 1},
     },
-    result= "liquid-handler"
+    result= "lava-heater"
   },
   {
     type = "recipe",
@@ -41,7 +41,7 @@ data:extend(
       {"pipe", 5},
       {"frame-2", 1},
     },
-    result= "liquid-handler"
+    result= "lava-cooler"
   },
 }
 )
