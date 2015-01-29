@@ -58,7 +58,7 @@ game.onevent(defines.events.ontick, function(event)
 	if not DyTechOnInit then
 		if resin==false then
 			game.players[1].insert{name="resin",count=1}
-			game.players[1].print("You have just gotten your first resin to start the mod. DONT LOSE IT! You wont get another from cutting trees!")
+			game.players[1].print({"oninit-01"})
 			resin = true
 			debug("Gave player resin at start")
 		end
