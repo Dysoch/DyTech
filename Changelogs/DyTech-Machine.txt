@@ -1,4 +1,4 @@
-[spoiler=Changelog]
+[size=200]DyTech-Machine[/size]
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
@@ -14,5 +14,3 @@
 [i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
 [*] Official Release.[/list]
-
-[/spoiler]

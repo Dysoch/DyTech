@@ -1,4 +1,4 @@
-[spoiler=Changelog]
+[size=200]DyTech-Core[/size]
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 NOTE: If you want to use the new treefarm, it is now possible! Added the proper interface from Treefarm Lite!
@@ -6,7 +6,7 @@ NOTE: If you want to use the new treefarm, it is now possible! Added the proper 
 [*] Features:
 [list][*] Added Ukranian Locale (Thx, Vitduo)
 [*] Made scripted text translatable. 
-[*] Added 71 Intermediates to the productivity module list. They can now be used on the 71 intermediates from DyTech. [/list]
+[*] Added 56 Intermediates to the productivity module list. They can now be used on the 56 intermediates from DyTech. [/list]
 [*] Bugfixes :
 [list] [*] Fixed Iron Gear Wheels being used in the Lab.
 [*] Fixed Stone Gear Wheel not available from the start.
@@ -14,10 +14,10 @@ NOTE: If you want to use the new treefarm, it is now possible! Added the proper 
 [*] Fixed issue of Rubber Trees not growing when Treefarm is not installed.
 [/list]
 [*] Balancing:
-[list] [*] Changed recipe of Mining Drill Mk 1 to use 78 iron plates instead of 98. 
+[list] [*] Changed recipe of Mining Drill Mk 1 to use less iron plates: 98 > 78
 [*] Increased Richness of Gemstone Deposit by 18%
 [*] Increased Spawn Rate of Gemstone Deposit by 4%
-[*] Increases Spawn Rate of all DyTech Ores by 10%
+[*] Increased Spawn Rate of all DyTech Ores by 10%
 [*] Reduced Rubber Tree growing time by 21%
 [/list]
 [/list]
@@ -25,5 +25,3 @@ NOTE: If you want to use the new treefarm, it is now possible! Added the proper 
 [i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
 [*] Official Release.[/list]
-
-[/spoiler]
