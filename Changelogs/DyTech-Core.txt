@@ -2,13 +2,17 @@
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
-[*] Bugfixes 
+[*] Features:
+[list][*] Added Ukranian Locale (Thx, Vitduo)
+[*] Made scripted text translatable. 
+[*] Added 71 Intermediates to the productivity module list. They can now be used on the 71 intermediates from DyTech. [/list]
+[*] Bugfixes :
 [list] [*] Fixed Iron Gear Wheels being used in the Lab.
 [*] Fixed Stone Gear Wheel not available from the start.
 [*] (HOPEFULLY) Fixed desync issues with the treefarm interface.
 [/list]
-[*] Balancing.
-[list] [*] Changed recipe of Mining Drill Mk 1 to use 78 iron plates instead of 98 
+[*] Balancing:
+[list] [*] Changed recipe of Mining Drill Mk 1 to use 78 iron plates instead of 98. 
 [*] Increased Richness of Gemstone Deposit by 18%
 [*] Increased Spawn Rate of Gemstone Deposit by 4%
 [*] Increases Spawn Rate of all DyTech Ores by 10%
