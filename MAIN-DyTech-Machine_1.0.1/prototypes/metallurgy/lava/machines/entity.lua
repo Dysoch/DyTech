@@ -122,7 +122,7 @@ data:extend(
       {
         production_type = "input",
         --pipe_covers = pipecoverspictures(),
-        base_area = 100,
+        base_area = 1,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-0.5, 1.5} }}
       },
@@ -212,7 +212,7 @@ data:extend(
       {
         production_type = "input",
         --pipe_covers = pipecoverspictures(),
-        base_area = 100,
+        base_area = 1,
         base_level = -1,
         pipe_connections = {{ type="input", position = {-0.5, 1.5} }}
       },

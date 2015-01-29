@@ -3,7 +3,7 @@ require "scripts/trees"
 
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 function debug(str)
@@ -60,6 +60,7 @@ game.onevent(defines.events.ontick, function(event)
 			game.players[1].insert{name="resin",count=1}
 			game.players[1].print("You have just gotten your first resin to start the mod. DONT LOSE IT! You wont get another from cutting trees!")
 			resin = true
+			debug("Gave player resin at start")
 		end
 		DyTechOnInit = true
 	end
@@ -75,6 +76,7 @@ game.onevent(defines.events.ontick, function(event)
 			local tmpPos = removedEntity.entity.position
 			local newEnt = game.createentity{name = glob.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
 			removedEntity.entity.destroy()
+			debug("Old tree removed, new one placed")
 			local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[seedTypeName].randomGrowingTime + glob.tf.seedPrototypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)
 			local updatedEntry =
 			{
@@ -84,6 +86,7 @@ game.onevent(defines.events.ontick, function(event)
 				nextUpdate = event.tick + deltaTime
 			}
 			Trees.placeSeedIntoList(updatedEntry)
+			debug("seed placed into list (ontick event")
 			end
 		end
 	end end

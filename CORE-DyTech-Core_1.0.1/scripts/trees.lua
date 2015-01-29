@@ -124,20 +124,16 @@ function calcEfficiency(entity, fertilizerApplied)
   local efficiency
 	if glob.tf.seedPrototypes[seedType].efficiency[currentTilename] == nil then
 		return glob.tf.seedPrototypes[seedType].efficiency.other
-		debug("Calculated Tree efficiency for other tiles")
 	else
 		efficiency = glob.tf.seedPrototypes[seedType].efficiency[currentTilename]
 		if fertilizerApplied then
 			return efficiency + glob.tf.seedPrototypes[seedType].fertilizerBoost
-			debug("Calculated Tree efficiency after fertilizer applied")
 		else
 		return efficiency
-		debug("Returned Tree Effeciency")
 		end
 	end
 end
 
 function getboundingbox(position, radius)
 return {position.x-radius, position.y-radius}, {position.x+radius,position.y+radius} 
-debug("Returned Bounding Box")
 end

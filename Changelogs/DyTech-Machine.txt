@@ -2,9 +2,12 @@
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
-[*] Bugfixes 
+[*] Bugfixes: 
 [list] [*] Fixed wrong recipe output of Lava Heater and Cooler 
-[*] Fixed Blast Furnace and Forge bug. This requires a World Reset unfortunately though!
+[*] Fixed Blast Furnace and Forge bug. This does not require a world reset, just some smart loading and saving. Read DyTech News to see how!
+[/list]
+[*] Balancing:
+[list] [*] Reduced max liquid input of Lava Heater and Cooler: 1000 > 10.
 [/list]
 [/list]
 
