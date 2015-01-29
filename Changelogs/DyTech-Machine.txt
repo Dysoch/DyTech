@@ -3,7 +3,9 @@
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Bugfixes 
-[list] [*] Fixed wrong recipe output of Lava Heater and Cooler [/list]
+[list] [*] Fixed wrong recipe output of Lava Heater and Cooler 
+[*] Fixed Blast Furnace and Forge bug. This requires a World Reset unfortunately though!
+[/list]
 [/list]
 
 [i][size=150][b]v1.0.0:[/b][/size][/i]

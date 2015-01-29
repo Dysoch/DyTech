@@ -150,24 +150,24 @@ data:extend(
       sharpness = 1,
       max_probability = 0.08,
       richness_multiplier = 5000,
-      richness_base = 25,
+      richness_base = 29.5,
       size_control_multiplier = 0.06,
       peaks =
       {
         {
-          influence = 0.15,
+          influence = 0.156,
           starting_area_weight_optimal = 0,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.67,
+          influence = 0.6968,
           noise_layer = "gems",
           noise_octaves_difference = -2.7,
           noise_persistence = 0.3
         },
         {
-          influence = 0.003,
+          influence = 0.004,
           noise_layer = "sand",
           noise_octaves_difference = -1.9,
           noise_persistence = 0.4,
@@ -176,7 +176,7 @@ data:extend(
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.0045,
+          influence = 0.00468,
           noise_layer = "sand",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.4,
@@ -185,28 +185,28 @@ data:extend(
           starting_area_weight_max_range = 2,
         },
         {
-          influence = -0.02,
+          influence = -0.0208,
           max_influence = 0,
           noise_layer = "iron-ore",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
         {
-          influence = -0.02,
+          influence = -0.0208,
           max_influence = 0,
           noise_layer = "copper-ore",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
         {
-          influence = -0.02,
+          influence = -0.0208,
           max_influence = 0,
           noise_layer = "coal",
           noise_octaves_difference = -2.3,
           noise_persistence = 0.45,
         },
         {
-          influence = -0.02,
+          influence = -0.0208,
           max_influence = 0,
           noise_layer = "stone",
           noise_octaves_difference = -3,
