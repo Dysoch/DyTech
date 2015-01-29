@@ -46,8 +46,8 @@ local RubberTileEfficiency = {
 	["sand-dark"] = 0.25,
 	["other"] = 0
 }
-local RubberBasicGrowingTime = 7500
-local RubberRandomGrowingTime = 4500
+local RubberBasicGrowingTime = 5925
+local RubberRandomGrowingTime = 3555
 local RubberFertilizerBoost = 1.45
 local allInOne = {
 	["name"] = RubberSeedTypeName,
@@ -71,18 +71,12 @@ end)
 
 game.onload(function()
 	Trees.OnLoad()
-	if game.itemprototypes.charcoal and remote.interfaces["treefarm"] then -- item "charcoal" is available, that means treefarm-mod is probably used
+	if remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm installed")
-        local errorMsg = remote.call("treefarm", "addSeed", allInOne) -- call the interface and store the return value
-            -- the remote function will return nil on success, otherwise a string with the error-msg
-			if errorMsg == nil then -- everything worked fine
-				glob.compatibility.treefarm = true
-			else
-				if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
-			end
-	else -- charcoal isn't available, so treefarm-mod isn't installed
+        local errorMsg = remote.call("treefarm_interface", "addSeed", allInOne)
+			if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
+	elseif not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
-		glob.compatibility.treefarm = false
 		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
 			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
 				glob.trees.isGrowing[seedTypeName] = nil
@@ -101,7 +95,7 @@ game.onevent(defines.events.ontick, function(event)
 		end
 		DyTechOnInit = true
 	end
-	if glob.compatibility.treefarm == false then
+	if not remote.interfaces["treefarm_interface"] then
 	if (glob.trees.requestLookUpTableUpdate == true) then
 		createSeedTypeLookUpTable()
 		glob.trees.requestLookUpTableUpdate = false
@@ -135,6 +129,7 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 local player = game.players[event.playerindex]
+	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
 		local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then
@@ -151,11 +146,12 @@ local player = game.players[event.playerindex]
 			Trees.placeSeedIntoList(entInfo, currentSeedTypeName)
 			return
 		end
-	end
+	end end
 end)
 
 game.onevent(defines.events.onrobotbuiltentity, function(event)
 local player = game.players[event.playerindex]
+	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
 		local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then
@@ -172,7 +168,7 @@ local player = game.players[event.playerindex]
 			Trees.placeSeedIntoList(entInfo, currentSeedTypeName)
 			return
 		end
-	end
+	end end
 end)
 
 remote.addinterface("DyTech-Core",

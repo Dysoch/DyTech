@@ -2,7 +2,6 @@ module("Trees", package.seeall)
 require("util")
 
 function OnInit()
-glob.compatibility={treefarm=false}
 glob.trees = {}
 glob.trees.seedTypes = {RubberTree = {}}
 glob.trees.seedTypes.RubberTree = {
@@ -22,8 +21,8 @@ glob.trees.seedTypes.RubberTree = {
 		["sand"] = 0.25,
 		["sand-dark"] = 0.25,
 		["other"] = 0 },
-	basicGrowingTime = 7500,
-	randomGrowingTime = 4500,
+	basicGrowingTime = 5925,
+	randomGrowingTime = 3555,
 	fertilizerBoost = 1.45 }
 glob.trees.isGrowing = {RubberTree = {}}
 glob.trees.tmpData = {}
@@ -36,8 +35,6 @@ end
 end
 
 function OnLoad()
-	if not glob.compatibility then glob.compatibility={treefarm=false} end
-	if not glob.compatibility.treefarm then glob.compatibility.treefarm=false end
 	if not glob.trees then glob.trees = {} end
 	if not glob.trees.seedTypes then glob.trees.seedTypes = {} end
 	if not glob.trees.seedTypes.RubberTree then glob.trees.seedTypes = {RubberTree = {
