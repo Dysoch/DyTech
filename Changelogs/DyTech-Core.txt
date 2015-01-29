@@ -1,6 +1,7 @@
 [spoiler=Changelog]
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
+NOTE: If you want to use the new treefarm, it is now possible! Added the proper interface from Treefarm Lite!
 [list]
 [*] Features:
 [list][*] Added Ukranian Locale (Thx, Vitduo)
@@ -10,6 +11,7 @@
 [list] [*] Fixed Iron Gear Wheels being used in the Lab.
 [*] Fixed Stone Gear Wheel not available from the start.
 [*] (HOPEFULLY) Fixed desync issues with the treefarm interface.
+[*] Fixed issue of Rubber Trees not growing when Treefarm is not installed.
 [/list]
 [*] Balancing:
 [list] [*] Changed recipe of Mining Drill Mk 1 to use 78 iron plates instead of 98. 

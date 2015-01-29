@@ -3,7 +3,7 @@ require "scripts/trees"
 
 
 --[[Debug Functions]]--
-debug_master = false -- Master switch for debugging, shows most things!
+debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 function debug(str)
@@ -19,45 +19,14 @@ function PlayerPrint(message)
 end
 
 --[[TreeFarm Stuff, for trees!]]--
-local seedTypeLookUpTable = {}
-function createSeedTypeLookUpTable()
-	for seedTypeName, seedType in pairs(glob.trees.seedTypes) do
-		for _, stateName in pairs(seedType.states) do
-			seedTypeLookUpTable[stateName] = seedTypeName
-		end
-	end	
+function populateSeedTypeLookUpTable()
+if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
+  for seedTypeName, seedType in pairs(glob.tf.seedPrototypes) do
+    for _, stateName in pairs(seedType.states) do
+      seedTypeLookUpTable[stateName] = seedTypeName
+    end
+  end
 end
-local RubberSeedTypeName = "RubberTree"
-local RubberGrowingStates = {
-	"rubber-seed",
-	"small-rubber-tree",
-	"medium-rubber-tree",
-	"mature-rubber-tree"
-}
-local RubberOutput = {"resin", 3}
-local RubberTileEfficiency = {
-	["grass"] = 1.00,
-	["grass-medium"] = 1.50,
-	["grass-dry"] = 0.75,
-	["dirt"] = 1.25,
-	["dirt-dark"] = 1.25,
-	["hills"] = 0.80,
-	["sand"] = 0.25,
-	["sand-dark"] = 0.25,
-	["other"] = 0
-}
-local RubberBasicGrowingTime = 5925
-local RubberRandomGrowingTime = 3555
-local RubberFertilizerBoost = 1.45
-local allInOne = {
-	["name"] = RubberSeedTypeName,
-	["states"] = RubberGrowingStates,
-	["output"] = RubberOutput,
-	["efficiency"] = RubberTileEfficiency,
-	["basicGrowingTime"] = RubberBasicGrowingTime,
-	["randomGrowingTime"] = RubberRandomGrowingTime,
-	["fertilizerBoost"] = RubberFertilizerBoost
-}
 
 game.oninit(function()
 	Trees.OnInit()
@@ -73,14 +42,13 @@ game.onload(function()
 	Trees.OnLoad()
 	if remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm installed")
-        local errorMsg = remote.call("treefarm_interface", "addSeed", allInOne)
+        local errorMsg = remote.call("treefarm_interface", "addSeed", Trees.allInOne)
 			if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
 	elseif not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
-		for seedTypeName, seedTypeInfo in pairs (glob.trees.seedTypes) do
-			if game.itemprototypes[seedTypeInfo.states[1]] == nil then
-				glob.trees.isGrowing[seedTypeName] = nil
-				glob.trees.seedTypes[seedTypeName] = nil
+		for seedTypeName, seedPrototype in pairs (glob.tf.seedPrototypes) do
+			if game.itemprototypes[seedPrototype.states[1]] == nil then
+				glob.tf.seedPrototypes[seedTypeName] = nil
 			end
 		end
 	end
@@ -96,55 +64,53 @@ game.onevent(defines.events.ontick, function(event)
 		DyTechOnInit = true
 	end
 	if not remote.interfaces["treefarm_interface"] then
-	if (glob.trees.requestLookUpTableUpdate == true) then
-		createSeedTypeLookUpTable()
-		glob.trees.requestLookUpTableUpdate = false
-	end
-	for _, seedType in pairs(glob.trees.isGrowing) do
-		if (seedType[1] ~= nil) and (event.tick >= seedType[1].nextUpdate)then
-			local removedEntity = table.remove(seedType, 1)
-			local seedTypeName
-			local newState
-			if removedEntity.entity.valid then
-				seedTypeName = seedTypeLookUpTable[removedEntity.entity.name]
-				newState = removedEntity.state + 1
-				if newState <= #glob.trees.seedTypes[seedTypeName].states then
-					local tmpPos = removedEntity.entity.position
-					local newEnt = game.createentity{name = glob.trees.seedTypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
-					removedEntity.entity.destroy()
-					local deltaTime = math.ceil((math.random() * glob.trees.seedTypes[seedTypeName].randomGrowingTime + glob.trees.seedTypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)
-					local updatedEntry =
-					{
-						entity = newEnt,
-						state = newState,
-						efficiency = removedEntity.efficiency,
-						nextUpdate = event.tick + deltaTime
-					}
-					placeSeedIntoList(updatedEntry, seedTypeName)
-				end
+	while ((glob.tf.growing[1] ~= nil) and (event.tick >= glob.tf.growing[1].nextUpdate)) do
+    local removedEntity = table.remove(glob.tf.growing, 1)
+    local seedTypeName
+    local newState
+		if removedEntity.entity.valid then
+			seedTypeName = seedTypeLookUpTable[removedEntity.entity.name]
+			newState = removedEntity.state + 1
+			if newState <= #glob.tf.seedPrototypes[seedTypeName].states then
+			local tmpPos = removedEntity.entity.position
+			local newEnt = game.createentity{name = glob.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
+			removedEntity.entity.destroy()
+			local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[seedTypeName].randomGrowingTime + glob.tf.seedPrototypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)
+			local updatedEntry =
+			{
+				entity = newEnt,
+				state = newState,
+				efficiency = removedEntity.efficiency,
+				nextUpdate = event.tick + deltaTime
+			}
+			Trees.placeSeedIntoList(updatedEntry)
 			end
 		end
-	end	end
+	end end
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
-		local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
+	debug("tree created (player "..tostring(event.playerindex)..")")
+    local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then
-			local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
-			local deltaTime = math.ceil((math.random() * glob.trees.seedTypes[currentSeedTypeName].randomGrowingTime + glob.trees.seedTypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
-			local nextUpdateIn = event.tick + deltaTime
-			local entInfo =
-			{
-				entity = event.createdentity,
-				state = 1,
-				efficiency = newEfficiency,
-				nextUpdate = nextUpdateIn
-			}
-			Trees.placeSeedIntoList(entInfo, currentSeedTypeName)
-			return
+		debug("currentSeedTypeName = nil")
+		local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
+		local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + glob.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
+		local nextUpdateIn = event.tick + deltaTime
+		local entInfo =
+		{
+			entity = event.createdentity,
+			state = 1,
+			efficiency = newEfficiency,
+			nextUpdate = nextUpdateIn
+		}
+		Trees.placeSeedIntoList(entInfo)
+		debug("seed placed into list (player "..tostring(event.playerindex)..")")
+		return
+		debug("return")
 		end
 	end end
 end)
@@ -153,20 +119,24 @@ game.onevent(defines.events.onrobotbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
-		local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
+	debug("tree created (Robot)")
+    local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then
-			local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
-			local deltaTime = math.ceil((math.random() * glob.trees.seedTypes[currentSeedTypeName].randomGrowingTime + glob.trees.seedTypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
-			local nextUpdateIn = event.tick + deltaTime
-			local entInfo =
-			{
-				entity = event.createdentity,
-				state = 1,
-				efficiency = newEfficiency,
-				nextUpdate = nextUpdateIn
-			}
-			Trees.placeSeedIntoList(entInfo, currentSeedTypeName)
-			return
+		debug("currentSeedTypeName ~= nil")
+		local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
+		local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + glob.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
+		local nextUpdateIn = event.tick + deltaTime
+		local entInfo =
+		{
+			entity = event.createdentity,
+			state = 1,
+			efficiency = newEfficiency,
+			nextUpdate = nextUpdateIn
+		}
+		Trees.placeSeedIntoList(entInfo)
+		debug("seed placed into list (Robot)")
+		return
+		debug("return")
 		end
 	end end
 end)
