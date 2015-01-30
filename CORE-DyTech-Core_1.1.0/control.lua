@@ -1,4 +1,5 @@
 require "defines"
+require "scripts/test-functions"
 require "scripts/trees"
 
 
@@ -141,8 +142,19 @@ end)
 
 remote.addinterface("DyTech-Core",
 {  
-  ResetAll = function()
-	game.force.resettechnologies()
-	game.force.resetrecipes()
-  end
+	ResetAll = function()
+		game.force.resettechnologies()
+		game.force.resetrecipes()
+	end,
+  
+	TestTrees = function(pIndex)
+		if pIndex == 0 then
+			for i,_ in ipairs(game.players) do
+				TestFunctions.TestTrees(i)
+			end
+		elseif game.players[pIndex] == nil then return
+		else
+			TestFunctions.TestTrees(pIndex)
+		end
+	end
 })

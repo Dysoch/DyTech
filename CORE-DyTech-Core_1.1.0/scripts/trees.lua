@@ -52,8 +52,8 @@ SulfurTileEfficiency = {
 	["sand-dark"] = 0.25,
 	["other"] = 0
 }
-SulfurBasicGrowingTime = 5925
-SulfurRandomGrowingTime = 3555
+SulfurBasicGrowingTime = 9000
+SulfurRandomGrowingTime = 1500
 SulfurFertilizerBoost = 1.45
 SulfurAllInOne = {
 	["name"] = SulfurSeedTypeName,
@@ -106,8 +106,8 @@ function OnInit()
 		["sand"] = 0.25,
 		["sand-dark"] = 0.25,
 		["other"] = 0 },
-	basicGrowingTime = 7500,
-	randomGrowingTime = 4000,
+	basicGrowingTime = 9000,
+	randomGrowingTime = 1500,
 	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
     glob.tf.growing = {}
@@ -156,8 +156,8 @@ function OnLoad()
 		["sand"] = 0.25,
 		["sand-dark"] = 0.25,
 		["other"] = 0 },
-	basicGrowingTime = 7500,
-	randomGrowingTime = 4000,
+	basicGrowingTime = 9000,
+	randomGrowingTime = 1500,
 	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
     glob.tf.growing = {}

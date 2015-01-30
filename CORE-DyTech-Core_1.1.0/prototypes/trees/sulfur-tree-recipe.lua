@@ -18,7 +18,7 @@ data:extend(
 	{
 	  {"sulfur-wood", 1},
 	},
-    result = "sulfur"
+    result = "sulfur",
 	result_count = 2
   },
 }
