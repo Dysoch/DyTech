@@ -42,6 +42,9 @@ require("prototypes.resources.water-recipe")
 require("prototypes.trees.rubber-tree-entity")
 require("prototypes.trees.rubber-tree-item")
 require("prototypes.trees.rubber-tree-recipe")
+require("prototypes.trees.sulfur-tree-entity")
+require("prototypes.trees.sulfur-tree-item")
+require("prototypes.trees.sulfur-tree-recipe")
 
 -- Items Groups
 require("prototypes.item-group.dytechbundles")

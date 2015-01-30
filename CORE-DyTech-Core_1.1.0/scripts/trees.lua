@@ -1,15 +1,15 @@
 module("Trees", package.seeall)
 require("util")
 
-local RubberSeedTypeName = "RubberTree"
-local RubberGrowingStates = {
+RubberSeedTypeName = "RubberTree"
+RubberGrowingStates = {
 	"rubber-seed",
 	"small-rubber-tree",
 	"medium-rubber-tree",
 	"mature-rubber-tree"
 }
-local RubberOutput = {"resin", 3}
-local RubberTileEfficiency = {
+RubberOutput = {"resin", 3}
+RubberTileEfficiency = {
 	["grass"] = 1.00,
 	["grass-medium"] = 1.50,
 	["grass-dry"] = 0.75,
@@ -20,10 +20,10 @@ local RubberTileEfficiency = {
 	["sand-dark"] = 0.25,
 	["other"] = 0
 }
-local RubberBasicGrowingTime = 5925
-local RubberRandomGrowingTime = 3555
-local RubberFertilizerBoost = 1.45
-local allInOne = {
+RubberBasicGrowingTime = 5925
+RubberRandomGrowingTime = 3555
+RubberFertilizerBoost = 1.45
+RubberAllInOne = {
 	["name"] = RubberSeedTypeName,
 	["states"] = RubberGrowingStates,
 	["output"] = RubberOutput,
@@ -33,10 +33,42 @@ local allInOne = {
 	["fertilizerBoost"] = RubberFertilizerBoost
 }
 
+SulfurSeedTypeName = "SulfurTree"
+SulfurGrowingStates = {
+	"sulfur-seed",
+	"small-sulfur-tree",
+	"medium-sulfur-tree",
+	"mature-sulfur-tree"
+}
+SulfurOutput = {"sulfur", 4}
+SulfurTileEfficiency = {
+	["grass"] = 0.75,
+	["grass-medium"] = 0.50,
+	["grass-dry"] = 1.5,
+	["dirt"] = 1.00,
+	["dirt-dark"] = 1.00,
+	["hills"] = 1.25,
+	["sand"] = 0.25,
+	["sand-dark"] = 0.25,
+	["other"] = 0
+}
+SulfurBasicGrowingTime = 5925
+SulfurRandomGrowingTime = 3555
+SulfurFertilizerBoost = 1.45
+SulfurAllInOne = {
+	["name"] = SulfurSeedTypeName,
+	["states"] = SulfurGrowingStates,
+	["output"] = SulfurOutput,
+	["efficiency"] = SulfurTileEfficiency,
+	["basicGrowingTime"] = SulfurBasicGrowingTime,
+	["randomGrowingTime"] = SulfurRandomGrowingTime,
+	["fertilizerBoost"] = SulfurFertilizerBoost
+}
+
 function OnInit()
     glob.tf = {}
 	glob.tf.seedPrototypes = {}
-	glob.tf.seedPrototypes = {RubberTree = {}}
+	glob.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
 	glob.tf.seedPrototypes.RubberTree = {
 	states = {
 		"rubber-seed",
@@ -57,6 +89,26 @@ function OnInit()
 	basicGrowingTime = 5925,
 	randomGrowingTime = 3555,
 	fertilizerBoost = 1.45 }
+	glob.tf.seedPrototypes.SulfurTree = {
+	states = {
+		"sulfur-seed",
+		"small-sulfur-tree",
+		"medium-sulfur-tree",
+		"mature-sulfur-tree" },
+	output = {"sulfur", 4},
+	efficiency = {
+		["grass"] = 0.75,
+		["grass-medium"] = 0.50,
+		["grass-dry"] = 1.5,
+		["dirt"] = 1.00,
+		["dirt-dark"] = 1.00,
+		["hills"] = 1.25,
+		["sand"] = 0.25,
+		["sand-dark"] = 0.25,
+		["other"] = 0 },
+	basicGrowingTime = 7500,
+	randomGrowingTime = 4000,
+	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
     glob.tf.growing = {}
     glob.tf.playersData = {}
@@ -66,7 +118,7 @@ function OnLoad()
 	if glob.tf == nil then
     glob.tf = {}
 	glob.tf.seedPrototypes = {}
-	glob.tf.seedPrototypes = {RubberTree = {}}
+	glob.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
 	glob.tf.seedPrototypes.RubberTree = {
 	states = {
 		"rubber-seed",
@@ -86,6 +138,26 @@ function OnLoad()
 		["other"] = 0 },
 	basicGrowingTime = 5925,
 	randomGrowingTime = 3555,
+	fertilizerBoost = 1.45 }
+	glob.tf.seedPrototypes.SulfurTree = {
+	states = {
+		"sulfur-seed",
+		"small-sulfur-tree",
+		"medium-sulfur-tree",
+		"mature-sulfur-tree" },
+	output = {"sulfur", 4},
+	efficiency = {
+		["grass"] = 0.75,
+		["grass-medium"] = 0.50,
+		["grass-dry"] = 1.5,
+		["dirt"] = 1.0,
+		["dirt-dark"] = 1.0,
+		["hills"] = 1.25,
+		["sand"] = 0.25,
+		["sand-dark"] = 0.25,
+		["other"] = 0 },
+	basicGrowingTime = 7500,
+	randomGrowingTime = 4000,
 	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
     glob.tf.growing = {}

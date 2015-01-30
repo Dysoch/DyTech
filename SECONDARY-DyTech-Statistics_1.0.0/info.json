@@ -1,0 +1,9 @@
+{
+	"name":"SECONDARY-DyTech-Statistics",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"SECONDARY-DyTech-Statistics",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
+	"description":"This Secondary Module of DyTech holds all Statistics options.",
+	"dependencies": ["base"]
+}

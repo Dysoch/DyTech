@@ -42,8 +42,10 @@ game.onload(function()
 	Trees.OnLoad()
 	if remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm installed")
-        local errorMsg = remote.call("treefarm_interface", "addSeed", Trees.allInOne)
-			if errorMsg ~= "seed type already present" then PlayerPrint(errorMsg) end
+        local errorMsg1 = remote.call("treefarm_interface", "addSeed", Trees.RubberAllInOne)
+        local errorMsg2 = remote.call("treefarm_interface", "addSeed", Trees.SulfurAllInOne)
+			if errorMsg1 ~= "seed type already present" then PlayerPrint(errorMsg) end
+			if errorMsg2 ~= "seed type already present" then PlayerPrint(errorMsg) end
 	elseif not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
 		for seedTypeName, seedPrototype in pairs (glob.tf.seedPrototypes) do
