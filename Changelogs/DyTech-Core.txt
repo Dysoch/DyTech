@@ -1,5 +1,15 @@
 [size=200]DyTech-Core[/size]
 
+[i][size=150][b]v1.1.0:[/b][/size][/i]
+[list]
+[*] Features:
+[list][*] Added new Tree: Sulfur Tree. You will get sulfur from this.
+[*] Added new way to get resin without using Script (no longer prone to errors) [/list]
+[*] Bugfixes :
+[list] [*] Fixed crashing script issue with interface between Treefarm and DyTech
+[*] Fixed issue with Resin inserting into Player 1 (deleted it, and replaced with actual gameplay) [/list]
+[/list]
+
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 NOTE: If you want to use the new treefarm, it is now possible! Added the proper interface from Treefarm Lite!
 [list]

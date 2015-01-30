@@ -6,8 +6,7 @@ data:extend(
     energy_required = 1,
     ingredients = 
 	{
-	  {"rubber-seed", 1},
-	  {"sulfur", 1},
+	  {"sulfur-wood", 1},
 	},
     result = "sulfur-seed"
   },

@@ -30,8 +30,7 @@ end
 
 game.oninit(function()
 	Trees.OnInit()
-	DyTechOnInit = false
-	resin = false
+	--DyTechOnInit = false
 end)
 
 game.onsave(function()
@@ -44,8 +43,8 @@ game.onload(function()
 	debug("Treefarm installed")
         local errorMsg1 = remote.call("treefarm_interface", "addSeed", Trees.RubberAllInOne)
         local errorMsg2 = remote.call("treefarm_interface", "addSeed", Trees.SulfurAllInOne)
-			if errorMsg1 ~= "seed type already present" then PlayerPrint(errorMsg) end
-			if errorMsg2 ~= "seed type already present" then PlayerPrint(errorMsg) end
+			if errorMsg1 ~= "seed type already present" then PlayerPrint(errorMsg1) end
+			if errorMsg2 ~= "seed type already present" then PlayerPrint(errorMsg2) end
 	elseif not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
 		for seedTypeName, seedPrototype in pairs (glob.tf.seedPrototypes) do
@@ -57,15 +56,9 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if not DyTechOnInit then
-		if resin==false then
-			game.players[1].insert{name="resin",count=1}
-			game.players[1].print({"oninit-01"})
-			resin = true
-			debug("Gave player resin at start")
-		end
-		DyTechOnInit = true
-	end
+	--if not DyTechOnInit then
+		--DyTechOnInit = true
+	--end
 	if not remote.interfaces["treefarm_interface"] then
 	while ((glob.tf.growing[1] ~= nil) and (event.tick >= glob.tf.growing[1].nextUpdate)) do
     local removedEntity = table.remove(glob.tf.growing, 1)
