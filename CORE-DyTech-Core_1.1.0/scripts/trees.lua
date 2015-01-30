@@ -40,7 +40,7 @@ SulfurGrowingStates = {
 	"medium-sulfur-tree",
 	"mature-sulfur-tree"
 }
-SulfurOutput = {"sulfur", 4}
+SulfurOutput = {"sulfur-wood", 4}
 SulfurTileEfficiency = {
 	["grass"] = 0.75,
 	["grass-medium"] = 0.50,
@@ -95,7 +95,7 @@ function OnInit()
 		"small-sulfur-tree",
 		"medium-sulfur-tree",
 		"mature-sulfur-tree" },
-	output = {"sulfur", 4},
+	output = {"sulfur-wood", 4},
 	efficiency = {
 		["grass"] = 0.75,
 		["grass-medium"] = 0.50,
@@ -145,7 +145,7 @@ function OnLoad()
 		"small-sulfur-tree",
 		"medium-sulfur-tree",
 		"mature-sulfur-tree" },
-	output = {"sulfur", 4},
+	output = {"sulfur-wood", 4},
 	efficiency = {
 		["grass"] = 0.75,
 		["grass-medium"] = 0.50,

@@ -99,7 +99,7 @@ data:extend(
 	  count = 4,
 	  mining_particle = "wooden-particle",
 	  mining_time = 1,
-	  result = "sulfur"
+	  result = "sulfur-wood"
 	},
 	max_health = 50,
 	collision_box = {{-0.7, -0.8}, {0.7, 0.8}},

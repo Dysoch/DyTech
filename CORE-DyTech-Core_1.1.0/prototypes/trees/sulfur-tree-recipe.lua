@@ -10,5 +10,16 @@ data:extend(
 	},
     result = "sulfur-seed"
   },
+  {
+    type = "recipe",
+    name = "sulfur-from-wood",
+    energy_required = 1,
+    ingredients = 
+	{
+	  {"sulfur-wood", 1},
+	},
+    result = "sulfur"
+	result_count = 2
+  },
 }
 )
