@@ -1,69 +1,24 @@
 module("Trees", package.seeall)
 require("util")
 
-RubberSeedTypeName = "RubberTree"
-RubberGrowingStates = {
-	"rubber-seed",
-	"small-rubber-tree",
-	"medium-rubber-tree",
-	"mature-rubber-tree"
-}
-RubberOutput = {"resin", 3}
-RubberTileEfficiency = {
-	["grass"] = 1.00,
-	["grass-medium"] = 1.50,
-	["grass-dry"] = 0.75,
-	["dirt"] = 1.25,
-	["dirt-dark"] = 1.25,
-	["hills"] = 0.80,
-	["sand"] = 0.25,
-	["sand-dark"] = 0.25,
-	["other"] = 0
-}
-RubberBasicGrowingTime = 5925
-RubberRandomGrowingTime = 3555
-RubberFertilizerBoost = 1.45
-RubberAllInOne = {
-	["name"] = RubberSeedTypeName,
-	["states"] = RubberGrowingStates,
-	["output"] = RubberOutput,
-	["efficiency"] = RubberTileEfficiency,
-	["basicGrowingTime"] = RubberBasicGrowingTime,
-	["randomGrowingTime"] = RubberRandomGrowingTime,
-	["fertilizerBoost"] = RubberFertilizerBoost
-}
-
-SulfurSeedTypeName = "SulfurTree"
-SulfurGrowingStates = {
-	"sulfur-seed",
-	"small-sulfur-tree",
-	"medium-sulfur-tree",
-	"mature-sulfur-tree"
-}
-SulfurOutput = {"sulfur-wood", 4}
-SulfurTileEfficiency = {
-	["grass"] = 0.75,
-	["grass-medium"] = 0.50,
-	["grass-dry"] = 1.5,
-	["dirt"] = 1.00,
-	["dirt-dark"] = 1.00,
-	["hills"] = 1.25,
-	["sand"] = 0.25,
-	["sand-dark"] = 0.25,
-	["other"] = 0
-}
-SulfurBasicGrowingTime = 9000
-SulfurRandomGrowingTime = 1500
-SulfurFertilizerBoost = 1.45
-SulfurAllInOne = {
-	["name"] = SulfurSeedTypeName,
-	["states"] = SulfurGrowingStates,
-	["output"] = SulfurOutput,
-	["efficiency"] = SulfurTileEfficiency,
-	["basicGrowingTime"] = SulfurBasicGrowingTime,
-	["randomGrowingTime"] = SulfurRandomGrowingTime,
-	["fertilizerBoost"] = SulfurFertilizerBoost
-}
+RubberTree = {
+	["name"] = "RubberTree",
+	["states"] = {"rubber-seed", "small-rubber-tree", "medium-rubber-tree", "mature-rubber-tree"},
+	["output"] = {"resin", 3},
+	["efficiency"] = { ["grass"] = 1.00, ["grass-medium"] = 1.50, ["grass-dry"] = 0.75, ["dirt"] = 1.25, ["dirt-dark"] = 1.25, ["hills"] = 0.80, ["sand"] = 0.25, ["sand-dark"] = 0.25, ["other"] = 0 }, 
+	["basicGrowingTime"] = 5925,
+	["randomGrowingTime"] = 3555,
+	["fertilizerBoost"] = 1.45,
+	}
+SulfurTree = {
+	["name"] = "SulfurTree",
+	["states"] = { "sulfur-seed", "small-sulfur-tree", "medium-sulfur-tree", "mature-sulfur-tree" },
+	["output"] = {"sulfur-wood", 4},
+	["efficiency"] = { ["grass"] = 0.75, ["grass-medium"] = 0.50, ["grass-dry"] = 1.5, ["dirt"] = 1.00, ["dirt-dark"] = 1.00, ["hills"] = 1.25, ["sand"] = 0.25, ["sand-dark"] = 0.25, ["other"] = 0 },
+	["basicGrowingTime"] = 9000,
+	["randomGrowingTime"] = 1500,
+	["fertilizerBoost"] = 1.45,
+	}
 
 function OnInit()
     glob.tf = {}

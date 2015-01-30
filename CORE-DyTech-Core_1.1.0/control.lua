@@ -30,7 +30,13 @@ if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
 end
 
 game.oninit(function()
-	Trees.OnInit()
+	if not remote.interfaces["treefarm_interface"] then 
+		debug("Treefarm not installed")
+		Trees.OnInit()
+	elseif remote.interfaces.treefarm_interface and remote.interfaces.treefarm_interface.getSeedTypesData then
+		remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
+		remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
+	end
 	--DyTechOnInit = false
 end)
 
@@ -39,15 +45,9 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	Trees.OnLoad()
-	if remote.interfaces["treefarm_interface"] then 
-	debug("Treefarm installed")
-        local errorMsg1 = remote.call("treefarm_interface", "addSeed", Trees.RubberAllInOne)
-        local errorMsg2 = remote.call("treefarm_interface", "addSeed", Trees.SulfurAllInOne)
-			if errorMsg1 ~= "seed type already present" then PlayerPrint(errorMsg1) end
-			if errorMsg2 ~= "seed type already present" then PlayerPrint(errorMsg2) end
-	elseif not remote.interfaces["treefarm_interface"] then 
+	if not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
+		Trees.OnLoad()
 		for seedTypeName, seedPrototype in pairs (glob.tf.seedPrototypes) do
 			if game.itemprototypes[seedPrototype.states[1]] == nil then
 				glob.tf.seedPrototypes[seedTypeName] = nil
