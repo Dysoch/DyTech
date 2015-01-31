@@ -8,4 +8,5 @@ module("ResearchDatabase")
 research =
 {
 	["automation"]={science=10},
+	["electronics"]={science=15},
 }
