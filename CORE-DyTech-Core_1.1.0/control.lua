@@ -48,10 +48,12 @@ game.onload(function()
 	if not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
 		Trees.OnLoad()
-		for seedTypeName, seedPrototype in pairs (glob.tf.seedPrototypes) do
-			if game.itemprototypes[seedPrototype.states[1]] == nil then
-				glob.tf.seedPrototypes[seedTypeName] = nil
-			end
+	elseif remote.interfaces["treefarm_interface"] and remote.interfaces.treefarm_interface.getSeedTypesData then
+		if not remote.call("treefarm_interface", "readSeed", "RubberTree") then
+			remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
+		end
+		if not remote.call("treefarm_interface", "readSeed", "SulfurTree") then
+			remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
 		end
 	end
 end)
