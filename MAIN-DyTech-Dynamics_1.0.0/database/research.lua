@@ -7,7 +7,8 @@ module("ResearchDatabase")
 
 research =
 {
-	["steel-processing"]={science=20},
+	-- BASE --
+	["steel-processing"]={science=20}, -- A
 	["military"]={science=10},
 	["military-2"]={science=40},
 	["military-3"]={science=200},
@@ -37,7 +38,7 @@ research =
 	["explosive-rocketry"]={science=300},
 	["armor-making"]={science=10},
 	["armor-making-2"]={science=30},
-	["armor-making-3"]={science=200},
+	["armor-making-3"]={science=200}, -- B
 	["power-armor"]={science=300},
 	["power-armor-2"]={science=900},
 	["turrets"]={science=10},
@@ -67,7 +68,7 @@ research =
 	["engine"]={science=100},
 	["electric-engine"]={science=100},
 	["battery"]={science=100},
-	["bullet-damage-1"]={science=50},
+	["bullet-damage-1"]={science=50}, -- C
 	["bullet-damage-2"]={science=200},
 	["bullet-damage-3"]={science=400},
 	["bullet-damage-4"]={science=300},
@@ -97,7 +98,7 @@ research =
 	["follower-robot-count-4"]={science=600},
 	["follower-robot-count-5"]={science=750},
 	["follower-robot-count-6"]={science=800},
-	["follower-robot-count-7"]={science=1200},
+	["follower-robot-count-7"]={science=1200}, -- D
 	["follower-robot-count-8"]={science=1600},
 	["follower-robot-count-9"]={science=2000},
 	["follower-robot-count-10"]={science=2400},
@@ -127,7 +128,7 @@ research =
 	["solar-panel-equipment"]={science=100},
 	["basic-laser-defense-equipment"]={science=300},
 	["basic-electric-discharge-defense-equipment"]={science=400},
-	["fusion-reactor-equipment"]={science=600},
+	["fusion-reactor-equipment"]={science=600}, -- E
 	["basic-exoskeleton-equipment"]={science=150},
 	["gun-turret-damage-1"]={science=100},
 	["gun-turret-damage-2"]={science=200},
@@ -157,7 +158,7 @@ research =
 	["logistic-robot-speed-4"]={science=1000},
 	["logistic-robot-speed-5"]={science=2000},
 	["logistic-robot-storage-1"]={science=600},
-	["logistic-robot-storage-2"]={science=1200},
+	["logistic-robot-storage-2"]={science=1200}, -- F
 	["logistic-robot-storage-3"]={science=1800},
 	["character-logistic-slots-1"]={science=200},
 	["character-logistic-slots-2"]={science=300},
@@ -187,5 +188,6 @@ research =
 	["oil-processing"]={science=100},
 	["advanced-oil-processing"]={science=225},
 	["sulfur-processing"]={science=200},
-	["plastics"]={science=200},
+	["plastics"]={science=200},  -- G
+	-- DYTECH-CORE --
 }
