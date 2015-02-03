@@ -152,11 +152,15 @@ remote.addinterface("DyTech-Core",
 	TestTrees = function(pIndex)
 		if pIndex == 0 then
 			for i,_ in ipairs(game.players) do
-				TestFunctions.TestTrees(i)
+				RemoteCalls.TestTrees(i)
 			end
 		elseif game.players[pIndex] == nil then return
 		else
-			TestFunctions.TestTrees(pIndex)
+			RemoteCalls.TestTrees(pIndex)
 		end
-	end
+	end,
+  
+	Regenerate = function(name)
+		RemoteCalls.Regenerate(name)
+	end,
 })
