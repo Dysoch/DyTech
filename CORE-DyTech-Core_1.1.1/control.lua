@@ -1,5 +1,5 @@
 require "defines"
-require "scripts/test-functions"
+require "scripts/remote-calls"
 require "scripts/trees"
 
 
@@ -162,5 +162,5 @@ remote.addinterface("DyTech-Core",
   
 	Regenerate = function(name)
 		RemoteCalls.Regenerate(name)
-	end,
+	end
 })
