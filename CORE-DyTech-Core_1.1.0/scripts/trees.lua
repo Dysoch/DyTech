@@ -70,7 +70,7 @@ function OnInit()
 end
 
 function OnLoad()
-	if glob.tf == nil then
+	if not glob.tf then
     glob.tf = {}
 	glob.tf.seedPrototypes = {}
 	glob.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
@@ -117,6 +117,29 @@ function OnLoad()
     populateSeedTypeLookUpTable()
     glob.tf.growing = {}
     glob.tf.playersData = {}
+	end
+	if not glob.tf.seedPrototypes.SulfurTree then
+		glob.tf.seedPrototypes.SulfurTree = {
+		states = {
+			"sulfur-seed",
+			"small-sulfur-tree",
+			"medium-sulfur-tree",
+			"mature-sulfur-tree" },
+		output = {"sulfur-wood", 4},
+		efficiency = {
+			["grass"] = 0.75,
+			["grass-medium"] = 0.50,
+			["grass-dry"] = 1.5,
+			["dirt"] = 1.0,
+			["dirt-dark"] = 1.0,
+			["hills"] = 1.25,
+			["sand"] = 0.25,
+			["sand-dark"] = 0.25,
+			["other"] = 0 },
+		basicGrowingTime = 9000,
+		randomGrowingTime = 1500,
+		fertilizerBoost = 1.45 } 
+		populateSeedTypeLookUpTable()
 	end
 end
 
