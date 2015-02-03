@@ -19,7 +19,7 @@ function PlayerPrint(message)
 end
 
 game.oninit(function()
-	glob.science=0
+
 end)
 
 game.onsave(function()
@@ -27,16 +27,29 @@ game.onsave(function()
 end)
 
 game.onload(function()
-	if not glob.science then glob.science=0 end
+
+end)
+
+game.onevent(defines.events.onresearchstarted, function(event)
+if not glob.science then glob.science=0 end
+debug("Research Started ("..tostring(event.research)..")")
+	if ResearchDatabase.research[event.research] then
+		debug("Research found in database")
+		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
+			glob[counter]=glob[counter]+(ingredients/10)
+			debug("Research added to science counter ("..tostring(ingredients/10)..") Total now: "..tostring(glob[counter]))
+		end
+	end
 end)
 
 game.onevent(defines.events.onresearchfinished, function(event)
+if not glob.science then glob.science=0 end
 debug("Research Finished ("..tostring(event.research)..")")
 	if ResearchDatabase.research[event.research] then
 		debug("Research found in database")
 		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
-			glob[counter]=glob[counter]+(1*ingredients)
-			debug("Research added to science counter ("..tostring(ingredients)..") Total now: "..tostring(glob[counter]))
+			glob[counter]=glob[counter]+((ingredients/10)*9)
+			debug("Research added to science counter ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob[counter]))
 		end
 	end
 end)
