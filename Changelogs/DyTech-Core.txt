@@ -1,5 +1,14 @@
 [size=200]DyTech-Core[/size]
 
+[i][size=150][b]v1.1.1:[/b][/size][/i]
+[list]
+[*] Bugfixes :
+[list] [*] Fixed crashing script issue with interface between Treefarm and DyTech (again)
+[*] Fixed Sulfur tree not growing (when Treefarm isnt installed) [/list]
+[*] Balancing:
+[list] [*] Increased Richness of Stone Deposit by 45% (active with base-override!)[/list]
+[/list]
+
 [i][size=150][b]v1.1.0:[/b][/size][/i]
 [list]
 [*] Features:
