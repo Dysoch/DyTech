@@ -8,7 +8,8 @@ data:extend(
     {
       {"steel-plate", 5},
       {"electronic-circuit", 15},
-      {"copper-plate", 5}
+      {"copper-plate", 5},
+      {"flux-capacitor-1", 1}
     },
     result = "solar-panel-secondary"
   },
