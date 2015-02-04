@@ -4,7 +4,7 @@ data:extend(
     type = "recipe",
     name = "raw-wood-centrifuge",
     icon = "__base__/graphics/icons/raw-wood.png",
-	category = "crafting-with-fluid",
+    category = "crafting-with-fluid",
     energy_required = 7.5,
     subgroup = "raw-material",
     ingredients =
@@ -13,7 +13,7 @@ data:extend(
     },
     results = 
     {
-      {type="item", name="wood", amount_min=1, amount_max=5, probability=1},
+      {type="item", name="wood", amount_min=2, amount_max=2, probability=1},
       {type="item", name="sulfur-seed", amount_min=1, amount_max=1, probability=0.075},
       {type="item", name="rubber-seed", amount_min=1, amount_max=2, probability=0.2},
 	}
