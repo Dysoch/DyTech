@@ -124,6 +124,15 @@ data:extend(
       usage_priority = "secondary-input",
       emissions = 0.01
     },
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__base__/sound/electric-furnace.ogg",
+        volume = 0.7
+      },
+      apparent_volume = 1.5
+    },
     animation =
     {
       filename = "__MAIN-DyTech-Machine__/graphics/electric-furnaces/electric-furnace-base-3.png",
