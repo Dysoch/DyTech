@@ -165,7 +165,7 @@ data:extend(
     fast_replaceable_group = "furnace"
   },
   {
-    type = "furnace",
+    type = "assembling-machine",
     name = "lava-cooler",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/machines/liquid-handler.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -186,26 +186,16 @@ data:extend(
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
     crafting_categories = {"lava-cooler"},
-    result_inventory_size = 2,
+    result_inventory_size = 1,
     energy_usage = "180kW",
+    ingredient_count = 2,
     crafting_speed = 0.5,
     source_inventory_size = 2,
     energy_source =
     {
-      type = "burner",
-      effectivity = 1,
-      emissions = 0.02,
-      fuel_inventory_size = 1,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 0.5,
-          position = {0, 0},
-          starting_vertical_speed = 0.05
-        }
-      }
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions = 0.005
     },
     fluid_boxes =
     {
