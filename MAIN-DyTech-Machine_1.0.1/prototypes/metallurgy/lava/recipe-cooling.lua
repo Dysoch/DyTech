@@ -10,7 +10,7 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="lava-800", amount=5},
-	  {type="item",  name="stone",    amount=1}
+	  {type="item",  name="stone",    amount=5}
     },
     results = 
 	{
