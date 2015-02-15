@@ -59,7 +59,7 @@ data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__MAI
 data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
 data.raw["electric-turret"]["laser-turret"].attack_parameters.cooldown = 40
 data.raw["electric-turret"]["laser-turret"].attack_parameters.damage = 8
-data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 15
+data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 17
 
 data:extend(
 {
