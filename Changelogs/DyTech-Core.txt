@@ -2,8 +2,11 @@
 
 [i][size=150][b]v1.1.1:[/b][/size][/i]
 [list]
+[*] Features:
+[list][*] Added Remote Calls to Regenerate Ores and Liquids. Check DyTech News to see how to use it. [/list]
 [*] Bugfixes :
 [list] [*] Fixed crashing script issue with interface between Treefarm and DyTech (again)
+[*] Fixed SeedLookUpTable = nil error.
 [*] Fixed Sulfur tree not growing (when Treefarm isnt installed) [/list]
 [*] Balancing:
 [list] [*] Increased Richness of Stone Deposit by 45% (active with base-override!)[/list]

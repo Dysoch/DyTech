@@ -1,5 +1,6 @@
 require "defines"
 require "database/research"
+require "scripts/rs-functions"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
@@ -19,7 +20,7 @@ function PlayerPrint(message)
 end
 
 game.oninit(function()
-
+glob.Unlocked = {}
 end)
 
 game.onsave(function()
@@ -27,7 +28,7 @@ game.onsave(function()
 end)
 
 game.onload(function()
-
+	if not glob.Unlocked then glob.Unlocked = {} end
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
@@ -65,5 +66,9 @@ remote.addinterface("DyTech-Dynamics",
 		else
 			TestFunctions.TestResearch(pIndex)
 		end
+	end,
+	
+	RSRemote = function(name)
+		RSF.RSRemote(name)
 	end
 })
