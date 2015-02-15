@@ -1,0 +1,9 @@
+{
+	"name":"CORE-DyTech-Script",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"CORE-DyTech-Script",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
+	"description":"DyTech Script Core that holds scripts essential for other mods. This is a modders resource also!",
+	"dependencies": ["base >= 0.11.13"]
+}
