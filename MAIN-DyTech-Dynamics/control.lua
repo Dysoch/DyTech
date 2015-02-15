@@ -69,6 +69,6 @@ remote.addinterface("DyTech-Dynamics",
 	end,
 	
 	RSRemote = function(name)
-		RSF.RSRemote(name)
+		RSF.RSUnlock(name)
 	end
 })

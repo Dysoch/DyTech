@@ -67,6 +67,7 @@ game.onevent(defines.events.ontick, function(event)
     local removedEntity = table.remove(glob.tf.growing, 1)
     local seedTypeName
     local newState
+	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
 		if removedEntity.entity.valid then
 			seedTypeName = seedTypeLookUpTable[removedEntity.entity.name]
 			newState = removedEntity.state + 1
@@ -94,6 +95,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
+	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
 	debug("tree created (player "..tostring(event.playerindex)..")")
     local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then
@@ -120,6 +122,7 @@ game.onevent(defines.events.onrobotbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
+	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
 	debug("tree created (Robot)")
     local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
 		if currentSeedTypeName ~= nil then

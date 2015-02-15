@@ -1,5 +1,15 @@
 [size=200]DyTech-Core[/size]
 
+[i][size=150][b]v1.1.2:[/b][/size][/i]
+[list]
+[*] Features:
+[list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! [/list]
+[*] Bugfixes :
+[list] [*] Fixed SeedLookUpTable = nil error. (AGAIN!!!) [/list]
+[*] Balancing:
+[list] [*] Increased Richness of Stone Deposit by 45% (active with base-override!)[/list]
+[/list]
+
 [i][size=150][b]v1.1.1:[/b][/size][/i]
 [list]
 [*] Features:

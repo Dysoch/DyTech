@@ -1,0 +1,5 @@
+[size=200]DyTech-Config[/size]
+
+[i][size=150][b]v1.0.0:[/b][/size][/i]
+[list]
+[*] Official Release.[/list]
