@@ -1,4 +1,5 @@
 require "defines"
+require "config"
 require "database/research"
 require "scripts/rs-functions"
 require "scripts/test-functions"
@@ -32,8 +33,9 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
-if not glob.science then glob.science=0 end
-debug("Research Started ("..tostring(event.research)..")")
+if Research_System then	
+	if not glob.science then glob.science=0 end
+	debug("Research Started ("..tostring(event.research)..")")
 	if ResearchDatabase.research[event.research] then
 		debug("Research found in database")
 		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
@@ -41,11 +43,13 @@ debug("Research Started ("..tostring(event.research)..")")
 			debug("Research added to science counter ("..tostring(ingredients/10)..") Total now: "..tostring(glob[counter]))
 		end
 	end
+end
 end)
 
 game.onevent(defines.events.onresearchfinished, function(event)
-if not glob.science then glob.science=0 end
-debug("Research Finished ("..tostring(event.research)..")")
+if Research_System then
+	if not glob.science then glob.science=0 end
+	debug("Research Finished ("..tostring(event.research)..")")
 	if ResearchDatabase.research[event.research] then
 		debug("Research found in database")
 		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
@@ -53,6 +57,7 @@ debug("Research Finished ("..tostring(event.research)..")")
 			debug("Research added to science counter ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob[counter]))
 		end
 	end
+end
 end)
 
 remote.addinterface("DyTech-Dynamics",
@@ -69,6 +74,10 @@ remote.addinterface("DyTech-Dynamics",
 	end,
 	
 	RSRemote = function(name)
-		RSF.RSUnlock(name)
+		if Research_System then
+			RSF.RSUnlock(name)
+		else
+			PlayerPrint({"rs-disabled"})
+		end
 	end
 })
