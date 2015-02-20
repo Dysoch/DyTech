@@ -1,6 +1,8 @@
 require "defines"
 require "config"
 require "database/research"
+require "scripts/automatic-research-system"
+require "scripts/manual-research-system"
 require "scripts/rs-functions"
 require "scripts/test-functions"
 
@@ -22,6 +24,8 @@ end
 
 game.oninit(function()
 glob.Unlocked = {}
+glob.RSAutomatic = true
+glob.RSManual = false
 end)
 
 game.onsave(function()
@@ -30,6 +34,14 @@ end)
 
 game.onload(function()
 	if not glob.Unlocked then glob.Unlocked = {} end
+	if not glob.RSAutomatic then glob.RSAutomatic = true end
+	if not glob.RSManual then glob.RSManual = false end
+end)
+
+game.onevent(defines.events.ontick, function(event)
+	if Research_System and glob.RSAutomatic then	
+		ARS.AutomaticRS(event, ARS.dsttime(), ARS.eventtime)
+	end
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
@@ -78,6 +90,18 @@ remote.addinterface("DyTech-Dynamics",
 			RSF.RSUnlock(name)
 		else
 			PlayerPrint({"rs-disabled"})
+		end
+	end,
+	
+	SwitchRS = function()
+		if glob.RSAutomatic==true then
+			glob.RSAutomatic = false
+			glob.RSManual = true
+			PlayerPrint({"rs-manual"})
+		else
+			glob.RSAutomatic = true
+			glob.RSManual = false
+			PlayerPrint({"rs-automatic"})
 		end
 	end
 })
