@@ -12,13 +12,11 @@ function debug(str)
 		PlayerPrint(str)
 	end
 end
-
 function PlayerPrint(message)
 	for _,player in pairs(game.players) do
 		player.print(message)
 	end
 end
-
 --[[TreeFarm Stuff, for trees!]]--
 function populateSeedTypeLookUpTable()
 if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
@@ -28,7 +26,6 @@ if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
     end
   end
 end
-
 game.oninit(function()
 	if not remote.interfaces["treefarm_interface"] then 
 		debug("Treefarm not installed")
@@ -37,13 +34,10 @@ game.oninit(function()
 		remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
 		remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
 	end
-	--DyTechOnInit = false
 end)
-
 game.onsave(function()
 
 end)
-
 game.onload(function()
 	if not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
@@ -57,7 +51,6 @@ game.onload(function()
 		end
 	end
 end)
-
 game.onevent(defines.events.ontick, function(event)
 	--if not DyTechOnInit then
 		--DyTechOnInit = true
@@ -90,7 +83,6 @@ game.onevent(defines.events.ontick, function(event)
 		end
 	end end
 end)
-
 game.onevent(defines.events.onbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
@@ -117,7 +109,6 @@ local player = game.players[event.playerindex]
 		end
 	end end
 end)
-
 game.onevent(defines.events.onrobotbuiltentity, function(event)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
@@ -144,7 +135,6 @@ local player = game.players[event.playerindex]
 		end
 	end end
 end)
-
 remote.addinterface("DyTech-Core",
 {  
 	ResetAll = function()

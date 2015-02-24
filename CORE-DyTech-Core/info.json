@@ -1,9 +1,9 @@
 {
 	"name":"CORE-DyTech-Core",
 	"author":"Dysoch",
-	"version":"1.1.1",
+	"version":"1.1.2",
 	"title":"CORE-DyTech-Core",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"1 Core to rule them all!",
-	"dependencies": ["base >= 0.11.13", "? Treefarm-Lite >= 0.1.2"]
+	"dependencies": ["base >= 0.11.16", "? Treefarm-Lite >= 0.1.2"]
 }
