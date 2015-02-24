@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "centrifuge",
-    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/lava.png",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/centrifuge.png",
     effects =
     {
       {

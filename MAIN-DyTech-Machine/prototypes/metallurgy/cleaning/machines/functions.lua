@@ -6,7 +6,8 @@ return
       filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
       priority = "extra-high",
       width = 44,
-      height = 32
+      height = 32,
+    --  shift = {0.03125, 0.3125}      
     },
     east =
     {
@@ -49,7 +50,8 @@ return
       priority = "extra-high",
       width = 40,
       height = 45,
-      shift = {-0.78125, 0.15625}
+      --shift = {-0.78125, 0.15625}
+      shift = {-0.53125, 0.15625}
     },
     south =
     {
@@ -65,7 +67,8 @@ return
       priority = "extra-high",
       width = 40,
       height = 45,
-      shift = {0.8125, 0}
+      --shift = {0.8125, 0}
+      shift = {0.5625, -0.03125}
     }
   }
 end

@@ -5,7 +5,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "centrifuge",
-    icon = "__base__/graphics/icons/assembling-machine-3.png",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/icons/centrifuge.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "centrifuge"},
     max_health = 300,
@@ -58,13 +58,14 @@ data:extend(
     fast_replaceable_group = "assembling-machine",
     animation =
     {
-      filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
+      filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/metallurgy-machines/centrifuge.png",
       priority = "high",
-      width = 142,
-      height = 113,
-      frame_count = 32,
+      width = 119,
+      height = 99,
+      frame_count = 48,
       line_length = 8,
-      shift = {0.84, -0.09}
+      animation_speed = 0.64,
+      shift = {0.21875, 0.05}
     },
     crafting_categories = {"centrifuge"},
     crafting_speed = 1,
