@@ -22,6 +22,7 @@ data:extend(
 	fast_replaceable_group =  "radar",
     energy_per_sector = "12MJ",
     max_distance_of_sector_revealed = 20,
+    max_distance_of_nearby_sector_revealed = 4,
     energy_per_nearby_scan = "500kJ",
     energy_source =
     {
@@ -71,6 +72,7 @@ data:extend(
 	fast_replaceable_group =  "radar",
     energy_per_sector = "14MJ",
     max_distance_of_sector_revealed = 30,
+    max_distance_of_nearby_sector_revealed = 6,
     energy_per_nearby_scan = "750kJ",
     energy_source =
     {
@@ -120,6 +122,7 @@ data:extend(
 	fast_replaceable_group =  "radar",
     energy_per_sector = "16MJ",
     max_distance_of_sector_revealed = 40,
+    max_distance_of_nearby_sector_revealed = 8,
     energy_per_nearby_scan = "1000kJ",
     energy_source =
     {
@@ -169,6 +172,7 @@ data:extend(
 	fast_replaceable_group =  "radar",
     energy_per_sector = "18MJ",
     max_distance_of_sector_revealed = 50,
+    max_distance_of_nearby_sector_revealed = 10,
     energy_per_nearby_scan = "1250kJ",
     energy_source =
     {
