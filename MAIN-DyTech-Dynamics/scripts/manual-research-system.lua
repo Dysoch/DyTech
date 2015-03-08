@@ -12,6 +12,9 @@ guiNames = {
             mainFlowMRSUnlock5="MRSUnlockGUIFlow5",
 			MRSUnlockButton="MRSUnlockButton",
 			MRSBackButton="MRSBackButton",
+            mainFrame="mainFrameMRSTable",	
+            mainFlow="mainFlowMRSTable",	
+            RSTable="RSTable",		
             }
 mainFrameMRSUnlock = nil -- placeholder
 function showUnlockGUI(PlayerIndex, RecipeName)
@@ -38,26 +41,43 @@ mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock5].add({type="button", name=guiName
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock5].add({type="button", name=guiNames.MRSBackButton, caption={"back"}})
 end
 
-function closeUnlockGUI(PlayerIndex)
+function showUnlockTableGUI(PlayerIndex)
+local player = game.players[PlayerIndex]
+player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
+player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption={"gui-unlock-screen"}})
+adder = player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
+adder.add({type="button", name=guiNames.MRSBackButton, caption={"back"}})
+adder.add({type="table", name=guiNames.RSTable, colspan=BUTTON_COLSPAN})
+	populateGUIUnlockTable()
+end
+
+function closeGUI(PlayerIndex)
 	if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then
 		game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
+	end
+	if game.players[PlayerIndex].gui.center[guiNames.mainFlow] and game.players[PlayerIndex].gui.center[guiNames.mainFlow].valid then
+		game.players[PlayerIndex].gui.center[guiNames.mainFlow].destroy()
 	end
 end
 
 function populateGUIUnlockTable()
 if mainFrame and mainFrame.valid then
-	while #mainFrame[guiNames.parts].childrennames ~= 0 do
-		mainFrame[guiNames.parts][mainFrame[guiNames.parts].childrennames[1]].destroy()
+	while #mainFrame[guiNames.RSTable].childrennames ~= 0 do
+		mainFrame[guiNames.RSTable][mainFrame[guiNames.RSTable].childrennames[1]].destroy()
 	end
 	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	local data = RSDatabase.ItemUnlock[RecipeName]
 		if Research_System_Time_Usage then
-			if glob.science >= data.Points and data.Hour <= remote.call("DyTech-Script", "Timer", "hours") and data.Minute <= remote.call("DyTech-Script", "Timer", "minutes") then
-				mainFrame[guiNames.parts].add({type="button", name=RecipeName, caption={RecipeName}})
+			if glob.science > data.Points and data.Hour < remote.call("DyTech-Script", "Timer", "hours") and data.Minute < remote.call("DyTech-Script", "Timer", "minutes") then
+				mainFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={RecipeName}})
+			else
+				mainFrame[guiNames.RSTable].add({type="label", name="", caption="not enough points!"})
 			end
 		else
-			if glob.science >= data.Points then
-				mainFrame[guiNames.parts].add({type="button", name=RecipeName, caption={RecipeName}})
+			if glob.science > data.Points then
+				mainFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={RecipeName}})
+			else
+				mainFrame[guiNames.RSTable].add({type="label", name="", caption="not enough points!"})
 			end
 		end
 	end

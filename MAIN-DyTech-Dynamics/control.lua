@@ -77,10 +77,10 @@ game.onevent(defines.events.onguiclick, function(event)
 local playerIndex = event.playerindex
 local player = game.players[playerIndex]
 	if event.element.name:find(MRS.guiNames.MRSBackButton) then
-		MRS.closeUnlockGUI(playerIndex)
+		MRS.closeGUI(playerIndex)
 	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(glob.ToUnlock[1])
-		MRS.closeUnlockGUI(playerIndex)
+		MRS.closeGUI(playerIndex)
 	end
 end)
 
@@ -105,6 +105,10 @@ remote.addinterface("DyTech-Dynamics",
 		end
 	end,
 	
+	RSAddScience = function(amount)
+		glob.science = glob.science + amount
+	end,
+	
 	SwitchRS = function()
 		if glob.RSAutomatic==true then
 			glob.RSAutomatic = false
@@ -117,10 +121,9 @@ remote.addinterface("DyTech-Dynamics",
 		end
 	end,
 	
-	MRSTest = function(name, player)
+	MRSTest = function(player)
 		if glob.RSManual and Research_System then
-			MRS.showUnlockGUI(player, name)
-			glob.ToUnlock = {name}
+			MRS.showUnlockTableGUI(player)
 		else
 			PlayerPrint({"rs-disabled"})
 		end
