@@ -43,3 +43,23 @@ function closeUnlockGUI(PlayerIndex)
 		game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
 	end
 end
+
+function populateGUIUnlockTable()
+if mainFrame and mainFrame.valid then
+	while #mainFrame[guiNames.parts].childrennames ~= 0 do
+		mainFrame[guiNames.parts][mainFrame[guiNames.parts].childrennames[1]].destroy()
+	end
+	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
+	local data = RSDatabase.ItemUnlock[RecipeName]
+		if Research_System_Time_Usage then
+			if glob.science >= data.Points and data.Hour <= remote.call("DyTech-Script", "Timer", "hours") and data.Minute <= remote.call("DyTech-Script", "Timer", "minutes") then
+				mainFrame[guiNames.parts].add({type="button", name=RecipeName, caption={RecipeName}})
+			end
+		else
+			if glob.science >= data.Points then
+				mainFrame[guiNames.parts].add({type="button", name=RecipeName, caption={RecipeName}})
+			end
+		end
+	end
+end
+end
