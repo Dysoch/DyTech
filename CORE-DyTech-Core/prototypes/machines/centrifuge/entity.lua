@@ -1,11 +1,11 @@
-require ("prototypes.metallurgy.cleaning.machines.functions")
+require ("prototypes.machines.centrifuge.functions")
 
 data:extend(
 {
   {
     type = "assembling-machine",
     name = "centrifuge",
-    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/icons/centrifuge.png",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/icons/centrifuge.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "centrifuge"},
     max_health = 300,
@@ -58,7 +58,7 @@ data:extend(
     fast_replaceable_group = "assembling-machine",
     animation =
     {
-      filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/metallurgy-machines/centrifuge.png",
+      filename = "__CORE-DyTech-Core__/graphics/metallurgy/entity/metallurgy-machines/centrifuge.png",
       priority = "high",
       width = 119,
       height = 99,
