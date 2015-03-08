@@ -12,7 +12,6 @@ function RSUnlock(Name)
 					glob.Unlocked[Name] = true
 				else
 					PlayerPrint({"not-enough-time"})
-					break
 				end
 			else
 				game.player.force.recipes[info.Name].enabled = true
