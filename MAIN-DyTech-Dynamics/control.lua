@@ -1,6 +1,7 @@
 require "defines"
 require "config"
 require "database/research"
+require "database/research-system"
 require "scripts/automatic-research-system"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
@@ -24,8 +25,10 @@ end
 
 game.oninit(function()
 glob.Unlocked = {}
-glob.RSAutomatic = true
-glob.RSManual = false
+glob.RSAutomatic = false
+glob.RSManual = true
+glob.ToUnlock = {}
+glob.science=0
 end)
 
 game.onsave(function()
@@ -34,8 +37,6 @@ end)
 
 game.onload(function()
 	if not glob.Unlocked then glob.Unlocked = {} end
-	if not glob.RSAutomatic then glob.RSAutomatic = true end
-	if not glob.RSManual then glob.RSManual = false end
 end)
 
 game.onevent(defines.events.ontick, function(event)
@@ -72,6 +73,17 @@ if Research_System then
 end
 end)
 
+game.onevent(defines.events.onguiclick, function(event)
+local playerIndex = event.playerindex
+local player = game.players[playerIndex]
+	if event.element.name:find(MRS.guiNames.MRSBackButton) then
+		MRS.closeUnlockGUI(playerIndex)
+	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
+		RSF.RSUnlock(glob.ToUnlock[1])
+		MRS.closeUnlockGUI(playerIndex)
+	end
+end)
+
 remote.addinterface("DyTech-Dynamics",
 {  
 	TestResearch = function(pIndex)
@@ -102,6 +114,15 @@ remote.addinterface("DyTech-Dynamics",
 			glob.RSAutomatic = true
 			glob.RSManual = false
 			PlayerPrint({"rs-automatic"})
+		end
+	end,
+	
+	MRSTest = function(name, player)
+		if glob.RSManual and Research_System then
+			MRS.showUnlockGUI(player, name)
+			glob.ToUnlock = {name}
+		else
+			PlayerPrint({"rs-disabled"})
 		end
 	end
 })

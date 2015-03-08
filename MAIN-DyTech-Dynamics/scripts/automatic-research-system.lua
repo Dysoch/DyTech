@@ -8,7 +8,7 @@ function dsttime()
 return (dstotalevents*eventtime) end
 
 function AutomaticRS(event, ttime, r) 
-	if event.tick%ttime==(r*1) then RSF.RSUnlock("IronGear") end
-	if event.tick%ttime==(r*2) then RSF.RSUnlock("LongInserter") end
-	if event.tick%ttime==(r*3) then RSF.RSUnlock("Assembling1") end
+	if event.tick%ttime==(r*1) then RSF.RSUnlock("iron-gear-wheel") end
+	if event.tick%ttime==(r*2) then RSF.RSUnlock("long-handed-inserter") end
+	if event.tick%ttime==(r*3) then RSF.RSUnlock("assembling-machine-1") end
 end

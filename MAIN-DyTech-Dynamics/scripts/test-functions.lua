@@ -19,3 +19,4 @@ function TestResearch(index)
   players.insert{name="assembling-machine-3", count=50}
   players.insert{name="lab", count=10}
 end
+
