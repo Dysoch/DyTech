@@ -1,5 +1,18 @@
 [size=200]DyTech-War[/size]
 
+[i][size=150][b]v1.1.0:[/b][/size][/i]
+[list]
+[*] Features:
+[list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! [/list]
+[*] Balancing:
+[list] [*] Changed all Laser Turrets, this is the general rule 
+[list=1] [*] Ruby [T1] - Medium range / Medium DPS / Medium Power Use
+[*] Sapphire [T2] - Medium range / High DPS / High Power Use
+[*] Emerald [T3] - Medium/High range / Medium DPS / Low Power Use
+[*] Topaz [T4] - Sniper -  High range / Medium DPS / High Power Use	[/list]
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
 [*] Official Release.[/list]

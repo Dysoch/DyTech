@@ -1,4 +1,4 @@
-data.raw["projectile"]["laser"].damage = { amount = 4, type = "laser"}
+data.raw["projectile"]["laser"].damage = { amount = 3.75, type = "laser"}
 data.raw["projectile"]["laser"].filename = "__MAIN-DyTech-War__/graphics/lasers/laser-ruby.png"
 data.raw["projectile"]["laser"].speed = 0.10
 
@@ -22,7 +22,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 6, type = "laser"}
+            damage = { amount = 5, type = "laser"}
           }
         }
       }
@@ -56,7 +56,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 8, type = "laser"}
+            damage = { amount = 6.25, type = "laser"}
           }
         }
       }
@@ -90,7 +90,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 7.5, type = "laser"}
           }
         }
       }
@@ -124,7 +124,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 13, type = "laser"}
+            damage = { amount = 8.75, type = "laser"}
           }
         }
       }
@@ -158,7 +158,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 16, type = "laser"}
+            damage = { amount = 10, type = "laser"}
           }
         }
       }
@@ -192,7 +192,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 20, type = "laser"}
+            damage = { amount = 5, type = "laser"}
           }
         }
       }
@@ -226,7 +226,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 23, type = "laser"}
+            damage = { amount = 7.5, type = "laser"}
           }
         }
       }
@@ -260,7 +260,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 25, type = "laser"}
+            damage = { amount = 10, type = "laser"}
           }
         }
       }
@@ -328,7 +328,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 50, type = "laser"}
+            damage = { amount = 37.5, type = "laser"}
           }
         }
       }
@@ -362,7 +362,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 75, type = "laser"}
+            damage = { amount = 50, type = "laser"}
           }
         }
       }

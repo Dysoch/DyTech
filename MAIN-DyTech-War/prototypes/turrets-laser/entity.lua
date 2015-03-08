@@ -51,15 +51,14 @@ laser_turret_extension_topaz =
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = 150
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
-data.raw["electric-turret"]["laser-turret"].energy_consumption = "30kJ"
-data.raw["electric-turret"]["laser-turret"].buffer_capacity = "500kJ"
+data.raw["electric-turret"]["laser-turret"].energy_consumption = "150kJ"
+data.raw["electric-turret"]["laser-turret"].buffer_capacity = "150.75kJ"
 data.raw["electric-turret"]["laser-turret"].input_flow_limit = "25000kW"
-data.raw["electric-turret"]["laser-turret"].drain = "25kW"
+data.raw["electric-turret"]["laser-turret"].drain = "4.5kW"
 data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png"
 data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
-data.raw["electric-turret"]["laser-turret"].attack_parameters.cooldown = 40
-data.raw["electric-turret"]["laser-turret"].attack_parameters.damage = 8
-data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 17
+data.raw["electric-turret"]["laser-turret"].attack_parameters.cooldown = 20
+data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 25
 
 data:extend(
 {
@@ -82,9 +81,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "580kJ",
+      buffer_capacity = "201kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "6kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -122,16 +121,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 30,
-      damage = 6,
+      cooldown = 20,
+      damage = 5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 18,
+      range = 25,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "58kJ",
+      energy_consumption = "200kJ",
       action =
       {
         {
@@ -174,9 +173,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "660kJ",
+      buffer_capacity = "251.25kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "7.5kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -215,15 +214,15 @@ data:extend(
     {
       ammo_category = "electric",
       cooldown = 20,
-      damage = 5,
+      damage = 6.25,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 21,
+      range = 25,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "66kJ",
+      energy_consumption = "250kJ",
       action =
       {
         {
@@ -267,9 +266,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "580kJ",
+      buffer_capacity = "301.5kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "9kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -307,16 +306,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 35,
-      damage = 15,
+      cooldown = 18,
+      damage = 7.5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 22,
+      range = 27.5,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "58kJ",
+      energy_consumption = "300kJ",
       action =
       {
         {
@@ -359,9 +358,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "750kJ",
+      buffer_capacity = "351.75kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "10.5kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -399,16 +398,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 27.5,
-      damage = 12,
+      cooldown = 16,
+      damage = 8.75,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 24,
+      range = 30,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "75kJ",
+      energy_consumption = "350kJ",
       action =
       {
         {
@@ -451,9 +450,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "910kJ",
+      buffer_capacity = "402kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "12kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -491,16 +490,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 15,
-      damage = 8,
+      cooldown = 14,
+      damage = 10,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 26,
+      range = 32.5,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "91kJ",
+      energy_consumption = "400kJ",
       action =
       {
         {
@@ -544,9 +543,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "660kJ",
+      buffer_capacity = "160.8kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "4.8kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -584,16 +583,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 30,
-      damage = 25,
+      cooldown = 18,
+      damage = 5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 28,
+      range = 37.5,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "66kJ",
+      energy_consumption = "160kJ",
       action =
       {
         {
@@ -636,9 +635,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "910kJ",
+      buffer_capacity = "140.7kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "4.2kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -676,16 +675,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 20,
-      damage = 18,
+      cooldown = 18,
+      damage = 7.5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 30,
+      range = 40.63,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "91kJ",
+      energy_consumption = "140kJ",
       action =
       {
         {
@@ -728,9 +727,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "1330kJ",
+      buffer_capacity = "120.6kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "3.6kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -768,16 +767,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 10,
-      damage = 13,
+      cooldown = 18,
+      damage = 10,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 32,
+      range = 43.75,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "133kJ",
+      energy_consumption = "120kJ",
       action =
       {
         {
@@ -821,9 +820,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "6000kJ",
+      buffer_capacity = "351.75kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "10.5kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -861,16 +860,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 75,
+      cooldown = 60,
       damage = 25,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 50,
+      range = 62.5,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "600kJ",
+      energy_consumption = "350kJ",
       action =
       {
         {
@@ -913,9 +912,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "4500kJ",
+      buffer_capacity = "402kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "12kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -953,16 +952,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 90,
-      damage = 50,
+      cooldown = 45,
+      damage = 37.5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 65,
+      range = 75,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "450kJ",
+      energy_consumption = "400kJ",
       action =
       {
         {
@@ -1005,9 +1004,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "3000kJ",
+      buffer_capacity = "452.25kJ",
       input_flow_limit = "25000kW",
-      drain = "25kW",
+      drain = "13.5kW",
       usage_priority = "primary-input",
     },
     folded_animation = (function()
@@ -1045,16 +1044,16 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 105,
-      damage = 75,
+      cooldown = 30,
+      damage = 50,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 80,
+      range = 87.5,
     ammo_type =
     {
       type = "projectile",
       category = "laser-turret",
-      energy_consumption = "300kJ",
+      energy_consumption = "450kJ",
       action =
       {
         {
