@@ -1,7 +1,18 @@
 -- Welcome to the config file of DyTech-Machine!
 -- Here you can switch any (sub)module on or off!
+-- And change anything!
 -- The general rule is: TRUE is on, FALSE is off!
 
+-- Radar Scan Distances --
+-- This is the scan distance of the radars. The active reveal distance is the scan Distance divided by 5
+RadarMk2ScanDistance = 20 --Default=20
+RadarMk3ScanDistance = 30 --Default=30
+RadarMk4ScanDistance = 40 --Default=40
+RadarMk5ScanDistance = 50 --Default=50
+
+
+
+-- SWITCHES!!!! --
 --[[ Pipe Related Things ]]--
 -- Here are all pipe related stuff, such as pipes, pumps and Pumpjacks.
 Pumpjacks = true

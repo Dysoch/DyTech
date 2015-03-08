@@ -1,3 +1,5 @@
+require "config"
+
 data.raw["radar"]["radar"].fast_replaceable_group =  "radar"
 
 data:extend(
@@ -21,7 +23,8 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
     energy_per_sector = "12MJ",
-    max_distance_of_sector_revealed = 20,
+    max_distance_of_sector_revealed = RadarMk2ScanDistance,
+	max_distance_of_nearby_sector_revealed = RadarMk2ScanDistance/5,
     energy_per_nearby_scan = "500kJ",
     energy_source =
     {
@@ -70,7 +73,8 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
     energy_per_sector = "14MJ",
-    max_distance_of_sector_revealed = 30,
+    max_distance_of_sector_revealed = RadarMk3ScanDistance,
+	max_distance_of_nearby_sector_revealed = RadarMk3ScanDistance/5,
     energy_per_nearby_scan = "750kJ",
     energy_source =
     {
@@ -119,7 +123,8 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
     energy_per_sector = "16MJ",
-    max_distance_of_sector_revealed = 40,
+    max_distance_of_sector_revealed = RadarMk4ScanDistance,
+	max_distance_of_nearby_sector_revealed = RadarMk4ScanDistance/5,
     energy_per_nearby_scan = "1000kJ",
     energy_source =
     {
@@ -168,7 +173,8 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
     energy_per_sector = "18MJ",
-    max_distance_of_sector_revealed = 50,
+    max_distance_of_sector_revealed = RadarMk5ScanDistance,
+	max_distance_of_nearby_sector_revealed = RadarMk5ScanDistance/5,
     energy_per_nearby_scan = "1250kJ",
     energy_source =
     {
