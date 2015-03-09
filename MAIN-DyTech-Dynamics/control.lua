@@ -78,9 +78,14 @@ local playerIndex = event.playerindex
 local player = game.players[playerIndex]
 	if event.element.name:find(MRS.guiNames.MRSBackButton) then
 		MRS.closeGUI(playerIndex)
+		RSF.ClearToUnlock()
 	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
-		RSF.RSUnlock(glob.ToUnlock[1])
+		RSF.RSUnlock(glob.ToUnlock)
 		MRS.closeGUI(playerIndex)
+	elseif RSDatabase.ItemUnlock[event.element.name] then
+		glob.ToUnlock = event.element.name
+		MRS.closeGUI(playerIndex)
+		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
 	end
 end)
 

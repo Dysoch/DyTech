@@ -19,7 +19,6 @@ guiNames = {
 mainFrameMRSUnlock = nil -- placeholder
 function showUnlockGUI(PlayerIndex, RecipeName)
 local info = RSDatabase.ItemUnlock[RecipeName]
-glob.ToUnlock = {RecipeName} -- To remember what to unlock!
 game.players[PlayerIndex].gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlowMRSUnlock1})
 game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].add({type="frame", direction="vertical", name=guiNames.mainFrameMRSUnlock, caption={"gui-unlock-screen"}})
 mainFrameMRSUnlock = game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1][guiNames.mainFrameMRSUnlock]
@@ -48,7 +47,7 @@ player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", na
 adder = player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
 adder.add({type="button", name=guiNames.MRSBackButton, caption={"back"}})
 adder.add({type="table", name=guiNames.RSTable, colspan=BUTTON_COLSPAN})
-	populateGUIUnlockTable()
+	populateGUIUnlockTable(PlayerIndex)
 end
 
 function closeGUI(PlayerIndex)
@@ -60,12 +59,14 @@ function closeGUI(PlayerIndex)
 	end
 end
 
-function populateGUIUnlockTable()
-if mainFrame and mainFrame.valid then
-	while #mainFrame[guiNames.RSTable].childrennames ~= 0 do
-		mainFrame[guiNames.RSTable][mainFrame[guiNames.RSTable].childrennames[1]].destroy()
+function populateGUIUnlockTable(PlayerIndex)
+local player = game.players[PlayerIndex]
+local mainFrame = player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
+	for _, name in pairs(mainFrame[guiNames.RSTable].childrennames) do
+		mainFrame[guiNames.RSTable][name].destroy()
 	end
 	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
+	if not glob.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
 		if Research_System_Time_Usage then
 			if glob.science > data.Points and data.Hour < remote.call("DyTech-Script", "Timer", "hours") and data.Minute < remote.call("DyTech-Script", "Timer", "minutes") then
@@ -80,6 +81,5 @@ if mainFrame and mainFrame.valid then
 				mainFrame[guiNames.RSTable].add({type="label", name="", caption="not enough points!"})
 			end
 		end
-	end
-end
+	end end
 end
