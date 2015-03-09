@@ -41,7 +41,7 @@ end)
 
 game.onevent(defines.events.ontick, function(event)
 	if Research_System and glob.RSAutomatic then	
-		ARS.AutomaticRS(event, ARS.dsttime(), ARS.eventtime)
+		ARS.AutomaticRS(event)
 	end
 end)
 
@@ -130,7 +130,7 @@ remote.addinterface("DyTech-Dynamics",
 		if glob.RSManual and Research_System then
 			MRS.showUnlockTableGUI(player)
 		else
-			PlayerPrint({"rs-disabled"})
+			PlayerPrint({"rs-manual-disabled"})
 		end
 	end
 })
