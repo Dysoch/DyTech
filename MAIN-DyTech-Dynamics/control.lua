@@ -24,16 +24,6 @@ function PlayerPrint(message)
 	end
 end
 
-function CreateButton()
-	for _,player in pairs(game.players) do
-		if Research_System then
-			if not player.gui.top["ResearchButton"] then
-				player.gui.top.add({type="button", name="ResearchButton", caption={"research-button"}})
-			end
-		end
-	end
-end
-
 game.oninit(function()
 glob.Unlocked = {}
 glob.RSAutomatic = false
@@ -48,14 +38,15 @@ end)
 
 game.onload(function()
 	if not glob.Unlocked then glob.Unlocked = {} end
-CreateButton()
 end)
 
 game.onevent(defines.events.ontick, function(event)
 	if Research_System and glob.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
-	
+	if game.tick%300==1 and Research_System then
+		RSF.CreateButton()
+	end
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
@@ -99,8 +90,8 @@ local player = game.players[playerIndex]
 		MRS.showMainGUI(playerIndex)
 	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(glob.ToUnlock)
-		MRS.closeGUI(3, playerIndex)
-		MRS.showUnlockTableGUI(playerIndex)
+		MRS.closeGUI(4, playerIndex)
+		MRS.showMainGUI(playerIndex)
 	elseif RSDatabase.ItemUnlock[event.element.name] then
 		glob.ToUnlock = event.element.name
 		MRS.closeGUI(1, playerIndex)
@@ -146,6 +137,11 @@ remote.addinterface("DyTech-Dynamics",
 		else
 			PlayerPrint({"rs-disabled"})
 		end
+	end,
+	
+	DataDump = function()
+		glob.Database = RSDatabase.ItemUnlock
+		game.makefile("DyTech-Research-Database.xls", serpent.block(glob.Database))
 	end,
 	
 	SwitchRS = function()

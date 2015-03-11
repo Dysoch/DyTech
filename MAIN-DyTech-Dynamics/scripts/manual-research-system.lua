@@ -2,6 +2,7 @@ module("MRS", package.seeall)
 require "database/research-system"
 require "scripts/rs-functions"
 require "config"
+require "defines"
  
 guiNames = {
             mainFrameMRSUnlock="MRSUnlockGUIFrame",
@@ -32,7 +33,7 @@ game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].add({type="fra
 mainFrameMRSUnlock = game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1][guiNames.mainFrameMRSUnlock]
 -- Flow 2
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock2})
-mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock2].add({type="label", name="", caption={"name", {RecipeName}}})
+mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock2].add({type="label", name="", caption={"name", {info.Locale.."-name."..RecipeName}}})
 -- Flow 3
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock3})
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock3].add({type="label", name="", caption={"has-science-points", tostring(glob.science)}})
@@ -58,12 +59,16 @@ end
 function showMainGUI(PlayerIndex)
 local player = game.players[PlayerIndex]
 player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainFlow})
-player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption={"gui-unlock-screen"}})
+player.gui.center[guiNames.mainFlow].add({type="frame", direction="vertical", name=guiNames.mainFrame, caption={"gui-unlock-screen-1"}})
 adder = player.gui.center[guiNames.mainFlow][guiNames.mainFrame]
-adder.add({type="button", name=guiNames.Tier1, caption={"Tier1"}})
-adder.add({type="button", name=guiNames.Tier2, caption={"Tier2"}})
-adder.add({type="button", name=guiNames.Tier3, caption={"Tier3"}})
-adder.add({type="button", name=guiNames.Tier4, caption={"Tier4"}})
+RSF.RecipeAvailableToUnlockTier1()
+RSF.RecipeAvailableToUnlockTier2()
+RSF.RecipeAvailableToUnlockTier3()
+RSF.RecipeAvailableToUnlockTier4()
+adder.add({type="button", name=guiNames.Tier1, caption={"Tier1", "(", tostring(glob.RecipeAvailableToUnlock.Tier1), ")"}})
+adder.add({type="button", name=guiNames.Tier2, caption={"Tier2", "(", tostring(glob.RecipeAvailableToUnlock.Tier2), ")"}})
+adder.add({type="button", name=guiNames.Tier3, caption={"Tier3", "(", tostring(glob.RecipeAvailableToUnlock.Tier3), ")"}})
+adder.add({type="button", name=guiNames.Tier4, caption={"Tier4", "(", tostring(glob.RecipeAvailableToUnlock.Tier4), ")"}})
 if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
 adder.add({type="button", name=guiNames.MRSCloseButton, caption={"close"}})
 end
@@ -108,13 +113,13 @@ local mainUnlockFrame = player.gui.center[guiNames.mainUnlockFlow][guiNames.main
 	if not glob.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
 		if Research_System_Time_Usage then
-			if glob.science > data.Points and (data.Minute+data.Hour*60) < (remote.call("DyTech-Script", "Timer", "Minutes")+remote.call("DyTech-Script", "Timer", "hours")*60) and glob.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then
-				mainUnlockFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={RecipeName}})
+			if glob.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Script", "Timer", "Minutes")+(remote.call("DyTech-Script", "Timer", "hours")*60)) and glob.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then 
+				mainUnlockFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={data.Locale.."-name."..RecipeName}})
 				glob.MaxShown = glob.MaxShown + 1
 			end
 		else
 			if glob.science > data.Points and glob.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then
-				mainUnlockFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={RecipeName}})
+				mainUnlockFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={data.Locale.."-name."..RecipeName}})
 				glob.MaxShown = glob.MaxShown + 1
 			end
 		end
