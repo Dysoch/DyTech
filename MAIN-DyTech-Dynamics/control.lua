@@ -8,9 +8,10 @@ require "scripts/rs-functions"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
+debug_GUI = true -- debugger for GUI
 function debug(str)
 	if debug_master then
 		PlayerPrint(str)
@@ -88,19 +89,41 @@ end)
 game.onevent(defines.events.onguiclick, function(event)
 local playerIndex = event.playerindex
 local player = game.players[playerIndex]
-	if event.element.name:find(MRS.guiNames.MRSBackButton) then
-		MRS.closeGUI(3, playerIndex)
+	if event.element.name:find(MRS.guiNames.MRSCloseButton) then
+		MRS.closeGUI(4, playerIndex)
 		RSF.ClearToUnlock()
+	elseif event.element.name:find(MRS.guiNames.MRSBackButton1) then
+		MRS.closeGUI(1, playerIndex)
+	elseif event.element.name:find(MRS.guiNames.MRSBackButton2) then
+		MRS.closeGUI(4, playerIndex)
+		MRS.showMainGUI(playerIndex)
 	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(glob.ToUnlock)
 		MRS.closeGUI(3, playerIndex)
+		MRS.showUnlockTableGUI(playerIndex)
 	elseif RSDatabase.ItemUnlock[event.element.name] then
 		glob.ToUnlock = event.element.name
 		MRS.closeGUI(1, playerIndex)
 		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
 	elseif event.element.name == "ResearchButton" then
-		MRS.closeGUI(3, playerIndex)
-		MRS.showUnlockTableGUI(playerIndex)
+		MRS.closeGUI(4, playerIndex)
+		MRS.showMainGUI(playerIndex)
+	elseif event.element.name == "DebugAddPoints" then
+		glob.science = glob.science + 100000
+		MRS.closeGUI(4, playerIndex)
+		MRS.showMainGUI(playerIndex)
+	elseif event.element.name:find(MRS.guiNames.Tier1) then
+		MRS.showUnlockTableGUI(playerIndex, 1)
+		MRS.closeGUI(2, playerIndex)
+	elseif event.element.name:find(MRS.guiNames.Tier2) then
+		MRS.showUnlockTableGUI(playerIndex, 2)
+		MRS.closeGUI(2, playerIndex)
+	elseif event.element.name:find(MRS.guiNames.Tier3) then
+		MRS.showUnlockTableGUI(playerIndex, 3)
+		MRS.closeGUI(2, playerIndex)
+	elseif event.element.name:find(MRS.guiNames.Tier4) then
+		MRS.showUnlockTableGUI(playerIndex, 4)
+		MRS.closeGUI(2, playerIndex)
 	end
 end)
 
@@ -123,14 +146,6 @@ remote.addinterface("DyTech-Dynamics",
 		else
 			PlayerPrint({"rs-disabled"})
 		end
-	end,
-	
-	RSAddScience = function(amount)
-		glob.science = glob.science + amount
-	end,
-	
-	TestButton = function()
-		CreateButton()
 	end,
 	
 	SwitchRS = function()

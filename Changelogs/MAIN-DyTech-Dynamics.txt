@@ -4,12 +4,17 @@
 [list]
 [*] Features: 
 [list] [*] Button in the screen. Appears after first autosave (or save)!
-[*] Events are more balanced, and all recipes are now tiered.
 [*] The automatic mode now works once every 30 minutes! (to give tiered event a chance!)
 [*] All recipes from the base game are now in the system!
 [*] Unlocking something shows as text what you unlocked!
 [*] Both GUI stay open during search what you want to unlock.
+[*] First GUI (showing table of all to be unlocked recipes) now shows a max of 20 recipes! (configurable in config file!)
+[*] Unlocking something doesnt close GUI anymore (just closes unlock screen and refreshes the table). Just click Close to close both GUI!
+[*] Made 4 new GUI's, one for each Tier (each tier shows 20 recipes of that science pack, tier 1 = red science pack, tier 2 = green science pack, etc)
 [/list]
+[*] Balancing:
+[list] [*] Events are more balanced, and all recipes are now tiered.
+[*] Made time check more stable. (optional feature)[/list]
 [/list]
 
 [i][size=150][b]v1.0.0:[/b][/size][/i]

@@ -9,6 +9,6 @@
 Research_System = true
 
 --[[ Extra Toggles for the Research System ]]-- 
--- This toggle is for having time as a requirement.
--- Meaning: a recipe can only be unlocked after a specific time has passed.
 Research_System_Time_Usage = false
+MaxRecipeShown = 20 --default=20
+MaxRecipesPerRow = 4 --default=4
