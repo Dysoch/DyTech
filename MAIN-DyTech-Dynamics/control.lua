@@ -23,6 +23,16 @@ function PlayerPrint(message)
 	end
 end
 
+function CreateButton()
+	for _,player in pairs(game.players) do
+		if Research_System then
+			if not player.gui.top["ResearchButton"] then
+				player.gui.top.add({type="button", name="ResearchButton", caption={"research-button"}})
+			end
+		end
+	end
+end
+
 game.oninit(function()
 glob.Unlocked = {}
 glob.RSAutomatic = false
@@ -37,12 +47,14 @@ end)
 
 game.onload(function()
 	if not glob.Unlocked then glob.Unlocked = {} end
+CreateButton()
 end)
 
 game.onevent(defines.events.ontick, function(event)
 	if Research_System and glob.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
+	
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
@@ -86,6 +98,8 @@ local player = game.players[playerIndex]
 		glob.ToUnlock = event.element.name
 		MRS.closeGUI(playerIndex)
 		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
+	elseif event.element.name == "ResearchButton" then
+		MRS.showUnlockTableGUI(playerIndex)
 	end
 end)
 
@@ -112,6 +126,10 @@ remote.addinterface("DyTech-Dynamics",
 	
 	RSAddScience = function(amount)
 		glob.science = glob.science + amount
+	end,
+	
+	TestButton = function()
+		CreateButton()
 	end,
 	
 	SwitchRS = function()

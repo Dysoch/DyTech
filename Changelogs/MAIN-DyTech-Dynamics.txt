@@ -1,0 +1,20 @@
+[size=200]DyTech-Dynamics[/size]
+
+[i][size=150][b]v1.0.1:[/b][/size][/i]
+[list]
+[*] Features: 
+[list] [*] Button in the screen. Appears after first autosave!
+[*] Events are more balanced, and all recipes are now tiered.
+[*] The automatic mode now works once every 30 minutes! (to give tiered event a chance!)
+[*] All recipes from the base game are now in the system!
+[/list]
+[/list]
+
+[i][size=150][b]v1.0.0:[/b][/size][/i]
+[list]
+[*] Official Release.
+[*] Features: 
+[list] [*] 25 Events in Research System!
+[*] Research System holds both automatic and manual mode!
+[/list]
+[/list]

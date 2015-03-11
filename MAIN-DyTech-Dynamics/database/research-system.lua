@@ -2,7 +2,9 @@ module("RSDatabase")
 
 --  [""]={},
 
-
+--[[ Explanation ]]--
+-- This is the database that is needed for both the Tech removal code and the system itself.
+-- this happens tiered ingame. Please check Research-Events.txt for more info
 
 
 ItemUnlock =

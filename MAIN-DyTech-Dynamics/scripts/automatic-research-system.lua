@@ -3,8 +3,8 @@ require "scripts/rs-functions"
 require "database/research-system"
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 301 -- This makes 5 minutes before the entire unlock event starts again
-eventtime = 120 -- This makes it that the automatic mode checks 1 event every second
+dstotalevents = 1801 -- This makes 30 minutes before the entire unlock event starts again
+eventtime = 60 -- This makes it that the automatic mode checks 1 event every second
 function dsttime()
 return (dstotalevents*eventtime) end
 
