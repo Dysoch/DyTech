@@ -23,7 +23,7 @@ data:extend(
       {
         {"science-pack-1", 1},
       },
-      time = 100
+      time = 30
     },
     order = "capacitor-1",
   },
@@ -51,7 +51,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 125
+      time = 60
     },
     order = "capacitor-2",
 	upgrade = true
@@ -80,7 +80,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 150
+      time = 120
     },
     order = "capacitor-3",
 	upgrade = true
@@ -110,7 +110,7 @@ data:extend(
         {"science-pack-2", 1},
         {"science-pack-3", 1},
       },
-      time = 200
+      time = 240
     },
     order = "capacitor-4",
 	upgrade = true
