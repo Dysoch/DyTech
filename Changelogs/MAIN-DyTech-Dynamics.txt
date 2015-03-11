@@ -3,10 +3,12 @@
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Features: 
-[list] [*] Button in the screen. Appears after first autosave!
+[list] [*] Button in the screen. Appears after first autosave (or save)!
 [*] Events are more balanced, and all recipes are now tiered.
 [*] The automatic mode now works once every 30 minutes! (to give tiered event a chance!)
 [*] All recipes from the base game are now in the system!
+[*] Unlocking something shows as text what you unlocked!
+[*] Both GUI stay open during search what you want to unlock.
 [/list]
 [/list]
 

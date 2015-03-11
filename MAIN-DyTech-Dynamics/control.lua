@@ -89,16 +89,17 @@ game.onevent(defines.events.onguiclick, function(event)
 local playerIndex = event.playerindex
 local player = game.players[playerIndex]
 	if event.element.name:find(MRS.guiNames.MRSBackButton) then
-		MRS.closeGUI(playerIndex)
+		MRS.closeGUI(3, playerIndex)
 		RSF.ClearToUnlock()
 	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(glob.ToUnlock)
-		MRS.closeGUI(playerIndex)
+		MRS.closeGUI(3, playerIndex)
 	elseif RSDatabase.ItemUnlock[event.element.name] then
 		glob.ToUnlock = event.element.name
-		MRS.closeGUI(playerIndex)
+		MRS.closeGUI(1, playerIndex)
 		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
 	elseif event.element.name == "ResearchButton" then
+		MRS.closeGUI(3, playerIndex)
 		MRS.showUnlockTableGUI(playerIndex)
 	end
 end)

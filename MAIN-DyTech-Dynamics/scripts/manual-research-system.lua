@@ -2,7 +2,7 @@ module("MRS", package.seeall)
 require "database/research-system"
 require "scripts/rs-functions"
 
-local BUTTON_COLSPAN = 6 
+local BUTTON_COLSPAN = 4 
 guiNames = {
             mainFrameMRSUnlock="MRSUnlockGUIFrame",
             mainFlowMRSUnlock1="MRSUnlockGUIFlow1",
@@ -50,12 +50,22 @@ adder.add({type="table", name=guiNames.RSTable, colspan=BUTTON_COLSPAN})
 	populateGUIUnlockTable(PlayerIndex)
 end
 
-function closeGUI(PlayerIndex)
-	if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then
-		game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
-	end
-	if game.players[PlayerIndex].gui.center[guiNames.mainFlow] and game.players[PlayerIndex].gui.center[guiNames.mainFlow].valid then
-		game.players[PlayerIndex].gui.center[guiNames.mainFlow].destroy()
+function closeGUI(number, PlayerIndex)
+	if number==1 then
+		if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
+		end
+	elseif number==2 then
+		if game.players[PlayerIndex].gui.center[guiNames.mainFlow] and game.players[PlayerIndex].gui.center[guiNames.mainFlow].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainFlow].destroy()
+		end
+	elseif number==3 then
+		if game.players[PlayerIndex].gui.center[guiNames.mainFlow] and game.players[PlayerIndex].gui.center[guiNames.mainFlow].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainFlow].destroy()
+		end
+		if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
+		end
 	end
 end
 
