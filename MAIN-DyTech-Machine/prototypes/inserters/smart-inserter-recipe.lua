@@ -56,8 +56,7 @@ data:extend(
     name = "inserter-veryfast",
     ingredients = 
 	{
-      {"fast-inserter", 1},
-      {"fast-inserter", 1},
+      {"fast-inserter", 2},
       {"processing-unit", 2},
 	  {"steel-plate", 10},
     },

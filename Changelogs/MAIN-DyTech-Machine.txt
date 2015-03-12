@@ -4,6 +4,7 @@
 [list]
 [*] Bugfixes: 
 [list] [*] Fixed wrong mold usage of Circuit Liquid Crafting
+[*] Fixed wrong input of Very Fast Inserter Recipe
 [/list]
 [/list]
 
