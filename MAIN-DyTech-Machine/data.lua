@@ -216,9 +216,6 @@ require("prototypes.metallurgy.cleaning.fluid")
 require("prototypes.metallurgy.cleaning.item")
 require("prototypes.metallurgy.cleaning.recipe")
 require("prototypes.metallurgy.cleaning.technology")
-require("prototypes.metallurgy.cleaning.machines.entity")
-require("prototypes.metallurgy.cleaning.machines.item")
-require("prototypes.metallurgy.cleaning.machines.recipe")
 end
 
 --[[ Lava (Metallurgy) Check ]]--

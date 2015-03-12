@@ -97,8 +97,12 @@ local player = game.players[playerIndex]
 		MRS.closeGUI(1, playerIndex)
 		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
 	elseif event.element.name == "ResearchButton" then
-		MRS.closeGUI(4, playerIndex)
-		MRS.showMainGUI(playerIndex)
+		if glob.RSManual then
+			MRS.closeGUI(4, playerIndex)
+			MRS.showMainGUI(playerIndex)
+		else
+			PlayerPrint({"rs-manual-disabled"})
+		end
 	elseif event.element.name == "DebugAddPoints" then
 		glob.science = glob.science + 100000
 		MRS.closeGUI(4, playerIndex)
