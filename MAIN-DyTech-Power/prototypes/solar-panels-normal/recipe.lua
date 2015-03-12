@@ -4,6 +4,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-secondary",
     enabled = false,
+    energy_required = 10,
     ingredients =
     {
       {"steel-plate", 5},
@@ -17,6 +18,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-primary-mk2",
     enabled = false,
+    energy_required = 20,
     ingredients =
     {
       {"solar-panel", 1},
@@ -29,6 +31,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-secondary-mk2",
     enabled = false,
+    energy_required = 20,
     ingredients =
     {
       {"solar-panel-secondary", 1},
@@ -41,6 +44,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-primary-mk3",
     enabled = false,
+    energy_required = 30,
     ingredients =
     {
       {"solar-panel-primary-mk2", 1},
@@ -54,6 +58,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-secondary-mk3",
     enabled = false,
+    energy_required = 30,
     ingredients =
     {
       {"solar-panel-secondary-mk2", 1},
@@ -67,6 +72,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-primary-mk4",
     enabled = false,
+    energy_required = 40,
     ingredients =
     {
       {"solar-panel-primary-mk3", 1},
@@ -80,6 +86,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-secondary-mk4",
     enabled = false,
+    energy_required = 40,
     ingredients =
     {
       {"solar-panel-secondary-mk3", 1},
@@ -93,6 +100,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-primary-mk5",
     enabled = false,
+    energy_required = 50,
     ingredients =
     {
       {"solar-panel-primary-mk4", 1},
@@ -106,6 +114,7 @@ data:extend(
     type = "recipe",
     name = "solar-panel-secondary-mk5",
     enabled = false,
+    energy_required = 50,
     ingredients =
     {
       {"solar-panel-secondary-mk4", 1},
