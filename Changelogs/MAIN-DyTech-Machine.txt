@@ -1,5 +1,12 @@
 [size=200]DyTech-Machine[/size]
 
+[i][size=150][b]v1.0.2:[/b][/size][/i]
+[list]
+[*] Bugfixes: 
+[list] [*] Fixed wrong mold usage of Circuit Liquid Crafting
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Bugfixes: 
