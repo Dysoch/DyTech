@@ -9,6 +9,7 @@
 [list] [*] Fixed wrong mold usage of Circuit Liquid Crafting
 [*] Fixed wrong input of Very Fast Inserter Recipe
 [*] Fixed modules not being able to be inserted in Electric Furnace Mk 2-5
+[*] Fixed radar error that came with Factorio 0.11.17
 [/list]
 [*] Balancing: 
 [list] [*] Longer Underground Super and Extreme Transport Belt! (20,25)>(40,50)

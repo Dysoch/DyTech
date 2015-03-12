@@ -1,6 +1,6 @@
 [size=200]DyTech-War[/size]
 
-[i][size=150][b]v1.1.0:[/b][/size][/i]
+[i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! 
