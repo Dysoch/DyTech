@@ -2,8 +2,8 @@ data:extend(
 {
   {
     type = "technology",
-    name = "centrifuge",
-    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/centrifuge.png",
+    name = "centrifuge-2",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/technology/centrifuge.png",
     effects =
     {
       {
@@ -31,7 +31,7 @@ data:extend(
         recipe = "iron-chunks"
       },
     },
-    prerequisites = {"oil-processing", "water-cleaning"},
+    prerequisites = {"oil-processing", "water-cleaning", "centrifuge"},
     unit =
     {
       count = 150,

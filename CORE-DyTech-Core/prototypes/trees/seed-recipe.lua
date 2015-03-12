@@ -4,9 +4,10 @@ data:extend(
     type = "recipe",
     name = "raw-wood-centrifuge",
     icon = "__base__/graphics/icons/raw-wood.png",
-    category = "crafting-with-fluid",
+    category = "centrifuge",
     energy_required = 7.5,
     subgroup = "raw-material",
+	enabled = false,
     ingredients =
     {
 	  {type="item", name="raw-wood", amount=1},

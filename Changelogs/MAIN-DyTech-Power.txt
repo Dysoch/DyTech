@@ -2,6 +2,8 @@
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
+[*] Features:
+[list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! [/list]
 [*] Balancing:
 [list] [*] Fixed wrong time of solar panel recipes.
 [/list]

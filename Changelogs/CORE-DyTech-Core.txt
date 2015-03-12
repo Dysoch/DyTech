@@ -8,7 +8,8 @@
 [*] Logistic Player Slots
 [*] Bot Speed
 [*] Bot Carry Capacity
-[*] Item Stack Bonus [/list] [/list]
+[*] Item Stack Bonus [/list] 
+[*] Added Centrifuge. Mainly used in Ore Cleaning in DyTech-Machine, but also used for Wood Processing![/list]
 [*] Balancing:
 [list] [*] Balanced Times of Capacitors recipes[/list]
 [/list]
