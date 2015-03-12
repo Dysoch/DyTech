@@ -2,9 +2,16 @@
 
 [i][size=150][b]v1.0.2:[/b][/size][/i]
 [list]
+[*] Features: 
+[list] [*] Longer Underground Basic, Fast and Express Transport Belt! (10,20,30)
+[/list]
 [*] Bugfixes: 
 [list] [*] Fixed wrong mold usage of Circuit Liquid Crafting
 [*] Fixed wrong input of Very Fast Inserter Recipe
+[*] Fixed modules not being able to be inserted in Electric Furnace Mk 2-5
+[/list]
+[*] Balancing: 
+[list] [*] Longer Underground Super and Extreme Transport Belt! (20,25)>(40,50)
 [/list]
 [/list]
 

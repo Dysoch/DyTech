@@ -129,6 +129,9 @@ require("prototypes.transport-belts.entity")
 require("prototypes.transport-belts.item")
 require("prototypes.transport-belts.recipe")
 require("prototypes.transport-belts.tech")
+data.raw["transport-belt-to-ground"]["basic-transport-belt-to-ground"].max_distance = 10
+data.raw["transport-belt-to-ground"]["fast-transport-belt-to-ground"].max_distance = 20
+data.raw["transport-belt-to-ground"]["express-transport-belt-to-ground"].max_distance = 30
 end
 
 --[[ Pipes Check ]]--

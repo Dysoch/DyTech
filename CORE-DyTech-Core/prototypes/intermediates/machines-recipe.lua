@@ -171,8 +171,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"iron-plate", 12},
-      {"stone-brick", 12},
+      {"iron-plate", 6},
+      {"stone-brick", 6},
     },
     result = "blade-2"
   },

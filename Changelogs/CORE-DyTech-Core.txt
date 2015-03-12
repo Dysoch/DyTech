@@ -11,7 +11,9 @@
 [*] Item Stack Bonus [/list] 
 [*] Added Centrifuge. Mainly used in Ore Cleaning in DyTech-Machine, but also used for Wood Processing![/list]
 [*] Balancing:
-[list] [*] Balanced Times of Capacitors recipes[/list]
+[list] [*] Balanced Times of Capacitors recipes
+[*] Balanced Iron Blade Recipe. Requires now half the recources.
+[/list]
 [/list]
 
 [i][size=150][b]v1.1.2:[/b][/size][/i]
