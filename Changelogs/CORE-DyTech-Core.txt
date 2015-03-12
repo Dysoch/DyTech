@@ -1,5 +1,18 @@
 [size=200]DyTech-Core[/size]
 
+[i][size=150][b]v1.1.3:[/b][/size][/i]
+[list]
+[*] Features:
+[list][*] Added more technologies of:
+[list][*] Toolbelt
+[*] Logistic Player Slots
+[*] Bot Speed
+[*] Bot Carry Capacity
+[*] Item Stack Bonus [/list] [/list]
+[*] Balancing:
+[list] [*] Balanced Times of Capacitors recipes[/list]
+[/list]
+
 [i][size=150][b]v1.1.2:[/b][/size][/i]
 [list]
 [*] Features:

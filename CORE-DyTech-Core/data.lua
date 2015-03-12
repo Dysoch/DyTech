@@ -76,6 +76,12 @@ if BaseOverride then
 require("prototypes.base-override")
 end
 
+if Technologies then
+require("prototypes.researches.player")
+require("prototypes.researches.bots")
+require("prototypes.researches.misc")
+end
+
 for k, v in pairs(data.raw.module) do
 	if v.name:find("productivity%-module") and v.limitation then
 		table.insert(v.limitation, "advanced-processing-unit")
