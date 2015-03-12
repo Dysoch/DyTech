@@ -15,6 +15,7 @@ data:extend(
     max_health = 2500,
     repair_speed_modifier = 2,
     corpse = "chitin-wall-remnants",
+	fast_replaceable_group = "wall",
     resistances =
     {
       {
@@ -63,6 +64,7 @@ data:extend(
     max_health = 750,
     repair_speed_modifier = 2,
     corpse = "sandwall-remnants",
+	fast_replaceable_group = "wall",
     resistances =
     {
       {
@@ -111,6 +113,7 @@ data:extend(
     max_health = 5000,
     repair_speed_modifier = 2,
     corpse = "tungsten-wall-remnants",
+	fast_replaceable_group = "wall",
     resistances =
     {
       {

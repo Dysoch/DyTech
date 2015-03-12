@@ -3,7 +3,9 @@
 [i][size=150][b]v1.1.0:[/b][/size][/i]
 [list]
 [*] Features:
-[list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! [/list]
+[list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! 
+[*] Made Walls fast replacable with each other.
+[/list]
 [*] Balancing:
 [list] [*] Changed all Laser Turrets, this is the general rule 
 [list=1] [*] Ruby [T1] - Medium range / Medium DPS / Medium Power Use
