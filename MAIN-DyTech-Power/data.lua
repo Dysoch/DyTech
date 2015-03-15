@@ -30,7 +30,7 @@ if Use_Wattage then
 		require("prototypes.new.solar-panels-normal.recipe")
 		require("prototypes.new.solar-panels-normal.tech")
 	end
-	if NuclearReactors then
+	if Nuclear_Reactors then
 		require("prototypes.new.nuclear-reactors.entity")
 		require("prototypes.new.nuclear-reactors.item")
 		require("prototypes.new.nuclear-reactors.recipe")
