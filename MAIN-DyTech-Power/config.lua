@@ -5,6 +5,10 @@
 -- Toggle between Old DyTech-Power(only steam engines, solars, accu's and boilers) and the new one with a lot more content.
 Use_Wattage = true
 
+--[[Nuclear Reactors Toggle]]--
+-- Don't like the Nuclear Reactors? Here you can switch them off!
+-- NOTE! Use_Wattage should be TRUE if you want to use nuclear reactors!
+
 --[[Boilers Toggle]]--
 -- Don't like the Boilers? Here you can switch them off!
 Boilers = true
