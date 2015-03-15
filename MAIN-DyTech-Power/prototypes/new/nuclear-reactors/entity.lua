@@ -18,8 +18,8 @@ data:extend({
     {
       filename = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/entity/nuclear-reactor.png",
       priority = "high",
-      width = 104,
-      height = 96
+      width = 208,
+      height = 192
     },
     production = "10MW"
   }
