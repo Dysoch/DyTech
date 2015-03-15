@@ -3,12 +3,14 @@ require "config"
 require "database/research"
 require "database/research-system"
 require "scripts/automatic-research-system"
+require "scripts/auto-researcher"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
+require "scripts/functions"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
-debug_master = false -- Master switch for debugging, shows most things!
+debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 debug_GUI = false -- debugger for GUI
@@ -25,11 +27,7 @@ function PlayerPrint(message)
 end
 
 game.oninit(function()
-glob.Unlocked = {}
-glob.RSAutomatic = false
-glob.RSManual = true
-glob.ToUnlock = {}
-glob.science=0
+fs.Startup()
 end)
 
 game.onsave(function()
@@ -46,6 +44,12 @@ game.onevent(defines.events.ontick, function(event)
 	end
 	if game.tick%300==1 and Research_System then
 		RSF.CreateButton()
+	elseif not Research_System then
+		for _,player in pairs(game.players) do 
+			if player.gui.top["ResearchButton"] then
+				player.gui.top["ResearchButton"].destroy() 
+			end
+		end
 	end
 end)
 
@@ -53,27 +57,22 @@ game.onevent(defines.events.onresearchstarted, function(event)
 if Research_System then	
 	if not glob.science then glob.science=0 end
 	debug("Research Started ("..tostring(event.research)..")")
-	if ResearchDatabase.research[event.research] then
-		debug("Research found in database")
-		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
-			glob[counter]=glob[counter]+(ingredients/10)
-			debug("Research added to science counter ("..tostring(ingredients/10)..") Total now: "..tostring(glob[counter]))
-		end
-	end
+	local ingredients = game.forces.player.technologies[event.research].researchunitcount
+	glob.science=glob.science+(ingredients/10)
+	debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.science))
 end
 end)
 
 game.onevent(defines.events.onresearchfinished, function(event)
-if Research_System then
+if Auto_Researcher then
+	AutoResearch.AutoMode()
+end
+if Research_System then	
 	if not glob.science then glob.science=0 end
 	debug("Research Finished ("..tostring(event.research)..")")
-	if ResearchDatabase.research[event.research] then
-		debug("Research found in database")
-		for counter, ingredients in pairs(ResearchDatabase.research[event.research]) do 
-			glob[counter]=glob[counter]+((ingredients/10)*9)
-			debug("Research added to science counter ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob[counter]))
-		end
-	end
+	local ingredients = game.forces.player.technologies[event.research].researchunitcount
+	glob.science=glob.science+((ingredients/10)*9)
+	debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob.science))
 end
 end)
 
@@ -143,9 +142,25 @@ remote.addinterface("DyTech-Dynamics",
 		end
 	end,
 	
-	DataDump = function()
-		glob.Database = RSDatabase.ItemUnlock
-		game.makefile("DyTech-Research-Database.xls", serpent.block(glob.Database))
+	DataDumpDatabase = function()
+		glob.DatabaseNames = {} 
+		glob.DatabaseNumbers = {}
+		for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
+		local data = RSDatabase.ItemUnlock[RecipeName]
+			table.insert(glob.DatabaseNames,RecipeName)
+			table.insert(glob.DatabaseNumbers,data.Points)
+		end
+		game.makefile("DyTech-Research-Database-Base-Names.xls", serpent.block(glob.DatabaseNames))
+		game.makefile("DyTech-Research-Database-Base-Numbers.xls", serpent.block(glob.DatabaseNumbers))
+	end,
+	
+	DataDump = function(GLOBAL)
+		game.makefile("DyTech-DataDump-"..GLOBAL..".txt", serpent.dump(glob.GLOBAL))
+		game.makefile("DyTech-DataDump-SciencePoints-"..tostring(glob.science)..".txt", serpent.block(glob.science))
+	end,
+	
+	ResearchDataDump = function()
+	game.makefile("DyTech-DataDump-Technologies.txt", serpent.block(glob.Technology))
 	end,
 	
 	SwitchRS = function()
@@ -158,6 +173,10 @@ remote.addinterface("DyTech-Dynamics",
 			glob.RSManual = false
 			PlayerPrint({"rs-automatic"})
 		end
+	end,
+	
+	PrintLevel = function(NAME)
+		PlayerPrint(tostring(AutoResearch.getResearchLevel(NAME)))
 	end,
 	
 	MRSTest = function(player)

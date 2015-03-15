@@ -12,3 +12,9 @@ Research_System = true
 Research_System_Time_Usage = false
 MaxRecipeShown = 20 --default=20
 MaxRecipesPerRow = 4 --default=4
+
+--[[ Auto Researcher Toggle]]--
+-- DISABLE THE FOLLOWING LINE IN YOUR OPTIONS MENU! (its under Other)
+-- singleplayer game stops when the research is completed
+-- THIS NEEDS TO BE DISABLED TO FULLY USE THE MOD!
+Auto_Researcher = true

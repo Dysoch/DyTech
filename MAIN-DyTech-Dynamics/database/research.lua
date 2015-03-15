@@ -8,12 +8,12 @@ module("ResearchDatabase")
 research =
 {
 	-- BASE --
+	["automation"]={science=10},
 	["steel-processing"]={science=20}, -- A
 	["military"]={science=10},
 	["military-2"]={science=40},
 	["military-3"]={science=200},
 	["military-4"]={science=750},
-	["automation"]={science=10},
 	["electronics"]={science=30},
 	["automation-2"]={science=80},
 	["automation-3"]={science=300},
