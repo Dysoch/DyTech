@@ -11,7 +11,7 @@ require "scripts/test-functions"
 debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
-debug_GUI = true -- debugger for GUI
+debug_GUI = false -- debugger for GUI
 function debug(str)
 	if debug_master then
 		PlayerPrint(str)

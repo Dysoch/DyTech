@@ -1,0 +1,12 @@
+[item-group-name]
+recycler=Recycler
+metallurgy-1=Metallurgy Molds
+metallurgy-2=Metallurgy Ores and Plates
+metallurgy-3=Metallurgy Fluids
+dytechmodules=DyTech Modules
+dytechmachines=DyTech Machines
+dytechintermediates=DyTech Intermediates
+dytechgem=DyTech Gemstones
+dytechbundles=DyTech Bundles
+dytech-energy=Energy
+inserters-dytech=DyTech Inserters
