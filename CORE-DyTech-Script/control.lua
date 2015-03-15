@@ -1,4 +1,5 @@
 require "defines"
+require "scripts/functions"
 
 --[[Debug Functions]]--
 debug_master = false -- Master switch for debugging, shows most things!
@@ -15,7 +16,7 @@ function PlayerPrint(message)
 end
 
 game.oninit(function()
-
+fs.Startup()
 end)
 
 game.onsave(function()
@@ -27,93 +28,94 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.onplayercrafteditem, function(event)
-	if not glob.CraftedItems then glob.CraftedItems = {} end
-	if not glob.CraftedItems[event.itemstack.name] then
-		glob.CraftedItems[event.itemstack.name] = event.itemstack.count
+	if not glob.Logger.CraftedItems then glob.Logger.CraftedItems = {} end
+	if not glob.Logger.CraftedItems[event.itemstack.name] then
+		glob.Logger.CraftedItems[event.itemstack.name] = event.itemstack.count
 		debug("No CraftedItems ("..tostring(event.itemstack.name)..")")
 	else
-		glob.CraftedItems[event.itemstack.name] = glob.CraftedItems[event.itemstack.name] + event.itemstack.count
+		glob.Logger.CraftedItems[event.itemstack.name] = glob.Logger.CraftedItems[event.itemstack.name] + event.itemstack.count
 		debug("CraftedItems increased by "..tostring(event.itemstack.count).." ("..tostring(event.itemstack.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onplayermineditem, function(event)
-	if not glob.MinedItems then glob.MinedItems = {} end
-	if not glob.MinedItems[event.itemstack.name] then
-		glob.MinedItems[event.itemstack.name] = event.itemstack.count
+	if not glob.Logger.MinedItems then glob.Logger.MinedItems = {} end
+	if not glob.Logger.MinedItems[event.itemstack.name] then
+		glob.Logger.MinedItems[event.itemstack.name] = event.itemstack.count
 		debug("MinedItems not found".." ("..tostring(event.itemstack.name)..")")
 	else
-		glob.MinedItems[event.itemstack.name] = glob.MinedItems[event.itemstack.name] + event.itemstack.count
+		glob.Logger.MinedItems[event.itemstack.name] = glob.Logger.MinedItems[event.itemstack.name] + event.itemstack.count
 		debug("MinedItems increased by "..tostring(event.itemstack.count).." ("..tostring(event.itemstack.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onrobotmined, function(event)
-	if not glob.RobotMinedItems then glob.RobotMinedItems = {} end
-	if not glob.RobotMinedItems[event.itemstack.name] then
-		glob.RobotMinedItems[event.itemstack.name] = event.itemstack.count
+	if not glob.Logger.RobotMinedItems then glob.Logger.RobotMinedItems = {} end
+	if not glob.Logger.RobotMinedItems[event.itemstack.name] then
+		glob.Logger.RobotMinedItems[event.itemstack.name] = event.itemstack.count
 		debug("RobotMinedItems not found".." ("..tostring(event.itemstack.name)..")")
 	else
-		glob.RobotMinedItems[event.itemstack.name] = glob.RobotMinedItems[event.itemstack.name] + event.itemstack.count
+		glob.Logger.RobotMinedItems[event.itemstack.name] = glob.Logger.RobotMinedItems[event.itemstack.name] + event.itemstack.count
 		debug("RobotMinedItems increased by "..tostring(event.itemstack.count).." ("..tostring(event.itemstack.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onentitydied, function(event)
-	if not glob.EntityDied then glob.EntityDied = {} end
-	if not glob.EntityDied[event.entity.name] then
-		glob.EntityDied[event.entity.name] = 1
+	if not glob.Logger.EntityDied then glob.Logger.EntityDied = {} end
+	if not glob.Logger.EntityDied[event.entity.name] then
+		glob.Logger.EntityDied[event.entity.name] = 1
 		debug("EntityDied not found".." ("..tostring(event.entity.name)..")")
 	else
-		glob.EntityDied[event.entity.name] = glob.EntityDied[event.entity.name] + 1
+		glob.Logger.EntityDied[event.entity.name] = glob.Logger.EntityDied[event.entity.name] + 1
 		debug("EntityDied increased by 1".." ("..tostring(event.entity.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onsectorscanned, function(event)
-	if not glob.SectorScanned then 
-		glob.SectorScanned = 1
+	if not glob.Logger.SectorScanned then 
+		glob.Logger.SectorScanned = 1
 	else
-		glob.SectorScanned = glob.SectorScanned + 1
+		glob.Logger.SectorScanned = glob.Logger.SectorScanned + 1
 	end
 end)
 
 game.onevent(defines.events.onmarkedfordeconstruction, function(event)
-	if not glob.MarkedForDeconstruction then glob.MarkedForDeconstruction = {} end
-	if not glob.MarkedForDeconstruction[event.entity.name] then
-		glob.MarkedForDeconstruction[event.entity.name] = 1
+	if not glob.Logger.MarkedForDeconstruction then glob.Logger.MarkedForDeconstruction = {} end
+	if not glob.Logger.MarkedForDeconstruction[event.entity.name] then
+		glob.Logger.MarkedForDeconstruction[event.entity.name] = 1
 		debug("MarkedForDeconstruction not found ("..tostring(event.entity.name)..")")
 	else
-		glob.MarkedForDeconstruction[event.entity.name] = glob.MarkedForDeconstruction[event.entity.name] + 1
+		glob.Logger.MarkedForDeconstruction[event.entity.name] = glob.Logger.MarkedForDeconstruction[event.entity.name] + 1
 		debug("MarkedForDeconstruction increased by 1 ("..tostring(event.entity.name)..")")
 	end	
 end)
 
 game.onevent(defines.events.oncanceleddeconstruction, function(event)
-	if not glob.CanceledDeconstruction then glob.CanceledDeconstruction = {} end
-	if not glob.CanceledDeconstruction[event.entity.name] then
-		glob.CanceledDeconstruction[event.entity.name] = 1
+	if not glob.Logger.CanceledDeconstruction then glob.Logger.CanceledDeconstruction = {} end
+	if not glob.Logger.CanceledDeconstruction[event.entity.name] then
+		glob.Logger.CanceledDeconstruction[event.entity.name] = 1
 		debug("CanceledDeconstruction not found ("..tostring(event.entity.name)..")")
 	else
-		glob.CanceledDeconstruction[event.entity.name] = glob.CanceledDeconstruction[event.entity.name] + 1
+		glob.Logger.CanceledDeconstruction[event.entity.name] = glob.Logger.CanceledDeconstruction[event.entity.name] + 1
 		debug("CanceledDeconstruction increased by 1 ("..tostring(event.entity.name)..")")
 	end	
 end)
 
 game.onevent(defines.events.onpickedupitem, function(event)
-	if not glob.PickedItems then glob.PickedItems = {} end
-	if not glob.PickedItems[event.itemstack.name] then
-		glob.PickedItems[event.itemstack.name] = event.itemstack.count
+	if not glob.Logger.PickedItems then glob.Logger.PickedItems = {} end
+	if not glob.Logger.PickedItems[event.itemstack.name] then
+		glob.Logger.PickedItems[event.itemstack.name] = event.itemstack.count
 		debug("PickedItems not found ("..tostring(event.itemstack.name)..")")
 	else
-		glob.PickedItems[event.itemstack.name] = glob.PickedItems[event.itemstack.name] + event.itemstack.count
+		glob.Logger.PickedItems[event.itemstack.name] = glob.Logger.PickedItems[event.itemstack.name] + event.itemstack.count
 		debug("PickedItems increased by "..tostring(event.itemstack.count).." ("..tostring(event.itemstack.name)..")")
 	end
 end)
 
 game.onevent(defines.events.ontick, function(event)
-	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
+	
 	if event.tick%60==0 then
+		if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
 		glob.timer.seconds = glob.timer.seconds + 1
 	end
 	if glob.timer.seconds==60 then
@@ -127,39 +129,60 @@ game.onevent(defines.events.ontick, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
-	if not glob.BuildEntity then glob.BuildEntity = {} end
-	if glob.BuildEntity[event.createdentity.name] then
-		glob.BuildEntity[event.createdentity.name] = glob.BuildEntity[event.createdentity.name] + 1
+	if not glob.Logger.BuildEntity then glob.Logger.BuildEntity = {} end
+	if glob.Logger.BuildEntity[event.createdentity.name] then
+		glob.Logger.BuildEntity[event.createdentity.name] = glob.Logger.BuildEntity[event.createdentity.name] + 1
 		debug("BuildEntity increased by 1 ("..tostring(event.createdentity.name)..")")
 	else
-		glob.BuildEntity[event.createdentity.name] = 1
+		glob.Logger.BuildEntity[event.createdentity.name] = 1
 		debug("BuildEntity not found ("..tostring(event.createdentity.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onrobotbuiltentity, function(event)
-	if not glob.RobotBuildEntity then glob.RobotBuildEntity = {} end
-	if glob.RobotBuildEntity[event.createdentity.name] then
-		glob.RobotBuildEntity[event.createdentity.name] = glob.RobotBuildEntity[event.createdentity.name] + 1
+	if not glob.Logger.RobotBuildEntity then glob.Logger.RobotBuildEntity = {} end
+	if glob.Logger.RobotBuildEntity[event.createdentity.name] then
+		glob.Logger.RobotBuildEntity[event.createdentity.name] = glob.Logger.RobotBuildEntity[event.createdentity.name] + 1
 		debug("RobotBuildEntity increased by 1 ("..tostring(event.createdentity.name)..")")
 	else
-		glob.RobotBuildEntity[event.createdentity.name] = 1
+		glob.Logger.RobotBuildEntity[event.createdentity.name] = 1
 		debug("RobotBuildEntity not found ("..tostring(event.createdentity.name)..")")
 	end
 end)
 
 game.onevent(defines.events.onchunkgenerated, function(event)
-	if not glob.ChunkGenerated then 
-		glob.ChunkGenerated = 1
+	if not glob.Logger.ChunkGenerated then 
+		glob.Logger.ChunkGenerated = 1
 	else
-		glob.ChunkGenerated = glob.ChunkGenerated + 1
+		glob.Logger.ChunkGenerated = glob.Logger.ChunkGenerated + 1
 	end
-	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(glob.ChunkGenerated)) end
+	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(glob.Logger.ChunkGenerated)) end
+end)
+
+game.onevent(defines.events.onresearchstarted, function(event)
+fs.TechLogger("started", event.research)
+end)
+
+game.onevent(defines.events.onresearchfinished, function(event)
+fs.TechLogger("finished", event.research)
 end)
 
 remote.addinterface("DyTech-Script",
 {
 	Timer = function(name)
 		return glob.timer[name]
+	end,
+	
+	Logger = function()
+		game.makefile("Logger/Technologies.txt", serpent.block(glob.Logger.Technology))
+		game.makefile("Logger/RobotBuildEntity.txt", serpent.block(glob.Logger.RobotBuildEntity))
+		game.makefile("Logger/BuildEntity.txt", serpent.block(glob.Logger.BuildEntity))
+		game.makefile("Logger/PickedItems.txt", serpent.block(glob.Logger.PickedItems))
+		game.makefile("Logger/CanceledDeconstruction.txt", serpent.block(glob.Logger.CanceledDeconstruction))
+		game.makefile("Logger/MarkedForDeconstruction.txt", serpent.block(glob.Logger.MarkedForDeconstruction))
+		game.makefile("Logger/EntityDied.txt", serpent.block(glob.Logger.EntityDied))
+		game.makefile("Logger/RobotMinedItems.txt", serpent.block(glob.Logger.RobotMinedItems))
+		game.makefile("Logger/MinedItems.txt", serpent.block(glob.Logger.MinedItems))
+		game.makefile("Logger/CraftedItems.txt", serpent.block(glob.Logger.CraftedItems))
 	end
 })

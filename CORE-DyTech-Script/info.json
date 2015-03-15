@@ -5,5 +5,5 @@
 	"title":"CORE-DyTech-Script",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"DyTech Script Core that holds scripts essential for other mods. This is a modders resource also!",
-	"dependencies": ["base >= 0.11.13"]
+	"dependencies": ["base >= 0.11.0"]
 }
