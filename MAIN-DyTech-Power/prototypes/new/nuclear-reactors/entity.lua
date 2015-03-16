@@ -1,4 +1,5 @@
-data:extend({
+data:extend(
+{
   {
     type = "solar-panel",
     name = "nuclear-reactor",
@@ -23,4 +24,5 @@ data:extend({
     },
     production = "10MW"
   }
-})
+}
+)
