@@ -115,7 +115,6 @@ end)
 game.onevent(defines.events.ontick, function(event)
 	
 	if event.tick%60==0 then
-		if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
 		glob.timer.seconds = glob.timer.seconds + 1
 	end
 	if glob.timer.seconds==60 then

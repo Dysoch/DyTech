@@ -2,6 +2,7 @@ module("fs", package.seeall)
 
 function Startup()
 glob.Logger = {}
+	if not glob.timer then glob.timer={seconds=0, minutes=0, hours=0} end
 	if not glob.Logger.CraftedItems then glob.Logger.CraftedItems = {} end
 	if not glob.Logger.MinedItems then glob.Logger.MinedItems = {} end
 	if not glob.Logger.RobotMinedItems then glob.Logger.RobotMinedItems = {} end
