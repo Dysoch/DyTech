@@ -65,7 +65,8 @@ data:extend(
       {
 	    {"science-pack-1", 2}, 
 		{"science-pack-2", 1}, 
-		{"science-pack-3", 1}
+		{"science-pack-3", 1},
+		{"alien-science-pack", 1},
       },
       time = 30
     },
@@ -91,7 +92,7 @@ data:extend(
         recipe = "laser-turret-sniper-3"
       },
     },
-    prerequisites = {"laser-turrets-2"},
+    prerequisites = {"laser-turrets-1"},
     unit =
     {
       count = 1000,
@@ -99,7 +100,8 @@ data:extend(
       {
 	    {"science-pack-1", 3}, 
 		{"science-pack-2", 2}, 
-		{"science-pack-3", 1}
+		{"science-pack-3", 1},
+		{"alien-science-pack", 1},
       },
       time = 30
     },

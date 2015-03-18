@@ -35,7 +35,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"laser-turret-3", 1},
+      {"laser-turret", 1},
       {"battery", 2},
       {"gold-plate", 5},
       {"zinc-plate", 5},
@@ -51,7 +51,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"laser-turret-4", 1},
+      {"laser-turret", 1},
       {"battery", 5},
       {"gold-plate", 10},
       {"zinc-plate", 10},
@@ -67,7 +67,7 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"laser-turret-5", 1},
+      {"laser-turret", 1},
       {"battery", 10},
       {"gold-plate", 20},
       {"zinc-plate", 20},
@@ -83,7 +83,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"laser-turret-6", 1},
+      {"laser-turret", 1},
       {"battery", 5},
       {"lead-plate", 10},
       {"tungsten-plate", 10},
@@ -100,7 +100,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"laser-turret-7", 1},
+      {"laser-turret", 1},
       {"battery", 10},
       {"lead-plate", 20},
       {"tungsten-plate", 20},
@@ -117,7 +117,7 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"laser-turret-8", 1},
+      {"laser-turret", 1},
       {"battery", 15},
       {"lead-plate", 40},
       {"tungsten-plate", 40},
@@ -134,6 +134,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
+      {"laser-turret-5", 1},
       {"iron-plate", 20},
       {"electronic-circuit", 20},
       {"steel-gear-wheel", 20},
@@ -149,6 +150,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
+      {"laser-turret-sniper-1", 1},
       {"steel-plate", 40},
       {"advanced-circuit", 20},
       {"steel-gear-wheel", 20},
@@ -164,6 +166,7 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
+      {"laser-turret-sniper-2", 1},
       {"advanced-processing-unit", 20},
       {"tungsten-gear-wheel", 20},
       {"battery", 12},
