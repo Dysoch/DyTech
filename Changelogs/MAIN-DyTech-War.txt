@@ -1,5 +1,15 @@
 [size=200]DyTech-War[/size]
 
+[i][size=150][b]v1.0.2:[/b][/size][/i]
+[list]
+[*] Balancing:
+[list] [*] Changed the base Laser Turret to how it should have been last version (forgot it)
+[/list]
+[*] Bugfixes:
+[list] [*] Fixed error that came with Factorio 0.11.18
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Features:

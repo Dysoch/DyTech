@@ -53,7 +53,7 @@ data:extend(
     },
     consumption = "1200kW",
     friction = 0.05,
-    crash_damage_multiplier = 0.1,
+    energy_per_hit_point = 1,
     light =
     {
       {

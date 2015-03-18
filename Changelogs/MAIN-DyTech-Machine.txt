@@ -1,5 +1,12 @@
 [size=200]DyTech-Machine[/size]
 
+[i][size=150][b]v1.0.3:[/b][/size][/i]
+[list]
+[*] Bugfixes: 
+[list] [*] Fixed Car error that came with Factorio 0.11.18
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.2:[/b][/size][/i]
 [list]
 [*] Features: 

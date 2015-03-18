@@ -10,7 +10,7 @@ require "scripts/functions"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 debug_GUI = false -- debugger for GUI

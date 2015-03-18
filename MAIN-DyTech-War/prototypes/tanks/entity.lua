@@ -62,6 +62,7 @@ data:extend(
     },
     consumption = "750kW",
     friction = 2e-3,
+	energy_per_hit_point = 3,
     light =
     {
       {
