@@ -1,12 +1,42 @@
-data.raw["projectile"]["laser"].damage = { amount = 3.75, type = "laser"}
-data.raw["projectile"]["laser"].filename = "__MAIN-DyTech-War__/graphics/lasers/laser-ruby.png"
-data.raw["projectile"]["laser"].speed = 0.10
-
 data:extend(
 {
   {
     type = "projectile",
     name = "laser-ruby-1",
+    acceleration = 0.005,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 3.75, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-ruby.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.10
+  },
+  {
+    type = "projectile",
+    name = "laser-ruby-2",
     acceleration = 0.005,
     action =
     {
@@ -40,7 +70,7 @@ data:extend(
   },
   {
     type = "projectile",
-    name = "laser-ruby-2",
+    name = "laser-ruby-3",
     acceleration = 0.005,
     action =
     {

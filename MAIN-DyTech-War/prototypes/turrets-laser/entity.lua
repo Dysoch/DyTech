@@ -51,14 +51,51 @@ laser_turret_extension_topaz =
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = 150
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
-data.raw["electric-turret"]["laser-turret"].energy_consumption = "150kJ"
-data.raw["electric-turret"]["laser-turret"].buffer_capacity = "150.75kJ"
-data.raw["electric-turret"]["laser-turret"].input_flow_limit = "25000kW"
-data.raw["electric-turret"]["laser-turret"].drain = "4.5kW"
+data.raw["electric-turret"]["laser-turret"].energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "150.75kJ",
+      input_flow_limit = "25000kW",
+      drain = "4.5kW",
+      usage_priority = "primary-input",
+    }
 data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png"
 data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
-data.raw["electric-turret"]["laser-turret"].attack_parameters.cooldown = 20
-data.raw["electric-turret"]["laser-turret"].attack_parameters.range = 25
+data.raw["electric-turret"]["laser-turret"].attack_parameters =
+    {
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = 25,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "150kJ",
+        action =
+        {
+          {
+            type = "direct",
+            action_delivery =
+            {
+              {
+                type = "projectile",
+                projectile = "laser-ruby-1",
+                starting_speed = 0.28
+              }
+            }
+          }
+        }
+      },
+      sound =
+      {
+        {
+          filename = "__base__/sound/laser.ogg",
+          volume = 0.4
+        }
+      }
+    }
 
 data:extend(
 {
@@ -139,7 +176,7 @@ data:extend(
           {
             {
               type = "projectile",
-              projectile = "laser-ruby-1",
+              projectile = "laser-ruby-2",
               starting_speed = 0.28
             }
           }
@@ -231,7 +268,7 @@ data:extend(
           {
             {
               type = "projectile",
-              projectile = "laser-ruby-2",
+              projectile = "laser-ruby-3",
               starting_speed = 0.28
             }
           }
