@@ -1,9 +1,0 @@
-{
-	"name":"SECONDARY-DyTech-Config",
-	"author":"Dysoch",
-	"version":"1.0.0",
-	"title":"SECONDARY-DyTech-Config",
-	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
-	"description":"This Secondary Module of DyTech holds all config options. This module can be used to change everything that is in the files.",
-	"dependencies": ["CORE-DyTech-Core >= 1.0.1"]
-}
