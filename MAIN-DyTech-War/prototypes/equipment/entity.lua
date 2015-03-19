@@ -28,11 +28,11 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 20,
+      cooldown = 15,
       damage_modifier = 1,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 20,
+      range = 22.5,
       sound =
       {
         {
@@ -45,7 +45,7 @@ data:extend(
         type = "projectile",
         category = "electric",
         energy_consumption = "200J",
-        projectile = "laser-sapphire-2",
+        projectile = "laser-sapphire-1",
         speed = 1,
         action = 
         {
@@ -55,7 +55,7 @@ data:extend(
             {
               {
                 type = "projectile",
-                projectile = "laser-sapphire-2",
+                projectile = "laser-sapphire-1",
                 starting_speed = 0.28
               }
             }
@@ -90,11 +90,11 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 20,
+      cooldown = 10,
       damage_modifier = 1,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 20,
+      range = 30,
       sound =
       {
         {
@@ -107,7 +107,7 @@ data:extend(
         type = "projectile",
         category = "electric",
         energy_consumption = "300J",
-        projectile = "laser-emerald-2",
+        projectile = "laser-emerald-3",
         speed = 1,
         action = 
         {
@@ -117,7 +117,7 @@ data:extend(
             {
               {
                 type = "projectile",
-                projectile = "laser-emerald-2",
+                projectile = "laser-emerald-3",
                 starting_speed = 0.28
               }
             }

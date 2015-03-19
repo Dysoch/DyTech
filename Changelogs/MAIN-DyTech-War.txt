@@ -6,6 +6,7 @@
 [list] [*] Changed the base Laser Turret to how it should have been last version (forgot it)
 [*] Balancing to recipes of Laser Turrets. They now all require the first laser turret! (they are a lot cheaper now)
 [*] Balancing to Sniper Laser Turrets. They now require their previous tier in the recipe, and the first one requires the Silver Sapphire Laser Turret to make.
+[*] Balanced the Laser Defense Equipment.
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed error that came with Factorio 0.11.18

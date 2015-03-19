@@ -52,7 +52,7 @@ data:extend(
         action_delivery =
         {
           type = "projectile",
-          projectile = "laser-sapphire-1",
+          projectile = "laser-ruby-1",
           starting_speed = 0.5,
           source_effects =
           {
@@ -62,7 +62,7 @@ data:extend(
         }
       }
     },
-    magazine_size = 75,
+    magazine_size = 50,
     subgroup = "ammo",
     order = "i[laser-clip-1]",
     stack_size = 100
