@@ -76,7 +76,7 @@ data:extend(
     },
     results = 
     {
-      {type="item", name="stone", amount_min=1, amount_max=5, probability=1},
+      {type="item", name="stone", amount_min=1, amount_max=3, probability=0.8},
       {type="item", name="iron-chunks", amount_min=1, amount_max=2, probability=0.075},
       {type="item", name="copper-chunks", amount_min=1, amount_max=2, probability=0.1},
     },

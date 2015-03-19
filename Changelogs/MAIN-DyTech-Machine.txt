@@ -2,8 +2,14 @@
 
 [i][size=150][b]v1.0.3:[/b][/size][/i]
 [list]
+[*] Features: 
+[list] [*] Added Clean Ore smelting in a furnace.
+[/list]
 [*] Bugfixes: 
 [list] [*] Fixed Car error that came with Factorio 0.11.18
+[/list]
+[*] Balancing: 
+[list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.
 [/list]
 [/list]
 
