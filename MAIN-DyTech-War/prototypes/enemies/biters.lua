@@ -1,3 +1,5 @@
+require "config"
+
 function enemydyingsound()
   return
   {
@@ -43,7 +45,7 @@ data:extend(
     name = "berserk-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 1500,
+    max_health = (Berserker_Health*Biter_Modifier),
     subgroup="enemies",
 	order = "b-b-d",
     healing_per_tick = 0.05,
@@ -92,7 +94,7 @@ data:extend(
     name = "elder-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 1000,
+    max_health = (Elder_Health*Biter_Modifier),
     subgroup="enemies",
 	order = "b-b-e",
 	resistances = 
@@ -160,7 +162,7 @@ data:extend(
     name = "king-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 8000,
+    max_health = (King_Health*Biter_Modifier),
     subgroup="enemies",
 	order = "b-b-f",
 	resistances = 
@@ -228,7 +230,7 @@ data:extend(
     name = "queen-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = 1000,
+    max_health = (Queen_Health*Biter_Modifier),
     subgroup="enemies",
 	order = "b-b-g",
 	resistances = 

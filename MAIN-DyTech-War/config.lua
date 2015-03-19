@@ -2,6 +2,8 @@
 -- Here you can switch any module on or off!
 -- The general rule is: TRUE is on, FALSE is off!
 
+--[[ Toggles ]]--
+
 --[[ Enemies ]]--
 -- Here you can disable or enable the enemies.
 -- Base edit means the change in the spawners, to make them stronger!
@@ -29,3 +31,13 @@ FlameThrowerTurret = true
 LaserTurret = true
 Walls = true
 -- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!!!
+
+-- [[ General Config Options ]]--
+
+--[[ Enemies Health ]]--
+Berserker_Health = 1000 --Default = 1000
+Elder_Health = 750 --Default = 750
+King_Health = 5000 --Default = 5000
+Queen_Health = 1000 --Default = 1000
+Biter_Modifier = 1.5
+-- Biter Modifier is an option to have Biters have more health then Spitters. Default = 1.5 times the health of the Spitters! (so 50% more!)

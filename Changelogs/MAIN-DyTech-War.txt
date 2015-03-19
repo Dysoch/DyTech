@@ -8,6 +8,7 @@
 [*] Balancing to Sniper Laser Turrets. They now require their previous tier in the recipe, and the first one requires the Silver Sapphire Laser Turret to make.
 [*] Balanced the Laser Defense Equipment.
 [*] Balanced Laser Clip ammo magazines.
+[*] Added Config Option to fine tune Enemies Health.
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed error that came with Factorio 0.11.18
