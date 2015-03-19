@@ -110,7 +110,7 @@ data:extend(
         action_delivery =
         {
           type = "projectile",
-          projectile = "laser-emerald-1",
+          projectile = "laser-emerald-3",
           starting_speed = 0.75,
           source_effects =
           {

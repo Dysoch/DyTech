@@ -9,7 +9,7 @@ data:extend(
     placed_as_equipment_result = "basic-laser-defense-equipment-2",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
-    order = "b-l-d-e-2",
+    order = "d[active-defense]-a[basic-laser-defense-equipment]",
     stack_size = 16
   },
   {
@@ -19,7 +19,7 @@ data:extend(
     placed_as_equipment_result = "basic-laser-defense-equipment-3",
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
-    order = "b-l-d-e-3",
+    order = "d[active-defense]-a[basic-laser-defense-equipment]",
     stack_size = 16
   },
 }
