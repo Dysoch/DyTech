@@ -38,6 +38,7 @@ end)
 
 game.onload(function()
 	if not glob.Unlocked then glob.Unlocked = {} end
+	if not glob.ResearchStarted then glob.ResearchStarted = {} end
 end)
 
 game.onevent(defines.events.ontick, function(event)
@@ -53,9 +54,11 @@ game.onevent(defines.events.onresearchstarted, function(event)
 if Research_System then	
 	if not glob.science then glob.science=0 end
 	debug("Research Started ("..tostring(event.research)..")")
-	local ingredients = game.forces.player.technologies[event.research].researchunitcount
-	glob.science=glob.science+(ingredients/10)
-	debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.science))
+	if not glob.ResearchStarted[event.research] then
+		local ingredients = game.forces.player.technologies[event.research].researchunitcount
+		glob.science=glob.science+(ingredients/10)
+		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.science))
+	end
 end
 end)
 
