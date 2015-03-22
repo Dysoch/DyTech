@@ -7,14 +7,19 @@
 -- This system will set all technologies to not unlock a recipe,
 -- and lets the Research Handle it!
 Research_System = true
-
 --[[ Extra Toggles for the Research System ]]-- 
 Research_System_Time_Usage = false
 MaxRecipeShown = 20 --default=20
 MaxRecipesPerRow = 4 --default=4
 
---[[ Auto Researcher Toggle]]--
+--[[ Auto Researcher Toggle ]]--
 -- DISABLE THE FOLLOWING LINE IN YOUR OPTIONS MENU! (its under Other)
 -- singleplayer game stops when the research is completed
 -- THIS NEEDS TO BE DISABLED TO FULLY USE THE MOD!
 Auto_Researcher = true
+
+--[[ Dynamic Items Toggle ]]--
+Dynamic_Tools = true
+
+--[[ Collectors Toggle ]]--
+Collectors = true

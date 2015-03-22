@@ -1,5 +1,18 @@
 [size=200]DyTech-Dynamics[/size]
 
+[i][size=150][b]v1.0.0 OFFICIAL RELEASE:[/b][/size][/i]
+[list]
+[*] Features: 
+[list] [*] Added DyTech-Dynamics Main GUI screen. Opened from the button on the top left screen.
+[*] Added MP Compatibility to the Research System.
+[/list]
+[*] Changes:
+[list] [*] Changed the button on top to open other GUI.
+[*] Increased Stability of Research System.[/list]
+[*] Bugfixes :
+[list] [*] Fixed Unknown key in tier 2 table. [/list]
+[/list]
+
 [i][size=150][b]v1.0.0 BETA:[/b][/size][/i]
 [list]
 [*] Features: 
@@ -19,7 +32,7 @@
 
 [i][size=150][b]v1.0.0 ALPHA:[/b][/size][/i]
 [list]
-[*] Official Release.
+[*] Official Alpha Release.
 [*] Features: 
 [list] [*] 25 Events in Research System!
 [*] Research System holds both automatic and manual mode!

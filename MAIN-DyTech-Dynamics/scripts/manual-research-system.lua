@@ -14,10 +14,10 @@ RSF.RecipeAvailableToUnlockTier1()
 RSF.RecipeAvailableToUnlockTier2()
 RSF.RecipeAvailableToUnlockTier3()
 RSF.RecipeAvailableToUnlockTier4()
-adder.add({type="button", name=guiNames.Tier1Base, caption={"Tier1", "(", tostring(glob.RecipeAvailableToUnlock.Tier1), ")"}})
-adder.add({type="button", name=guiNames.Tier2Base, caption={"Tier2", "(", tostring(glob.RecipeAvailableToUnlock.Tier2), ")"}})
-adder.add({type="button", name=guiNames.Tier3Base, caption={"Tier3", "(", tostring(glob.RecipeAvailableToUnlock.Tier3), ")"}})
-adder.add({type="button", name=guiNames.Tier4Base, caption={"Tier4", "(", tostring(glob.RecipeAvailableToUnlock.Tier4), ")"}})
+adder.add({type="button", name=guiNames.Tier1Base, caption={"Tier1", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.Tier1), ")"}})
+adder.add({type="button", name=guiNames.Tier2Base, caption={"Tier2", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.Tier2), ")"}})
+adder.add({type="button", name=guiNames.Tier3Base, caption={"Tier3", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.Tier3), ")"}})
+adder.add({type="button", name=guiNames.Tier4Base, caption={"Tier4", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.Tier4), ")"}})
 if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
 adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
@@ -35,22 +35,22 @@ end
 function populateGUIUnlockTable(PlayerIndex, TierRecipe)
 local player = game.players[PlayerIndex]
 local mainResearchTableFrame = player.gui.center[guiNames.mainResearchTableFlow][guiNames.mainResearchTableFrame]
-	glob.MaxShown = 0
+	glob.ResearchSystem.MaxShown = 0
 	for _, name in pairs(mainResearchTableFrame[guiNames.RSTable].childrennames) do
 		mainResearchTableFrame[guiNames.RSTable][name].destroy()
 	end
 	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
-	if not glob.Unlocked[RecipeName] then
+	if not glob.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
 		if Research_System_Time_Usage then
-			if glob.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Script", "Timer", "Minutes")+(remote.call("DyTech-Script", "Timer", "hours")*60)) and glob.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then 
+			if glob.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Script", "Timer", "Minutes")+(remote.call("DyTech-Script", "Timer", "hours")*60)) and glob.ResearchSystem.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then 
 				mainResearchTableFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={data.Locale.."-name."..RecipeName}})
-				glob.MaxShown = glob.MaxShown + 1
+				glob.ResearchSystem.MaxShown = glob.ResearchSystem.MaxShown + 1
 			end
 		else
-			if glob.science > data.Points and glob.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then
+			if glob.ResearchSystem.science > data.Points and glob.ResearchSystem.MaxShown <= (MaxRecipeShown-1) and data.Tier==TierRecipe then
 				mainResearchTableFrame[guiNames.RSTable].add({type="button", name=RecipeName, caption={data.Locale.."-name."..RecipeName}})
-				glob.MaxShown = glob.MaxShown + 1
+				glob.ResearchSystem.MaxShown = glob.ResearchSystem.MaxShown + 1
 			end
 		end
 	end end
@@ -66,7 +66,7 @@ mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainF
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock2].add({type="label", name="", caption={"name", {info.Locale.."-name."..RecipeName}}})
 -- Flow 3
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock3})
-mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock3].add({type="label", name="", caption={"has-science-points", tostring(glob.science)}})
+mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock3].add({type="label", name="", caption={"has-science-points", tostring(glob.ResearchSystem.science)}})
 -- Flow 4
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock4})
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock4].add({type="label", name="", caption={"science-points-cost", info.Points}})

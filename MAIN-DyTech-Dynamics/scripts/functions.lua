@@ -4,11 +4,11 @@ function Startup()
    if not game.forces.player.currentresearch and game.forces.player.technologies["automation"].researched==false then
       game.forces.player.currentresearch = "automation"
    end
-glob.Unlocked = {}
-glob.RSAutomatic = false
-glob.RSManual = true
-glob.ToUnlock = {}
-glob.science=0
+glob.ResearchSystem.Unlocked = {}
+glob.ResearchSystem.RSAutomatic = false
+glob.ResearchSystem.RSManual = true
+glob.ResearchSystem.ToUnlock = {}
+glob.ResearchSystem.science=0
 end
 
 function InitTechnologyTable()

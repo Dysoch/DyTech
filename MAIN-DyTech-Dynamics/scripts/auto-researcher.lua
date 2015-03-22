@@ -6,7 +6,7 @@ function Startup()
 end
 
 function AutoMode()
-	Startup()
+	glob.Research = game.forces.player.technologies
 	for name, tech in pairs(glob.Research) do
 	debug("level " .. tostring(getResearchLevel(name)))
 		if not tech.researched then

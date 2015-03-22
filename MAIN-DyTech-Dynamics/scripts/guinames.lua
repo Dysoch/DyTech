@@ -1,10 +1,13 @@
 module("guiNames", package.seeall)
 
 -- Main Dynamics GUI
-ResearchButton="ResearchButton"
-CloseButton="CloseButton"
 mainDynamicFrame="mainDynamicFrame"
 mainDynamicFlow="mainDynamicFlow"
+ResearchButton="ResearchButton"
+AutoResearcherButton="AutoResearcherButton"
+DynamicToolsButton="DynamicToolsButton"
+CollectorsButton="CollectorsButton"
+CloseButton="CloseButton"
 -- Main Research System GUI
 mainResearchFrame="mainResearchFrame"
 mainResearchFlow="mainResearchFlow"
