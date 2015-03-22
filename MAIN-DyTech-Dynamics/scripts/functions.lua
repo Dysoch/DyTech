@@ -1,14 +1,16 @@
 module("fs", package.seeall)
 
 function Startup()
-   if not game.forces.player.currentresearch and game.forces.player.technologies["automation"].researched==false then
-      game.forces.player.currentresearch = "automation"
-   end
 glob.ResearchSystem.Unlocked = {}
 glob.ResearchSystem.RSAutomatic = false
 glob.ResearchSystem.RSManual = true
 glob.ResearchSystem.ToUnlock = {}
 glob.ResearchSystem.science=0
+glob.Messages = true
+InitTechnologyTable()
+   if not game.forces.player.currentresearch and game.forces.player.technologies["automation"].researched==false then
+      game.forces.player.currentresearch = "automation"
+   end
 end
 
 function InitTechnologyTable()
@@ -21,6 +23,8 @@ function InitTechnologyTable()
 		end
         glob.Technology[name].TechLevel = getResearchLevel(name)
         glob.Technology[name].ScienceCount = game.forces.player.technologies[name].researchunitcount
+		glob.Technology[name].Started = false
+		glob.Technology[name].Finished = false
     end
 end
 

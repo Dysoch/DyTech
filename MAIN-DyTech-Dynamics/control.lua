@@ -23,8 +23,10 @@ function debug(str)
 end
 
 function PlayerPrint(message)
-	for _,player in pairs(game.players) do
-		player.print(message)
+	if glob.Messages then
+		for _,player in pairs(game.players) do
+			player.print(message)
+		end
 	end
 end
 
@@ -55,13 +57,14 @@ game.onevent(defines.events.onresearchstarted, function(event)
 if Research_System then	
 	if not glob.ResearchSystem.science then glob.ResearchSystem.science=0 end
 	debug("Research Started ("..tostring(event.research)..")")
-	if not glob.ResearchSystem.ResearchStarted then glob.ResearchSystem.ResearchStarted = {} end	
-	if not glob.ResearchSystem.ResearchStarted[event.research] then
+	if not glob.Technology[event.research].Started then
 		local ingredients = game.forces.player.technologies[event.research].researchunitcount
 		glob.ResearchSystem.science=glob.ResearchSystem.science+(ingredients/10)
 		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.ResearchSystem.science))
-		glob.ResearchSystem.ResearchStarted[event.research] = true
+		glob.Technology[event.research].Started = true
 	end
+else 	
+	glob.Technology[event.research].Started = true
 end
 end)
 
@@ -72,9 +75,14 @@ end
 if Research_System then	
 	if not glob.ResearchSystem.science then glob.ResearchSystem.science=0 end
 	debug("Research Finished ("..tostring(event.research)..")")
-	local ingredients = game.forces.player.technologies[event.research].researchunitcount
-	glob.ResearchSystem.science=glob.ResearchSystem.science+((ingredients/10)*9)
-	debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob.ResearchSystem.science))
+	if not glob.Technology[event.research].Finished then
+		local ingredients = game.forces.player.technologies[event.research].researchunitcount
+		glob.ResearchSystem.science=glob.ResearchSystem.science+((ingredients/10)*9)
+		debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob.ResearchSystem.science))
+		glob.Technology[event.research].Finished = true
+	end
+else 	
+	glob.Technology[event.research].Finished = true
 end
 end)
 
@@ -160,7 +168,8 @@ remote.addinterface("DyTech-Dynamics",
 	end,
 	
 	DataDump = function()
-	game.makefile("DataDump/ResearchSystem.txt", serpent.block(glob.ResearchSystem))
+		game.makefile("DataDump/ResearchSystem.txt", serpent.block(glob.ResearchSystem))
+		game.makefile("DataDump/Technology.txt", serpent.block(glob.Technology))
 	end,
 	
 	SwitchRS = function()
@@ -172,6 +181,16 @@ remote.addinterface("DyTech-Dynamics",
 			glob.ResearchSystem.RSAutomatic = true
 			glob.ResearchSystem.RSManual = false
 			PlayerPrint({"rs-automatic"})
+		end
+	end,
+	
+	ToggleMessages = function()
+		if glob.Messages==true then
+			PlayerPrint({"msg-off"})
+			glob.Messages = false
+		else
+			glob.Messages = true
+			PlayerPrint({"msg-on"})
 		end
 	end
 })
