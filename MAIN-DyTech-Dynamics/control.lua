@@ -7,10 +7,12 @@ require "scripts/auto-researcher"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
 require "scripts/functions"
+require "scripts/gui"
+require "scripts/guinames"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
-debug_master = false -- Master switch for debugging, shows most things!
+debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 debug_GUI = false -- debugger for GUI
@@ -42,14 +44,8 @@ game.onevent(defines.events.ontick, function(event)
 	if Research_System and glob.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
-	if game.tick%300==1 and Research_System then
-		RSF.CreateButton()
-	elseif not Research_System then
-		for _,player in pairs(game.players) do 
-			if player.gui.top["ResearchButton"] then
-				player.gui.top["ResearchButton"].destroy() 
-			end
-		end
+	if game.tick%300==1 then
+		GUI.CreateButton()
 	end
 end)
 
@@ -79,45 +75,48 @@ end)
 game.onevent(defines.events.onguiclick, function(event)
 local playerIndex = event.playerindex
 local player = game.players[playerIndex]
-	if event.element.name:find(MRS.guiNames.MRSCloseButton) then
-		MRS.closeGUI(4, playerIndex)
+	if event.element.name == "DynamicsButton" then
+		GUI.closeGUI("all", playerIndex)
+		GUI.showDynamicsMainGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CloseButton) then
+		GUI.closeGUI("all", playerIndex)
 		RSF.ClearToUnlock()
-	elseif event.element.name:find(MRS.guiNames.MRSBackButton1) then
-		MRS.closeGUI(1, playerIndex)
-	elseif event.element.name:find(MRS.guiNames.MRSBackButton2) then
-		MRS.closeGUI(4, playerIndex)
-		MRS.showMainGUI(playerIndex)
-	elseif event.element.name:find(MRS.guiNames.MRSUnlockButton) then
+	elseif event.element.name:find(guiNames.MRSBackButton1) then
+		GUI.closeGUI("ResearchUnlock", playerIndex)
+	elseif event.element.name:find(guiNames.MRSBackButton2) then
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchMainGUI(playerIndex)
+	elseif event.element.name:find(guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(glob.ToUnlock)
-		MRS.closeGUI(4, playerIndex)
-		MRS.showMainGUI(playerIndex)
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchMainGUI(playerIndex)
 	elseif RSDatabase.ItemUnlock[event.element.name] then
 		glob.ToUnlock = event.element.name
-		MRS.closeGUI(1, playerIndex)
-		MRS.showUnlockGUI(playerIndex, glob.ToUnlock)
-	elseif event.element.name == "ResearchButton" then
+		GUI.closeGUI("ResearchUnlock", playerIndex)
+		MRS.showUnlockGUIBase(playerIndex, glob.ToUnlock)
+	elseif event.element.name:find(guiNames.ResearchButton) then
 		if glob.RSManual then
-			MRS.closeGUI(4, playerIndex)
-			MRS.showMainGUI(playerIndex)
+			GUI.closeGUI("all", playerIndex)
+			MRS.showResearchMainGUI(playerIndex)
 		else
 			PlayerPrint({"rs-manual-disabled"})
 		end
 	elseif event.element.name == "DebugAddPoints" then
 		glob.science = glob.science + 100000
-		MRS.closeGUI(4, playerIndex)
-		MRS.showMainGUI(playerIndex)
-	elseif event.element.name:find(MRS.guiNames.Tier1) then
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchMainGUI(playerIndex)
+	elseif event.element.name:find(guiNames.Tier1Base) then
 		MRS.showUnlockTableGUI(playerIndex, 1)
-		MRS.closeGUI(2, playerIndex)
-	elseif event.element.name:find(MRS.guiNames.Tier2) then
+		GUI.closeGUI("ResearchMain", playerIndex)
+	elseif event.element.name:find(guiNames.Tier2Base) then
 		MRS.showUnlockTableGUI(playerIndex, 2)
-		MRS.closeGUI(2, playerIndex)
-	elseif event.element.name:find(MRS.guiNames.Tier3) then
+		GUI.closeGUI("ResearchMain", playerIndex)
+	elseif event.element.name:find(guiNames.Tier3Base) then
 		MRS.showUnlockTableGUI(playerIndex, 3)
-		MRS.closeGUI(2, playerIndex)
-	elseif event.element.name:find(MRS.guiNames.Tier4) then
+		GUI.closeGUI("ResearchMain", playerIndex)
+	elseif event.element.name:find(guiNames.Tier4Base) then
 		MRS.showUnlockTableGUI(playerIndex, 4)
-		MRS.closeGUI(2, playerIndex)
+		GUI.closeGUI("ResearchMain", playerIndex)
 	end
 end)
 
@@ -150,17 +149,17 @@ remote.addinterface("DyTech-Dynamics",
 			table.insert(glob.DatabaseNames,RecipeName)
 			table.insert(glob.DatabaseNumbers,data.Points)
 		end
-		game.makefile("DyTech-Research-Database-Base-Names.xls", serpent.block(glob.DatabaseNames))
-		game.makefile("DyTech-Research-Database-Base-Numbers.xls", serpent.block(glob.DatabaseNumbers))
+		game.makefile("DataDump/Database-Base-Names.xls", serpent.block(glob.DatabaseNames))
+		game.makefile("DataDump/Database-Base-Numbers.xls", serpent.block(glob.DatabaseNumbers))
 	end,
 	
 	DataDump = function(GLOBAL)
-		game.makefile("DyTech-DataDump-"..GLOBAL..".txt", serpent.dump(glob.GLOBAL))
-		game.makefile("DyTech-DataDump-SciencePoints-"..tostring(glob.science)..".txt", serpent.block(glob.science))
+		game.makefile("DataDump/"..GLOBAL..".txt", serpent.dump(glob.GLOBAL))
+		game.makefile("DataDump/SciencePoints-"..tostring(glob.science)..".txt", serpent.block(glob.science))
 	end,
 	
 	ResearchDataDump = function()
-	game.makefile("DyTech-DataDump-Technologies.txt", serpent.block(glob.Technology))
+	game.makefile("DataDump/Technologies-Dynamics.txt", serpent.block(glob.Technology))
 	end,
 	
 	SwitchRS = function()

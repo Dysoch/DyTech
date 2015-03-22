@@ -34,20 +34,6 @@ local data = RSDatabase.ItemUnlock[Name]
 	glob.Points=0
 end
 
-function CreateButton()
-	for _,player in pairs(game.players) do
-		if Research_System then
-			RecipeAvailableToUnlockAll()
-			if not player.gui.top["ResearchButton"] then
-				player.gui.top.add({type="button", name="ResearchButton", caption={"research-button", "(", tostring(glob.RecipeAvailableToUnlock.All), ")"}})
-			else 
-				player.gui.top["ResearchButton"].destroy()
-				player.gui.top.add({type="button", name="ResearchButton", caption={"research-button", "(", tostring(glob.RecipeAvailableToUnlock.All), ")"}})
-			end
-		end
-	end
-end
-
 function RecipeAvailableToUnlockAll(TierRecipe)
 if not glob.RecipeAvailableToUnlock then glob.RecipeAvailableToUnlock = {} end
 glob.RecipeAvailableToUnlock.All = 0
