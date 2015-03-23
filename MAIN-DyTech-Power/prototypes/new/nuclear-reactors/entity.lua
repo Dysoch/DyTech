@@ -122,7 +122,7 @@ data:extend(
 		name = "nuclear-reactor-container",
 		icon = "__base__/graphics/icons/wooden-chest.png",
 		flags = {"placeable-neutral", "player-creation"},
-		mineable = {mining_time = 1, result = "nuclear-reactor-container"},
+		mineable = {mining_time = 1, result = ""},
 		max_health = 50,
 		corpse = "small-remnants",
 		collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
