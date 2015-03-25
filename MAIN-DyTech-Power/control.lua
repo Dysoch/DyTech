@@ -1,7 +1,12 @@
+require "defines"
+
 --[[TODO:
 	Proper localisation
 	]]--
 
+--Don't mind me:
+--/c game.player.insert{name="nuclear-reactor",count=1}
+	
 --[[Debug Functions]]--
 debug_master = true -- Master switch for debugging, shows most things!
 
@@ -16,22 +21,25 @@ end
 --[[Insert Fancy Code Here:]]--
 
 
---[[Reactor Code]]--
+game.onevent(defines.events.onputitem, function(event)
 
 --Saving the coordinates of the placed entity
-game.onevent(defines.events.onputitem, function(event)
-	local x1 = event.onputitem.position.x-2 --Left Top
-	local y1 = event.onputitem.position.y+2
+	local x1 = event.onbuiltentity.position.x-2 --Left Top
+	local y1 = event.onbuiltentity.position.y+2
 	
-	local x2 = event.onputitem.position.x+2 --Right Bottom
-	local y2 = event.onputitem.position.y-2
+	local x2 = event.onbuiltentity.position.x+2 --Right Bottom
+	local y2 = event.onbuiltentity.position.y-2
 	
-	local cx1 = event.onputitem.position.x-2
-	local cy1 = event.onputitem.position.y
+	local cx1 = event.onbuiltentity.position.x-2
+	local cy1 = event.onbuiltentity.position.y
 end)
 
+--[[Reactor Code]]--
 
 game.onevent(defines.events.onbuiltentity, function(event)
+
+
+	
 	if event.createdentity.name == "nuclear-reactor" then
 		event.createdentity.operable = false
 		if (game.createentity{name = "nuclear-reactor-container", position = {cx1, cy1}, force=game.forces.player}) then
