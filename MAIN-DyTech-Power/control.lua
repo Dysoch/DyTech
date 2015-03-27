@@ -22,8 +22,9 @@ end
 
 glob.entitypos = {}
 glob.entityinfo = {}
-glob.entityinfo[1] = nuclear-reactor-container = {}
-nuclear-reactor-container[1] = false
+--[[glob.entityinfo[1] = nuclear-reactor-container = {}
+nuclear-reactor-container[1] = false]]--
+glob.tick = {}
 
 game.onevent(defines.events.onputitem, function(event)
 --Saving the coordinates of the placed entity
@@ -41,8 +42,8 @@ end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
 
-	
 	if event.createdentity.name == "nuclear-reactor" then
+		glob.entityinfo[1] = game.createdentity
 		event.createdentity.operable = false
 		if (game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
@@ -56,19 +57,30 @@ game.onevent(defines.events.onbuiltentity, function(event)
 	end
 	
 	if event.createdentity.name == "nuclear-reactor-container" then
-		entityinfo[2] = game.createdentity()
+		glob.entityinfo[2] = game.createdentity
 	end
 end)
 
-game.onevent(defines.events.onguiclick, function(event)
-
+--[[game.onevent(defines.events.onguiclick, function(event)
 	if event.guielement.name = "nuclear-reactor-container" then
 		nuclear-reactor-container[1] = true
 	end
-end)
+end)]]--
 
 game.onevent(defines.events.ontick, function(event)
+	if glob.ontick[1] == 59 then
+		moveFuel()
+		calcEnergy()
+		glob.ontick[1] = 0
+	else
+		glob.ontick[1] = glob.ontick[1] + 1
+	end
+end)
 
-	if nuclear-reactor-container[1] then
-		while i < 3600 do
-			
+function moveFuel()
+	if glob.createdentity[2].getinventory(1).isempty() ~= true then
+		game.player.print("Ur a smartass u MagicLegend")
+		game.player.print(glob.createdentity[2].getinventory(1).getcontents())
+		local content = glob.createdentity[2].getinventory(1).getcontents()
+	end
+end)
