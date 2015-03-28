@@ -18,6 +18,10 @@ function debug(str)
 	end
 end
 
+function datadump(str)
+        game.makefile("DataDump/dump.txt", serpent.block(str))
+    end,
+
 --[[Insert Fancy Code Here:]]--
 
 glob.entitypos = {}
@@ -60,6 +64,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 	
 	if event.createdentity.name == "nuclear-reactor-container" then
 		glob.entityinfo[2] = event.createdentity.getinventory(1)
+		datadump(glob.entityinfo)
 	end
 end)
 
