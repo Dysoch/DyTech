@@ -25,6 +25,8 @@ glob.entityinfo = {}
 --[[glob.entityinfo[1] = nuclear-reactor-container = {}
 nuclear-reactor-container[1] = false]]--
 glob.tick = {}
+glob.tick[1] = 0
+glob.usedFuel = {}
 
 game.onevent(defines.events.onputitem, function(event)
 --Saving the coordinates of the placed entity
@@ -43,7 +45,7 @@ end)
 game.onevent(defines.events.onbuiltentity, function(event)
 
 	if event.createdentity.name == "nuclear-reactor" then
-		glob.entityinfo[1] = game.createdentity
+		--glob.entityinfo[1] = event.createdentity
 		event.createdentity.operable = false
 		if (game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
@@ -57,7 +59,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 	end
 	
 	if event.createdentity.name == "nuclear-reactor-container" then
-		glob.entityinfo[2] = game.createdentity
+		glob.entityinfo[2] = event.createdentity.getinventory(1)
 	end
 end)
 
@@ -68,19 +70,38 @@ end)
 end)]]--
 
 game.onevent(defines.events.ontick, function(event)
-	if glob.ontick[1] == 59 then
+	if glob.tick[1] == 590 then
 		moveFuel()
 		calcEnergy()
-		glob.ontick[1] = 0
+		glob.tick[1] = 0
 	else
-		glob.ontick[1] = glob.ontick[1] + 1
+		glob.tick[1] = glob.tick[1] + 1
 	end
 end)
 
 function moveFuel()
-	if glob.createdentity[2].getinventory(1).isempty() ~= true then
-		game.player.print("Ur a smartass u MagicLegend")
-		game.player.print(glob.createdentity[2].getinventory(1).getcontents())
-		local content = glob.createdentity[2].getinventory(1).getcontents()
+	if glob.entityinfo[2] ~= nil then
+		if glob.entityinfo[2].getinventory(1).isempty() == false then
+			debug("Ur a smartass u MagicLegend")
+			debug(glob.entityinfo[2].getinventory(1).getcontents())
+				glob.usedFuel[1] = glob.entityinfo[2].getinventory(1).getcontents()
+			debug("The usedFuel variable contains: "..usedFuel[1])
+				glob.entityinfo[2].removeitem(1)
+		end
 	end
-end)
+end
+
+function calcEnergy()
+	if glob.usedFuel[1] ~= nil then
+		if glob.usedFuel[1] == "Plutonium" then
+			debug("Plutonium all the way!")
+		elseif glob.usedFuel[1] == "Uranium" then
+			debug("Uranium is your friend!")
+		else
+			debug("I have no idea what that is... But it doesn't look like something burnable in a reactor!")
+			game.player.insert({name=glob.usedFuel[1],count=1})
+		end
+	else
+		debug("No fuel")
+	end
+end
