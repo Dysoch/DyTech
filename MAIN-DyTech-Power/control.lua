@@ -22,6 +22,7 @@ function datadump(str)
 	if debug_master then
 		game.makefile("DataDump/dump.txt", serpent.block(str))
 	end
+end
 
 --[[Insert Fancy Code Here:]]--
 
@@ -54,7 +55,8 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		event.createdentity.operable = false
 		if (game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
-			datadump(chestdump)
+			glob.entityinfo[2] = game.findentitiesfiltered{area = {{glob.entitypos[6]-1, glob.entitypos[7]+1}, {glob.entitypos[6]+1, glob.entitypos[7]-1}}, name = "nuclear-reactor-container"}
+			datadump(glob.entityinfo)
 		else
 			for i,player in pairs(game.players) do
 				player.print("The nuclear reactor couldn't be placed. Please make sure the complete 6x6 area is clear, and you place the reactor in the middle.")
@@ -88,7 +90,7 @@ end)
 
 function moveFuel()
 	if glob.entityinfo[2] ~= nil then
-		if glob.entityinfo[2].getinventory(1).isempty() == false then
+		if glob.entityinfo[2].getinventory().isempty() == false then
 			debug("Ur a smartass u MagicLegend")
 			debug(glob.entityinfo[2].getinventory(1).getcontents())
 				glob.usedFuel[1] = glob.entityinfo[2].getinventory(1).getcontents()
