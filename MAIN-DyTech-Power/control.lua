@@ -19,8 +19,9 @@ function debug(str)
 end
 
 function datadump(str)
-        game.makefile("DataDump/dump.txt", serpent.block(str))
-    end,
+	if debug_master then
+		game.makefile("DataDump/dump.txt", serpent.block(str))
+	end
 
 --[[Insert Fancy Code Here:]]--
 
@@ -53,6 +54,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		event.createdentity.operable = false
 		if (game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
+			datadump(chestdump)
 		else
 			for i,player in pairs(game.players) do
 				player.print("The nuclear reactor couldn't be placed. Please make sure the complete 6x6 area is clear, and you place the reactor in the middle.")
@@ -62,10 +64,10 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		end
 	end
 	
-	if event.createdentity.name == "nuclear-reactor-container" then
+--[[if event.createdentity.name == "nuclear-reactor-container" then
 		glob.entityinfo[2] = event.createdentity.getinventory(1)
 		datadump(glob.entityinfo)
-	end
+	end]]--
 end)
 
 --[[game.onevent(defines.events.onguiclick, function(event)
