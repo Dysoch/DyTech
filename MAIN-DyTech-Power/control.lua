@@ -2,7 +2,7 @@ require "defines"
 
 --[[TODO:
 	Proper localisation
-	]]--
+]]--
 
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
@@ -18,9 +18,9 @@ function debug(str)
 	end
 end
 
-function datadump(str)
+function datadump(str, strname)
 	if debug_master then
-		game.makefile("DataDump/dump.txt", serpent.block(str))
+		game.makefile("DataDump/" .. strname .. ".txt", serpent.block(str))
 	end
 end
 
@@ -51,18 +51,20 @@ end)
 game.onevent(defines.events.onbuiltentity, function(event)
 
 	if event.createdentity.name == "nuclear-reactor" then
-		--glob.entityinfo[1] = event.createdentity
+		glob.entityinfo[1] = event.createdentity
 		event.createdentity.operable = false
-		if (game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}) then
+		if (game.canplaceentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
 			glob.entityinfo[2] = game.findentitiesfiltered{area = {{glob.entitypos[6]-1, glob.entitypos[7]+1}, {glob.entitypos[6]+1, glob.entitypos[7]-1}}, name = "nuclear-reactor-container"}
-			datadump(glob.entityinfo)
+			datadump(glob.entityinfo, "entityinfo")
+			datadump(glob.entitypos, "entitypos")
+			datadump(game.findentitiesfiltered{area = {{glob.entitypos[6]-1, glob.entitypos[7]+1}, {glob.entitypos[6]+1, glob.entitypos[7]-1}}, name = "nuclear-reactor-container"}, "entity")
 		else
-			for i,player in pairs(game.players) do
+			for i,player in ipairs(game.players) do
 				player.print("The nuclear reactor couldn't be placed. Please make sure the complete 6x6 area is clear, and you place the reactor in the middle.")
+				game.players[i].insert({name = "nuclear-reactor", count = 1})
 			end
-			glob.entitypos[10].destroy()
-			game.players[i].insert({name = "nuclear-reactor", count = 1})
+			glob.entityinfo[1].destroy()
 		end
 	end
 	
@@ -90,7 +92,7 @@ end)
 
 function moveFuel()
 	if glob.entityinfo[2] ~= nil then
-		if glob.entityinfo[2].getinventory().isempty() == false then
+		if glob.entityinfo[2].getinventory(1).isempty() == false then
 			debug("Ur a smartass u MagicLegend")
 			debug(glob.entityinfo[2].getinventory(1).getcontents())
 				glob.usedFuel[1] = glob.entityinfo[2].getinventory(1).getcontents()
