@@ -52,6 +52,10 @@ game.onevent(defines.events.onbuiltentity, function(event)
 
 	if event.createdentity.name == "nuclear-reactor" then
 		glob.entityinfo[1] = event.createdentity
+		datadump(glob.entityinfo, "entityinfo1")
+--[[		builtentityinfo = event.createdentity
+		table.insert(glob.entityinfo, builtentityinfo)
+		datadump(glob.entityinfo, "entityinfo1")]]--
 		event.createdentity.operable = false
 		if (game.canplaceentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
@@ -82,7 +86,7 @@ end)]]--
 
 game.onevent(defines.events.ontick, function(event)
 	if glob.tick[1] == 590 then
-		moveFuel()
+		--moveFuel()
 		calcEnergy()
 		glob.tick[1] = 0
 	else

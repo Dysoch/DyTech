@@ -1,5 +1,5 @@
 -- Welcome to the config file of DyTech-Power!
--- Here you can switch any module on or off!
+-- Here you can switch any module on or off! (If it doesn't work, yell at MagicLegend)
 -- The general rule is: TRUE is on, FALSE is off!
 
 -- Toggle between Old DyTech-Power(only steam engines, solars, accu's and boilers) and the new one with a lot more content.
