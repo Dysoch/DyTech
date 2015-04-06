@@ -80,12 +80,13 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		event.createdentity.operable = false
 		if (game.canplaceentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[6], glob.entitypos[7]}, force=game.forces.player}
-			glob.entityinfo[10] = game.findentitiesfiltered{area = {{glob.entitypos[6], glob.entitypos[7]}, {glob.entitypos[6], glob.entitypos[7]}}, name = "nuclear-reactor-container"}
 				debug("Entity Found!")
 				glob.entityinfo[2] = game.findentitiesfiltered{area = {{glob.entitypos[6], glob.entitypos[7]}, {glob.entitypos[6], glob.entitypos[7]}}, name = "nuclear-reactor-container"}
+				glob.entityinfo[4] = glob.entityinfo[2]
 				datadump(glob.entityinfo, "entityinfo")
 				datadump(glob.entitypos, "entitypos")
 				datadump(glob.entityinfo[2], "entityinfo[2]")
+				datadump(glob.entityinfo[4], "entityinfo[4]")
 		else
 			for i,player in ipairs(game.players) do
 				player.print("The nuclear reactor couldn't be placed. Please make sure the complete 6x6 area is clear, and you place the reactor in the middle.")
