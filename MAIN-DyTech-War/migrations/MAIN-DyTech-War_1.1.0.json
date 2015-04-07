@@ -1,0 +1,19 @@
+{
+  "item":
+  [
+	["biter-small-corpse", "small-corpse"],
+	["spitter-small-corpse", "small-corpse"],
+	["biter-medium-corpse", "medium-corpse"],
+	["spitter-medium-corpse", "medium-corpse"],
+	["biter-big-corpse", "big-corpse"],
+	["spitter-big-corpse", "big-corpse"],
+	["biter-berserk-corpse", "berserk-corpse"],
+	["spitter-berserk-corpse", "berserk-corpse"],
+	["biter-elder-corpse", "elder-corpse"],
+	["spitter-elder-corpse", "elder-corpse"],
+	["biter-king-corpse", "king-corpse"],
+	["spitter-king-corpse", "king-corpse"],
+	["biter-queen-corpse", "queen-corpse"],
+	["spitter-queen-corpse", "queen-corpse"]
+  ]
+}

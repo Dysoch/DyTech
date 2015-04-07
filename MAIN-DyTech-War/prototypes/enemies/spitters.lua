@@ -53,7 +53,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "spitter-berserk-corpse",
+        item = "berserk-corpse",
         probability = 1
       }
     },
@@ -109,7 +109,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "spitter-elder-corpse",
+        item = "elder-corpse",
         probability = 1
       }
     },
@@ -165,7 +165,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "spitter-king-corpse",
+        item = "king-corpse",
         probability = 1
       }
     },
@@ -221,7 +221,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "spitter-queen-corpse",
+        item = "queen-corpse",
         probability = 1
       }
     },

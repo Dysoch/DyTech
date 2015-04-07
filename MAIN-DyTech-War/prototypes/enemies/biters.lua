@@ -57,7 +57,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "biter-berserk-corpse",
+        item = "berserk-corpse",
         probability = 1
       }
     },
@@ -125,7 +125,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "biter-elder-corpse",
+        item = "elder-corpse",
         probability = 1
       }
     },
@@ -193,7 +193,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "biter-king-corpse",
+        item = "king-corpse",
         probability = 1
       }
     },
@@ -261,7 +261,7 @@ data:extend(
       {
         count_max = 1,
         count_min = 1,
-        item = "biter-queen-corpse",
+        item = "queen-corpse",
         probability = 1
       }
     },
