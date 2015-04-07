@@ -58,7 +58,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "1-small",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -67,7 +67,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "2-medium",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -76,7 +76,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "3-big",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -85,7 +85,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "4-berserk",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -94,7 +94,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "5-elder",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -103,7 +103,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "7-king",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -112,7 +112,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytechloot",
     order = "8-queen",
-    stack_size = 50
+    stack_size = 250
   },
   {
     type = "item",
@@ -121,7 +121,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "raw-material",
     order = "b-q-e",
-    stack_size = 50
+    stack_size = 250
   },
 }
 )

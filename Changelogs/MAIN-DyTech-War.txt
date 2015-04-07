@@ -4,6 +4,7 @@
 [list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
+[*] Increased stacksize of corpses: 50 > 250.
 [/list]
 [/list]
 
