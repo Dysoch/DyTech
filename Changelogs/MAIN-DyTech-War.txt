@@ -2,6 +2,9 @@
 
 [i][size=150][b]v1.1.0:[/b][/size][/i]
 [list]
+[*] Features:
+[list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! Place them INFRONT of your walls to keep your walls alive (you will see why when you get there! :) )
+[/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
 [*] Increased stacksize of corpses: 50 > 250.

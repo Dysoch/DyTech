@@ -520,5 +520,116 @@ data:extend(
     },
     speed = 0.25
   },
+  {
+    type = "projectile",
+    name = "laser-diamond-1",
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.025,
+    direction_only = false,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 10, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.8, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-diamond.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.5
+  },
+  {
+    type = "projectile",
+    name = "laser-diamond-2",
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.025,
+    direction_only = false,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 15, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.8, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-diamond.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.5
+  },
+  {
+    type = "projectile",
+    name = "laser-diamond-3",
+    flags = {"not-on-map"},
+    collision_box = {{-0.05, -1}, {0.05, 1}},
+    acceleration = 0.025,
+    direction_only = false,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 20, type = "laser"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.8, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-diamond.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.5
+  },
 }
 )

@@ -48,6 +48,18 @@ laser_turret_extension_topaz =
 		shift = {1.171875, -0.34375}
 }
 
+laser_turret_extension_diamond =
+{
+		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-diamond.png",
+		priority = "medium",
+		width = 131,
+		height = 74,
+		direction_count = 4,
+		frame_count = 5,
+		axially_symmetrical = false,
+		shift = {1.171875, -0.34375}
+}
+
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = 150
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
@@ -1103,6 +1115,288 @@ data:extend(
               starting_speed = 0.28
             }
           }
+        }
+      }
+    },
+      sound =
+      {
+        {
+          filename = "__base__/sound/laser.ogg",
+          volume = 0.4
+        }
+      }
+    }
+  },
+  --[[Diamond Turrets]]--
+  {
+    type = "electric-turret",
+    name = "laser-turret-diamond-1",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-diamond-1.png",
+    flags = { "placeable-player", "placeable-enemy", "player-creation" },
+    minable = { mining_time = 0.5, result = "laser-turret-diamond-1" },
+    max_health = 4000,
+    corpse = "small-remnants",
+    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+	fast_replaceable_group =  "laser-turret",
+    rotation_speed = 0.01,
+    preparing_speed = 0.05,
+    dying_explosion = "huge-explosion",
+    folding_speed = 0.05,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "452.25kJ",
+      input_flow_limit = "25000kW",
+      drain = "13.5kW",
+      usage_priority = "primary-input",
+    },
+    folded_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = laser_turret_extension_diamond,
+    prepared_animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
+      priority = "medium",
+      width = 131,
+      height = 72,
+      direction_count = 64,
+      frame_count = 1,
+      line_length = 8,
+      axially_symmetrical = false,
+      shift = {1.328125, -0.375}
+    },
+    folding_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png",
+      priority = "high",
+      width = 43,
+      height = 28,
+      shift = { 0.109375, 0.03125 }
+    },
+    attack_parameters =
+    {
+      ammo_category = "electric",
+      cooldown = 30,
+      damage = 50,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = 30,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "450kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-diamond-1",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
+      sound =
+      {
+        {
+          filename = "__base__/sound/laser.ogg",
+          volume = 0.4
+        }
+      }
+    }
+  },
+  {
+    type = "electric-turret",
+    name = "laser-turret-diamond-2",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-diamond-2.png",
+    flags = { "placeable-player", "placeable-enemy", "player-creation" },
+    minable = { mining_time = 0.5, result = "laser-turret-diamond-2" },
+    max_health = 8000,
+    corpse = "small-remnants",
+    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+	fast_replaceable_group =  "laser-turret",
+    rotation_speed = 0.01,
+    preparing_speed = 0.05,
+    dying_explosion = "huge-explosion",
+    folding_speed = 0.05,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "452.25kJ",
+      input_flow_limit = "25000kW",
+      drain = "13.5kW",
+      usage_priority = "primary-input",
+    },
+    folded_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = laser_turret_extension_diamond,
+    prepared_animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
+      priority = "medium",
+      width = 131,
+      height = 72,
+      direction_count = 64,
+      frame_count = 1,
+      line_length = 8,
+      axially_symmetrical = false,
+      shift = {1.328125, -0.375}
+    },
+    folding_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
+      priority = "high",
+      width = 43,
+      height = 28,
+      shift = { 0.109375, 0.03125 }
+    },
+    attack_parameters =
+    {
+      ammo_category = "electric",
+      cooldown = 30,
+      damage = 50,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = 40,
+    ammo_type =
+    {
+      type = "projectile",
+      category = "laser-turret",
+      energy_consumption = "450kJ",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "projectile",
+              projectile = "laser-diamond-2",
+              starting_speed = 0.28
+            }
+          }
+        }
+      }
+    },
+      sound =
+      {
+        {
+          filename = "__base__/sound/laser.ogg",
+          volume = 0.4
+        }
+      }
+    }
+  },
+  {
+    type = "electric-turret",
+    name = "laser-turret-diamond-3",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-diamond-3.png",
+    flags = { "placeable-player", "placeable-enemy", "player-creation" },
+    minable = { mining_time = 0.5, result = "laser-turret-diamond-3" },
+    max_health = 15000,
+    corpse = "small-remnants",
+    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+	fast_replaceable_group =  "laser-turret",
+    rotation_speed = 0.01,
+    preparing_speed = 0.05,
+    dying_explosion = "huge-explosion",
+    folding_speed = 0.05,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "452.25kJ",
+      input_flow_limit = "25000kW",
+      drain = "13.5kW",
+      usage_priority = "primary-input",
+    },
+    folded_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = laser_turret_extension_diamond,
+    prepared_animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
+      priority = "medium",
+      width = 131,
+      height = 72,
+      direction_count = 64,
+      frame_count = 1,
+      line_length = 8,
+      axially_symmetrical = false,
+      shift = {1.328125, -0.375}
+    },
+    folding_animation = (function()
+                          local res = util.table.deepcopy(laser_turret_extension_diamond)
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
+      priority = "high",
+      width = 43,
+      height = 28,
+      shift = { 0.109375, 0.03125 }
+    },
+    attack_parameters =
+    {
+      ammo_category = "electric",
+      cooldown = 30,
+      damage = 50,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = 50,
+	ammo_type =
+    {
+      category = "laser-turret",
+      energy_consumption = "450kJ",
+      target_type = "direction",
+      source_effects =
+      {
+        type = "create-entity",
+        entity_name = "laser-bubble"
+      },
+      action =
+      {
+        type = "direct",
+        repeat_count = 12,
+        action_delivery =
+        {
+          type = "projectile",
+          projectile = "laser-diamond-3",
+          starting_speed = 0.25,
+          direction_deviation = 0.35,
+          range_deviation = 0.3,
+          max_range = 50
         }
       }
     },
