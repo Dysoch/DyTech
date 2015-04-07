@@ -108,5 +108,40 @@ data:extend(
     order = "l-t-3",
 	upgrade = true,
   },
+  {
+    type = "technology",
+    name = "laser-turrets-4",
+    icon = "__base__/graphics/technology/laser-turrets.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "laser-turret-diamond-1"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "laser-turret-diamond-2"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "laser-turret-diamond-3"
+      },
+    },
+    prerequisites = {"laser-turrets-3"},
+    unit =
+    {
+      count = 5000,
+      ingredients =
+      {
+	    {"science-pack-1", 3}, 
+		{"science-pack-2", 2}, 
+		{"science-pack-3", 1},
+		{"alien-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "l-t-3",
+	upgrade = true,
+  },
 }
 )
