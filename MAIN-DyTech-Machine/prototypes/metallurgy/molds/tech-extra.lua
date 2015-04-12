@@ -59,6 +59,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "mold-crafting-gear-3"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-gear-4"
+      },
     },
     prerequisites = {"molds-01"},
     unit =
