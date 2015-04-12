@@ -21,14 +21,14 @@ end
 
 function datablock(str, strname)
 	if debug_master then
-		game.makefile("DataDump/"..strname..".txt", serpent.block(str))
+		game.makefile("DataDump/block "..strname..".txt", serpent.block(str))
 		debug("Made serpent.block file: "..strname)
 	end
 end
 
 function datadump(str, strname)
 	if debug_master then
-		game.makefile("DataDump/block "..strname..".txt", serpent.dump(str))
+		game.makefile("DataDump/dump "..strname..".txt", serpent.dump(str))
 		debug("Made serpent.dump file: "..strname)
 	end
 end
@@ -38,12 +38,11 @@ game.oninit(function()
 glob.tick = {}
 glob.tick[1] = 0
 glob.usedFuel = {}
+glob.usedFuel.EntityContents = {}
 glob.entitypos = {}
 glob.entityinfo = {}
 glob.entitycount = 0
 
---glob.entitypos[glob.entitycount] = {}
---glob.entityinfo[glob.entitycount] = {}
 end)
 
 --[[Reactor Code]]--
@@ -77,7 +76,9 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		event.createdentity.operable = false
 		if (game.canplaceentity{name = "nuclear-reactor-container", position = {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, force=game.forces.player}
-			glob.entityinfo[glob.entitycount].ContainerEntity = game.findentitiesfiltered{area = {{glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}}, name = "nuclear-reactor-container"}
+--			glob.entityinfo[glob.entitycount].ContainerEntity = game.findentitiesfiltered{area = {{glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}}, name = "nuclear-reactor-container"}
+			local newReactor = game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, force=game.forces.player}
+			glob.entityinfo[glob.entitycount].ContainerEntity = newReactor
 			if glob.entityinfo[glob.entitycount].ContainerEntity.name == "nuclear-reactor-container" then
 				debug("Correct Entity Found!")
 			elseif glob.entityinfo[glob.entitycount].ContainerEntity.name == "nuclear-reactor" then
@@ -121,19 +122,17 @@ end)
 function moveFuel()
 for i, entitycount in pairs(glob.entityinfo) do
 	if glob.entityinfo[i].ReactorEntity ~= nil and glob.entityinfo[i].ContainerEntity ~= nil then
-		--[[if glob.entityinfo[i].ReactorEntity.valid and glob.entityinfo[i].ContainerEntity.valid and glob.entityinfo[i].ContainerEntity.name == "nuclear-reactor-container" then
-			debug("It works!")
-		else
-			debug("Not valid")
-		end]]--
-		if glob.entityinfo[glob.entitycount].ContainerEntity.isempty() == false then
-			debug("Ur a smartass u MagicLegend")
-			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).getcontents()
-			datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
-			debug("The usedFuel variable contains: "..usedFuel[glob.entitycount].EntityContents)
-			glob.entityinfo[glob.entitycount].removeitem(1)
+		if glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).isempty() == false then
+			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
+				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+			glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
+			glob.usedFuel[glob.entitycount] = glob.entityinfo[glob.entitycount].EntityContents
+				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
+				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 		else
 			debug("Container is empty")
+			glob.usedFuel[glob.entitycount] = nil
 		end
 	else
 	debug("glob.entityinfo[i].ReactorEntity = nil or glob.entityinfo[i].ReactorEntity = nil")
@@ -141,16 +140,21 @@ for i, entitycount in pairs(glob.entityinfo) do
 end
 end
 
+function calcFuel(item, str)
+for i, entitycount in pairs(glob.entityinfo) do
+	glob.usedFuel.EntityContents[str] = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).getitemcount(item)
+	datadump(glob.usedFuel.EntityContents, "glob.usedFuel.EntityContents")
+end
+end
+
 function calcEnergy()
 for i, entitycount in pairs(glob.entityinfo) do
 	if glob.usedFuel[glob.entitycount] ~= nil then
-		if glob.usedFuel[glob.entitycount] == "Plutonium" then
-			debug("Plutonium all the way!")
-		elseif glob.usedFuel[glob.entitycount] == "Uranium" then
-			debug("Uranium is your friend!")
-		else
-			debug("I have no idea what that is... But it doesn't look like something burnable in a reactor!")
-			game.player.insert({name=glob.usedFuel[1],count=1})
+		
+		calcFuel("fluorite", 1)
+
+		if glob.usedFuel.EntityContents[1] > 0 then
+			debug("I found fluorite!")
 		end
 	else
 		debug("No fuel")
