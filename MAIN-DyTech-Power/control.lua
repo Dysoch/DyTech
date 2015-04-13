@@ -70,10 +70,10 @@ game.onevent(defines.events.onbuiltentity, function(event)
 		glob.entityinfo[glob.entitycount].ContainerEntity = {}
 		glob.entityinfo[glob.entitycount].ReactorEntity = {}
 		glob.entityinfo[glob.entitycount].ReactorEntity = event.createdentity
-		datadump(glob.entityinfo[glob.entitycount].ReactorEntity, "glob.entityinfo[glob.entitycount].ReactorEntity")
-		debug(glob.entityinfo[glob.entitycount].ReactorEntity.name)
-		
+--		datadump(glob.entityinfo[glob.entitycount].ReactorEntity, "glob.entityinfo[glob.entitycount].ReactorEntity")
+--		debug(glob.entityinfo[glob.entitycount].ReactorEntity.name)
 		event.createdentity.operable = false
+		
 		if (game.canplaceentity{name = "nuclear-reactor-container", position = {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}}) then
 			game.createentity{name = "nuclear-reactor-container", position = {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, force=game.forces.player}
 --			glob.entityinfo[glob.entitycount].ContainerEntity = game.findentitiesfiltered{area = {{glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}, {glob.entitypos[glob.entitycount].ContainerX, glob.entitypos[glob.entitycount].ContainerY}}, name = "nuclear-reactor-container"}
@@ -85,7 +85,6 @@ game.onevent(defines.events.onbuiltentity, function(event)
 				debug("Nuclear Reactor Found!")
 			else
 				debug("Incorrect Entity Found!")
-				debug("I Found: ".. glob.entityinfo[glob.entitycount].ContainerEntity.name)
 			end
 			datadump(glob.entityinfo[glob.entitycount], "Placed-Entity")
 		else
@@ -96,18 +95,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 			glob.entityinfo[glob.entitycount].ReactorEntity.destroy()
 		end
 	end
-	
---[[if event.createdentity.name == "nuclear-reactor-container" then
-		glob.entityinfo[2] = event.createdentity.getinventory(1)
-		datadump(glob.entityinfo)
-	end]]--
 end)
-
---[[game.onevent(defines.events.onguiclick, function(event)
-	if event.guielement.name = "nuclear-reactor-container" then
-		nuclear-reactor-container[1] = true
-	end
-end)]]--
 
 game.onevent(defines.events.ontick, function(event)
 	if glob.tick[1] == 300 then
@@ -125,11 +113,11 @@ for i, entitycount in pairs(glob.entityinfo) do
 		if glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).isempty() == false then
 			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
 				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
-				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+--				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
 			glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
 			glob.usedFuel[glob.entitycount] = glob.entityinfo[glob.entitycount].EntityContents
 				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
-				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
+--				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 		else
 			debug("Container is empty")
 			glob.usedFuel[glob.entitycount] = nil
@@ -140,21 +128,17 @@ for i, entitycount in pairs(glob.entityinfo) do
 end
 end
 
-function calcFuel(item, str)
-for i, entitycount in pairs(glob.entityinfo) do
-	glob.usedFuel.EntityContents[str] = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).getitemcount(item)
-	datadump(glob.usedFuel.EntityContents, "glob.usedFuel.EntityContents")
-end
-end
-
 function calcEnergy()
 for i, entitycount in pairs(glob.entityinfo) do
+container = glob.entityinfo[glob.entitycount].EntityContents
 	if glob.usedFuel[glob.entitycount] ~= nil then
-		
-		calcFuel("fluorite", 1)
 
-		if glob.usedFuel.EntityContents[1] > 0 then
-			debug("I found fluorite!")
+		if container.getitemcount("raw-wood") > 0 then
+			debug("I found raw wood!")
+		else
+			debug("found nothing")
+			datadump(container, "container")
+			datablock(container, "container")
 		end
 	else
 		debug("No fuel")
