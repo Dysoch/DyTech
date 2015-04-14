@@ -111,7 +111,8 @@ function moveFuel()
 for i, entitycount in pairs(glob.entityinfo) do
 	if glob.entityinfo[i].ReactorEntity ~= nil and glob.entityinfo[i].ContainerEntity ~= nil then
 		if glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).isempty() == false then
-			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
+			glob.entityinfo[glob.entitycount].EntityInv = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
+			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
 				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
 --				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
 			glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
@@ -130,15 +131,14 @@ end
 
 function calcEnergy()
 for i, entitycount in pairs(glob.entityinfo) do
-container = glob.entityinfo[glob.entitycount].EntityContents
+container = glob.entityinfo[glob.entitycount].EntityInv
 	if glob.usedFuel[glob.entitycount] ~= nil then
 
 		if container.getitemcount("raw-wood") > 0 then
 			debug("I found raw wood!")
 		else
 			debug("found nothing")
-			datadump(container, "container")
-			datablock(container, "container")
+			datadump(container.getitemcount("raw-wood"), "container.getitemcount")
 		end
 	else
 		debug("No fuel")
