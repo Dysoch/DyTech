@@ -23,7 +23,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 30
     },
     order = "zinc-processing",
   },
@@ -50,7 +50,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 30
     },
     order = "tin-processing",
   },
@@ -77,7 +77,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 25
     },
     order = "lead-processing",
   },
@@ -100,7 +100,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 20
     },
     order = "gold-processing",
   },
@@ -123,7 +123,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 25
     },
     order = "silver-processing",
   },
@@ -150,7 +150,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
       },
-      time = 100
+      time = 50
     },
     order = "tungsten-processing",
   },
@@ -174,7 +174,7 @@ data:extend(
         {"science-pack-2", 1},
         {"science-pack-3", 1},
       },
-      time = 100
+      time = 50
     },
     order = "ardite-processing",
   },
@@ -202,7 +202,7 @@ data:extend(
         {"science-pack-2", 1},
         {"science-pack-3", 1},
       },
-      time = 100
+      time = 50
     },
     order = "cobalt-processing",
   },
