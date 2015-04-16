@@ -1,9 +1,14 @@
 -- Welcome to the config file of DyTech-Power!
--- Here you can switch any module on or off!
+-- Here you can switch any module on or off! (If it doesn't work, yell at MagicLegend)
 -- The general rule is: TRUE is on, FALSE is off!
 
 -- Toggle between Old DyTech-Power(only steam engines, solars, accu's and boilers) and the new one with a lot more content.
 Use_Wattage = true
+
+--[[Nuclear Reactors Toggle]]--
+-- Don't like the Nuclear Reactors? Here you can switch them off!
+-- NOTE! Use_Wattage MUST be TRUE if you want to use nuclear reactors!
+Nuclear_Reactors = true
 
 --[[Boilers Toggle]]--
 -- Don't like the Boilers? Here you can switch them off!
