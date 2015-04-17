@@ -98,13 +98,27 @@ game.onevent(defines.events.onbuiltentity, function(event)
 end)
 
 game.onevent(defines.events.ontick, function(event)
+if debug_master then
 	if glob.tick[1] == 300 then
 		moveFuel()
+	end
+	if glob.tick[1] == 325 then
 		calcEnergy()
 		glob.tick[1] = 0
 	else
 		glob.tick[1] = glob.tick[1] + 1
 	end
+else
+	if glob.tick[1] == 30 then
+		moveFuel()
+	end
+	if glob.tick[1] == 35 then
+		calcEnergy()
+		glob.tick[1] = 0
+	else
+		glob.tick[1] = glob.tick[1] + 1
+	end
+end
 end)
 
 function moveFuel()
@@ -113,11 +127,14 @@ for i, entitycount in pairs(glob.entityinfo) do
 		if glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).isempty() == false then
 			glob.entityinfo[glob.entitycount].EntityInv = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
 			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
-				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+			local test1 = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
+
+--				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
 --				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
-			glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
+--				datadump(test1, "test1")
+
 			glob.usedFuel[glob.entitycount] = glob.entityinfo[glob.entitycount].EntityContents
-				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
+--				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 --				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 		else
 			debug("Container is empty")
@@ -131,20 +148,37 @@ end
 
 function calcEnergy()
 for i, entitycount in pairs(glob.entityinfo) do
-container = glob.entityinfo[glob.entitycount].EntityInv
+if glob.entityinfo[glob.entitycount].EntityInv ~= nil then
+	container = glob.entityinfo[glob.entitycount].EntityInv
 	if glob.usedFuel[glob.entitycount] ~= nil then
-
-		if container.getitemcount("raw-wood") > 0 then
+	local itemcount = {}
+	itemcount.rawwood = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
+		if itemcount.rawwood > 0 then
 			debug("I found raw wood!")
 		else
 			debug("found nothing")
-			datadump(container.getitemcount("raw-wood"), "container.getitemcount")
 		end
+	
+	--[[local contents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
+	local itemcount2 = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
+	datadump(itemcount2, "glob.entityinfo[glob.entitycount].EntityInv.getitemcount")
+	datadump(contents, "glob.entityinfo[glob.entitycount].EntityInv.getcontents()")
+	datadump(itemcount, "itemcount")]]
+	
+	clearinv()
 	else
 		debug("No fuel")
 	end
+else
+	debug("entityinv is nil")
+end
 end
 end
 
+function clearinv()
+for i, entitycount in pairs(glob.entityinfo) do
+	glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
+end
+end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
