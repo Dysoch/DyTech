@@ -53,7 +53,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 	
 	--Saving the coordinates of the placed entity
 	glob.entitycount = glob.entitycount + 1
-	datadump(glob.entitycount, "glob.entitycount")
+--	datadump(glob.entitycount, "glob.entitycount")
 	
 	glob.entitypos[glob.entitycount] = {}
 	glob.entitypos[glob.entitycount].TopLeft = event.createdentity.position.x-2 --Left Top
@@ -86,7 +86,7 @@ game.onevent(defines.events.onbuiltentity, function(event)
 			else
 				debug("Incorrect Entity Found!")
 			end
-			datadump(glob.entityinfo[glob.entitycount], "Placed-Entity")
+--			datadump(glob.entityinfo[glob.entitycount], "Placed-Entity")
 		else
 			for i,player in ipairs(game.players) do
 				player.print("The nuclear reactor couldn't be placed. Please make sure the complete 6x6 area is clear, and you place the reactor in the middle.")
