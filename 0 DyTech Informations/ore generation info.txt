@@ -1,0 +1,47 @@
+Default Copper Ore:
+First Peak (Random Or Empty)
+CODE: SELECT ALL
+influence = 0.2, -- 0.2 of an empty layer would mean the map would be 20% filled with 'noise'.
+starting_area_weight_optimal = 0,
+starting_area_weight_range = 0,
+starting_area_weight_max_range = 2,
+
+
+Second Peak: (Main copper generation)
+CODE: SELECT ALL
+influence = 0.65,
+noise_layer = "copper-ore",
+noise_octaves_difference = -1.9, -- Increase copper generation the further from start
+noise_persistence = 0.3, -- Increase by this much
+starting_area_weight_optimal = 0, -- No starting bonus
+starting_area_weight_range = 0,
+starting_area_weight_max_range = 2,
+
+
+Third Peak: (Starting area boost)
+CODE: SELECT ALL
+influence = 0.3, -- Small amount of influence
+starting_area_weight_optimal = 1, -- Affects starting area only
+starting_area_weight_range = 0,
+starting_area_weight_max_range = 2,
+
+
+Fourth Peak: (Starting area increasing boost)
+CODE: SELECT ALL
+influence = 0.55,
+noise_layer = "copper-ore",
+noise_octaves_difference = -2.3, -- Increased ores towards the outer edge of the starting area
+noise_persistence = 0.4,
+starting_area_weight_optimal = 1, -- Another starting area only
+starting_area_weight_range = 0,
+starting_area_weight_max_range = 2,
+
+
+Fifth peak (Avoid Iron):
+CODE: SELECT ALL
+influence = -0.2, -- Negative influence reduces value near iron
+max_influence = 0, -- Max of 0 stops copper from generating on iron
+noise_layer = "iron-ore", -- Noise layer determines what to avoid
+noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+noise_persistence = 0.45,
+
