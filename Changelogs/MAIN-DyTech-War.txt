@@ -5,11 +5,20 @@
 [*] Features:
 [list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! Place them INFRONT of your walls to keep your walls alive (you will see why when you get there! :) )
 [*] Properly sorted Laser Turrets in the menu. They are now behind each other.
+[*] Decreased Evolution Factor by 50% to make it a little easier to survive!
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
 [*] Increased stacksize of corpses: 50 > 250.
 [*] Decreased stacksize of Laser Turrets: 64 > 50.
+[*] Increased shooting Speed of Marauder to make it stronger then the defender!
+[*] Increased Marauder Capsule robots spawned: 5 > 6
+[*] Increased range of Marauder capsule: 20 > 25
+[*] Decreased max unit count of Biter Base: 25 > 20
+[*] Decreased Spawning Rate of Biters and Spitters by 5% (meaning they are quicker to spawn)
+[/list]
+[*] Bugfixes:
+[list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules
 [/list]
 [/list]
 
