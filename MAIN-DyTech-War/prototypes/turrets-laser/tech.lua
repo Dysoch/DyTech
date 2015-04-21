@@ -108,7 +108,7 @@ data:extend(
     order = "l-t-3",
 	upgrade = true,
   },
-  {
+  --[[{
     type = "technology",
     name = "laser-turrets-4",
     icon = "__base__/graphics/technology/laser-turrets.png",
@@ -142,6 +142,6 @@ data:extend(
     },
     order = "l-t-3",
 	upgrade = true,
-  },
+  },]]--
 }
 )

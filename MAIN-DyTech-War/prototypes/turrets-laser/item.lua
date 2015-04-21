@@ -118,7 +118,7 @@ data:extend(
     stack_size = 50
   },
   --[[Diamond TURRETS]]--
-  {
+  --[[{
     type = "item",
     name = "laser-turret-diamond-1",
     icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-diamond-1.png",
@@ -147,6 +147,6 @@ data:extend(
     order = "e[diamond]-3",
     place_result = "laser-turret-diamond-3",
     stack_size = 50
-  },
+  },]]--
 }
 )

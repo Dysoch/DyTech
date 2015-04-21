@@ -73,5 +73,11 @@ data:extend(
     group = "dytech-machines",
     order = "010"
   },
+  {
+    type = "item-subgroup",
+	name = "metallurgy-machines",
+    group = "dytech-machines",
+    order = "012"
+  },
 }
 )

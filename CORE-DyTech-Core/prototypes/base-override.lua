@@ -48,8 +48,6 @@ data.raw["item"]["copper-ore"].stack_size = 200
 data.raw["item"]["iron-ore"].stack_size = 200
 data.raw["item"]["coal"].stack_size = 200
 data.raw["item"]["stone"].stack_size = 200
-data.raw["item"]["stone-wall"].order = "a[base-wall]"
-data.raw["item"]["stone-wall"].subgroup = "defensive-walls"
 
 --[[ Recipes ]]--
 ChangeRecipe("steam-engine", "iron-gear-wheel", "stone-gear-wheel", 5)

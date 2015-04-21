@@ -48,7 +48,7 @@ laser_turret_extension_topaz =
 		shift = {1.171875, -0.34375}
 }
 
-laser_turret_extension_diamond =
+--[[laser_turret_extension_diamond =
 {
 		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-diamond.png",
 		priority = "medium",
@@ -58,7 +58,7 @@ laser_turret_extension_diamond =
 		frame_count = 5,
 		axially_symmetrical = false,
 		shift = {1.171875, -0.34375}
-}
+}]]--
 
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = 150
@@ -1128,7 +1128,7 @@ data:extend(
     }
   },
   --[[Diamond Turrets]]--
-  {
+  --[[{
     type = "electric-turret",
     name = "laser-turret-diamond-1",
     icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-diamond-1.png",
@@ -1408,6 +1408,6 @@ data:extend(
         }
       }
     }
-  },
+  },]]--
 }
 )

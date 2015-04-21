@@ -174,7 +174,7 @@ data:extend(
     },
     result = "laser-turret-sniper-3"
   },
-  {
+ --[[ {
     type = "recipe",
     name = "laser-turret-diamond-1",
     enabled = false,
@@ -220,6 +220,6 @@ data:extend(
 	  {"diamond-5", 4} 
     },
     result = "laser-turret-diamond-3"
-  },
+  },]]--
 }
 )
