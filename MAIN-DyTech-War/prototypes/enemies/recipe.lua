@@ -6,7 +6,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-small-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
@@ -24,7 +24,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-medium-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
@@ -42,7 +42,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-big-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
@@ -60,7 +60,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-berserk-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.25},
@@ -79,7 +79,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-elder-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.5},
@@ -98,7 +98,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-ripper-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
@@ -117,7 +117,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-king-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.75},
@@ -136,7 +136,7 @@ data:extend(
     category = "crafting-with-fluid",
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-queen-corpse.png",
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-combat-corpses",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=1},

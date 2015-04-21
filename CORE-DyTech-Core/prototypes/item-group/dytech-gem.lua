@@ -2,57 +2,57 @@ data:extend(
 {
   {
     type = "item-group",
-    name = "dytechgem",
-    order = "d-g",
-	inventory_order = "g",
-    icon = "__CORE-DyTech-Core__/graphics/item-group/dygem.png",
+    name = "dytech-gem",
+    order = "z-dytech-gem",
+	inventory_order = "z-dytech-gem",
+    icon = "__CORE-DyTech-Core__/graphics/item-group/gem.png",
   },
   {
     type = "item-subgroup",
     name = "useless",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "1"
   },
   {
     type = "item-subgroup",
     name = "ore",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "2"
   },
   {
     type = "item-subgroup",
     name = "crushed",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "3"
   },
   {
     type = "item-subgroup",
     name = "grinded",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "4"
   },
   {
     type = "item-subgroup",
     name = "raw",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "5"
   },
   {
     type = "item-subgroup",
     name = "polished",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "6"
   },
   {
     type = "item-subgroup",
     name = "uselessprocessing",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "7"
   },
   {
     type = "item-subgroup",
     name = "meteors",
-    group = "dytechgem",
+    group = "dytech-gem",
     order = "8"
   },
 }

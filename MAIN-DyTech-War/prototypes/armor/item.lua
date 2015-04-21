@@ -24,8 +24,8 @@ data:extend(
       }
     },
     durability = 30000,
-    subgroup = "armor",
-    order = "power-armor-mk3",
+    subgroup = "dytech-combat-armor",
+    order = "a[power-armor-mk3]",
     stack_size = 1,
     equipment_grid = {width = 18, height = 18}
   }

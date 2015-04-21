@@ -5,7 +5,7 @@ data:extend(
     name = "sand",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/sand.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "raw-material",
+    subgroup = "dytech-intermediates-raw",
     order = "sand",
     stack_size = 5000
   },
@@ -14,8 +14,8 @@ data:extend(
     name = "sandbag",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/sandbag.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechpowerintermediates",
-    order = "[s]sandbag",
+    subgroup = "dytech-intermediates-processed",
+    order = "sandbag",
     stack_size = 500
   },
   {
@@ -23,8 +23,8 @@ data:extend(
     name = "glass",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/glass.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechpowerintermediates",
-    order = "[g]glass",
+    subgroup = "dytech-intermediates-processed",
+    order = "glass",
     stack_size = 100
   },
   {
@@ -32,8 +32,8 @@ data:extend(
     name = "obsidian",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/obsidian.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechmachineintermediates",
-    order = "[o]obsidian",
+    subgroup = "dytech-intermediates-raw",
+    order = "obsidian",
     stack_size = 200
   },
   {
@@ -41,7 +41,7 @@ data:extend(
     name = "bone",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/bone.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-intermediates-raw",
     order = "bone",
     stack_size = 200
   },
@@ -50,7 +50,7 @@ data:extend(
     name = "bone-charcoal",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/bone-charcoal.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-intermediates-processed",
     order = "bone-charcoal",
     fuel_value = "3.5MJ",
     stack_size = 100
@@ -60,7 +60,7 @@ data:extend(
     name = "chitin",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/chitin.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "dytechbiteritems",
+    subgroup = "dytech-intermediates-raw",
     order = "chitin",
     stack_size = 200
   },

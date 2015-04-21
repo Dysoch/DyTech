@@ -8,7 +8,7 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/equipment/icon/basic-laser-defense-equipment-2.png",
     placed_as_equipment_result = "basic-laser-defense-equipment-2",
     flags = {"goes-to-main-inventory"},
-    subgroup = "equipment",
+    subgroup = "dytech-combat-equipment",
     order = "d[active-defense]-a[basic-laser-defense-equipment]",
     stack_size = 16
   },
@@ -18,7 +18,7 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/equipment/icon/basic-laser-defense-equipment-3.png",
     placed_as_equipment_result = "basic-laser-defense-equipment-3",
     flags = {"goes-to-main-inventory"},
-    subgroup = "equipment",
+    subgroup = "dytech-combat-equipment",
     order = "d[active-defense]-a[basic-laser-defense-equipment]",
     stack_size = 16
   },

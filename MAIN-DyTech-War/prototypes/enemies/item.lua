@@ -56,8 +56,8 @@ data:extend(
     name = "small-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-small-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "1-small",
+    subgroup = "dytech-combat-corpses",
+    order = "1-[small]",
     stack_size = 250
   },
   {
@@ -65,8 +65,8 @@ data:extend(
     name = "medium-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-medium-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "2-medium",
+    subgroup = "dytech-combat-corpses",
+    order = "2-[medium]",
     stack_size = 250
   },
   {
@@ -74,8 +74,8 @@ data:extend(
     name = "big-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-big-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "3-big",
+    subgroup = "dytech-combat-corpses",
+    order = "3-[big]",
     stack_size = 250
   },
   {
@@ -83,8 +83,8 @@ data:extend(
     name = "berserk-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-berserk-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "4-berserk",
+    subgroup = "dytech-combat-corpses",
+    order = "4-[berserk]",
     stack_size = 250
   },
   {
@@ -92,8 +92,8 @@ data:extend(
     name = "elder-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-elder-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "5-elder",
+    subgroup = "dytech-combat-corpses",
+    order = "5-[elder]",
     stack_size = 250
   },
   {
@@ -101,8 +101,8 @@ data:extend(
     name = "king-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-king-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "7-king",
+    subgroup = "dytech-combat-corpses",
+    order = "7-[king]",
     stack_size = 250
   },
   {
@@ -110,8 +110,8 @@ data:extend(
     name = "queen-corpse",
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-queen-corpse.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechloot",
-    order = "8-queen",
+    subgroup = "dytech-combat-corpses",
+    order = "8-[queen]",
     stack_size = 250
   },
   {
@@ -119,8 +119,8 @@ data:extend(
     name = "queen-egg",
     icon = "__MAIN-DyTech-War__/graphics/enemies/queen-egg.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "raw-material",
-    order = "b-q-e",
+    subgroup = "dytech-intermediates-enemies",
+    order = "a[egg]",
     stack_size = 250
   },
 }

@@ -5,8 +5,8 @@ data:extend(
     name = "car2",
     icon = "__MAIN-DyTech-Machine__/graphics/cars/car2.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "transport",
-    order = "a-c",
+    subgroup = "dytech-machines-transport",
+    order = "a-[armored-car]",
     place_result = "car2",
     stack_size = 10
   },

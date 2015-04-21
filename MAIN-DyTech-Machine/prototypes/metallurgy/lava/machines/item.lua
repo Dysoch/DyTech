@@ -5,7 +5,7 @@ data:extend(
     name = "geothermal-extractor",
     icon = "__base__/graphics/icons/pumpjack.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "mining",
+    subgroup = "dytech-machines-metallurgy",
     order = "g-e",
     place_result = "geothermal-extractor",
     stack_size = 10
@@ -15,7 +15,7 @@ data:extend(
     name = "lava-heater",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/machines/liquid-handler.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "assembling",
+    subgroup = "dytech-machines-metallurgy",
     order = "lava-heater",
     place_result = "lava-heater",
     stack_size = 50
@@ -25,7 +25,7 @@ data:extend(
     name = "lava-cooler",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/machines/liquid-handler.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "assembling",
+    subgroup = "dytech-machines-metallurgy",
     order = "lava-cooler",
     place_result = "lava-cooler",
     stack_size = 50

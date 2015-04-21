@@ -6,7 +6,7 @@ data:extend(
     icon = "__base__/graphics/icons/raw-wood.png",
     category = "centrifuge",
     energy_required = 7.5,
-    subgroup = "raw-material",
+    subgroup = "dytech-intermediates-processing",
 	enabled = false,
     ingredients =
     {

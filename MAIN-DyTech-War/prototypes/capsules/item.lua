@@ -1,5 +1,3 @@
-data.raw["capsule"]["basic-grenade"].order = "a[basic-grenade-1]"
-
 data:extend(
 {
   {
@@ -33,8 +31,8 @@ data:extend(
         }
       }
     },
-    subgroup = "capsule",
-    order = "g[marauder-capsule]",
+    subgroup = "dytech-combat-capsules",
+    order = "b[capsule-1]",
     stack_size = 100
   },
   {
@@ -68,8 +66,8 @@ data:extend(
         }
       }
     },
-    subgroup = "capsule",
-    order = "i[sharpshooter-capsule]",
+    subgroup = "dytech-combat-capsules",
+    order = "b[capsule-2]",
     stack_size = 100
   },
   {
@@ -103,8 +101,8 @@ data:extend(
         }
       }
     },
-    subgroup = "capsule",
-    order = "j[frenzy-capsule]",
+    subgroup = "dytech-combat-capsules",
+    order = "b[capsule-3]",
     stack_size = 100
   },
   {
@@ -138,7 +136,7 @@ data:extend(
         }
       }
     },
-    subgroup = "capsule",
+    subgroup = "dytech-combat-capsules",
     order = "a[basic-grenade-2]",
     stack_size = 100
   },
@@ -173,7 +171,7 @@ data:extend(
         }
       }
     },
-    subgroup = "capsule",
+    subgroup = "dytech-combat-capsules",
     order = "a[basic-grenade-3]",
     stack_size = 100
   },

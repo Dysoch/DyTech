@@ -5,8 +5,8 @@ data:extend(
     name = "sulfur-seed",
     icon = "__CORE-DyTech-Core__/graphics/sulfur-tree/icon.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "raw-material",
-    order = "sulfur-seed",
+    subgroup = "dytech-intermediates-raw",
+    order = "seed-sulfur",
     place_result = "sulfur-seed",
     fuel_value = "1MJ",
     stack_size = 50
@@ -16,7 +16,7 @@ data:extend(
     name = "sulfur-wood",
     icon = "__CORE-DyTech-Core__/graphics/sulfur-tree/wood.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "raw-material",
+    subgroup = "dytech-intermediates-raw",
     order = "sulfur-wood",
     fuel_value = "5MJ",
     stack_size = 50

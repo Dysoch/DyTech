@@ -1,13 +1,13 @@
 data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 20
 data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 13
-data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {900, 142.5}
+data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {900, 142}
 data.raw["unit-spawner"]["biter-spawner"].max_health = 2500
 data.raw["unit-spawner"]["biter-spawner"].spawning_radius = 20
 data.raw["unit-spawner"]["biter-spawner"].spawning_spacing = 2
 data.raw["unit-spawner"]["biter-spawner"].max_spawn_shift = 0.65
 data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 15
 data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 13
-data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {900, 199.5}
+data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {900, 199}
 data.raw["unit-spawner"]["spitter-spawner"].max_health = 3500
 data.raw["unit-spawner"]["spitter-spawner"].spawning_radius = 20
 data.raw["unit-spawner"]["spitter-spawner"].spawning_spacing = 2

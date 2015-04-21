@@ -4,6 +4,7 @@
 [list]
 [*] Features:
 [list][*] Added in Cheats. Toggle them on in the config file!
+[*] Complete new item sort of the menu. All DyTech Items are sorted properly in menu's!
 [/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing

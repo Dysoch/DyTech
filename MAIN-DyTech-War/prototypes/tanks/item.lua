@@ -5,8 +5,8 @@ data:extend(
     name = "tank-dytech-1",
     icon = "__base__/graphics/icons/tank.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "transport",
-    order = "b[personal-transport]-c[tank-dytech-1]",
+    subgroup = "dytech-combat-transport",
+    order = "b[tank]-b[tank-2]",
     place_result = "tank-dytech-1",
     stack_size = 1
   },
@@ -15,8 +15,8 @@ data:extend(
     name = "laser-gun-tank",
     icon = "__MAIN-DyTech-War__/graphics/gun-laser/sniper.png",
     flags = {"goes-to-main-inventory", "hidden"},
-    subgroup = "gun",
-    order = "z[tank]-g[laser]",
+    subgroup = "dytech-combat-guns",
+    order = "z[tank]-a[laser]",
     attack_parameters =
     {
       ammo_category = "battery-tank",
@@ -59,8 +59,8 @@ data:extend(
       }
     },
     magazine_size = 50,
-    subgroup = "ammo",
-    order = "z[tank]-i[battery-1]",
+    subgroup = "dytech-combat-ammo",
+    order = "z[tank]-a[battery-1]",
     stack_size = 100
   },
 }

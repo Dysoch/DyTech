@@ -5,8 +5,8 @@ data:extend(
     name = "sniper",
     icon = "__MAIN-DyTech-War__/graphics/gun-sniper/sniper.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "gun",
-    order = "s[sniper]",
+    subgroup = "dytech-combat-guns",
+    order = "a[sniper]",
     attack_parameters =
     {
       ammo_category = "sniper-ammo",

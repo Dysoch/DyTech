@@ -34,8 +34,8 @@ data:extend(
       }
     },
     magazine_size = 5,
-    subgroup = "ammo",
-    order = "i[sniper]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[sniper]",
     stack_size = 25
   },
   {
@@ -63,8 +63,8 @@ data:extend(
       }
     },
     magazine_size = 50,
-    subgroup = "ammo",
-    order = "i[laser-clip-1]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-1]",
     stack_size = 100
   },
   {
@@ -92,8 +92,8 @@ data:extend(
       }
     },
     magazine_size = 75,
-    subgroup = "ammo",
-    order = "i[laser-clip-2]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-2]",
     stack_size = 100
   },
   {
@@ -121,8 +121,8 @@ data:extend(
       }
     },
     magazine_size = 100,
-    subgroup = "ammo",
-    order = "i[laser-clip-3]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-3]",
     stack_size = 100
   },
   {
@@ -155,8 +155,8 @@ data:extend(
       }
     },
     magazine_size = 50,
-    subgroup = "ammo",
-    order = "i[laser-clip-shotgun-1]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-shotgun-1]",
     stack_size = 100
   },
   {
@@ -189,8 +189,8 @@ data:extend(
       }
     },
     magazine_size = 75,
-    subgroup = "ammo",
-    order = "i[laser-clip-shotgun-2]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-shotgun-2]",
     stack_size = 100
   },
   {
@@ -223,8 +223,8 @@ data:extend(
       }
     },
     magazine_size = 100,
-    subgroup = "ammo",
-    order = "i[laser-clip-shotgun-3]",
+    subgroup = "dytech-combat-ammo",
+    order = "a[laser-clip-shotgun-3]",
     stack_size = 100
   },
 }

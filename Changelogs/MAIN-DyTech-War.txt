@@ -4,7 +4,6 @@
 [list]
 [*] Features:
 [list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! Place them INFRONT of your walls to keep your walls alive (you will see why when you get there! :) )
-[*] Properly sorted Laser Turrets in the menu. They are now behind each other.
 [*] Decreased Evolution Factor by 50% to make it a little easier to survive!
 [/list]
 [*] Balancing:

@@ -5,8 +5,8 @@ data:extend(
     name = "laser-gun",
     icon = "__MAIN-DyTech-War__/graphics/gun-laser/sniper.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "gun",
-    order = "g[laser]",
+    subgroup = "dytech-combat-guns",
+    order = "b[laser]",
     attack_parameters =
     {
       ammo_category = "battery",
@@ -29,8 +29,8 @@ data:extend(
     name = "laser-shotgun",
     icon = "__MAIN-DyTech-War__/graphics/gun-laser/sniper.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "gun",
-    order = "g[laser]-b[shotgun]",
+    subgroup = "dytech-combat-guns",
+    order = "a[laser]-b[shotgun]",
     attack_parameters =
     {
       ammo_category = "battery-shotgun",

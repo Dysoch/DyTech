@@ -2,39 +2,39 @@ data:extend(
 {
   {
     type = "item-group",
-    name = "dytechmodules",
-    order = "d-mo",
-	inventory_order = "f",
-    icon = "__CORE-DyTech-Core__/graphics/item-group/dymodules.png",
+    name = "dytech-modules",
+    order = "z-dytech-modules",
+	inventory_order = "z-dytech-modules",
+    icon = "__CORE-DyTech-Core__/graphics/item-group/modules.png",
   },
   {
     type = "item-subgroup",
     name = "speed-module",
-    group = "dytechmodules",
+    group = "dytech-modules",
     order = "1"
   },
   {
     type = "item-subgroup",
     name = "effectivity-module",
-    group = "dytechmodules",
+    group = "dytech-modules",
     order = "2"
   },
   {
     type = "item-subgroup",
     name = "productivity-module",
-    group = "dytechmodules",
+    group = "dytech-modules",
     order = "3"
   },
   {
     type = "item-subgroup",
     name = "pollution-create-module",
-    group = "dytechmodules",
+    group = "dytech-modules",
     order = "4"
   },
   {
     type = "item-subgroup",
     name = "pollution-clean-module",
-    group = "dytechmodules",
+    group = "dytech-modules",
     order = "5"
   },
 }

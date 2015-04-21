@@ -5,8 +5,8 @@ data:extend(
 	name = "uraniumdioxide"
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uraniumdioxide.png",
 	flags = {"goes-to-main-inventory"},
-	subgroup = "intermediate-product",
-	order = "d-a",
+	subgroup = "dytech-nuclear-ores",
+	order = "uraniumdioxide",
 	stack_size = 100
   },
   {
@@ -14,8 +14,8 @@ data:extend(
 	name = "triuraniumhexaoxide",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/triuraniumhexaoxide.png",
 	flags = {"goes-to-main-inventory"},
-	subgroup = "intermediate-product",
-	order = "d-b",
+	subgroup = "dytech-nuclear-ores",
+	order = "triuraniumhexaoxide",
 	stack_size = 100
   },
   {
@@ -23,8 +23,8 @@ data:extend(
 	name = "fluorite",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/fluorite.png",
 	flags = {"goes-to-main-inventory"},
-	subgroup = "intermediate-product",
-	order = "d-c",
+	subgroup = "dytech-nuclear-ores",
+	order = "fluorite",
 	stack_size = 50
   },
   {
@@ -32,8 +32,8 @@ data:extend(
 	name = "uraniumhexafluoride",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uraniumhexafluoride.png",
 	flags = {"goes-to-main-inventory"},
-	subgroup = "intermediate-product",
-	order = "d-d",
+	subgroup = "dytech-nuclear-ores",
+	order = "uraniumhexafluoride",
 	stack_size = 50
   }
 })

@@ -19,7 +19,7 @@ data:extend(
       }
     },
     durability = 7500,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-c[zinc-axe]",
     speed = 4,
     stack_size = 20
@@ -43,7 +43,7 @@ data:extend(
       }
     },
     durability = 6000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-d[tin-axe]",
     speed = 4.25,
     stack_size = 20
@@ -67,7 +67,7 @@ data:extend(
       }
     },
     durability = 5000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-e[silver-axe]",
     speed = 7.5,
     stack_size = 20
@@ -91,7 +91,7 @@ data:extend(
       }
     },
     durability = 12000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-f[lead-axe]",
     speed = 5,
     stack_size = 20
@@ -115,7 +115,7 @@ data:extend(
       }
     },
     durability = 25000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-g[tungsten-axe]",
     speed = 7.5,
     stack_size = 20
@@ -139,7 +139,7 @@ data:extend(
       }
     },
     durability = 30000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-h[cobalt-axe]",
     speed = 10,
     stack_size = 20
@@ -163,7 +163,7 @@ data:extend(
       }
     },
     durability = 25000,
-    subgroup = "tool",
+    subgroup = "dytech-intermediates-tools",
     order = "a[mining]-i[ardite-axe]",
     speed = 15,
     stack_size = 20

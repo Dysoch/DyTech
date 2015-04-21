@@ -5,7 +5,7 @@ data:extend(
     name = "mold-plate",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/icons/mold-plate.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "molds",
+    subgroup = "dytech-intermediates-molds",
     order = "mold-plate",
     stack_size = 200
   },
@@ -14,7 +14,7 @@ data:extend(
     name = "clay",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/icons/clay.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "metallurgy-intermediates",
+    subgroup = "dytech-intermediates-raw",
     order = "clay",
     stack_size = 200
   },

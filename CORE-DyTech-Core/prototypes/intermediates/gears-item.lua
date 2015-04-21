@@ -1,6 +1,3 @@
-data.raw["item"]["iron-gear-wheel"].subgroup = "dytechgears"
-data.raw["item"]["iron-gear-wheel"].order = "[b]iron"
-
 data:extend(
 {
   {
@@ -8,7 +5,7 @@ data:extend(
     name = "stone-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/stone-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[a]stone",
     stack_size = 100
   },
@@ -17,7 +14,7 @@ data:extend(
     name = "steel-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/steel-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[c]steel",
     stack_size = 100
   },
@@ -26,7 +23,7 @@ data:extend(
     name = "tin-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/tin-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[d]tin",
     stack_size = 100
   },
@@ -35,7 +32,7 @@ data:extend(
     name = "zinc-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/zinc-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[e]zinc",
     stack_size = 100
   },
@@ -44,7 +41,7 @@ data:extend(
     name = "lead-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/lead-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[f]lead",
     stack_size = 100
   },
@@ -53,7 +50,7 @@ data:extend(
     name = "cobalt-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/cobalt-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[g]cobalt",
     stack_size = 100
   },
@@ -62,7 +59,7 @@ data:extend(
     name = "tungsten-gear-wheel",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/tungsten-gear-wheel.png",
     flags = {"goes-to-main-inventory"},
-    subgroup = "dytechgears",
+    subgroup = "dytech-intermediates-gears",
     order = "[h]tungsten",
     stack_size = 100
   },
