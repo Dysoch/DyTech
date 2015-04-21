@@ -32,10 +32,10 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "combat-robot-laser",
-      cooldown = 15,
+      cooldown = 12,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 20,
+      range = 25,
       sound =
       {
         {

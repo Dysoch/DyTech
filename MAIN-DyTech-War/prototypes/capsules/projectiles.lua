@@ -16,28 +16,8 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "marauder",
-            offset = {-0.7, -0.7}
+            offset = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0},{1,0}}
           },
-          {
-            type = "create-entity",
-            entity_name = "marauder",
-            offset = {-0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "marauder",
-            offset = {0.7, -0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "marauder",
-            offset = {0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "marauder",
-            offset = {0, 0}
-          }
         }
       }
     },
@@ -76,28 +56,8 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "sharpshooter",
-            offset = {-0.7, -0.7}
+            offset = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0}}
           },
-          {
-            type = "create-entity",
-            entity_name = "sharpshooter",
-            offset = {-0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "sharpshooter",
-            offset = {0.7, -0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "sharpshooter",
-            offset = {0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "sharpshooter",
-            offset = {0, 0}
-          }
         }
       }
     },
@@ -136,28 +96,8 @@ data:extend(
           {
             type = "create-entity",
             entity_name = "frenzy",
-            offset = {-0.7, -0.7}
+            offset = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7},{0, 0}}
           },
-          {
-            type = "create-entity",
-            entity_name = "frenzy",
-            offset = {-0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "frenzy",
-            offset = {0.7, -0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "frenzy",
-            offset = {0.7, 0.7}
-          },
-          {
-            type = "create-entity",
-            entity_name = "frenzy",
-            offset = {0, 0}
-          }
         }
       }
     },
