@@ -41,3 +41,6 @@ King_Health = 5000 --Default = 5000
 Queen_Health = 1000 --Default = 1000
 Biter_Modifier = 1.5
 -- Biter Modifier is an option to have Biters have more health then Spitters. Default = 1.5 times the health of the Spitters! (so 50% more!)
+
+Evolution_Reduced = true
+-- This will halve the evolution factors, meaning you have twice as long till stronger enemies appear
