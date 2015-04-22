@@ -5,14 +5,14 @@ if Infinite_Resources_Cheaty and not Infinite_Resources_Normal then
 		v.infinite = true
 		v.minimum = 17500
 		v.normal = 35000
-		v.autoplace.richness_base = 250000
+		v.autoplace.richness_base = 2500000
 	end
 elseif Infinite_Resources_Normal and not Infinite_Resources_Cheaty then
 	for k, v in pairs(data.raw.resource) do
 		v.infinite = true
 		v.minimum = 175
 		v.normal = 350
-		v.autoplace.richness_base = 2500
+		v.autoplace.richness_base = 25000
 	end
 end
 
