@@ -6,6 +6,8 @@ if Infinite_Resources_Cheaty and not Infinite_Resources_Normal then
 		v.minimum = 17500
 		v.normal = 35000
 		v.autoplace.richness_base = 2500000
+		v.minable.hardness = 0.2
+		v.minable.mining_time = 0.5
 	end
 elseif Infinite_Resources_Normal and not Infinite_Resources_Cheaty then
 	for k, v in pairs(data.raw.resource) do
@@ -36,6 +38,8 @@ if All_Recipes_Unlocked_From_Start then
 	for k, v in pairs(data.raw.recipe) do
 		if not v.enabled then
 			v.enabled = true
+		elseif v.enabled == "false" then
+			v.enabled = "true"
 		end
 	end
 end

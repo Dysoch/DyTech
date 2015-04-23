@@ -31,28 +31,101 @@ data:extend(
 	selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	autoplace =
     {
-      control = "metallurgy-ores",
+      control = "cobalt-ore",
       sharpness = 0.85,
-      max_probability = 0.06,
+      max_probability = 0.12,
       richness_multiplier = 14000,
       richness_base = 11,
-      size_control_multiplier = 0.06,
-      peaks = {
+      size_control_multiplier = 0.12,
+      peaks =
+      {
         {
-          influence = 0.2,
+          influence = 0,
+          richness_influence = 100,
+          tier_from_start_optimal = 20,
+          tier_from_start_top_property_limit = 20,
+          tier_from_start_max_range = 40,
+        },
+        {
+          influence = 0.26,
           starting_area_weight_optimal = 0,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
-          influence = 0.3,
-          starting_area_weight_optimal = -1,
+          influence = -10.2,
+          starting_area_weight_optimal = 1,
           starting_area_weight_range = 0,
           starting_area_weight_max_range = 2,
         },
         {
+          influence = 0.424,
+          noise_layer = "enemy-base",
+          noise_octaves_difference = -1.8,
+          noise_persistence = 0.5,
+        },
+        -- increase the size when moving further away
+        {
+          influence = 0.5,
+          noise_layer = "enemy-base",
+          noise_octaves_difference = -1.8,
+          noise_persistence = 0.5,
+          tier_from_start_optimal = 20,
+          tier_from_start_top_property_limit = 20,
+          tier_from_start_max_range = 40,
+        },
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "iron-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "copper-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "gold-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "silver-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "lead-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "tin-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+		{
+		  influence = -0.99, -- Negative influence reduces value near iron
+		  max_influence = 0, -- Max of 0 stops copper from generating on iron
+		  noise_layer = "zinc-ore", -- Noise layer determines what to avoid
+		  noise_octaves_difference = -2.3, -- Increased effect further from start to match irons own increase
+		  noise_persistence = 0.45,
+		},
+        {
           influence = 0.725,
-          noise_layer = "cobalt-ore",
+          noise_layer = "ardite-ore",
           noise_octaves_difference = -1.8,
           noise_persistence = 0.8,
           starting_area_weight_optimal = 0,
@@ -61,7 +134,7 @@ data:extend(
         },
         {
           influence = 0.627,
-          noise_layer = "ardite-ore",
+          noise_layer = "cobalt-ore",
           noise_octaves_difference = -2.2,
           noise_persistence = 0.9,
           starting_area_weight_optimal = 0,
@@ -69,34 +142,15 @@ data:extend(
           starting_area_weight_max_range = 2,
         },
         {
-          influence = -0.22,
-          max_influence = 0,
-          noise_layer = "metallurgy-ores",
-          noise_octaves_difference = -3,
-          noise_persistence = 0.45,
+          influence = 0.627,
+          noise_layer = "tungsten-ore",
+          noise_octaves_difference = -2.2,
+          noise_persistence = 0.9,
+          starting_area_weight_optimal = 0,
+          starting_area_weight_range = 0,
+          starting_area_weight_max_range = 2,
         },
-        {
-          influence = -0.22,
-          max_influence = 0,
-          noise_layer = "metallurgy-ores",
-          noise_octaves_difference = -2.3,
-          noise_persistence = 0.45,
-        },
-        {
-          influence = -0.22,
-          max_influence = 0,
-          noise_layer = "metallurgy-ores",
-          noise_octaves_difference = -2.3,
-          noise_persistence = 0.45,
-        },
-        {
-          influence = -0.22,
-          max_influence = 0,
-          noise_layer = "metallurgy-ores",
-          noise_octaves_difference = -2.3,
-          noise_persistence = 0.45,
-        },
-      },
+      }
     },
     stage_counts = {1000, 750, 500, 400, 200, 100, 50, 20},
 	stages = 

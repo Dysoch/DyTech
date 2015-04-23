@@ -8,6 +8,11 @@
 [/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing
+[*] Increased Player Inventory Space: 100 > 150
+[*] Completely changed ore generation:
+[list]
+[*] Ardite, Cobalt and Tungsten: Only found around Enemy Bases.
+[/list]
 [/list]
 [/list]
 

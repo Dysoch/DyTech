@@ -3,7 +3,7 @@ require("prototypes.override-functions")
 --[[ Entities ]]--
 data.raw["resource"]["stone"].richness_multiplier = 18850
 data.raw["resource"]["stone"].richness_base = 435
-data.raw["player"]["player"].inventory_size = 100
+data.raw["player"]["player"].inventory_size = 150
 data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 3
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
 data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 8

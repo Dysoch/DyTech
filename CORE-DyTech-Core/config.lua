@@ -24,7 +24,7 @@ Technology_Takes_Less_Time = false
 All_Recipes_Unlocked_From_Start = false
 -- Unlockes all recipes right from the start!
 
-Stacksize_Increase = false
-Stacksize_Increase_Factor = 2
+Stacksize_Increase = true
+Stacksize_Increase_Factor = 1000
 -- Change this number to change all stacksizes in the game.
 -- All stacksizes will be changed like this: Original Stacksize * Factor
