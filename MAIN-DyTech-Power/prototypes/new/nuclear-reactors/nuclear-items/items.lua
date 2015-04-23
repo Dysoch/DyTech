@@ -2,7 +2,7 @@ data:extend(
 {
   {
 	type = "item",
-	name = "uraniumdioxide"
+	name = "uraniumdioxide",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uraniumdioxide.png",
 	flags = {"goes-to-main-inventory"},
 	subgroup = "dytech-nuclear-ores",

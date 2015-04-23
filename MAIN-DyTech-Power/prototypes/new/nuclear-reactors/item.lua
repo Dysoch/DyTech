@@ -1,3 +1,4 @@
+--[[
 data:extend(
 {
   {
@@ -21,4 +22,4 @@ data:extend(
 	stack_size = 1
   }
 }
-)
+)]]
