@@ -3,7 +3,7 @@
 -- The general rule is: TRUE is on, FALSE is off!
 
 -- Toggle between Old DyTech-Power(only steam engines, solars, accu's and boilers) and the new one with a lot more content.
-Use_Wattage = true
+Use_Wattage = false
 
 --[[Nuclear Reactors Toggle]]--
 -- Don't like the Nuclear Reactors? Here you can switch them off!
