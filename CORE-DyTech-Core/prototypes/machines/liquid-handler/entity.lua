@@ -1,3 +1,5 @@
+require "prototypes.internal-config"
+
 data:extend(
 {
   {
@@ -6,8 +8,9 @@ data:extend(
     icon = "__CORE-DyTech-Core__/graphics/machines/liquid-handler.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "liquid-handler"},
-    max_health = 300,
+    max_health = Health.Tier2,
     corpse = "small-remnants",
+    resistances = Resistances.Tier2,
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     animation =

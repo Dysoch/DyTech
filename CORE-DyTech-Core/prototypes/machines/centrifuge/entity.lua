@@ -1,4 +1,5 @@
 require ("prototypes.machines.centrifuge.functions")
+require "prototypes.internal-config"
 
 data:extend(
 {
@@ -8,15 +9,9 @@ data:extend(
     icon = "__CORE-DyTech-Core__/graphics/metallurgy/icons/centrifuge.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "centrifuge"},
-    max_health = 300,
+    max_health = Health.Tier2,
     corpse = "big-remnants",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    resistances = Resistances.Tier2,
     fluid_boxes =
     {
       {
