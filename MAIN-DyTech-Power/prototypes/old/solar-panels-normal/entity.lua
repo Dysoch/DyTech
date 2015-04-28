@@ -1,4 +1,8 @@
+require "prototypes.internal-config"
+
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
+data.raw["solar-panel"]["solar-panel"].max_health = Health.Tier1
+data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Tier1
 
 data:extend(
 {
@@ -8,7 +12,8 @@ data:extend(
     icon = "__base__/graphics/icons/solar-panel.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary"},
-    max_health = 100,
+    max_health = Health.Tier1,
+	resistances = Resistances.Tier1,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -33,7 +38,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk2"},
-    max_health = 100,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -50,7 +56,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "100kW"
+    production = "360kW"
   },
   {
     type = "solar-panel",
@@ -58,7 +64,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk2"},
-    max_health = 100,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -75,7 +82,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "100kW"
+    production = "360kW"
   },
   {
     type = "solar-panel",
@@ -83,7 +90,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk3"},
-    max_health = 100,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -100,7 +108,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "150kW"
+    production = "2160kW"
   },
   {
     type = "solar-panel",
@@ -108,7 +116,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk3"},
-    max_health = 100,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -125,7 +134,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "150kW"
+    production = "2160kW"
   },
   {
     type = "solar-panel",
@@ -133,7 +142,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk4"},
-    max_health = 100,
+    max_health = Health.Tier7,
+	resistances = Resistances.Tier7,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -150,7 +160,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "210kW"
+    production = "12960kW"
   },
   {
     type = "solar-panel",
@@ -158,7 +168,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk4"},
-    max_health = 100,
+    max_health = Health.Tier7,
+	resistances = Resistances.Tier7,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -175,7 +186,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "210kW"
+    production = "12960kW"
   },
   {
     type = "solar-panel",
@@ -183,7 +194,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk5"},
-    max_health = 100,
+    max_health = Health.Tier9,
+	resistances = Resistances.Tier9,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -200,7 +212,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "280kW"
+    production = "77760kW"
   },
   {
     type = "solar-panel",
@@ -208,7 +220,8 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk5"},
-    max_health = 100,
+    max_health = Health.Tier9,
+	resistances = Resistances.Tier9,
     corpse = "big-remnants",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -225,7 +238,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "280kW"
+    production = "77760kW"
   },
 }
 )

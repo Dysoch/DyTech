@@ -21,7 +21,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"solar-panel", 1},
+      {"solar-panel", 5},
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
@@ -34,7 +34,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"solar-panel-secondary", 1},
+      {"solar-panel-secondary", 5},
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
@@ -47,7 +47,7 @@ data:extend(
     energy_required = 30,
     ingredients =
     {
-      {"solar-panel-primary-mk2", 1},
+      {"solar-panel-primary-mk2", 5},
       {"processing-unit", 15},
       {"tin-plate", 20},
       {"flux-capacitor-2", 2},
@@ -61,7 +61,7 @@ data:extend(
     energy_required = 30,
     ingredients =
     {
-      {"solar-panel-secondary-mk2", 1},
+      {"solar-panel-secondary-mk2", 5},
       {"processing-unit", 15},
       {"tin-plate", 20},
       {"flux-capacitor-2", 2},
@@ -75,7 +75,7 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"solar-panel-primary-mk3", 1},
+      {"solar-panel-primary-mk3", 5},
       {"advanced-processing-unit", 15},
       {"zinc-plate", 40},
       {"flux-capacitor-3", 5},
@@ -89,7 +89,7 @@ data:extend(
     energy_required = 40,
     ingredients =
     {
-      {"solar-panel-secondary-mk3", 1},
+      {"solar-panel-secondary-mk3", 5},
       {"advanced-processing-unit", 15},
       {"zinc-plate", 40},
       {"flux-capacitor-3", 5},
@@ -103,7 +103,7 @@ data:extend(
     energy_required = 50,
     ingredients =
     {
-      {"solar-panel-primary-mk4", 1},
+      {"solar-panel-primary-mk4", 5},
       {"advanced-processing-unit", 45},
       {"gold-plate", 80},
       {"flux-capacitor-4", 10},
@@ -117,7 +117,7 @@ data:extend(
     energy_required = 50,
     ingredients =
     {
-      {"solar-panel-secondary-mk4", 1},
+      {"solar-panel-secondary-mk4", 5},
       {"advanced-processing-unit", 45},
       {"gold-plate", 80},
       {"flux-capacitor-4", 10},

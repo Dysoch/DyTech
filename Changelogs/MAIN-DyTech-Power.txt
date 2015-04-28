@@ -1,5 +1,17 @@
 [size=200]DyTech-Power[/size]
 
+[i][size=150][b]v1.0.2:[/b][/size][/i]
+[list]
+[*] Features:
+[list][*] Added Resistances to machines.
+[/list]
+[*] Balancing:
+[list] [*] Increased Solar Panels Power Output by 600% and increased recipe cost by 500%.
+[*] Increased Accumulators Power Specs by 600% and increased recipe cost by 500%.
+[*] Changed Health of machines.
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Features:
