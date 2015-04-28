@@ -6,8 +6,8 @@ if Infinite_Resources_Cheaty and not Infinite_Resources_Normal then
 		v.minimum = 17500
 		v.normal = 35000
 		v.autoplace.richness_base = 2500000
-		v.minable.hardness = 0.2
-		v.minable.mining_time = 0.5
+		v.minable.hardness = 0.1
+		v.minable.mining_time = 0.25
 	end
 elseif Infinite_Resources_Normal and not Infinite_Resources_Cheaty then
 	for k, v in pairs(data.raw.resource) do
@@ -46,6 +46,15 @@ end
 
 if Stacksize_Increase then
 	for k, v in pairs(data.raw.item) do
+		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
+	end
+	for k, v in pairs(data.raw.ammo) do
+		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
+	end
+	for k, v in pairs(data.raw.gun) do
+		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
+	end
+	for k, v in pairs(data.raw["mining-tool"]) do
 		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
 	end
 end

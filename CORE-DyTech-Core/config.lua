@@ -12,7 +12,7 @@ Technologies = true
 -- Keep in mind, this breaks the game!
 
 Infinite_Resources_Normal = false
-Infinite_Resources_Cheaty = false
+Infinite_Resources_Cheaty = true
 -- ONLY SWITCH 1 ON!!!!!!! Otherwise it wont work!
 
 Technology_Use_Less_Science_Packs = false 
