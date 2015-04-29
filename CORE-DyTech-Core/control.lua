@@ -134,7 +134,7 @@ game.onevent(defines.events.onresearchfinished, function(event)
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)
-	fs.BuildEntityLogger(event.entity.name)
+	fs.BuildEntityLogger(event.createdentity.name)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then
@@ -162,7 +162,7 @@ local player = game.players[event.playerindex]
 end)
 
 game.onevent(defines.events.onrobotbuiltentity, function(event)
-	fs.RobotBuildEntityLogger(event.entity.name)
+	fs.RobotBuildEntityLogger(event.createdentity.name)
 local player = game.players[event.playerindex]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.createdentity.type == "tree" then

@@ -2,35 +2,7 @@ data:extend(
 {
   {
     type = "recipe-category",
-    name = "crafting"
-  },
-  {
-    type = "recipe-category",
-    name = "smelting"
-  },
-  {
-    type = "recipe-category",
-    name = "packing"
-  },
-  {
-    type = "recipe-category",
-    name = "unpacking"
-  },
-  {
-    type = "recipe-category",
-    name = "gem-crushing"
-  },
-  {
-    type = "recipe-category",
-    name = "gem-grinding"
-  },
-  {
-    type = "recipe-category",
     name = "compressing"
-  },
-  {
-    type = "recipe-category",
-    name = "gem-polishing"
   },
   {
     type = "recipe-category",

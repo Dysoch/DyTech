@@ -1,335 +1,230 @@
 data:extend(
 {
   --[[GEM WORKING]]--
-  --[[CRUSHING]]--
   {
     type = "recipe",
-    name = "ruby-2",
+    name = "crystal-ruby",
 	category = "crafting-with-fluid",
-	energy_required = 12,
+	energy_required = 20,
+    enabled = true,
     ingredients =
     {
-	  {"ruby-ore", 1},
+	  {"crystal", 1},
     },
-    result = "ruby-2",
-	result_count =  2
+    result = "raw-ruby"
   },
   {
     type = "recipe",
-    name = "topaz-2",
+    name = "crystal-sapphire",
 	category = "crafting-with-fluid",
-	energy_required = 12,
+	energy_required = 35,
+    enabled = true,
     ingredients =
     {
-	  {"topaz-ore", 1},
+	  {"crystal", 1},
     },
-    result = "topaz-2",
-	result_count =  2
+    result = "raw-sapphire"
   },
   {
     type = "recipe",
-    name = "emerald-2",
+    name = "crystal-emerald",
 	category = "crafting-with-fluid",
-	energy_required = 12,
+	energy_required = 100,
+    enabled = true,
     ingredients =
     {
-	  {"emerald-ore", 1},
+	  {"crystal", 1},
+	  {"obsidian", 10},
     },
-    result = "emerald-2",
-	result_count =  2
+    result = "raw-emerald"
   },
   {
     type = "recipe",
-    name = "diamond-2",
+    name = "crystal-topaz",
 	category = "crafting-with-fluid",
-	energy_required = 12,
+	energy_required = 60,
+    enabled = true,
     ingredients =
     {
-	  {"diamond-ore", 1},
+	  {"crystal", 1},
+	  {"obsidian", 25},
     },
-    result = "diamond-2",
-	result_count =  2
+    result = "raw-topaz"
   },
   {
     type = "recipe",
-    name = "sapphire-2",
+    name = "crystal-diamond",
 	category = "crafting-with-fluid",
-	energy_required = 12,
+	energy_required = 140,
+    enabled = true,
     ingredients =
     {
-	  {"sapphire-ore", 1},
+	  {"crystal", 1},
+	  {"obsidian", 50},
     },
-    result = "sapphire-2",
-	result_count =  2
+    result = "raw-diamond"
   },
-  --[[GRINDING]]--
+  -- Cutting Gems
   {
     type = "recipe",
-    name = "ruby-3",
+    name = "raw-cut-ruby",
+    icon = "__CORE-DyTech-Core__/graphics/gems/raw-ruby.png",
 	category = "crafting-with-fluid",
-	energy_required = 25,
+    energy_required = 32,
+    enabled = true,
+    subgroup = "dytech-gem-cut",
+    order = "1",
     ingredients =
     {
-	  {"ruby-2", 1},
-    },
-    result = "ruby-3",
-	result_count =  2
-  },
-  {
-    type = "recipe",
-    name = "topaz-3",
-	category = "crafting-with-fluid",
-	energy_required = 25,
-    ingredients =
-    {
-	  {"topaz-2", 1},
-    },
-    result = "topaz-3",
-	result_count =  2
-  },
-  {
-    type = "recipe",
-    name = "emerald-3",
-	category = "crafting-with-fluid",
-	energy_required = 25,
-    ingredients =
-    {
-	  {"emerald-2", 1},
-    },
-    result = "emerald-3",
-	result_count =  2
-  },
-  {
-    type = "recipe",
-    name = "diamond-3",
-	category = "crafting-with-fluid",
-	energy_required = 25,
-    ingredients =
-    {
-	  {"diamond-2", 1},
-    },
-    result = "diamond-3",
-	result_count =  2
-  },
-  {
-    type = "recipe",
-    name = "sapphire-3",
-	category = "crafting-with-fluid",
-	energy_required = 25,
-    ingredients =
-    {
-	  {"sapphire-2", 1},
-    },
-    result = "sapphire-3",
-	result_count =  2
-  },
-  --[[CUTTING]]--
-  {
-    type = "recipe",
-    name = "ruby-4",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {"ruby-3", 1},
-	  {"stone", 10},
-    },
-    result = "ruby-4",
-  },
-  {
-    type = "recipe",
-    name = "topaz-4",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {"topaz-3", 1},
-	  {"stone", 10},
-    },
-    result = "topaz-4",
-  },
-  {
-    type = "recipe",
-    name = "emerald-4",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {"emerald-3", 1},
-	  {"stone", 10},
-    },
-    result = "emerald-4",
-  },
-  {
-    type = "recipe",
-    name = "diamond-4",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {"diamond-3", 1},
-	  {"stone", 10},
-    },
-    result = "diamond-4",
-  },
-  {
-    type = "recipe",
-    name = "sapphire-4",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {"sapphire-3", 1},
-	  {"stone", 10},
-    },
-    result = "sapphire-4",
-  },
-  --[[POLISHING]]--
-  {
-    type = "recipe",
-    name = "ruby-5",
-	category = "crafting-with-fluid",
-	energy_required = 75,
-    ingredients =
-    {
-	  {"ruby-4", 15},
-	  {"stone", 100},
-    },
-    result = "ruby-5",
-  },
-  {
-    type = "recipe",
-    name = "topaz-5",
-	category = "crafting-with-fluid",
-	energy_required = 75,
-    ingredients =
-    {
-	  {"topaz-4", 15},
-	  {"stone", 100},
-    },
-    result = "topaz-5",
-  },
-  {
-    type = "recipe",
-    name = "emerald-5",
-	category = "crafting-with-fluid",
-	energy_required = 75,
-    ingredients =
-    {
-	  {"emerald-4", 15},
-	  {"stone", 100},
-    },
-    result = "emerald-5",
-  },
-  {
-    type = "recipe",
-    name = "diamond-5",
-	category = "crafting-with-fluid",
-	energy_required = 75,
-    ingredients =
-    {
-	  {"diamond-4", 15},
-	  {"stone", 100},
-    },
-    result = "diamond-5",
-  },
-  {
-    type = "recipe",
-    name = "sapphire-5",
-	category = "crafting-with-fluid",
-	energy_required = 75,
-    ingredients =
-    {
-	  {"sapphire-4", 15},
-	  {"stone", 100},
-    },
-    result = "sapphire-5",
-  },
-  --[[USELESS ORE GRINDING]]--
-  {
-    type = "recipe",
-    name = "stone-1",
-    icon = "__base__/graphics/icons/stone.png",
-    subgroup = "uselessprocessing",
-	category = "crafting-with-fluid",
-	energy_required = 50,
-    ingredients =
-    {
-	  {type="item", name="ruby-orex", amount=1}
+	  {type="fluid", name="water", amount=50},
+	  {type="item", name="raw-ruby", amount=1},
     },
     results = 
 	{
-      {type="item", name="stone", amount_min=1, amount_max=6, probability=1},
-      --{type="item", name="sand", amount_min=1, amount_max=50, probability=0.2},
-	},
+	  {type="item", name="cut-ruby", amount=1},
+	}
   },
   {
     type = "recipe",
-    name = "stone-2",
-    icon = "__base__/graphics/icons/stone.png",
-    subgroup = "uselessprocessing",
+    name = "raw-cut-sapphire",
+    icon = "__CORE-DyTech-Core__/graphics/gems/raw-sapphire.png",
 	category = "crafting-with-fluid",
-	energy_required = 50,
+    energy_required = 56,
+    enabled = true,
+    subgroup = "dytech-gem-cut",
+    order = "2",
     ingredients =
     {
-	  {type="item", name="topaz-orex", amount=1}
+	  {type="fluid", name="water", amount=50},
+	  {type="item", name="raw-sapphire", amount=1},
     },
     results = 
 	{
-      {type="item", name="stone", amount_min=1, amount_max=4, probability=1},
-      --{type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
-	},
+	  {type="item", name="cut-sapphire", amount=1},
+	}
   },
   {
     type = "recipe",
-    name = "stone-3",
-    icon = "__base__/graphics/icons/stone.png",
-    subgroup = "uselessprocessing",
+    name = "raw-cut-emerald",
+    icon = "__CORE-DyTech-Core__/graphics/gems/raw-emerald.png",
 	category = "crafting-with-fluid",
-	energy_required = 50,
+    energy_required = 160,
+    enabled = true,
+    subgroup = "dytech-gem-cut",
+    order = "3",
     ingredients =
     {
-	  {type="item", name="emerald-orex", amount=1}
+	  {type="fluid", name="water", amount=50},
+	  {type="item", name="raw-emerald", amount=1},
     },
     results = 
 	{
-      {type="item", name="stone", amount_min=1, amount_max=5, probability=1},
-      --{type="item", name="sand", amount_min=1, amount_max=100, probability=0.2},
-	},
+	  {type="item", name="cut-emerald", amount=1},
+	}
   },
   {
     type = "recipe",
-    name = "stone-4",
-    icon = "__base__/graphics/icons/stone.png",
-    subgroup = "uselessprocessing",
+    name = "raw-cut-topaz",
+    icon = "__CORE-DyTech-Core__/graphics/gems/raw-topaz.png",
 	category = "crafting-with-fluid",
-	energy_required = 50,
+    energy_required = 96,
+    enabled = true,
+    subgroup = "dytech-gem-cut",
+    order = "4",
     ingredients =
     {
-	  {type="item", name="diamond-orex", amount=1}
+	  {type="fluid", name="water", amount=50},
+	  {type="item", name="raw-topaz", amount=1},
     },
     results = 
 	{
-      {type="item", name="stone", amount_min=1, amount_max=2, probability=1},
-      --{type="item", name="sand", amount_min=1, amount_max=250, probability=0.25},
-	},
+	  {type="item", name="cut-topaz", amount=1},
+	}
   },
   {
     type = "recipe",
-    name = "stone-5",
-    icon = "__base__/graphics/icons/stone.png",
-    subgroup = "uselessprocessing",
+    name = "raw-cut-diamond",
+    icon = "__CORE-DyTech-Core__/graphics/gems/raw-diamond.png",
 	category = "crafting-with-fluid",
-	energy_required = 50,
+    energy_required = 224,
+    enabled = true,
+    subgroup = "dytech-gem-cut",
+    order = "5",
     ingredients =
     {
-	  {type="item", name="sapphire-orex", amount=1}
+	  {type="fluid", name="water", amount=50},
+	  {type="item", name="raw-diamond", amount=1},
     },
     results = 
 	{
-      {type="item", name="stone", amount_min=1, amount_max=4, probability=1},
-      --{type="item", name="sand", amount_min=1, amount_max=150, probability=0.2},
-	},
+	  {type="item", name="cut-diamond", amount=1},
+	}
+  },
+  -- Compressing Gems
+  {
+    type = "recipe",
+    name = "cut-compressed-ruby",
+	category = "compressing",
+	energy_required = 58,
+    enabled = true,
+    ingredients =
+    {
+	  {"cut-ruby", 1},
+	  {"stone", 100},
+    },
+    result = "compressed-ruby"
+  },
+  {
+    type = "recipe",
+    name = "cut-compressed-sapphire",
+	category = "compressing",
+	energy_required = 101,
+    enabled = true,
+    ingredients =
+    {
+	  {"cut-sapphire", 1},
+	  {"stone", 100},
+    },
+    result = "compressed-sapphire"
+  },
+  {
+    type = "recipe",
+    name = "cut-compressed-emerald",
+	category = "compressing",
+	energy_required = 288,
+    enabled = true,
+    ingredients =
+    {
+	  {"cut-emerald", 1},
+	  {"stone", 100},
+    },
+    result = "compressed-emerald"
+  },
+  {
+    type = "recipe",
+    name = "cut-compressed-topaz",
+	category = "compressing",
+	energy_required = 173,
+    enabled = true,
+    ingredients =
+    {
+	  {"cut-topaz", 1},
+	  {"stone", 100},
+    },
+    result = "compressed-topaz"
+  },
+  {
+    type = "recipe",
+    name = "cut-compressed-diamond",
+	category = "compressing",
+	energy_required = 403,
+    enabled = true,
+    ingredients =
+    {
+	  {"cut-diamond", 1},
+	  {"stone", 100},
+    },
+    result = "compressed-diamond"
   },
 }
 )
