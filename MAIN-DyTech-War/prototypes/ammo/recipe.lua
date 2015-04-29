@@ -36,7 +36,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"sapphire-4", 1},
+      {"cut-ruby", 1},
       {"tin-plate", 10},
       {"battery", 1},
     },
@@ -50,7 +50,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"sapphire-4", 1},
+      {"cut-sapphire", 1},
       {"gold-plate", 10},
       {"laser-clip-1", 1},
     },
@@ -64,7 +64,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"emerald-4", 1},
+      {"cut-emerald", 1},
       {"ardite-plate", 10},
       {"laser-clip-2", 1},
     },
@@ -78,7 +78,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"ruby-5", 1},
+      {"compressed-ruby", 1},
       {"tin-plate", 25},
       {"laser-clip-1", 1},
     },
@@ -92,7 +92,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"sapphire-5", 1},
+      {"compressed-sapphire", 1},
       {"zinc-plate", 25},
       {"laser-clip-2", 1},
     },
@@ -106,7 +106,7 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-      {"emerald-5", 1},
+      {"compressed-emerald", 1},
       {"cobalt-plate", 25},
       {"laser-clip-3", 1},
     },

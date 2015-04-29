@@ -70,7 +70,7 @@ data:extend(
 	{
 	  {type="item", name="bone", amount=6},
 	  {type="item", name="chitin", amount=2},
-	  {type="item", name="ruby-3", amount=1},
+	  {type="item", name="raw-ruby", amount=1},
 	}
   },
   {
@@ -89,7 +89,7 @@ data:extend(
 	{
 	  {type="item", name="bone", amount=8},
 	  {type="item", name="chitin", amount=3},
-	  {type="item", name="sapphire-3", amount=1},
+	  {type="item", name="raw-sapphire", amount=1},
 	}
   },
   --[[{
@@ -127,7 +127,7 @@ data:extend(
 	{
 	  {type="item", name="bone", amount=10},
 	  {type="item", name="chitin", amount=4},
-	  {type="item", name="emerald-3", amount=1},
+	  {type="item", name="raw-emerald", amount=1},
 	}
   },
   {

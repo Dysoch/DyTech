@@ -26,7 +26,7 @@ require("prototypes.machines.liquid-handler.item")
 require("prototypes.machines.liquid-handler.recipe")
 require("prototypes.machines.liquid-handler.tech")
 require("prototypes.resources.gems-item")
-require("prototypes.resources.gems-recipe")
+--require("prototypes.resources.gems-recipe")
 require("prototypes.resources.gems-resource")
 require("prototypes.resources.metallurgic-ore-ardite")
 require("prototypes.resources.metallurgic-ore-cobalt")
@@ -120,7 +120,7 @@ for k, v in pairs(data.raw.module) do
 		table.insert(v.limitation, "sandbag")
 		table.insert(v.limitation, "glass")
 		table.insert(v.limitation, "bone-charcoal")
-		table.insert(v.limitation, "ruby-2")
+		--[[table.insert(v.limitation, "ruby-2")
 		table.insert(v.limitation, "ruby-3")
 		table.insert(v.limitation, "ruby-4")
 		table.insert(v.limitation, "ruby-5")
@@ -139,6 +139,6 @@ for k, v in pairs(data.raw.module) do
 		table.insert(v.limitation, "topaz-2")
 		table.insert(v.limitation, "topaz-3")
 		table.insert(v.limitation, "topaz-4")
-		table.insert(v.limitation, "topaz-5")
+		table.insert(v.limitation, "topaz-5")]]--
 	end
 end

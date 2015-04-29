@@ -10,7 +10,7 @@ data:extend(
       {"laser-turret", 1},
       {"battery", 2},
       {"zinc-plate", 10},
-	  {"ruby-4", 2} 
+	  {"cut-ruby", 2} 
     },
     result = "laser-turret-2"
   },
@@ -24,7 +24,7 @@ data:extend(
       {"laser-turret-2", 1},
       {"battery", 5},
       {"zinc-plate", 20},
-      {"ruby-5", 4} 
+      {"compressed-ruby", 4} 
     },
     result = "laser-turret-3"
   },
@@ -40,7 +40,7 @@ data:extend(
       {"gold-plate", 5},
       {"zinc-plate", 5},
       {"silver-plate", 5},
-	  {"sapphire-3", 1} 
+	  {"raw-sapphire", 1} 
     },
     result = "laser-turret-4"
   },
@@ -56,7 +56,7 @@ data:extend(
       {"gold-plate", 10},
       {"zinc-plate", 10},
       {"silver-plate", 10},
-	  {"sapphire-4", 2} 
+	  {"cut-sapphire", 2} 
     },
     result = "laser-turret-5"
   },
@@ -72,7 +72,7 @@ data:extend(
       {"gold-plate", 20},
       {"zinc-plate", 20},
       {"silver-plate", 20},
-	  {"sapphire-5", 4} 
+	  {"compressed-sapphire", 4} 
     },
     result = "laser-turret-6"
   },
@@ -89,7 +89,7 @@ data:extend(
       {"tungsten-plate", 10},
       {"cobalt-plate", 10},
       {"ardite-plate", 10},
-	  {"emerald-3", 1} 
+	  {"raw-emerald", 1} 
     },
     result = "laser-turret-7"
   },
@@ -106,7 +106,7 @@ data:extend(
       {"tungsten-plate", 20},
       {"cobalt-plate", 20},
       {"ardite-plate", 20},
-	  {"emerald-4", 2} 
+	  {"cut-emerald", 2} 
     },
     result = "laser-turret-8"
   },
@@ -123,7 +123,7 @@ data:extend(
       {"tungsten-plate", 40},
       {"cobalt-plate", 40},
       {"ardite-plate", 40},
-	  {"emerald-5", 4} 
+	  {"compressed-emerald", 4} 
     },
     result = "laser-turret-9"
   },
@@ -139,7 +139,7 @@ data:extend(
       {"electronic-circuit", 20},
       {"steel-gear-wheel", 20},
       {"battery", 12},
-	  {"topaz-3", 4} 
+	  {"raw-topaz", 4} 
     },
     result = "laser-turret-sniper-1"
   },
@@ -155,7 +155,7 @@ data:extend(
       {"advanced-circuit", 20},
       {"steel-gear-wheel", 20},
       {"battery", 12},
-	  {"topaz-4", 4} 
+	  {"cut-topaz", 4} 
     },
     result = "laser-turret-sniper-2"
   },
@@ -170,7 +170,7 @@ data:extend(
       {"advanced-processing-unit", 20},
       {"tungsten-gear-wheel", 20},
       {"battery", 12},
-	  {"topaz-5", 4} 
+	  {"compressed-topaz", 4} 
     },
     result = "laser-turret-sniper-3"
   },

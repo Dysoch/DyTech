@@ -70,7 +70,7 @@ data:extend(
   {
     type = "resource",
     name = "gems",
-    icon = "__CORE-DyTech-Core__/graphics/gems/diamond-1.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/crystal-2.png",
     flags = {"placeable-neutral"},
     order="g",
     minable =
@@ -81,64 +81,10 @@ data:extend(
       results =
       {
         {
-          name = "ruby-ore",
+          name = "crystal",
           amount_min = 1,
-          amount_max = 4,
-          probability = 0.2
-        },
-        {
-          name = "sapphire-ore",
-          amount_min = 1,
-          amount_max = 3,
-          probability = 0.2
-        },
-        {
-          name = "emerald-ore",
-          amount_min = 1,
-          amount_max = 3,
-          probability = 0.15
-        },
-        {
-          name = "topaz-ore",
-          amount_min = 1,
-          amount_max = 2,
-          probability = 0.1333
-        },
-        {
-          name = "diamond-ore",
-          amount_min = 1,
-          amount_max = 1,
-          probability = 0.1
-        },
-		{
-          name = "ruby-orex",
-          amount_min = 1,
-          amount_max = 4,
-          probability = 0.4
-        },
-        {
-          name = "sapphire-orex",
-          amount_min = 1,
-          amount_max = 3,
-          probability = 0.4
-        },
-        {
-          name = "emerald-orex",
-          amount_min = 1,
-          amount_max = 3,
-          probability = 0.3
-        },
-        {
-          name = "topaz-orex",
-          amount_min = 1,
-          amount_max = 2,
-          probability = 0.27
-        },
-        {
-          name = "diamond-orex",
-          amount_min = 1,
-          amount_max = 1,
-          probability = 0.2
+          amount_max = 5,
+          probability = 0.95
         },
       }
     },
@@ -151,7 +97,7 @@ data:extend(
       max_probability = 0.08,
       richness_multiplier = 5000,
       richness_base = 29.5,
-      size_control_multiplier = 0.06,
+      size_control_multiplier = 0.05,
       peaks =
       {
         {

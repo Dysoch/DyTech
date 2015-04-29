@@ -244,5 +244,11 @@ remote.addinterface("DyTech-Core",
 		game.makefile("TimeStamp/RobotMinedItems.txt", serpent.block(glob.TimeStamp.RobotMinedItems))
 		game.makefile("TimeStamp/MinedItems.txt", serpent.block(glob.TimeStamp.MinedItems))
 		game.makefile("TimeStamp/CraftedItems.txt", serpent.block(glob.TimeStamp.CraftedItems))
+	end,
+	
+	TimerIncrease = function(Hour, Minute, Second)
+		glob.timer.hours = glob.timer.hours + Hour
+		glob.timer.minutes = glob.timer.minutes + Minute
+		glob.timer.seconds = glob.timer.seconds + Second
 	end
 })

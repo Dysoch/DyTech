@@ -22,7 +22,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"emerald-5", 1},
+      {"compressed-emerald", 1},
       {"battery", 1},
     },
     result = "battery-tank",
