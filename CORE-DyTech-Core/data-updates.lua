@@ -57,4 +57,7 @@ if Stacksize_Increase then
 	for k, v in pairs(data.raw["mining-tool"]) do
 		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
 	end
+	for k, v in pairs(data.raw["repair-tool"]) do
+		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)
+	end
 end
