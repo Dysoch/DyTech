@@ -2,17 +2,17 @@ require "config"
 
 if Nuclear_Reactors then
   if Use_Wattage then
-	require("prototypes.new.nuclear-reactors.entity")
-	require("prototypes.new.nuclear-reactors.item")
+--	require("prototypes.new.nuclear-reactors.entity")
 	require("prototypes.new.nuclear-reactors.recipe")
-	require("prototypes.new.nuclear-reactors.tech")
+--	require("prototypes.new.nuclear-reactors.tech")
 	require("prototypes.new.resources.uraniumdioxide")
 --	require("prototypes.new.resources.fluorite")
 	require("prototypes.new.tile.noise-layers")
 	require("prototypes.new.nuclear-reactors.nuclear-entities.chemical-processor")
+	require("prototypes.new.nuclear-reactors.nuclear-entities.nuclear-reactor")
 	require("prototypes.new.nuclear-reactors.nuclear-items.fuel")
 	require("prototypes.new.nuclear-reactors.nuclear-items.items")
---	require("prototypes.new.nuclear-reactors.nuclear-items.reactor-item")
+	require("prototypes.new.nuclear-reactors.nuclear-items.reactor-item")
 	require("prototypes.new.nuclear-reactors.nuclear-tech.reactor-tech")
   end
 end
