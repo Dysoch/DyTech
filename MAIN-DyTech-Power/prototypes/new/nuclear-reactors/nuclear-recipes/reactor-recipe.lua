@@ -11,6 +11,16 @@ data:extend(
 			{"stone-wall", 30}
 		},
 		result = "nuclear-reactor"
+	},
+	{
+		type = "recipe",
+		name - "chemical-processor",
+		enabled = true,
+		ingredients =
+		{
+			{"stone-brick", 1}
+		},
+		result = "chemical processor"
 	}
 }
 )

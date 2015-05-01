@@ -15,7 +15,7 @@ data:extend(
 	allowed_effects = {"speed", "pollution"},
 	animation =
 	{
-	  filename = "__dytech-power__/graphics/nuclear-reactor/entity/chemical-processor.png",
+	  filename = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/entity/chemical-processor.png",
 	  width = 156,
 	  height = 141,
 	  frame_count = 1,

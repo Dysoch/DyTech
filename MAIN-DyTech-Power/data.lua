@@ -1,6 +1,7 @@
 require "config"
 
 if Nuclear_Reactors then
+  if Use_Wattage then
 	require("prototypes.new.nuclear-reactors.entity")
 	require("prototypes.new.nuclear-reactors.item")
 	require("prototypes.new.nuclear-reactors.recipe")
@@ -13,6 +14,7 @@ if Nuclear_Reactors then
 	require("prototypes.new.nuclear-reactors.nuclear-items.items")
 --	require("prototypes.new.nuclear-reactors.nuclear-items.reactor-item")
 	require("prototypes.new.nuclear-reactors.nuclear-tech.reactor-tech")
+  end
 end
 
 --[[ Boilers Check ]]--
