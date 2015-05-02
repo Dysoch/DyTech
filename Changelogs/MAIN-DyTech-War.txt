@@ -15,6 +15,8 @@
 [*] Increased range of Marauder capsule: 20 > 25
 [*] Decreased max unit count of Biter Base: 25 > 20
 [*] Decreased Spawning Rate of Biters and Spitters by 5% (meaning they are quicker to spawn)
+[*] Decreased Health of Biter Spawner: 2500 > 2000
+[*] Decreased Health of Spitter Spawner: 3500 > 3000
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules

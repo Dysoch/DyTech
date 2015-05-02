@@ -10,6 +10,7 @@
 [/list]
 [*] Balancing: 
 [list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.
+[*] Increased Pumping speed of Pumps (both of them)
 [/list]
 [/list]
 

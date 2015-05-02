@@ -7,6 +7,7 @@
 [*] Complete new item sort of the menu. All DyTech Items are sorted properly in menu's!
 [*] Changed Health of all machines.
 [*] Added Tiered resistances to machines.
+[*] Completely new Gem System. All old gems will revert to the new Crystals!
 [/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing
@@ -16,6 +17,11 @@
 [*] Ardite, Cobalt and Tungsten: Only found around Enemy Bases.
 [/list]
 [/list]
+[*] Graphics:
+[list] [*] Added New Graphics for the Item Groups
+[/list]
+[*] Changes:
+[list] [*] Merged DyTech-Script into DyTech-Core [/list]
 [/list]
 
 [i][size=150][b]v1.1.3:[/b][/size][/i]

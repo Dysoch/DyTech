@@ -4,10 +4,12 @@
 [list]
 [*] Features:
 [list][*] Added Resistances to machines.
+[*] Added 5 New High Powered Boilers.
 [/list]
 [*] Balancing:
-[list] [*] Increased Solar Panels Power Output by 600% and increased recipe cost by 500%.
-[*] Increased Accumulators Power Specs by 600% and increased recipe cost by 500%.
+[list] [*] Increased Solar Panels Power Output and Recipe.
+[*] Increased Steam Engines Power Output and Recipe.
+[*] Increased Accumulators Power Specs and Recipe.
 [*] Changed Health of machines.
 [/list]
 [/list]
