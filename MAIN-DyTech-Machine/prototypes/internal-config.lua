@@ -1,42 +1,11 @@
 --require "prototypes.internal-config"
 
-SolarPanels = {
-	Tier1 = "90kW",
-	Tier2 = "204kW",
-	Tier3 = "690kW",
-	Tier4 = "3504kW",
-	Tier5 = "26693kW"
-}
-
-SteamEngines = {
-	effectivity1 = 1.43,
-	effectivity2 = 2.04,
-	effectivity3 = 2.92,
-	effectivity4 = 4.18,
-	effectivity5 = 5.98,
-	fluid_usage_per_tick1 = 0.08,
-	fluid_usage_per_tick2 = 0.124,
-	fluid_usage_per_tick3 = 0.193,
-	fluid_usage_per_tick4 = 0.3,
-	fluid_usage_per_tick5 = 0.465
-}
-
-Boilers = {
-	KW1 = "668kW",
-	KW2 = "1594kW",
-	KW3 = "3842kW",
-	KW4 = "9316kW",
-	KW5 = "22713kW",
-	HighKW1 = "1669kW",
-	HighKW2 = "3984kW",
-	HighKW3 = "9604kW",
-	HighKW4 = "23289kW",
-	HighKW5 = "56781kW",
-	effectivity1 = 1,
-	effectivity2 = 2,
-	effectivity3 = 4,
-	effectivity4 = 8,
-	effectivity5 = 16
+PumpingSpeed = {
+	Tier1 = 8,
+	Tier2 = 12.4,
+	Tier3 = 19.3,
+	Tier4 = 30,
+	Tier5 = 46.5,
 }
 
 Health = {

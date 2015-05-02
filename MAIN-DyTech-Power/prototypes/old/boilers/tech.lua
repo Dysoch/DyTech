@@ -10,6 +10,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "boiler-mk2"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "high-boiler-mk2"
+      },
     },
     prerequisites = {"tin-processing", "rotor-1"},
     unit =
@@ -33,6 +37,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "boiler-mk3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "high-boiler-mk3"
       },
     },
     prerequisites = {"boilers-1", "lead-processing", "rotor-2"},
@@ -59,6 +67,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "boiler-mk4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "high-boiler-mk4"
+      },
     },
     prerequisites = {"boilers-2", "steel-processing"},
     unit =
@@ -84,6 +96,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "boiler-mk5"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "high-boiler-mk5"
       },
     },
     prerequisites = {"boilers-3", "zinc-processing", "rotor-3"},

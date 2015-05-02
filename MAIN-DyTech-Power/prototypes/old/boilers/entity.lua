@@ -1,4 +1,9 @@
-data.raw["boiler"]["boiler"].energy_consumption = "515kW"
+require "prototypes.internal-config"
+
+data.raw["boiler"]["boiler"].energy_consumption = Boilers.KW1
+data.raw["boiler"]["boiler"].burner.effectivity = Boilers.effectivity1
+data.raw["boiler"]["boiler"].max_health = Health.Tier1
+data.raw["boiler"]["boiler"].resistances = Resistances.Tier1
 
 data:extend({
   {
@@ -7,15 +12,9 @@ data:extend({
     icon = "__MAIN-DyTech-Power__/graphics/boilers/boiler2.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk2"},
-    max_health = 250,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     fast_replaceable_group = "pipe",
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -30,10 +29,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "1008kW",
+    energy_consumption = Boilers.KW2,
     burner =
     {
-      effectivity = 0.6,
+      effectivity = Boilers.effectivity2,
       fuel_inventory_size = 2,
       emissions = 0.1 / 6.5,
       smoke =
@@ -125,15 +124,9 @@ data:extend({
     icon = "__MAIN-DyTech-Power__/graphics/boilers/boiler3.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk3"},
-    max_health = 350,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "small-remnants",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     fast_replaceable_group = "pipe",
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -148,10 +141,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "1966kW",
+    energy_consumption = Boilers.KW3,
     burner =
     {
-      effectivity = 0.7,
+      effectivity = Boilers.effectivity3,
       fuel_inventory_size = 3,
       emissions = 0.1 / 6.5,
       smoke =
@@ -243,15 +236,9 @@ data:extend({
     icon = "__MAIN-DyTech-Power__/graphics/boilers/boiler4.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk4"},
-    max_health = 350,
+    max_health = Health.Tier8,
+	resistances = Resistances.Tier8,
     corpse = "small-remnants",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     fast_replaceable_group = "pipe",
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -266,10 +253,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "3813kW",
+    energy_consumption = Boilers.KW4,
     burner =
     {
-      effectivity = 0.8,
+      effectivity = Boilers.effectivity4,
       fuel_inventory_size = 4,
       emissions = 0.1 / 6.5,
       smoke =
@@ -361,15 +348,9 @@ data:extend({
     icon = "__MAIN-DyTech-Power__/graphics/boilers/boiler5.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk5"},
-    max_health = 350,
+    max_health = Health.Tier10,
+	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     fast_replaceable_group = "pipe",
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -384,10 +365,10 @@ data:extend({
         { position = {-1, 0} }
       },
     },
-    energy_consumption = "7339kW",
+    energy_consumption = Boilers.KW5,
     burner =
     {
-      effectivity = 0.9,
+      effectivity = Boilers.effectivity5,
       fuel_inventory_size = 5,
       emissions = 0.1 / 6.5,
       smoke =

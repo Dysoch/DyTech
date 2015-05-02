@@ -1,7 +1,7 @@
 data.raw["fluid"]["water"].pressure_to_speed_ratio = 0.6
 data.raw["fluid"]["water"].flow_to_energy_ratio = 0.885
 data.raw["offshore-pump"]["offshore-pump"].fluid = "dirty-water"
-data.raw["fluid"]["water"].heat_capacity = "1500J"
+data.raw["fluid"]["water"].heat_capacity = "2000J"
 
 data:extend(
 {

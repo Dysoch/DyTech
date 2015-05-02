@@ -1,4 +1,8 @@
-data.raw["pump"]["small-pump"].pumping_speed = 0.95
+require "prototypes.internal-config"
+
+data.raw["pump"]["small-pump"].pumping_speed = PumpingSpeed.Tier1
+data.raw["pump"]["small-pump"].max_health = Health.Tier1
+data.raw["pump"]["small-pump"].resistances = Resistances.Tier1
 
 data:extend({
   {
@@ -7,16 +11,10 @@ data:extend({
     icon = "__MAIN-DyTech-Machine__/graphics/small-pumps/small-pump-mk2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "small-pump-mk2"},
-    max_health = 120,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
@@ -36,7 +34,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "45kW",
-    pumping_speed = 1.89,
+    pumping_speed = PumpingSpeed.Tier2,
     animations =
     {
       north =
@@ -83,16 +81,10 @@ data:extend({
     icon = "__MAIN-DyTech-Machine__/graphics/small-pumps/small-pump-mk3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "small-pump-mk3"},
-    max_health = 180,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
@@ -112,7 +104,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "60kW",
-    pumping_speed = 3.78,
+    pumping_speed = PumpingSpeed.Tier3,
     animations =
     {
       north =
@@ -159,16 +151,10 @@ data:extend({
     icon = "__MAIN-DyTech-Machine__/graphics/small-pumps/small-pump-mk4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "small-pump-mk4"},
-    max_health = 270,
+    max_health = Health.Tier7,
+	resistances = Resistances.Tier7,
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
@@ -188,7 +174,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "90kW",
-    pumping_speed = 7.56,
+    pumping_speed = PumpingSpeed.Tier4,
     animations =
     {
       north =
@@ -235,16 +221,10 @@ data:extend({
     icon = "__MAIN-DyTech-Machine__/graphics/small-pumps/small-pump-mk5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "small-pump-mk5"},
-    max_health = 400,
+    max_health = Health.Tier9,
+	resistances = Resistances.Tier9,
     fast_replaceable_group = "pipe",
     corpse = "small-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box =
@@ -264,7 +244,7 @@ data:extend({
       emissions = 0.01 / 2.5
     },
     energy_usage = "120kW",
-    pumping_speed = 15.11,
+    pumping_speed = PumpingSpeed.Tier5,
     animations =
     {
       north =

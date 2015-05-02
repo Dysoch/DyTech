@@ -3,6 +3,7 @@ require "prototypes.internal-config"
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
 data.raw["solar-panel"]["solar-panel"].max_health = Health.Tier1
 data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Tier1
+data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Tier1
 
 data:extend(
 {
@@ -30,7 +31,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "60kW"
+    production = SolarPanels.Tier1
   },
   {
     type = "solar-panel",
@@ -56,7 +57,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "360kW"
+    production = SolarPanels.Tier2
   },
   {
     type = "solar-panel",
@@ -82,7 +83,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "360kW"
+    production = SolarPanels.Tier2
   },
   {
     type = "solar-panel",
@@ -108,7 +109,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "2160kW"
+    production = SolarPanels.Tier3
   },
   {
     type = "solar-panel",
@@ -134,7 +135,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "2160kW"
+    production = SolarPanels.Tier3
   },
   {
     type = "solar-panel",
@@ -160,7 +161,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "12960kW"
+    production = SolarPanels.Tier4
   },
   {
     type = "solar-panel",
@@ -186,7 +187,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "12960kW"
+    production = SolarPanels.Tier4
   },
   {
     type = "solar-panel",
@@ -212,7 +213,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "77760kW"
+    production = SolarPanels.Tier5
   },
   {
     type = "solar-panel",
@@ -238,7 +239,7 @@ data:extend(
       width = 104,
       height = 96
     },
-    production = "77760kW"
+    production = SolarPanels.Tier5
   },
 }
 )

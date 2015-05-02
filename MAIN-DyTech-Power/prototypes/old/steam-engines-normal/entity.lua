@@ -1,6 +1,10 @@
+require "prototypes.internal-config"
+
 data.raw["generator"]["steam-engine"].fast_replaceable_group = "steam-engine"
-data.raw["generator"]["steam-engine"].fluid_usage_per_tick = 0.08
-data.raw["generator"]["steam-engine"].effectivity = 1.1
+data.raw["generator"]["steam-engine"].fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick1
+data.raw["generator"]["steam-engine"].effectivity = SteamEngines.effectivity1
+data.raw["generator"]["steam-engine"].max_health = Health.Tier1
+data.raw["generator"]["steam-engine"].resistances = Resistances.Tier1
 
 data:extend(
 {
@@ -10,17 +14,11 @@ data:extend(
     icon = "__base__/graphics/icons/steam-engine.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary"},
-    max_health = 300,
+    max_health = Health.Tier1,
+	resistances = Resistances.Tier1,
     corpse = "big-remnants",
-    effectivity = 1.1,
-    fluid_usage_per_tick = 0.08,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity1,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick1,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -86,17 +84,11 @@ data:extend(
     icon = "__base__/graphics/icons/steam-engine.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary"},
-    max_health = 300,
+    max_health = Health.Tier1,
+	resistances = Resistances.Tier1,
     corpse = "big-remnants",
-    effectivity = 1.1,
-    fluid_usage_per_tick = 0.08,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity1,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick1,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -162,17 +154,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk2"},
-    max_health = 300,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "big-remnants",
-    effectivity = 1.0,
-    fluid_usage_per_tick = 0.16,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity2,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick2,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -238,17 +224,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk2"},
-    max_health = 300,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "big-remnants",
-    effectivity = 1.0,
-    fluid_usage_per_tick = 0.16,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity2,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick2,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -314,17 +294,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine2.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk2"},
-    max_health = 300,
+    max_health = Health.Tier3,
+	resistances = Resistances.Tier3,
     corpse = "big-remnants",
-    effectivity = 1.0,
-    fluid_usage_per_tick = 0.16,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity2,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick2,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -390,17 +364,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk3"},
-    max_health = 300,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "big-remnants",
-    effectivity = 0.9,
-    fluid_usage_per_tick = 0.32,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity3,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick3,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -466,17 +434,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk3"},
-    max_health = 300,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "big-remnants",
-    effectivity = 0.9,
-    fluid_usage_per_tick = 0.32,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity3,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick3,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -542,17 +504,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine3.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk3"},
-    max_health = 300,
+    max_health = Health.Tier5,
+	resistances = Resistances.Tier5,
     corpse = "big-remnants",
-    effectivity = 0.9,
-    fluid_usage_per_tick = 0.32,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity3,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick3,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -618,17 +574,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk4"},
-    max_health = 300,
+    max_health = Health.Tier8,
+	resistances = Resistances.Tier8,
     corpse = "big-remnants",
-    effectivity = 0.8,
-    fluid_usage_per_tick = 0.64,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity4,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick4,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -694,17 +644,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk4"},
-    max_health = 300,
+    max_health = Health.Tier8,
+	resistances = Resistances.Tier8,
     corpse = "big-remnants",
-    effectivity = 0.8,
-    fluid_usage_per_tick = 0.64,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity4,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick4,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -770,17 +714,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine4.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk4"},
-    max_health = 300,
+    max_health = Health.Tier8,
+	resistances = Resistances.Tier8,
     corpse = "big-remnants",
-    effectivity = 0.8,
-    fluid_usage_per_tick = 0.64,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity4,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick4,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -846,17 +784,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-primary-mk5"},
-    max_health = 300,
+    max_health = Health.Tier10,
+	resistances = Resistances.Tier10,
     corpse = "big-remnants",
-    effectivity = 0.7,
-    fluid_usage_per_tick = 1.28,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity5,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick5,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -922,17 +854,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-secondary-mk5"},
-    max_health = 300,
+    max_health = Health.Tier10,
+	resistances = Resistances.Tier10,
     corpse = "big-remnants",
-    effectivity = 0.7,
-    fluid_usage_per_tick = 1.28,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity5,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick5,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
@@ -998,17 +924,11 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/steam-engines-normal/steam-engine5.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "steam-engine-terciary-mk5"},
-    max_health = 300,
+    max_health = Health.Tier10,
+	resistances = Resistances.Tier10,
     corpse = "big-remnants",
-    effectivity = 0.7,
-    fluid_usage_per_tick = 1.28,
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
+    effectivity = SteamEngines.effectivity5,
+    fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick5,
 	fast_replaceable_group =  "steam-engine",
     collision_box = {{-1.4, -2.4}, {1.4, 2.4}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
