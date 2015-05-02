@@ -26,6 +26,7 @@ if Boilers then
 		require("prototypes.new.boilers.tech")
 	else
 		require("prototypes.old.boilers.entity")
+		require("prototypes.old.boilers.high-entity")
 		require("prototypes.old.boilers.item")
 		require("prototypes.old.boilers.recipe")
 		require("prototypes.old.boilers.tech")
