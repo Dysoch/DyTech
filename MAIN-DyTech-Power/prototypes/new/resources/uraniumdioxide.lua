@@ -5,7 +5,7 @@ data:extend(
 	name = "uraniumdioxide",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uraniumdioxide.png",
 	flags = {"placeable-neutral"},
-	order= "z-o",
+	order= "z-t",
 	minable = 
 	{
 	  hardness = 2.9,
