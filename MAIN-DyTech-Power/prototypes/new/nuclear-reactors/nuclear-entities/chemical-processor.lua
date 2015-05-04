@@ -26,8 +26,10 @@ data:extend(
 	  usage_priority = "secondary-input",
 	  emissions = 0.04 / 2.5
 	},
+	crafting_speed = 1,
 	energy_usage = "250kW",
 	crafting_categories = {"chemistry"},
+	ingredient_count = 2,
 	fluid_boxes =
 	{
       {
@@ -35,7 +37,7 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {0, 0} }}
+        pipe_connections = {{ type="input", position = {-1, 2} }}
       }
 	}
   }
