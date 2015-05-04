@@ -8,6 +8,7 @@ if Nuclear_Reactors then
 	require("prototypes.new.resources.uraniumdioxide")
 --	require("prototypes.new.resources.fluorite")
 	require("prototypes.new.tile.noise-layers")
+	require("prototypes.autoplace-controls")
 	require("prototypes.new.nuclear-reactors.nuclear-entities.chemical-processor")
 	require("prototypes.new.nuclear-reactors.nuclear-entities.nuclear-reactor")
 	require("prototypes.new.nuclear-reactors.nuclear-items.fuel")
