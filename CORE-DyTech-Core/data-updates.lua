@@ -1,20 +1,29 @@
 require "config"
 
-if Infinite_Resources_Cheaty and not Infinite_Resources_Normal then
-	for k, v in pairs(data.raw.resource) do
-		v.infinite = true
-		v.minimum = 17500
-		v.normal = 35000
-		v.autoplace.richness_base = 2500000
-		v.minable.hardness = 0.1
-		v.minable.mining_time = 0.25
-	end
-elseif Infinite_Resources_Normal and not Infinite_Resources_Cheaty then
+if Infinite_Resources then
 	for k, v in pairs(data.raw.resource) do
 		v.infinite = true
 		v.minimum = 175
 		v.normal = 350
-		v.autoplace.richness_base = 25000
+	end
+end 
+
+if Super_Size_Resources and Infinite_Resources then
+	for k, v in pairs(data.raw.resource) do
+		v.minimum = 17500
+		v.normal = 35000
+		v.autoplace.richness_base = 2500000
+	end
+elseif Super_Size_Resources and not Infinite_Resources then
+	for k, v in pairs(data.raw.resource) do
+		v.autoplace.richness_base = 2500000
+	end
+end
+
+if Resource_Easier_To_Mine then
+	for k, v in pairs(data.raw.resource) do
+		v.minable.hardness = 0.1
+		v.minable.mining_time = 0.1
 	end
 end
 

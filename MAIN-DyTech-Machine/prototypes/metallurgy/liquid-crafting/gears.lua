@@ -57,5 +57,81 @@ data:extend(
 	  {type="item", name="mold-gear", amount=1},
 	}
   },
+  {
+    type = "recipe",
+    name = "mold-crafting-gear-4",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/lead-gear-wheel.png",
+	category = "forge",
+    energy_required = 0.75,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-lead", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+    },
+    results = 
+	{
+	  {type="item", name="lead-gear-wheel", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+	}
+  },
+  {
+    type = "recipe",
+    name = "mold-crafting-gear-5",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/cobalt-gear-wheel.png",
+	category = "forge",
+    energy_required = 0.75,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-cobalt", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+    },
+    results = 
+	{
+	  {type="item", name="cobalt-gear-wheel", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+	}
+  },
+  {
+    type = "recipe",
+    name = "mold-crafting-gear-6",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tin-gear-wheel.png",
+	category = "forge",
+    energy_required = 0.75,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-tin", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+    },
+    results = 
+	{
+	  {type="item", name="tin-gear-wheel", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+	}
+  },
+  {
+    type = "recipe",
+    name = "mold-crafting-gear-7",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/zinc-gear-wheel.png",
+	category = "forge",
+    energy_required = 0.75,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-zinc", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+    },
+    results = 
+	{
+	  {type="item", name="zinc-gear-wheel", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+	}
+  },
 }
 )

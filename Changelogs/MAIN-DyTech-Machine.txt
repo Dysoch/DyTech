@@ -1,18 +1,31 @@
 [size=200]DyTech-Machine[/size]
 
+[i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
+[list]
+[*] Features: 
+[list]
+[*] Added lots of new liquid recipes (metallurgy):
+[list] [*] Gears: Added Tin, Zinc, Lead and Cobalt recipe.
+[*] Wires: Added Iron Stick recipe.
+[*] Added Tools Mold: All tools can be made, including Repair Packs!
+[/list]
+[/list]
+[*] Bugfixes: 
+[list] [*] none yet
+[/list]
+[*] Balancing: 
+[list][*] Increased Pumping speed of Pumps (both of them)
+[/list]
+[/list]
+
 [i][size=150][b]v1.0.3:[/b][/size][/i]
 [list]
 [*] Features: 
-[list] [*] Added Clean Ore smelting in a furnace.
-[/list]
+[list] [*] Added Clean Ore smelting in a furnace.[/list]
 [*] Bugfixes: 
-[list] [*] Fixed Car error that came with Factorio 0.11.18
-[/list]
+[list] [*] Fixed Car error that came with Factorio 0.11.18[/list]
 [*] Balancing: 
-[list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.
-[*] Increased Pumping speed of Pumps (both of them)
-[/list]
-[/list]
+[list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.[/list][/list]
 
 [i][size=150][b]v1.0.2:[/b][/size][/i]
 [list]

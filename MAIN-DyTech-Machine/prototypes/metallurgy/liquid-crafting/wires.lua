@@ -59,5 +59,24 @@ data:extend(
 	  {type="item", name="mold-wire", amount=1},
 	}
   },
+  {
+    type = "recipe",
+    name = "mold-crafting-wire-4",
+    icon = "__base__/graphics/icons/iron-stick.png",
+	category = "forge",
+    energy_required = 0.5,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-iron", amount=0.37},
+	  {type="item", name="mold-wire", amount=1},
+    },
+    results = 
+	{
+	  {type="item", name="iron-stick", amount=1},
+	  {type="item", name="mold-wire", amount=1},
+	}
+  },
 }
 )

@@ -11,9 +11,10 @@ Technologies = true
 -- Here you can switch cheats on.
 -- Keep in mind, this breaks the game!
 
-Infinite_Resources_Normal = false
-Infinite_Resources_Cheaty = true
--- ONLY SWITCH 1 ON!!!!!!! Otherwise it wont work!
+Infinite_Resources = false
+Resource_Easier_To_Mine = true
+Super_Size_Resources = true
+-- Resource Changes
 
 Technology_Use_Less_Science_Packs = false 
 -- Now takes only 1 lab to research!
