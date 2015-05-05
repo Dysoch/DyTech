@@ -30,7 +30,9 @@ SniperTurret = true
 FlameThrowerTurret = true
 LaserTurret = true
 Walls = true
+Gates = true
 -- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!!!
+-- NOTE: Gates REQUIRES Walls to be enabled!!!!!
 
 -- [[ General Config Options ]]--
 

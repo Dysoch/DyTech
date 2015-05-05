@@ -96,6 +96,14 @@ require("prototypes.walls.recipe")
 require("prototypes.walls.tech")
 end
 
+--[[ Gates Check ]]--
+if Walls and Gates then 
+require("prototypes.gates.entity")
+require("prototypes.gates.item")
+require("prototypes.gates.recipe")
+require("prototypes.walls.tech")
+end
+
 --[[ Equipment Check ]]--
 if Equipment then 
 require("prototypes.equipment.entity")

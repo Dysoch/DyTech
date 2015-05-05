@@ -48,6 +48,8 @@ data.raw["item"]["copper-ore"].stack_size = 200
 data.raw["item"]["iron-ore"].stack_size = 200
 data.raw["item"]["coal"].stack_size = 200
 data.raw["item"]["stone"].stack_size = 200
+data.raw["item"]["processing-unit"].stack_size = 200
+data.raw["item"]["battery"].stack_size = 200
 
 --[[ Recipes ]]--
 ChangeRecipe("steam-engine", "iron-gear-wheel", "stone-gear-wheel", 5)

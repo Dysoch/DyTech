@@ -524,9 +524,7 @@ data:extend(
     type = "projectile",
     name = "laser-diamond-1",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.025,
-    direction_only = false,
     action =
     {
       type = "direct",
@@ -536,12 +534,8 @@ data:extend(
         target_effects =
         {
           {
-            type = "create-entity",
-            entity_name = "laser-bubble"
-          },
-          {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 200, type = "laser"}
           }
         }
       }
@@ -561,9 +555,7 @@ data:extend(
     type = "projectile",
     name = "laser-diamond-2",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.025,
-    direction_only = false,
     action =
     {
       type = "direct",
@@ -573,12 +565,8 @@ data:extend(
         target_effects =
         {
           {
-            type = "create-entity",
-            entity_name = "laser-bubble"
-          },
-          {
             type = "damage",
-            damage = { amount = 15, type = "laser"}
+            damage = { amount = 350, type = "laser"}
           }
         }
       }
@@ -598,9 +586,7 @@ data:extend(
     type = "projectile",
     name = "laser-diamond-3",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.025,
-    direction_only = false,
     action =
     {
       type = "direct",
@@ -610,12 +596,8 @@ data:extend(
         target_effects =
         {
           {
-            type = "create-entity",
-            entity_name = "laser-bubble"
-          },
-          {
             type = "damage",
-            damage = { amount = 20, type = "laser"}
+            damage = { amount = 500, type = "laser"}
           }
         }
       }

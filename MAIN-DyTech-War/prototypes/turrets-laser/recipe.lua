@@ -174,7 +174,7 @@ data:extend(
     },
     result = "laser-turret-sniper-3"
   },
- --[[ {
+  {
     type = "recipe",
     name = "laser-turret-diamond-1",
     enabled = false,
@@ -182,11 +182,11 @@ data:extend(
     ingredients =
     {
       {"laser-turret-9", 1},
-      {"ardite-plate", 20},
-      {"advanced-circuit", 20},
-      {"lead-gear-wheel", 20},
-      {"battery", 12},
-	  {"diamond-3", 4} 
+      {"ardite-plate", 200},
+      {"advanced-circuit", 200},
+      {"lead-gear-wheel", 100},
+      {"battery", 200},
+	  {"raw-diamond", 200} 
     },
     result = "laser-turret-diamond-1"
   },
@@ -198,11 +198,11 @@ data:extend(
     ingredients =
     {
       {"laser-turret-diamond-1", 1},
-      {"cobalt-plate", 40},
-      {"processing-unit", 20},
-      {"steel-gear-wheel", 20},
-      {"battery", 12},
-	  {"diamond-4", 4} 
+      {"cobalt-plate", 200},
+      {"processing-unit", 200},
+      {"steel-gear-wheel", 100},
+      {"battery", 200},
+	  {"cut-diamond", 200} 
     },
     result = "laser-turret-diamond-2"
   },
@@ -214,12 +214,12 @@ data:extend(
     ingredients =
     {
       {"laser-turret-diamond-2", 1},
-      {"advanced-processing-unit", 20},
-      {"tungsten-gear-wheel", 20},
-      {"battery", 12},
-	  {"diamond-5", 4} 
+      {"advanced-processing-unit", 200},
+      {"tungsten-gear-wheel", 100},
+      {"battery", 200},
+	  {"compressed-diamond", 200} 
     },
     result = "laser-turret-diamond-3"
-  },]]--
+  },
 }
 )
