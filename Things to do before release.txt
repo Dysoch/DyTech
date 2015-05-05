@@ -1,0 +1,36 @@
+Input Things to do before release here!
+Remove when done!
+
+
+
+DyTech Core:
+- ore gen (Tin, Silver, Lead, Zinc and Gold)
+- Make each ore have their own control  (Tin, Silver, Lead, Zinc and Gold)
+
+DyTech Power:
+- Nuclear Reactor
+- Small and Large Solar Panels (1x1, 5x5)
+
+DyTech Machine:
+- Alloys
+- Bricks + Brick Wall
+- Wall Molds
+- Iron Plated Wall
+- Steel Plated Wall
+- Obsidian Wall
+- Logisitic Zone Expander (for both Construction and Logistic, 3 tiers each)
+- Robot Charging station
+
+
+DyTech War:
+- new tank
+- gates 4x
+- Diamond Turret finishing
+
+DyComPa:
+- Item Sort switch (for item order in the menu's
+- DyTech modules switching ( for example high tiered assemblers use high tiered pipes)
+
+Forum:
+- New DyTech News Post
+- Finish DyTech Beginners Guide
