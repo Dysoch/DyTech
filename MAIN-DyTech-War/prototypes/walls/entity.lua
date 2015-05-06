@@ -1,4 +1,5 @@
-require("prototypes.functions.walls")
+require "prototypes.functions.walls"
+require "prototypes.internal-config"
 
 ChitinWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
 SandWall = {r=1, g=1, b=0.35, a=0.9}
@@ -12,31 +13,11 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/walls/chitin-wall.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "chitin-wall"},
-    max_health = 2500,
+    max_health = Health.Tier6,
     repair_speed_modifier = 2,
     corpse = "chitin-wall-remnants",
 	fast_replaceable_group = "wall",
-    resistances =
-    {
-      {
-        type = "physical",
-        decrease = 2,
-        percent = 15
-      },
-      {
-        type = "explosion",
-        decrease = 2.5,
-        percent = 12
-      },
-      {
-        type = "fire",
-        percent = 75
-      },
-      {
-        type = "laser",
-        percent = 10
-      }
-    },
+    resistances = Resistances.Tier6,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -61,31 +42,11 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/walls/sandwall.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "sandwall"},
-    max_health = 750,
+    max_health = Health.Tier4,
     repair_speed_modifier = 2,
     corpse = "sandwall-remnants",
 	fast_replaceable_group = "wall",
-    resistances =
-    {
-      {
-        type = "physical",
-        decrease = 3,
-        percent = 10
-      },
-      {
-        type = "explosion",
-        decrease = 5,
-        percent = 10
-      },
-      {
-        type = "fire",
-        percent = 100
-      },
-      {
-        type = "laser",
-        percent = 100
-      }
-    },
+    resistances = Resistances.Tier4,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -110,31 +71,11 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/walls/tungsten-wall.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "tungsten-wall"},
-    max_health = 5000,
+    max_health = Health.Tier8,
     repair_speed_modifier = 2,
     corpse = "tungsten-wall-remnants",
 	fast_replaceable_group = "wall",
-    resistances =
-    {
-      {
-        type = "physical",
-        decrease = 3,
-        percent = 10
-      },
-      {
-        type = "explosion",
-        decrease = 5,
-        percent = 10
-      },
-      {
-        type = "fire",
-        percent = 100
-      },
-      {
-        type = "laser",
-        percent = 100
-      }
-    },
+    resistances = Resistances.Tier8,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },

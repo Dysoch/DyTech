@@ -20,12 +20,12 @@ DyTech Machine:
 - Obsidian Wall
 - Logisitic Zone Expander (for both Construction and Logistic, 3 tiers each)
 - Robot Charging station
-
+- Add internal config to Machine
 
 DyTech War:
 - new tank
-- gates 4x
-- Diamond Turret finishing
+- gates 2x
+- Add internal config to War
 
 DyComPa:
 - Item Sort switch (for item order in the menu's
