@@ -78,6 +78,30 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "mixed-turret-capsule",
+    enabled = false,
+    energy_required = 30,
+    ingredients =
+    {
+      {"frenzy-turret-capsule", 1},
+      {"sharpshooter-turret-capsule", 1},
+    },
+    result = "mixed-turret-capsule"
+  },
+  {
+    type = "recipe",
+    name = "mixed-capsule",
+    enabled = false,
+    energy_required = 30,
+    ingredients =
+    {
+      {"frenzy-capsule", 1},
+      {"sharpshooter-capsule", 1},
+    },
+    result = "mixed-capsule"
+  },
+  {
+    type = "recipe",
     name = "basic-grenade-2",
     enabled = false, --temporary
     energy_required = 11,

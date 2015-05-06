@@ -79,6 +79,14 @@ data:extend(
         type = "unlock-recipe",
         recipe = "frenzy-turret-capsule"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "mixed-capsule"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mixed-turret-capsule"
+      },
     },
     prerequisites = {"combat-robotics-5"},
     unit =

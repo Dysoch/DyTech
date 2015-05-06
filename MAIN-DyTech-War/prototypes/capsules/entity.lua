@@ -12,7 +12,7 @@ data:extend(
     max_health = (Health.Tier4*Capsules.Stationary_Extra_Factor),
 	resistances = Resistances.Tier4,
     collision_box = {{0, 0}, {0, 0}},
-    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+    selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     distance_per_frame = 0.13,
     time_to_live = (Capsules.Live_Marauder*Capsules.Stationary_Extra_Factor),
     speed = 0.03,
@@ -157,7 +157,7 @@ data:extend(
     max_health = (Health.Tier5*Capsules.Stationary_Extra_Factor),
 	resistances = Resistances.Tier5,
     collision_box = {{0, 0}, {0, 0}},
-    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+    selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     distance_per_frame = 0.13,
     time_to_live = (Capsules.Live_Sharpshooter*Capsules.Stationary_Extra_Factor),
     speed = 0.03,
@@ -302,7 +302,7 @@ data:extend(
     max_health = (Health.Tier6*Capsules.Stationary_Extra_Factor),
 	resistances = Resistances.Tier6,
     collision_box = {{0, 0}, {0, 0}},
-    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+    selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     distance_per_frame = 0.13,
     time_to_live = (Capsules.Live_Frenzy*Capsules.Stationary_Extra_Factor),
     speed = 0.03,
@@ -325,7 +325,7 @@ data:extend(
       cooldown = 3,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 15,
+      range = 20,
       sound =
       {
         {
@@ -399,7 +399,7 @@ data:extend(
       cooldown = 3,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 15,
+      range = 20,
       sound =
       {
         {

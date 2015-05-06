@@ -10,6 +10,8 @@ for index, force in pairs(game.forces) do
 	end
 	if force.technologies["combat-robotics-6"].researched then
 		force.recipes["frenzy-turret-capsule"].enabled = true
+		force.recipes["mixed-capsule"].enabled = true
+		force.recipes["mixed-turret-capsule"].enabled = true
 	end
 end
 
