@@ -13,6 +13,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "marauder-capsule"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "marauder-turret-capsule"
+      },
     },
     prerequisites = {"combat-robotics-3"},
     unit =
@@ -40,6 +44,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "sharpshooter-capsule"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "sharpshooter-turret-capsule"
+      },
     },
     prerequisites = {"combat-robotics-4"},
     unit =
@@ -66,6 +74,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "frenzy-capsule"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "frenzy-turret-capsule"
       },
     },
     prerequisites = {"combat-robotics-5"},

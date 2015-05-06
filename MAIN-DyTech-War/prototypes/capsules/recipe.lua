@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "marauder-capsule",
-    enabled = false, --temporary!
+    enabled = false,
     energy_required = 20,
     ingredients =
     {
@@ -15,7 +15,7 @@ data:extend(
   {
     type = "recipe",
     name = "sharpshooter-capsule",
-    enabled = false, --temporary!
+    enabled = false,
     energy_required = 25,
     ingredients =
     {
@@ -27,7 +27,7 @@ data:extend(
   {
     type = "recipe",
     name = "frenzy-capsule",
-    enabled = false, --temporary!
+    enabled = false,
     energy_required = 30,
     ingredients =
     {
@@ -36,6 +36,45 @@ data:extend(
       {"speed-module-3", 4}
     },
     result = "frenzy-capsule"
+  },
+  {
+    type = "recipe",
+    name = "marauder-turret-capsule",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+      {"marauder-capsule", 2},
+      {"speed-module-3", 1},
+      {"tungsten-plate", 10},
+    },
+    result = "marauder-turret-capsule"
+  },
+  {
+    type = "recipe",
+    name = "sharpshooter-turret-capsule",
+    enabled = false,
+    energy_required = 25,
+    ingredients =
+    {
+      {"sharpshooter-capsule", 2},
+      {"speed-module-3", 2},
+      {"tungsten-plate", 20},
+    },
+    result = "sharpshooter-turret-capsule"
+  },
+  {
+    type = "recipe",
+    name = "frenzy-turret-capsule",
+    enabled = false,
+    energy_required = 30,
+    ingredients =
+    {
+      {"frenzy-capsule", 2},
+      {"speed-module-3", 4},
+      {"tungsten-plate", 40},
+    },
+    result = "frenzy-turret-capsule"
   },
   {
     type = "recipe",

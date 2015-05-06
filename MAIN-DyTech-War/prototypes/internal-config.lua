@@ -21,6 +21,13 @@ ModularArmor = {
 	Dura8 = 60000,
 }
 
+Capsules = {
+	Stationary_Extra_Factor = 5,
+	Live_Marauder = 60 * 60 * 5,
+	Live_Sharpshooter = 60 * 60 * 10,
+	Live_Frenzy = 60 * 60 * 15,
+}
+
 Health = {
 	Tier1 = 100,
 	Tier2 = 250,
