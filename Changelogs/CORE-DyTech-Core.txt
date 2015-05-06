@@ -8,6 +8,7 @@
 [*] Changed Health of all machines.
 [*] Added Tiered resistances to machines.
 [*] Completely new Gem System. All old gems will revert to the new Crystals!
+[*] Added a new Processor: Logic Diamond Processor (tier 5 circuit) 
 [/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing

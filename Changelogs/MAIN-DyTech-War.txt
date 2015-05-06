@@ -3,8 +3,10 @@
 [i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features:
-[list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! Place them INFRONT of your walls to keep your walls alive (you will see why when you get there! :) )
+[list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! 
 [*] Decreased Evolution Factor by 50% to make it a little easier to survive!
+[*] Added a mixed Capsule. They spawn 4 Sharpshooters and 4 Frenzy robots.
+[*] Added stationary Robot Capsules. They last longer and have more health. (Makeshift Turrets)
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
@@ -17,9 +19,11 @@
 [*] Decreased Spawning Rate of Biters and Spitters by 5% (meaning they are quicker to spawn)
 [*] Decreased Health of Biter Spawner: 2500 > 2000
 [*] Decreased Health of Spitter Spawner: 3500 > 3000
+[*] Changed Health and Resistances of all entities!
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules
+[*] Fixed amount of capsules spawned of Marauder, Frenzy and Sharpshooter.
 [/list]
 [/list]
 

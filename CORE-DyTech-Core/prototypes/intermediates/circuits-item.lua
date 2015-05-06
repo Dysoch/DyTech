@@ -6,7 +6,7 @@ data:extend(
     icon = "__CORE-DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-circuitry",
-    order = "advanced-processing-unit",
+    order = "[c-4]advanced-processing-unit",
     stack_size = 200
   },
   {
@@ -15,7 +15,7 @@ data:extend(
     icon = "__CORE-DyTech-Core__/graphics/intermediates/bundled-wire.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-circuitry",
-    order = "bundled-wire",
+    order = "[a-1]bundled-wire",
     stack_size = 200
   },
   {
@@ -35,6 +35,24 @@ data:extend(
     subgroup = "dytech-intermediates-raw",
     order = "resin",
     stack_size = 50
+  },
+  {
+    type = "item",
+    name = "logic-diamond",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/bundled-wire.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-intermediates-circuitry",
+    order = "[a-2]logic-diamond",
+    stack_size = 200
+  },
+  {
+    type = "item",
+    name = "logic-diamond-processor",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-intermediates-circuitry",
+    order = "[c-5]logic-diamond-processor",
+    stack_size = 200
   },
 }
 )

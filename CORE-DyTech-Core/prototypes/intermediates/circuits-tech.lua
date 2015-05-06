@@ -50,5 +50,35 @@ data:extend(
     },
     order = "advanced-processing-unit",
   },
+  {
+    type = "technology",
+    name = "logic-diamond-processor",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/advanced-processing-unit.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "logic-diamond"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "logic-diamond-processor"
+      },
+    },
+    prerequisites = {"advanced-processing-unit", "oil-processing"},
+    unit =
+    {
+      count = 750,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 200
+    },
+    order = "logic-diamond-processor",
+  },
 }
 )
