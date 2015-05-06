@@ -1,0 +1,9 @@
+{
+	"name":"MAIN-DyTech-Science",
+	"author":"Dysoch",
+	"version":"1.0.0",
+	"title":"MAIN-DyTech-Science",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
+	"description":"This Main Module of DyTech holds all things related to Science. Not to be confused with Research. This module takes the technology level of Factorio 1 step further, and adds hadron colliders, photons, elements, etc",
+	"dependencies": ["CORE-DyTech-Core >= 1.2.0", "MAIN-DyTech-Machine", "MAIN-DyTech-War"]
+}
