@@ -56,6 +56,24 @@ data:extend(
 	  {type="item", name="tungsten-gear-wheel", amount=1},
 	  {type="item", name="mold-gear", amount=1},
 	}
+  },  {
+    type = "recipe",
+    name = "mold-crafting-gear-4",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/lead-gear-wheel.png",
+	category = "forge",
+    energy_required = 0.75,
+    enabled = false,
+    subgroup = "assembling-molds-crafting",
+    ingredients =
+    {
+	  {type="fluid", name="molten-lead", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+    },
+    results =
+	{
+	  {type="item", name="lead-gear-wheel", amount=1},
+	  {type="item", name="mold-gear", amount=1},
+	}
   },
   {
     type = "recipe",

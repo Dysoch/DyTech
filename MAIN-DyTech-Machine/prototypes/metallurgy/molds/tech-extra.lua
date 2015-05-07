@@ -38,6 +38,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "mold-crafting-gear-7"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-gear-4"
+      },
     },
     prerequisites = {"lava-04", "water-cleaning"},
     unit =
