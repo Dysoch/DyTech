@@ -2,34 +2,136 @@ data:extend(
 {
   {
     type = "item-group",
-    name = "metallurgy-1",
+    name = "dytech-metallurgy",
     order = "m-1",
 	inventory_order = "m-1",
-    icon = "__CORE-DyTech-Core__/graphics/item-group/molds.png",
+    icon = "__CORE-DyTech-Core__/graphics/item-group/metallurgy.png",
   },
   {
     type = "item-subgroup",
-    name = "metalinter",
-    group = "metallurgy-1",
-    order = "1"
+    name = "metallurgy-ores",
+    group = "dytech-metallurgy",
+    order = "01"
   },
   {
     type = "item-subgroup",
-    name = "molds",
-    group = "metallurgy-1",
-    order = "2"
+    name = "metallurgy-intermediates",
+    group = "dytech-metallurgy",
+    order = "02"
   },
   {
     type = "item-subgroup",
-    name = "assembling-molds",
-    group = "metallurgy-1",
-    order = "3"
+    name = "metallurgy-plates",
+    group = "dytech-metallurgy",
+    order = "03"
   },
   {
     type = "item-subgroup",
-    name = "assembling-molds-crafting",
-    group = "metallurgy-1",
-    order = "4"
+    name = "metallurgy-alloys",
+    group = "dytech-metallurgy",
+    order = "04"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-molds",
+    group = "dytech-metallurgy",
+    order = "05"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-molds",
+    group = "dytech-metallurgy",
+    order = "06"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-belts",
+    group = "dytech-metallurgy",
+    order = "07"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-ammo",
+    group = "dytech-metallurgy",
+    order = "08"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-circuit",
+    group = "dytech-metallurgy",
+    order = "09"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-gears",
+    group = "dytech-metallurgy",
+    order = "10"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-wires",
+    group = "dytech-metallurgy",
+    order = "11"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-tools",
+    group = "dytech-metallurgy",
+    order = "12"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-machines",
+    group = "dytech-metallurgy",
+    order = "13"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-lava",
+    group = "dytech-metallurgy",
+    order = "14"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-lava-cooling",
+    group = "dytech-metallurgy",
+    order = "15"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-intermediate",
+    group = "dytech-metallurgy",
+    order = "16"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-metal-basic",
+    group = "dytech-metallurgy",
+    order = "17"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-metal-advanced",
+    group = "dytech-metallurgy",
+    order = "18"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels",
+    group = "dytech-metallurgy",
+    order = "19"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels-filling",
+    group = "dytech-metallurgy",
+    order = "20"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-fluid-barrels-emptying",
+    group = "dytech-metallurgy",
+    order = "21"
   },
 }
 )

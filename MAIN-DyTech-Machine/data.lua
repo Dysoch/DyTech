@@ -250,14 +250,30 @@ require("prototypes.metallurgy.molds.recipe-basic")
 end
 
 --[[ Mold Crafting (Metallurgy) Check ]]--
-if Metallurgy and MoltenMetals and LiquidCrafting then
-require("prototypes.metallurgy.molds.item-extra")
-require("prototypes.metallurgy.molds.recipe-extra")
-require("prototypes.metallurgy.molds.tech-extra")
-require("prototypes.metallurgy.liquid-crafting.ammo-advanced")
-require("prototypes.metallurgy.liquid-crafting.ammo-basic")
-require("prototypes.metallurgy.liquid-crafting.circuit")
-require("prototypes.metallurgy.liquid-crafting.gears")
-require("prototypes.metallurgy.liquid-crafting.wires")
+if Metallurgy and MoltenMetals and Liquid_Crafting_Belts and TransportBelts then
+require("prototypes.metallurgy.liquid-crafting.belts")
+end
 
+if Metallurgy and MoltenMetals and Liquid_Crafting_Machines and AssemblingMachines then
+require("prototypes.metallurgy.liquid-crafting.machine")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Tools and Tools then
+require("prototypes.metallurgy.liquid-crafting.tools")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Circuits then
+require("prototypes.metallurgy.liquid-crafting.circuit")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Ammo then
+require("prototypes.metallurgy.liquid-crafting.ammo")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Wires then
+require("prototypes.metallurgy.liquid-crafting.wires")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Gears then
+require("prototypes.metallurgy.liquid-crafting.gears")
 end

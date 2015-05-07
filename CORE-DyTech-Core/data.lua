@@ -61,8 +61,8 @@ require("prototypes.item-group.dytech-machines")
 require("prototypes.item-group.dytech-modules")
 require("prototypes.item-group.dytech-nuclear")
 require("prototypes.item-group.metallurgy-1")
-require("prototypes.item-group.metallurgy-2")
-require("prototypes.item-group.metallurgy-3")
+--require("prototypes.item-group.metallurgy-2")
+--require("prototypes.item-group.metallurgy-3")
 require("prototypes.item-group.invisible")
 
 -- Noise Layers

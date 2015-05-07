@@ -11,8 +11,8 @@ data:extend(
     max_health = Health.Tier4,
     corpse = "big-remnants",
     resistances = Resistances.Tier3,
-    collision_box = {{-0.9, -1.4}, {1.9, 1.4}},
-    selection_box = {{-1.0, -1.5}, {2.0, 1.5}},
+    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "assembling-machine",
     animation =
     {
@@ -22,7 +22,7 @@ data:extend(
       height = 120,
       frame_count = 13,
       line_length = 13,
-      shift = {0.5, -0.2}
+      --shift = {0.5, -0.2}
     },
     crafting_categories = {"compressing"},
     crafting_speed = 1,
