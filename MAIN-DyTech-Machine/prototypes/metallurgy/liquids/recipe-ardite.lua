@@ -8,7 +8,7 @@ data:extend(
     energy_required = 7,
     ingredients =
     {
-      {type="item", name="ardite-ore", amount=1},
+      {type="item", name="clean-ardite-ore", amount=1},
 	  {type="fluid", name="lava-1800", amount=0.2}
     },
     results = 
@@ -23,7 +23,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 3.5,
-    subgroup = "metallurgy-plates",
+    subgroup = "liquid-crafting-plates",
     ingredients =
     {
       {type="fluid", name="molten-ardite", amount=0.6},

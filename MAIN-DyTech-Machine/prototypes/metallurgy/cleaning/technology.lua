@@ -20,6 +20,38 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "clean-tin-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-zinc-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-lead-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-silver-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-gold-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-tungsten-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-cobalt-ore"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "clean-ardite-ore"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "sludge-processing"
       },
       {

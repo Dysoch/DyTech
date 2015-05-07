@@ -24,7 +24,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 7,
-    subgroup = "metallurgy-plates",
+    subgroup = "liquid-crafting-plates",
     ingredients =
     {
       {type="fluid", name="molten-carbonated-iron", amount=3},
@@ -43,7 +43,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 7,
-    subgroup = "metallurgy-plates",
+    subgroup = "liquid-crafting-plates",
     ingredients =
     {
       {type="item", name="coal", amount=5},

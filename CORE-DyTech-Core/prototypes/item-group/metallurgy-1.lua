@@ -11,7 +11,13 @@ data:extend(
     type = "item-subgroup",
     name = "metallurgy-ores",
     group = "dytech-metallurgy",
-    order = "01"
+    order = "01a"
+  },
+  {
+    type = "item-subgroup",
+    name = "metallurgy-ores-clean",
+    group = "dytech-metallurgy",
+    order = "01b"
   },
   {
     type = "item-subgroup",
@@ -41,7 +47,13 @@ data:extend(
     type = "item-subgroup",
     name = "liquid-crafting-molds",
     group = "dytech-metallurgy",
-    order = "06"
+    order = "06a"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-plates",
+    group = "dytech-metallurgy",
+    order = "06b"
   },
   {
     type = "item-subgroup",

@@ -23,7 +23,7 @@ data:extend(
 	enabled = false,
 	category = "forge",
     energy_required = 2,
-    subgroup = "metallurgy-plates",
+    subgroup = "liquid-crafting-plates",
     ingredients =
     {
       {type="fluid", name="molten-copper", amount=0.6},
