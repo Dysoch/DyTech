@@ -94,7 +94,7 @@ data:extend(
     {
       control = "gemstones",
       sharpness = 1,
-      max_probability = 0.08,
+      max_probability = 0.04,
       richness_multiplier = 5000,
       richness_base = 29.5,
       size_control_multiplier = 0.05,

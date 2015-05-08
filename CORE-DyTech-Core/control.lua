@@ -216,6 +216,17 @@ remote.addinterface("DyTech-Core",
 		end
 	end,
   
+	TestMapStart = function(pIndex)
+		if pIndex == 0 then
+			for i,_ in ipairs(game.players) do
+				RemoteCalls.TestMapStart(i)
+			end
+		elseif game.players[pIndex] == nil then return
+		else
+			RemoteCalls.TestMapStart(pIndex)
+		end
+	end,
+  
 	Regenerate = function(name)
 		RemoteCalls.Regenerate(name)
 	end,

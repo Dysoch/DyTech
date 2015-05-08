@@ -19,7 +19,43 @@ function TestTrees(index)
   game.forces.player.technologies["automation"].researched = true
   game.forces.player.technologies["automation-2"].researched = true
   game.forces.player.technologies["automation-3"].researched = true
+	for _,player in pairs(game.players) do
+		player.force.resetrecipes()
+		player.force.resettechnologies()
+	end
 end
+
+function TestMapStart(index)
+  local players = game.players[index]
+  players.insert{name="construction-robot-2", count=50000}
+  players.insert{name="logistic-robot-2", count=50000}
+  players.insert{name="small-electric-pole", count=50}
+  players.insert{name="fast-inserter", count=500}
+  players.insert{name="smart-inserter", count=500}
+  players.insert{name="solar-panel-primary-mk5", count=50}
+  players.insert{name="basic-accumulator-mk6", count=50}
+  players.insert{name="basic-transport-belt", count=5000}
+  players.insert{name="basic-transport-belt-to-ground", count=2000}
+  players.insert{name="basic-splitter", count=2000}
+  players.insert{name="roboport-2", count=2000}
+  players.insert{name="blueprint", count=1}
+  players.insert{name="logistic-chest-requester", count=1000}
+  players.insert{name="logistic-chest-passive-provider", count=1000}
+  players.insert{name="logistic-chest-active-provider", count=1000}
+  players.insert{name="logistic-chest-storage", count=1000}
+  players.insert{name="deconstruction-planner", count=1}
+  game.forces.player.currentresearch = "construction-robotics"
+  game.forces.player.technologies["construction-robotics"].researched = true
+  game.forces.player.currentresearch = "construction-robotics-1"
+  game.forces.player.technologies["construction-robotics-1"].researched = true
+  game.forces.player.currentresearch = "construction-robotics-2"
+  game.forces.player.technologies["construction-robotics-2"].researched = true
+	for _,player in pairs(game.players) do
+		player.force.resetrecipes()
+		player.force.resettechnologies()
+	end
+end
+
 
 function Regenerate(name)
 	if name=="gold" then

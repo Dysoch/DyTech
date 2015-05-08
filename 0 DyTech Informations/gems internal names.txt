@@ -1,0 +1,4 @@
+Tier 1: crystal
+Tier 2: raw-ruby, raw-sapphire, raw-emerald, raw-topaz, raw-diamond
+Tier 3: cut-ruby, cut-sapphire, cut-emerald, cut-topaz, cut-diamond
+Tier 4: compressed-ruby, compressed-sapphire, compressed-emerald, compressed-topaz, compressed-diamond
