@@ -261,5 +261,9 @@ remote.addinterface("DyTech-Core",
 		glob.timer.hours = glob.timer.hours + Hour
 		glob.timer.minutes = glob.timer.minutes + Minute
 		glob.timer.seconds = glob.timer.seconds + Second
+	end,
+	
+	FindResources = function(Amount)
+		RemoteCalls.CheckOreRatio(Amount)
 	end
 })

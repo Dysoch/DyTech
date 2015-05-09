@@ -122,3 +122,57 @@ function Regenerate(name)
 		PlayerPrint({"regenerate-not-exist"})
 	end
 end
+
+function CheckOreRatio(Amount)
+		glob.Resources = {}
+		glob.Resources.FoundTin = 0
+		glob.Resources.FoundZinc = 0
+		glob.Resources.FoundSilver = 0
+		glob.Resources.FoundGold = 0
+		glob.Resources.FoundLead = 0
+		glob.Resources.FoundTungsten = 0
+		glob.Resources.FoundCobalt = 0
+		glob.Resources.FoundArdite = 0
+		glob.Resources.AverageTin = 0
+		glob.Resources.AverageZinc = 0
+		glob.Resources.AverageSilver = 0
+		glob.Resources.AverageGold = 0
+		glob.Resources.AverageLead = 0
+		glob.Resources.AverageTungsten = 0
+		glob.Resources.AverageCobalt = 0
+		glob.Resources.AverageArdite = 0
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tin-ore"}) do
+			if found then glob.Resources.FoundTin = glob.Resources.FoundTin + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "zinc-ore"}) do
+			if found then glob.Resources.FoundZinc = glob.Resources.FoundZinc + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "silver-ore"}) do
+			if found then glob.Resources.FoundSilver = glob.Resources.FoundSilver + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "gold-ore"}) do
+			if found then glob.Resources.FoundGold = glob.Resources.FoundGold + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "lead-ore"}) do
+			if found then glob.Resources.FoundLead = glob.Resources.FoundLead + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tungsten-ore"}) do
+			if found then glob.Resources.FoundTungsten = glob.Resources.FoundTungsten + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "cobalt-ore"}) do
+			if found then glob.Resources.FoundCobalt = glob.Resources.FoundCobalt + 1 end
+		end
+		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "ardite-ore"}) do
+			if found then glob.Resources.FoundArdite = glob.Resources.FoundArdite + 1 end
+		end
+		glob.Resources.AverageTin = (glob.Resources.FoundTin/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageZinc = (glob.Resources.FoundZinc/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageSilver = (glob.Resources.FoundSilver/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageGold = (glob.Resources.FoundGold/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageLead = (glob.Resources.FoundLead/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageTungsten = (glob.Resources.FoundTungsten/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageCobalt = (glob.Resources.FoundCobalt/glob.Logger.ChunkGenerated)
+		glob.Resources.AverageArdite = (glob.Resources.FoundArdite/glob.Logger.ChunkGenerated)
+		glob.Resources.Chunks = glob.Logger.ChunkGenerated
+		game.makefile("Debug/Resources.txt", serpent.block(glob.Resources))
+end
