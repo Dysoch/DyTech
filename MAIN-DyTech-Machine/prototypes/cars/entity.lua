@@ -1,3 +1,5 @@
+require "prototypes.internal-config"
+
 data:extend(
 {
   {
@@ -6,28 +8,10 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/cars/car2.png",
     flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {mining_time = 1, result = "car2"},
-    max_health = 2500,
+    max_health = Health.Tier5,
     corpse = "medium-remnants",
     dying_explosion = "huge-explosion",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      },
-	  {
-        type = "physical",
-        percent = 60
-      },
-      {
-        type = "acid",
-        percent = 60
-      },
-      {
-        type = "explosion",
-        percent = 75
-      }
-    },
+    resistances = Resistances.Tier4,
     collision_box = {{-0.7, -1}, {0.7, 1}},
     selection_box = {{-0.7, -1}, {0.7, 1}},
     effectivity = 0.1,
@@ -51,9 +35,9 @@ data:extend(
         }
       }
     },
-    consumption = "1200kW",
-    friction = 0.05,
-    energy_per_hit_point = 1,
+    consumption = "600kW",
+    friction = 0.04,
+    energy_per_hit_point = 3,
     light =
     {
       {

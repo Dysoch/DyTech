@@ -15,6 +15,7 @@
 [/list]
 [*] Balancing: 
 [list][*] Increased Pumping speed of Pumps (both of them)
+[*] Balanced Armored Car, its now faster!
 [/list]
 [/list]
 
