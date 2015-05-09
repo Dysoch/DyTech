@@ -28,8 +28,8 @@ data:extend(
 	},
 	crafting_speed = 1,
 	energy_usage = "250kW",
-	crafting_categories = {"chemistry"},
-	ingredient_count = 2,
+	crafting_categories = {"nuclear-recipe"},
+	ingredient_count = 3,
 	fluid_boxes =
 	{
       {

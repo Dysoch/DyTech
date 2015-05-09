@@ -3,15 +3,15 @@ data:extend(
   {
 	type = "resource",
 	name = "uraniumdioxide",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uraniumdioxide.png",
+	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uranium/u-235-0.7.png",
 	flags = {"placeable-neutral"},
 	order= "z-t",
 	minable = 
 	{
 	  hardness = 2.9,
 	  mining_particle = "stone-particle",
-	  mining_time = 2,
-	  result = "uraniumdioxide",
+	  mining_time = 10,
+	  result = "u-235-0-7",
 	},
 	collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{-0.5, -0.5}, {0.5, 0.5}},

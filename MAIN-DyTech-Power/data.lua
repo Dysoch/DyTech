@@ -1,7 +1,12 @@
 require "config"
 
-if Nuclear_Reactors then
-  if Use_Wattage then
+if Use_Wattage then
+  if Nuclear_Reactors then
+    if use_membranes then
+	  require("prototypes.new.nuclear-reactors.nuclear-items.membranes")
+	else
+	  require("prototypes.new.nuclear-reactors.nuclear-items.no-gem-membranes")
+	end
 --	require("prototypes.new.nuclear-reactors.entity")
 	require("prototypes.new.nuclear-reactors.recipe")
 --	require("prototypes.new.nuclear-reactors.tech")
@@ -15,6 +20,24 @@ if Nuclear_Reactors then
 	require("prototypes.new.nuclear-reactors.nuclear-items.items")
 	require("prototypes.new.nuclear-reactors.nuclear-items.reactor-item")
 	require("prototypes.new.nuclear-reactors.nuclear-tech.reactor-tech")
+	require("prototypes.new.nuclear-reactors.nuclear-recipes.reactor-recipe")
+	require("prototypes.new.nuclear-reactors.nuclear-recipes.fuel")
+  end
+  if dont_use_dytech then
+	require("prototypes.nocore.resources.uraniumdioxide")
+--	require("prototypes.nocore.resources.fluorite")
+	require("prototypes.nocore.tile.noise-layers")
+	require("prototypes.nocore.autoplace-controls")
+	require("prototypes.nocore.nuclear-reactors.nuclear-entities.chemical-processor")
+	require("prototypes.nocore.nuclear-reactors.nuclear-entities.nuclear-reactor")
+	require("prototypes.nocore.nuclear-reactors.nuclear-items.fuel")
+	require("prototypes.nocore.nuclear-reactors.nuclear-items.items")
+	require("prototypes.nocore.nuclear-reactors.nuclear-items.reactor-item")
+	require("prototypes.nocore.nuclear-reactors.nuclear-tech.reactor-tech")
+	require("prototypes.nocore.nuclear-reactors.nuclear-recipes.reactor-recipe")
+	require("prototypes.nocore.nuclear-reactors.nuclear-recipes.fuel")
+	require("prototypes.nocore.item-group.dytech-nuclear")
+	require("prototypes.nocore.categories.recipe-category")
   end
 end
 

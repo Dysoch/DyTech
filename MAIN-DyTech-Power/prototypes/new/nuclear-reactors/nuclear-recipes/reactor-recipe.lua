@@ -6,9 +6,7 @@ data:extend(
 		enabled = true,
 		ingredients =
 		{
-			{"steam-engine", 10},
-			{"stone-brick", 50},
-			{"stone-wall", 30}
+			{"raw-wood", 1}
 		},
 		result = "nuclear-reactor"
 	},
