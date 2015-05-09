@@ -17,6 +17,21 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "tank-dytech-2",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+	  {"tank-dytech-1", 1},
+      {"advanced-processing-unit", 2},
+      {"ardite-plate", 50},
+      {"flame-thrower", 1},
+      {"combat-shotgun", 1},
+    },
+    result = "tank-dytech-2"
+  },
+  {
+    type = "recipe",
     name = "battery-tank",
     enabled = false,
     energy_required = 5,

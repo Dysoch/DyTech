@@ -7,6 +7,8 @@
 [*] Decreased Evolution Factor by 50% to make it a little easier to survive!
 [*] Added a mixed Capsule. They spawn 4 Sharpshooters and 4 Frenzy robots.
 [*] Added stationary Robot Capsules. They last longer and have more health. (Makeshift Turrets)
+[*] Added a new Tank! Stronger then the 2 tanks already in game, it holds 5 different weapons!
+[*] Added more Modular Power Armors. 4 New ones, with improved grid size and resistances!
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!

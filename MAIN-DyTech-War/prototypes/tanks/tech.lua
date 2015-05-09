@@ -27,7 +27,35 @@ data:extend(
       },
       time = 20
     },
-    order = "e-c-c"
+    order = "e-c-c",
+	upgrade = true
+  },
+  {
+    type = "technology",
+    name = "tanks-3",
+    icon = "__base__/graphics/icons/tank.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "tank-dytech-2"
+      },
+    },
+    prerequisites = {"tanks-2", "ardite-processing"},
+    unit =
+    {
+      count = 800,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 20
+    },
+    order = "e-c-c",
+	upgrade = true
   },
 }
 )

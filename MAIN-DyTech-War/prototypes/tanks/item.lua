@@ -11,6 +11,16 @@ data:extend(
     stack_size = 1
   },
   {
+    type = "item",
+    name = "tank-dytech-2",
+    icon = "__base__/graphics/icons/tank.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-transport",
+    order = "b[tank]-c[tank-3]",
+    place_result = "tank-dytech-2",
+    stack_size = 1
+  },
+  {
     type = "gun",
     name = "laser-gun-tank",
     icon = "__MAIN-DyTech-War__/graphics/gun-laser/sniper.png",
