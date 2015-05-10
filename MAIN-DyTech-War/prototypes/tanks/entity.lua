@@ -506,7 +506,7 @@ data:extend(
     tank_driving = true,
     weight = 25000,
     inventory_size = 80,
-    guns = {"laser-gun-tank", "rocket-launcher", "flame-thrower", "combat-shotgun", "tank-cannon"},
+    guns = {"laser-gun-tank", "rocket-launcher", "flame-thrower", "combat-shotgun", "tank-cannon", "submachine-gun"},
   },
 }
 )
