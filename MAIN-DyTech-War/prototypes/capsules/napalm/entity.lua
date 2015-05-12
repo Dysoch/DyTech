@@ -12,7 +12,7 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 3,
+      animation_speed = 2,
       line_length = 7,
       scale = 3,
     },
@@ -22,7 +22,7 @@ data:extend(
     duration = 60 * 30,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0 },
+    color = { r = 0698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",
@@ -64,7 +64,7 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 3,
+      animation_speed = 2,
       line_length = 7,
       scale = 5.5,
     },
@@ -74,7 +74,7 @@ data:extend(
     duration = 60 * 45,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0 },
+    color = { r = 0698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",
@@ -116,7 +116,7 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 3,
+      animation_speed = 2,
       line_length = 7,
       scale = 5.5,
     },
@@ -126,7 +126,7 @@ data:extend(
     duration = 60 * 60,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0 },
+    color = { r = 0698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",
