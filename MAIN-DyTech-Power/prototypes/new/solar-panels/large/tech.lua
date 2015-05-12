@@ -1,7 +1,44 @@
-table.insert(data.raw["technology"]["solar-energy"].effects,{type = "unlock-recipe",recipe = "solar-panel-secondary"})
+--table.insert(data.raw["technology"]["solar-energy"].effects,{type = "unlock-recipe",recipe = "solar-panel-secondary"})
 
 data:extend(
 {
+  {
+    type = "technology",
+    name = "extended-solar-energy-2",
+    icon = "__base__/graphics/technology/solar-energy.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "large-solar-panel-primary-mk2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "large-solar-panel-secondary-mk2"
+      },
+	  {
+		type = "unlock-recipe",
+		recipe = "small-solar-panel-primary-mk2"
+	  },
+	  {
+		type = "unlock-recipe",
+		recipe = "small-solar-panel-secondary-mk2"
+	  }
+    },
+    prerequisites = {"solar-energy", "capacitor-1"},
+    unit =
+    {
+      count = 200,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1}
+      },
+      time = 30
+    },
+    order = "solar-2",
+	upgrade = true,
+  },
   {
     type = "technology",
     name = "solar-energy-2",

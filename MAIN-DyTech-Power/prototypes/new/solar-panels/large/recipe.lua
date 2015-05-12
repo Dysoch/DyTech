@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "solar-panel-secondary",
+    name = "large-solar-panel-primary",
     enabled = false,
     energy_required = 10,
     ingredients =
@@ -12,11 +12,25 @@ data:extend(
       {"copper-plate", 5},
       {"flux-capacitor-1", 1}
     },
-    result = "solar-panel-secondary"
+    result = "large-solar-panel-primary"
   },
   {
     type = "recipe",
-    name = "solar-panel-primary-mk2",
+    name = "large-solar-panel-secondary",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"steel-plate", 5},
+      {"electronic-circuit", 15},
+      {"copper-plate", 5},
+      {"flux-capacitor-1", 1}
+    },
+    result = "large-solar-panel-secondary"
+  },
+  {
+    type = "recipe",
+    name = "large-solar-panel-primary-mk2",
     enabled = false,
     energy_required = 20,
     ingredients =
@@ -25,11 +39,11 @@ data:extend(
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
-    result = "solar-panel-primary-mk2"
+    result = "large-solar-panel-primary-mk2"
   },
   {
     type = "recipe",
-    name = "solar-panel-secondary-mk2",
+    name = "large-solar-panel-secondary-mk2",
     enabled = false,
     energy_required = 20,
     ingredients =
@@ -38,11 +52,11 @@ data:extend(
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
-    result = "solar-panel-secondary-mk2"
+    result = "large-solar-panel-secondary-mk2"
   },
   {
     type = "recipe",
-    name = "solar-panel-primary-mk3",
+    name = "large-solar-panel-primary-mk3",
     enabled = false,
     energy_required = 30,
     ingredients =
@@ -52,11 +66,11 @@ data:extend(
       {"tin-plate", 20},
       {"flux-capacitor-2", 2},
     },
-    result = "solar-panel-primary-mk3"
+    result = "large-solar-panel-primary-mk3"
   },
   {
     type = "recipe",
-    name = "solar-panel-secondary-mk3",
+    name = "large-solar-panel-secondary-mk3",
     enabled = false,
     energy_required = 30,
     ingredients =
@@ -66,11 +80,11 @@ data:extend(
       {"tin-plate", 20},
       {"flux-capacitor-2", 2},
     },
-    result = "solar-panel-secondary-mk3"
+    result = "large-solar-panel-secondary-mk3"
   },
   {
     type = "recipe",
-    name = "solar-panel-primary-mk4",
+    name = "large-solar-panel-primary-mk4",
     enabled = false,
     energy_required = 40,
     ingredients =
@@ -80,11 +94,11 @@ data:extend(
       {"zinc-plate", 40},
       {"flux-capacitor-3", 5},
     },
-    result = "solar-panel-primary-mk4"
+    result = "large-solar-panel-primary-mk4"
   },
   {
     type = "recipe",
-    name = "solar-panel-secondary-mk4",
+    name = "large-solar-panel-secondary-mk4",
     enabled = false,
     energy_required = 40,
     ingredients =
@@ -94,11 +108,11 @@ data:extend(
       {"zinc-plate", 40},
       {"flux-capacitor-3", 5},
     },
-    result = "solar-panel-secondary-mk4"
+    result = "large-solar-panel-secondary-mk4"
   },
   {
     type = "recipe",
-    name = "solar-panel-primary-mk5",
+    name = "large-solar-panel-primary-mk5",
     enabled = false,
     energy_required = 50,
     ingredients =
@@ -108,11 +122,11 @@ data:extend(
       {"gold-plate", 80},
       {"flux-capacitor-4", 10},
     },
-    result = "solar-panel-primary-mk5"
+    result = "large-solar-panel-primary-mk5"
   },
   {
     type = "recipe",
-    name = "solar-panel-secondary-mk5",
+    name = "large-solar-panel-secondary-mk5",
     enabled = false,
     energy_required = 50,
     ingredients =
@@ -122,7 +136,7 @@ data:extend(
       {"gold-plate", 80},
       {"flux-capacitor-4", 10},
     },
-    result = "solar-panel-secondary-mk5"
+    result = "large-solar-panel-secondary-mk5"
   },
 }
 )
