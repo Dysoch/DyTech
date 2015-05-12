@@ -109,6 +109,14 @@ require("prototypes.capsules.firestorm.recipe")
 require("prototypes.capsules.firestorm.tech")
 end
 
+if RadiationCapsules then 
+require("prototypes.capsules.radiation.entity")
+require("prototypes.capsules.radiation.item")
+require("prototypes.capsules.radiation.projectiles")
+require("prototypes.capsules.radiation.recipe")
+require("prototypes.capsules.radiation.tech")
+end
+
 if Grenades then 
 require("prototypes.capsules.grenades.item")
 require("prototypes.capsules.grenades.projectiles")

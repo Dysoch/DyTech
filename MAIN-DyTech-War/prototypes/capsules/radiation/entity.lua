@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "smoke",
-    name = "firestorm-cloud-1",
+    name = "radiation-cloud-1",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
     animation =
@@ -12,17 +12,17 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 1,
+      animation_speed = 3,
       line_length = 7,
-      scale = 3,
+      scale = 9,
     },
     slow_down_factor = 0,
-    wind_speed_factor = 6,
+    wind_speed_factor = 0,
     cyclic = true,
-    duration = 60 * 60 * 10,
+    duration = 60 * 60 * 30,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0, a =0.5 },
+    color = { r = 0, g = 0.05, b = 0, a = 0.01 },
     action =
     {
       type = "direct",
@@ -35,7 +35,7 @@ data:extend(
           action =
           {
             type = "area",
-            perimeter = 10,
+            perimeter = 25,
             entity_flags = {"breaths-air", "player-creation", "placeable-neutral", "placeable-player", "placeable-enemy"},
             action_delivery =
             {
@@ -43,9 +43,13 @@ data:extend(
               target_effects =
               {
                 type = "damage",
-                damage = { amount = 25, type = "fire"}
-              }
-            }
+                damage = { amount = 5, type = "poison"}
+              },
+              {
+                type = "damage",
+                damage = { amount = 5, type = "acid"}
+              },
+            },
           }
         }
       }
@@ -54,7 +58,7 @@ data:extend(
   },
   {
     type = "smoke",
-    name = "firestorm-cloud-2",
+    name = "radiation-cloud-2",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
     animation =
@@ -64,17 +68,17 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 1,
+      animation_speed = 3,
       line_length = 7,
-      scale = 5.5,
+      scale = 18,
     },
     slow_down_factor = 0,
-    wind_speed_factor = 4,
+    wind_speed_factor = 0,
     cyclic = true,
-    duration = 60 * 60 * 25,
+    duration = 60 * 60 * 60,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0, a =0.5 },
+    color = { r = 0, g = 0.05, b = 0, a = 0.01 },
     action =
     {
       type = "direct",
@@ -87,7 +91,7 @@ data:extend(
           action =
           {
             type = "area",
-            perimeter = 15,
+            perimeter = 50,
             entity_flags = {"breaths-air", "player-creation", "placeable-neutral", "placeable-player", "placeable-enemy"},
             action_delivery =
             {
@@ -95,9 +99,13 @@ data:extend(
               target_effects =
               {
                 type = "damage",
-                damage = { amount = 100, type = "fire"}
-              }
-            }
+                damage = { amount = 20, type = "poison"}
+              },
+              {
+                type = "damage",
+                damage = { amount = 20, type = "acid"}
+              },
+            },
           }
         }
       }
@@ -106,7 +114,7 @@ data:extend(
   },
   {
     type = "smoke",
-    name = "firestorm-cloud-3",
+    name = "radiation-cloud-3",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
     animation =
@@ -116,17 +124,17 @@ data:extend(
       width = 256,
       height = 256,
       frame_count = 45,
-      animation_speed = 1,
+      animation_speed = 3,
       line_length = 7,
-      scale = 7,
+      scale = 27,
     },
     slow_down_factor = 0,
-    wind_speed_factor = 2,
+    wind_speed_factor = 0,
     cyclic = true,
-    duration = 60 * 60 * 40,
+    duration = 60 * 60 * 60 * 2,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 1, g = 0.271, b = 0, a =0.5 },
+    color = { r = 0, g = 0.05, b = 0, a = 0.01 },
     action =
     {
       type = "direct",
@@ -139,7 +147,7 @@ data:extend(
           action =
           {
             type = "area",
-            perimeter = 20,
+            perimeter = 75,
             entity_flags = {"breaths-air", "player-creation", "placeable-neutral", "placeable-player", "placeable-enemy"},
             action_delivery =
             {
@@ -147,9 +155,13 @@ data:extend(
               target_effects =
               {
                 type = "damage",
-                damage = { amount = 400, type = "fire"}
-              }
-            }
+                damage = { amount = 45, type = "poison"}
+              },
+              {
+                type = "damage",
+                damage = { amount = 45, type = "acid"}
+              },
+            },
           }
         }
       }

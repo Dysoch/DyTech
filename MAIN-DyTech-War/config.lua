@@ -29,6 +29,7 @@ CombatRobots = true
 PoisonCapsules = true
 AcidCapsules = true
 NapalmCapsules = true
+RadiationCapsules = true
 Grenades = true
 
 --[[ Defences ]]--
