@@ -23,6 +23,7 @@ end
 --[[ Enemies Loot Check ]]--
 if Spitters or Biters then 
 require("prototypes.enemies.item")
+require("prototypes.enemies.projectiles")
 require("prototypes.enemies.recipe")
 end
 

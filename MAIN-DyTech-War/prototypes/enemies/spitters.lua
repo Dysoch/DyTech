@@ -1,26 +1,5 @@
 require "config"
-
-function enemydyingsound()
-  return
-  {
-    {
-      filename = "__base__/sound/creatures/creeper-death-1.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-2.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-3.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-4.ogg",
-      volume = 0.7
-    }
-  }
-end
+require "prototypes.enemies.functions"
 
 BerserkerSpitterScale = 1.25
 Berserker_Spitter_Tint = {r=0.698, g=0.133, b=0.133, a=0.6}
@@ -43,6 +22,13 @@ data:extend(
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
     max_health = Berserker_Health,
     order="b-b-f",
+	resistances = 
+    {
+	  {
+        type = "fire",
+        percent = 100,
+      },
+    },
     subgroup="enemies",
     healing_per_tick = 0.08,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
@@ -58,9 +44,9 @@ data:extend(
       }
     },
     distraction_cooldown = 300,
-    attack_parameters = spitterattackparameters({range=20,
+    attack_parameters = spitterattackparametersFire({range=20,
                                                  cooldown=100,
-                                                 damage_modifier=4,
+                                                 damage_modifier=1,
                                                  scale=BerserkerSpitterScale,
                                                  tint=Berserker_Spitter_Tint}),
     vision_distance = 30,
@@ -85,19 +71,15 @@ data:extend(
     {
       {
         type = "physical",
-        percent = 20,
+        percent = -50,
       },
 	  {
-        type = "fire",
-        percent = 20,
+        type = "impact",
+        percent = -50,
       },
 	  {
         type = "laser",
-        percent = 20,
-      },
-      {
-        type = "explosion",
-        percent = 20,
+        percent = 100,
       },
     },
     healing_per_tick = 0.09,
@@ -114,9 +96,9 @@ data:extend(
       }
     },
     distraction_cooldown = 300,
-    attack_parameters = spitterattackparameters({range=25,
+    attack_parameters = spitterattackparametersLaser({range=25,
                                                  cooldown=200,
-                                                 damage_modifier=5,
+                                                 damage_modifier=1,
                                                  scale=ElderSpitterScale,
                                                  tint=Elder_Spitter_Tint}),
     vision_distance = 30,
@@ -140,20 +122,16 @@ data:extend(
 	resistances = 
     {
       {
-        type = "physical",
-        percent = 70,
+        type = "acid",
+        percent = 100,
       },
 	  {
-        type = "fire",
-        percent = 50,
+        type = "poison",
+        percent = 100,
       },
 	  {
         type = "laser",
-        percent = 60,
-      },
-      {
-        type = "explosion",
-        percent = 60,
+        percent = 25,
       },
     },
     healing_per_tick = 0.12,
@@ -170,9 +148,9 @@ data:extend(
       }
     },
     distraction_cooldown = 300,
-    attack_parameters = spitterattackparameters({range=28,
+    attack_parameters = spitterattackparametersAcid({range=28,
                                                  cooldown=400,
-                                                 damage_modifier=10,
+                                                 damage_modifier=1,
                                                  scale=KingSpitterScale,
                                                  tint=King_Spitter_Tint}),
     vision_distance = 50,
@@ -197,18 +175,30 @@ data:extend(
     {
       {
         type = "physical",
-        percent = 85,
+        percent = 75,
+      },
+      {
+        type = "impact",
+        percent = 75,
       },
 	  {
         type = "fire",
-        percent = 50,
+        percent = 75,
       },
 	  {
         type = "laser",
-        percent = 85,
+        percent = 75,
       },
       {
         type = "explosion",
+        percent = 75,
+      },
+      {
+        type = "acid",
+        percent = 75,
+      },
+      {
+        type = "poison",
         percent = 75,
       },
     },
@@ -299,6 +289,58 @@ data:extend(
     dying_speed = 0.04,
     final_render_layer = "corpse",
     animation = spitterdyinganimation(QueenSpitterScale, Queen_Spitter_Tint),
+  },
+  {
+    type = "smoke",
+    name = "poison-cloud-king",
+    flags = {"not-on-map"},
+    show_when_smoke_off = true,
+    animation =
+    {
+      filename = "__base__/graphics/entity/cloud/cloud-45-frames.png",
+      priority = "low",
+      width = 256,
+      height = 256,
+      frame_count = 45,
+      animation_speed = 3,
+      line_length = 7,
+      scale = 2,
+    },
+    slow_down_factor = 0,
+    wind_speed_factor = 0,
+    cyclic = true,
+    duration = 60 * 10,
+    fade_away_duration = 2 * 60,
+    spread_duration = 10,
+    color = { r = 0.2, g = 0.9, b = 0.2 },
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          type = "nested-result",
+          action =
+          {
+            type = "area",
+            perimeter = 8,
+            entity_flags = {"breaths-air"},
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                type = "damage",
+                damage = { amount = 5, type = "poison"}
+              }
+            }
+          }
+        }
+      }
+    },
+    action_frequency = 30
   },
 }
 )

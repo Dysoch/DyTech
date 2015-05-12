@@ -1,26 +1,5 @@
 require "config"
-
-function enemydyingsound()
-  return
-  {
-    {
-      filename = "__base__/sound/creatures/creeper-death-1.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-2.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-3.ogg",
-      volume = 0.7
-    },
-    {
-      filename = "__base__/sound/creatures/creeper-death-4.ogg",
-      volume = 0.7
-    }
-  }
-end
+require "prototypes.enemies.functions"
 
 BerserkerBiterScale = 1.25
 Berserker_Biter_Tint1 = {r=0.698, g=0.133, b=0.133, a=0.6}
@@ -48,6 +27,13 @@ data:extend(
     max_health = (Berserker_Health*Biter_Modifier),
     subgroup="enemies",
 	order = "b-b-d",
+	resistances = 
+    {
+	  {
+        type = "fire",
+        percent = 100,
+      },
+    },
     healing_per_tick = 0.05,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.85, -1.9}, {0.85, 0.37}},
@@ -66,7 +52,7 @@ data:extend(
       range = 1.5,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(60),
+      ammo_type = make_unit_melee_ammo_fire(60),
       sound =
       {
         {
@@ -101,19 +87,15 @@ data:extend(
     {
       {
         type = "physical",
-        percent = 20,
+        percent = -50,
       },
 	  {
-        type = "fire",
-        percent = 20,
+        type = "impact",
+        percent = -50,
       },
 	  {
         type = "laser",
-        percent = 20,
-      },
-      {
-        type = "explosion",
-        percent = 20,
+        percent = 100,
       },
     },
     healing_per_tick = 0.05,
@@ -134,7 +116,7 @@ data:extend(
       range = 1.0,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(75),
+      ammo_type = make_unit_melee_ammo_laser(75),
       sound =
       {
         {
@@ -168,20 +150,16 @@ data:extend(
 	resistances = 
     {
       {
-        type = "physical",
-        percent = 70,
+        type = "acid",
+        percent = 100,
       },
 	  {
-        type = "fire",
-        percent = 50,
+        type = "poison",
+        percent = 100,
       },
 	  {
         type = "laser",
-        percent = 60,
-      },
-      {
-        type = "explosion",
-        percent = 60,
+        percent = 25,
       },
     },
     healing_per_tick = 0.10,
@@ -202,7 +180,7 @@ data:extend(
       range = 4.5,
       cooldown = 35,
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(75),
+      ammo_type = make_unit_melee_ammo_poison(35),
       sound =
       {
         {
@@ -237,18 +215,30 @@ data:extend(
     {
       {
         type = "physical",
-        percent = 85,
+        percent = 75,
+      },
+      {
+        type = "impact",
+        percent = 75,
       },
 	  {
         type = "fire",
-        percent = 50,
+        percent = 75,
       },
 	  {
         type = "laser",
-        percent = 85,
+        percent = 75,
       },
       {
         type = "explosion",
+        percent = 75,
+      },
+      {
+        type = "acid",
+        percent = 75,
+      },
+      {
+        type = "poison",
         percent = 75,
       },
     },
