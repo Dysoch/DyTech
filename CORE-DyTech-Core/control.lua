@@ -60,6 +60,10 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
+	if event.tick%600==0 then
+		game.windorientation = math.random()
+		debug(tostring(game.windorientation))
+	end
 	fs.Timer(event)
 	--if not DyTechOnInit then
 		--DyTechOnInit = true
@@ -265,5 +269,11 @@ remote.addinterface("DyTech-Core",
 	
 	FindResources = function(Amount)
 		RemoteCalls.CheckOreRatio(Amount)
+	end,
+	
+	ChangeWind = function()
+		local direction = math.random()
+		game.windorientation = direction
+		PlayerPrint(tostring(game.windorientation))
 	end
 })
