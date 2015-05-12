@@ -30,7 +30,7 @@ data:extend(
                 {
                   {
                     type = "damage",
-                    damage = {amount = 45, type = "explosion"}
+                    damage = {amount = 90, type = "explosion"}
                   },
                   {
                     type = "create-entity",
@@ -91,7 +91,7 @@ data:extend(
                 {
                   {
                     type = "damage",
-                    damage = {amount = 80, type = "explosion"}
+                    damage = {amount = 200, type = "explosion"}
                   },
                   {
                     type = "create-entity",

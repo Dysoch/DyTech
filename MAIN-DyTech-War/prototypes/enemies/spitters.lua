@@ -326,14 +326,14 @@ data:extend(
           {
             type = "area",
             perimeter = 8,
-            entity_flags = {"breaths-air"},
+            entity_flags = {"breaths-air", "player-creation", "placeable-neutral", "placeable-player", "placeable-enemy", "not-on-map"},
             action_delivery =
             {
               type = "instant",
               target_effects =
               {
                 type = "damage",
-                damage = { amount = 5, type = "poison"}
+                damage = { amount = 2.5, type = "poison"}
               }
             }
           }

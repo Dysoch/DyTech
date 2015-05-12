@@ -1,4 +1,6 @@
 require "util"
+require "prototypes.internal-config"
+
 data:extend(
 {
   {
