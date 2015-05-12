@@ -1,0 +1,2 @@
+table.insert(data.raw["technology"]["military-3"].effects,{type = "unlock-recipe",recipe = "basic-grenade-2"})
+table.insert(data.raw["technology"]["military-4"].effects,{type = "unlock-recipe",recipe = "basic-grenade-3"})

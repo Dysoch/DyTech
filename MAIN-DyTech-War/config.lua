@@ -17,12 +17,19 @@ Spitters = true
 Ammo = true
 SniperRifle = true
 LaserWeapons = true
-Capsules = true
 Tanks = true
 Equipment = true
 Armor = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
+
+--[[ Capsules ]]--
+-- Here are all different Capsules:
+CombatRobots = true
+PoisonCapsules = true
+AcidCapsules = true
+NapalmCapsules = true
+Grenades = true
 
 --[[ Defences ]]--
 -- Here you can find all kinds of defensive items!

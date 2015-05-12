@@ -72,12 +72,48 @@ require("prototypes.turrets-laser.tech-upgrade")
 end
 
 --[[ Capsules Check ]]--
-if Capsules then 
-require("prototypes.capsules.entity")
-require("prototypes.capsules.item")
-require("prototypes.capsules.projectiles")
-require("prototypes.capsules.recipe")
-require("prototypes.capsules.tech")
+if CombatRobots then 
+require("prototypes.capsules.robots.entity")
+require("prototypes.capsules.robots.item")
+require("prototypes.capsules.robots.projectiles")
+require("prototypes.capsules.robots.recipe")
+require("prototypes.capsules.robots.tech")
+end
+
+if PoisonCapsules then 
+require("prototypes.capsules.poison.entity")
+require("prototypes.capsules.poison.item")
+require("prototypes.capsules.poison.projectiles")
+require("prototypes.capsules.poison.recipe")
+require("prototypes.capsules.poison.tech")
+end
+
+if AcidCapsules then 
+require("prototypes.capsules.acid.entity")
+require("prototypes.capsules.acid.item")
+require("prototypes.capsules.acid.projectiles")
+require("prototypes.capsules.acid.recipe")
+require("prototypes.capsules.acid.tech")
+end
+
+if NapalmCapsules then 
+require("prototypes.capsules.napalm.entity")
+require("prototypes.capsules.napalm.item")
+require("prototypes.capsules.napalm.projectiles")
+require("prototypes.capsules.napalm.recipe")
+require("prototypes.capsules.napalm.tech")
+require("prototypes.capsules.firestorm.entity")
+require("prototypes.capsules.firestorm.item")
+require("prototypes.capsules.firestorm.projectiles")
+require("prototypes.capsules.firestorm.recipe")
+require("prototypes.capsules.firestorm.tech")
+end
+
+if Grenades then 
+require("prototypes.capsules.grenades.item")
+require("prototypes.capsules.grenades.projectiles")
+require("prototypes.capsules.grenades.recipe")
+require("prototypes.capsules.grenades.tech")
 end
 
 --[[ Tanks Check ]]--
