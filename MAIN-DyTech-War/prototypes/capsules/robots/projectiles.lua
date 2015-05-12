@@ -268,6 +268,12 @@ data:extend(
           {
             type = "create-entity",
             show_in_tooltip = true,
+            entity_name = "defender-turret",
+            offsets = {{2,0},{-2,0},{0,2},{0,-2}}
+          },
+          {
+            type = "create-entity",
+            show_in_tooltip = true,
             entity_name = "sharpshooter-turret",
             offsets = {{-0.7, -0.7},{-0.7, 0.7},{0.7, -0.7},{0.7, 0.7}}
           },
@@ -311,6 +317,12 @@ data:extend(
             show_in_tooltip = true,
             entity_name = "frenzy",
             offsets = {{1,0},{-1,0},{0,1},{0,-1}}
+          },
+          {
+            type = "create-entity",
+            show_in_tooltip = true,
+            entity_name = "defender",
+            offsets = {{2,0},{-2,0},{0,2},{0,-2}}
           },
           {
             type = "create-entity",

@@ -437,5 +437,89 @@ data:extend(
       height = 37
     }
   },
+  {
+    type = "combat-robot",
+    name = "defender-turret",
+    icon = "__base__/graphics/icons/defender.png",
+    flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
+    subgroup="capsule",
+    order="e-a-a",
+    max_health = 60 * 5,
+    collision_box = {{0, 0}, {0, 0}},
+    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+    distance_per_frame = 0.13,
+    time_to_live = 60 * 45 * 5,
+    speed = 0.01,
+    destroy_action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        source_effects =
+        {
+            type = "create-entity",
+            entity_name = "explosion"
+        }
+      }
+    },
+    attack_parameters =
+    {
+      ammo_category = "bullet",
+      cooldown = 20,
+      projectile_center = {0, 0},
+      projectile_creation_distance = 0.6,
+      range = 15,
+      sound =
+      {
+        {
+          filename = "__base__/sound/gunshot.ogg",
+          volume = 0.3
+        }
+      },
+      ammo_type =
+      {
+        category = "bullet",
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "instant",
+            source_effects =
+            {
+              type = "create-entity",
+              entity_name = "explosion-gunshot"
+            },
+            target_effects =
+            {
+              {
+                type = "create-entity",
+                entity_name = "explosion-gunshot"
+              },
+              {
+                type = "damage",
+                damage = { amount = 25 , type = "physical"}
+              }
+            }
+          }
+        }
+      }
+    },
+    picture =
+    {
+      filename = "__base__/graphics/entity/combat-robot/defender.png",
+      priority = "high",
+      width = 37,
+      height = 34
+    },
+    shadow =
+    {
+      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      priority = "high",
+      width = 52,
+      height = 37
+    }
+  },
 }
 )

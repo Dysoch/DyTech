@@ -95,7 +95,7 @@ data:extend(
       },
 	  {
         type = "laser",
-        percent = 100,
+        percent = 99,
       },
     },
     healing_per_tick = 0.05,
