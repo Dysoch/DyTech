@@ -1,24 +1,66 @@
 --require "prototypes.internal-config"
 
 SolarPanels = {
-	Tier1 = "90kW",
-	Tier2 = "204kW",
-	Tier3 = "690kW",
-	Tier4 = "3504kW",
-	Tier5 = "26693kW"
+	Small = {
+		Tier1 = "kW",
+		Tier2 = "kW",
+		Tier3 = "kW",
+		Tier4 = "kW",
+		Tier5 = "kW"
+	},
+	Normal = {
+		Tier1 = "90kW",
+		Tier2 = "204kW",
+		Tier3 = "690kW",
+		Tier4 = "3504kW",
+		Tier5 = "26693kW"
+	},
+	Large = {
+		Tier1 = "kW",
+		Tier2 = "kW",
+		Tier3 = "kW",
+		Tier4 = "kW",
+		Tier5 = "kW"
+	}
 }
 
 SteamEngines = {
-	effectivity1 = 1.43,
-	effectivity2 = 2.04,
-	effectivity3 = 2.92,
-	effectivity4 = 4.18,
-	effectivity5 = 5.98,
-	fluid_usage_per_tick1 = 0.08,
-	fluid_usage_per_tick2 = 0.124,
-	fluid_usage_per_tick3 = 0.193,
-	fluid_usage_per_tick4 = 0.3,
-	fluid_usage_per_tick5 = 0.465
+	Small = {
+		effectivity1 = ,
+		effectivity2 = ,
+		effectivity3 = ,
+		effectivity4 = ,
+		effectivity5 = 
+		fluid_usage_per_tick1 = ,
+		fluid_usage_per_tick2 = ,
+		fluid_usage_per_tick3 = ,
+		fluid_usage_per_tick4 = ,
+		fluid_usage_per_tick5 = 
+	},
+	Normal = {
+		effectivity1 = 1.43,
+		effectivity2 = 2.04,
+		effectivity3 = 2.92,
+		effectivity4 = 4.18,
+		effectivity5 = 5.98,
+		fluid_usage_per_tick1 = 0.08,
+		fluid_usage_per_tick2 = 0.124,
+		fluid_usage_per_tick3 = 0.193,
+		fluid_usage_per_tick4 = 0.3,
+		fluid_usage_per_tick5 = 0.465
+	},
+	Large = {
+		effectivity1 = ,
+		effectivity2 = ,
+		effectivity3 = ,
+		effectivity4 = ,
+		effectivity5 = 
+		fluid_usage_per_tick1 = ,
+		fluid_usage_per_tick2 = ,
+		fluid_usage_per_tick3 = ,
+		fluid_usage_per_tick4 = ,
+		fluid_usage_per_tick5 = 
+	}
 }
 
 Boilers = {
@@ -39,6 +81,7 @@ Boilers = {
 	effectivity5 = 16
 }
 
+--whattodowithit?
 Health = {
 	Tier1 = 100,
 	Tier2 = 250,
