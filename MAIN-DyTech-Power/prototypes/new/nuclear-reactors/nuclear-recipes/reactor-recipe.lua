@@ -12,13 +12,13 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "chemical-processor",
+		name - "chemical-processor",
 		enabled = true,
 		ingredients =
 		{
 			{"stone-brick", 1}
 		},
-		result = "chemical-processor"
+		result = "chemical processor"
 	}
 }
 )

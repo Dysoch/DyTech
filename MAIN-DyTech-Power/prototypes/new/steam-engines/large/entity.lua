@@ -1,10 +1,10 @@
 require "prototypes.internal-config"
 
-data.raw["generator"]["steam-engine"].fast_replaceable_group = "steam-engine"
+--[[data.raw["generator"]["steam-engine"].fast_replaceable_group = "steam-engine"
 data.raw["generator"]["steam-engine"].fluid_usage_per_tick = SteamEngines.fluid_usage_per_tick1
 data.raw["generator"]["steam-engine"].effectivity = SteamEngines.effectivity1
 data.raw["generator"]["steam-engine"].max_health = Health.Tier1
-data.raw["generator"]["steam-engine"].resistances = Resistances.Tier1
+data.raw["generator"]["steam-engine"].resistances = Resistances.Tier1]]
 
 data:extend(
 {

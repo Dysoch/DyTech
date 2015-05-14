@@ -32,7 +32,13 @@ SteamEngines = false
 
 --[[Solar Panels Toggle]]--
 -- Don't like the Solar Panels? Here you can switch them off!
-SolarPanels = false
+SolarPanels = true
+	
+	--[[Advanced Solar Panels Toggles]]--
+	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
+	Small_SolarPanels = true
+	Normal_SolarPanels = false
+	Large_SolarPanels = false
 
 --[[Uber Debug Toggle]]--
 -- If you don't know what this toggle does, stay off! #debugtothemax :D -MagicLegend

@@ -1,8 +1,8 @@
 require "prototypes.internal-config"
 
-data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
+--[[data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
 data.raw["accumulator"]["basic-accumulator"].max_health = Health.Tier2
-data.raw["accumulator"]["basic-accumulator"].resistances = Resistances.Tier2
+data.raw["accumulator"]["basic-accumulator"].resistances = Resistances.Tier2]]
 
 data:extend(
 {

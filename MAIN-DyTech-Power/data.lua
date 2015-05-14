@@ -91,18 +91,24 @@ end
 --[[ Solar Panels Check ]]--
 if SolarPanels then 
 	if Use_Wattage then
-		require("prototypes.new.solar-panels.small.entity")
-		require("prototypes.new.solar-panels.small.item")
-		require("prototypes.new.solar-panels.small.recipe")
-		require("prototypes.new.solar-panels.small.tech")
-		require("prototypes.new.solar-panels.normal.entity")
-		require("prototypes.new.solar-panels.normal.item")
-		require("prototypes.new.solar-panels.normal.recipe")
-		require("prototypes.new.solar-panels.normal.tech")
-		require("prototypes.new.solar-panels.large.entity")
-		require("prototypes.new.solar-panels.large.item")
-		require("prototypes.new.solar-panels.large.recipe")
-		require("prototypes.new.solar-panels.large.tech")
+		if Small_SolarPanels then
+			require("prototypes.new.solar-panels.small.entity")
+			require("prototypes.new.solar-panels.small.item")
+			require("prototypes.new.solar-panels.small.recipe")
+			require("prototypes.new.solar-panels.small.tech")
+		end
+--[[		if Normal_SolarPanels then
+			require("prototypes.new.solar-panels.normal.entity")
+			require("prototypes.new.solar-panels.normal.item")
+			require("prototypes.new.solar-panels.normal.recipe")
+			require("prototypes.new.solar-panels.normal.tech")
+		end
+		if Large_SolarPanels then
+			require("prototypes.new.solar-panels.large.entity")
+			require("prototypes.new.solar-panels.large.item")
+			require("prototypes.new.solar-panels.large.recipe")
+			require("prototypes.new.solar-panels.large.tech")
+		end]]
 	else
 		require("prototypes.old.solar-panels-normal.entity")
 		require("prototypes.old.solar-panels-normal.item")
@@ -114,7 +120,7 @@ end
 --[[ Steam Engines Check ]]--
 if SteamEngines then 
 	if Use_Wattage then
-		require("prototypes.new.steam-engines.small.entity")
+--[[		require("prototypes.new.steam-engines.small.entity")
 		require("prototypes.new.steam-engines.small.item")
 		require("prototypes.new.steam-engines.small.recipe")
 		require("prototypes.new.steam-engines.small.tech")
@@ -125,7 +131,7 @@ if SteamEngines then
 		require("prototypes.new.steam-engines.large.entity")
 		require("prototypes.new.steam-engines.large.item")
 		require("prototypes.new.steam-engines.large.recipe")
-		require("prototypes.new.steam-engines.large.tech")
+		require("prototypes.new.steam-engines.large.tech")]]
 	else
 		require("prototypes.old.steam-engines-normal.entity")
 		require("prototypes.old.steam-engines-normal.item")
