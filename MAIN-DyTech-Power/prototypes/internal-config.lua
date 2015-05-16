@@ -10,11 +10,11 @@ Tint = {
 
 SolarPanels = {
 	Small = {
-		Tier1 = "1kW",
-		Tier2 = "1kW",
-		Tier3 = "1kW",
-		Tier4 = "1kW",
-		Tier5 = "1kW"
+		Tier1 = "34kW",
+		Tier2 = "73kW", --72.53333
+		Tier3 = "230kW",
+		Tier4 = "1090kW",
+		Tier5 = "7118kW"
 	},
 	Normal = {
 		Tier1 = "90kW",
@@ -24,11 +24,11 @@ SolarPanels = {
 		Tier5 = "26693kW"
 	},
 	Large = {
-		Tier1 = "kW",
-		Tier2 = "kW",
-		Tier3 = "kW",
-		Tier4 = "kW",
-		Tier5 = "kW"
+		Tier1 = "176kW",
+		Tier2 = "453kW", --453.3333
+		Tier3 = "1717kW",
+		Tier4 = "9656kW",
+		Tier5 = "80672kW"
 	}
 }
 
