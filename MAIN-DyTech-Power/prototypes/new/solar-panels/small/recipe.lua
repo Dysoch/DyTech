@@ -12,7 +12,7 @@ data:extend(
       {"copper-plate", 5},
       {"flux-capacitor-1", 1}
     },
-    result = "solar-panel-primary"
+    result = "small-solar-panel-primary"
   },
   {
     type = "recipe",
@@ -26,7 +26,7 @@ data:extend(
       {"copper-plate", 5},
       {"flux-capacitor-1", 1}
     },
-    result = "solar-panel-secondary"
+    result = "small-solar-panel-secondary"
   },
   {
     type = "recipe",

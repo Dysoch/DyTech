@@ -1,9 +1,9 @@
 require "prototypes.internal-config"
 
-data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
-data.raw["solar-panel"]["solar-panel"].max_health = Health.Tier1
-data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Tier1
-data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Tier1
+--[[data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
+data.raw["solar-panel"]["solar-panel"].max_health = Health.Normal.Tier1
+data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Normal.Tier1
+data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Normal.Tier1]]
 
 data:extend(
 {

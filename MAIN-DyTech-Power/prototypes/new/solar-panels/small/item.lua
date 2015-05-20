@@ -2,6 +2,16 @@ data:extend(
 {
   {
     type = "item",
+    name = "small-solar-panel-primary",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/small/icons/solar-panel.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-energy-solar-small",
+    order = "a[mk1]-b[primary]",
+    place_result = "small-solar-panel-primary",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "small-solar-panel-secondary",
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels/small/icons/solar-panel.png",
     flags = {"goes-to-quickbar"},

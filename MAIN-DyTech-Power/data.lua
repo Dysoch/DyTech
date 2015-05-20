@@ -68,18 +68,18 @@ end
 --[[ Accumulators Check ]]--
 if Accumulators then 
 	if Use_Wattage then
-		require("prototypes.new.accumulators.small.entity")
+--[[		require("prototypes.new.accumulators.small.entity")
 		require("prototypes.new.accumulators.small.item")
 		require("prototypes.new.accumulators.small.recipe")
-		require("prototypes.new.accumulators.small.tech")
+		require("prototypes.new.accumulators.small.tech")]]
 		require("prototypes.new.accumulators.normal.entity")
 		require("prototypes.new.accumulators.normal.item")
 		require("prototypes.new.accumulators.normal.recipe")
 		require("prototypes.new.accumulators.normal.tech")
-		require("prototypes.new.accumulators.large.entity")
+--[[		require("prototypes.new.accumulators.large.entity")
 		require("prototypes.new.accumulators.large.item")
 		require("prototypes.new.accumulators.large.recipe")
-		require("prototypes.new.accumulators.large.tech")
+		require("prototypes.new.accumulators.large.tech")]]
 	else
 		require("prototypes.old.accumulators-normal.entity")
 		require("prototypes.old.accumulators-normal.item")
@@ -95,20 +95,35 @@ if SolarPanels then
 			require("prototypes.new.solar-panels.small.entity")
 			require("prototypes.new.solar-panels.small.item")
 			require("prototypes.new.solar-panels.small.recipe")
-			require("prototypes.new.solar-panels.small.tech")
+			require("prototypes.new.solar-panels.tech.small")
 		end
---[[		if Normal_SolarPanels then
+		if Normal_SolarPanels then
 			require("prototypes.new.solar-panels.normal.entity")
 			require("prototypes.new.solar-panels.normal.item")
 			require("prototypes.new.solar-panels.normal.recipe")
-			require("prototypes.new.solar-panels.normal.tech")
+			require("prototypes.new.solar-panels.tech.normal")
 		end
 		if Large_SolarPanels then
 			require("prototypes.new.solar-panels.large.entity")
 			require("prototypes.new.solar-panels.large.item")
 			require("prototypes.new.solar-panels.large.recipe")
-			require("prototypes.new.solar-panels.large.tech")
-		end]]
+			require("prototypes.new.solar-panels.tech.large")
+		end
+		
+--[[		if Small_SolarPanels then
+			require("prototypes.new.solar-panels.tech.small")
+		elseif Normal_SolarPanels then
+			require("prototypes.new.solar-panels.tech.normal")
+		elseif Large_SolarPanels then
+			require("prototypes.new.solar-panels.tech.large")]]
+--[[		else]]if Small_SolarPanels and Normal_SolarPanels then
+			require("prototypes.new.solar-panels.tech.small_and_normal")
+		elseif Small_SolarPanels and Large_SolarPanels then
+			require("prototypes.new.solar-panels.tech.small_and_large")
+		elseif Normal_SolarPanels and Large_SolarPanels then
+			require("prototypes.new.solar-panels.tech.normal_and_large")
+		end
+		
 	else
 		require("prototypes.old.solar-panels-normal.entity")
 		require("prototypes.old.solar-panels-normal.item")
