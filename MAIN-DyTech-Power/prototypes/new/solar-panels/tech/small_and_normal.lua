@@ -1,3 +1,4 @@
+table.insert(data.raw["technology"]["solar-energy"].effects,{type = "unlock-recipe",recipe = "small-solar-panel-primary"})
 table.insert(data.raw["technology"]["solar-energy"].effects,{type = "unlock-recipe",recipe = "small-solar-panel-secondary"})
 table.insert(data.raw["technology"]["solar-energy"].effects,{type = "unlock-recipe",recipe = "solar-panel-secondary"})
 
@@ -26,7 +27,7 @@ data:extend(
         recipe = "small-solar-panel-secondary-mk2"
       },
     },
-    prerequisites = {"capacitor-1"},
+    prerequisites = {"solar-energy", "capacitor-1"},
     unit =
     {
       count = 200,

@@ -4,7 +4,7 @@ data:extend(
 {
   {
     type = "technology",
-    name = "large-solar-energy-2",
+    name = "extended-solar-energy-2",
     icon = "__base__/graphics/technology/solar-energy.png",
     effects =
     {
@@ -17,7 +17,7 @@ data:extend(
         recipe = "large-solar-panel-secondary-mk2"
       },
     },
-    prerequisites = {"capacitor-1"},
+    prerequisites = {"solar-energy", "capacitor-1"},
     unit =
     {
       count = 200,
@@ -33,7 +33,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "large-solar-energy-3",
+    name = "extended-solar-energy-3",
     icon = "__base__/graphics/technology/solar-energy.png",
     effects =
     {
@@ -46,7 +46,7 @@ data:extend(
         recipe = "large-solar-panel-secondary-mk3"
       },
     },
-    prerequisites = {"capacitor-2", "tin-processing"},
+    prerequisites = {"extended-solar-energy-2", "capacitor-2", "tin-processing"},
     unit =
     {
       count = 300,
@@ -63,7 +63,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "large-solar-energy-4",
+    name = "extended-solar-energy-4",
     icon = "__base__/graphics/technology/solar-energy.png",
     effects =
     {
@@ -76,7 +76,7 @@ data:extend(
         recipe = "large-solar-panel-secondary-mk4"
       },
     },
-    prerequisites = {"capacitor-3", "zinc-processing"},
+    prerequisites = {"extended-solar-energy-3", "capacitor-3", "zinc-processing"},
     unit =
     {
       count = 400,
@@ -93,7 +93,7 @@ data:extend(
   },
   {
     type = "technology",
-    name = "large-solar-energy-5",
+    name = "extended-solar-energy-5",
     icon = "__base__/graphics/technology/solar-energy.png",
     effects =
     {
@@ -106,7 +106,7 @@ data:extend(
         recipe = "large-solar-panel-secondary-mk5"
       },
     },
-    prerequisites = {"capacitor-4", "gold-processing"},
+    prerequisites = {"extended-solar-energy-4", "capacitor-4", "gold-processing"},
     unit =
     {
       count = 500,

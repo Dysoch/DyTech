@@ -17,7 +17,7 @@ data:extend(
         recipe = "small-solar-panel-secondary-mk2"
       },
     },
-    prerequisites = {"capacitor-1"},
+    prerequisites = {"solar-energy", "capacitor-1"},
     unit =
     {
       count = 200,

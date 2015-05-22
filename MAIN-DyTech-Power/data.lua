@@ -92,36 +92,35 @@ end
 if SolarPanels then 
 	if Use_Wattage then
 		if Small_SolarPanels then
-			require("prototypes.new.solar-panels.small.entity")
-			require("prototypes.new.solar-panels.small.item")
-			require("prototypes.new.solar-panels.small.recipe")
-			require("prototypes.new.solar-panels.tech.small")
+--			require("prototypes.new.solar-panels.small.entity")
+--			require("prototypes.new.solar-panels.small.item")
+--			require("prototypes.new.solar-panels.small.recipe")
 		end
 		if Normal_SolarPanels then
-			require("prototypes.new.solar-panels.normal.entity")
-			require("prototypes.new.solar-panels.normal.item")
-			require("prototypes.new.solar-panels.normal.recipe")
-			require("prototypes.new.solar-panels.tech.normal")
+--			require("prototypes.new.solar-panels.normal.entity")
+--			require("prototypes.new.solar-panels.normal.item")
+--			require("prototypes.new.solar-panels.normal.recipe")
 		end
 		if Large_SolarPanels then
 			require("prototypes.new.solar-panels.large.entity")
 			require("prototypes.new.solar-panels.large.item")
-			require("prototypes.new.solar-panels.large.recipe")
-			require("prototypes.new.solar-panels.tech.large")
+--			require("prototypes.new.solar-panels.large.recipe")
 		end
 		
---[[		if Small_SolarPanels then
-			require("prototypes.new.solar-panels.tech.small")
-		elseif Normal_SolarPanels then
-			require("prototypes.new.solar-panels.tech.normal")
-		elseif Large_SolarPanels then
-			require("prototypes.new.solar-panels.tech.large")]]
---[[		else]]if Small_SolarPanels and Normal_SolarPanels then
+		if Small_SolarPanels and not Normal_SolarPanels and not Large_SolarPanels then
+--			require("prototypes.new.solar-panels.tech.small")
+		elseif Normal_SolarPanels and not Small_SolarPanels and not Large_SolarPanels then
+--			require("prototypes.new.solar-panels.tech.normal")
+		elseif Large_SolarPanels and not Small_SolarPanels and not Normal_SolarPanels then
+--			require("prototypes.new.solar-panels.tech.large")
+		elseif Small_SolarPanels and Normal_SolarPanels and not Large_SolarPanels then
 			require("prototypes.new.solar-panels.tech.small_and_normal")
-		elseif Small_SolarPanels and Large_SolarPanels then
+		elseif Small_SolarPanels and Large_SolarPanels and not Normal_SolarPanels then
 			require("prototypes.new.solar-panels.tech.small_and_large")
-		elseif Normal_SolarPanels and Large_SolarPanels then
+		elseif Normal_SolarPanels and Large_SolarPanels and not Small_SolarPanels then
 			require("prototypes.new.solar-panels.tech.normal_and_large")
+		elseif Small_SolarPanels and Normal_SolarPanels and Large_SolarPanels then
+			require("prototypes.new.solar-panels.tech.small_normal_and_large")
 		end
 		
 	else

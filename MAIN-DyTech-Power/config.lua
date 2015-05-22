@@ -54,9 +54,9 @@ SolarPanels = true
 	
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
-	Small_SolarPanels = true
-	Normal_SolarPanels = true
-	Large_SolarPanels = false
+	Small_SolarPanels = false
+	Normal_SolarPanels = false
+	Large_SolarPanels = true
 
 --[[Uber Debug Toggle]]--
 -- If you don't know what this toggle does, stay off! #debugtothemax :D -MagicLegend
