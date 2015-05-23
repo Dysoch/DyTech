@@ -35,7 +35,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"large-solar-panel", 5},
+      {"large-solar-panel-primary", 5},
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
@@ -117,7 +117,7 @@ data:extend(
     energy_required = 50,
     ingredients =
     {
-      {"karge-solar-panel-primary-mk4", 5},
+      {"large-solar-panel-primary-mk4", 5},
       {"advanced-processing-unit", 45},
       {"gold-plate", 80},
       {"flux-capacitor-4", 10},

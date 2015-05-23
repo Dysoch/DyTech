@@ -35,7 +35,7 @@ data:extend(
     energy_required = 20,
     ingredients =
     {
-      {"small-solar-panel", 5},
+      {"small-solar-panel-primary", 5},
       {"advanced-circuit", 15},
       {"flux-capacitor-1", 1},
     },
