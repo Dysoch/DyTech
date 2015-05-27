@@ -68,18 +68,37 @@ end
 --[[ Accumulators Check ]]--
 if Accumulators then 
 	if Use_Wattage then
---[[		require("prototypes.new.accumulators.small.entity")
-		require("prototypes.new.accumulators.small.item")
-		require("prototypes.new.accumulators.small.recipe")
-		require("prototypes.new.accumulators.small.tech")]]
-		require("prototypes.new.accumulators.normal.entity")
-		require("prototypes.new.accumulators.normal.item")
-		require("prototypes.new.accumulators.normal.recipe")
-		require("prototypes.new.accumulators.normal.tech")
---[[		require("prototypes.new.accumulators.large.entity")
-		require("prototypes.new.accumulators.large.item")
-		require("prototypes.new.accumulators.large.recipe")
-		require("prototypes.new.accumulators.large.tech")]]
+		if Small_Accumulators then
+			require("prototypes.new.accumulators.small.entity")
+			require("prototypes.new.accumulators.small.item")
+			require("prototypes.new.accumulators.small.recipe")
+		end
+		if Normal_Accumulators then
+			require("prototypes.new.accumulators.normal.entity")
+			require("prototypes.new.accumulators.normal.item")
+			require("prototypes.new.accumulators.normal.recipe")
+		end
+		if Large_Accumulators then
+			require("prototypes.new.accumulators.large.entity")
+			require("prototypes.new.accumulators.large.item")
+			require("prototypes.new.accumulators.large.recipe")
+		end
+		
+		if Small_Accumulators and not Normal_Accumulators and not Large_Accumulators then
+			require("prototypes.new.accumulators.tech.small")
+		elseif Normal_Accumulators and not Small_Accumulators and not Large_Accumulators then
+			require("prototypes.new.accumulators.tech.normal")
+		elseif Large_Accumulators and not Small_Accumulators and not Normal_Accumulators then
+			require("prototypes.new.accumulators.tech.small")
+		elseif Small_Accumulators and Normal_Accumulators and not Large_Accumulators then
+			require("prototypes.new.accumulators.tech.small_and_normal")
+		elseif Small_Accumulators and Large_Accumulators and not Normal_Accumulators then
+			require("prototypes.new.accumulators.tech.small_and_large")
+		elseif Normal_Accumulators and Large_Accumulators and not Small_Accumulators then
+			require("prototypes.new.accumulators.tech.normal_and_large")
+		elseif Small_Accumulators and Normal_Accumulators and Large_Accumulators then
+			require("prototypes.new.accumulators.tech.small_normal_and_large")
+		end
 	else
 		require("prototypes.old.accumulators-normal.entity")
 		require("prototypes.old.accumulators-normal.item")
@@ -122,7 +141,6 @@ if SolarPanels then
 		elseif Small_SolarPanels and Normal_SolarPanels and Large_SolarPanels then
 			require("prototypes.new.solar-panels.tech.small_normal_and_large")
 		end
-		
 	else
 		require("prototypes.old.solar-panels-normal.entity")
 		require("prototypes.old.solar-panels-normal.item")
