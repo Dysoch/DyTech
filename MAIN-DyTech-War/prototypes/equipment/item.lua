@@ -55,5 +55,38 @@ data:extend(
     stack_size = 50,
     default_requiest_amount = 10
   },
+  {
+    type = "item",
+    name = "battery-mk3-equipment",
+    icon = "__base__/graphics/icons/battery-mk2-equipment.png",
+    placed_as_equipment_result = "battery-mk3-equipment",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-combat-equipment",
+    order = "c[battery]-b[battery-equipment-mk3]",
+    stack_size = 50,
+    default_requiest_amount = 10
+  },
+  {
+    type = "item",
+    name = "battery-mk4-equipment",
+    icon = "__base__/graphics/icons/battery-mk2-equipment.png",
+    placed_as_equipment_result = "battery-mk4-equipment",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-combat-equipment",
+    order = "c[battery]-b[battery-equipment-mk4]",
+    stack_size = 50,
+    default_requiest_amount = 10
+  },
+  {
+    type = "item",
+    name = "battery-mk5-equipment",
+    icon = "__base__/graphics/icons/battery-mk2-equipment.png",
+    placed_as_equipment_result = "battery-mk5-equipment",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-combat-equipment",
+    order = "c[battery]-b[battery-equipment-mk5]",
+    stack_size = 50,
+    default_requiest_amount = 10
+  },
 }
 )

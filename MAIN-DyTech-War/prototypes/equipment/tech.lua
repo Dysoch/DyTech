@@ -132,5 +132,85 @@ data:extend(
     order = "g-e-b",
 	upgrade = true,
   },
+  {
+    type = "technology",
+    name = "battery-mk3-equipment",
+    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    prerequisites = {"battery-equipment"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "battery-mk3-equipment"
+      }
+    },
+    unit =
+    {
+      count = 200,
+      ingredients = 
+	  {
+	    {"science-pack-1", 1}, 
+		{"science-pack-2", 1}, 
+		{"science-pack-3", 1}
+	  },
+      time = 30
+    },
+    order = "g-i-b",
+	upgrade = true,
+  },
+  {
+    type = "technology",
+    name = "battery-mk4-equipment",
+    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    prerequisites = {"battery-equipment"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "battery-mk4-equipment"
+      }
+    },
+    unit =
+    {
+      count = 400,
+      ingredients = 
+	  {
+	    {"science-pack-1", 1}, 
+		{"science-pack-2", 1}, 
+		{"science-pack-3", 1},
+		{"alien-science-pack", 1},
+	  },
+      time = 30
+    },
+    order = "g-i-b",
+	upgrade = true,
+  },
+  {
+    type = "technology",
+    name = "battery-mk5-equipment",
+    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    prerequisites = {"battery-equipment"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "battery-mk5-equipment"
+      }
+    },
+    unit =
+    {
+      count = 800,
+      ingredients = 
+	  {
+	    {"science-pack-1", 1}, 
+		{"science-pack-2", 1}, 
+		{"science-pack-3", 1},
+		{"alien-science-pack", 1},
+	  },
+      time = 30
+    },
+    order = "g-i-b",
+	upgrade = true,
+  },
 }
 )

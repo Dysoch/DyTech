@@ -205,5 +205,80 @@ data:extend(
     },
     energy_per_shield = "60J"
   },
+  {
+    type = "battery-equipment",
+    name = "battery-mk3-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/battery-mk2-equipment.png",
+      width = 32,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 1,
+      height = 2,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "25KJ",
+      input_flow_limit = "250KW",
+      output_flow_limit = "250KW",
+      usage_priority = "terciary"
+    }
+  },
+  {
+    type = "battery-equipment",
+    name = "battery-mk4-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/battery-mk2-equipment.png",
+      width = 32,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 1,
+      height = 2,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "125KJ",
+      input_flow_limit = "1250KW",
+      output_flow_limit = "1250KW",
+      usage_priority = "terciary"
+    }
+  },
+  {
+    type = "battery-equipment",
+    name = "battery-mk5-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/battery-mk2-equipment.png",
+      width = 32,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 1,
+      height = 2,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "600KJ",
+      input_flow_limit = "6000KW",
+      output_flow_limit = "6000KW",
+      usage_priority = "terciary"
+    }
+  },
 }
 )

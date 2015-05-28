@@ -62,5 +62,41 @@ data:extend(
     },
     result = "energy-shield-mk5-equipment"
   },
+  {
+    type = "recipe",
+    name = "battery-mk3-equipment",
+    enabled = "false",
+    energy_required = 10,
+    ingredients =
+    {
+      {"battery-mk2-equipment", 2},
+      {"advanced-processing-unit", 2}
+    },
+    result = "battery-mk3-equipment"
+  },
+  {
+    type = "recipe",
+    name = "battery-mk4-equipment",
+    enabled = "false",
+    energy_required = 10,
+    ingredients =
+    {
+      {"battery-mk3-equipment", 2},
+      {"tungsten-plate", 10}
+    },
+    result = "battery-mk4-equipment"
+  },
+  {
+    type = "recipe",
+    name = "battery-mk5-equipment",
+    enabled = "false",
+    energy_required = 10,
+    ingredients =
+    {
+      {"battery-mk4-equipment", 2},
+      {"logic-diamond-processor", 1}
+    },
+    result = "battery-mk5-equipment"
+  },
 }
 )
