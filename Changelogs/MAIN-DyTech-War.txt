@@ -14,6 +14,8 @@
 [*] Added 3 Napalm Capsules.
 [*] Added 2 Slowdown Capsules
 [*] Added 3 FireStorm Capsules (upgrade from Napalm) They drift with the wind, and last very long! Be prepared to have your base destroyed if you activate one of these!
+[*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
+[*] Added 3 Shields (Equipment)
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
@@ -34,7 +36,6 @@
 [*] King: Acid/Poison Based enemy: 100% Resistance to Acid and Poison. Attacks with Acid and Poison, while Spitter creates small Poison Clouds that last 10 seconds and damages everything!!
 [*] Queen: Normal enemy: Strong Resistances to everything (75%) and weak attack damage.
 [/list]
-[*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules

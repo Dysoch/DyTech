@@ -127,5 +127,83 @@ data:extend(
     },
     automatic = true
   },
+  {
+    type = "energy-shield-equipment",
+    name = "energy-shield-mk3-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/energy-shield-mk2-equipment.png",
+      width = 64,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    max_shield_value = 300,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "240J",
+      input_flow_limit = "480W",
+      usage_priority = "primary-input"
+    },
+    energy_per_shield = "40J"
+  },
+  {
+    type = "energy-shield-equipment",
+    name = "energy-shield-mk4-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/energy-shield-mk2-equipment.png",
+      width = 64,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    max_shield_value = 500,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "300J",
+      input_flow_limit = "600W",
+      usage_priority = "primary-input"
+    },
+    energy_per_shield = "50J"
+  },
+  {
+    type = "energy-shield-equipment",
+    name = "energy-shield-mk5-equipment",
+    sprite = 
+    {
+      filename = "__base__/graphics/equipment/energy-shield-mk2-equipment.png",
+      width = 64,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    max_shield_value = 750,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "360J",
+      input_flow_limit = "720W",
+      usage_priority = "primary-input"
+    },
+    energy_per_shield = "60J"
+  },
 }
 )
