@@ -9,9 +9,10 @@
 [*] Added stationary Robot Capsules. They last longer and have more health. (Makeshift Turrets)
 [*] Added a new Tank! Stronger then the 2 tanks already in game, it holds 5 different weapons!
 [*] Added more Modular Power Armors. 4 New ones, with improved grid size and resistances!
-[*] Added 2 new Poison Capsules.
+[*] Added 2 Poison Capsules.
 [*] Added 3 Acid Capsules.
 [*] Added 3 Napalm Capsules.
+[*] Added 2 Slowdown Capsules
 [*] Added 3 FireStorm Capsules (upgrade from Napalm) They drift with the wind, and last very long! Be prepared to have your base destroyed if you activate one of these!
 [/list]
 [*] Balancing:
@@ -26,12 +27,14 @@
 [*] Decreased Health of Biter Spawner: 2500 > 2000
 [*] Decreased Health of Spitter Spawner: 3500 > 3000
 [*] Changed Health and Resistances of all entities!
+[*] Increased shooting speed of Emerald Turrets!
 [*] Changed Biters and Spitters:
 [list] [*] Berserker: Fire Based enemy: 100% Resistance to Fire, and attacks with Fire! Spitter shoots explosions to you!
 [*] Elder: Laser Based enemy: 99% Resistance to Laser, and attacks with laser damage! Spitter shoots extremely fast!
 [*] King: Acid/Poison Based enemy: 100% Resistance to Acid and Poison. Attacks with Acid and Poison, while Spitter creates small Poison Clouds that last 10 seconds and damages everything!!
 [*] Queen: Normal enemy: Strong Resistances to everything (75%) and weak attack damage.
 [/list]
+[*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules

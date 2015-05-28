@@ -640,7 +640,7 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 18,
+      cooldown = 20,
       damage = 5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
@@ -733,7 +733,7 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 18,
+      cooldown = 15,
       damage = 7.5,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
@@ -826,7 +826,7 @@ data:extend(
     attack_parameters =
     {
       ammo_category = "electric",
-      cooldown = 18,
+      cooldown = 10,
       damage = 10,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
