@@ -97,6 +97,14 @@ require("prototypes.capsules.acid.recipe")
 require("prototypes.capsules.acid.tech")
 end
 
+if SlowdownCapsules then 
+require("prototypes.capsules.slowdown.entity")
+require("prototypes.capsules.slowdown.item")
+require("prototypes.capsules.slowdown.projectiles")
+require("prototypes.capsules.slowdown.recipe")
+require("prototypes.capsules.slowdown.tech")
+end
+
 if NapalmCapsules then 
 require("prototypes.capsules.napalm.entity")
 require("prototypes.capsules.napalm.item")

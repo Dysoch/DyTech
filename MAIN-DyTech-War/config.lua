@@ -30,6 +30,7 @@ PoisonCapsules = true
 AcidCapsules = true
 NapalmCapsules = true
 RadiationCapsules = true
+SlowdownCapsules = true
 Grenades = true
 
 --[[ Defences ]]--
