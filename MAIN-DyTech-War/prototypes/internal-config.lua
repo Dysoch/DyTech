@@ -28,6 +28,24 @@ Capsules = {
 	Live_Frenzy = 60 * 60 * 15,
 }
 
+Enemies = {
+	BerserkerScale = 1.25,
+	ElderScale = 1.5,
+	KingScale = 2.0,
+	QueenScale = 2.5,
+	Young_Factor = 0.5,
+	Teen_Factor = 0.75,
+	Adult_Factor = 1,
+	Berserker_Tint1 = {r=0.698, g=0.133, b=0.133, a=0.6},
+	Berserker_Tint2 = {r=0.804, g=0.361, b=0.361, a=0.85},
+	Elder_Tint1 = {r=0, g=0, b=0.804, a=0.6},
+	Elder_Tint2 = {r=0.686, g=0.933, b=0.933, a=0.85},
+	King_Tint1 = {r=0, g=1, b=0.498, a=0.6},
+	King_Tint2 = {r=0.486, g=0.988, b=0, a=0.85},
+	Queen_Tint1 = {r=0.729, g=0.333, b=0.827, a=0.6},
+	Queen_Tint2 = {r=0.502, g=0, b=0.502, a=0.85},
+}
+
 Health = {
 	Tier1 = 100,
 	Tier2 = 250,

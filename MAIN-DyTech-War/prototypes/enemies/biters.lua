@@ -1,43 +1,29 @@
 require "config"
+require "prototypes.internal-config"
 require "prototypes.enemies.functions"
-
-BerserkerBiterScale = 1.25
-Berserker_Biter_Tint1 = {r=0.698, g=0.133, b=0.133, a=0.6}
-Berserker_Biter_Tint2 = {r=0.804, g=0.361, b=0.361, a=0.85}
-
-ElderBiterScale = 1.5
-Elder_Biter_Tint1 = {r=0, g=0, b=0.804, a=0.6}
-Elder_Biter_Tint2 = {r=0.686, g=0.933, b=0.933, a=0.85}
-
-KingBiterScale = 2.0
-King_Biter_Tint1 = {r=0, g=1, b=0.498, a=0.6}
-King_Biter_Tint2 = {r=0.486, g=0.988, b=0, a=0.85}
-
-QueenBiterScale = 2.5
-Queen_Biter_Tint1 = {r=0.729, g=0.333, b=0.827, a=0.6}
-Queen_Biter_Tint2 = {r=0.502, g=0, b=0.502, a=0.85}
 
 data:extend(
 {
+	-- Younglings --
   {
     type = "unit",
-    name = "berserk-biter",
+    name = "young-berserk-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = (Berserker_Health*Biter_Modifier),
+    max_health = ((Berserker_Health*Biter_Modifier)*Enemies.Young_Factor),
     subgroup="enemies",
 	order = "b-b-d",
 	resistances = 
     {
 	  {
         type = "fire",
-        percent = 100,
+        percent = (100*Enemies.Young_Factor),
       },
     },
     healing_per_tick = 0.05,
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{-0.85, -1.9}, {0.85, 0.37}},
-    sticker_box = {{-1.2, -2.4}, {1.2, 0.5}},
+    collision_box = {{(-0.4*Enemies.Young_Factor), (-0.4*Enemies.Young_Factor)}, {(0.4*Enemies.Young_Factor), (0.4*Enemies.Young_Factor)}},
+    selection_box = {{(-0.85*Enemies.Young_Factor), (-1.9*Enemies.Young_Factor)}, {(0.85*Enemies.Young_Factor), (0.37*Enemies.Young_Factor)}},
+    sticker_box = {{(-1.2*Enemies.Young_Factor), (-2.4*Enemies.Young_Factor)}, {(1.2*Enemies.Young_Factor), (0.5*Enemies.Young_Factor)}},
     loot =
     {
       {
@@ -49,10 +35,10 @@ data:extend(
     },
     attack_parameters =
     {
-      range = 1.5,
-      cooldown = 35,
+      range = (1.5*Enemies.Young_Factor),
+      cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_fire(60),
+      ammo_type = make_unit_melee_ammo_fire((60*Enemies.Young_Factor)),
       sound =
       {
         {
@@ -64,44 +50,44 @@ data:extend(
           volume = 0.8
         }
       },
-      animation = biterattackanimation(BerserkerBiterScale, Berserker_Biter_Tint1, Berserker_Biter_Tint2)
+      animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Young_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
     },
-	vision_distance = 30,
-    movement_speed = 0.2,
-    distance_per_frame = 0.2,
-    pollution_to_join_attack = 5000,
-	distraction_cooldown = 300,
+	vision_distance = (30*Enemies.Young_Factor),
+    movement_speed = (0.2*Enemies.Young_Factor),
+    distance_per_frame = (0.2*Enemies.Young_Factor),
+    pollution_to_join_attack = (5000*Enemies.Young_Factor),
+	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "berserk-biter-corpse",
     dying_sound = enemydyingsound(),
-    run_animation = biterrunanimation(BerserkerBiterScale, Berserker_Biter_Tint1, Berserker_Biter_Tint2)
+    run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Young_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   {
     type = "unit",
-    name = "elder-biter",
+    name = "young-elder-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = (Elder_Health*Biter_Modifier),
+    max_health = ((Elder_Health*Biter_Modifier)*Enemies.Young_Factor),
     subgroup="enemies",
 	order = "b-b-e",
 	resistances = 
     {
       {
         type = "physical",
-        percent = -50,
+        percent = (-50*Enemies.Young_Factor),
       },
 	  {
         type = "impact",
-        percent = -50,
+        percent = (-50*Enemies.Young_Factor),
       },
 	  {
         type = "laser",
-        percent = 99,
+        percent = (99*Enemies.Young_Factor),
       },
     },
-    healing_per_tick = 0.05,
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{-1.0, -2.25}, {1.0, 0.45}},
-    sticker_box = {{-1.25, -2.75}, {1.25, 0.6}},
+    healing_per_tick = (0.05*Enemies.Young_Factor),
+    collision_box = {{(-0.4*Enemies.Young_Factor), (-0.4*Enemies.Young_Factor)}, {(0.4*Enemies.Young_Factor), (0.4*Enemies.Young_Factor)}},
+    selection_box = {{(-1*Enemies.Young_Factor), (-2.25*Enemies.Young_Factor)}, {(1*Enemies.Young_Factor), (0.45*Enemies.Young_Factor)}},
+    sticker_box = {{(-1.25*Enemies.Young_Factor), (-2.75*Enemies.Young_Factor)}, {(1.25*Enemies.Young_Factor), (0.6*Enemies.Young_Factor)}},
     loot =
     {
       {
@@ -113,10 +99,10 @@ data:extend(
     },
     attack_parameters =
     {
-      range = 1.0,
-      cooldown = 35,
+      range = (1.0*Enemies.Young_Factor),
+      cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_laser(75),
+      ammo_type = make_unit_melee_ammo_laser((75*Enemies.Young_Factor)),
       sound =
       {
         {
@@ -128,44 +114,44 @@ data:extend(
           volume = 0.8
         }
       },
-      animation = biterattackanimation(ElderBiterScale, Elder_Biter_Tint1, Elder_Biter_Tint2)
+      animation = biterattackanimation((Enemies.ElderScale*Enemies.Young_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
     },
-	vision_distance = 30,
-    movement_speed = 0.3,
-    distance_per_frame = 0.2,
-    pollution_to_join_attack = 10000,
-	distraction_cooldown = 300,
+	vision_distance = (30*Enemies.Young_Factor),
+    movement_speed = (0.3*Enemies.Young_Factor),
+    distance_per_frame = (0.2*Enemies.Young_Factor),
+    pollution_to_join_attack = (10000*Enemies.Young_Factor),
+	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "elder-biter-corpse",
     dying_sound = enemydyingsound(),
-    run_animation = biterrunanimation(ElderBiterScale, Elder_Biter_Tint1, Elder_Biter_Tint2)
+    run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Young_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
   },
   {
     type = "unit",
-    name = "king-biter",
+    name = "young-king-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = (King_Health*Biter_Modifier),
+    max_health = ((King_Health*Biter_Modifier)*Enemies.Young_Factor),
     subgroup="enemies",
 	order = "b-b-f",
 	resistances = 
     {
       {
         type = "acid",
-        percent = 100,
+        percent = (100*Enemies.Young_Factor),
       },
 	  {
         type = "poison",
-        percent = 100,
+        percent = (100*Enemies.Young_Factor),
       },
 	  {
         type = "laser",
-        percent = 25,
+        percent = (25*Enemies.Young_Factor),
       },
     },
-    healing_per_tick = 0.10,
-    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{-1.4, -3.0}, {1.4, 0.6}},
-    sticker_box = {{-1.7, -3.75}, {1.7, 0.75}},
+    healing_per_tick = (0.10*Enemies.Young_Factor),
+    collision_box = {{(-0.4*Enemies.Young_Factor), (-0.4*Enemies.Young_Factor)}, {(0.4*Enemies.Young_Factor), (0.4*Enemies.Young_Factor)}},
+    selection_box = {{(-1.4*Enemies.Young_Factor), (-3.0*Enemies.Young_Factor)}, {(1.4*Enemies.Young_Factor), (0.6*Enemies.Young_Factor)}},
+    sticker_box = {{(-1.7*Enemies.Young_Factor), (-3.75*Enemies.Young_Factor)}, {(1.7*Enemies.Young_Factor), (0.75*Enemies.Young_Factor)}},
     loot =
     {
       {
@@ -177,10 +163,10 @@ data:extend(
     },
     attack_parameters =
     {
-      range = 4.5,
-      cooldown = 35,
+      range = (4.5*Enemies.Young_Factor),
+      cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_poison(35),
+      ammo_type = make_unit_melee_ammo_poison((35*Enemies.Young_Factor)),
       sound =
       {
         {
@@ -192,60 +178,60 @@ data:extend(
           volume = 0.8
         }
       },
-      animation = biterattackanimation(KingBiterScale, King_Biter_Tint1, King_Biter_Tint2)
+      animation = biterattackanimation((Enemies.KingScale*Enemies.Young_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
     },
-	vision_distance = 30,
-    movement_speed = 0.1,
-    distance_per_frame = 0.2,
-    pollution_to_join_attack = 20000,
-	distraction_cooldown = 300,
+	vision_distance = (30*Enemies.Young_Factor),
+    movement_speed = (0.1*Enemies.Young_Factor),
+    distance_per_frame = (0.2*Enemies.Young_Factor),
+    pollution_to_join_attack = (20000*Enemies.Young_Factor),
+	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "king-biter-corpse",
     dying_sound = enemydyingsound(),
-    run_animation = biterrunanimation(KingBiterScale, King_Biter_Tint1, King_Biter_Tint2)
+    run_animation = biterrunanimation((Enemies.KingScale*Enemies.Young_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
   },
   {
     type = "unit",
-    name = "queen-biter",
+    name = "young-queen-biter",
     icon = "__base__/graphics/icons/creeper.png",
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
-    max_health = (Queen_Health*Biter_Modifier),
+    max_health = ((Queen_Health*Biter_Modifier)*Enemies.Young_Factor),
     subgroup="enemies",
 	order = "b-b-g",
 	resistances = 
     {
       {
         type = "physical",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
       {
         type = "impact",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
 	  {
         type = "fire",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
 	  {
         type = "laser",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
       {
         type = "explosion",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
       {
         type = "acid",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
       {
         type = "poison",
-        percent = 75,
+        percent = (75*Enemies.Young_Factor),
       },
     },
-    healing_per_tick = 0.10,
-    collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
-    selection_box = {{-1.5, -3.75}, {1.5, 0.75}},
-    sticker_box = {{-1.9, -4.75}, {1.9, 1}},
+    healing_per_tick = (0.10*Enemies.Young_Factor),
+    collision_box = {{(-0.8*Enemies.Young_Factor), (-0.8*Enemies.Young_Factor)}, {(0.8*Enemies.Young_Factor), (0.8*Enemies.Young_Factor)}},
+    selection_box = {{(-1.5*Enemies.Young_Factor), (-3.75*Enemies.Young_Factor)}, {(1.5*Enemies.Young_Factor), (0.75*Enemies.Young_Factor)}},
+    sticker_box = {{(-1.9*Enemies.Young_Factor), (-4.75*Enemies.Young_Factor)}, {(1.9*Enemies.Young_Factor), (1*Enemies.Young_Factor)}},
     loot =
     {
       {
@@ -257,10 +243,10 @@ data:extend(
     },
     attack_parameters =
     {
-      range = 2.0,
-      cooldown = 35,
+      range = (2.0*Enemies.Young_Factor),
+      cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
-      ammo_type = make_unit_melee_ammo_type(25),
+      ammo_type = make_unit_melee_ammo_type((25*Enemies.Young_Factor)),
       sound =
       {
         {
@@ -272,16 +258,546 @@ data:extend(
           volume = 0.8
         }
       },
-      animation = biterattackanimation(QueenBiterScale, Queen_Biter_Tint1, Queen_Biter_Tint2)
+      animation = biterattackanimation((Enemies.QueenScale*Enemies.Young_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
     },
-	vision_distance = 30,
-    movement_speed = 0.05,
-    distance_per_frame = 0.2,
-    pollution_to_join_attack = 50000,
-	distraction_cooldown = 300,
+	vision_distance = (30*Enemies.Young_Factor),
+    movement_speed = (0.05*Enemies.Young_Factor),
+    distance_per_frame = (0.2*Enemies.Young_Factor),
+    pollution_to_join_attack = (50000*Enemies.Young_Factor),
+	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "queen-biter-corpse",
     dying_sound = enemydyingsound(),
-    run_animation = biterrunanimation(QueenBiterScale, Queen_Biter_Tint1, Queen_Biter_Tint2)
+    run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Young_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
+  },
+	-- Teenagers --
+  {
+    type = "unit",
+    name = "teen-berserk-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Berserker_Health*Biter_Modifier)*Enemies.Teen_Factor),
+    subgroup="enemies",
+	order = "b-b-d",
+	resistances = 
+    {
+	  {
+        type = "fire",
+        percent = (100*Enemies.Teen_Factor),
+      },
+    },
+    healing_per_tick = 0.05,
+    collision_box = {{(-0.4*Enemies.Teen_Factor), (-0.4*Enemies.Teen_Factor)}, {(0.4*Enemies.Teen_Factor), (0.4*Enemies.Teen_Factor)}},
+    selection_box = {{(-0.85*Enemies.Teen_Factor), (-1.9*Enemies.Teen_Factor)}, {(0.85*Enemies.Teen_Factor), (0.37*Enemies.Teen_Factor)}},
+    sticker_box = {{(-1.2*Enemies.Teen_Factor), (-2.4*Enemies.Teen_Factor)}, {(1.2*Enemies.Teen_Factor), (0.5*Enemies.Teen_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "berserk-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (1.5*Enemies.Teen_Factor),
+      cooldown = (35*Enemies.Teen_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_fire((60*Enemies.Teen_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Teen_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
+    },
+	vision_distance = (30*Enemies.Teen_Factor),
+    movement_speed = (0.2*Enemies.Teen_Factor),
+    distance_per_frame = (0.2*Enemies.Teen_Factor),
+    pollution_to_join_attack = (5000*Enemies.Teen_Factor),
+	distraction_cooldown = (300*Enemies.Teen_Factor),
+    corpse = "berserk-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Teen_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
+  },
+  {
+    type = "unit",
+    name = "teen-elder-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Elder_Health*Biter_Modifier)*Enemies.Teen_Factor),
+    subgroup="enemies",
+	order = "b-b-e",
+	resistances = 
+    {
+      {
+        type = "physical",
+        percent = (-50*Enemies.Teen_Factor),
+      },
+	  {
+        type = "impact",
+        percent = (-50*Enemies.Teen_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (99*Enemies.Teen_Factor),
+      },
+    },
+    healing_per_tick = (0.05*Enemies.Teen_Factor),
+    collision_box = {{(-0.4*Enemies.Teen_Factor), (-0.4*Enemies.Teen_Factor)}, {(0.4*Enemies.Teen_Factor), (0.4*Enemies.Teen_Factor)}},
+    selection_box = {{(-1*Enemies.Teen_Factor), (-2.25*Enemies.Teen_Factor)}, {(1*Enemies.Teen_Factor), (0.45*Enemies.Teen_Factor)}},
+    sticker_box = {{(-1.25*Enemies.Teen_Factor), (-2.75*Enemies.Teen_Factor)}, {(1.25*Enemies.Teen_Factor), (0.6*Enemies.Teen_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "elder-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (1.0*Enemies.Teen_Factor),
+      cooldown = (35*Enemies.Teen_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_laser((75*Enemies.Teen_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.ElderScale*Enemies.Teen_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
+    },
+	vision_distance = (30*Enemies.Teen_Factor),
+    movement_speed = (0.3*Enemies.Teen_Factor),
+    distance_per_frame = (0.2*Enemies.Teen_Factor),
+    pollution_to_join_attack = (10000*Enemies.Teen_Factor),
+	distraction_cooldown = (300*Enemies.Teen_Factor),
+    corpse = "elder-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Teen_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
+  },
+  {
+    type = "unit",
+    name = "teen-king-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((King_Health*Biter_Modifier)*Enemies.Teen_Factor),
+    subgroup="enemies",
+	order = "b-b-f",
+	resistances = 
+    {
+      {
+        type = "acid",
+        percent = (100*Enemies.Teen_Factor),
+      },
+	  {
+        type = "poison",
+        percent = (100*Enemies.Teen_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (25*Enemies.Teen_Factor),
+      },
+    },
+    healing_per_tick = (0.10*Enemies.Teen_Factor),
+    collision_box = {{(-0.4*Enemies.Teen_Factor), (-0.4*Enemies.Teen_Factor)}, {(0.4*Enemies.Teen_Factor), (0.4*Enemies.Teen_Factor)}},
+    selection_box = {{(-1.4*Enemies.Teen_Factor), (-3.0*Enemies.Teen_Factor)}, {(1.4*Enemies.Teen_Factor), (0.6*Enemies.Teen_Factor)}},
+    sticker_box = {{(-1.7*Enemies.Teen_Factor), (-3.75*Enemies.Teen_Factor)}, {(1.7*Enemies.Teen_Factor), (0.75*Enemies.Teen_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "king-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (4.5*Enemies.Teen_Factor),
+      cooldown = (35*Enemies.Teen_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_poison((35*Enemies.Teen_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.KingScale*Enemies.Teen_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
+    },
+	vision_distance = (30*Enemies.Teen_Factor),
+    movement_speed = (0.1*Enemies.Teen_Factor),
+    distance_per_frame = (0.2*Enemies.Teen_Factor),
+    pollution_to_join_attack = (20000*Enemies.Teen_Factor),
+	distraction_cooldown = (300*Enemies.Teen_Factor),
+    corpse = "king-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.KingScale*Enemies.Teen_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
+  },
+  {
+    type = "unit",
+    name = "teen-queen-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Queen_Health*Biter_Modifier)*Enemies.Teen_Factor),
+    subgroup="enemies",
+	order = "b-b-g",
+	resistances = 
+    {
+      {
+        type = "physical",
+        percent = (75*Enemies.Teen_Factor),
+      },
+      {
+        type = "impact",
+        percent = (75*Enemies.Teen_Factor),
+      },
+	  {
+        type = "fire",
+        percent = (75*Enemies.Teen_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (75*Enemies.Teen_Factor),
+      },
+      {
+        type = "explosion",
+        percent = (75*Enemies.Teen_Factor),
+      },
+      {
+        type = "acid",
+        percent = (75*Enemies.Teen_Factor),
+      },
+      {
+        type = "poison",
+        percent = (75*Enemies.Teen_Factor),
+      },
+    },
+    healing_per_tick = (0.10*Enemies.Teen_Factor),
+    collision_box = {{(-0.8*Enemies.Teen_Factor), (-0.8*Enemies.Teen_Factor)}, {(0.8*Enemies.Teen_Factor), (0.8*Enemies.Teen_Factor)}},
+    selection_box = {{(-1.5*Enemies.Teen_Factor), (-3.75*Enemies.Teen_Factor)}, {(1.5*Enemies.Teen_Factor), (0.75*Enemies.Teen_Factor)}},
+    sticker_box = {{(-1.9*Enemies.Teen_Factor), (-4.75*Enemies.Teen_Factor)}, {(1.9*Enemies.Teen_Factor), (1*Enemies.Teen_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "queen-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (2.0*Enemies.Teen_Factor),
+      cooldown = (35*Enemies.Teen_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_type((25*Enemies.Teen_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.QueenScale*Enemies.Teen_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
+    },
+	vision_distance = (30*Enemies.Teen_Factor),
+    movement_speed = (0.05*Enemies.Teen_Factor),
+    distance_per_frame = (0.2*Enemies.Teen_Factor),
+    pollution_to_join_attack = (50000*Enemies.Teen_Factor),
+	distraction_cooldown = (300*Enemies.Teen_Factor),
+    corpse = "queen-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Teen_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
+  },
+	-- Adults --
+  {
+    type = "unit",
+    name = "adult-berserk-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Berserker_Health*Biter_Modifier)*Enemies.Adult_Factor),
+    subgroup="enemies",
+	order = "b-b-d",
+	resistances = 
+    {
+	  {
+        type = "fire",
+        percent = (100*Enemies.Adult_Factor),
+      },
+    },
+    healing_per_tick = 0.05,
+    collision_box = {{(-0.4*Enemies.Adult_Factor), (-0.4*Enemies.Adult_Factor)}, {(0.4*Enemies.Adult_Factor), (0.4*Enemies.Adult_Factor)}},
+    selection_box = {{(-0.85*Enemies.Adult_Factor), (-1.9*Enemies.Adult_Factor)}, {(0.85*Enemies.Adult_Factor), (0.37*Enemies.Adult_Factor)}},
+    sticker_box = {{(-1.2*Enemies.Adult_Factor), (-2.4*Enemies.Adult_Factor)}, {(1.2*Enemies.Adult_Factor), (0.5*Enemies.Adult_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "berserk-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (1.5*Enemies.Adult_Factor),
+      cooldown = (35*Enemies.Adult_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_fire((60*Enemies.Adult_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Adult_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
+    },
+	vision_distance = (30*Enemies.Adult_Factor),
+    movement_speed = (0.2*Enemies.Adult_Factor),
+    distance_per_frame = (0.2*Enemies.Adult_Factor),
+    pollution_to_join_attack = (5000*Enemies.Adult_Factor),
+	distraction_cooldown = (300*Enemies.Adult_Factor),
+    corpse = "berserk-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Adult_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
+  },
+  {
+    type = "unit",
+    name = "adult-elder-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Elder_Health*Biter_Modifier)*Enemies.Adult_Factor),
+    subgroup="enemies",
+	order = "b-b-e",
+	resistances = 
+    {
+      {
+        type = "physical",
+        percent = (-50*Enemies.Adult_Factor),
+      },
+	  {
+        type = "impact",
+        percent = (-50*Enemies.Adult_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (99*Enemies.Adult_Factor),
+      },
+    },
+    healing_per_tick = (0.05*Enemies.Adult_Factor),
+    collision_box = {{(-0.4*Enemies.Adult_Factor), (-0.4*Enemies.Adult_Factor)}, {(0.4*Enemies.Adult_Factor), (0.4*Enemies.Adult_Factor)}},
+    selection_box = {{(-1*Enemies.Adult_Factor), (-2.25*Enemies.Adult_Factor)}, {(1*Enemies.Adult_Factor), (0.45*Enemies.Adult_Factor)}},
+    sticker_box = {{(-1.25*Enemies.Adult_Factor), (-2.75*Enemies.Adult_Factor)}, {(1.25*Enemies.Adult_Factor), (0.6*Enemies.Adult_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "elder-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (1.0*Enemies.Adult_Factor),
+      cooldown = (35*Enemies.Adult_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_laser((75*Enemies.Adult_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.ElderScale*Enemies.Adult_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
+    },
+	vision_distance = (30*Enemies.Adult_Factor),
+    movement_speed = (0.3*Enemies.Adult_Factor),
+    distance_per_frame = (0.2*Enemies.Adult_Factor),
+    pollution_to_join_attack = (10000*Enemies.Adult_Factor),
+	distraction_cooldown = (300*Enemies.Adult_Factor),
+    corpse = "elder-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Adult_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
+  },
+  {
+    type = "unit",
+    name = "adult-king-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((King_Health*Biter_Modifier)*Enemies.Adult_Factor),
+    subgroup="enemies",
+	order = "b-b-f",
+	resistances = 
+    {
+      {
+        type = "acid",
+        percent = (100*Enemies.Adult_Factor),
+      },
+	  {
+        type = "poison",
+        percent = (100*Enemies.Adult_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (25*Enemies.Adult_Factor),
+      },
+    },
+    healing_per_tick = (0.10*Enemies.Adult_Factor),
+    collision_box = {{(-0.4*Enemies.Adult_Factor), (-0.4*Enemies.Adult_Factor)}, {(0.4*Enemies.Adult_Factor), (0.4*Enemies.Adult_Factor)}},
+    selection_box = {{(-1.4*Enemies.Adult_Factor), (-3.0*Enemies.Adult_Factor)}, {(1.4*Enemies.Adult_Factor), (0.6*Enemies.Adult_Factor)}},
+    sticker_box = {{(-1.7*Enemies.Adult_Factor), (-3.75*Enemies.Adult_Factor)}, {(1.7*Enemies.Adult_Factor), (0.75*Enemies.Adult_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "king-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (4.5*Enemies.Adult_Factor),
+      cooldown = (35*Enemies.Adult_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_poison((35*Enemies.Adult_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.KingScale*Enemies.Adult_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
+    },
+	vision_distance = (30*Enemies.Adult_Factor),
+    movement_speed = (0.1*Enemies.Adult_Factor),
+    distance_per_frame = (0.2*Enemies.Adult_Factor),
+    pollution_to_join_attack = (20000*Enemies.Adult_Factor),
+	distraction_cooldown = (300*Enemies.Adult_Factor),
+    corpse = "king-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.KingScale*Enemies.Adult_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
+  },
+  {
+    type = "unit",
+    name = "adult-queen-biter",
+    icon = "__base__/graphics/icons/creeper.png",
+    flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air"},
+    max_health = ((Queen_Health*Biter_Modifier)*Enemies.Adult_Factor),
+    subgroup="enemies",
+	order = "b-b-g",
+	resistances = 
+    {
+      {
+        type = "physical",
+        percent = (75*Enemies.Adult_Factor),
+      },
+      {
+        type = "impact",
+        percent = (75*Enemies.Adult_Factor),
+      },
+	  {
+        type = "fire",
+        percent = (75*Enemies.Adult_Factor),
+      },
+	  {
+        type = "laser",
+        percent = (75*Enemies.Adult_Factor),
+      },
+      {
+        type = "explosion",
+        percent = (75*Enemies.Adult_Factor),
+      },
+      {
+        type = "acid",
+        percent = (75*Enemies.Adult_Factor),
+      },
+      {
+        type = "poison",
+        percent = (75*Enemies.Adult_Factor),
+      },
+    },
+    healing_per_tick = (0.10*Enemies.Adult_Factor),
+    collision_box = {{(-0.8*Enemies.Adult_Factor), (-0.8*Enemies.Adult_Factor)}, {(0.8*Enemies.Adult_Factor), (0.8*Enemies.Adult_Factor)}},
+    selection_box = {{(-1.5*Enemies.Adult_Factor), (-3.75*Enemies.Adult_Factor)}, {(1.5*Enemies.Adult_Factor), (0.75*Enemies.Adult_Factor)}},
+    sticker_box = {{(-1.9*Enemies.Adult_Factor), (-4.75*Enemies.Adult_Factor)}, {(1.9*Enemies.Adult_Factor), (1*Enemies.Adult_Factor)}},
+    loot =
+    {
+      {
+        count_max = 1,
+        count_min = 1,
+        item = "queen-corpse",
+        probability = 1
+      }
+    },
+    attack_parameters =
+    {
+      range = (2.0*Enemies.Adult_Factor),
+      cooldown = (35*Enemies.Adult_Factor),
+      ammo_category = "melee",
+      ammo_type = make_unit_melee_ammo_type((25*Enemies.Adult_Factor)),
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
+          volume = 0.8
+        },
+        {
+          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
+          volume = 0.8
+        }
+      },
+      animation = biterattackanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
+    },
+	vision_distance = (30*Enemies.Adult_Factor),
+    movement_speed = (0.05*Enemies.Adult_Factor),
+    distance_per_frame = (0.2*Enemies.Adult_Factor),
+    pollution_to_join_attack = (50000*Enemies.Adult_Factor),
+	distraction_cooldown = (300*Enemies.Adult_Factor),
+    corpse = "queen-biter-corpse",
+    dying_sound = enemydyingsound(),
+    run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
   },
   
   --CORPSES
@@ -297,7 +813,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation = biterdieanimation(BerserkerBiterScale, Berserker_Biter_Tint1, Berserker_Biter_Tint2)
+    animation = biterdieanimation(Enemies.BerserkerScale, Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   {
     type = "corpse",
@@ -310,7 +826,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation = biterdieanimation(ElderBiterScale, Elder_Biter_Tint1, Elder_Biter_Tint2)
+    animation = biterdieanimation(Enemies.ElderScale, Enemies.Elder_Tint1, Enemies.Elder_Tint2)
   },
   {
     type = "corpse",
@@ -323,7 +839,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation = biterdieanimation(KingBiterScale, King_Biter_Tint1, King_Biter_Tint2)
+    animation = biterdieanimation(Enemies.KingScale, Enemies.King_Tint1, Enemies.King_Tint2)
   },
   {
     type = "corpse",
@@ -336,7 +852,7 @@ data:extend(
     flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
     dying_speed = 0.04,
     final_render_layer = "corpse",
-    animation = biterdieanimation(QueenBiterScale, Queen_Biter_Tint1, Queen_Biter_Tint2)
+    animation = biterdieanimation(Enemies.QueenScale, Enemies.Queen_Tint2, Enemies.Queen_Tint2)
   },
 }
 )
