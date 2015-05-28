@@ -65,7 +65,7 @@ data:extend(
   {
     type = "recipe",
     name = "battery-mk3-equipment",
-    enabled = "false",
+    enabled = false,
     energy_required = 10,
     ingredients =
     {
@@ -77,7 +77,7 @@ data:extend(
   {
     type = "recipe",
     name = "battery-mk4-equipment",
-    enabled = "false",
+    enabled = false,
     energy_required = 10,
     ingredients =
     {
@@ -89,7 +89,7 @@ data:extend(
   {
     type = "recipe",
     name = "battery-mk5-equipment",
-    enabled = "false",
+    enabled = false,
     energy_required = 10,
     ingredients =
     {
@@ -97,6 +97,58 @@ data:extend(
       {"logic-diamond-processor", 1}
     },
     result = "battery-mk5-equipment"
+  },
+  {
+    type = "recipe",
+    name = "solar-panel-equipment-2",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"solar-panel-equipment", 2},
+      {"processing-unit", 2},
+      {"zinc-plate", 5}
+    },
+    result = "solar-panel-equipment-2"
+  },
+  {
+    type = "recipe",
+    name = "solar-panel-equipment-3",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"solar-panel-equipment-2", 2},
+      {"processing-unit", 5},
+      {"gold-plate", 5}
+    },
+    result = "solar-panel-equipment-3"
+  },
+  {
+    type = "recipe",
+    name = "solar-panel-equipment-4",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"solar-panel-equipment-3", 2},
+      {"advanced-processing-unit", 1},
+      {"tungsten-plate", 5}
+    },
+    result = "solar-panel-equipment-4"
+  },
+  {
+    type = "recipe",
+    name = "solar-panel-equipment-5",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"solar-panel-equipment-4", 2},
+      {"advanced-processing-unit", 2},
+      {"cobalt-plate", 5}
+    },
+    result = "solar-panel-equipment-5"
   },
 }
 )

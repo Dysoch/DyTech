@@ -16,6 +16,8 @@
 [*] Added 3 FireStorm Capsules (upgrade from Napalm) They drift with the wind, and last very long! Be prepared to have your base destroyed if you activate one of these!
 [*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
 [*] Added 3 Shields (Equipment)
+[*] Added 3 Batteries (Equipment)
+[*] Added 4 Solar Panels (Equipment)
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
