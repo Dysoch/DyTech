@@ -1,4 +1,5 @@
 require "prototypes.internal-config"
+require "prototypes.functions"
 
 data:extend(
 {
@@ -19,13 +20,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96
-    },
+    picture = SolarPictures(0.66, SolarTint.mk1),
     production = SolarPanels.Small.Tier1
   },
   {
@@ -45,13 +40,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96
-    },
+    picture = SolarPictures(0.66, SolarTint.mk1),
     production = SolarPanels.Small.Tier1
   },
   {
@@ -71,14 +60,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk2
-    },
+    picture = SolarPictures(0.66, SolarTint.mk2),
     production = SolarPanels.Small.Tier2
   },
   {
@@ -98,14 +80,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk2
-    },
+    picture = SolarPictures(0.66, SolarTint.mk2),
     production = SolarPanels.Small.Tier2
   },
   {
@@ -125,14 +100,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk3
-    },
+    picture = SolarPictures(0.66, SolarTint.mk3),
     production = SolarPanels.Small.Tier3
   },
   {
@@ -152,14 +120,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk3
-    },
+    picture = SolarPictures(0.66, SolarTint.mk3),
     production = SolarPanels.Small.Tier3
   },
   {
@@ -179,14 +140,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk4
-    },
+    picture = SolarPictures(0.66, SolarTint.mk4),
     production = SolarPanels.Small.Tier4
   },
   {
@@ -206,14 +160,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk4
-    },
+    picture = SolarPictures(0.66, SolarTint.mk4),
     production = SolarPanels.Small.Tier4
   },
   {
@@ -233,14 +180,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk5
-    },
+    picture = SolarPictures(0.66, SolarTint.mk5),
     production = SolarPanels.Small.Tier5
   },
   {
@@ -260,14 +200,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture =
-    {
-      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small/solar-panel.png",
-      priority = "high",
-      width = 104,
-      height = 96,
-	  tint = Tint.mk5
-    },
+    picture = SolarPictures(0.66, SolarTint.mk5),
     production = SolarPanels.Small.Tier5
   },
 }
