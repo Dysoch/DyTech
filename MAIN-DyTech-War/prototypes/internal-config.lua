@@ -14,6 +14,10 @@ Gun4BaseTint = {r=0.698, g=0.133, b=0.133, a=0.6}
 Gun4AnimationTint = {r=0.804, g=0.361, b=0.361, a=0.85}
 Gun5BaseTint = {r=0.698, g=0.133, b=0.133, a=0.6}
 Gun5AnimationTint = {r=0.804, g=0.361, b=0.361, a=0.85}
+Gun6BaseTint = {r=0.698, g=0.133, b=0.133, a=0.6}
+Gun6AnimationTint = {r=0.804, g=0.361, b=0.361, a=0.85}
+Gun7BaseTint = {r=0.698, g=0.133, b=0.133, a=0.6}
+Gun7AnimationTint = {r=0.804, g=0.361, b=0.361, a=0.85}
 
 ModularArmor = {
 	GridTier1 = {width = 5, height = 5},

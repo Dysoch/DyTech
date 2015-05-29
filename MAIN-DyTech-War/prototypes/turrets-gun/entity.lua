@@ -204,6 +204,72 @@ data:extend(
   },
   {
     type = "ammo-turret",
+    name = "gun-turret-6",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-6"},
+    max_health = Health.Tier4,
+	resistances = Resistances.Tier4,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun6AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun6AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun6BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+  },
+  {
+    type = "ammo-turret",
+    name = "gun-turret-7",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-7"},
+    max_health = Health.Tier4,
+	resistances = Resistances.Tier4,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun7AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun7AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun7BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+  },
+  {
+    type = "ammo-turret",
     name = "gun-turret-1-armored",
     icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
     flags = {"placeable-player", "player-creation"},
@@ -365,6 +431,72 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun5BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+  },
+  {
+    type = "ammo-turret",
+    name = "gun-turret-6-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-6-armored"},
+    max_health = Health.Tier4,
+	resistances = Resistances.Tier4,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun6AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun6AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun6BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+  },
+  {
+    type = "ammo-turret",
+    name = "gun-turret-7-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-7-armored"},
+    max_health = Health.Tier4,
+	resistances = Resistances.Tier4,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun7AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun7AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun7BaseTint),
     attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
   },
 }

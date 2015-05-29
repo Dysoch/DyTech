@@ -82,6 +82,32 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "gun-turret-6",
+    enabled = false,
+    energy_required = 5,
+    ingredients =
+    {
+      {"gun-turret", 1},
+      {"steel-plate", 5},
+      {"advanced-circuit", 5},
+    },
+    result = "gun-turret-6"
+  },
+  {
+    type = "recipe",
+    name = "gun-turret-7",
+    enabled = false,
+    energy_required = 5,
+    ingredients =
+    {
+      {"gun-turret", 1},
+      {"steel-plate", 5},
+      {"processing-unit", 5},
+    },
+    result = "gun-turret-7"
+  },
+  {
+    type = "recipe",
     name = "gun-turret-1-armored",
     enabled = false,
     energy_required = 15,
@@ -144,6 +170,32 @@ data:extend(
       {"ardite-plate", 5},
     },
     result = "gun-turret-5-armored"
+  },
+  {
+    type = "recipe",
+    name = "gun-turret-6-armored",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"gun-turret-6", 1},
+      {"tungsten-plate", 5},
+      {"ardite-plate", 5},
+    },
+    result = "gun-turret-6-armored"
+  },
+  {
+    type = "recipe",
+    name = "gun-turret-7-armored",
+    enabled = false,
+    energy_required = 15,
+    ingredients =
+    {
+      {"gun-turret-7", 1},
+      {"tungsten-plate", 5},
+      {"ardite-plate", 5},
+    },
+    result = "gun-turret-7-armored"
   },
 }
 )

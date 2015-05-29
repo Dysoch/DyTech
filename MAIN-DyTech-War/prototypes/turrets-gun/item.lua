@@ -62,6 +62,26 @@ data:extend(
   },
   {
     type = "item",
+    name = "gun-turret-6",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "h[laser]-1",
+    place_result = "gun-turret-6",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-7",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "i[laser-shotgun]-1",
+    place_result = "gun-turret-7",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "gun-turret-1-armored",
     icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
     flags = {"goes-to-quickbar"},
@@ -108,6 +128,26 @@ data:extend(
     subgroup = "dytech-combat-turrets",
     order = "g[capsule]-2",
     place_result = "gun-turret-5-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-6-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "h[laser]-2",
+    place_result = "gun-turret-6-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-7-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "i[laser-shotgun]-2",
+    place_result = "gun-turret-7-armored",
     stack_size = 50
   },
 }
