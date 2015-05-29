@@ -134,7 +134,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun3BaseTint),
-    attack_parameters = Gun_Turret_Attack("rocket", 30, 40),
+    attack_parameters = Gun_Turret_Attack("rocket", 60*2, 40),
   },
   {
     type = "ammo-turret",
@@ -167,7 +167,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun4BaseTint),
-    attack_parameters = Gun_Turret_Attack("cannon-shell", 20, 50),
+    attack_parameters = Gun_Turret_Attack("cannon-shell", 60*1, 50),
   },
   {
     type = "ammo-turret",
@@ -233,7 +233,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun6BaseTint),
-    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+    attack_parameters = Gun_Turret_Attack("battery", 60*1, 40),
   },
   {
     type = "ammo-turret",
@@ -266,7 +266,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun7BaseTint),
-    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+    attack_parameters = Gun_Turret_Attack("battery-shotgun", 60*1, 40),
   },
   {
     type = "ammo-turret",
@@ -365,7 +365,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun3BaseTint),
-    attack_parameters = Gun_Turret_Attack("rocket", 30, 40),
+    attack_parameters = Gun_Turret_Attack("rocket", 60*2, 40),
   },
   {
     type = "ammo-turret",
@@ -398,7 +398,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun4BaseTint),
-    attack_parameters = Gun_Turret_Attack("cannon-shell", 20, 50),
+    attack_parameters = Gun_Turret_Attack("cannon-shell", 60*1, 50),
   },
   {
     type = "ammo-turret",
@@ -464,7 +464,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun6BaseTint),
-    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+    attack_parameters = Gun_Turret_Attack("battery", 60*1, 40),
   },
   {
     type = "ammo-turret",
@@ -497,7 +497,7 @@ data:extend(
                           return res
                        end)(),
     base_picture = Gun_Turret_Base(Gun7BaseTint),
-    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+    attack_parameters = Gun_Turret_Attack("battery-shotgun", 60*1, 40),
   },
 }
 )
