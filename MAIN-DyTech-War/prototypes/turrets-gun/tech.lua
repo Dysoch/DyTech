@@ -48,6 +48,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "gun-turret-4"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "gun-turret-5"
+      },
     },
     prerequisites = {"turrets"},
     unit =
@@ -84,6 +88,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "gun-turret-4-armored"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "gun-turret-5-armored"
       },
     },
     prerequisites = {"turrets-1", "tungsten-processing", "ardite-processing"},

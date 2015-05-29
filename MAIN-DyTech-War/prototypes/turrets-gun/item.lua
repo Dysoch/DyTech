@@ -52,6 +52,16 @@ data:extend(
   },
   {
     type = "item",
+    name = "gun-turret-5",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "g[capsule]-1",
+    place_result = "gun-turret-5",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "gun-turret-1-armored",
     icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
     flags = {"goes-to-quickbar"},
@@ -88,6 +98,16 @@ data:extend(
     subgroup = "dytech-combat-turrets",
     order = "f[cannon-shell]-2",
     place_result = "gun-turret-4-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-5-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "g[capsule]-2",
+    place_result = "gun-turret-5-armored",
     stack_size = 50
   },
 }

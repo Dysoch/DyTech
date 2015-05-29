@@ -171,6 +171,39 @@ data:extend(
   },
   {
     type = "ammo-turret",
+    name = "gun-turret-5",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-5"},
+    max_health = Health.Tier4,
+	resistances = Resistances.Tier4,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun5AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun5AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun5BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
+  },
+  {
+    type = "ammo-turret",
     name = "gun-turret-1-armored",
     icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
     flags = {"placeable-player", "player-creation"},
@@ -300,6 +333,39 @@ data:extend(
                        end)(),
     base_picture = Gun_Turret_Base(Gun4BaseTint),
     attack_parameters = Gun_Turret_Attack("cannon-shell", 20, 50),
+  },
+  {
+    type = "ammo-turret",
+    name = "gun-turret-5-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.5, result = "gun-turret-5-armored"},
+    max_health = Health.Tier10,
+	resistances = Resistances.Tier10,
+    corpse = "small-remnants",
+    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
+    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    rotation_speed = 0.015,
+    preparing_speed = 0.08,
+    folding_speed = 0.08,
+    dying_explosion = "huge-explosion",
+    inventory_size = 2,
+	automated_ammo_count = 20,
+    folded_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
+                          res.frame_count = 1
+                          res.line_length = 1
+                          return res
+                       end)(),
+    preparing_animation = gun_turret_extension_DyTech(Gun5AnimationTint),
+    prepared_animation = Gun_Turret_Prepared_Animation(Gun5AnimationTint),
+    folding_animation = (function()
+                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
+                          res.run_mode = "backward"
+                          return res
+                       end)(),
+    base_picture = Gun_Turret_Base(Gun5BaseTint),
+    attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
   },
 }
 )
