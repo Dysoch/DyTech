@@ -10,5 +10,85 @@ data:extend(
     place_result = "sniper-turret",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "gun-turret-1",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "c[bullet]-1",
+    place_result = "gun-turret-1",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-2",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "d[shotgun-shell]-1",
+    place_result = "gun-turret-2",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-3",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "e[rocket]-1",
+    place_result = "gun-turret-3",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-4",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "f[cannon-shell]-1",
+    place_result = "gun-turret-4",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-1-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "c[bullet]-2",
+    place_result = "gun-turret-1-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-2-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "d[shotgun-shell]-2",
+    place_result = "gun-turret-2-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-3-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "e[rocket]-2",
+    place_result = "gun-turret-3-armored",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "gun-turret-4-armored",
+    icon = "__MAIN-DyTech-War__/graphics/turrets-gun/sniper-turret.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-combat-turrets",
+    order = "f[cannon-shell]-2",
+    place_result = "gun-turret-4-armored",
+    stack_size = 50
+  },
 }
 )

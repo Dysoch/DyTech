@@ -35,12 +35,12 @@ Grenades = true
 
 --[[ Defences ]]--
 -- Here you can find all kinds of defensive items!
-SniperTurret = true
+GunTurret = true
 FlameThrowerTurret = true
 LaserTurret = true
 Walls = true
 Gates = true
--- NOTE: Sniper Turret REQUIRES Sniper Rifle to be enabled!!!!!
+-- NOTE: Gun Turret REQUIRES Sniper Rifle to be enabled!!!!!
 -- NOTE: Gates REQUIRES Walls to be enabled!!!!!
 
 -- [[ General Config Options ]]--

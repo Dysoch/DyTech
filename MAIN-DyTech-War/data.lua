@@ -48,7 +48,7 @@ require("prototypes.gun-laser.tech")
 end
 
 --[[ Sniper Turret Check ]]--
-if SniperTurret and SniperRifle then 
+if GunTurret and SniperRifle then 
 require("prototypes.turrets-gun.entity")
 require("prototypes.turrets-gun.item")
 require("prototypes.turrets-gun.recipe")
