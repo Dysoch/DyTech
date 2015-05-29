@@ -9,7 +9,7 @@
 -- Base edit means the change in the spawners, to make them stronger!
 EnemiesBaseEdit = true
 Biters = true
-Spitters = false
+Spitters = true
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
