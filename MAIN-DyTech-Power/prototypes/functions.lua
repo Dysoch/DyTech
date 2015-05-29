@@ -1,28 +1,5 @@
 --require "prototypes.functions"
 
-AccumulatorsTint = {
-	mk2 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk3 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk4 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk5 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk6 = {r=0.545, g=0.271, b=0.075, a=0.9}
-}
-
-SolarTint = {
-	mk1 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk2 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk3 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk4 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk5 = {r=0.545, g=0.271, b=0.075, a=0.9}
-}
-
-SteamEngineTint = {
-	mk2 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk3 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk4 = {r=0.545, g=0.271, b=0.075, a=0.9},
-	mk5 = {r=0.545, g=0.271, b=0.075, a=0.9}
-}
-
 function SolarPictures(Scale, Tint)
 return
     {
@@ -43,5 +20,76 @@ return
       width = 104,
       height = 96,
 	  scale = Scale
+    }
+end
+
+function AccumulatorPictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2},
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function AccumulatorChargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function AccumulatorDischargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function SteamHorizontalPictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+      width = 246,
+      height = 137,
+      frame_count = 32,
+      line_length = 8,
+      shift = {1.34, -0.06},
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function SteamVerticalPictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+      width = 155,
+      height = 186,
+      frame_count = 32,
+      line_length = 8,
+      shift = {0.812, 0.031},
+	  scale = Scale,
+	  tint = Tint
     }
 end
