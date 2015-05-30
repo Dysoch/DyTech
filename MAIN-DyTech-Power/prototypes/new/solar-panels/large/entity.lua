@@ -1,11 +1,6 @@
 require "prototypes.internal-config"
 require "prototypes.functions"
 
---[[data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
-data.raw["solar-panel"]["solar-panel"].max_health = Health.Large.Tier1
-data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Large.Tier1
-data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Large.Tier1]]
-
 data:extend(
 {
   {

@@ -1,4 +1,5 @@
 --require "prototypes.internal-config"
+require "config"
 
 Tint = {
 	mk2 = {r=0.545, g=0.271, b=0.075, a=0.9},

@@ -60,4 +60,5 @@ SolarPanels = true
 
 --[[Uber Debug Toggle]]--
 -- If you don't know what this toggle does, stay off! #debugtothemax :D -MagicLegend
-dont_use_dytech = true
+dont_use_dytech = false
+CheatRecipe = false

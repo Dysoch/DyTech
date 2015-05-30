@@ -68,5 +68,9 @@ data:extend(
     type = "recipe-category",
     name = "lava-cooler"
   },
+  {
+	type = "recipe-category",
+	name = "nuclear-recipe"
+  }
 }
 )
