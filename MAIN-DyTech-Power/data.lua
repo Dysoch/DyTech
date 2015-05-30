@@ -7,13 +7,15 @@ if Use_Wattage then
 	else
 	  require("prototypes.new.nuclear-reactors.nuclear-items.no-gem-membranes")
 	end
---	require("prototypes.new.nuclear-reactors.entity")
-	require("prototypes.new.nuclear-reactors.recipe")
---	require("prototypes.new.nuclear-reactors.tech")
+	require("prototypes.nocore.resources.uraniumdioxide")
+--	require("prototypes.nocore.resources.fluorite")
+	require("prototypes.nocore.tile.noise-layers")
+	require("prototypes.nocore.autoplace-controls")
+--[[	require("prototypes.new.nuclear-reactors.recipe")
 	require("prototypes.new.resources.uraniumdioxide")
 --	require("prototypes.new.resources.fluorite")
 	require("prototypes.new.tile.noise-layers")
-	require("prototypes.new.autoplace-controls")
+	require("prototypes.new.autoplace-controls")]]
 	require("prototypes.new.nuclear-reactors.nuclear-entities.chemical-processor")
 	require("prototypes.new.nuclear-reactors.nuclear-entities.nuclear-reactor")
 	require("prototypes.new.nuclear-reactors.nuclear-items.fuel")
@@ -22,6 +24,8 @@ if Use_Wattage then
 	require("prototypes.new.nuclear-reactors.nuclear-tech.reactor-tech")
 	require("prototypes.new.nuclear-reactors.nuclear-recipes.reactor-recipe")
 	require("prototypes.new.nuclear-reactors.nuclear-recipes.fuel")
+	require("prototypes.nocore.item-group.dytech-nuclear")
+	require("prototypes.nocore.categories.recipe-category")
   end
   if dont_use_dytech then
 	require("prototypes.nocore.resources.uraniumdioxide")
