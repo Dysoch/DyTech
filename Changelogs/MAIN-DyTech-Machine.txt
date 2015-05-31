@@ -9,6 +9,7 @@
 [*] Wires: Added Iron Stick recipe.
 [*] Added Tools Mold: All tools can be made, including Repair Packs!
 [/list]
+[*] Added 5 new Walls!
 [/list]
 [*] Bugfixes: 
 [list] [*] none yet

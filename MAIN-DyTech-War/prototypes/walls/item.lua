@@ -6,7 +6,7 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/walls/chitin-wall.png",
     flags = {"goes-to-quickbar"},
     subgroup = "dytech-combat-walls",
-    order = "c[chitin-wall]",
+    order = "g[chitin-wall]",
     place_result = "chitin-wall",
     stack_size = 50
   },
@@ -16,7 +16,7 @@ data:extend(
     icon = "__MAIN-DyTech-War__/graphics/walls/tungsten-wall.png",
     flags = {"goes-to-quickbar"},
     subgroup = "dytech-combat-walls",
-    order = "d[tungsten-wall]",
+    order = "h[tungsten-wall]",
     place_result = "tungsten-wall",
     stack_size = 50
   },
