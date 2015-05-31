@@ -16,6 +16,7 @@
 [*] Balancing: 
 [list][*] Increased Pumping speed of Pumps (both of them)
 [*] Balanced Armored Car, its now faster!
+[*] Changed Super and Extreme Transport Belt recipe to require Lubricant.
 [/list]
 [/list]
 
