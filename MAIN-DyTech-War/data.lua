@@ -53,6 +53,10 @@ require("prototypes.turrets-gun.entity")
 require("prototypes.turrets-gun.item")
 require("prototypes.turrets-gun.recipe")
 require("prototypes.turrets-gun.tech")
+if PoisonCapsules and AcidCapsules and NapalmCapsules and RadiationCapsules and SlowdownCapsules then
+require("prototypes.turrets-gun.ammo.capsule.item")
+require("prototypes.turrets-gun.ammo.capsule.recipe")
+end
 end
 
 --[[ Flamethrower Turret Check ]]--
