@@ -47,22 +47,6 @@ require("prototypes.gun-laser.recipe")
 require("prototypes.gun-laser.tech")
 end
 
---[[ Sniper Turret Check ]]--
-if GunTurret and SniperRifle and Ammo then 
-require("prototypes.turrets-gun.entity")
-require("prototypes.turrets-gun.item")
-require("prototypes.turrets-gun.recipe")
-require("prototypes.turrets-gun.tech")
-if PoisonCapsules and AcidCapsules and NapalmCapsules and RadiationCapsules and SlowdownCapsules and SpecialAmmo then
-require("prototypes.turrets-gun.ammo.capsule.item")
-require("prototypes.turrets-gun.ammo.capsule.recipe")
-require("prototypes.turrets-gun.ammo.capsule.tech")
-require("prototypes.turrets-gun.ammo.normal.item")
-require("prototypes.turrets-gun.ammo.normal.recipe")
-require("prototypes.turrets-gun.ammo.normal.tech")
-end
-end
-
 --[[ Flamethrower Turret Check ]]--
 if FlameThrowerTurret then 
 require("prototypes.turrets-flame.entity")
@@ -178,4 +162,20 @@ if Armor then
 require("prototypes.armor.item")
 require("prototypes.armor.recipe")
 require("prototypes.armor.tech")
+end
+
+--[[ Sniper Turret Check ]]--
+if GunTurret and SniperRifle and Ammo then 
+require("prototypes.turrets-gun.entity")
+require("prototypes.turrets-gun.item")
+require("prototypes.turrets-gun.recipe")
+require("prototypes.turrets-gun.tech")
+if PoisonCapsules and AcidCapsules and NapalmCapsules and RadiationCapsules and SlowdownCapsules and SpecialAmmo then
+require("prototypes.turrets-gun.ammo.capsule.item")
+require("prototypes.turrets-gun.ammo.capsule.recipe")
+require("prototypes.turrets-gun.ammo.capsule.tech")
+require("prototypes.turrets-gun.ammo.normal.item")
+require("prototypes.turrets-gun.ammo.normal.recipe")
+require("prototypes.turrets-gun.ammo.normal.tech")
+end
 end
