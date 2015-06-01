@@ -13,6 +13,9 @@ for index, force in pairs(game.forces) do
 		force.recipes["mixed-capsule"].enabled = true
 		force.recipes["mixed-turret-capsule"].enabled = true
 	end
+	if force.technologies["military-3"].researched then
+		force.recipes["poison-capsule-ammo-1"].enabled = true
+	end
 end
 
 for _,player in pairs(game.players) do
