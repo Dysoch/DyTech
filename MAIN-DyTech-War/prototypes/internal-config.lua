@@ -63,6 +63,21 @@ Enemies = {
 	Queen_Tint2 = {r=0.502, g=0, b=0.502, a=0.85},
 }
 
+Bullets = {
+	Poison1 = {amount = 2.5, type = "poison"},
+	Poison2 = {amount = 5, type = "poison"},
+	Poison3 = {amount = 10, type = "poison"},
+	Acid1 = {amount = 5, type = "acid"},
+	Acid2 = {amount = 10, type = "acid"},
+	Acid3 = {amount = 25, type = "acid"},
+	Fire1 = {amount = 5, type = "fire"},
+	Fire2 = {amount = 15, type = "fire"},
+	Fire3 = {amount = 25, type = "fire"},
+	Plasma1 = {amount = 10, type = "plasma"},
+	Plasma2 = {amount = 25, type = "plasma"},
+	Plasma3 = {amount = 40, type = "plasma"},
+}
+
 Health = {
 	Tier1 = 100,
 	Tier2 = 250,

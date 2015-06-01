@@ -53,9 +53,13 @@ require("prototypes.turrets-gun.entity")
 require("prototypes.turrets-gun.item")
 require("prototypes.turrets-gun.recipe")
 require("prototypes.turrets-gun.tech")
-if PoisonCapsules and AcidCapsules and NapalmCapsules and RadiationCapsules and SlowdownCapsules then
+if PoisonCapsules and AcidCapsules and NapalmCapsules and RadiationCapsules and SlowdownCapsules and SpecialAmmo then
 require("prototypes.turrets-gun.ammo.capsule.item")
 require("prototypes.turrets-gun.ammo.capsule.recipe")
+require("prototypes.turrets-gun.ammo.capsule.tech")
+require("prototypes.turrets-gun.ammo.normal.item")
+require("prototypes.turrets-gun.ammo.normal.recipe")
+require("prototypes.turrets-gun.ammo.normal.tech")
 end
 end
 

@@ -13,8 +13,8 @@ Spitters = true
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
--- Capsules holds stronger grenades and attack robots.
 Ammo = true
+SpecialAmmo = true
 SniperRifle = true
 LaserWeapons = true
 Tanks = true
@@ -22,6 +22,7 @@ Equipment = true
 Armor = true
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
+-- NOTE: SpecialAmmo REQUIRES the following to be active: PoisonCapsules, AcidCapsules, NapalmCapsules, RadiationCapsules, SlowdownCapsules, Ammo, GunTurret, SniperRifle!!!!
 
 --[[ Capsules ]]--
 -- Here are all different Capsules:
