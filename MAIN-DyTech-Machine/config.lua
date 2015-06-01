@@ -50,7 +50,7 @@ MiningDrills = true
 SteelFurnaces = true
 ElectricFurnaces = true
 Radars = true
-Walls = true
+Walls = false
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 --[[ Transportation ]]--

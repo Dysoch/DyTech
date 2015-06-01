@@ -9,7 +9,7 @@ data:extend(
     ingredients =
     {
 	  {"tungsten-gear-wheel", 2},
-      {"express-transport-belt", 1}
+      {"express-transport-belt", 1},
       {type="fluid", name="lubricant", amount=5},
     },
     result = "super-transport-belt"
@@ -23,7 +23,7 @@ data:extend(
     ingredients =
     {
 	  {"cobalt-gear-wheel", 5},
-      {"super-transport-belt", 1}
+      {"super-transport-belt", 1},
       {type="fluid", name="lubricant", amount=10},
     },
     result = "extreme-transport-belt"

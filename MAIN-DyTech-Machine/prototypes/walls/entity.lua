@@ -1,11 +1,11 @@
 require "prototypes.functions.walls"
 require "prototypes.internal-config"
 
-ObsidianWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
-CopperWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
-IronWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
-SteelWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
-BrikcWalls = {r=0.545, g=0.271, b=0.075, a=0.9}
+ObsidianWalls = {r=0.184, g=0.310, b=0.310, a=0.9}
+CopperWalls = {r=0.980, g=0.502, b=0.447, a=0.9}
+IronWalls = {r=0.753, g=0.753, b=0.753, a=0.9}
+SteelWalls = {r=0.961, g=0.961, b=0.961, a=0.9}
+BrickWalls = {r=0.627, g=0.322, b=0.176, a=0.9}
 
 data:extend(
 {
@@ -140,7 +140,7 @@ data:extend(
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-    pictures = WallSetup(BrikcWalls)
+    pictures = WallSetup(BrickWalls)
   },
   {
     type = "corpse",
@@ -152,7 +152,7 @@ data:extend(
     selectable_in_game = false,
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
-    animation = WallRemains(BrikcWalls)
+    animation = WallRemains(BrickWalls)
   },
 }
 )
