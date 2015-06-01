@@ -18,6 +18,14 @@ data:extend(
         type = "fire",
         percent = (100*Enemies.Young_Factor),
       },
+	  {
+        type = "poison",
+        percent = (-25*Enemies.Young_Factor),
+      },
+	  {
+        type = "acid",
+        percent = (-25*Enemies.Young_Factor),
+      },
     },
     subgroup="enemies",
     healing_per_tick = (0.08*Enemies.Young_Factor),
@@ -123,6 +131,14 @@ data:extend(
         type = "laser",
         percent = (25*Enemies.Young_Factor),
       },
+	  {
+        type = "plasma",
+        percent = (-25*Enemies.Young_Factor),
+      },
+	  {
+        type = "fire",
+        percent = (-25*Enemies.Young_Factor),
+      },
     },
     healing_per_tick = (0.12*Enemies.Young_Factor),
     collision_box = {{(-0.4*Enemies.Young_Factor), (-0.4*Enemies.Young_Factor)}, {(0.4*Enemies.Young_Factor), (0.4*Enemies.Young_Factor)}},
@@ -191,6 +207,10 @@ data:extend(
         type = "poison",
         percent = (75*Enemies.Young_Factor),
       },
+      {
+        type = "plasma",
+        percent = (75*Enemies.Young_Factor),
+      },
     },
     healing_per_tick = (0.12*Enemies.Young_Factor),
     collision_box = {{(-0.8*Enemies.Young_Factor), (-0.8*Enemies.Young_Factor)}, {(0.8*Enemies.Young_Factor), (0.8*Enemies.Young_Factor)}},
@@ -234,6 +254,14 @@ data:extend(
 	  {
         type = "fire",
         percent = (100*Enemies.Teen_Factor),
+      },
+	  {
+        type = "poison",
+        percent = (-25*Enemies.Teen_Factor),
+      },
+	  {
+        type = "acid",
+        percent = (-25*Enemies.Teen_Factor),
       },
     },
     subgroup="enemies",
@@ -340,6 +368,14 @@ data:extend(
         type = "laser",
         percent = (25*Enemies.Teen_Factor),
       },
+	  {
+        type = "plasma",
+        percent = (-25*Enemies.Teen_Factor),
+      },
+	  {
+        type = "fire",
+        percent = (-25*Enemies.Teen_Factor),
+      },
     },
     healing_per_tick = (0.12*Enemies.Teen_Factor),
     collision_box = {{(-0.4*Enemies.Teen_Factor), (-0.4*Enemies.Teen_Factor)}, {(0.4*Enemies.Teen_Factor), (0.4*Enemies.Teen_Factor)}},
@@ -408,6 +444,10 @@ data:extend(
         type = "poison",
         percent = (75*Enemies.Teen_Factor),
       },
+      {
+        type = "plasma",
+        percent = (75*Enemies.Teen_Factor),
+      },
     },
     healing_per_tick = (0.12*Enemies.Teen_Factor),
     collision_box = {{(-0.8*Enemies.Teen_Factor), (-0.8*Enemies.Teen_Factor)}, {(0.8*Enemies.Teen_Factor), (0.8*Enemies.Teen_Factor)}},
@@ -451,6 +491,14 @@ data:extend(
 	  {
         type = "fire",
         percent = (100*Enemies.Adult_Factor),
+      },
+	  {
+        type = "poison",
+        percent = (-25*Enemies.Adult_Factor),
+      },
+	  {
+        type = "acid",
+        percent = (-25*Enemies.Adult_Factor),
       },
     },
     subgroup="enemies",
@@ -557,6 +605,14 @@ data:extend(
         type = "laser",
         percent = (25*Enemies.Adult_Factor),
       },
+	  {
+        type = "plasma",
+        percent = (-25*Enemies.Adult_Factor),
+      },
+	  {
+        type = "fire",
+        percent = (-25*Enemies.Adult_Factor),
+      },
     },
     healing_per_tick = (0.12*Enemies.Adult_Factor),
     collision_box = {{(-0.4*Enemies.Adult_Factor), (-0.4*Enemies.Adult_Factor)}, {(0.4*Enemies.Adult_Factor), (0.4*Enemies.Adult_Factor)}},
@@ -623,6 +679,10 @@ data:extend(
       },
       {
         type = "poison",
+        percent = (75*Enemies.Adult_Factor),
+      },
+      {
+        type = "plasma",
         percent = (75*Enemies.Adult_Factor),
       },
     },
