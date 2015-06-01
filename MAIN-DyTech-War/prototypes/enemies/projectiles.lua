@@ -175,8 +175,8 @@ data:extend(
           action =
           {
             type = "area",
-            perimeter = 15,
-            entity_flags = {"breaths-air"},
+            perimeter = 3,
+            entity_flags = {"breaths-air", "player-creation", "placeable-neutral", "placeable-player", "placeable-enemy"},
             action_delivery =
             {
               type = "instant",
