@@ -28,6 +28,7 @@ Resistances = {
       {type = "impact", decrease = 0, percent = 0},
       {type = "explosion", decrease = 0, percent = 0},
       {type = "acid", decrease = 0, percent = 0},
+      {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 0}},
 	Tier2 = {
       {type = "fire", decrease = 0, percent = 20},
@@ -35,6 +36,7 @@ Resistances = {
       {type = "impact", decrease = 0, percent = 0},
       {type = "explosion", decrease = 0, percent = 5},
       {type = "acid", decrease = 0, percent = 0},
+      {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 0}},
 	Tier3 = {
       {type = "fire", decrease = 0, percent = 25},
@@ -42,6 +44,7 @@ Resistances = {
       {type = "impact", decrease = 0, percent = 5},
       {type = "explosion", decrease = 0, percent = 10},
       {type = "acid", decrease = 0, percent = 5},
+      {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 5}},
 	Tier4 = {
       {type = "fire", decrease = 2.5, percent = 40},
@@ -49,6 +52,7 @@ Resistances = {
       {type = "impact", decrease = 0, percent = 10},
       {type = "explosion", decrease = 0, percent = 15},
       {type = "acid", decrease = 0, percent = 10},
+      {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 10}},
 	Tier5 = {
       {type = "fire", decrease = 5, percent = 60},
@@ -56,6 +60,7 @@ Resistances = {
       {type = "impact", decrease = 2.5, percent = 15},
       {type = "explosion", decrease = 0, percent = 25},
       {type = "acid", decrease = 0, percent = 15},
+      {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 25}},
 	Tier6 = {
       {type = "fire", decrease = 10, percent = 75},
@@ -63,6 +68,7 @@ Resistances = {
       {type = "impact", decrease = 5, percent = 25},
       {type = "explosion", decrease = 4, percent = 25},
       {type = "acid", decrease = 5, percent = 25},
+      {type = "plasma", decrease = 15, percent = 10},
       {type = "laser", decrease = 10, percent = 40}},
 	Tier7 = {
       {type = "fire", decrease = 15, percent = 90},
@@ -70,6 +76,7 @@ Resistances = {
       {type = "impact", decrease = 12.5, percent = 37.5},
       {type = "explosion", decrease = 6, percent = 37.5},
       {type = "acid", decrease = 15, percent = 37.5},
+      {type = "plasma", decrease = 30, percent = 20},
       {type = "laser", decrease = 25, percent = 45}},
 	Tier8 = {
       {type = "fire", decrease = 0, percent = 100},
@@ -77,6 +84,7 @@ Resistances = {
       {type = "impact", decrease = 20, percent = 50},
       {type = "explosion", decrease = 12.5, percent = 50},
       {type = "acid", decrease = 25, percent = 50},
+      {type = "plasma", decrease = 45, percent = 30},
       {type = "laser", decrease = 40, percent = 50}},
 	Tier9 = {
       {type = "fire", decrease = 0, percent = 100},
@@ -84,6 +92,7 @@ Resistances = {
       {type = "impact", decrease = 25, percent = 65},
       {type = "explosion", decrease = 25, percent = 65},
       {type = "acid", decrease = 35, percent = 65},
+      {type = "plasma", decrease = 60, percent = 40},
       {type = "laser", decrease = 55, percent = 60}},
 	Tier10 = {
       {type = "fire", decrease = 0, percent = 100},
@@ -91,6 +100,7 @@ Resistances = {
       {type = "impact", decrease = 35, percent = 80},
       {type = "explosion", decrease = 40, percent = 80},
       {type = "acid", decrease = 45, percent = 80},
+      {type = "plasma", decrease = 75, percent = 50},
       {type = "laser", decrease = 75, percent = 85}},
 	Fire = {
       {type = "fire", decrease = 0, percent = 75}},

@@ -72,6 +72,7 @@ require("prototypes.tile.noise-layers")
 require("prototypes.categories.ammo-category")
 require("prototypes.categories.recipe-category")
 require("prototypes.categories.resource-category")
+require("prototypes.damage-type")
 
 -- Autoplace Control
 require("prototypes.autoplace-controls")
