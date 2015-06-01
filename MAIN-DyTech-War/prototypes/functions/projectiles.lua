@@ -410,6 +410,108 @@ data:extend(
   },
   {
     type = "projectile",
+    name = "laser-gun-ruby-1",
+    acceleration = 0.005,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 3.75, type = "plasma"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-ruby.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.10
+  },
+  {
+    type = "projectile",
+    name = "laser-gun-sapphire-1",
+    acceleration = 0.010,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 7.5, type = "plasma"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-sapphire.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.15
+  },
+  {
+    type = "projectile",
+    name = "laser-gun-emerald-3",
+    acceleration = 0.015,
+    action =
+    {
+      type = "direct",
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "create-entity",
+            entity_name = "laser-bubble"
+          },
+          {
+            type = "damage",
+            damage = { amount = 10, type = "plasma"}
+          }
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 10},
+    animation =
+    {
+      filename = "__MAIN-DyTech-War__/graphics/lasers/laser-emerald.png",
+      frame_count = 1,
+      width = 7,
+      height = 14,
+      priority = "high"
+    },
+    speed = 0.25
+  },
+  {
+    type = "projectile",
     name = "laser-shotgun-ruby-1",
     acceleration = 0.005,
     flags = {"not-on-map"},
@@ -430,7 +532,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 6, type = "laser"}
+            damage = { amount = 6, type = "plasma"}
           }
         }
       }
@@ -467,7 +569,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 10, type = "laser"}
+            damage = { amount = 10, type = "plasma"}
           }
         }
       }
@@ -504,7 +606,7 @@ data:extend(
           },
           {
             type = "damage",
-            damage = { amount = 20, type = "laser"}
+            damage = { amount = 20, type = "plasma"}
           }
         }
       }

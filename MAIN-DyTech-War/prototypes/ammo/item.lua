@@ -52,7 +52,7 @@ data:extend(
         action_delivery =
         {
           type = "projectile",
-          projectile = "laser-ruby-1",
+          projectile = "laser-gun-ruby-1",
           starting_speed = 0.5,
           source_effects =
           {
@@ -81,7 +81,7 @@ data:extend(
         action_delivery =
         {
           type = "projectile",
-          projectile = "laser-sapphire-1",
+          projectile = "laser-gun-sapphire-1",
           starting_speed = 0.5,
           source_effects =
           {
@@ -110,7 +110,7 @@ data:extend(
         action_delivery =
         {
           type = "projectile",
-          projectile = "laser-emerald-3",
+          projectile = "laser-gun-emerald-3",
           starting_speed = 0.75,
           source_effects =
           {

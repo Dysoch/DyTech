@@ -2,6 +2,7 @@ require "config"
 
 --[[ Mandatory Stuff ]]--
 require("prototypes.functions.projectiles")
+require("prototypes.damage-type")
 
 --[[ EnemiesBaseEdit Check ]]--
 if EnemiesBaseEdit then 
