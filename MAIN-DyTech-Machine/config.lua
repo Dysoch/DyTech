@@ -84,3 +84,5 @@ Liquid_Crafting_Ammo = true
 Liquid_Crafting_Wires = true
 
 Liquid_Crafting_Gears = true
+
+Liquid_Crafting_Walls = true

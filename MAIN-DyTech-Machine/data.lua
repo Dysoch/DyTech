@@ -35,14 +35,6 @@ require("prototypes.logistic-robots.recipe")
 require("prototypes.logistic-robots.tech")
 end
 
---[[ Logistic Robots Check ]]--
-if Walls then 
-require("prototypes.walls.entity")
-require("prototypes.walls.item")
-require("prototypes.walls.recipe")
-require("prototypes.walls.tech")
-end
-
 --[[ Inserters Check ]]--
 if Inserters then 
 require("prototypes.inserters.normal-inserter-entity")
@@ -284,4 +276,16 @@ end
 
 if Metallurgy and MoltenMetals and Liquid_Crafting_Gears then
 require("prototypes.metallurgy.liquid-crafting.gears")
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Walls then
+require("prototypes.metallurgy.liquid-crafting.gears")
+end
+
+--[[ Walls Check ]]--
+if Walls and Metallurgy and MoltenMetals and Liquid_Crafting_Walls then 
+require("prototypes.walls.entity")
+require("prototypes.walls.item")
+require("prototypes.walls.recipe")
+require("prototypes.walls.tech")
 end
