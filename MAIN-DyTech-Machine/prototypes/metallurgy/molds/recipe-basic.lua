@@ -28,5 +28,16 @@ data:extend(
     },
     result = "mold-plate"
   },
+  {
+    type = "recipe",
+    name = "brick",
+    category = "smelting",
+    energy_required = 7,
+    ingredients = 
+	{
+	  {"clay", 1}
+	},
+    result = "brick"
+  },
 }
 )
