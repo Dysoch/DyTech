@@ -5,6 +5,8 @@ Here are the goals for this module:
 - Spaceship generation on start of the game (only at start, so not loading a new save game)
 - Loot in the spaceship, and when mining the spaceship you get some items as well.
 - It must be easily configurable with a few tweak at the top of the control.lua.
+- MUST be MP compatible.
+- Must be optimized. (with debug screen active, use less then 0.2 script-update)
 
 Some tips:
 - DyTech Core holds a lot of info which can be used. Ask me for a transfer from Core to World if needed (but try to do it yourself if possible).
