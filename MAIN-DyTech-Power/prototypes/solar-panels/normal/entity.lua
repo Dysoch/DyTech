@@ -4,7 +4,7 @@ require "prototypes.functions"
 data.raw["solar-panel"]["solar-panel"].fast_replaceable_group = "solar-panel" 
 data.raw["solar-panel"]["solar-panel"].max_health = Health.Tier1
 data.raw["solar-panel"]["solar-panel"].resistances = Resistances.Tier1
-data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Tier1
+data.raw["solar-panel"]["solar-panel"].production = SolarPanels.Normal.Tier1
 
 data:extend(
 {
@@ -26,12 +26,12 @@ data:extend(
       usage_priority = "secondary-output"
     },
     picture = BaseSolarPictures(1),
-    production = SolarPanels.Tier1
+    production = SolarPanels.Normal.Tier1
   },
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk2",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel2.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk2"},
     max_health = Health.Tier3,
@@ -46,12 +46,12 @@ data:extend(
       usage_priority = "primary-output"
     },
     picture = SolarPictures(1, SolarTint.mk2),
-    production = SolarPanels.Tier2
+    production = SolarPanels.Normal.Tier2
   },
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk2",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel2.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk2"},
     max_health = Health.Tier3,
@@ -66,12 +66,12 @@ data:extend(
       usage_priority = "secondary-output"
     },
     picture = SolarPictures(1, SolarTint.mk2),
-    production = SolarPanels.Tier2
+    production = SolarPanels.Normal.Tier2
   },
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk3",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel3.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk3"},
     max_health = Health.Tier5,
@@ -86,12 +86,12 @@ data:extend(
       usage_priority = "primary-output"
     },
     picture = SolarPictures(1, SolarTint.mk3),
-    production = SolarPanels.Tier3
+    production = SolarPanels.Normal.Tier3
   },
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk3",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel3.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk3"},
     max_health = Health.Tier5,
@@ -106,12 +106,12 @@ data:extend(
       usage_priority = "secondary-output"
     },
     picture = SolarPictures(1, SolarTint.mk3),
-    production = SolarPanels.Tier3
+    production = SolarPanels.Normal.Tier3
   },
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk4",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel4.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk4"},
     max_health = Health.Tier7,
@@ -126,12 +126,12 @@ data:extend(
       usage_priority = "primary-output"
     },
     picture = SolarPictures(1, SolarTint.mk4),
-    production = SolarPanels.Tier4
+    production = SolarPanels.Normal.Tier4
   },
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk4",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel4.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk4"},
     max_health = Health.Tier7,
@@ -146,12 +146,12 @@ data:extend(
       usage_priority = "secondary-output"
     },
     picture = SolarPictures(1, SolarTint.mk4),
-    production = SolarPanels.Tier4
+    production = SolarPanels.Normal.Tier4
   },
   {
     type = "solar-panel",
     name = "solar-panel-primary-mk5",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel5.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-primary-mk5"},
     max_health = Health.Tier9,
@@ -166,12 +166,12 @@ data:extend(
       usage_priority = "primary-output"
     },
     picture = SolarPictures(1, SolarTint.mk5),
-    production = SolarPanels.Tier5
+    production = SolarPanels.Normal.Tier5
   },
   {
     type = "solar-panel",
     name = "solar-panel-secondary-mk5",
-    icon = "__MAIN-DyTech-Power__/graphics/solar-panels-normal/solar-panel5.png",
+    icon = "__MAIN-DyTech-Power__/graphics/solar-panels/normal/icons/solar-panel5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-secondary-mk5"},
     max_health = Health.Tier9,
@@ -186,7 +186,7 @@ data:extend(
       usage_priority = "secondary-output"
     },
     picture = SolarPictures(1, SolarTint.mk5),
-    production = SolarPanels.Tier5
+    production = SolarPanels.Normal.Tier5
   },
 }
 )

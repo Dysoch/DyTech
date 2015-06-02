@@ -1,6 +1,5 @@
 --require "prototypes.functions"
 require "config"
-require "prototypes.new.nuclear-reactors.nuclear-recipes.recipes"
 
 function SolarPictures(Scale, Tint)
 return
@@ -94,19 +93,4 @@ return
 	  scale = Scale,
 	  tint = Tint
     }
-end
-
-function Recipe(Item, Sort)
-if CheatRecipe then
-	if Sort == 0 then
-		return
-		{"raw-wood", 1}
-	elseif Sort == 1 then
-		return
-		{"water", 1}
-	end
-else
---return
-	GetRecipe(Item)
-end
 end

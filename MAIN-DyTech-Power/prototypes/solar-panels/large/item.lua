@@ -4,7 +4,6 @@ data:extend(
     type = "item",
     name = "large-solar-panel-primary",
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels/large/icons/solar-panel.png",
-	tint = {r=0.000, g=0.000, b=1.000, a=0.9},
     flags = {"goes-to-quickbar"},
     subgroup = "dytech-energy-solar-large",
     order = "a[mk1]-b[primary]",
