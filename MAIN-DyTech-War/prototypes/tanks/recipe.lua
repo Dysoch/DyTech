@@ -7,9 +7,10 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-	  {"tank", 1},
-      {"processing-unit", 2},
-      {"laser-gun", 2},
+	  {"track", 2},
+	  {"hull-lower", 1},
+	  {"hull-top", 1},
+      {"laser-gun", 1},
       {"rocket-launcher", 1},
       {"tungsten-plate", 50},
     },
@@ -22,11 +23,15 @@ data:extend(
     energy_required = 15,
     ingredients =
     {
-	  {"tank-dytech-1", 1},
+	  {"track", 2},
+	  {"hull-lower", 1},
+	  {"hull-top", 1},
       {"advanced-processing-unit", 2},
       {"ardite-plate", 50},
       {"flame-thrower", 1},
       {"combat-shotgun", 1},
+      {"laser-gun", 1},
+      {"rocket-launcher", 1},
     },
     result = "tank-dytech-2"
   },

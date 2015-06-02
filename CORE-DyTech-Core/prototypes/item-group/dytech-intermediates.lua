@@ -63,15 +63,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "dytech-intermediates-molds",
+    name = "dytech-intermediates-tank",
     group = "dytech-intermediates",
     order = "010"
   },
   {
     type = "item-subgroup",
-    name = "dytech-intermediates-enemies",
+    name = "dytech-intermediates-molds",
     group = "dytech-intermediates",
     order = "011"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytech-intermediates-enemies",
+    group = "dytech-intermediates",
+    order = "012"
   },
 }
 )

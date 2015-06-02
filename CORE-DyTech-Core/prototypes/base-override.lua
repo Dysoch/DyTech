@@ -89,6 +89,10 @@ AddToRecipe("small-pump", "capacitor-1", 1)
 AddToRecipe("chemical-plant", "capacitor-1", 1)
 AddToRecipe("chemical-plant", "frame-1", 1)
 ChangeRecipe("laser-turret", "battery", "capacitor-1", 2)
+ChangeRecipe("tank", "engine-unit", "track", 2)
+ChangeRecipe("tank", "iron-gear-wheel", "hull-lower", 1)
+ChangeRecipe("tank", "advanced-circuit", "hull-top", 1)
+AddToRecipe("tank", "submachine-gun", 1)
 
 --[[ Technologies ]]--
 data.raw["technology"]["steel-processing"].prerequisites={"automation"}
