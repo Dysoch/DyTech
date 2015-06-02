@@ -26,6 +26,10 @@ data:extend(
         type = "unlock-recipe",
         recipe = "roboport-1"
       },
+	  {
+        type = "unlock-recipe",
+        recipe = "robot-charger-1"
+      },
     },
     prerequisites = {"logistic-robotics", "logistic-system", "advanced-electronics", "lead-processing"},
     unit = 
@@ -67,6 +71,10 @@ data:extend(
 	  {
         type = "unlock-recipe",
         recipe = "roboport-2"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "robot-charger-2"
       },
     },
     prerequisites = {"logistic-system-1", "advanced-processing-unit", "tungsten-processing"},

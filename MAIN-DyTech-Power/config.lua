@@ -16,7 +16,7 @@ Nuclear_Reactors = true
 
 --[[Boilers Toggle]]--
 -- Don't like the Boilers? Here you can switch them off!
-Boilers = false
+Boilers = true
 
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
