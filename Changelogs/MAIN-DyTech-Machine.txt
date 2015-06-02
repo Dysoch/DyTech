@@ -10,6 +10,7 @@
 [*] Added Tools Mold: All tools can be made, including Repair Packs!
 [/list]
 [*] Added 5 new Walls!
+[*] Added 2 Robot Charging Stations (From RoboCharge Mod, if needed, can be deleted if owner doesnt want that i use it) They also act as Zone Expanders.
 [/list]
 [*] Bugfixes: 
 [list] [*] none yet
