@@ -29,7 +29,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-dytech-intermediates",
     order = "1",
     ingredients =
     {
@@ -49,7 +49,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-dytech-intermediates",
     order = "2",
     ingredients =
     {
@@ -70,7 +70,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-dytech-intermediates",
     order = "3",
     ingredients =
     {
@@ -93,7 +93,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-dytech-intermediates",
     order = "4",
     ingredients =
     {

@@ -45,15 +45,9 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "liquid-crafting-molds",
-    group = "dytech-metallurgy",
-    order = "06a"
-  },
-  {
-    type = "item-subgroup",
     name = "liquid-crafting-plates",
     group = "dytech-metallurgy",
-    order = "06b"
+    order = "06"
   },
   {
     type = "item-subgroup",
@@ -77,7 +71,19 @@ data:extend(
     type = "item-subgroup",
     name = "liquid-crafting-gears",
     group = "dytech-metallurgy",
-    order = "10"
+    order = "10a"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-dytech-intermediates",
+    group = "dytech-metallurgy",
+    order = "10b"
+  },
+  {
+    type = "item-subgroup",
+    name = "liquid-crafting-science",
+    group = "dytech-metallurgy",
+    order = "10b"
   },
   {
     type = "item-subgroup",

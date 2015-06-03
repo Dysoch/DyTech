@@ -29,7 +29,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-science",
     order = "1",
     ingredients =
     {
@@ -51,7 +51,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-science",
     order = "2",
     ingredients =
     {
@@ -73,7 +73,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-science",
     order = "3",
     ingredients =
     {
@@ -95,7 +95,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-science",
     order = "4",
     ingredients =
     {
@@ -117,7 +117,7 @@ data:extend(
 	category = "forge",
     energy_required = 0.25,
     enabled = false,
-    subgroup = "liquid-crafting-gears",
+    subgroup = "liquid-crafting-science",
     order = "5",
     ingredients =
     {
