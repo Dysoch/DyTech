@@ -1,23 +1,25 @@
+require "prototypes.internal-config"
+
+data.raw["technology"]["modules"].unit = Tech.Tier1
+data.raw["technology"]["speed-module"].unit = Tech.Tier2
+data.raw["technology"]["speed-module-2"].unit = Tech.Tier4
+data.raw["technology"]["speed-module-3"].unit = Tech.Tier6
+data.raw["technology"]["productivity-module"].unit = Tech.Tier2
+data.raw["technology"]["productivity-module-2"].unit = Tech.Tier4
+data.raw["technology"]["productivity-module-3"].unit = Tech.Tier6
+data.raw["technology"]["effectivity-module"].unit = Tech.Tier2
+data.raw["technology"]["effectivity-module-2"].unit = Tech.Tier4
+data.raw["technology"]["effectivity-module-3"].unit = Tech.Tier6
+
 data:extend(
 {
   {
     type = "technology",
     name = "dymodule",
     icon = "__base__/graphics/technology/module.png",
-    effects =
-    {
-	
-    },
+    effects = {},
     prerequisites = {"modules"},
-    unit =
-    {
-      count = 10,
-      ingredients = 
-	  {
-        {"science-pack-1", 5},
-      },
-      time = 30
-    },
+    unit = Tech.Tier1
     order = "d-m"
   },
   --[[Pollution Cleaning Modules]]--
@@ -33,15 +35,7 @@ data:extend(
       },
     },
     prerequisites = {"dymodule"},
-    unit =
-    {
-      count = 50,
-      ingredients = 
-	  {
-        {"science-pack-1", 2},
-      },
-      time = 30
-    },
+    unit = Tech.Tier2
     order = "m-p-cl-1"
   },
   {
@@ -56,16 +50,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-1"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 2},
-        {"science-pack-2", 1},
-      },
-      time = 30
-    },
+    unit = Tech.Tier4
 	upgrade = true,
     order = "m-p-cl-2"
   },
@@ -81,16 +66,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-2"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier6
 	upgrade = true,
     order = "m-p-cl-3"
   },
@@ -106,17 +82,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-3"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-      },
-      time = 60
-    },
+    unit = Tech.Tier8
 	upgrade = true,
     order = "m-p-cl-4"
   },
@@ -132,17 +98,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-4"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 4},
-        {"science-pack-2", 3},
-        {"science-pack-3", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier10
 	upgrade = true,
     order = "m-p-cl-5"
   },
@@ -158,17 +114,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-5"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 5},
-        {"science-pack-2", 4},
-        {"science-pack-3", 3},
-      },
-      time = 60
-    },
+    unit = Tech.Tier12
 	upgrade = true,
     order = "m-p-cl-6"
   },
@@ -184,18 +130,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-6", "advanced-processing-unit"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 6},
-        {"science-pack-2", 5},
-        {"science-pack-3", 4},
-        {"alien-science-pack", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier14
 	upgrade = true,
     order = "m-p-cl-7"
   },
@@ -211,18 +146,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-7"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 8},
-        {"science-pack-2", 7},
-        {"science-pack-3", 6},
-        {"alien-science-pack", 5},
-      },
-      time = 60
-    },
+    unit = Tech.Tier16
 	upgrade = true,
     order = "m-p-cl-8"
   },
@@ -239,15 +163,7 @@ data:extend(
       }
     },
     prerequisites = {"dymodule"},
-    unit =
-    {
-      count = 50,
-      ingredients = 
-	  {
-        {"science-pack-1", 2},
-      },
-      time = 30
-    },
+    unit = Tech.Tier2
     order = "m-p-cr-1"
   },
   {
@@ -262,16 +178,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-1"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 2},
-        {"science-pack-2", 1},
-      },
-      time = 30
-    },
+    unit = Tech.Tier4
 	upgrade = true,
     order = "m-p-cr-2"
   },
@@ -287,16 +194,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-2"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier6
 	upgrade = true,
     order = "m-p-cr-3"
   },
@@ -312,17 +210,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-3"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-      },
-      time = 60
-    },
+    unit = Tech.Tier8
 	upgrade = true,
     order = "m-p-cr-4"
   },
@@ -338,17 +226,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-4"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 4},
-        {"science-pack-2", 3},
-        {"science-pack-3", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier10
 	upgrade = true,
     order = "m-p-cr-5"
   },
@@ -364,17 +242,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-5"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 5},
-        {"science-pack-2", 4},
-        {"science-pack-3", 3},
-      },
-      time = 60
-    },
+    unit = Tech.Tier12
 	upgrade = true,
     order = "m-p-cr-6"
   },
@@ -390,18 +258,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-6", "advanced-processing-unit"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 6},
-        {"science-pack-2", 5},
-        {"science-pack-3", 4},
-        {"alien-science-pack", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier14
 	upgrade = true,
     order = "m-p-cr-7"
   },
@@ -417,18 +274,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-7"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 8},
-        {"science-pack-2", 7},
-        {"science-pack-3", 6},
-        {"alien-science-pack", 5},
-      },
-      time = 60
-    },
+    unit = Tech.Tier16
 	upgrade = true,
     order = "m-p-cr-8"
   },
@@ -445,17 +291,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-3", "dymodule"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-      },
-      time = 60
-    },
+    unit = Tech.Tier8
 	upgrade = true,
     order = "m-s-4"
   },
@@ -471,17 +307,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-4"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 4},
-        {"science-pack-2", 3},
-        {"science-pack-3", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier10
 	upgrade = true,
     order = "m-s-5"
   },
@@ -497,17 +323,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-5"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 5},
-        {"science-pack-2", 4},
-        {"science-pack-3", 3},
-      },
-      time = 60
-    },
+    unit = Tech.Tier12
 	upgrade = true,
     order = "m-s-6"
   },
@@ -523,18 +339,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-6", "advanced-processing-unit"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 6},
-        {"science-pack-2", 5},
-        {"science-pack-3", 4},
-        {"alien-science-pack", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier14
 	upgrade = true,
     order = "m-s-7"
   },
@@ -550,18 +355,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-7"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 8},
-        {"science-pack-2", 7},
-        {"science-pack-3", 6},
-        {"alien-science-pack", 5},
-      },
-      time = 60
-    },
+    unit = Tech.Tier16
 	upgrade = true,
     order = "m-s-8"
   },
@@ -578,17 +372,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-3", "dymodule"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-      },
-      time = 60
-    },
+    unit = Tech.Tier8
 	upgrade = true,
     order = "m-e-4"
   },
@@ -604,17 +388,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-4"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 4},
-        {"science-pack-2", 3},
-        {"science-pack-3", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier10
 	upgrade = true,
     order = "m-e-5"
   },
@@ -630,17 +404,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-5"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 5},
-        {"science-pack-2", 4},
-        {"science-pack-3", 3},
-      },
-      time = 60
-    },
+    unit = Tech.Tier12
 	upgrade = true,
     order = "m-e-6"
   },
@@ -656,18 +420,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-6", "advanced-processing-unit"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 6},
-        {"science-pack-2", 5},
-        {"science-pack-3", 4},
-        {"alien-science-pack", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier14
 	upgrade = true,
     order = "m-e-7"
   },
@@ -683,18 +436,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-7"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 8},
-        {"science-pack-2", 7},
-        {"science-pack-3", 6},
-        {"alien-science-pack", 5},
-      },
-      time = 60
-    },
+    unit = Tech.Tier16
 	upgrade = true,
     order = "m-e-8"
   },
@@ -711,17 +453,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-3", "dymodule"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 3},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-      },
-      time = 60
-    },
+    unit = Tech.Tier8
 	upgrade = true,
     order = "m-p-4"
   },
@@ -737,17 +469,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-4"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 4},
-        {"science-pack-2", 3},
-        {"science-pack-3", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier10
 	upgrade = true,
     order = "m-p-5"
   },
@@ -763,17 +485,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-5"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 5},
-        {"science-pack-2", 4},
-        {"science-pack-3", 3},
-      },
-      time = 60
-    },
+    unit = Tech.Tier12
 	upgrade = true,
     order = "m-p-6"
   },
@@ -789,18 +501,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-6", "advanced-processing-unit"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 6},
-        {"science-pack-2", 5},
-        {"science-pack-3", 4},
-        {"alien-science-pack", 2},
-      },
-      time = 60
-    },
+    unit = Tech.Tier14
 	upgrade = true,
     order = "m-p-7"
   },
@@ -816,18 +517,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-7"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 8},
-        {"science-pack-2", 7},
-        {"science-pack-3", 6},
-        {"alien-science-pack", 5},
-      },
-      time = 60
-    },
+    unit = Tech.Tier16
 	upgrade = true,
     order = "m-p-8"
   },

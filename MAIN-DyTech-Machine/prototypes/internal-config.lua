@@ -107,3 +107,142 @@ Resistances = {
 	Fire = {
       {type = "fire", decrease = 0, percent = 75}},
 }
+
+Tech = {
+	Tier1 = {
+	  count = 10,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+      },
+      time = 5 },
+	Tier2 = {
+	  count = 20,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+      },
+      time = 10 },
+	Tier3 = {
+	  count = 50,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+      },
+      time = 20 },
+	Tier4 = {
+	  count = 100,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+      },
+      time = 30 },
+	Tier5 = {
+	  count = 50,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 15 },
+	Tier6 = {
+	  count = 100,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 30 },
+	Tier7 = {
+	  count = 200,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 45 },
+	Tier8 = {
+	  count = 400,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 60 },
+	Tier9 = {
+	  count = 250,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 30 },
+	Tier10 = {
+	  count = 500,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 45 },
+	Tier11 = {
+	  count = 750,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 60 },
+	Tier12 = {
+	  count = 1000,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 75 },
+	Tier13 = {
+	  count = 500,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 30 },
+	Tier14 = {
+	  count = 1000,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 60 },
+	Tier15 = {
+	  count = 1500,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 90 },
+	Tier16 = {
+	  count = 2000,
+      ingredients = 
+	  {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 120 },
+}
