@@ -4,6 +4,6 @@
 	"version":"1.0.0",
 	"title":"DyTech Compatibility Patcher",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
-	"description":"This is the DyTech Compatibility Patcher. This will make sure other mods work better with DyTech. Which mods are made compatible with DyTech you can read below.",
-	"dependencies": ["CORE-DyTech-Core >= 1.1.2, "? MAIN-DyTech-Machine >= 1.0.1", "? MAIN-DyTech-Power >= 1.0.0", "? MAIN-DyTech-War >= 1.0.0", "? Treefarm-AC >= 0.1.1"]
+	"description":"This is the DyTech Compatibility Patcher. This will make sure other mods work better with DyTech.",
+	"dependencies": ["CORE-DyTech-Core >= 1.2.0"]
 }
