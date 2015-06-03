@@ -12,11 +12,12 @@
 [*] Added Machine Mold, which is capable of making: Steel Furnaces, Electric Furnaces, Assembling Machines and Mining Drills.
 [*] Added Molds for DyTech Intermediates + Recipes (Frames, Rotors, Blades and Item Exits)
 [/list]
+[*] Added a recipe to get obsidian from lava
 [*] Added 5 new Walls!
 [*] Added 2 Robot Charging Stations (From RoboCharge Mod, if needed, can be deleted if owner doesnt want that i use it) They also act as Zone Expanders.
 [/list]
 [*] Bugfixes: 
-[list] [*] none yet
+[list] [*] Fixed exploit with lava heating and cooling.
 [/list]
 [*] Balancing: 
 [list][*] Increased Pumping speed of Pumps (both of them)
