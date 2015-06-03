@@ -26,7 +26,7 @@ Boilers = true
 
 --[[Accumulators Toggle]]--
 -- Don't like the Accumulators? Here you can switch them off!
-Accumulators = false
+Accumulators = true
 
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
@@ -36,7 +36,7 @@ Accumulators = false
 
 --[[Steam Engines Toggle]]--
 -- Don't like the Steam Engines? Here you can switch them off!
-SteamEngines = false
+SteamEngines = true
 
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!

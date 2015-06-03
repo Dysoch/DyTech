@@ -246,3 +246,53 @@ Tech = {
       },
       time = 120 },
 }
+
+function TechSpecial(SET, COUNT, AMOUNT, TIME)
+	if SET == 1 then
+	  return
+	{  
+	  count = COUNT,
+      ingredients = 
+	  {
+        {"science-pack-1", AMOUNT},
+      },
+      time = TIME
+	}
+	elseif SET == 2 then
+	  return
+	{  
+	  count = COUNT,
+      ingredients = 
+	  {
+        {"science-pack-1", AMOUNT},
+        {"science-pack-2", AMOUNT},
+      },
+      time = TIME
+	}
+	elseif SET == 3 then
+	  return
+	{  
+	  count = COUNT,
+      ingredients = 
+	  {
+        {"science-pack-1", AMOUNT},
+        {"science-pack-2", AMOUNT},
+        {"science-pack-3", AMOUNT},
+      },
+      time = TIME
+	}
+	elseif SET == 4 then
+	  return
+	{  
+	  count = COUNT,
+      ingredients = 
+	  {
+        {"science-pack-1", AMOUNT},
+        {"science-pack-2", AMOUNT},
+        {"science-pack-3", AMOUNT},
+        {"alien-science-pack", AMOUNT},
+      },
+      time = TIME
+	}
+	end
+end

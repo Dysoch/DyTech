@@ -220,7 +220,7 @@ data:extend(
     icon = "__base__/graphics/icons/stone.png",
 	category = "centrifuge",
     subgroup = "metallurgy-intermediates",
-    energy_required = 2.5,
+    energy_required = 1,
 	enabled = false,
     ingredients =
     {
@@ -231,6 +231,21 @@ data:extend(
       {type="item", name="stone", amount_min=1, amount_max=3, probability=0.8},
       {type="item", name="iron-chunks", amount_min=1, amount_max=2, probability=0.075},
       {type="item", name="copper-chunks", amount_min=1, amount_max=2, probability=0.1},
+    },
+  },
+  {
+    type = "recipe",
+    name = "obsidian-processing",
+	category = "centrifuge",
+    energy_required = 5,
+	enabled = true,
+    ingredients =
+    {
+	  {type="fluid", name="lava-600", amount=10},
+    },
+    results = 
+    {
+      {type="item", name="obsidian", amount_min=2, amount_max=15, probability=1},
     },
   },
  

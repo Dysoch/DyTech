@@ -14,7 +14,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-600", amount=10}
+	  {type="fluid", name="lava-600", amount=5}
 	}
   },
   {
@@ -31,7 +31,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-800", amount=10}
+	  {type="fluid", name="lava-800", amount=5}
 	}
   },
   {
@@ -48,7 +48,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-1000", amount=10}
+	  {type="fluid", name="lava-1000", amount=5}
 	}
   },
   {
@@ -65,7 +65,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-1200", amount=10}
+	  {type="fluid", name="lava-1200", amount=5}
 	}
   },
   {
@@ -82,7 +82,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-1400", amount=10}
+	  {type="fluid", name="lava-1400", amount=5}
 	}
   },
   {
@@ -99,7 +99,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-1600", amount=10}
+	  {type="fluid", name="lava-1600", amount=5}
 	}
   },
   {
@@ -116,7 +116,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-1800", amount=10}
+	  {type="fluid", name="lava-1800", amount=5}
 	}
   },
   {
@@ -133,7 +133,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-2000", amount=10}
+	  {type="fluid", name="lava-2000", amount=5}
 	}
   },
   {
@@ -150,7 +150,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-2200", amount=10}
+	  {type="fluid", name="lava-2200", amount=5}
 	}
   },
   {
@@ -167,7 +167,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-2400", amount=10}
+	  {type="fluid", name="lava-2400", amount=5}
 	}
   },
   {
@@ -184,7 +184,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-2600", amount=10}
+	  {type="fluid", name="lava-2600", amount=5}
 	}
   },
   {
@@ -201,7 +201,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-2800", amount=10}
+	  {type="fluid", name="lava-2800", amount=5}
 	}
   },
   {
@@ -218,7 +218,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-3000", amount=10}
+	  {type="fluid", name="lava-3000", amount=5}
 	}
   },
   {
@@ -235,7 +235,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-3200", amount=10}
+	  {type="fluid", name="lava-3200", amount=5}
 	}
   },
   {
@@ -252,7 +252,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-3400", amount=10}
+	  {type="fluid", name="lava-3400", amount=5}
 	}
   },
   {
@@ -269,7 +269,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-3600", amount=10}
+	  {type="fluid", name="lava-3600", amount=5}
 	}
   },
   {
@@ -286,7 +286,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="fluid", name="lava-3800", amount=10}
+	  {type="fluid", name="lava-3800", amount=5}
 	}
   },
 }
