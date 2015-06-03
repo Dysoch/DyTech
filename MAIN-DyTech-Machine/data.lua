@@ -250,12 +250,15 @@ require("prototypes.metallurgy.molds.recipe-basic")
 end
 
 --[[ Mold Crafting (Metallurgy) Check ]]--
-if Metallurgy and MoltenMetals and Liquid_Crafting_Belts and TransportBelts then
-require("prototypes.metallurgy.liquid-crafting.belts")
+if Metallurgy and MoltenMetals and Liquid_Crafting_Belts then
+require("prototypes.metallurgy.liquid-crafting.belts-1")
+if TransportBelts then
+require("prototypes.metallurgy.liquid-crafting.belts-2")
+end
 end
 
 if Metallurgy and MoltenMetals then
-	if Liquid_Crafting_Machines or blabla? then
+	if Liquid_Crafting_Machines or Liquid_Crafting_Furnaces then
 		require("prototypes.metallurgy.liquid-crafting.machine")
 	end
 end
@@ -264,6 +267,16 @@ if Metallurgy and MoltenMetals and Liquid_Crafting_Machines then
 require("prototypes.metallurgy.liquid-crafting.assembling-machine-1")
 if AssemblingMachines then
 require("prototypes.metallurgy.liquid-crafting.assembling-machine-2")
+end
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Furnaces then
+require("prototypes.metallurgy.liquid-crafting.furnace-1")
+if SteelFurnaces then
+require("prototypes.metallurgy.liquid-crafting.furnace-2") 
+end
+if ElectricFurnaces then
+--require("prototypes.metallurgy.liquid-crafting.furnace-3") 
 end
 end
 

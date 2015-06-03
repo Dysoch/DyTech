@@ -1,5 +1,7 @@
 --require "prototypes.internal-config"
 
+Liquid_Crafting_Factor = 0.75
+
 PumpingSpeed = {
 	Tier1 = 8,
 	Tier2 = 12.4,

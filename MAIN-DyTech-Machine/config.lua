@@ -67,22 +67,12 @@ Tools = true
 -- Here is everything related to metallurgy!
 Metallurgy = true --MASTER SWITCH!
 MoltenMetals = true
-
 Liquid_Crafting_Belts = true 
--- REQUIRES TransportBelts to be enabled!
-
 Liquid_Crafting_Machines = true
--- REQUIRES AssemblingMachines to be enabled!
-
+Liquid_Crafting_Furnaces = true
 Liquid_Crafting_Tools = true 
--- REQUIRES Tools to be enabled!
-
 Liquid_Crafting_Circuits = true
-
 Liquid_Crafting_Ammo = true
-
 Liquid_Crafting_Wires = true
-
 Liquid_Crafting_Gears = true
-
 Liquid_Crafting_Walls = true
