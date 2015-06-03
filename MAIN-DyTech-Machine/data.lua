@@ -307,6 +307,13 @@ if Metallurgy and MoltenMetals and Liquid_Crafting_Gears then
 require("prototypes.metallurgy.liquid-crafting.gears")
 end
 
+if Metallurgy and MoltenMetals and Liquid_Crafting_DyTech_Intermediates then
+require("prototypes.metallurgy.liquid-crafting.blades")
+require("prototypes.metallurgy.liquid-crafting.rotors")
+require("prototypes.metallurgy.liquid-crafting.frames")
+require("prototypes.metallurgy.liquid-crafting.item-exits")
+end
+
 if Metallurgy and MoltenMetals and Liquid_Crafting_Walls then
 require("prototypes.metallurgy.liquid-crafting.gears")
 end
