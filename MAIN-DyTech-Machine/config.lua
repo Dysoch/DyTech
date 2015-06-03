@@ -68,6 +68,7 @@ Tools = true
 Metallurgy = true --MASTER SWITCH!
 MoltenMetals = true
 Liquid_Crafting_DyTech_Intermediates = true
+Liquid_Crafting_Science_Packs = true
 Liquid_Crafting_Belts = true 
 Liquid_Crafting_Machines = true
 Liquid_Crafting_Furnaces = true

@@ -314,8 +314,8 @@ require("prototypes.metallurgy.liquid-crafting.frames")
 require("prototypes.metallurgy.liquid-crafting.item-exits")
 end
 
-if Metallurgy and MoltenMetals and Liquid_Crafting_Walls then
-require("prototypes.metallurgy.liquid-crafting.gears")
+if Metallurgy and MoltenMetals and Liquid_Crafting_Science_Packs then
+require("prototypes.metallurgy.liquid-crafting.science")
 end
 
 --[[ Walls Check ]]--
