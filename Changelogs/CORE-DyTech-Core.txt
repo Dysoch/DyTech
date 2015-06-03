@@ -10,6 +10,8 @@
 [*] Completely new Gem System. All old gems will revert to the new Crystals!
 [*] Added a new Processor: Logic Diamond Processor (tier 5 circuit) 
 [*] Added some different recipes. Coal to Gems, or Crystal to Sand.
+[*] Added in 4 new Damage Types. Mainly used in the War module.
+[*] Added in 5 new intermediates specially for tanks. All tanks use them now!
 [/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing

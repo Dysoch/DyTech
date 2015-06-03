@@ -10,7 +10,7 @@ data:extend(
     {
 	  {"crystal", 1},
     },
-    result = "sand"
+    result = "sand",
 	result_count = 50
   },
   {
@@ -23,7 +23,7 @@ data:extend(
     {
 	  {"crystal", 1},
     },
-    result = "stone"
+    result = "stone",
 	result_count = 10
   },
 }

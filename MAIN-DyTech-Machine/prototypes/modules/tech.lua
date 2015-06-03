@@ -19,7 +19,7 @@ data:extend(
     icon = "__base__/graphics/technology/module.png",
     effects = {},
     prerequisites = {"modules"},
-    unit = Tech.Tier1
+    unit = Tech.Tier1,
     order = "d-m"
   },
   --[[Pollution Cleaning Modules]]--
@@ -35,7 +35,7 @@ data:extend(
       },
     },
     prerequisites = {"dymodule"},
-    unit = Tech.Tier2
+    unit = Tech.Tier2,
     order = "m-p-cl-1"
   },
   {
@@ -50,7 +50,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-1"},
-    unit = Tech.Tier4
+    unit = Tech.Tier4,
 	upgrade = true,
     order = "m-p-cl-2"
   },
@@ -66,7 +66,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-2"},
-    unit = Tech.Tier6
+    unit = Tech.Tier6,
 	upgrade = true,
     order = "m-p-cl-3"
   },
@@ -82,7 +82,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-3"},
-    unit = Tech.Tier8
+    unit = Tech.Tier8,
 	upgrade = true,
     order = "m-p-cl-4"
   },
@@ -98,7 +98,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-4"},
-    unit = Tech.Tier10
+    unit = Tech.Tier10,
 	upgrade = true,
     order = "m-p-cl-5"
   },
@@ -114,7 +114,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-5"},
-    unit = Tech.Tier12
+    unit = Tech.Tier12,
 	upgrade = true,
     order = "m-p-cl-6"
   },
@@ -130,7 +130,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-6", "advanced-processing-unit"},
-    unit = Tech.Tier14
+    unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-cl-7"
   },
@@ -146,7 +146,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-clean-module-7"},
-    unit = Tech.Tier16
+    unit = Tech.Tier16,
 	upgrade = true,
     order = "m-p-cl-8"
   },
@@ -163,7 +163,7 @@ data:extend(
       }
     },
     prerequisites = {"dymodule"},
-    unit = Tech.Tier2
+    unit = Tech.Tier2,
     order = "m-p-cr-1"
   },
   {
@@ -178,7 +178,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-1"},
-    unit = Tech.Tier4
+    unit = Tech.Tier4,
 	upgrade = true,
     order = "m-p-cr-2"
   },
@@ -194,7 +194,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-2"},
-    unit = Tech.Tier6
+    unit = Tech.Tier6,
 	upgrade = true,
     order = "m-p-cr-3"
   },
@@ -210,7 +210,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-3"},
-    unit = Tech.Tier8
+    unit = Tech.Tier8,
 	upgrade = true,
     order = "m-p-cr-4"
   },
@@ -226,7 +226,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-4"},
-    unit = Tech.Tier10
+    unit = Tech.Tier10,
 	upgrade = true,
     order = "m-p-cr-5"
   },
@@ -242,7 +242,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-5"},
-    unit = Tech.Tier12
+    unit = Tech.Tier12,
 	upgrade = true,
     order = "m-p-cr-6"
   },
@@ -258,7 +258,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-6", "advanced-processing-unit"},
-    unit = Tech.Tier14
+    unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-cr-7"
   },
@@ -274,7 +274,7 @@ data:extend(
       }
     },
     prerequisites = {"pollution-create-module-7"},
-    unit = Tech.Tier16
+    unit = Tech.Tier16,
 	upgrade = true,
     order = "m-p-cr-8"
   },
@@ -291,7 +291,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-3", "dymodule"},
-    unit = Tech.Tier8
+    unit = Tech.Tier8,
 	upgrade = true,
     order = "m-s-4"
   },
@@ -307,7 +307,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-4"},
-    unit = Tech.Tier10
+    unit = Tech.Tier10,
 	upgrade = true,
     order = "m-s-5"
   },
@@ -323,7 +323,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-5"},
-    unit = Tech.Tier12
+    unit = Tech.Tier12,
 	upgrade = true,
     order = "m-s-6"
   },
@@ -339,7 +339,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-6", "advanced-processing-unit"},
-    unit = Tech.Tier14
+    unit = Tech.Tier14,
 	upgrade = true,
     order = "m-s-7"
   },
@@ -355,7 +355,7 @@ data:extend(
       }
     },
     prerequisites = {"speed-module-7"},
-    unit = Tech.Tier16
+    unit = Tech.Tier16,
 	upgrade = true,
     order = "m-s-8"
   },
@@ -372,7 +372,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-3", "dymodule"},
-    unit = Tech.Tier8
+    unit = Tech.Tier8,
 	upgrade = true,
     order = "m-e-4"
   },
@@ -388,7 +388,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-4"},
-    unit = Tech.Tier10
+    unit = Tech.Tier10,
 	upgrade = true,
     order = "m-e-5"
   },
@@ -404,7 +404,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-5"},
-    unit = Tech.Tier12
+    unit = Tech.Tier12,
 	upgrade = true,
     order = "m-e-6"
   },
@@ -420,7 +420,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-6", "advanced-processing-unit"},
-    unit = Tech.Tier14
+    unit = Tech.Tier14,
 	upgrade = true,
     order = "m-e-7"
   },
@@ -436,7 +436,7 @@ data:extend(
       }
     },
     prerequisites = {"effectivity-module-7"},
-    unit = Tech.Tier16
+    unit = Tech.Tier16,
 	upgrade = true,
     order = "m-e-8"
   },
@@ -453,7 +453,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-3", "dymodule"},
-    unit = Tech.Tier8
+    unit = Tech.Tier8,
 	upgrade = true,
     order = "m-p-4"
   },
@@ -469,7 +469,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-4"},
-    unit = Tech.Tier10
+    unit = Tech.Tier10,
 	upgrade = true,
     order = "m-p-5"
   },
@@ -485,7 +485,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-5"},
-    unit = Tech.Tier12
+    unit = Tech.Tier12,
 	upgrade = true,
     order = "m-p-6"
   },
@@ -501,7 +501,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-6", "advanced-processing-unit"},
-    unit = Tech.Tier14
+    unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-7"
   },
@@ -517,7 +517,7 @@ data:extend(
       }
     },
     prerequisites = {"productivity-module-7"},
-    unit = Tech.Tier16
+    unit = Tech.Tier16,
 	upgrade = true,
     order = "m-p-8"
   },

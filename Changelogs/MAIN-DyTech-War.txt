@@ -14,13 +14,15 @@
 [*] Added 3 Napalm Capsules.
 [*] Added 2 Slowdown Capsules
 [*] Added 3 FireStorm Capsules (upgrade from Napalm) They drift with the wind, and last very long! Be prepared to have your base destroyed if you activate one of these!
-[*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
-[*] Added Younglings and Teenagers of Berserker, Elder, King and Queen Spitters. (total now rests at 15 different Spitters!)
+[*] Added Younglings(50% weaker) and Teenagers(25% weaker) of Berserker, Elder, King and Queen Biters. (total now rests at 15 different Biters!)
+[*] Added Younglings(50% weaker) and Teenagers(25% weaker) of Berserker, Elder, King and Queen Spitters. (total now rests at 15 different Spitters!)
 [*] Added 3 Shields (Equipment)
 [*] Added 3 Batteries (Equipment)
 [*] Added 4 Solar Panels (Equipment)
 [*] Added 7 different new Gun Turrets
 [*] Added armored versions of those Gun Turrets
+[*] Added 12 Ammo Capsules. They are used by Capsule Turret.
+[*] Added new Ammo Types. Acid, Fire, Poison and Plasma bullets.
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
@@ -35,6 +37,7 @@
 [*] Decreased Health of Spitter Spawner: 3500 > 3000
 [*] Changed Health and Resistances of all entities!
 [*] Increased shooting speed of Emerald Turrets!
+[*] Changed Laser Gun and Laser Shotgun to Plasma Gun and Plasma Shotgun.
 [*] Changed Biters and Spitters:
 [list] [*] Berserker: Fire Based enemy: 100% Resistance to Fire, and attacks with Fire! Spitter shoots explosions to you!
 [*] Elder: Laser Based enemy: 99% Resistance to Laser, and attacks with laser damage! Spitter shoots extremely fast!
