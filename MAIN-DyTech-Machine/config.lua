@@ -70,6 +70,7 @@ MoltenMetals = true
 Liquid_Crafting_Belts = true 
 Liquid_Crafting_Machines = true
 Liquid_Crafting_Furnaces = true
+Liquid_Crafting_Miners = true
 Liquid_Crafting_Tools = true 
 Liquid_Crafting_Circuits = true
 Liquid_Crafting_Ammo = true

@@ -258,7 +258,7 @@ end
 end
 
 if Metallurgy and MoltenMetals then
-	if Liquid_Crafting_Machines or Liquid_Crafting_Furnaces then
+	if Liquid_Crafting_Machines or Liquid_Crafting_Furnaces or Liquid_Crafting_Miners then
 		require("prototypes.metallurgy.liquid-crafting.machine")
 	end
 end
@@ -276,7 +276,14 @@ if SteelFurnaces then
 require("prototypes.metallurgy.liquid-crafting.furnace-2") 
 end
 if ElectricFurnaces then
---require("prototypes.metallurgy.liquid-crafting.furnace-3") 
+require("prototypes.metallurgy.liquid-crafting.furnace-3") 
+end
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Miners then
+require("prototypes.metallurgy.liquid-crafting.miners-1")
+if MiningDrills then
+require("prototypes.metallurgy.liquid-crafting.miners-2") 
 end
 end
 
