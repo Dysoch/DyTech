@@ -1,3 +1,6 @@
+--[[ Building Blocks ]]--
+-- This switch makes sure that every placeable machine requires a building block!
+Building_Blocks = true
 
 --[[ Treefarm Config ]]--
 -- The following 2 switches are for recipe changes
