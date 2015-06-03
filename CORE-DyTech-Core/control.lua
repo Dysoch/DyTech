@@ -134,7 +134,15 @@ game.onevent(defines.events.onresearchstarted, function(event)
 end)
 
 game.onevent(defines.events.onresearchfinished, function(event)
+if game.players == 1 then
+	if game.player.controllertype == 2 or game.player.controllertype == 0 then
+		fs.TechLogger("finished-god", event.research)
+	elseif game.player.controllertype == 1 then
+		fs.TechLogger("finished", event.research)
+	end
+else
 	fs.TechLogger("finished", event.research)
+end	
 end)
 
 game.onevent(defines.events.onbuiltentity, function(event)

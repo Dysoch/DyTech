@@ -39,6 +39,14 @@ function TechLogger(statement, name)
 		if not glob.techcount then glob.techcount=1 end
 		glob.Logger.Technology[glob.techcount].TimeFinished = glob.timer.hours..":"..glob.timer.minutes..":"..glob.timer.seconds
 		glob.Logger.Technology[glob.techcount].Finished = true
+	elseif statement=="finished-god" then
+		if not glob.techcount then glob.techcount=1 end
+		glob.techcount = glob.techcount + 1
+		glob.Logger.Technology[glob.techcount] = {}
+		glob.Logger.Technology[glob.techcount].Name = name
+		glob.Logger.Technology[glob.techcount].Started = true
+		glob.Logger.Technology[glob.techcount].TimeFinished = glob.timer.hours..":"..glob.timer.minutes..":"..glob.timer.seconds
+		glob.Logger.Technology[glob.techcount].Finished = true
 	else
 		error("Dysoch derped out and made a typo. Please show this error to Dysoch on Github.(statement name="..statement..")")	
 	end
