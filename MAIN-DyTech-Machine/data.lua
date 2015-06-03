@@ -254,8 +254,17 @@ if Metallurgy and MoltenMetals and Liquid_Crafting_Belts and TransportBelts then
 require("prototypes.metallurgy.liquid-crafting.belts")
 end
 
-if Metallurgy and MoltenMetals and Liquid_Crafting_Machines and AssemblingMachines then
-require("prototypes.metallurgy.liquid-crafting.machine")
+if Metallurgy and MoltenMetals then
+	if Liquid_Crafting_Machines or blabla? then
+		require("prototypes.metallurgy.liquid-crafting.machine")
+	end
+end
+
+if Metallurgy and MoltenMetals and Liquid_Crafting_Machines then
+require("prototypes.metallurgy.liquid-crafting.assembling-machine-1")
+if AssemblingMachines then
+require("prototypes.metallurgy.liquid-crafting.assembling-machine-2")
+end
 end
 
 if Metallurgy and MoltenMetals and Liquid_Crafting_Tools and Tools then
