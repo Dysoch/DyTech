@@ -58,6 +58,8 @@ ChangeRecipe("burner-inserter", "iron-gear-wheel", "stone-gear-wheel", 1)
 ChangeRecipe("offshore-pump", "iron-gear-wheel", "stone-gear-wheel", 1)
 ChangeRecipe("science-pack-1", "iron-gear-wheel", "stone-gear-wheel", 1)
 ChangeRecipe("basic-transport-belt", "iron-gear-wheel", "stone-gear-wheel", 1)
+ChangeRecipe("lab", "iron-gear-wheel", "stone-gear-wheel", 5)
+data.raw["recipe"]["iron-gear-wheel"].enabled = false
 AddToRecipe("boiler", "rotor-1", 1)
 AddToRecipe("radar", "frame-1", 1)
 AddToRecipe("basic-mining-drill", "frame-1", 1)
@@ -99,3 +101,4 @@ data.raw["technology"]["steel-processing"].prerequisites={"automation"}
 AddRequirementToTech("advanced-oil-processing", "water-cleaning")
 AddRequirementToTech("sulfur-processing", "water-cleaning")
 AddRecipeToTech("steel-processing", "steel-gear-wheel")
+AddRecipeToTech("automation", "iron-gear-wheel")

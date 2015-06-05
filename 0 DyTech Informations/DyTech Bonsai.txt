@@ -1,0 +1,252 @@
+Written in Notepad++ maximised at 1650x1080
+All of these changes'n'stuff are only my opinion!!!
+What you do/chance is of course in your hand!
+In fact the amount and time for the technologies are crazy.
+
+Ingame-name changes:
+-Bones Charcoal   				->	Charcoal
+
+
+Balances/changes/additions:
+-add glas to some machine-recepies or turret-recepies.
+-Remove mold-reinsertion (maybe just remove them and by time add new machines with need the molds to be crafted or something.)
+-Can you make biter nests HP in the beginning like in vanilla (350) but increase over time with the polution factor? having biters near a starting base without weapons to destroy eats up time and ammo.
+-Change vanilla recepies of speed modules/effectivity modules/production modules 3 to the ones of pollution cleaning/producing modules 3. (since you can get them by unlocking without the technology.)
+-Make Lava heater/cooler a 1x1 block and cleanup the interface when selected a recepie.
+-Centrifuge cleaningspeed  		->	speed matches with Blastfurnace			Cost of the machines and speed do not match with electric furnaces and else than get pollution reduction
+-Blastfurnace processingspeed   ->	speed matches with Forge				on the same hand you get liquid crafting to late ingame also the blastfurnace is a little expensive since
+-Forge processingspeed   		->	output around 10-15 plates/second		you need Tin+Silver+Zinc+Gold which all have to researched before you can even start with liquid crafting.
+
+Cleanup:
+-Mod-part-names   				->	e.g. copper plate recepie made from clean copper ore: "base->CORE-DyTech-Core"   ->   "DyTech-Core"  (for technologies and crafting!)
+								
+Technologies: (cost/time changes)	(1|1|1|1 -> red|green|blue|purple)
+-Automation 4					->	change cost from		300 -> 150-200
+-Automation 5					->	change cost from		450 -> 200-250
+-Automation 6					->	change cost from		600 -> 200-250
+-Automation 7					->	change cost from		800 -> 300
+-Armored Automobilism			->	change cost from		4|2|1 x150 -> 2|2|1 x100
+-Advanced cables				->	change time/cycle from		100 -> 30
+-Advanced processing unit		->	change cost from		475 -> 200
+								->	change time/cycle from		200 -> 60
+-Railway 1						->	change cost from		2|1|1 x250 -> 1|1|1 x150
+								->	change time/cycle from		20 -> 30
+-Railway 2						->	change cost from		2|1|1 x750 -> 2|2|1 x250
+								->	change time/cycle from		20 -> 60
+-Upgraded tanks 1				->	change cost from		50 -> 100
+-Upgraded tanks 2				->	change cost from		250 -> 150
+-Upgraded tanks 3				->	change cost from		450 -> 200
+								->	change time/cycle from		30 -> 60
+-Upgraded tanks 4				->	change cost from		750 -> 400
+								->	change time/cycle from		30 -> 60
+-Upgraded pumps 1				->	change cost from		150 -> 100
+-Upgraded pumps 2				->	change cost from		2|1 x225 -> 1|1 x150
+								->	change time/cycle from		60 -> 30
+-Upgraded pumps 4				->	change cost from		3|3|3 x600 -> 2|2|1 x200
+-Upgraded pumps 3				->	change cost from		2|2|1 x300 -> 2|1|1 x150
+-Upgraded boilers 1				->	change cost from		150 -> 100
+-Upgraded boilers 2				->	change cost from		2|1 x225 -> 1|1 x150
+								->	change time/cycle from		60 -> 30
+-Upgraded boilers 3				->	change cost from		2|2|1 x300 -> 2|1|1 x150
+-Upgraded boilers 4				->	change cost from		3|2|1 x500 -> 2|2|1 x200
+-Upgraded steam power 1			->	change cost from		150 -> 100
+-Upgraded steam power 2			->	change cost from		2|1 x225 -> 1|1 x150
+								->	change time/cycle from		60 -> 30
+-Upgraded steam power 3			->	change cost from		2|2|1 x300 -> 2|1|1 x150
+-Upgraded steam power 4			->	change cost from		3|3|3 x600 -> 2|2|1 x200
+-Personal laser defense 1		->	change cost from		300 -> 200
+-Personal laser defense 2		->	change cost from		900 -> 300
+-Character logistic slots 4		-> 	change time/cycle from		25 -> 30
+-Character logistic slots 5		-> 	change cost from		1|1|1|1 x200 -> 2|1|1|1 x150
+								-> 	change time/cycle from		25 -> 60
+-Character logistic slots 6		->	change cost from		1|1|1|1 x300 -> 2|2|1|1 x150
+								-> 	change time/cycle from		25 -> 60
+-Character logistic slots 7		->	change cost from		1|1|1|1 x400 -> 2|2|1|1 x200
+								-> 	change time/cycle from		25 -> 60
+-Character logistic slots 8		->	change cost from		1|1|1|1 x600 -> 2|2|2|1 x200
+								-> 	change time/cycle from		25 -> 60
+-Character logistic slots 9		->	change cost from		1|1|1|1 x1000 -> 2|2|2|1 x300
+-Toolbelt 1						->	change cost from		1|1|1|5 x150 -> 1|1|1|1 x100
+-Toolbelt 2						->	change cost from		1|1|1|5 x300 -> 1|1|1|1 x200
+-Big sized chests 2				->	change cost from		1|1|1 x150 -> 1|1 x100
+-Big sized chests 3				->	change cost from		250 -> 150
+-Big sized chests 4				->	change cost from		250 -> 200
+-Inseter item stack size bonus 5->	change cost from		1|1|1|2 x700 -> 1|1|1|1 x400
+								->	change time/cycle from		30 -> 60
+-Inseter item stack size bonus 6->	change cost from		1|1|1|2 x1400 -> 1|1|1|1 x550
+								->	change time/cycle from		30 -> 60
+-Inseter item stack size bonus 7->	change cost from		1|1|1|2 x2300 -> 1|1|1|1 x700
+								->	change time/cycle from		30 -> 60
+-Inseter item stack size bonus 8->	change cost from		1|1|1|2 x3800 -> 1|1|1|1 x850
+								->	change time/cycle from		30 -> 60
+-Inseter item stack size bonus 9->	change cost from		1|1|1|2 x6000 -> 1|1|1|1 x1000
+								->	change time/cycle from		30 -> 60
+-Smart inseter optimisation		->	change cost from		1|1 x150 -> 1|1|1 x150
+-Super inseter optimisation		->	change cost from		1|1|1 x75 -> 2|2|1|1 x100
+								->	change time/cycle from		100 -> 60
+-Capacitors 1					->	change cost from		75 -> 50
+								->	change time/cycle from		60 -> 30
+-Capacitors 2					->	change cost from		125 -> 100
+								->	change time/cycle from		120 -> 60
+-Capacitors 3					->	change cost from		1|1 x175 -> 1|1|1 x150
+								->	change time/cycle from		240 -> 60
+-Centrifuge processing 2		->	change cost from		150 -> 100
+-Upgraded pumpjacks 1			->	change cost from		200 -> 100
+								->	change time/cycle from		15 -> 30
+-Upgraded pumpjacks 2			->	change cost from		400 -> 200
+-Upgraded pumpjacks 3			->	change cost from		1|1 x650 -> 1|1|1 x200
+-Upgraded pumpjacks 4			->	change cost from		750 -> 300
+								->	change time/cycle from		90 -> 60
+-Logistics 4					->	change cost from		300 -> 200
+								->	change time/cycle from		25 -> 30
+-Logistics 5					->	change cost from		1200 -> 300
+								->	change time/cycle from		75 -> 60
+-Logistic system 1				->	change cost from		3|2|1 x250 -> 1|1|1 x200
+-Logistic system 2				->	change cost from		5|4|1|4 -> 1|1|1|1
+								->	change time/cycle from		90 -> 60
+-Logistic robotics 1			->	change cost from		3|2|1 -> 1|1|1
+-Logistic robotics 2			->	change cost from		5|4|1|4 -> 1|1|1|1
+								->	change time/cycle from		90 -> 60
+-Logistic robot speed 6			-> 	change cost from		1500 -> 600
+-Logistic robot speed 7			-> 	change cost from		2500 -> 700
+-Logistic robot speed 8			-> 	change cost from		4500 -> 800
+-Logistic robot cargo size 4	->	change cost from		1250 -> 525
+-Logistic robot cargo size 5	->	change cost from		2450 -> 650
+-Logistic robot cargo size 6	->	change cost from		3450 -> 775
+-Logistic robot cargo size 7	->	change cost from		4450 -> 900
+-Logistic robot cargo size 8	->	change cost from		6450 -> 1000
+-Military 6						->	change cost from		1|1|1 x450 -> 1|1|1|1 x200
+								->	change time/cycle from		90 -> 60
+-Military 7						->	change cost from		1|1|1 x750 -> 1|1|1|1 x300
+								->	change time/cycle from		90 -> 60
+-Military 8						->	change cost from		1|1|1 x750 -> 1|1|1|1 x250
+-Power armor 3					->	change cost from		1|1|1 x1500 -> 2|2|2|4 x250
+								->	change time/cycle from		90 -> 60
+-Laser turrets 1				->	change cost from		450 -> 150
+-Laser turrets 2				->	change cost from		2|1|1|1 x550 -> 1|1|1|1 x200
+								->	change time/cycle from		30 -> 60
+Laser turrets 3					->	change cost from		3|2|1|1 x1000 -> 1|1|1|1 x400
+-Laser turret damage upgrade 10	->	change cost from		600 -> 700
+-Laser turret damage upgrade 11	->	change cost from		700 -> 800
+-Laser turret damage upgrade 12	->	change cost from		800 -> 900
+-Laser turret damage upgrade 13	->	change cost from		900 -> 1000
+-Laser turret damage upgrade 14	->	change cost from		1000 -> 1100
+-Laser turret damage upgrade 15	->	change cost from		1100 -> 1200
+-Laser turret damage upgrade 16	->	change cost from		1200 -> 1300
+-Laser turret damage upgrade 17	->	change cost from		1300 -> 1400
+-Laser turret damage upgrade 19	->	change cost from		1800 -> 1600
+-Laser turret damage upgrade 20	->	change cost from		2500 -> 2000
+-Combat robotics 4				->	change time/cycle from		30 -> 60
+-Combat robotics 5				->	change cost from		800 -> 500
+								->	change time/cycle from		30 -> 60
+-Combat robotics 6				->	change cost from		800 -> 600
+								->	change time/cycle from		30 -> 60
+-Upgraded radars 1				->	change cost from		200 -> 100
+-Upgraded radars 2				->	change cost from		1|1|1 x400 -> 1|1 x200
+								->	change time/cycle from		30 -> 60
+-Upgraded radars 3				->	change cost from		2|2|1 x300 -> 1|1|1 x200
+								->	change time/cycle from		30 -> 60
+-Upgraded radars 4				->	change cost from		1000 -> 300
+								->	change time/cycle from		30 -> 60
+-Dytech modules					->	change cost from		5 x10 -> 2 x25
+								->	change time/cycle from		30 -> 15
+-Speed modules 4 				->	change cost from		3|2|1 x50 -> 2|1|1 x100
+-Speed modules 5				->	change cost from		4|3|2 x50 -> 2|2|1 x100
+-Speed modules 6				->	change cost from		5|4|3 x50 -> 2|2|2 x100
+-Speed modules 7				->	change cost from		6|5|4|2 x50 -> 2|2|2|1 x100
+-Speed modules 8				->	change cost from		8|7|6|5 x50 -> 2|2|2|2 x100
+-Effectivity modules 4 			->	change cost from		3|2|1 x50 -> 2|1|1 x100
+-Effectivity modules 5			->	change cost from		4|3|2 x50 -> 2|2|1 x100
+-Effectivity modules 6			->	change cost from		5|4|3 x50 -> 2|2|2 x100
+-Effectivity modules 7			->	change cost from		6|5|4|2 x50 -> 2|2|2|1 x100
+-Effectivity modules 8			->	change cost from		8|7|6|5 x50 -> 2|2|2|2 x100
+-Productivity modules 4 		->	change cost from		3|2|1 x50 -> 2|1|1 x100
+-Productivity modules 5			->	change cost from		4|3|2 x50 -> 2|2|1 x100
+-Productivity modules 6			->	change cost from		5|4|3 x50 -> 2|2|2 x100
+-Productivity modules 7			->	change cost from		6|5|4|2 x50 -> 2|2|2|1 x100
+-Productivity modules 8			->	change cost from		8|7|6|5 x50 -> 2|2|2|2 x100
+-Pollution cleaning modules 1	->	change cost from		2 x50 -> 1 x50
+-Pollution cleaning modules 2	->	change cost from		2|1 x50 -> 1|1 x75
+-Pollution cleaning modules 3	->	change cost from		3|2 x50 -> 1|1|1 x100
+-Pollution cleaning modules 4 	->	change cost from		3|2|1 x50 -> 2|1|1 x100
+-Pollution cleaning modules 5	->	change cost from		4|3|2 x50 -> 2|2|1 x100
+-Pollution cleaning modules 6	->	change cost from		5|4|3 x50 -> 2|2|2 x100
+-Pollution cleaning modules 7	->	change cost from		6|5|4|2 x50 -> 2|2|2|1 x100
+-Pollution cleaning modules 8	->	change cost from		8|7|6|5 x50 -> 2|2|2|2 x100
+-Pollution producing modules 4 	->	change cost from		3|2|1 x50 -> 2|1|1 x100
+-Pollution producing modules 5	->	change cost from		4|3|2 x50 -> 2|2|1 x100
+-Pollution producing modules 6	->	change cost from		5|4|3 x50 -> 2|2|2 x100
+-Pollution producing modules 7	->	change cost from		6|5|4|2 x50 -> 2|2|2|1 x100
+-Pollution producing modules 8	->	change cost from		8|7|6|5 x50 -> 2|2|2|2 x100
+-Pollution producing modules 1	->	change cost from		2 x50 -> 1 x50
+-Pollution producing modules 2	->	change cost from		2|1 x50 -> 1|1 x75
+-Pollution producing modules 3	->	change cost from		3|2 x50 -> 1|1|1 x100
+-Frames 1						-> 	change cost from		75 -> 100
+								-> 	change time/cycle from		100 -> 30
+-Frames 2						-> 	change cost from		125 -> 100
+								-> 	change time/cycle from		100 -> 60
+-Frames 3						->	change cost from		250 -> 200
+								-> 	change time/cycle from		150 -> 60
+-Item exits 2					->	change cost from		1|1 150 -> 1|1|1 x100
+								->	change time/cycle from		100 -> 60
+-Item exits 3					->	change cost from		250 -> 200
+								->	change time/cycle from		150 -> 60
+-Rotors and blades 1			-> 	change cost from		75 -> 100
+								-> 	change time/cycle from		50 -> 30
+-Rotors and blades 2			-> 	change cost from		125 -> 100
+								-> 	change time/cycle from		100 -> 60
+-Rotors and blades 3			-> 	change time/cycle from		150 -> 60
+-Upgraded mining drills 2		->	change cost from		200 -> 100
+								->	change time/cycle from		15 -> 30
+-Upgraded mining drills 3		->	change cost from		400 -> 200
+-Upgraded mining drills 4		->	change cost from		600 -> 200
+								->	change time/cycle from		30 -> 60
+-Upgraded mining drills 5		->	change cost from		1|1|1 x800 -> 1|1|1|1 x250
+-Upgraded mining drills 6		->	change cost from		1000 -> 500
+								->	change time/cycle from		150 -> 60
+-Tin processing					->	change time/cycle from		100 -> 30
+-Zinc processing				->	change time/cycle from		100 -> 30
+-Lead processing				->	change cost from		150 -> 100
+								->	change time/cycle from		100 -> 30
+-Silver processing				->	change time/cycle from		100 -> 60
+-Gold processing				->	change time/cycle from		100 -> 60
+-Tungsten processing			->	change cost from		250 -> 150
+								->	change time/cycle from		100 -> 60
+-Cobalt processing				-> 	change cost from		250 -> 100
+								-> 	change time/cycle from		100 -> 60
+-Ardite processing				->	change cost from		250 -> 150
+								->	change time/cycle from		100 -> 60
+-Advanced material processing 3	->	change cost from		1|1|1 x200 -> 1|1 x150
+-Advanced material processing 4	->	change cost from		400 -> 200
+								->	change time/cycle from		30 -> 60
+-Advanced material processing 5	->	change cost from		600 -> 250
+								->	change time/cycle from		30 -> 60
+-Advanced material processing 6	->	change cost from		1000 -> 250-300
+								->	change time/cycle from		30 -> 60
+-Water cleaning					->	change cost from		1|1 -> 1
+-Metallurgic ore smelting 1		->	change cost from		150 -> 50
+-Metallurgic ore smelting 2		->	change cost from		250 -> 100
+-Metallurgic ore smelting 3		->	change cost from		450 -> 150
+-Metallurgic ore smelting 4		->	change cost from		850 -> 200
+								->	change time/cycle from		30 -> 60
+-Liquid automated crafting 1	->	change cost from		150 -> 100
+-Liquid automated crafting 2	->	change cost from		250 -> 150
+-Liquid automated crafting 3	->	change cost from		250 -> 150
+-Liquid automated crafting 4	->	change cost from		250 -> 150
+-Liquid automated crafting 5	->	change cost from		250 -> 150
+-Solar energy 2					->	change cost from		200 -> 150
+-Solar energy 3					->	change cost from		1|1|1 x300 -> 2|1|1 x200
+-Solar energy 4					->	change cost from		1|1|1 x400 -> 2|2|1 x250
+								->	change time/cycle from		30 -> 60
+-Solar energy 5					->	change cost from		2|1|1 x500 -> 2|2|2 x300
+								->	change time/cycle from		30 -> 60
+-Electric energy accumulators 2	->	change cost from		200 -> 100
+-Electric energy accumulators 3	->	change cost from		300 -> 200
+-Electric energy accumulators 4	->	change cost from		500 -> 250
+
+
+Thats all my mind has to think about for now...
+
+Bonsai
+
+P.S.: @Dysoch:Read my message on steam!

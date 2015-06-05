@@ -25,7 +25,9 @@
 [list] [*] Added New Graphics for the Item Groups
 [/list]
 [*] Changes:
-[list] [*] Merged DyTech-Script into DyTech-Core [/list]
+[list] [*] Merged DyTech-Script into DyTech-Core 
+[*] Moved the Stone Gear Usage from Mandatory to Base Override. You can Switch it off now!
+[/list]
 [/list]
 
 [i][size=150][b]v1.1.3:[/b][/size][/i]
