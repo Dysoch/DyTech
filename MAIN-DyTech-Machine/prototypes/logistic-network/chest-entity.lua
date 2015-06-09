@@ -220,5 +220,32 @@ data:extend(
       shift = {0.1, 0}
     }
   },
+  {
+    type = "logistic-container",
+    name = "logistic-chest-storage-one",
+    icon = "__MAIN-DyTech-Machine__/graphics/logistic-network/icon/logistic-chest-storage-1.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = 
+	{
+		hardness = 0.2, 
+		mining_time = 0.5, 
+		result = "logistic-chest-storage-one"
+	},
+    max_health = 150,
+    corpse = "small-remnants",
+    collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    fast_replaceable_group = "container",
+    inventory_size = 1,
+    logistic_mode = "storage",
+    picture =
+    {
+      filename = "__MAIN-DyTech-Machine__/graphics/logistic-network/logistic-chest-storage-1.png",
+      priority = "extra-high",
+      width = 38,
+      height = 32,
+      shift = {0.1, 0}
+    }
+  },
 }
 )

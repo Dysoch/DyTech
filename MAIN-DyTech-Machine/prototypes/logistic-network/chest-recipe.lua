@@ -96,5 +96,16 @@ data:extend(
     },
     result = "logistic-chest-requester-2"
   },
+  {
+    type = "recipe",
+    name = "logistic-chest-storage-one",
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {"logistic-chest-storage", 1},
+    },
+    result = "logistic-chest-storage-one"
+  },
 }
 )
