@@ -448,7 +448,7 @@ data:extend(
 		run_mode = "forward-then-backward",
       }
     },
-    mining_speed = 15,
+    mining_speed = 30,
     energy_source =
     {
       type = "electric",
@@ -456,8 +456,8 @@ data:extend(
       emissions = 0.15 / 1.25,
       usage_priority = "secondary-input",
     },
-    energy_usage = "2500kW",
-    mining_power = 16,
+    energy_usage = "10000kW",
+    mining_power = 25,
     resource_searching_radius = 49.49,
     vector_to_place_result = {0, -1.85},
     radius_visualisation_picture =
