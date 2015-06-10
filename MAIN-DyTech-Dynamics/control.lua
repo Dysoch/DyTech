@@ -182,6 +182,10 @@ local player = game.players[playerIndex]
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.DebugButton1) then
+		GUI.closeGUI("all", playerIndex)
+		remote.call("DyTech-Dynamics", "DataDump")
+		remote.call("DyTech-Core", "Logger")
 	end
 end)
 
@@ -220,6 +224,7 @@ remote.addinterface("DyTech-Dynamics",
 	
 	DataDump = function()
 		game.makefile("DataDump/ResearchSystem.txt", serpent.block(glob.ResearchSystem))
+		game.makefile("DataDump/Collectors.txt", serpent.block(glob.Collectors))
 		game.makefile("DataDump/Technology.txt", serpent.block(glob.Technology))
 	end,
 	

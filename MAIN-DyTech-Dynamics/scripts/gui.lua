@@ -42,6 +42,9 @@ end
 if Collectors then 
 	adder.add({type="button", name=guiNames.CollectorsButton, caption={"collectors"}}) 
 end
+if debug_master then 
+	adder.add({type="button", name=guiNames.DebugButton1, caption="Logger Make File"}) 
+end
 adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
 
