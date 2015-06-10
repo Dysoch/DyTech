@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "basic-accumulator-mk2",
+    name = "large-basic-accumulator",
     enabled = false,
     ingredients =
     {
@@ -12,11 +12,11 @@ data:extend(
       {"flux-capacitor-1", 5},
       {"frame-2", 1},
     },
-    result = "basic-accumulator-mk2"
+    result = "large-basic-accumulator"
   },
   {
     type = "recipe",
-    name = "basic-accumulator-mk3",
+    name = "large-basic-accumulator-mk2",
     enabled = false,
     ingredients =
     {
@@ -26,11 +26,25 @@ data:extend(
       {"flux-capacitor-1", 5},
       {"frame-2", 1},
     },
-    result = "basic-accumulator-mk3"
+    result = "large-basic-accumulator-mk2"
   },
   {
     type = "recipe",
-    name = "basic-accumulator-mk4",
+    name = "large-basic-accumulator-mk3",
+    enabled = false,
+    ingredients =
+    {
+      {"basic-accumulator", 5},
+      {"battery", 5},
+      {"advanced-circuit", 5},
+      {"flux-capacitor-1", 5},
+      {"frame-2", 1},
+    },
+    result = "large-basic-accumulator-mk3"
+  },
+  {
+    type = "recipe",
+    name = "large-basic-accumulator-mk4",
     enabled = false,
     ingredients =
     {
@@ -40,11 +54,11 @@ data:extend(
       {"flux-capacitor-2", 5},
       {"frame-3", 1},
     },
-    result = "basic-accumulator-mk4"
+    result = "large-basic-accumulator-mk4"
   },
   {
     type = "recipe",
-    name = "basic-accumulator-mk5",
+    name = "large-basic-accumulator-mk5",
     enabled = false,
     ingredients =
     {
@@ -54,11 +68,11 @@ data:extend(
       {"flux-capacitor-2", 5},
       {"frame-3", 1},
     },
-    result = "basic-accumulator-mk5"
+    result = "large-basic-accumulator-mk5"
   },
   {
     type = "recipe",
-    name = "basic-accumulator-mk6",
+    name = "large-basic-accumulator-mk6",
     enabled = false,
     ingredients =
     {
@@ -69,7 +83,7 @@ data:extend(
       {"flux-capacitor-4", 5},
       {"frame-4", 1},
     },
-    result = "basic-accumulator-mk6"
+    result = "large-basic-accumulator-mk6"
   },
 }
 )

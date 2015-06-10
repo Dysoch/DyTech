@@ -35,28 +35,28 @@ SteamEngineTint = {
 
 Accumulators = {
 	Small = {
-		Tier1 = "MJ",
-		Tier2 = "MJ",
-		Tier3 = "MJ",
-		Tier4 = "MJ",
-		Tier5 = "MJ",
-		Tier6 = "MJ"
+		Tier1 = "1MJ",
+		Tier2 = "1MJ",
+		Tier3 = "1MJ",
+		Tier4 = "1MJ",
+		Tier5 = "1MJ",
+		Tier6 = "1MJ"
 	},
 	Normal = {
-		Tier1 = "MJ",
-		Tier2 = "MJ",
-		Tier3 = "MJ",
-		Tier4 = "MJ",
-		Tier5 = "MJ",
-		Tier6 = "MJ"
+		Tier1 = "1MJ",
+		Tier2 = "1MJ",
+		Tier3 = "1MJ",
+		Tier4 = "1MJ",
+		Tier5 = "1MJ",
+		Tier6 = "1MJ"
 	},
 	Large = {
-		Tier1 = "MJ",
-		Tier2 = "MJ",
-		Tier3 = "MJ",
-		Tier4 = "MJ",
-		Tier5 = "MJ",
-		Tier6 = "MJ"
+		Tier1 = "1MJ",
+		Tier2 = "1MJ",
+		Tier3 = "1MJ",
+		Tier4 = "1MJ",
+		Tier5 = "1MJ",
+		Tier6 = "1MJ"
 	}
 }	
 

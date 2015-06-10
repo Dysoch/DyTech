@@ -69,7 +69,7 @@ if Accumulators then
 		require("prototypes.accumulators.large.item")
 		require("prototypes.accumulators.large.recipe")
 	end
-	--[[if Small_Accumulators and not Normal_Accumulators and not Large_Accumulators then
+	if Small_Accumulators and not Normal_Accumulators and not Large_Accumulators then
 		require("prototypes.accumulators.tech.small")
 	elseif Normal_Accumulators and not Small_Accumulators and not Large_Accumulators then
 		require("prototypes.accumulators.tech.normal")
@@ -83,7 +83,7 @@ if Accumulators then
 		require("prototypes.accumulators.tech.normal_and_large")
 	elseif Small_Accumulators and Normal_Accumulators and Large_Accumulators then
 		require("prototypes.accumulators.tech.small_normal_and_large")
-	end]]
+	end
 end
 
 --[[ Solar Panels Check ]]--

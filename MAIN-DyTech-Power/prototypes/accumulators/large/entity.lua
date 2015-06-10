@@ -1,4 +1,5 @@
 require "prototypes.internal-config"
+require "prototypes.functions"
 
 --[[data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
 data.raw["accumulator"]["basic-accumulator"].max_health = Health.Tier2
@@ -8,15 +9,15 @@ data:extend(
 {
   {
     type = "accumulator",
-    name = "large-basic-accumulator-mk1",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/large/basic-accumulator1.png",
+    name = "large-basic-accumulator",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk1"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -50,14 +51,14 @@ data:extend(
   {
     type = "accumulator",
     name = "large-basic-accumulator-mk2",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/large/basic-accumulator2.png",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk2"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -91,19 +92,19 @@ data:extend(
   {
     type = "accumulator",
     name = "large-basic-accumulator-mk3",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator3.png",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk3"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "60MJ",
+      buffer_capacity = Accumulators.Large.Tier3,
       usage_priority = "terciary",
       input_flow_limit = "6000kW",
       output_flow_limit = "2100kW"
@@ -132,19 +133,19 @@ data:extend(
   {
     type = "accumulator",
     name = "large-basic-accumulator-mk4",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/large/basic-accumulator4.png",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk4"},
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "120MJ",
+      buffer_capacity = Accumulators.Large.Tier4,
       usage_priority = "terciary",
       input_flow_limit = "4500kW",
       output_flow_limit = "12000kW"
@@ -173,19 +174,19 @@ data:extend(
   {
     type = "accumulator",
     name = "large-basic-accumulator-mk5",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator5.png",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk5"},
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "120MJ",
+      buffer_capacity = Accumulators.Large.Tier5,
       usage_priority = "terciary",
       input_flow_limit = "12000kW",
       output_flow_limit = "4500kW"
@@ -214,19 +215,19 @@ data:extend(
   {
     type = "accumulator",
     name = "large-basic-accumulator-mk6",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator6.png",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator6.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk6"},
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-1.35, -1.35}, {1.35, 1.35}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "900MJ",
+      buffer_capacity = Accumulators.Large.Tier6,
       usage_priority = "terciary",
       input_flow_limit = "4500kW",
       output_flow_limit = "4500kW"

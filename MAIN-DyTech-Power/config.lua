@@ -32,7 +32,7 @@ Accumulators = true
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
 	Small_Accumulators = false
 	Normal_Accumulators = true
-	Large_Accumulators = false
+	Large_Accumulators = true
 
 --[[Steam Engines Toggle]]--
 -- Don't like the Steam Engines? Here you can switch them off!

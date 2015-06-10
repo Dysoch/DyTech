@@ -1,3 +1,6 @@
+table.insert(data.raw["technology"]["electric-energy-accumulators-1"].effects,{type = "unlock-recipe",recipe = "large-basic-accumulator"})
+table.remove(data.raw["technology"]["electric-energy-accumulators-1"].effects,{type = "unlock-recipe",recipe = "basic-accumulator"})
+
 data:extend(
 {
   {
@@ -8,11 +11,11 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "basic-accumulator-mk2"
+        recipe = "large-basic-accumulator-mk2"
       },
       {
         type = "unlock-recipe",
-        recipe = "basic-accumulator-mk3"
+        recipe = "large-basic-accumulator-mk3"
       },
     },
     prerequisites = {"electric-energy-accumulators-1", "capacitor-1", "frame-1"},
