@@ -5,7 +5,12 @@ glob.ResearchSystem.Unlocked = {}
 glob.ResearchSystem.RSAutomatic = false
 glob.ResearchSystem.RSManual = true
 glob.ResearchSystem.ToUnlock = {}
-glob.ResearchSystem.science=0
+glob.ResearchSystem.science = 0
+glob.Collectors = {}
+glob.Collectors.Range = 25
+glob.Collectors.Working = true
+glob.Collectors.Filtered = true
+glob.Collectors.CollectorList = {}
 glob.Messages = true
 InitTechnologyTable()
    if not game.forces.player.currentresearch and game.forces.player.technologies["automation"].researched==false then

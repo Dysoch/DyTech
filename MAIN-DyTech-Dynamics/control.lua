@@ -4,6 +4,7 @@ require "database/research"
 require "database/research-system"
 require "scripts/automatic-research-system"
 require "scripts/auto-researcher"
+require "scripts/collectors"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
 require "scripts/functions"
@@ -51,6 +52,9 @@ game.onevent(defines.events.ontick, function(event)
 	if game.tick%300==1 then
 		GUI.CreateButton()
 	end
+	if Collectors and glob.Collectors.Working then
+		CollectorFunctions.ticker()
+	end
 end)
 
 game.onevent(defines.events.onresearchstarted, function(event)
@@ -84,6 +88,18 @@ if Research_System then
 else 	
 	glob.Technology[event.research].Finished = true
 end
+end)
+
+game.onevent(defines.events.onbuiltentity, function(event)
+	if Collectors then
+		CollectorFunctions.builtEntity(event)
+	end
+end)
+
+game.onevent(defines.events.onrobotbuiltentity, function(event)
+	if Collectors then
+		CollectorFunctions.builtEntity(event)
+	end
 end)
 
 game.onevent(defines.events.onguiclick, function(event)
@@ -131,6 +147,41 @@ local player = game.players[playerIndex]
 	elseif event.element.name:find(guiNames.Tier4Base) then
 		MRS.showUnlockTableGUI(playerIndex, 4)
 		GUI.closeGUI("ResearchMain", playerIndex)
+	elseif event.element.name:find(guiNames.CollectorsButton) then
+		GUI.closeGUI("all", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CollectorWorkingButton) then
+		if glob.Collectors.Working then
+			glob.Collectors.Working = false
+		else
+			glob.Collectors.Working = true
+		end
+		GUI.closeGUI("Collectors", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CollectorFilteredButton) then
+		if glob.Collectors.Filtered then
+			glob.Collectors.Filtered = false
+		else
+			glob.Collectors.Filtered = true
+		end
+		GUI.closeGUI("Collectors", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CollectorRangeMinusButton) then
+		if glob.Collectors.Range == 5 then
+			glob.Collectors.Range = 50
+		else
+			glob.Collectors.Range = glob.Collectors.Range - 1
+		end
+		GUI.closeGUI("Collectors", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CollectorRangePlusButton) then
+		if glob.Collectors.Range == 50 then
+			glob.Collectors.Range = 5
+		else
+			glob.Collectors.Range = glob.Collectors.Range + 1
+		end
+		GUI.closeGUI("Collectors", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
 	end
 end)
 

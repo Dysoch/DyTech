@@ -60,6 +60,9 @@ function closeGUI(statement, PlayerIndex)
 		if game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow] and game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow].destroy()
 		end
+		if game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow] and game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow].destroy()
+		end
 	elseif statement=="DynamicsMain" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow] and game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainDynamicFlow].destroy()
@@ -77,6 +80,10 @@ function closeGUI(statement, PlayerIndex)
 	elseif statement=="ResearchUnlock" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].destroy()
+		end
+	elseif statement=="Collectors" then
+		if game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow] and game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow].valid then
+			game.players[PlayerIndex].gui.center[guiNames.mainCollectorFlow].destroy()
 		end
 	end
 end
