@@ -102,6 +102,26 @@ game.onevent(defines.events.onrobotbuiltentity, function(event)
 	end
 end)
 
+game.onevent(defines.events.onplayermineditem, function(event)
+	if Collectors and event.itemstack.name == "item-collector-area" then
+		if glob.Collectors.Amount==0 then
+			glob.Collectors.Amount = 0
+		else
+			glob.Collectors.Amount = glob.Collectors.Amount - 1
+		end
+	end
+end)
+
+game.onevent(defines.events.onrobotmined, function(event)
+	if Collectors and event.itemstack.name == "item-collector-area" then
+		if glob.Collectors.Amount==0 then
+			glob.Collectors.Amount = 0
+		else
+			glob.Collectors.Amount = glob.Collectors.Amount - 1
+		end
+	end
+end)
+
 game.onevent(defines.events.onguiclick, function(event)
 local playerIndex = event.playerindex
 local player = game.players[playerIndex]
@@ -155,6 +175,14 @@ local player = game.players[playerIndex]
 			glob.Collectors.Working = false
 		else
 			glob.Collectors.Working = true
+		end
+		GUI.closeGUI("Collectors", playerIndex)
+		CollectorFunctions.showCollectorGUI(playerIndex)
+	elseif event.element.name:find(guiNames.CollectorAutoRangeButton) then
+		if not glob.Collectors.AutomaticRange then
+			glob.Collectors.AutomaticRange = true
+		else
+			glob.Collectors.AutomaticRange = false
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)

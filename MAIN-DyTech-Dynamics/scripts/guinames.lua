@@ -37,5 +37,6 @@ CollectorFilteredButton="CollectorFilteredButton"
 CollectorRangeMinusButton="CollectorRangeMinusButton"
 CollectorRangeButton="CollectorRangeButton"
 CollectorRangePlusButton="CollectorRangePlusButton"
+CollectorAutoRangeButton="CollectorAutoRangeButton"
 -- DEBUG
 DebugButton1="DebugButton1"

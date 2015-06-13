@@ -10,6 +10,8 @@ glob.Collectors = {}
 glob.Collectors.Range = 25
 glob.Collectors.Working = true
 glob.Collectors.Filtered = true
+glob.Collectors.AutomaticRange = false
+glob.Collectors.Amount = 0
 glob.Collectors.CollectorList = {}
 glob.Messages = true
 InitTechnologyTable()
