@@ -1,10 +1,6 @@
 require "prototypes.internal-config"
 require "prototypes.functions"
 
---[[data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
-data.raw["accumulator"]["basic-accumulator"].max_health = Health.Tier2
-data.raw["accumulator"]["basic-accumulator"].resistances = Resistances.Tier2]]
-
 data:extend(
 {
   {
@@ -22,10 +18,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier1,
+      buffer_capacity = Accumulators.Buffer.Large.Tier1,
       usage_priority = "terciary",
-      input_flow_limit = "2100kW",
-      output_flow_limit = "6000kW"
+      input_flow_limit = Accumulators.Input.Large.Tier1,
+      output_flow_limit = Accumulators.Output.Large.Tier1
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk1),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk1),
@@ -63,10 +59,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier2,
+      buffer_capacity = Accumulators.Buffer.Large.Tier2,
       usage_priority = "terciary",
-      input_flow_limit = "2100kW",
-      output_flow_limit = "6000kW"
+      input_flow_limit = Accumulators.Input.Large.Tier2,
+      output_flow_limit = Accumulators.Output.Large.Tier2
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk2),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk2),
@@ -104,10 +100,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier3,
+      buffer_capacity = Accumulators.Buffer.Large.Tier3,
       usage_priority = "terciary",
-      input_flow_limit = "6000kW",
-      output_flow_limit = "2100kW"
+      input_flow_limit = Accumulators.Input.Large.Tier3,
+      output_flow_limit = Accumulators.Output.Large.Tier3
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk3),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk3),
@@ -145,10 +141,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier4,
+      buffer_capacity = Accumulators.Buffer.Large.Tier4,
       usage_priority = "terciary",
-      input_flow_limit = "4500kW",
-      output_flow_limit = "12000kW"
+      input_flow_limit = Accumulators.Input.Large.Tier4,
+      output_flow_limit = Accumulators.Output.Large.Tier4
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk4),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk4),
@@ -186,10 +182,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier5,
+      buffer_capacity = Accumulators.Buffer.Large.Tier5,
       usage_priority = "terciary",
-      input_flow_limit = "12000kW",
-      output_flow_limit = "4500kW"
+      input_flow_limit = Accumulators.Input.Large.Tier5,
+      output_flow_limit = Accumulators.Output.Large.Tier5
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk5),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk5),
@@ -227,10 +223,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Large.Tier6,
+      buffer_capacity = Accumulators.Buffer.Large.Tier6,
       usage_priority = "terciary",
-      input_flow_limit = "4500kW",
-      output_flow_limit = "4500kW"
+      input_flow_limit = Accumulators.Input.Large.Tier6,
+      output_flow_limit = Accumulators.Output.Large.Tier6
     },
     picture = AccumulatorPictures(1.33, AccumulatorsTint.mk6),
     charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk6),

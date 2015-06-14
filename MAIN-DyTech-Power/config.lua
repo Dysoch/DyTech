@@ -30,7 +30,7 @@ Accumulators = true
 
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
-	Small_Accumulators = false
+	Small_Accumulators = true
 	Normal_Accumulators = true
 	Large_Accumulators = true
 

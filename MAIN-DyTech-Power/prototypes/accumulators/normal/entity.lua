@@ -3,6 +3,9 @@ require "prototypes.internal-config"
 data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
 data.raw["accumulator"]["basic-accumulator"].max_health = Health.Tier2
 data.raw["accumulator"]["basic-accumulator"].resistances = Resistances.Tier2
+data.raw["accumulator"]["basic-accumulator"].energy_source.buffer_capacity = Accumulators.Buffer.Normal.Tier1
+data.raw["accumulator"]["basic-accumulator"].energy_source.input_flow_limit = Accumulators.Input.Normal.Tier1
+data.raw["accumulator"]["basic-accumulator"].energy_source.output_flow_limit = Accumulators.Output.Normal.Tier1
 
 data:extend(
 {
@@ -21,10 +24,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "60MJ",
+      buffer_capacity = Accumulators.Buffer.Normal.Tier2,
       usage_priority = "terciary",
-      input_flow_limit = "2100kW",
-      output_flow_limit = "6000kW"
+      input_flow_limit = Accumulators.Input.Normal.Tier2,
+      output_flow_limit = Accumulators.Output.Normal.Tier2
     },
     picture =
     {
@@ -87,10 +90,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "60MJ",
+      buffer_capacity = Accumulators.Buffer.Normal.Tier3,
       usage_priority = "terciary",
-      input_flow_limit = "6000kW",
-      output_flow_limit = "2100kW"
+      input_flow_limit = Accumulators.Input.Normal.Tier3,
+      output_flow_limit = Accumulators.Output.Normal.Tier3
     },
     picture =
     {
@@ -153,10 +156,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "120MJ",
+      buffer_capacity = Accumulators.Buffer.Normal.Tier4,
       usage_priority = "terciary",
-      input_flow_limit = "4500kW",
-      output_flow_limit = "12000kW"
+      input_flow_limit = Accumulators.Input.Normal.Tier4,
+      output_flow_limit = Accumulators.Output.Normal.Tier4
     },
     picture =
     {
@@ -219,10 +222,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "120MJ",
+      buffer_capacity = Accumulators.Buffer.Normal.Tier5,
       usage_priority = "terciary",
-      input_flow_limit = "12000kW",
-      output_flow_limit = "4500kW"
+      input_flow_limit = Accumulators.Input.Normal.Tier5,
+      output_flow_limit = Accumulators.Output.Normal.Tier5
     },
     picture =
     {
@@ -285,10 +288,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "900MJ",
+      buffer_capacity = Accumulators.Buffer.Normal.Tier6,
       usage_priority = "terciary",
-      input_flow_limit = "4500kW",
-      output_flow_limit = "4500kW"
+      input_flow_limit = Accumulators.Input.Normal.Tier6,
+      output_flow_limit = Accumulators.Output.Normal.Tier6
     },
     picture =
     {

@@ -34,30 +34,84 @@ SteamEngineTint = {
 }
 
 Accumulators = {
-	Small = {
-		Tier1 = "1MJ",
-		Tier2 = "1MJ",
-		Tier3 = "1MJ",
-		Tier4 = "1MJ",
-		Tier5 = "1MJ",
-		Tier6 = "1MJ"
+	Buffer = {
+		Small = {
+			Tier1 = "1MJ",
+			Tier2 = "1MJ",
+			Tier3 = "1MJ",
+			Tier4 = "1MJ",
+			Tier5 = "1MJ",
+			Tier6 = "1MJ"
+		},
+		Normal = {
+			Tier1 = "60MJ",
+			Tier2 = "60MJ",
+			Tier3 = "60MJ",
+			Tier4 = "120MJ",
+			Tier5 = "120MJ",
+			Tier6 = "900MJ"
+		},
+		Large = {
+			Tier1 = "1MJ",
+			Tier2 = "1MJ",
+			Tier3 = "1MJ",
+			Tier4 = "1MJ",
+			Tier5 = "1MJ",
+			Tier6 = "1MJ"
+		}
 	},
-	Normal = {
-		Tier1 = "1MJ",
-		Tier2 = "1MJ",
-		Tier3 = "1MJ",
-		Tier4 = "1MJ",
-		Tier5 = "1MJ",
-		Tier6 = "1MJ"
+	Input = {
+		Small = {
+			Tier1 = "1kW",
+			Tier2 = "1kW",
+			Tier3 = "1kW",
+			Tier4 = "1kW",
+			Tier5 = "1kW",
+			Tier6 = "1kW"
+		},
+		Normal = {
+			Tier1 = "2100kW",
+			Tier2 = "2100kW",
+			Tier3 = "6000kW",
+			Tier4 = "4500kW",
+			Tier5 = "12000kW",
+			Tier6 = "4500kW"
+		},
+		Large = {
+			Tier1 = "1kW",
+			Tier2 = "1kW",
+			Tier3 = "1kW",
+			Tier4 = "1kW",
+			Tier5 = "1kW",
+			Tier6 = "1kW"
+		}
 	},
-	Large = {
-		Tier1 = "1MJ",
-		Tier2 = "1MJ",
-		Tier3 = "1MJ",
-		Tier4 = "1MJ",
-		Tier5 = "1MJ",
-		Tier6 = "1MJ"
-	}
+	Output = {
+		Small = {
+			Tier1 = "1kW",
+			Tier2 = "1kW",
+			Tier3 = "1kW",
+			Tier4 = "1kW",
+			Tier5 = "1kW",
+			Tier6 = "1kW"
+		},
+		Normal = {
+			Tier1 = "6000kW",
+			Tier2 = "6000kW",
+			Tier3 = "2100kW",
+			Tier4 = "12000kW",
+			Tier5 = "4500kW",
+			Tier6 = "4500kW"
+		},
+		Large = {
+			Tier1 = "1kW",
+			Tier2 = "1kW",
+			Tier3 = "1kW",
+			Tier4 = "1kW",
+			Tier5 = "1kW",
+			Tier6 = "1kW"
+		}
+	},
 }	
 
 SolarPanels = {
