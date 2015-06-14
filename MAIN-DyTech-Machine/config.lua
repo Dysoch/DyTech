@@ -53,6 +53,8 @@ Radars = true
 Walls = false
 Beacons = true
 Lamps = true
+Oil_Upgrades = true
+-- Oil_Upgrades gives more chemical plants and oil refineries!
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 --[[ Transportation ]]--

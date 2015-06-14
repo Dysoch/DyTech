@@ -17,6 +17,8 @@
 [*] Added 2 Robot Charging Stations (From RoboCharge Mod, if needed, can be deleted if owner doesnt want that i use it) They also act as Zone Expanders.
 [*] Added 3 new Beacons.
 [*] Added 2 new Lamps.
+[*] Added 2 extra Oil Refineries.
+[*] Added 2 extra Chemical Plants.
 [/list]
 [*] Bugfixes: 
 [list] [*] Fixed exploit with lava heating and cooling.

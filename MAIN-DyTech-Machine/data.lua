@@ -341,3 +341,14 @@ require("prototypes.lamps.item")
 require("prototypes.lamps.recipe")
 require("prototypes.lamps.tech")
 end
+
+--[[ Oil_Upgrades Check ]]--
+if Oil_Upgrades then
+require("prototypes.oil-refinery.entity")
+require("prototypes.oil-refinery.item")
+require("prototypes.oil-refinery.recipe")
+require("prototypes.chemical-plants.entity")
+require("prototypes.chemical-plants.item")
+require("prototypes.chemical-plants.recipe")
+require("prototypes.lamps.tech")
+end
