@@ -51,6 +51,7 @@ SteelFurnaces = true
 ElectricFurnaces = true
 Radars = true
 Walls = false
+Beacons = true
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 --[[ Transportation ]]--

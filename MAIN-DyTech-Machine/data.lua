@@ -325,3 +325,11 @@ require("prototypes.walls.item")
 require("prototypes.walls.recipe")
 require("prototypes.walls.tech")
 end
+
+--[[ Beacons Check ]]--
+if Beacons then
+require("prototypes.beacon.entity")
+require("prototypes.beacon.item")
+require("prototypes.beacon.recipe")
+require("prototypes.beacon.tech")
+end
