@@ -8,7 +8,7 @@ data:extend(
     name = "small-solar-panel-primary",
     icon = "__MAIN-DyTech-Power__/graphics/solar-panels/small/icons/solar-panel.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-solar-panel-secondary"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "small-solar-panel-primary"},
     max_health = Health.Tier1,
 	resistances = Resistances.Tier1,
     corpse = "big-remnants",
@@ -18,7 +18,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "primary-output"
     },
     picture = SolarPictures(0.66, SolarTint.mk1),
     production = SolarPanels.Small.Tier1
