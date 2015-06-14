@@ -328,8 +328,16 @@ end
 
 --[[ Beacons Check ]]--
 if Beacons then
-require("prototypes.beacon.entity")
-require("prototypes.beacon.item")
-require("prototypes.beacon.recipe")
-require("prototypes.beacon.tech")
+require("prototypes.beacons.entity")
+require("prototypes.beacons.item")
+require("prototypes.beacons.recipe")
+require("prototypes.beacons.tech")
+end
+
+--[[ Lamps Check ]]--
+if Lamps then
+require("prototypes.lamps.entity")
+require("prototypes.lamps.item")
+require("prototypes.lamps.recipe")
+require("prototypes.lamps.tech")
 end

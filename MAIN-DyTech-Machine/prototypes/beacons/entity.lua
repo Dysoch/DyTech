@@ -1,6 +1,6 @@
-MK1Tint =   
-MK2Tint =   
-MK3Tint =   
+MK1Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
+MK2Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
+MK3Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 
 data:extend(
 { 
