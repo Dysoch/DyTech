@@ -62,7 +62,6 @@ if Accumulators then
 		require("prototypes.accumulators.normal.entity")
 		require("prototypes.accumulators.normal.item")
 		require("prototypes.accumulators.normal.recipe")
-		require("prototypes.accumulators.normal.tech")
 	end
 	if Large_Accumulators then
 		require("prototypes.accumulators.large.entity")

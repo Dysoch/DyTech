@@ -90,7 +90,7 @@ data:extend(
     name = "large-basic-accumulator-mk3",
     icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/large/basic-accumulator3.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk3"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "large-basic-accumulator-mk3"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
