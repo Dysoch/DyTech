@@ -52,8 +52,12 @@ game.onevent(defines.events.ontick, function(event)
 	if game.tick%300==1 then
 		GUI.CreateButton()
 	end
-	if Collectors and glob.Collectors.Working then
-		CollectorFunctions.ticker()
+	if Collectors then
+		if not glob.Collectors.Working then
+			fs.StartupCollectors()
+		else
+			CollectorFunctions.ticker()
+		end
 	end
 end)
 
@@ -67,8 +71,12 @@ if Research_System then
 		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.ResearchSystem.science))
 		glob.Technology[event.research].Started = true
 	end
-else 	
-	glob.Technology[event.research].Started = true
+else 
+	if not glob.Technology[event.research] then
+		fs.InitHalfwayTechnology(event)
+	else
+		glob.Technology[event.research].Started = true
+	end
 end
 end)
 

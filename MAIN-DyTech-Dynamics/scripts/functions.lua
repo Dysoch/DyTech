@@ -20,6 +20,16 @@ InitTechnologyTable()
    end
 end
 
+function StartupCollectors()
+glob.Collectors = {}
+glob.Collectors.Range = 25
+glob.Collectors.Working = true
+glob.Collectors.Filtered = true
+glob.Collectors.AutomaticRange = false
+glob.Collectors.Amount = 0
+glob.Collectors.CollectorList = {}
+end
+
 function InitTechnologyTable()
     glob.Technology = {}
     for name,tech in pairs(game.forces.player.technologies) do
@@ -45,4 +55,16 @@ function getResearchLevel(technology)
 		end
     end
     return level
+end
+
+function InitHalfwayTechnology(event)
+	glob.Technology[event.research] = {}
+	glob.Technology[event.research].Prerequisite = {}
+    for prereqname,count in pairs(game.forces.player.technologies[event.research].prerequisites) do
+		table.insert(glob.Technology[event.research].Prerequisite,prereqname)
+	end
+    glob.Technology[event.research].TechLevel = getResearchLevel(event.research)
+    glob.Technology[event.research].ScienceCount = game.forces.player.technologies[event.research].researchunitcount
+	glob.Technology[event.research].Started = true
+	glob.Technology[event.research].Finished = false
 end
