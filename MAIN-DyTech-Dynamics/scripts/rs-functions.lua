@@ -13,7 +13,9 @@ local data = RSDatabase.ItemUnlock[Name]
 		if glob.ResearchSystem.science >= glob.ResearchSystem.Points then
 			if Research_System_Time_Usage then
 				if (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) then
-					game.player.force.recipes[Name].enabled = true
+					for _,player in pairs(game.players) do
+						player.force.recipes[Name].enabled = true
+					end
 					PlayerPrint({"unlocked", {data.Locale.."-name."..Name}})
 					glob.ResearchSystem.science = (glob.ResearchSystem.science-data.Points)
 					UnlockedRecipe(Name, true)
