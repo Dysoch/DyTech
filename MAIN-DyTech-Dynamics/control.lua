@@ -43,6 +43,7 @@ end)
 game.onload(function()
 	if not glob.ResearchSystem then glob.ResearchSystem = {} end
 	if not glob.ResearchSystem.Unlocked then glob.ResearchSystem.Unlocked = {} end
+	if not glob.Collectors then glob.Collectors = {} end
 end)
 
 game.onevent(defines.events.ontick, function(event)
