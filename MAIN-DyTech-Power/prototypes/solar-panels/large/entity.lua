@@ -12,8 +12,8 @@ data:extend(
     max_health = Health.Tier1,
 	resistances = Resistances.Tier1,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group = "solar-panel",
     energy_source =
     {
@@ -32,8 +32,8 @@ data:extend(
     max_health = Health.Tier1,
 	resistances = Resistances.Tier1,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group = "solar-panel",
     energy_source =
     {
@@ -52,8 +52,8 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group = "solar-panel",
     energy_source =
     {
@@ -72,8 +72,8 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -92,8 +92,8 @@ data:extend(
     max_health = Health.Tier5,
 	resistances = Resistances.Tier5,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -112,8 +112,8 @@ data:extend(
     max_health = Health.Tier5,
 	resistances = Resistances.Tier5,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -132,8 +132,8 @@ data:extend(
     max_health = Health.Tier7,
 	resistances = Resistances.Tier7,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -152,8 +152,8 @@ data:extend(
     max_health = Health.Tier7,
 	resistances = Resistances.Tier7,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -172,8 +172,8 @@ data:extend(
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {
@@ -192,8 +192,8 @@ data:extend(
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "big-remnants",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
+    selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
 	fast_replaceable_group =  "solar-panel",
     energy_source =
     {

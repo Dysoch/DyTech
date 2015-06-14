@@ -1,4 +1,6 @@
 data.raw["item"]["battery"].stack_size = 200
+data.raw["item"]["basic-accumulator"].subgroup = "dytech-energy-accu-normal"
+data.raw["item"]["basic-accumulator"].order = "a[mk1]"
 
 data:extend(
 {
