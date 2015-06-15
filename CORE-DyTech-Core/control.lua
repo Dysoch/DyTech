@@ -213,8 +213,10 @@ end)
 remote.addinterface("DyTech-Core",
 {  
 	ResetAll = function()
-		game.force.resettechnologies()
-		game.force.resetrecipes()
+		for _,player in pairs(game.players) do
+			player.force.resetrecipes()
+			player.force.resettechnologies()
+		end
 	end,
   
 	TestTrees = function(pIndex)
