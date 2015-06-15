@@ -33,7 +33,7 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="item", name="mold-science", amount=1},
+	  {type="item", name="mold-science", amount=0},
 	  Stone(7),
 	  Iron(12),
 	  Copper(15),
@@ -41,7 +41,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="lab", amount=1},
-	  {type="item", name="mold-science", amount=1},
 	}
   },
   {
@@ -55,15 +54,13 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="item", name="mold-science", amount=1},
-	  Stone(7),
-	  Iron(12),
-	  Copper(15),
+	  {type="item", name="mold-science", amount=0},
+	  Stone(1),
+	  Copper(1),
     },
     results = 
 	{
 	  {type="item", name="science-pack-1", amount=1},
-	  {type="item", name="mold-science", amount=1},
 	}
   },
   {
@@ -77,7 +74,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="item", name="mold-science", amount=1},
+	  {type="item", name="mold-science", amount=0},
 	  Stone(0.5),
 	  Iron(4.5),
 	  Copper(1.5),
@@ -85,7 +82,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="science-pack-2", amount=1},
-	  {type="item", name="mold-science", amount=1},
 	}
   },
   {
@@ -99,7 +95,7 @@ data:extend(
     order = "4",
     ingredients =
     {
-	  {type="item", name="mold-science", amount=1},
+	  {type="item", name="mold-science", amount=0},
 	  Iron(14),
 	  Copper(15.5),
 	  Steel(1),
@@ -107,7 +103,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="science-pack-3", amount=1},
-	  {type="item", name="mold-science", amount=1},
 	}
   },
   {
@@ -121,7 +116,7 @@ data:extend(
     order = "5",
     ingredients =
     {
-	  {type="item", name="mold-science", amount=1},
+	  {type="item", name="mold-science", amount=0},
 	  Tungsten(33.5),
 	  Ardite(33.5),
 	  Cobalt(33.5),
@@ -129,7 +124,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="alien-science-pack", amount=1},
-	  {type="item", name="mold-science", amount=1},
 	}
   },
   {

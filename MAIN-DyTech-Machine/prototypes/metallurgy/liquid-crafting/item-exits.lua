@@ -33,13 +33,12 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="item", name="mold-exit", amount=1},
+	  {type="item", name="mold-exit", amount=0},
 	  Iron(12),
     },
     results = 
 	{
 	  {type="item", name="item-exit-1", amount=1},
-	  {type="item", name="mold-exit", amount=1},
 	}
   },
   {
@@ -53,14 +52,13 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="item", name="mold-exit", amount=1},
+	  {type="item", name="mold-exit", amount=0},
 	  Iron(20),
 	  Steel(12),
     },
     results = 
 	{
 	  {type="item", name="item-exit-2", amount=1},
-	  {type="item", name="mold-exit", amount=1},
 	}
   },
   {
@@ -74,7 +72,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="item", name="mold-exit", amount=1},
+	  {type="item", name="mold-exit", amount=0},
 	  Iron(26.7),
 	  Copper(13.3),
 	  Steel(20),
@@ -83,7 +81,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="item-exit-3", amount=1},
-	  {type="item", name="mold-exit", amount=1},
 	}
   },
   {
@@ -97,7 +94,7 @@ data:extend(
     order = "4",
     ingredients =
     {
-	  {type="item", name="mold-exit", amount=1},
+	  {type="item", name="mold-exit", amount=0},
 	  Iron(58.3),
 	  Copper(61.7),
 	  Steel(28),
@@ -106,7 +103,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="item-exit-4", amount=1},
-	  {type="item", name="mold-exit", amount=1},
 	}
   },
   {

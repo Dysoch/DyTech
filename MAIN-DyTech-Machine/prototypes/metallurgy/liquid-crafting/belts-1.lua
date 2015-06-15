@@ -33,12 +33,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=0.75},
 	  {type="fluid", name="molten-iron", amount=0.75},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="basic-transport-belt", amount=2},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -54,12 +53,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=1.875},
 	  {type="fluid", name="molten-iron", amount=9.375},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="basic-transport-belt-to-ground", amount=2},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -76,12 +74,11 @@ data:extend(
 	  {type="fluid", name="sludge", amount=1.5},
 	  {type="fluid", name="molten-iron", amount=9},
 	  {type="fluid", name="molten-copper", amount=5.625},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="basic-splitter", amount=1},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -97,12 +94,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=0.375},
 	  {type="fluid", name="molten-iron", amount=7.875},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="fast-transport-belt", amount=1},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -118,12 +114,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=1.875},
 	  {type="fluid", name="molten-iron", amount=39.375},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="fast-transport-belt-to-ground", amount=2},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -140,12 +135,11 @@ data:extend(
 	  {type="fluid", name="sludge", amount=1.5},
 	  {type="fluid", name="molten-iron", amount=31.5},
 	  {type="fluid", name="molten-copper", amount=16.875},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="fast-splitter", amount=1},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -162,12 +156,11 @@ data:extend(
 	  {type="fluid", name="sludge", amount=0.375},
 	  {type="fluid", name="molten-iron", amount=15.375},
 	  {type="fluid", name="lubricant", amount=1.5},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="express-transport-belt", amount=1},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -183,12 +176,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=1.875},
 	  {type="fluid", name="molten-iron", amount=99.75},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
     },
     results = 
 	{
 	  {type="item", name="express-transport-belt-to-ground", amount=2},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {
@@ -206,13 +198,12 @@ data:extend(
 	  {type="fluid", name="molten-iron", amount=61.5},
 	  {type="fluid", name="molten-copper", amount=54.375},
 	  {type="fluid", name="lubricant", amount=6},
-	  {type="item", name="mold-belt", amount=1},
+	  {type="item", name="mold-belt", amount=0},
 	  {type="item", name="plastic-bar", amount=15},
     },
     results = 
 	{
 	  {type="item", name="express-splitter", amount=1},
-	  {type="item", name="mold-belt", amount=1},
 	}
   },
   {

@@ -28,12 +28,11 @@ data:extend(
     ingredients =
     {
       {type="fluid", name="molten-carbonated-iron", amount=3},
-      {type="item", name="mold-plate", amount=1},
+      {type="item", name="mold-plate", amount=0},
     },
     results =
 	{
       {type="item", name="steel-plate", amount=1},
-      {type="item", name="mold-plate", amount=1},
     },
   },
   {

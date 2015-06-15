@@ -33,14 +33,13 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="item", name="mold-blade", amount=1},
+	  {type="item", name="mold-blade", amount=0},
 	  Stone(4),
 	  Iron(0.5),
     },
     results = 
 	{
 	  {type="item", name="blade-1", amount=1},
-	  {type="item", name="mold-blade", amount=1},
 	}
   },
   {
@@ -54,14 +53,13 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="item", name="mold-blade", amount=1},
+	  {type="item", name="mold-blade", amount=0},
 	  Stone(12),
 	  Iron(6),
     },
     results = 
 	{
 	  {type="item", name="blade-2", amount=1},
-	  {type="item", name="mold-blade", amount=1},
 	}
   },
   {
@@ -75,7 +73,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="item", name="mold-blade", amount=1},
+	  {type="item", name="mold-blade", amount=0},
 	  Stone(12),
 	  Iron(6),
 	  Lead(4),
@@ -83,7 +81,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="blade-3", amount=1},
-	  {type="item", name="mold-blade", amount=1},
 	}
   },
   {

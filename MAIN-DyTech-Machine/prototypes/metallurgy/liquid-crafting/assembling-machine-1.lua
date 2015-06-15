@@ -16,12 +16,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=16.5},
 	  {type="fluid", name="molten-copper", amount=3.375},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
     },
     results = 
 	{
 	  {type="item", name="assembling-machine-1", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -36,12 +35,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=34.5},
 	  {type="fluid", name="molten-copper", amount=8.625},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
     },
     results = 
 	{
 	  {type="item", name="assembling-machine-2", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -56,12 +54,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=103.5},
 	  {type="fluid", name="molten-copper", amount=60.375},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
     },
     results = 
 	{
 	  {type="item", name="assembling-machine-3", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
 }

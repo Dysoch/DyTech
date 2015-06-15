@@ -31,12 +31,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-copper", amount=0.4},
-	  {type="item", name="mold-wire", amount=1},
+	  {type="item", name="mold-wire", amount=0},
     },
     results = 
 	{
 	  {type="item", name="copper-cable", amount=1},
-	  {type="item", name="mold-wire", amount=1},
 	}
   },
   {
@@ -51,12 +50,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.8},
 	  {type="fluid", name="molten-copper", amount=1.2},
-	  {type="item", name="mold-wire", amount=1},
+	  {type="item", name="mold-wire", amount=0},
     },
     results = 
 	{
 	  {type="item", name="red-wire", amount=1},
-	  {type="item", name="mold-wire", amount=1},
 	}
   },
   {
@@ -71,12 +69,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.8},
 	  {type="fluid", name="molten-copper", amount=1.2},
-	  {type="item", name="mold-wire", amount=1},
+	  {type="item", name="mold-wire", amount=0},
     },
     results = 
 	{
-	  {type="item", name="green-wire", amount=1},
-	  {type="item", name="mold-wire", amount=1},
+	  {type="item", name="green-wire", amount=1},0
 	}
   },
   {
@@ -90,12 +87,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=0.37},
-	  {type="item", name="mold-wire", amount=1},
+	  {type="item", name="mold-wire", amount=0},
     },
     results = 
 	{
 	  {type="item", name="iron-stick", amount=1},
-	  {type="item", name="mold-wire", amount=1},
 	}
   },
   {
@@ -119,6 +115,10 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-wire-3"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "mold-crafting-wire-4"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

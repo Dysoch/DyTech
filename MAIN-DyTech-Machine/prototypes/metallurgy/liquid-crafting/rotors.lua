@@ -33,7 +33,7 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="item", name="mold-rotor", amount=1},
+	  {type="item", name="mold-rotor", amount=0},
 	  Stone(16),
 	  Iron(9.5),
 	  Copper(2),
@@ -41,7 +41,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="rotor-1", amount=1},
-	  {type="item", name="mold-rotor", amount=1},
 	}
   },
   {
@@ -55,7 +54,7 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="item", name="mold-rotor", amount=1},
+	  {type="item", name="mold-rotor", amount=0},
 	  Stone((16+18+18)),
 	  Iron(35.5),
 	  Copper(2),
@@ -64,7 +63,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="rotor-2", amount=1},
-	  {type="item", name="mold-rotor", amount=1},
 	}
   },
   {
@@ -78,7 +76,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="item", name="mold-rotor", amount=1},
+	  {type="item", name="mold-rotor", amount=0},
 	  Stone((16+36+36)),
 	  Iron(53.5),
 	  Copper(2),
@@ -88,7 +86,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="rotor-3", amount=1},
-	  {type="item", name="mold-rotor", amount=1},
 	}
   },
   {
@@ -102,7 +99,7 @@ data:extend(
     order = "4",
     ingredients =
     {
-	  {type="item", name="mold-rotor", amount=1},
+	  {type="item", name="mold-rotor", amount=0},
 	  Stone((16+90+90)),
 	  Iron(118),
 	  Copper(27),
@@ -112,7 +109,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="rotor-4", amount=1},
-	  {type="item", name="mold-rotor", amount=1},
 	}
   },
   {

@@ -15,13 +15,13 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone(5),
 	  Iron(3),
     },
     results = 
 	{
 	  {type="item", name="burner-mining-drill", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -34,13 +34,13 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Iron(78),
 	  Copper(27),
     },
     results = 
 	{
 	  {type="item", name="basic-mining-drill", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
 }

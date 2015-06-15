@@ -51,12 +51,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=1.5},
-	  {type="item", name="mold-ammo-basic", amount=1},
+	  {type="item", name="mold-ammo-basic", amount=0},
     },
     results = 
 	{
 	  {type="item", name="basic-bullet-magazine", amount=1},
-	  {type="item", name="mold-ammo-basic", amount=1},
 	}
   },
   {
@@ -71,12 +70,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=1.5},
 	  {type="fluid", name="molten-copper", amount=1.5},
-	  {type="item", name="mold-ammo-basic", amount=1},
+	  {type="item", name="mold-ammo-basic", amount=0},
     },
     results = 
 	{
 	  {type="item", name="shotgun-shell", amount=1},
-	  {type="item", name="mold-ammo-basic", amount=1},
 	}
   },
   {
@@ -91,12 +89,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-copper", amount=4},
 	  {type="fluid", name="molten-carbonated-iron", amount=0.8},
-	  {type="item", name="mold-ammo-advanced", amount=1},
+	  {type="item", name="mold-ammo-advanced", amount=0},
     },
     results = 
 	{
 	  {type="item", name="piercing-bullet-magazine", amount=1},
-	  {type="item", name="mold-ammo-advanced", amount=1},
 	}
   },
   {
@@ -112,12 +109,11 @@ data:extend(
 	  {type="fluid", name="molten-iron", amount=1.5},
 	  {type="fluid", name="molten-copper", amount=1.15},
 	  {type="item", name="explosives", amount=2},
-	  {type="item", name="mold-ammo-advanced", amount=1},
+	  {type="item", name="mold-ammo-advanced", amount=0},
     },
     results = 
 	{
 	  {type="item", name="rocket", amount=1},
-	  {type="item", name="mold-ammo-advanced", amount=1},
 	}
   },
   {
@@ -132,12 +128,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=1.5},
 	  {type="fluid", name="molten-copper", amount=1.5},
-	  {type="item", name="mold-ammo-advanced", amount=1},
+	  {type="item", name="mold-ammo-advanced", amount=0},
     },
     results = 
 	{
 	  {type="item", name="piercing-shotgun-shell", amount=1},
-	  {type="item", name="mold-ammo-advanced", amount=1},
 	}
   },
   {

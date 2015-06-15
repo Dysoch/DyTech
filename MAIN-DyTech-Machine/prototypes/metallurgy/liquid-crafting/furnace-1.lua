@@ -14,12 +14,12 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  {type="fluid", name="sludge", amount=3.75},
     },
     results = 
 	{
 	  {type="item", name="stone-furnace", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -34,12 +34,11 @@ data:extend(
     {
 	  {type="fluid", name="sludge", amount=15},
 	  {type="fluid", name="molten-carbonated-iron", amount=6},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
     },
     results = 
 	{
 	  {type="item", name="steel-furnace", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -56,12 +55,11 @@ data:extend(
 	  {type="fluid", name="molten-iron", amount=51.75},
 	  {type="fluid", name="molten-copper", amount=39.375},
 	  {type="fluid", name="molten-tin", amount=11.25},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
     },
     results = 
 	{
 	  {type="item", name="electric-furnace", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
 }

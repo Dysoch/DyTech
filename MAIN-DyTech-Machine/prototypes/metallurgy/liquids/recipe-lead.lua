@@ -27,12 +27,11 @@ data:extend(
     ingredients =
     {
       {type="fluid", name="molten-lead", amount=0.6},
-      {type="item", name="mold-plate", amount=1},
+      {type="item", name="mold-plate", amount=0},
     },
     results =
 	{
       {type="item", name="lead-plate", amount=1},
-      {type="item", name="mold-plate", amount=1},
     },
   },
 }

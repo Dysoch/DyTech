@@ -17,7 +17,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
 	  Iron(85),
 	  Copper(62.5),
 	  Stone(20),
@@ -27,7 +27,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="electric-furnace-mk2", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -40,7 +39,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
 	  Iron(115),
 	  Copper(87.5),
 	  Steel(12),
@@ -51,7 +50,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="electric-furnace-mk3", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -64,7 +62,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
 	  Iron(142),
 	  Copper(101),
 	  Steel(32),
@@ -76,7 +74,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="electric-furnace-mk4", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -89,7 +86,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="mold-machine", amount=0},
 	  Iron(200),
 	  Copper(163),
 	  Steel(60),
@@ -101,8 +98,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="item", name="electric-furnace-mk5", amount=1},
-	  {type="item", name="mold-machine", amount=1},
+	  {type="item", name="electric-furnace-mk5", amount=1}
 	}
   },
 }

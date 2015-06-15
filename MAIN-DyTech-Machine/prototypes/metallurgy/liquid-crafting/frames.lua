@@ -33,14 +33,13 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="item", name="mold-frame", amount=1},
+	  {type="item", name="mold-frame", amount=0},
 	  Iron(55),
 	  Copper(22.5),
     },
     results = 
 	{
 	  {type="item", name="frame-1", amount=1},
-	  {type="item", name="mold-frame", amount=1},
 	}
   },
   {
@@ -54,7 +53,7 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="item", name="mold-frame", amount=1},
+	  {type="item", name="mold-frame", amount=0},
 	  Iron(65),
 	  Copper(47.5),
 	  Steel(10),
@@ -62,7 +61,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="frame-2", amount=1},
-	  {type="item", name="mold-frame", amount=1},
 	}
   },
   {
@@ -76,7 +74,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="item", name="mold-frame", amount=1},
+	  {type="item", name="mold-frame", amount=0},
 	  Iron(65),
 	  Copper(57.5),
 	  Steel(10),
@@ -85,7 +83,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="frame-3", amount=1},
-	  {type="item", name="mold-frame", amount=1},
 	}
   },
   {
@@ -99,7 +96,7 @@ data:extend(
     order = "4",
     ingredients =
     {
-	  {type="item", name="mold-frame", amount=1},
+	  {type="item", name="mold-frame", amount=0},
 	  Iron(132),
 	  Copper(191),
 	  Steel(10),
@@ -110,7 +107,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="frame-4", amount=1},
-	  {type="item", name="mold-frame", amount=1},
 	}
   },
   {

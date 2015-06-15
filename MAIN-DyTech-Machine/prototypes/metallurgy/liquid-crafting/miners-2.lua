@@ -18,6 +18,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone(32),
 	  Iron(164),
 	  Copper(53.5),
@@ -25,7 +26,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="basic-mining-drill-mk2", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -38,6 +38,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone(136),
 	  Iron(320),
 	  Copper(105),
@@ -46,7 +47,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="basic-mining-drill-mk3", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -59,6 +59,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone(312),
 	  Iron(545),
 	  Copper(193),
@@ -69,7 +70,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="basic-mining-drill-mk4", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -82,6 +82,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone((128+288+288)),
 	  Iron(1100),
 	  Copper(685),
@@ -93,7 +94,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="basic-mining-drill-mk5", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
   {
@@ -106,6 +106,7 @@ data:extend(
     subgroup = "liquid-crafting-machines",
     ingredients =
     {
+	  {type="item", name="mold-machine", amount=0},
 	  Stone((384+864+864)),
 	  Iron(4300),
 	  Copper(3700),
@@ -117,7 +118,6 @@ data:extend(
     results = 
 	{
 	  {type="item", name="basic-mining-drill-mk6", amount=1},
-	  {type="item", name="mold-machine", amount=1},
 	}
   },
 }

@@ -31,12 +31,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=3},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="iron-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -51,12 +50,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-carbonated-iron", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="steel-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -71,12 +69,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-tin", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="tin-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -91,12 +88,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-zinc", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="zinc-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -111,12 +107,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-silver", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="silver-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -131,12 +126,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-lead", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="lead-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -151,12 +145,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-tungsten", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="tungsten-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -171,12 +164,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-cobalt", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="cobalt-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {
@@ -191,12 +183,11 @@ data:extend(
     {
 	  {type="fluid", name="molten-iron", amount=0.75},
 	  {type="fluid", name="molten-ardite", amount=3.75},
-	  {type="item", name="mold-tool", amount=1},
+	  {type="item", name="mold-tool", amount=0},
     },
     results = 
 	{
 	  {type="item", name="ardite-axe", amount=1},
-	  {type="item", name="mold-tool", amount=1},
 	}
   },
   {

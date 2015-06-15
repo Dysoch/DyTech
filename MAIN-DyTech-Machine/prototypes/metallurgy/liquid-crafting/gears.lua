@@ -32,12 +32,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="sludge", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="stone-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -52,12 +51,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-iron", amount=1.2},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="iron-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -72,12 +70,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-carbonated-iron", amount=1.5},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="steel-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -92,12 +89,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-tungsten", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="tungsten-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -112,12 +108,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-lead", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="lead-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -132,12 +127,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-cobalt", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="cobalt-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -152,12 +146,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-tin", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="tin-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
@@ -172,12 +165,11 @@ data:extend(
     ingredients =
     {
 	  {type="fluid", name="molten-zinc", amount=1},
-	  {type="item", name="mold-gear", amount=1},
+	  {type="item", name="mold-gear", amount=0},
     },
     results = 
 	{
 	  {type="item", name="zinc-gear-wheel", amount=1},
-	  {type="item", name="mold-gear", amount=1},
 	}
   },
   {
