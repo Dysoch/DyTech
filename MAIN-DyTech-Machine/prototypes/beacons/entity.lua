@@ -114,7 +114,7 @@ data:extend(
     },
     energy_usage = "3000kW",
     distribution_effectivity = 0.5,
-    num_module_slots = 5
+    num_module_slots = 8
   },
   {
     type = "beacon",
@@ -170,7 +170,7 @@ data:extend(
     },
     energy_usage = "6000kW",
     distribution_effectivity = 1,
-    num_module_slots = 5
+    num_module_slots = 11
   },
 }
 )
