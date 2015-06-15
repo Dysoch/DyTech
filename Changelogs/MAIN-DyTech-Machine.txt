@@ -19,6 +19,8 @@
 [*] Added 2 new Lamps.
 [*] Added 2 extra Oil Refineries.
 [*] Added 2 extra Chemical Plants.
+[*] Added 2 extra Forges (faster and more modules)
+[*] Added 2 extra Blast Furnaces (faster and more modules)
 [/list]
 [*] Bugfixes: 
 [list] [*] Fixed exploit with lava heating and cooling.
@@ -27,6 +29,7 @@
 [list][*] Increased Pumping speed of Pumps (both of them)
 [*] Balanced Armored Car, its now faster!
 [*] Changed Super and Extreme Transport Belt recipe to require Lubricant.
+[*] Changed the way molds are used: You no longer have to loop them, they wont be used in the recipe. But it is still required to have an Mold in the machine, otherwise it wont run!
 [/list]
 [/list]
 

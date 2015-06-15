@@ -35,5 +35,59 @@ data:extend(
 	},
    	result = "forge",
   },
+  {
+   	type = "recipe",
+   	name = "blast-furnace-1",
+	energy_required = 60,
+    enabled = false,
+    subgroup = "metallurgy-machines",
+	ingredients = 
+	{ 
+	  {"blast-furnace", 1}, 
+	  {"processing-unit", 25}, 
+	},
+   	result = "blast-furnace-1",
+  },
+  {
+   	type = "recipe",
+   	name = "forge-1",
+	energy_required = 60,
+    enabled = false,
+    subgroup = "metallurgy-machines",
+   	ingredients = 
+	{ 
+	  {"forge", 1},
+	  {"advanced-circuit", 25}, 
+	  {"lead-gear-wheel", 9},
+	},
+   	result = "forge-1",
+  },
+  {
+   	type = "recipe",
+   	name = "blast-furnace-2",
+	energy_required = 60,
+    enabled = false,
+    subgroup = "metallurgy-machines",
+	ingredients = 
+	{ 
+	  {"blast-furnace-1", 1}, 
+	  {"advanced-processing-unit", 25}, 
+	},
+   	result = "blast-furnace-2",
+  },
+  {
+   	type = "recipe",
+   	name = "forge-2",
+	energy_required = 60,
+    enabled = false,
+    subgroup = "metallurgy-machines",
+   	ingredients = 
+	{ 
+	  {"forge-1", 1},
+	  {"processing-unit", 25}, 
+	  {"tungsten-gear-wheel", 9},
+	},
+   	result = "forge-2",
+  },
 }
 )

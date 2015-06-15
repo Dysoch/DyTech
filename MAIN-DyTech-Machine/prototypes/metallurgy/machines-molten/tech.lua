@@ -296,5 +296,66 @@ data:extend(
     order = "lava-04",
 	upgrade = true,
   },
+  {
+    type = "technology",
+    name = "molten-machine-1",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/lava.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "blast-furnace-1"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "forge-1"
+      },
+    },
+    prerequisites = {"lava-02"},
+    unit =
+    {
+      count = 500,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 30
+    },
+    order = "molten-machine-1",
+	upgrade = true,
+  },
+  {
+    type = "technology",
+    name = "molten-machine-2",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/lava.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "blast-furnace-2"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "forge-2"
+      },
+    },
+    prerequisites = {"molten-machine-1"},
+    unit =
+    {
+      count = 1500,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+        {"alien-science-pack", 1},
+      },
+      time = 30
+    },
+    order = "molten-machine-2",
+	upgrade = true,
+  },
 }
 )
