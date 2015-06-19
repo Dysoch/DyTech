@@ -16,12 +16,12 @@ Nuclear_Reactors = true
 
 --[[Boilers Toggle]]--
 -- Don't like the Boilers? Here you can switch them off!
-Boilers = true
+Boilers = false
 
 	--[[Advanced Solar Panels Toggles]]--
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
 	Small_Boilers = false
-	Normal_Boilers = true
+	Normal_Boilers = false
 	Large_Boilers = false
 
 --[[Accumulators Toggle]]--
@@ -42,7 +42,7 @@ SteamEngines = true
 	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
 	Small_SteamEngines = false
 	Normal_SteamEngines = true
-	Large_SteamEngines = false
+	Large_SteamEngines = true
 
 --[[Solar Panels Toggle]]--
 -- Don't like the Solar Panels? Here you can switch them off!

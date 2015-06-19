@@ -44,11 +44,36 @@ end
 
 --[[ Boilers Check ]]--
 if Boilers then 
-	require("prototypes.boilers.entity")
-	require("prototypes.boilers.high-entity")
-	require("prototypes.boilers.item")
-	require("prototypes.boilers.recipe")
-	require("prototypes.boilers.tech")
+	if Small_Boilers then
+		require("prototypes.boilers.small.entity")
+		require("prototypes.boilers.small.item")
+		require("prototypes.boilers.small.recipe")
+	end
+	if Normal_Boilers then
+		require("prototypes.boilers.normal.entity")
+		require("prototypes.boilers.normal.item")
+		require("prototypes.boilers.normal.recipe")
+	end
+	if Large_Boilers then
+		require("prototypes.boilers.large.entity")
+		require("prototypes.boilers.large.item")
+		require("prototypes.boilers.large.recipe")
+	end
+	if Small_Boilers and not Normal_Boilers and not Large_Boilers then
+		require("prototypes.boilers.tech.small")
+	elseif Normal_Boilers and not Small_Boilers and not Large_Boilers then
+		require("prototypes.boilers.tech.normal")
+	elseif Large_Boilers and not Small_Boilers and not Normal_Boilers then
+		require("prototypes.boilers.tech.small")
+	elseif Small_Boilers and Normal_Boilers and not Large_Boilers then
+		require("prototypes.boilers.tech.small_and_normal")
+	elseif Small_Boilers and Large_Boilers and not Normal_Boilers then
+		require("prototypes.boilers.tech.small_and_large")
+	elseif Normal_Boilers and Large_Boilers and not Small_Boilers then
+		require("prototypes.boilers.tech.normal_and_large")
+	elseif Small_Boilers and Normal_Boilers and Large_Boilers then
+		require("prototypes.boilers.tech.small_normal_and_large")
+	end
 	end
 
 --[[ Accumulators Check ]]--
@@ -121,16 +146,34 @@ end
 
 --[[ Steam Engines Check ]]--
 if SteamEngines then 
---	require("prototypes.steam-engines.small.entity")
---	require("prototypes.steam-engines.small.item")
---	require("prototypes.steam-engines.small.recipe")
---	require("prototypes.steam-engines.small.tech")
-	require("prototypes.steam-engines.normal.entity")
-	require("prototypes.steam-engines.normal.item")
-	require("prototypes.steam-engines.normal.recipe")
-	require("prototypes.steam-engines.normal.tech")
---	require("prototypes.steam-engines.large.entity")
---	require("prototypes.steam-engines.large.item")
---	require("prototypes.steam-engines.large.recipe")
---	require("prototypes.steam-engines.large.tech")
+	if Small_SteamEngines then
+		require("prototypes.steam-engines.small.entity")
+		require("prototypes.steam-engines.small.item")
+		require("prototypes.steam-engines.small.recipe")
+	end
+	if Normal_SteamEngines then
+		require("prototypes.steam-engines.normal.entity")
+		require("prototypes.steam-engines.normal.item")
+		require("prototypes.steam-engines.normal.recipe")
+	end
+	if Large_SteamEngines then
+		require("prototypes.steam-engines.large.entity")
+		require("prototypes.steam-engines.large.item")
+		require("prototypes.steam-engines.large.recipe")
+	end
+	if Small_SteamEngines and not Normal_SteamEngines and not Large_SteamEngines then
+		require("prototypes.steam-engines.tech.small")
+	elseif Normal_SteamEngines and not Small_SteamEngines and not Large_SteamEngines then
+		require("prototypes.steam-engines.tech.normal")
+	elseif Large_SteamEngines and not Small_SteamEngines and not Normal_SteamEngines then
+		require("prototypes.steam-engines.tech.small")
+	elseif Small_SteamEngines and Normal_SteamEngines and not Large_SteamEngines then
+		require("prototypes.steam-engines.tech.small_and_normal")
+	elseif Small_SteamEngines and Large_SteamEngines and not Normal_SteamEngines then
+		require("prototypes.steam-engines.tech.small_and_large")
+	elseif Normal_SteamEngines and Large_SteamEngines and not Small_SteamEngines then
+		require("prototypes.steam-engines.tech.normal_and_large")
+	elseif Small_SteamEngines and Normal_SteamEngines and Large_SteamEngines then
+		require("prototypes.steam-engines.tech.small_normal_and_large")
+	end
 end

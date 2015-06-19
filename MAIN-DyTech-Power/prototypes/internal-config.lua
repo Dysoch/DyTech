@@ -178,21 +178,57 @@ SteamEngines = {
 }
 
 Boilers = {
-	KW1 = "668kW",
-	KW2 = "1594kW",
-	KW3 = "3842kW",
-	KW4 = "9316kW",
-	KW5 = "22713kW",
-	HighKW1 = "1669kW",
-	HighKW2 = "3984kW",
-	HighKW3 = "9604kW",
-	HighKW4 = "23289kW",
-	HighKW5 = "56781kW",
-	effectivity1 = 1,
-	effectivity2 = 2,
-	effectivity3 = 4,
-	effectivity4 = 8,
-	effectivity5 = 16
+	Small = {
+		KW1 = "668kW",
+		KW2 = "1594kW",
+		KW3 = "3842kW",
+		KW4 = "9316kW",
+		KW5 = "22713kW",
+		HighKW1 = "1669kW",
+		HighKW2 = "3984kW",
+		HighKW3 = "9604kW",
+		HighKW4 = "23289kW",
+		HighKW5 = "56781kW",
+		effectivity1 = 1,
+		effectivity2 = 2,
+		effectivity3 = 4,
+		effectivity4 = 8,
+		effectivity5 = 16
+	},
+	Normal = {
+		KW1 = "668kW",
+		KW2 = "1594kW",
+		KW3 = "3842kW",
+		KW4 = "9316kW",
+		KW5 = "22713kW",
+		HighKW1 = "1669kW",
+		HighKW2 = "3984kW",
+		HighKW3 = "9604kW",
+		HighKW4 = "23289kW",
+		HighKW5 = "56781kW",
+		effectivity1 = 1,
+		effectivity2 = 2,
+		effectivity3 = 4,
+		effectivity4 = 8,
+		effectivity5 = 16
+	},
+	Large = {
+		KW1 = "668kW",
+		KW2 = "1594kW",
+		KW3 = "3842kW",
+		KW4 = "9316kW",
+		KW5 = "22713kW",
+		HighKW1 = "1669kW",
+		HighKW2 = "3984kW",
+		HighKW3 = "9604kW",
+		HighKW4 = "23289kW",
+		HighKW5 = "56781kW",
+		effectivity1 = 1,
+		effectivity2 = 2,
+		effectivity3 = 4,
+		effectivity4 = 8,
+		effectivity5 = 16
+	},
 }
 
 Health = {

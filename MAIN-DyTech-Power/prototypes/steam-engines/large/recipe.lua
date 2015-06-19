@@ -2,29 +2,29 @@ data:extend(
 {
   {
     type = "recipe",
-    name = "steam-engine-primary",
+    name = "large-steam-engine-primary",
     ingredients =
     {
       {"stone-gear-wheel", 5},
       {"pipe", 5},
       {"iron-plate", 5}
     },
-    result = "steam-engine-primary"
+    result = "large-steam-engine-primary"
   },
   {
     type = "recipe",
-    name = "steam-engine-terciary",
+    name = "large-steam-engine-terciary",
     ingredients =
     {
       {"stone-gear-wheel", 5},
       {"pipe", 5},
       {"iron-plate", 5}
     },
-    result = "steam-engine-terciary"
+    result = "large-steam-engine-terciary"
   },
   {
     type = "recipe",
-    name = "steam-engine-primary-mk2",
+    name = "large-steam-engine-primary-mk2",
 	enabled = false,
     ingredients =
     {
@@ -34,11 +34,11 @@ data:extend(
       {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
-    result = "steam-engine-primary-mk2"
+    result = "large-steam-engine-primary-mk2"
   },
   {
     type = "recipe",
-    name = "steam-engine-secondary-mk2",
+    name = "large-steam-engine-secondary-mk2",
 	enabled = false,
     ingredients =
     {
@@ -48,11 +48,11 @@ data:extend(
       {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
-    result = "steam-engine-secondary-mk2"
+    result = "large-steam-engine-secondary-mk2"
   },
   {
     type = "recipe",
-    name = "steam-engine-terciary-mk2",
+    name = "large-steam-engine-terciary-mk2",
 	enabled = false,
     ingredients =
     {
@@ -62,11 +62,11 @@ data:extend(
       {"rotor-1", 4},
       {"electronic-circuit", 5}
     },
-    result = "steam-engine-terciary-mk2"
+    result = "large-steam-engine-terciary-mk2"
   },
   {
     type = "recipe",
-    name = "steam-engine-primary-mk3",
+    name = "large-steam-engine-primary-mk3",
 	enabled = false,
     ingredients =
     {
@@ -76,11 +76,11 @@ data:extend(
       {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
-    result = "steam-engine-primary-mk3"
+    result = "large-steam-engine-primary-mk3"
   },
   {
     type = "recipe",
-    name = "steam-engine-secondary-mk3",
+    name = "large-steam-engine-secondary-mk3",
 	enabled = false,
     ingredients =
     {
@@ -90,11 +90,11 @@ data:extend(
       {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
-    result = "steam-engine-secondary-mk3"
+    result = "large-steam-engine-secondary-mk3"
   },
   {
     type = "recipe",
-    name = "steam-engine-terciary-mk3",
+    name = "large-steam-engine-terciary-mk3",
 	enabled = false,
     ingredients =
     {
@@ -104,11 +104,11 @@ data:extend(
       {"rotor-2", 4},
       {"advanced-circuit", 5}
     },
-    result = "steam-engine-terciary-mk3"
+    result = "large-steam-engine-terciary-mk3"
   },
   {
     type = "recipe",
-    name = "steam-engine-primary-mk4",
+    name = "large-steam-engine-primary-mk4",
 	enabled = false,
     ingredients =
     {
@@ -118,11 +118,11 @@ data:extend(
       {"rotor-3", 4},
       {"processing-unit", 5}
     },
-    result = "steam-engine-primary-mk4"
+    result = "large-steam-engine-primary-mk4"
   },
   {
     type = "recipe",
-    name = "steam-engine-secondary-mk4",
+    name = "large-steam-engine-secondary-mk4",
 	enabled = false,
     ingredients =
     {
@@ -132,11 +132,11 @@ data:extend(
       {"rotor-3", 4},
       {"processing-unit", 5}
     },
-    result = "steam-engine-secondary-mk4"
+    result = "large-steam-engine-secondary-mk4"
   },
   {
     type = "recipe",
-    name = "steam-engine-terciary-mk4",
+    name = "large-steam-engine-terciary-mk4",
 	enabled = false,
     ingredients =
     {
@@ -146,11 +146,11 @@ data:extend(
       {"rotor-3", 4},
       {"processing-unit", 5}
     },
-    result = "steam-engine-terciary-mk4"
+    result = "large-steam-engine-terciary-mk4"
   },
   {
     type = "recipe",
-    name = "steam-engine-primary-mk5",
+    name = "large-steam-engine-primary-mk5",
 	enabled = false,
     ingredients =
     {
@@ -160,11 +160,11 @@ data:extend(
       {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
-    result = "steam-engine-primary-mk5"
+    result = "large-steam-engine-primary-mk5"
   },
   {
     type = "recipe",
-    name = "steam-engine-secondary-mk5",
+    name = "large-steam-engine-secondary-mk5",
 	enabled = false,
     ingredients =
     {
@@ -174,11 +174,11 @@ data:extend(
       {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
-    result = "steam-engine-secondary-mk5"
+    result = "large-steam-engine-secondary-mk5"
   },
   {
     type = "recipe",
-    name = "steam-engine-terciary-mk5",
+    name = "large-steam-engine-terciary-mk5",
 	enabled = false,
     ingredients =
     {
@@ -188,7 +188,7 @@ data:extend(
       {"rotor-4", 4},
       {"advanced-processing-unit", 5}
     },
-    result = "steam-engine-terciary-mk5"
+    result = "large-steam-engine-terciary-mk5"
   },
 }
 )
