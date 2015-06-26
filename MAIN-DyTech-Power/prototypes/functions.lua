@@ -1,7 +1,20 @@
 --require "prototypes.functions"
 require "config"
+require "prototypes.internal-config"
 
-function SolarPictures(Scale, Tint)
+function SolarPictures(Type, Tint)
+if Type == 1 then
+return
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/small.png",
+      priority = "high",
+      width = 80,
+      height = 67,
+	  scale = 0.95,
+	  tint = Tint,
+	  shift = {0.05, 0}
+    }
+elseif Type == 2 then
 return
     {
       filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
@@ -11,6 +24,17 @@ return
 	  scale = Scale,
 	  tint = Tint
     }
+elseif Type == 3 then
+return
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/solar-panels/large.png",
+      priority = "high",
+      width = 126,
+      height = 127,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
 end
 
 function BaseSolarPictures(Scale)
@@ -24,7 +48,7 @@ return
     }
 end
 
-function AccumulatorPictures(Scale, Tint)
+function AccumulatorPictures(Type, Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
@@ -37,7 +61,7 @@ return
     }
 end
 
-function AccumulatorChargePictures(Scale, Tint)
+function AccumulatorChargePictures(Type, Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
@@ -52,7 +76,7 @@ return
     }
 end
 
-function AccumulatorDischargePictures(Scale, Tint)
+function AccumulatorDischargePictures(Type, Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
@@ -67,7 +91,7 @@ return
     }
 end
 
-function SteamHorizontalPictures(Scale, Tint)
+function SteamHorizontalPictures(Type, Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
@@ -81,7 +105,7 @@ return
     }
 end
 
-function SteamVerticalPictures(Scale, Tint)
+function SteamVerticalPictures(Type, Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",

@@ -25,25 +25,14 @@ if Nuclear_Reactors then
 	require("prototypes.nuclear-reactors.nuclear-recipes.reactor-recipe")
 	require("prototypes.nuclear-reactors.nuclear-recipes.fuel")
   end
-  if dont_use_dytech then
-	require("prototypes.nocore.resources.uraniumdioxide")
---	require("prototypes.nocore.resources.fluorite")
-	require("prototypes.nocore.tile.noise-layers")
-	require("prototypes.nocore.autoplace-controls")
-	require("prototypes.nocore.nuclear-reactors.nuclear-entities.chemical-processor")
-	require("prototypes.nocore.nuclear-reactors.nuclear-entities.nuclear-reactor")
-	require("prototypes.nocore.nuclear-reactors.nuclear-items.fuel")
-	require("prototypes.nocore.nuclear-reactors.nuclear-items.items")
-	require("prototypes.nocore.nuclear-reactors.nuclear-items.reactor-item")
-	require("prototypes.nocore.nuclear-reactors.nuclear-tech.reactor-tech")
-	require("prototypes.nocore.nuclear-reactors.nuclear-recipes.reactor-recipe")
-	require("prototypes.nocore.nuclear-reactors.nuclear-recipes.fuel")
-	require("prototypes.nocore.item-group.dytech-nuclear")
-	require("prototypes.nocore.categories.recipe-category")
-end
 
 --[[ Boilers Check ]]--
-if Boilers then 
+if Boilers then
+	if High_Boilers then
+		require("prototypes.boilers.high.high-entity")
+		require("prototypes.boilers.high.high-item")
+		require("prototypes.boilers.high.high-recipe")
+	end
 	if Small_Boilers then
 		require("prototypes.boilers.small.entity")
 		require("prototypes.boilers.small.item")
@@ -74,7 +63,7 @@ if Boilers then
 	elseif Small_Boilers and Normal_Boilers and Large_Boilers then
 		require("prototypes.boilers.tech.small_normal_and_large")
 	end
-	end
+end
 
 --[[ Accumulators Check ]]--
 if Accumulators then 
@@ -146,6 +135,11 @@ end
 
 --[[ Steam Engines Check ]]--
 if SteamEngines then 
+	if High_SteamEngines then
+		require("prototypes.steam-engines.high.high-entity")
+		require("prototypes.steam-engines.high.high-item")
+		require("prototypes.steam-engines.high.high-recipe")
+	end
 	if Small_SteamEngines then
 		require("prototypes.steam-engines.small.entity")
 		require("prototypes.steam-engines.small.item")

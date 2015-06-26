@@ -1,0 +1,14 @@
+ ____      _____         _      _____ _                   _         
+|    \ _ _|_   _|___ ___| |_   |     | |_ ___ ___ ___ ___| |___ ___ 
+|  |  | | | | | | -_|  _|   |  |   --|   | .'|   | . | -_| | . | . |
+|____/|_  | |_| |___|___|_|_|  |_____|_|_|__,|_|_|_  |___|_|___|_  |
+      |___|                                      |___|         |___|
+
+24-06-15:
+- Created the small and large solar textures
+
+26-06-15:
+- Moved the regular solar panel to the dytech tab
+- Moved the regular steam engine to the dytech tab
+- Tried to redo high powered steam engines
+- Moved the regular boiler to the dytech tab

@@ -174,6 +174,18 @@ SteamEngines = {
 		fluid_usage_per_tick3 = 1,
 		fluid_usage_per_tick4 = 1,
 		fluid_usage_per_tick5 = 1
+	},
+	High = {
+		effectivity1 = 1.43,
+		effectivity2 = 2.04,
+		effectivity3 = 2.92,
+		effectivity4 = 4.18,
+		effectivity5 = 5.98,
+		fluid_usage_per_tick1 = 0.08,
+		fluid_usage_per_tick2 = 0.124,
+		fluid_usage_per_tick3 = 0.193,
+		fluid_usage_per_tick4 = 0.3,
+		fluid_usage_per_tick5 = 0.465
 	}
 }
 

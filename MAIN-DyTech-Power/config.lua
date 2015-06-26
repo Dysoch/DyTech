@@ -5,8 +5,7 @@
 --[[Nuclear Reactors Toggle]]--
 -- Don't like the Nuclear Reactors? Here you can switch them off!
 -- NOTE: Use_Wattage MUST be TRUE if you want to use nuclear reactors!
--- If your reactors are cheap-ass, maybe you have the dont_use_dytech switch enabled! Turn if off you cheater! :-)
-Nuclear_Reactors = true
+Nuclear_Reactors = false
 	
 	--[[Gem Membrane Toggle]]--
 	--Don't like the gem membranes? Here you can switch them off!
@@ -16,20 +15,19 @@ Nuclear_Reactors = true
 
 --[[Boilers Toggle]]--
 -- Don't like the Boilers? Here you can switch them off!
-Boilers = false
+Boilers = true
 
-	--[[Advanced Solar Panels Toggles]]--
-	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
-	Small_Boilers = false
-	Normal_Boilers = false
-	Large_Boilers = false
+	--[[Advanced Boilers Toggles]]--
+	--More advances switches for the boilers. Don't like the smaller or larger boilers? Here you can switch them off!
+	Normal_Boilers = true
+	High_Boilers = true
 
 --[[Accumulators Toggle]]--
 -- Don't like the Accumulators? Here you can switch them off!
 Accumulators = true
 
-	--[[Advanced Solar Panels Toggles]]--
-	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
+	--[[Advanced Accumulators Toggles]]--
+	--More advances switches for the accumulators. Don't like the smaller or larger accumulators? Here you can switch them off!
 	Small_Accumulators = true
 	Normal_Accumulators = true
 	Large_Accumulators = true
@@ -38,11 +36,10 @@ Accumulators = true
 -- Don't like the Steam Engines? Here you can switch them off!
 SteamEngines = true
 
-	--[[Advanced Solar Panels Toggles]]--
-	--More advances switches for the solars. Don't like the smaller or larger solars? Here you can switch them off!
-	Small_SteamEngines = false
+	--[[Advanced Steam Engines Toggles]]--
+	--More advances switches for the steam engines. Don't like the smaller or larger steam engines? Here you can switch them off!
 	Normal_SteamEngines = true
-	Large_SteamEngines = true
+	High_SteamEngines = true
 
 --[[Solar Panels Toggle]]--
 -- Don't like the Solar Panels? Here you can switch them off!
@@ -53,8 +50,3 @@ SolarPanels = true
 	Small_SolarPanels = true
 	Normal_SolarPanels = true
 	Large_SolarPanels = true
-
---[[Uber Debug Toggle]]--
--- If you don't know what this toggle does, stay off! #debugtothemax :D -MagicLegend
-dont_use_dytech = false
-CheatRecipe = false

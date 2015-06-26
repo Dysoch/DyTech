@@ -20,7 +20,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk1),
+    picture = SolarPictures(3, SolarTint.mk1),
     production = SolarPanels.Large.Tier1
   },
   {
@@ -40,7 +40,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk1),
+    picture = SolarPictures(3, SolarTint.mk1),
     production = SolarPanels.Large.Tier1
   },
   {
@@ -60,7 +60,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk2),
+    picture = SolarPictures(3, SolarTint.mk2),
     production = SolarPanels.Large.Tier2
   },
   {
@@ -80,7 +80,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk2),
+    picture = SolarPictures(3, SolarTint.mk2),
     production = SolarPanels.Large.Tier2
   },
   {
@@ -100,7 +100,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk3),
+    picture = SolarPictures(3, SolarTint.mk3),
     production = SolarPanels.Large.Tier3
   },
   {
@@ -120,7 +120,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk3),
+    picture = SolarPictures(3, SolarTint.mk3),
     production = SolarPanels.Large.Tier3
   },
   {
@@ -140,7 +140,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk4),
+    picture = SolarPictures(3, SolarTint.mk4),
     production = SolarPanels.Large.Tier4
   },
   {
@@ -160,7 +160,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk4),
+    picture = SolarPictures(3, SolarTint.mk4),
     production = SolarPanels.Large.Tier4
   },
   {
@@ -180,7 +180,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk5),
+    picture = SolarPictures(3, SolarTint.mk5),
     production = SolarPanels.Large.Tier5
   },
   {
@@ -200,7 +200,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-output"
     },
-    picture = SolarPictures(1.33, SolarTint.mk5),
+    picture = SolarPictures(3, SolarTint.mk5),
     production = SolarPanels.Large.Tier5
   },
 }

@@ -1,3 +1,6 @@
+data.raw["item"]["solar-panel"].subgroup = "dytech-energy-solar-normal"
+data.raw["item"]["solar-panel"].order = "a[mk1]-a[primary]"
+
 data:extend(
 {
   {
