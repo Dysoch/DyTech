@@ -12,3 +12,9 @@
 - Moved the regular steam engine to the dytech tab
 - Tried to redo high powered steam engines
 - Moved the regular boiler to the dytech tab
+
+19-06-15:
+- Started working on the reactors again
+
+30-06-15:
+- More scripting done

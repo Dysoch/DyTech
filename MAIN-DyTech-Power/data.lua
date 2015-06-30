@@ -7,15 +7,10 @@ if Nuclear_Reactors then
 	else
 	  require("prototypes.nuclear-reactors.nuclear-items.no-gem-membranes")
 	end
-	require("prototypes.nocore.resources.uraniumdioxide")
---	require("prototypes.nocore.resources.fluorite")
-	require("prototypes.nocore.tile.noise-layers")
-	require("prototypes.nocore.autoplace-controls")
---[[	require("prototypes.nuclear-reactors.recipe")
 	require("prototypes.resources.uraniumdioxide")
 --	require("prototypes.resources.fluorite")
 	require("prototypes.tile.noise-layers")
-	require("prototypes.autoplace-controls")]]
+	require("prototypes.autoplace-controls")
 	require("prototypes.nuclear-reactors.nuclear-entities.chemical-processor")
 	require("prototypes.nuclear-reactors.nuclear-entities.nuclear-reactor")
 	require("prototypes.nuclear-reactors.nuclear-items.fuel")

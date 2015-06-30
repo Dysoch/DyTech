@@ -1,5 +1,6 @@
 require "defines"
 require "util"
+--require "prototypes.itemcount"
 
 --[[TODO:
 	Proper localisation
@@ -42,6 +43,8 @@ glob.usedFuel.EntityContents = {}
 glob.entitypos = {}
 glob.entityinfo = {}
 glob.entitycount = 0
+glob.itemcount = {}
+glob.item = {}
 
 end)
 
@@ -129,13 +132,13 @@ for i, entitycount in pairs(glob.entityinfo) do
 			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
 			local test1 = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
 
---				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
---				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
---				datadump(test1, "test1")
+				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
+				datadump(test1, "test1")
 
 			glob.usedFuel[glob.entitycount] = glob.entityinfo[glob.entitycount].EntityContents
---				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
---				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
+				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
+				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 		else
 			debug("Container is empty")
 			glob.usedFuel[glob.entitycount] = nil
@@ -151,9 +154,9 @@ for i, entitycount in pairs(glob.entityinfo) do
 if glob.entityinfo[glob.entitycount].EntityInv ~= nil then
 	container = glob.entityinfo[glob.entitycount].EntityInv
 	if glob.usedFuel[glob.entitycount] ~= nil then
-	local itemcount = {}
-	itemcount.rawwood = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
-		if itemcount.rawwood > 0 then
+		checkItem("raw-wood")
+--	local itemcount = {}
+		if glob.itemcount[glob.item] > 0 then
 			debug("I found raw wood!")
 		else
 			debug("found nothing")
@@ -179,6 +182,16 @@ function clearinv()
 for i, entitycount in pairs(glob.entityinfo) do
 	glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).clear()
 end
+end
+
+function checkItem(item)
+if not glob.itemcount.item then
+	glob.itemcount.item = {}
+end
+--[[
+str = str:gsub("%s+", "")
+str = string.gsub(str, "%s+", "")]]
+	glob.itemcount[glob.item] = glob.entityinfo[glob.entitycount].EntityInv.getitemcount(item)
 end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}

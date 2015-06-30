@@ -5,7 +5,7 @@
 --[[Nuclear Reactors Toggle]]--
 -- Don't like the Nuclear Reactors? Here you can switch them off!
 -- NOTE: Use_Wattage MUST be TRUE if you want to use nuclear reactors!
-Nuclear_Reactors = false
+Nuclear_Reactors = true
 	
 	--[[Gem Membrane Toggle]]--
 	--Don't like the gem membranes? Here you can switch them off!
