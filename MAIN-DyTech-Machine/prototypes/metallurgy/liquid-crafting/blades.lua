@@ -1,3 +1,6 @@
+table.insert(data.raw["technology"]["rotor-1"].effects,{type = "unlock-recipe",recipe = "mold-crafting-blade-2"})
+table.insert(data.raw["technology"]["rotor-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-blade-3"})
+
 require "prototypes.metallurgy.liquid-crafting.functions"
 
 data:extend(
@@ -96,14 +99,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-blade-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-blade-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-blade-3"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

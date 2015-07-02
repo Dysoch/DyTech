@@ -1,3 +1,8 @@
+table.insert(data.raw["technology"]["advanced-electronics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-circuit-2"})
+table.insert(data.raw["technology"]["advanced-electronics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-circuit-3"})
+table.insert(data.raw["technology"]["advanced-processing-unit"].effects,{type = "unlock-recipe",recipe = "mold-crafting-circuit-4"})
+
+
 data:extend(
 { 
   {
@@ -114,18 +119,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-circuit-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-circuit-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-circuit-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-circuit-4"
       },
     },
     prerequisites = {"molds-wire"},

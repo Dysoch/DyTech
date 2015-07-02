@@ -1,3 +1,11 @@
+table.insert(data.raw["technology"]["automation"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-2"})
+table.insert(data.raw["technology"]["steel-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-3"})
+table.insert(data.raw["technology"]["tungsten-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-4"})
+table.insert(data.raw["technology"]["lead-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-5"})
+table.insert(data.raw["technology"]["cobalt-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-6"})
+table.insert(data.raw["technology"]["tin-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-7"})
+table.insert(data.raw["technology"]["zinc-processing"].effects,{type = "unlock-recipe",recipe = "mold-crafting-gear-8"})
+
 data:extend(
 { 
   {
@@ -185,30 +193,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-gear-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-4"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-5"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-6"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-gear-7"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},
