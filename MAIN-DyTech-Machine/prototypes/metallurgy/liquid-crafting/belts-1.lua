@@ -1,3 +1,9 @@
+table.insert(data.raw["technology"]["logistics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-1b"})
+table.insert(data.raw["technology"]["logistics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-1c"})
+table.insert(data.raw["technology"]["logistics-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-2a"})
+table.insert(data.raw["technology"]["logistics-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-2b"})
+table.insert(data.raw["technology"]["logistics-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-2c"})
+
 data:extend(
 { 
   {
@@ -219,62 +225,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-belt-1a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-1b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-1c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5c"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

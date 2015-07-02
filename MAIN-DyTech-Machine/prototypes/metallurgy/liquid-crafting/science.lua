@@ -1,3 +1,6 @@
+table.insert(data.raw["technology"]["battery"].effects,{type = "unlock-recipe",recipe = "mold-crafting-science-4"})
+table.insert(data.raw["technology"]["alien-technology"].effects,{type = "unlock-recipe",recipe = "mold-crafting-science-5"})
+
 require "prototypes.metallurgy.liquid-crafting.functions"
 
 data:extend(
@@ -147,14 +150,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-science-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-science-4"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-science-5"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

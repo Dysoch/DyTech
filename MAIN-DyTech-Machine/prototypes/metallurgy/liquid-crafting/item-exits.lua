@@ -1,3 +1,7 @@
+table.insert(data.raw["technology"]["item-exit-1"].effects,{type = "unlock-recipe",recipe = "mold-crafting-exit-2"})
+table.insert(data.raw["technology"]["item-exit-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-exit-3"})
+table.insert(data.raw["technology"]["item-exit-3"].effects,{type = "unlock-recipe",recipe = "mold-crafting-exit-4"})
+
 require "prototypes.metallurgy.liquid-crafting.functions"
 
 data:extend(
@@ -30,7 +34,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "1",
+    order = "item-exit-1",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -49,7 +53,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "2",
+    order = "item-exit-2",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -69,7 +73,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "3",
+    order = "item-exit-3",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -91,7 +95,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "4",
+    order = "item-exit-4",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -118,18 +122,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-exit-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-exit-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-exit-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-exit-4"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

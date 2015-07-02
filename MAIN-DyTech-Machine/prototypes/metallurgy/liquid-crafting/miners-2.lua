@@ -1,8 +1,8 @@
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-3"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-4"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-5"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-6"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-7"})
+table.insert(data.raw["technology"]["miner-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-3"})
+table.insert(data.raw["technology"]["miner-3"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-4"})
+table.insert(data.raw["technology"]["miner-4"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-5"})
+table.insert(data.raw["technology"]["miner-5"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-6"})
+table.insert(data.raw["technology"]["miner-6"].effects,{type = "unlock-recipe",recipe = "mold-crafting-miner-7"})
 
 require "prototypes.metallurgy.liquid-crafting.functions"
 

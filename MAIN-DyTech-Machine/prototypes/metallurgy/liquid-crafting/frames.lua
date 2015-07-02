@@ -1,3 +1,7 @@
+table.insert(data.raw["technology"]["frame-1"].effects,{type = "unlock-recipe",recipe = "mold-crafting-frame-2"})
+table.insert(data.raw["technology"]["frame-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-frame-3"})
+table.insert(data.raw["technology"]["frame-3"].effects,{type = "unlock-recipe",recipe = "mold-crafting-frame-4"})
+
 require "prototypes.metallurgy.liquid-crafting.functions"
 
 data:extend(
@@ -30,7 +34,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "1",
+    order = "frame-1",
     ingredients =
     {
 	  {type="item", name="mold-frame", amount=0},
@@ -50,7 +54,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "2",
+    order = "frame-2",
     ingredients =
     {
 	  {type="item", name="mold-frame", amount=0},
@@ -71,7 +75,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "3",
+    order = "frame-3",
     ingredients =
     {
 	  {type="item", name="mold-frame", amount=0},
@@ -93,7 +97,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "4",
+    order = "frame-4",
     ingredients =
     {
 	  {type="item", name="mold-frame", amount=0},
@@ -122,18 +126,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-frame-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-frame-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-frame-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-frame-4"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

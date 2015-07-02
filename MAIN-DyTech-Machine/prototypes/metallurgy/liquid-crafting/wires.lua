@@ -1,3 +1,6 @@
+table.insert(data.raw["technology"]["advanced-electronics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-wire-2"})
+table.insert(data.raw["technology"]["advanced-electronics"].effects,{type = "unlock-recipe",recipe = "mold-crafting-wire-3"})
+
 data:extend(
 { 
   {
@@ -73,7 +76,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="item", name="green-wire", amount=1},0
+	  {type="item", name="green-wire", amount=1},
 	}
   },
   {
@@ -107,14 +110,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-wire-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-wire-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-wire-3"
       },
       {
         type = "unlock-recipe",

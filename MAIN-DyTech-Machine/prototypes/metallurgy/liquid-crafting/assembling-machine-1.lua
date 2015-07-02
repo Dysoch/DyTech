@@ -1,6 +1,6 @@
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-1"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-2"})
-table.insert(data.raw["technology"]["molds-machine"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-3"})
+table.insert(data.raw["technology"]["automation"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-1"})
+table.insert(data.raw["technology"]["automation-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-2"})
+table.insert(data.raw["technology"]["automation-3"].effects,{type = "unlock-recipe",recipe = "mold-crafting-machine-3"})
 
 data:extend(
 { 

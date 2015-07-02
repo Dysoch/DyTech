@@ -1,3 +1,9 @@
+table.insert(data.raw["technology"]["military"].effects,{type = "unlock-recipe",recipe = "mold-crafting-ammo-basic-2"})
+table.insert(data.raw["technology"]["military-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-ammo-advanced-1"})
+table.insert(data.raw["technology"]["rocketry"].effects,{type = "unlock-recipe",recipe = "mold-crafting-ammo-advanced-2"})
+table.insert(data.raw["technology"]["military-4"].effects,{type = "unlock-recipe",recipe = "mold-crafting-ammo-advanced-3"})
+
+
 data:extend(
 { 
   {
@@ -152,22 +158,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-ammo-basic-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-ammo-basic-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-ammo-advanced-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-ammo-advanced-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-ammo-advanced-3"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},

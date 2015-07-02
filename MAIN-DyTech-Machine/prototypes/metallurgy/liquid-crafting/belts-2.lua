@@ -1,9 +1,9 @@
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4a"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4b"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4c"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5a"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5b"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5c"})
+table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4a"})
+table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4b"})
+table.insert(data.raw["technology"]["logistics-4"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4c"})
+table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5a"})
+table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5b"})
+table.insert(data.raw["technology"]["logistics-5"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5c"})
 
 data:extend(
 { 

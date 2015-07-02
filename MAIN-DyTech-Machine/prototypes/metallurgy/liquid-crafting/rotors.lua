@@ -1,3 +1,7 @@
+table.insert(data.raw["technology"]["rotor-1"].effects,{type = "unlock-recipe",recipe = "mold-crafting-rotor-2"})
+table.insert(data.raw["technology"]["rotor-2"].effects,{type = "unlock-recipe",recipe = "mold-crafting-rotor-3"})
+table.insert(data.raw["technology"]["rotor-3"].effects,{type = "unlock-recipe",recipe = "mold-crafting-rotor-4"})
+
 require "prototypes.metallurgy.liquid-crafting.functions"
 
 data:extend(
@@ -30,7 +34,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "1",
+    order = "rotor-1",
     ingredients =
     {
 	  {type="item", name="mold-rotor", amount=0},
@@ -51,7 +55,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "2",
+    order = "rotor-2",
     ingredients =
     {
 	  {type="item", name="mold-rotor", amount=0},
@@ -73,7 +77,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "3",
+    order = "rotor-3",
     ingredients =
     {
 	  {type="item", name="mold-rotor", amount=0},
@@ -96,7 +100,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "4",
+    order = "rotor-4",
     ingredients =
     {
 	  {type="item", name="mold-rotor", amount=0},
@@ -124,18 +128,6 @@ data:extend(
       {
         type = "unlock-recipe",
         recipe = "mold-crafting-rotor-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-rotor-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-rotor-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-rotor-4"
       },
     },
     prerequisites = {"lava-04", "water-cleaning"},
