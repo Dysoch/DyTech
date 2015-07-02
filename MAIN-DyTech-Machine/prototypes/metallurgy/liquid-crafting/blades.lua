@@ -33,7 +33,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "1",
+    order = "rotor-blade-1",
     ingredients =
     {
 	  {type="item", name="mold-blade", amount=0},
@@ -53,7 +53,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "2",
+    order = "rotor-blade-2",
     ingredients =
     {
 	  {type="item", name="mold-blade", amount=0},
@@ -73,7 +73,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "3",
+    order = "rotor-blade-3",
     ingredients =
     {
 	  {type="item", name="mold-blade", amount=0},

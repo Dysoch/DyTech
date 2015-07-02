@@ -34,7 +34,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "1",
+    order = "item-exit-1",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -53,7 +53,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "2",
+    order = "item-exit-2",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -73,7 +73,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "3",
+    order = "item-exit-3",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
@@ -95,7 +95,7 @@ data:extend(
     energy_required = 0.25,
     enabled = false,
     subgroup = "liquid-crafting-dytech-intermediates",
-    order = "4",
+    order = "item-exit-4",
     ingredients =
     {
 	  {type="item", name="mold-exit", amount=0},
