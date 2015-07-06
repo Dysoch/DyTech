@@ -5,10 +5,10 @@ data:extend(
 	name = "reactor-fuel",
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/reactor-fuel.png",
 	flags = {"goes-to-main-inventory"},
-	subgroup = "dytech-nuclear-intermediates",
+	subgroup = "dytech-nuclear-uranium",
 	fuel_value = "1MJ",
 	order = "100",
-	stack_size = 100
+	stack_size = 10000
   },
   {
 	type = "item",

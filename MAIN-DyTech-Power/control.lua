@@ -1,6 +1,6 @@
 require "defines"
 require "util"
---require "prototypes.itemcount"
+require "prototypes.internal-config"
 
 --[[TODO:
 	Proper localisation
@@ -20,6 +20,12 @@ function debug(str)
 	end
 end
 
+function print(str)
+	for _,player in pairs(game.players) do
+		player.print(str)
+	end
+end
+
 function datablock(str, strname)
 	if debug_master then
 		game.makefile("DataDump/block "..strname..".txt", serpent.block(str))
@@ -34,10 +40,20 @@ function datadump(str, strname)
 	end
 end
 
+--Warning: Performancekiller!!
+--[[function sleep(s)
+glob.tick[1] = glob.tick[2]
+glob.tick[3] = glob.tick[2] + s
+if glob.tick[2] == glob.tick[3] then
+	return
+end
+end]]
+
 --[[Insert Fancy Code Here:]]--
 game.oninit(function()
 glob.tick = {}
 glob.tick[1] = 0
+glob.tick[2] = 0
 glob.usedFuel = {}
 glob.usedFuel.EntityContents = {}
 glob.entitypos = {}
@@ -45,7 +61,6 @@ glob.entityinfo = {}
 glob.entitycount = 0
 glob.itemcount = {}
 glob.item = {}
-
 end)
 
 --[[Reactor Code]]--
@@ -130,15 +145,7 @@ for i, entitycount in pairs(glob.entityinfo) do
 		if glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1).isempty() == false then
 			glob.entityinfo[glob.entitycount].EntityInv = glob.entityinfo[glob.entitycount].ContainerEntity.getinventory(1)
 			glob.entityinfo[glob.entitycount].EntityContents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
-			local test1 = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
-
-				datadump(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
-				datablock(glob.entityinfo[glob.entitycount].EntityContents, "glob.entityinfo[glob.entitycount].EntityContents")
-				datadump(test1, "test1")
-
 			glob.usedFuel[glob.entitycount] = glob.entityinfo[glob.entitycount].EntityContents
-				datadump(glob.usedFuel[glob.entitycount], "glob.usedFuel")
-				datablock(glob.usedFuel[glob.entitycount], "glob.usedFuel")
 		else
 			debug("Container is empty")
 			glob.usedFuel[glob.entitycount] = nil
@@ -153,24 +160,23 @@ function calcEnergy()
 for i, entitycount in pairs(glob.entityinfo) do
 if glob.entityinfo[glob.entitycount].EntityInv ~= nil then
 	container = glob.entityinfo[glob.entitycount].EntityInv
+	--Checking which item is inside the inputchest
 	if glob.usedFuel[glob.entitycount] ~= nil then
 		checkItem("raw-wood")
---	local itemcount = {}
-		if glob.itemcount[glob.item] > 0 then
-			debug("I found raw wood!")
-		else
-			debug("found nothing")
-		end
-	
-	--[[local contents = glob.entityinfo[glob.entitycount].EntityInv.getcontents()
-	local itemcount2 = glob.entityinfo[glob.entitycount].EntityInv.getitemcount("raw-wood")
-	datadump(itemcount2, "glob.entityinfo[glob.entitycount].EntityInv.getitemcount")
-	datadump(contents, "glob.entityinfo[glob.entitycount].EntityInv.getcontents()")
-	datadump(itemcount, "itemcount")]]
-	
+		checkItem("u-235-3-0")
+		checkItem("u-235-3-5")
+		checkItem("u-235-4-0")
+		checkItem("u-235-4-5")
+		checkItem("u-235-5-0")
 	clearinv()
 	else
 		debug("No fuel")
+		
+	end
+	
+	--calculating the energy that needs to be produced
+	if glob.usedFuel[glob.entitycount].used = "u-235-3-0" then
+		glob.entityinfo[glob.entity].ReactorEntity.insert("reactor-fuel", Reactor.Fuel.u-235-3-0)
 	end
 else
 	debug("entityinv is nil")
@@ -185,13 +191,21 @@ end
 end
 
 function checkItem(item)
-if not glob.itemcount.item then
-	glob.itemcount.item = {}
-end
---[[
-str = str:gsub("%s+", "")
-str = string.gsub(str, "%s+", "")]]
+if not glob.itemcount.item then glob.itemcount.item = {} end
+if glob.itemcount.item ~= nil then glob.itemcount.item = nil end
+
+	glob.itemcount.item = item
 	glob.itemcount[glob.item] = glob.entityinfo[glob.entitycount].EntityInv.getitemcount(item)
+	
+	datadump(glob.itemcount, "glob.itemcount")
+	
+	if glob.itemcount[glob.item] > 0 and glob.itemcount.item == item then
+		debug("I found "..item)
+		glob.usedFuel[glob.entitycount].used = item
+	else
+		debug("found nothing")
+		glob.usedFuel[glob.entitycount].used = nil
+	end	
 end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}

@@ -18,3 +18,10 @@
 
 30-06-15:
 - More scripting done
+
+01-07-15:
+- More nuclear scripting done
+- Fixed small iconsize bug
+
+05-07-15:
+- More scripting done. The checking for items in the reactor now works.
