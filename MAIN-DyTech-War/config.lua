@@ -2,6 +2,15 @@
 -- Here you can switch any module on or off!
 -- The general rule is: TRUE is on, FALSE is off!
 
+--[[ Difficulty ]]
+Difficulty = 2
+-- Difficulty 1 = EASY
+-- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
+-- Difficulty 3 = HARD
+-- Difficulty 4 = INSANE
+-- Difficulty 5 = EXTREME DEATH MODE
+-- Input anything other then those 5 numbers will result in an error at start of game!
+
 --[[ Toggles ]]--
 
 --[[ Enemies ]]--
@@ -10,6 +19,8 @@
 EnemiesBaseEdit = true
 Biters = true
 Spitters = true
+Dyzilla_Spawner = true
+-- CAREFULL!!! Dyzilla spawner is incredible HARD, even on easy difficulty!
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
