@@ -3,7 +3,7 @@
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Difficulty ]]
-Difficulty = 6
+Difficulty = 5
 -- Difficulty 1 = EASY
 -- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
 -- Difficulty 3 = HARD

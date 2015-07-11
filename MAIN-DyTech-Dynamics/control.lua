@@ -222,7 +222,12 @@ local player = game.players[playerIndex]
 	elseif event.element.name:find(guiNames.DebugButton1) then
 		GUI.closeGUI("all", playerIndex)
 		remote.call("DyTech-Dynamics", "DataDump")
-		remote.call("DyTech-Core", "Logger")
+		if remote.interfaces["DyTech-Core"] then
+			remote.call("DyTech-Core", "Logger")
+		end
+		if remote.interfaces["DyTech-War"] then
+			remote.call("DyTech-War", "DataDump")
+		end
 	end
 end)
 
