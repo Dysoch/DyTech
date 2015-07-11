@@ -3,12 +3,12 @@
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Difficulty ]]
-Difficulty = 2
+Difficulty = 6
 -- Difficulty 1 = EASY
 -- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
 -- Difficulty 3 = HARD
 -- Difficulty 4 = INSANE
--- Difficulty 5 = EXTREME DEATH MODE
+-- Difficulty 5 = EXTREME DEATH MODE (How long can you last? :D )
 -- Input anything other then those 5 numbers will result in an error at start of game!
 
 --[[ Toggles ]]--
@@ -66,4 +66,4 @@ Biter_Modifier = 1.5
 -- Biter Modifier is an option to have Biters have more health then Spitters. Default = 1.5 times the health of the Spitters! (so 50% more!)
 
 Evolution_Reduced = true
--- This will halve the evolution factors, meaning you have twice as long till stronger enemies appear
+-- This will halve the evolution factors, meaning you have twice as long till stronger enemies appear. This is leveled by difficulty

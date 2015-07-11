@@ -637,7 +637,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 200, type = "laser"}
+            damage = { amount = 200, type = "plasma"}
           }
         }
       }
@@ -668,7 +668,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 350, type = "laser"}
+            damage = { amount = 350, type = "plasma"}
           }
         }
       }
@@ -699,7 +699,7 @@ data:extend(
         {
           {
             type = "damage",
-            damage = { amount = 500, type = "laser"}
+            damage = { amount = 500, type = "plasma"}
           }
         }
       }
