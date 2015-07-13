@@ -1,6 +1,30 @@
 require "prototypes.internal-config"
 require "prototypes.functions"
 
+require "prototypes.solar-panels.solar-types"
+function CreateSolarPanel(name, icon, size, tier, collisionBox, selectionBox, outputType, picture)
+{
+    type = "solar-panel",
+    ["name"] = name,
+    ["icon"] = icon,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = name},
+    ["max_health"] = nil,
+	  ["resistances"] = nil,
+    corpse = "big-remnants",
+    ["collision_box"] = nil,
+    ["selection_box"] = nil,
+	  fast_replaceable_group =  "solar-panel",
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = outputType.."-output"
+    },
+    ["picture"] = ,
+    ["production"] = nil
+}
+end
+
 data:extend(
 {
   {
