@@ -77,7 +77,7 @@ return {
       usage_priority = OutputType
     },
     picture = SolarPictures(Size, Tint[Tier]),
-    production = SolarPanels[Size].Output
+    production = SolarPanels[Size].Output[Tier]
 }
 end
 
@@ -413,3 +413,6 @@ return {
     pictures = pipepictures()
   }
 end
+
+
+

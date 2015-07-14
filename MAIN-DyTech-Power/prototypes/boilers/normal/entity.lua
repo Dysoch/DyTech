@@ -1,10 +1,10 @@
 require "prototypes.internal-config"
 require "prototypes.functions"
 
-data.raw["boiler"]["boiler"].energy_consumption = Boilers["normal"].KW1
-data.raw["boiler"]["boiler"].burner.effectivity = Boilers.Normal.effectivity1
-data.raw["boiler"]["boiler"].max_health = Health.Tier1
-data.raw["boiler"]["boiler"].resistances = Resistances.Tier1
+data.raw["boiler"]["boiler"].energy_consumption = Boilers["normal"].Energy_consumption[1]
+data.raw["boiler"]["boiler"].burner.effectivity = Boilers["normal"].Effectivity[1]
+data.raw["boiler"]["boiler"].max_health = Health[1]
+data.raw["boiler"]["boiler"].resistances = Resistances[1]
 
 data:extend(
 {

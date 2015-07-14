@@ -180,7 +180,7 @@ SteamEngines = {
 			4,
 			5
 		},
-		fluid_usage_per_tick1 = 
+		fluid_usage_per_tick = 
 		{
 			1,
 			1,
@@ -202,7 +202,7 @@ SteamEngines = {
 			4.18,
 			5.98
 		},
-		fluid_usage_per_tick1 = 
+		fluid_usage_per_tick = 
 		{
 			0.08,
 			0.124,
@@ -224,7 +224,7 @@ SteamEngines = {
 			1,
 			1
 		},
-		fluid_usage_per_tick1 = 
+		fluid_usage_per_tick = 
 		{
 			1,
 			1,
@@ -246,7 +246,7 @@ SteamEngines = {
 			4.18,
 			5.98
 		},
-		fluid_usage_per_tick1 = 
+		fluid_usage_per_tick = 
 		{
 			0.08,
 			0.124,
@@ -368,7 +368,7 @@ Resistances = {
       {type = "acid", decrease = 0, percent = 5},
       {type = "plasma", decrease = 0, percent = 0},
       {type = "laser", decrease = 0, percent = 5}
-			},
+	},
 	{
       {type = "fire", decrease = 2.5, percent = 40},
       {type = "physical", decrease = 0, percent = 10},
