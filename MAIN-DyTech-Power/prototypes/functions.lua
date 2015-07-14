@@ -78,7 +78,7 @@ end
 end
 
 function CreateSolarPanel(Name, Size, Tier, OutputType, Icon)
-{
+return {
     type = "solar-panel",
     name = Name,
     icon = Icon,
@@ -285,8 +285,7 @@ return
 end
 
 function CreateSteamEngine(Name, Size, Tier, OutputType, Icon)
-	return
-	{
+return {
     type = "generator",
     name = Name,
     icon = Icon,
