@@ -223,7 +223,7 @@ return {
 		resistances = Resistances[math.floor((2.25 * Tier)) - 1],
     corpse = "big-remnants",
     effectivity = SteamEngines[Size].effectivity[Tier],
-    fluid_usage_per_tick = SteamEngines[Size]fluid_usage_per_tick[Tier],
+    fluid_usage_per_tick = SteamEngines[Size].fluid_usage_per_tick[Tier],
 		fast_replaceable_group =  "steam-engine",
     collision_box = SteamEngines[Size].collision_box,
     selection_box = SteamEngines[Size].selection_box,
@@ -353,7 +353,7 @@ return {
 					priority = "extra-high",
 					width = 46,
 					height = 70
-				} Tint)
+				}, Tint)
 			}
     }
 end
@@ -385,7 +385,7 @@ return {
     energy_consumption = Boilers[Size].Energy_consumption[Tier],
     burner =
     {
-      effectivity = Boilers[Size].effectivity[Tier],
+      effectivity = Boilers[Size].Effectivity[Tier],
       fuel_inventory_size = 2,
       emissions = 0.1 / 6.5,
       smoke =
