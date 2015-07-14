@@ -3,9 +3,10 @@ require "config"
 require "prototypes.internal-config"
 
 
+
 --[[Solar panel functions]]--
-function SolarPictures(Type, Tint)
-if Type == 1 then
+function SolarPictures(Size, Tint)
+if Size == "small" then
 return
     {
 			layers =
@@ -29,7 +30,7 @@ return
 				}
 			}
     }
-elseif Type == 2 then
+elseif Size == "normal" then
 return
     {
 			layers =
@@ -51,7 +52,7 @@ return
 				}
 			}
     }
-elseif Type == 3 then
+elseif Size == "large" then
 return
     {
 			layers =
@@ -76,17 +77,28 @@ return
 end
 end
 
-function BaseSolarPictures(Scale)
-return
+function CreateSolarPanel(Name, Size, Tier, OutputType, Icon)
+{
+    type = "solar-panel",
+    name = Name,
+    icon = Icon,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = Name},
+    max_health = Health[(2 * Tier) - 1],
+	  resistances = Resistances[(2 * Tier) - 1],
+    corpse = "big-remnants",
+    collision_box = SolarPanels[Size].Collision_box,
+    selection_box = SolarPanels[Size].Selection_box,
+	  fast_replaceable_group =  "solar-panel",
+    energy_source =
     {
-			filename = "__base__/graphics/entity/solar-panel/solar-panel.png",
-			priority = "high",
-			width = 104,
-			height = 96,
-			scale = Scale
-    }
+      type = "electric",
+      usage_priority = OutputType
+    },
+    picture = SolarPictures(Size, Tint[Tier]),
+    production = SolarPanels[Size].Output
+}
 end
-
 
 
 --[[Accumulator functions]]--
@@ -190,11 +202,11 @@ return {
       input_flow_limit = Accumulators.Input[Size][Tier],
       output_flow_limit = Accumulators.Output[Size][Tier]
     },
-		picture = AccumulatorPictures(Accumulators.Scale[Size], Accumulators.Tint[Tier]),
-    charge_animation = AccumulatorChargePictures(Accumulators.Scale[Size], Accumulators.Tint[Tier]),
+		picture = AccumulatorPictures(Accumulators.Scale[Size], Tint[Tier]),
+    charge_animation = AccumulatorChargePictures(Accumulators.Scale[Size], Tint[Tier]),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(Accumulators.Scale[Size], Accumulators.Tint[Tier]),
+    discharge_animation = AccumulatorDischargePictures(Accumulators.Scale[Size], Tint[Tier]),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -303,8 +315,8 @@ function CreateSteamEngine(Name, Size, Tier, OutputType, Icon)
       type = "electric",
       usage_priority = OutputType
     },
-    horizontal_animation = SteamHorizontalPictures(SteamEngines[Size].scale, SteamEngines.Tint[Tier]),
-    vertical_animation = SteamVerticalPictures(SteamEngines[Size].scale, SteamEngines.Tint[Tier]),
+    horizontal_animation = SteamHorizontalPictures(SteamEngines[Size].scale, Tint[Tier]),
+    vertical_animation = SteamVerticalPictures(SteamEngines[Size].scale, Tint[Tier]),
     smoke =
     {
       {

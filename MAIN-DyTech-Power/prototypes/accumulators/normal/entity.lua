@@ -9,9 +9,9 @@ data.raw["accumulator"]["basic-accumulator"].energy_source.output_flow_limit = A
 
 data:extend(
 {
-	CreateAccumulator("basic-accumulator mk2", "normal", 2, "__MAIN-DyTech-Power__/graphics\accumulators/basic-accumulator2.png"),
-	CreateAccumulator("basic-accumulator mk3", "normal", 3, "__MAIN-DyTech-Power__/graphics\accumulators/basic-accumulator3.png"),
-	CreateAccumulator("basic-accumulator mk4", "normal", 4, "__MAIN-DyTech-Power__/graphics\accumulators/basic-accumulator4.png"),
-	CreateAccumulator("basic-accumulator mk5", "normal", 5, "__MAIN-DyTech-Power__/graphics\accumulators/basic-accumulator5.png"),
-	CreateAccumulator("basic-accumulator mk6", "normal", 6, "__MAIN-DyTech-Power__/graphics\accumulators/basic-accumulator6.png")
+	CreateAccumulator("basic-accumulator mk2", "normal", 2, "__MAIN-DyTech-Power__/graphics/accumulators/Icons/basic-accumulator2.png"),
+	CreateAccumulator("basic-accumulator mk3", "normal", 3, "__MAIN-DyTech-Power__/graphics/accumulators/Icons/basic-accumulator3.png"),
+	CreateAccumulator("basic-accumulator mk4", "normal", 4, "__MAIN-DyTech-Power__/graphics/accumulators/Icons/basic-accumulator4.png"),
+	CreateAccumulator("basic-accumulator mk5", "normal", 5, "__MAIN-DyTech-Power__/graphics/accumulators/Icons/basic-accumulator5.png"),
+	CreateAccumulator("basic-accumulator mk6", "normal", 6, "__MAIN-DyTech-Power__/graphics/accumulators/Icons/basic-accumulator6.png")
 })
