@@ -1,17 +1,19 @@
 require "prototypes.internal-config"
+require "prototypes.functions"
 
-data.raw["boiler"]["boiler"].energy_consumption = Boilers.KW1
-data.raw["boiler"]["boiler"].burner.effectivity = Boilers.effectivity1
-data.raw["boiler"]["boiler"].max_health = Health.Tier1
-data.raw["boiler"]["boiler"].resistances = Resistances.Tier1
-
-data:extend({
+data:extend(
+{
+	CreatureBoiler("large-boiler", "large", 1, "__base__/graphics/icons/boiler.png"),
+	CreatureBoiler("large-boiler-mk2", "large", 2, "__MAIN-DyTech-Power__/graphics/boilers/icons/boiler2.png"),
+	CreatureBoiler("large-boiler-mk3", "large", 3, "__MAIN-DyTech-Power__/graphics/boilers/icons/boiler2.png"),
+	CreatureBoiler("large-boiler-mk4", "large", 4, "__MAIN-DyTech-Power__/graphics/boilers/icons/boiler2.png"),
+	CreatureBoiler("large-boiler-mk5", "large", 5, "__MAIN-DyTech-Power__/graphics/boilers/icons/boiler2.png")
   {
     type = "boiler",
-    name = "boiler-mk2",
+    name = "large-boiler-mk2",
     icon = "__MAIN-DyTech-Power__/graphics/boilers/boiler2.png",
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-mk2"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "large-boiler-mk2"},
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
