@@ -7,7 +7,7 @@ data:extend(
     icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/nuclear-reactor.png",
     flags = {"goes-to-quickbar"},
 	subgroup = "dytech-nuclear-machines",
-    order = "a-a",
+    order = "01",
     place_result = "nuclear-reactor",
     stack_size = 1
   },
@@ -17,28 +17,8 @@ data:extend(
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/nuclear-reactor.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "dytech-nuclear-machines",
-	order = "a-b",
+	order = "02",
 	place_result = "nuclear-reactor-container",
-	stack_size = 1
-  },
-    {
-	type = "item",
-	name = "nuclear-reactor-output-container",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/nuclear-reactor.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "dytech-nuclear-machines",
-	order = "a-b",
-	place_result = "nuclear-reactor-output-container",
-	stack_size = 1
-  },
-  {
-	type = "item",
-	name = "nuclear-dynamo",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/nuclear-reactor.png",
-	flags = {"goes-to-quickbar"},
-	subgroup = "dytech-nuclear-machines",
-	order = "a-b",
-	place_result = "nuclear-dynamo",
 	stack_size = 1
   },
   {
@@ -47,7 +27,7 @@ data:extend(
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/chemical-processor.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "dytech-nuclear-machines",
-	order = "a-c",
+	order = "03",
 	place_result = "chemical-processor",
 	stack_size = 1
   }

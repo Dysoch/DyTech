@@ -33,12 +33,6 @@ SteamEngineTint = {
 	mk5 = {r=0.402, g=0.408, b=0.933, a=1.0}
 }
 
-Reactor = {
-	Fuel = {
-		u-235-3-0 = "1MJ",
-	}
-}
-
 Accumulators = {
 	Buffer = {
 		Small = {

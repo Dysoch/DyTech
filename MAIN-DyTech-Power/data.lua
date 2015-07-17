@@ -13,6 +13,7 @@ if Nuclear_Reactors then
 	require("prototypes.autoplace-controls")
 	require("prototypes.nuclear-reactors.nuclear-entities.chemical-processor")
 	require("prototypes.nuclear-reactors.nuclear-entities.nuclear-reactor")
+	require("prototypes.nuclear-reactors.nuclear-entities.dynamo")
 	require("prototypes.nuclear-reactors.nuclear-items.fuel")
 	require("prototypes.nuclear-reactors.nuclear-items.items")
 	require("prototypes.nuclear-reactors.nuclear-items.reactor-item")

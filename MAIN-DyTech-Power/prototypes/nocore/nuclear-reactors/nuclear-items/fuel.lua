@@ -2,46 +2,6 @@ data:extend(
 {
   {
 	type = "item",
-	name = "reactor-fuel",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/reactor-fuel.png",
-	flags = {"goes-to-main-inventory"},
-	subgroup = "dytech-nuclear-uranium",
-	fuel_value = "10MJ",
-	order = "100",
-	stack_size = 10000
-  },
-    {
-	type = "item",
-	name = "reactor-fuel-100",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/reactor-fuel.png",
-	flags = {"goes-to-main-inventory"},
-	subgroup = "dytech-nuclear-uranium",
-	fuel_value = "100MJ",
-	order = "100",
-	stack_size = 10000
-  },
-  {
-	type = "item",
-	name = "reactor-fuel-1000",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/reactor-fuel.png",
-	flags = {"goes-to-main-inventory"},
-	subgroup = "dytech-nuclear-uranium",
-	fuel_value = "1000MJ",
-	order = "100",
-	stack_size = 10000
-  },
-    {
-	type = "item",
-	name = "reactor-fuel-10000",
-	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/reactor-fuel.png",
-	flags = {"goes-to-main-inventory"},
-	subgroup = "dytech-nuclear-uranium",
-	fuel_value = "10000MJ",
-	order = "100",
-	stack_size = 10000
-  },
-  {
-	type = "item",
 	name = "u-235-0-7", -- Mined, first tier. 0.7% of mass is uranium-235.
 	icon = "__MAIN-DyTech-Power__/graphics/nuclear-reactor/icons/uranium/u235-0.7.png",
 	flags = {"goes-to-main-inventory"},

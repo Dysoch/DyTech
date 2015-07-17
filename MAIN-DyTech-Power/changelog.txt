@@ -25,3 +25,6 @@
 
 05-07-15:
 - More scripting done. The checking for items in the reactor now works.
+
+10-07-15:
+- Broke the checking for items. Once there are more than 1 reactors the system will break.

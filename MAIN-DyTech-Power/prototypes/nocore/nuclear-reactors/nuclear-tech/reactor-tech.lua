@@ -10,10 +10,6 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "nuclear-reactor"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = "chemical-processor"
-			}
 		},
 		prerequisites = {"productivity-module-3"},
 		unit =
@@ -26,7 +22,7 @@ data:extend(
 				{"science-pack-3", 1},
 				{"alien-science-pack", 1}
 			},
-			time = 30
+			time = 60
 		},
 		order = "a-b"
 	}

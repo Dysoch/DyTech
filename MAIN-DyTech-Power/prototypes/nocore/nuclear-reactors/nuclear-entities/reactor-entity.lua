@@ -139,29 +139,6 @@ data:extend(
 			height = 33,
 			shift = {0.3, 0}
 		}
-	},
-		{
-		type = "container",
-		name = "nuclear-reactor-output-container",
-		icon = "__base__/graphics/icons/wooden-chest.png",
-		flags = {"placeable-neutral", "player-creation"},
-		mineable = {mining_time = 1, result = ""},
-		max_health = 50,
-		corpse = "small-remnants",
-		collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
-		fast_replaceable_group = "container",
-		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-		inventory_size = 1,
-		open_sound = { filename = "__base__/sound/wooden-chest-open.ogg" },
-		close_sound = { filename = "__base__/sound/wooden-chest-close.ogg" },
-		picture =
-		{
-			filename = "__base__/graphics/entity/wooden-chest/wooden-chest.png",
-			priority = "extra-high",
-			width = 46,
-			height = 33,
-			shift = {0.3, 0}
-		}
 	}
 }
 )
