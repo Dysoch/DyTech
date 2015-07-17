@@ -23,6 +23,7 @@
 [*] Added armored versions of those Gun Turrets
 [*] Added 12 Ammo Capsules. They are used by Capsule Turret.
 [*] Added new Ammo Types. Acid, Fire, Poison and Plasma bullets.
+[*] Added 5 Difficulty Levels. All features of Enemies change according to difficulty! (max spawned units, health, spawn ratios, etc)
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!

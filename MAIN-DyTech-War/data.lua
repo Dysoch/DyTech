@@ -27,6 +27,12 @@ require("prototypes.enemies.projectiles")
 require("prototypes.enemies.recipe")
 end
 
+--[[ Dyzilla Check ]]--
+if Dyzilla_Spawner then
+require("prototypes.dyzilla.spawner")
+require("prototypes.dyzilla.units")
+end
+
 --[[ Ammo Check ]]--
 if Ammo then 
 require("prototypes.ammo.item")
