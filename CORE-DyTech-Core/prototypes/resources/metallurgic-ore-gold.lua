@@ -85,15 +85,18 @@ data:extend(
       },
     },
     stage_counts = {600, 500, 400, 300, 200, 100, 40, 20},
-	stages = 
-	{
-	  filename = "__CORE-DyTech-Core__/graphics/metallurgy/gold/ore.png",
-	  priority = "extra-high",
-	  width = 38,
-	  height = 38,
-	  frame_count = 3,
-	  direction_count = 8
-	},
+    stages =
+    {
+      sheet =
+      {
+	    filename = "__CORE-DyTech-Core__/graphics/metallurgy/gold/ore.png",
+		priority = "extra-high",
+		width = 38,
+		height = 38,
+		frame_count = 3,
+        variation_count = 8
+      }
+    },
     map_color = { r = 1, g = 0.9, b = 0.2 }
   }
 }

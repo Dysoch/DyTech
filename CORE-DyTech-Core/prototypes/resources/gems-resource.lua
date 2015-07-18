@@ -88,7 +88,7 @@ data:extend(
         },
       }
     },
-    collision_box = {{ -0.5, -0.5}, {0.5, 0.5}},
+    collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
     autoplace =
     {
@@ -163,12 +163,15 @@ data:extend(
     stage_counts = {1000, 600, 400, 200, 100, 50, 20, 10},
     stages =
     {
-      filename = "__CORE-DyTech-Core__/graphics/gems/gemstone-deposit.png",
-      priority = "extra-high",
-      width = 38,
-      height = 38,
-      frame_count = 3,
-      direction_count = 8
+      sheet =
+	  {
+		filename = "__CORE-DyTech-Core__/graphics/gems/gemstone-deposit.png",
+		priority = "extra-high",
+		width = 38,
+		height = 38,
+		frame_count = 3,
+        variation_count = 8
+      }
     },
     map_color = {r=1, g=1, b=1},
     map_grid = false

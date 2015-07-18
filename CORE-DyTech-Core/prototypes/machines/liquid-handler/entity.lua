@@ -105,7 +105,10 @@ data:extend(
       emissions = 0.01 / 2.5
     },
     energy_usage = "50kW",
-    module_slots = 2,
+    module_specification =
+    {
+      module_slots = 2
+    },
     allowed_effects = {"consumption", "speed", "pollution"},
     ingredient_count = 10,
     crafting_categories = {"liquid-handler"},
