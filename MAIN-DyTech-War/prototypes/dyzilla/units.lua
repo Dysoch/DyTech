@@ -27,21 +27,12 @@ data:extend(
     },
     attack_parameters =
     {
+    type = "projectile",
       range = 1.5,
       cooldown = 35,
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_fire(5),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation(Enemies.BerserkerScale, Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
     },
 	vision_distance = 100,
@@ -50,7 +41,9 @@ data:extend(
     pollution_to_join_attack = 0,
 	distraction_cooldown = 300,
     corpse = "dyzilla-unit-1-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation(Enemies.BerserkerScale, Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   

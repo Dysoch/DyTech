@@ -9,11 +9,34 @@ data:extend(
     order="b-b-g",
     subgroup="enemies",
     resistances = Resistances.Tier6,
+    working_sound = {
+      sound =
+      {
+        {
+          filename = "__base__/sound/creatures/spawner.ogg",
+          volume = 1.0
+        }
+      },
+      apparent_volume = 2
+    },
+    dying_sound =
+    {
+      {
+        filename = "__base__/sound/creatures/spawner-death-1.ogg",
+        volume = 1.0
+      },
+      {
+        filename = "__base__/sound/creatures/spawner-death-2.ogg",
+        volume = 1.0
+      }
+    },
     healing_per_tick = 0.005,
     collision_box = {{-3.2, -2.2}, {2.2, 2.2}},
     selection_box = {{-3.5, -2.5}, {2.5, 2.5}},
     -- in ticks per 1 pu
-    pollution_cooldown = 10,
+    pollution_absorbtion_absolute = 20,
+    pollution_absorbtion_proportional = 0.01,
+    pollution_to_enhance_spawning = 30000,
     corpse = "dyzilla-spawner-corpse",
     dying_explosion = "blood-explosion-huge",
     loot =

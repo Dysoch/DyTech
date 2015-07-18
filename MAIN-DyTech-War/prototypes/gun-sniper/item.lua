@@ -9,6 +9,7 @@ data:extend(
     order = "a[sniper]",
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "sniper-ammo",
       cooldown = 2 * 60,
       movement_slow_down_factor = 0.6,

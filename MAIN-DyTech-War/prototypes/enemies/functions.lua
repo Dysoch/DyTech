@@ -90,6 +90,7 @@ end
 function spitterattackparametersFire(data)
   return
   {
+    type = "projectile",
     ammo_category = "rocket",
     cooldown = data.cooldown,
     range = data.range,
@@ -110,6 +111,7 @@ function spitterattackparametersFire(data)
         }
       }
     },
+    sound = make_spitter_roars(0.75),
     animation = spitterattackanimation(data.scale, data.tint),
   }
 end
@@ -117,6 +119,7 @@ end
 function spitterattackparametersLaser(data)
   return
   {
+    type = "projectile",
     ammo_category = "rocket",
     cooldown = data.cooldown,
     range = data.range,
@@ -137,6 +140,7 @@ function spitterattackparametersLaser(data)
         }
       }
     },
+    sound = make_spitter_roars(0.75),
     animation = spitterattackanimation(data.scale, data.tint),
   }
 end
@@ -144,6 +148,7 @@ end
 function spitterattackparametersAcid(data)
   return
   {
+    type = "projectile",
     ammo_category = "rocket",
     cooldown = data.cooldown,
     range = data.range,
@@ -164,6 +169,7 @@ function spitterattackparametersAcid(data)
         }
       }
     },
+    sound = make_spitter_roars(0.75),
     animation = spitterattackanimation(data.scale, data.tint),
   }
 end

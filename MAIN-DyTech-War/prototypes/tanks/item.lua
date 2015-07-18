@@ -29,18 +29,13 @@ data:extend(
     order = "z[tank]-a[laser]",
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "battery-tank",
       cooldown = 8,
       movement_slow_down_factor = 0.6,
       projectile_creation_distance = 0.6,
       range = 30,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.8
-        }
-      }
+      sound = make_laser_sounds(0.5),
     },
     stack_size = 1
   },
@@ -51,6 +46,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     ammo_type =
     {
+      type = "projectile",
       category = "battery-tank",
       action =
       {

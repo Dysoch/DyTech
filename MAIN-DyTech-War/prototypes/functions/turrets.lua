@@ -31,6 +31,7 @@ end
 function Gun_Turret_Attack(Ammo, Cooldown, Range)
 return
     {
+      type = "projectile",
       ammo_category = Ammo,
       cooldown = Cooldown,
       projectile_center = {0, 0.6},
@@ -47,13 +48,7 @@ return
         starting_frame_speed_deviation = 0.1
       },
       range = Range,
-      sound =
-      {
-        {
-          filename = "__base__/sound/gunshot.ogg",
-          volume = 0.3
-        }
-      }
+      sound = make_heavy_gunshot_sounds(),
     }
 end
 

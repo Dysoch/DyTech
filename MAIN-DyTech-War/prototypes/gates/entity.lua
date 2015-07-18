@@ -84,15 +84,24 @@ data:extend(
       size = 1,
       intensity = 0.3
     },
-    open_trigger_effect =
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    open_sound =
     {
-      type = "play-sound",
-      sound = { filename = "__base__/sound/gate1.ogg", volume = 0.5 }
+      variations = { filename = "__base__/sound/gate1.ogg", volume = 0.5 },
+      aggregation =
+      {
+        max_count = 1,
+        remove = true
+      }
     },
-    close_trigger_effect =
+    close_sound =
     {
-      type = "play-sound",
-      sound = { filename = "__base__/sound/gate1.ogg", volume = 0.5 }
+      variations = { filename = "__base__/sound/gate1.ogg", volume = 0.5 },
+      aggregation =
+      {
+        max_count = 1,
+        remove = true
+      }
     }
   },
   {
@@ -173,15 +182,24 @@ data:extend(
       size = 1,
       intensity = 0.3
     },
-    open_trigger_effect =
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    open_sound =
     {
-      type = "play-sound",
-      sound = { filename = "__base__/sound/gate1.ogg", volume = 0.5 }
+      variations = { filename = "__base__/sound/gate1.ogg", volume = 0.5 },
+      aggregation =
+      {
+        max_count = 1,
+        remove = true
+      }
     },
-    close_trigger_effect =
+    close_sound =
     {
-      type = "play-sound",
-      sound = { filename = "__base__/sound/gate1.ogg", volume = 0.5 }
+      variations = { filename = "__base__/sound/gate1.ogg", volume = 0.5 },
+      aggregation =
+      {
+        max_count = 1,
+        remove = true
+      }
     }
   },
 }

@@ -9,18 +9,13 @@ data:extend(
     order = "b[laser]",
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "battery",
       cooldown = 8,
       movement_slow_down_factor = 0.6,
       projectile_creation_distance = 0.6,
       range = 25,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.8
-        }
-      }
+      sound = make_laser_sounds(0.5),
     },
     stack_size = 1
   },
@@ -33,18 +28,13 @@ data:extend(
     order = "a[laser]-b[shotgun]",
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "battery-shotgun",
       cooldown = 8,
       movement_slow_down_factor = 0.6,
       projectile_creation_distance = 0.6,
       range = 25,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.8
-        }
-      }
+      sound = make_laser_sounds(0.5),
     },
     stack_size = 1
   },

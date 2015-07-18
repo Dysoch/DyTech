@@ -13,28 +13,71 @@ data:extend(
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(SniperAnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(SniperAnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(SniperAnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(SniperAnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(SniperBaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("sniper-ammo", 2*60, 50),
   },
   {
@@ -46,28 +89,71 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun1AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun1AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun1AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun1AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun1BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("bullet", 10, 26),
   },
   {
@@ -79,28 +165,71 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun2AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun2AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun2AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun2AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun2BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("shotgun-shell", 15, 26),
   },
   {
@@ -112,28 +241,71 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun3AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun3AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun3AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun3AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun3BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("rocket", 60*2, 40),
   },
   {
@@ -145,28 +317,71 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun4AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun4AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun4AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun4AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun4BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("cannon-shell", 60*1, 50),
   },
   {
@@ -178,28 +393,71 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun5AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun5AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun5BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
   },
   {
@@ -211,28 +469,71 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun6AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun6AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun6BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("battery", 60*1, 40),
   },
   {
@@ -244,28 +545,71 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun7AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun7AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun7BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("battery-shotgun", 60*1, 40),
   },
   {
@@ -277,28 +621,71 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun1AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun1AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun1AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun1AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun1BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("bullet", 10, 26),
   },
   {
@@ -310,28 +697,71 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun2AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun2AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun2AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun2AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun2BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("shotgun-shell", 15, 26),
   },
   {
@@ -343,28 +773,71 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun3AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun3AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun3AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun3AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun3BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("rocket", 60*2, 40),
   },
   {
@@ -376,28 +849,71 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun4AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun4AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun4AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun4AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun4BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("cannon-shell", 60*1, 50),
   },
   {
@@ -409,28 +925,71 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun5AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun5AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun5AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun5BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("capsule", 60*30, 50),
   },
   {
@@ -442,28 +1001,71 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun6AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun6AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun6AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun6BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("battery", 60*1, 40),
   },
   {
@@ -475,28 +1077,71 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{-0.4, -0.9 }, {0.4, 0.9}},
-    selection_box = {{-0.5, -1 }, {0.5, 1}},
+    collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
+    selection_box = {{-1, -1 }, {1, 1}},
     rotation_speed = 0.015,
     preparing_speed = 0.08,
     folding_speed = 0.08,
-    dying_explosion = "huge-explosion",
-    inventory_size = 2,
-	automated_ammo_count = 20,
-    folded_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = gun_turret_extension_DyTech(Gun7AnimationTint),
-    prepared_animation = Gun_Turret_Prepared_Animation(Gun7AnimationTint),
-    folding_animation = (function()
-                          local res = util.table.deepcopy(gun_turret_extension_DyTech(Gun7AnimationTint))
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture = Gun_Turret_Base(Gun7BaseTint),
+    dying_explosion = "medium-explosion",
+    inventory_size = 1,
+    automated_ammo_count = 10,
+    attacking_speed = 0.5,
+    folded_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{frame_count=1, line_length = 1},
+        gun_turret_extension_mask{frame_count=1, line_length = 1},
+        gun_turret_extension_shadow{frame_count=1, line_length = 1}
+      }
+    },
+    preparing_animation = 
+    {
+      layers =
+      {
+        gun_turret_extension{},
+        gun_turret_extension_mask{},
+        gun_turret_extension_shadow{}
+      }
+    },
+    prepared_animation = gun_turret_attack{frame_count=1},
+    attacking_animation = gun_turret_attack{},
+    folding_animation = 
+    { 
+      layers = 
+      { 
+        gun_turret_extension{run_mode = "backward"},
+        gun_turret_extension_mask{run_mode = "backward"},
+        gun_turret_extension_shadow{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          priority = "high",
+          width = 90,
+          height = 75,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.046875},
+        },
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
+          line_length = 1,
+          width = 52,
+          height = 47,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = {0.0625, -0.234375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Gun_Turret_Attack("battery-shotgun", 60*1, 40),
   },
 }

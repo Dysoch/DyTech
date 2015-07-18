@@ -22,7 +22,7 @@ data:extend(
     duration = 60 * 30,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 0698, g = 0.133, b = 0.133 },
+    color = { r = 0.698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",
@@ -74,7 +74,7 @@ data:extend(
     duration = 60 * 45,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 0698, g = 0.133, b = 0.133 },
+    color = { r = 0.698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",
@@ -126,7 +126,7 @@ data:extend(
     duration = 60 * 60,
     fade_away_duration = 2 * 60,
     spread_duration = 10,
-    color = { r = 0698, g = 0.133, b = 0.133 },
+    color = { r = 0.698, g = 0.133, b = 0.133 },
     action =
     {
       type = "direct",

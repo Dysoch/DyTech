@@ -27,19 +27,14 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "electric",
       cooldown = 15,
       damage_modifier = 1,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 22.5,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      sound = make_laser_sounds(0.5),
       ammo_type =
       {
         type = "projectile",
@@ -89,19 +84,14 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "electric",
       cooldown = 10,
       damage_modifier = 1,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
       range = 30,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      sound = make_laser_sounds(0.5),
       ammo_type =
       {
         type = "projectile",

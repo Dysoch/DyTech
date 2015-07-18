@@ -53,8 +53,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (5000*Enemies.Young_Factor),
     corpse = "berserk-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.BerserkerScale*Enemies.Young_Factor), Enemies.Berserker_Tint1)
   },
   {
@@ -105,8 +106,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (10000*Enemies.Young_Factor),
     corpse = "elder-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.ElderScale*Enemies.Young_Factor), Enemies.Elder_Tint1)
   },
   {
@@ -165,8 +167,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (20000*Enemies.Young_Factor),
     corpse = "king-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.KingScale*Enemies.Young_Factor), Enemies.King_Tint1)
   },
   {
@@ -230,15 +233,17 @@ data:extend(
                                                  cooldown=(100*Enemies.Young_Factor),
                                                  damage_modifier=(5*Enemies.Young_Factor),
                                                  scale=(Enemies.QueenScale*Enemies.Young_Factor),
-                                                 tint=Enemies.Queen_Tint1}),
+                                                 tint=Enemies.Queen_Tint1,
+                                                 roarvolume=0.7}),
     vision_distance = (30*Enemies.Young_Factor),
     movement_speed = (0.01*Enemies.Young_Factor),
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Young_Factor),
     corpse = "queen-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.QueenScale*Enemies.Young_Factor), Enemies.Queen_Tint1)
   },
 	-- Teenagers --
@@ -290,8 +295,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (5000*Enemies.Teen_Factor),
     corpse = "berserk-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.BerserkerScale*Enemies.Teen_Factor), Enemies.Berserker_Tint1)
   },
   {
@@ -342,8 +348,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (10000*Enemies.Teen_Factor),
     corpse = "elder-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.ElderScale*Enemies.Teen_Factor), Enemies.Elder_Tint1)
   },
   {
@@ -402,8 +409,9 @@ data:extend(
     -- in pu
     pollution_to_join_attack = (20000*Enemies.Teen_Factor),
     corpse = "king-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.KingScale*Enemies.Teen_Factor), Enemies.King_Tint1)
   },
   {
@@ -467,15 +475,17 @@ data:extend(
                                                  cooldown=(100*Enemies.Teen_Factor),
                                                  damage_modifier=(5*Enemies.Teen_Factor),
                                                  scale=(Enemies.QueenScale*Enemies.Teen_Factor),
-                                                 tint=Enemies.Queen_Tint1}),
+                                                 tint=Enemies.Queen_Tint1,
+                                                 roarvolume=0.7}),
     vision_distance = (30*Enemies.Teen_Factor),
     movement_speed = (0.01*Enemies.Teen_Factor),
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Teen_Factor),
     corpse = "queen-spitter-corpse",
-    dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    working_sound = make_biter_calls(0.75),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.QueenScale*Enemies.Teen_Factor), Enemies.Queen_Tint1)
   },
 	-- Adults --
@@ -528,7 +538,8 @@ data:extend(
     pollution_to_join_attack = (5000*Enemies.Adult_Factor),
     corpse = "berserk-spitter-corpse",
     dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    working_sound = make_biter_calls(0.9),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.BerserkerScale*Enemies.Adult_Factor), Enemies.Berserker_Tint1)
   },
   {
@@ -580,7 +591,8 @@ data:extend(
     pollution_to_join_attack = (10000*Enemies.Adult_Factor),
     corpse = "elder-spitter-corpse",
     dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    working_sound = make_biter_calls(0.9),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.ElderScale*Enemies.Adult_Factor), Enemies.Elder_Tint1)
   },
   {
@@ -640,7 +652,8 @@ data:extend(
     pollution_to_join_attack = (20000*Enemies.Adult_Factor),
     corpse = "king-spitter-corpse",
     dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    working_sound = make_biter_calls(0.9),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.KingScale*Enemies.Adult_Factor), Enemies.King_Tint1)
   },
   {
@@ -704,7 +717,8 @@ data:extend(
                                                  cooldown=(100*Enemies.Adult_Factor),
                                                  damage_modifier=(5*Enemies.Adult_Factor),
                                                  scale=(Enemies.QueenScale*Enemies.Adult_Factor),
-                                                 tint=Enemies.Queen_Tint1}),
+                                                 tint=Enemies.Queen_Tint1,
+                                                 roarvolume=0.7}),
     vision_distance = (30*Enemies.Adult_Factor),
     movement_speed = (0.01*Enemies.Adult_Factor),
     distance_per_frame = (0.2*Enemies.Adult_Factor),
@@ -712,7 +726,8 @@ data:extend(
     pollution_to_join_attack = (50000*Enemies.Adult_Factor),
     corpse = "queen-spitter-corpse",
     dying_explosion = "blood-explosion-big",
-    dying_sound = enemydyingsound(),
+    working_sound = make_biter_calls(0.9),
+    dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1)
   },
   

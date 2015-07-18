@@ -31,46 +31,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 12,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 25,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-emerald-3",
-            starting_speed = 0.4
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -105,46 +163,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 12,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 25,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-emerald-3",
-            starting_speed = 0.4
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -176,46 +292,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 15,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 50,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-topaz-3",
-            starting_speed = 0.4
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -250,46 +424,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 15,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 50,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-topaz-3",
-            starting_speed = 0.4
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -321,46 +553,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 3,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 20,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-sapphire-2",
-            starting_speed = 0.8
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -395,46 +685,104 @@ data:extend(
     },
     attack_parameters =
     {
-      ammo_category = "combat-robot-laser",
-      cooldown = 3,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 20,
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      },
+      type = "beam",
+      ammo_category = "combat-robot-beam",
+      cooldown = 20,
+      range = 15,
       ammo_type =
       {
-        category = "combat-robot-laser",
+        category = "combat-robot-beam",
         action =
         {
           type = "direct",
           action_delivery =
           {
-            type = "projectile",
-            projectile = "laser-sapphire-2",
-            starting_speed = 0.8
+            type = "beam",
+            beam = "electric-beam",
+            max_length = 15,
+            duration = 20,
+            source_offset = {0.15, -0.5},
           }
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/destroyer.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          y = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875},
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          y = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot.png",
+          priority = "high",
+          line_length = 32,
+          width = 45,
+          height = 39,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.546875}
+        },
+        {
+          filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-mask.png",
+          priority = "high",
+          line_length = 32,
+          width = 27,
+          height = 21,
+          frame_count = 1,
+          direction_count = 32,
+          shift = {0.078125, -0.734375},
+          apply_runtime_tint = true
+        }
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/destroyer-robot/destroyer-robot-shadow.png",
+      priority = "high",
+      line_length = 32,
+      width = 48,
+      height = 32,
+      frame_count = 1,
+      direction_count = 32,
+      shift = {0.78125, 0}
     }
   },
   {
@@ -465,18 +813,13 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       ammo_category = "bullet",
       cooldown = 20,
-      projectile_center = {0, 0},
+      projectile_center = {0, 1},
       projectile_creation_distance = 0.6,
       range = 15,
-      sound =
-      {
-        {
-          filename = "__base__/sound/gunshot.ogg",
-          volume = 0.3
-        }
-      },
+      sound = make_light_gunshot_sounds(),
       ammo_type =
       {
         category = "bullet",
@@ -488,14 +831,14 @@ data:extend(
             type = "instant",
             source_effects =
             {
-              type = "create-entity",
-              entity_name = "explosion-gunshot"
+              type = "create-explosion",
+              entity_name = "explosion-gunshot-small"
             },
             target_effects =
             {
               {
                 type = "create-entity",
-                entity_name = "explosion-gunshot"
+                entity_name = "explosion-hit"
               },
               {
                 type = "damage",
@@ -506,19 +849,83 @@ data:extend(
         }
       }
     },
-    picture =
+    idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/defender.png",
-      priority = "high",
-      width = 37,
-      height = 34
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/defender-robot/defender-robot.png",
+          priority = "high",
+          line_length = 16,
+          width = 32,
+          height = 33,
+          frame_count = 1,
+          direction_count = 16,
+          shift = {0, 0.015625}
+        },
+        {
+          filename = "__base__/graphics/entity/defender-robot/defender-robot-mask.png",
+          priority = "high",
+          line_length = 16,
+          width = 18,
+          height = 16,
+          frame_count = 1,
+          direction_count = 16,
+          shift = {0, -0.125},
+          apply_runtime_tint = true
+        },
+      }
     },
-    shadow =
+    shadow_idle =
     {
-      filename = "__base__/graphics/entity/combat-robot/combat-robot-shadow.png",
+      filename = "__base__/graphics/entity/defender-robot/defender-robot-shadow.png",
       priority = "high",
-      width = 52,
-      height = 37
+      line_length = 16,
+      width = 43,
+      height = 23,
+      frame_count = 1,
+      direction_count = 16,
+      shift = {0.859375, 0.609375}
+    },
+    in_motion =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/defender-robot/defender-robot.png",
+          priority = "high",
+          line_length = 16,
+          width = 32,
+          height = 33,
+          frame_count = 1,
+          direction_count = 16,
+          shift = {0, 0.015625},
+          y = 33
+        },
+        {
+          filename = "__base__/graphics/entity/defender-robot/defender-robot-mask.png",
+          priority = "high",
+          line_length = 16,
+          width = 18,
+          height = 16,
+          frame_count = 1,
+          direction_count = 16,
+          shift = {0, -0.125},
+          apply_runtime_tint = true,
+          y = 16
+        },
+      }
+    },
+    shadow_in_motion =
+    {
+      filename = "__base__/graphics/entity/defender-robot/defender-robot-shadow.png",
+      priority = "high",
+      line_length = 16,
+      width = 43,
+      height = 23,
+      frame_count = 1,
+      direction_count = 16,
+      shift = {0.859375, 0.609375}
     }
   },
 }

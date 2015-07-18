@@ -7,38 +7,41 @@ data:extend(
     acceleration = 0.005,
     action =
     {
-      type = "direct",
-      action_delivery =
       {
-        type = "instant",
-        target_effects =
+        type = "direct",
+        action_delivery =
         {
+          type = "instant",
+          target_effects =
           {
-            type = "create-entity",
-            entity_name = "huge-explosion"
-          },
-          {
-            type = "nested-result",
-            action =
             {
-              type = "area",
-              perimeter = 10,
-              action_delivery =
-              {
-                type = "instant",
-                target_effects =
-                {
-                  {
-                    type = "damage",
-                    damage = {amount = 90, type = "explosion"}
-                  },
-                  {
-                    type = "create-entity",
-                    entity_name = "explosion"
-                  }
-                }
-              }
+            type = "create-entity",
+            entity_name = "medium-explosion"
             },
+            {
+            type = "create-entity",
+            entity_name = "small-scorchmark",
+            check_buildability = true
+            }
+          }
+        }
+      },
+      {
+        type = "area",
+        perimeter = 9,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+            type = "damage",
+            damage = {amount = 90, type = "explosion"}
+            },
+            {
+            type = "create-entity",
+            entity_name = "explosion"
+            }
           }
         }
       }
@@ -68,38 +71,41 @@ data:extend(
     acceleration = 0.005,
     action =
     {
-      type = "direct",
-      action_delivery =
       {
-        type = "instant",
-        target_effects =
+        type = "direct",
+        action_delivery =
         {
+          type = "instant",
+          target_effects =
           {
-            type = "create-entity",
-            entity_name = "huge-explosion"
-          },
-          {
-            type = "nested-result",
-            action =
             {
-              type = "area",
-              perimeter = 15,
-              action_delivery =
-              {
-                type = "instant",
-                target_effects =
-                {
-                  {
-                    type = "damage",
-                    damage = {amount = 200, type = "explosion"}
-                  },
-                  {
-                    type = "create-entity",
-                    entity_name = "explosion"
-                  }
-                }
-              }
+            type = "create-entity",
+            entity_name = "medium-explosion"
             },
+            {
+            type = "create-entity",
+            entity_name = "small-scorchmark",
+            check_buildability = true
+            }
+          }
+        }
+      },
+      {
+        type = "area",
+        perimeter = 15,
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+            type = "damage",
+            damage = {amount = 200, type = "explosion"}
+            },
+            {
+            type = "create-entity",
+            entity_name = "explosion"
+            }
           }
         }
       }

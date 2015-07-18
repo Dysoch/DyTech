@@ -43,21 +43,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.5*Enemies.Young_Factor),
       cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_fire((60*Enemies.Young_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Young_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
     },
 	vision_distance = (30*Enemies.Young_Factor),
@@ -66,7 +57,9 @@ data:extend(
     pollution_to_join_attack = (5000*Enemies.Young_Factor),
 	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "berserk-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Young_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   {
@@ -107,21 +100,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.0*Enemies.Young_Factor),
       cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_laser((75*Enemies.Young_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.ElderScale*Enemies.Young_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
     },
 	vision_distance = (30*Enemies.Young_Factor),
@@ -130,7 +114,9 @@ data:extend(
     pollution_to_join_attack = (10000*Enemies.Young_Factor),
 	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "elder-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Young_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
   },
   {
@@ -179,21 +165,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (4.5*Enemies.Young_Factor),
       cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_poison((35*Enemies.Young_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.KingScale*Enemies.Young_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
     },
 	vision_distance = (30*Enemies.Young_Factor),
@@ -202,7 +179,9 @@ data:extend(
     pollution_to_join_attack = (20000*Enemies.Young_Factor),
 	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "king-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.KingScale*Enemies.Young_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
   },
   {
@@ -263,21 +242,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (2.0*Enemies.Young_Factor),
       cooldown = (35*Enemies.Young_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type((25*Enemies.Young_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.QueenScale*Enemies.Young_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
     },
 	vision_distance = (30*Enemies.Young_Factor),
@@ -286,7 +256,9 @@ data:extend(
     pollution_to_join_attack = (50000*Enemies.Young_Factor),
 	distraction_cooldown = (300*Enemies.Young_Factor),
     corpse = "queen-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Young_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
   },
 	-- Teenagers --
@@ -328,21 +300,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.5*Enemies.Teen_Factor),
       cooldown = (35*Enemies.Teen_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_fire((60*Enemies.Teen_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Teen_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
     },
 	vision_distance = (30*Enemies.Teen_Factor),
@@ -351,7 +314,9 @@ data:extend(
     pollution_to_join_attack = (5000*Enemies.Teen_Factor),
 	distraction_cooldown = (300*Enemies.Teen_Factor),
     corpse = "berserk-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Teen_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   {
@@ -392,21 +357,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.0*Enemies.Teen_Factor),
       cooldown = (35*Enemies.Teen_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_laser((75*Enemies.Teen_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.ElderScale*Enemies.Teen_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
     },
 	vision_distance = (30*Enemies.Teen_Factor),
@@ -415,7 +371,9 @@ data:extend(
     pollution_to_join_attack = (10000*Enemies.Teen_Factor),
 	distraction_cooldown = (300*Enemies.Teen_Factor),
     corpse = "elder-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Teen_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
   },
   {
@@ -464,21 +422,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (4.5*Enemies.Teen_Factor),
       cooldown = (35*Enemies.Teen_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_poison((35*Enemies.Teen_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.KingScale*Enemies.Teen_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
     },
 	vision_distance = (30*Enemies.Teen_Factor),
@@ -487,7 +436,9 @@ data:extend(
     pollution_to_join_attack = (20000*Enemies.Teen_Factor),
 	distraction_cooldown = (300*Enemies.Teen_Factor),
     corpse = "king-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.KingScale*Enemies.Teen_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
   },
   {
@@ -548,21 +499,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (2.0*Enemies.Teen_Factor),
       cooldown = (35*Enemies.Teen_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type((25*Enemies.Teen_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.QueenScale*Enemies.Teen_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
     },
 	vision_distance = (30*Enemies.Teen_Factor),
@@ -571,7 +513,9 @@ data:extend(
     pollution_to_join_attack = (50000*Enemies.Teen_Factor),
 	distraction_cooldown = (300*Enemies.Teen_Factor),
     corpse = "queen-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Teen_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
   },
 	-- Adults --
@@ -613,21 +557,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.5*Enemies.Adult_Factor),
       cooldown = (35*Enemies.Adult_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_fire((60*Enemies.Adult_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.BerserkerScale*Enemies.Adult_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
     },
 	vision_distance = (30*Enemies.Adult_Factor),
@@ -636,7 +571,9 @@ data:extend(
     pollution_to_join_attack = (5000*Enemies.Adult_Factor),
 	distraction_cooldown = (300*Enemies.Adult_Factor),
     corpse = "berserk-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.BerserkerScale*Enemies.Adult_Factor), Enemies.Berserker_Tint1, Enemies.Berserker_Tint2)
   },
   {
@@ -677,21 +614,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (1.0*Enemies.Adult_Factor),
       cooldown = (35*Enemies.Adult_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_laser((75*Enemies.Adult_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.ElderScale*Enemies.Adult_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
     },
 	vision_distance = (30*Enemies.Adult_Factor),
@@ -700,7 +628,9 @@ data:extend(
     pollution_to_join_attack = (10000*Enemies.Adult_Factor),
 	distraction_cooldown = (300*Enemies.Adult_Factor),
     corpse = "elder-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.ElderScale*Enemies.Adult_Factor), Enemies.Elder_Tint1, Enemies.Elder_Tint2)
   },
   {
@@ -749,21 +679,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (4.5*Enemies.Adult_Factor),
       cooldown = (35*Enemies.Adult_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_poison((35*Enemies.Adult_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.KingScale*Enemies.Adult_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
     },
 	vision_distance = (30*Enemies.Adult_Factor),
@@ -772,7 +693,9 @@ data:extend(
     pollution_to_join_attack = (20000*Enemies.Adult_Factor),
 	distraction_cooldown = (300*Enemies.Adult_Factor),
     corpse = "king-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.KingScale*Enemies.Adult_Factor), Enemies.King_Tint1, Enemies.King_Tint2)
   },
   {
@@ -833,21 +756,12 @@ data:extend(
     },
     attack_parameters =
     {
+      type = "projectile",
       range = (2.0*Enemies.Adult_Factor),
       cooldown = (35*Enemies.Adult_Factor),
       ammo_category = "melee",
       ammo_type = make_unit_melee_ammo_type((25*Enemies.Adult_Factor)),
-      sound =
-      {
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-1.ogg",
-          volume = 0.8
-        },
-        {
-          filename = "__base__/sound/creatures/biter-roar-long-2.ogg",
-          volume = 0.8
-        }
-      },
+      sound = make_biter_roars(0.5),
       animation = biterattackanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
     },
 	vision_distance = (30*Enemies.Adult_Factor),
@@ -856,7 +770,9 @@ data:extend(
     pollution_to_join_attack = (50000*Enemies.Adult_Factor),
 	distraction_cooldown = (300*Enemies.Adult_Factor),
     corpse = "queen-biter-corpse",
-    dying_sound = enemydyingsound(),
+    dying_explosion = "blood-explosion-small",
+    dying_sound =  make_biter_dying_sounds(1.0),
+    working_sound =  make_biter_calls(0.7),
     run_animation = biterrunanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1, Enemies.Queen_Tint2)
   },
   

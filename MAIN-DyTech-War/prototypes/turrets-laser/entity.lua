@@ -1,65 +1,53 @@
-require "util"
 require "prototypes.internal-config"
---[[BASE EDIT]]--
-laser_turret_extension =
-{
-		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-ruby.png",
-		priority = "medium",
-		width = 131,
-		height = 74,
-		direction_count = 4,
-		frame_count = 5,
-		axially_symmetrical = false,
-		shift = {1.171875, -0.34375}
-}
+require "util"
 
-laser_turret_extension_sapphire =
+function laser_turret_extension(inputs)
+return
 {
-		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-sapphire.png",
-		priority = "medium",
-		width = 131,
-		height = 74,
-		direction_count = 4,
-		frame_count = 5,
-		axially_symmetrical = false,
-		shift = {1.171875, -0.34375}
+  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start.png",
+  priority = "medium",
+  width = 66,
+  height = 67,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  direction_count = 4,
+  shift = {0.0625, -0.984375}
 }
+end
 
-laser_turret_extension_emerald =
+function laser_turret_extension_shadow(inputs)
+return
 {
-		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-emerald.png",
-		priority = "medium",
-		width = 131,
-		height = 74,
-		direction_count = 4,
-		frame_count = 5,
-		axially_symmetrical = false,
-		shift = {1.171875, -0.34375}
+  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start-shadow.png",
+  width = 92,
+  height = 50,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  direction_count = 4,
+  draw_as_shadow = true,
+  shift = {1.46875, 0},
 }
+end
 
-laser_turret_extension_topaz =
+function laser_turret_extension_mask(inputs)
+return
 {
-		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-topaz.png",
-		priority = "medium",
-		width = 131,
-		height = 74,
-		direction_count = 4,
-		frame_count = 5,
-		axially_symmetrical = false,
-		shift = {1.171875, -0.34375}
+  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start-mask.png",
+  width = 51,
+  height = 47,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  apply_runtime_tint = true,
+  direction_count = 4,
+  shift = {0.078125, -1.26563},
 }
-
-laser_turret_extension_diamond =
-{
-		filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-extension-diamond.png",
-		priority = "medium",
-		width = 131,
-		height = 74,
-		direction_count = 4,
-		frame_count = 5,
-		axially_symmetrical = false,
-		shift = {1.171875, -0.34375}
-}
+end
 
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = Health.Tier2
@@ -73,15 +61,15 @@ data.raw["electric-turret"]["laser-turret"].energy_source =
       drain = "4.5kW",
       usage_priority = "primary-input",
     }
-data.raw["electric-turret"]["laser-turret"].prepared_animation.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png"
-data.raw["electric-turret"]["laser-turret"].base_picture.filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png"
 data.raw["electric-turret"]["laser-turret"].attack_parameters =
     {
+      type = "projectile",
       ammo_category = "electric",
       cooldown = 20,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
       range = 25,
+      damage_modifier = 4,
       ammo_type =
       {
         type = "projectile",
@@ -102,13 +90,7 @@ data.raw["electric-turret"]["laser-turret"].attack_parameters =
           }
         }
       },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      sound = make_laser_sounds()
     }
 
 data:extend(
@@ -128,7 +110,7 @@ data:extend(
 	fast_replaceable_group = "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -138,73 +120,128 @@ data:extend(
       drain = "6kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 20,
-      damage = 5,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 25,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "200kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-ruby-2",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -221,7 +258,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -231,73 +268,128 @@ data:extend(
       drain = "7.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-ruby.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 20,
-      damage = 6.25,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 25,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "250kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-ruby-3",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   --[[SAPPHIRE TURRETS]]--
@@ -315,7 +407,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -325,73 +417,128 @@ data:extend(
       drain = "9kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_sapphire,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-sapphire.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 18,
-      damage = 7.5,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 27.5,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "300kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-sapphire-1",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -408,7 +555,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -418,73 +565,128 @@ data:extend(
       drain = "10.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_sapphire,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-sapphire.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 16,
-      damage = 8.75,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 30,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "350kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-sapphire-2",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -501,7 +703,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -511,73 +713,128 @@ data:extend(
       drain = "12kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_sapphire,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-sapphire.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_sapphire)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 14,
-      damage = 10,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 32.5,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "400kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-sapphire-3",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   --[[EMERALD TURRETS]]--
@@ -595,7 +852,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -605,73 +862,128 @@ data:extend(
       drain = "4.8kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_emerald,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-emerald.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 20,
-      damage = 5,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 37.5,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "160kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-emerald-1",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -688,7 +1000,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -698,73 +1010,128 @@ data:extend(
       drain = "4.2kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_emerald,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-emerald.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 15,
-      damage = 7.5,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 40.63,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "140kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-emerald-2",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -781,7 +1148,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -791,73 +1158,128 @@ data:extend(
       drain = "3.6kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_emerald,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-emerald.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_emerald)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 10,
-      damage = 10,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 43.75,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "120kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-emerald-3",
-              starting_speed = 0.30
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   --[[TOPAZ TURRETS]]--
@@ -875,7 +1297,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -885,73 +1307,128 @@ data:extend(
       drain = "10.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_topaz,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-topaz.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 60,
-      damage = 25,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 62.5,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "350kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-topaz-1",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -968,7 +1445,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -978,73 +1455,128 @@ data:extend(
       drain = "12kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_topaz,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-topaz.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 45,
-      damage = 37.5,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 75,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "400kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-topaz-2",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -1061,7 +1593,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -1071,73 +1603,128 @@ data:extend(
       drain = "13.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_topaz,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-topaz.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_topaz)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 30,
-      damage = 50,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 87.5,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "450kJ",
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-topaz-3",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   --[[Diamond Turrets]]--
@@ -1155,7 +1742,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -1165,79 +1752,128 @@ data:extend(
       drain = "13.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_diamond,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-1.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 30,
-      damage = 50,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 30,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "450kJ",
-      target_type = "direction",
-      source_effects =
-      {
-        type = "create-entity",
-        entity_name = "laser-bubble"
-      },
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-diamond-1",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -1254,7 +1890,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -1264,79 +1900,128 @@ data:extend(
       drain = "13.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_diamond,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-2.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 30,
-      damage = 50,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 40,
-    ammo_type =
-    {
-      type = "projectile",
-      category = "laser-turret",
-      energy_consumption = "450kJ",
-      target_type = "direction",
-      source_effects =
-      {
-        type = "create-entity",
-        entity_name = "laser-bubble"
-      },
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-diamond-2",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
   {
@@ -1353,7 +2038,7 @@ data:extend(
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     folding_speed = 0.05,
     energy_source =
     {
@@ -1363,78 +2048,128 @@ data:extend(
       drain = "13.5kW",
       usage_priority = "primary-input",
     },
-    folded_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.frame_count = 1
-                          res.line_length = 1
-                          return res
-                       end)(),
-    preparing_animation = laser_turret_extension_diamond,
+    folded_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{frame_count=1, line_length = 1},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    },
+    preparing_animation =
+    {
+      layers =
+      {
+        laser_turret_extension{},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    },
     prepared_animation =
     {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-diamond.png",
-      priority = "medium",
-      width = 131,
-      height = 72,
-      direction_count = 64,
-      frame_count = 1,
-      line_length = 8,
-      axially_symmetrical = false,
-      shift = {1.328125, -0.375}
-    },
-    folding_animation = (function()
-                          local res = util.table.deepcopy(laser_turret_extension_diamond)
-                          res.run_mode = "backward"
-                          return res
-                       end)(),
-    base_picture =
-    {
-      filename = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-turret-base-3.png",
-      priority = "high",
-      width = 43,
-      height = 28,
-      shift = { 0.109375, 0.03125 }
-    },
-    attack_parameters =
-    {
-      ammo_category = "electric",
-      cooldown = 30,
-      damage = 50,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 50,
-	ammo_type =
-    {
-      category = "laser-turret",
-      energy_consumption = "450kJ",
-      target_type = "direction",
-      source_effects =
-      {
-        type = "create-entity",
-        entity_name = "laser-bubble"
-      },
-      action =
+      layers =
       {
         {
-          type = "direct",
-          action_delivery =
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    },
+    folding_animation = 
+    {
+      layers =
+      {
+        laser_turret_extension{run_mode = "backward"},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    },
+    base_picture =
+    {
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 }
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    },
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = 20,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = 25,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = "800kJ",
+        action =
+        {
           {
+            type = "direct",
+            action_delivery =
             {
-              type = "projectile",
-              projectile = "laser-diamond-3",
-              starting_speed = 0.28
+              {
+                type = "projectile",
+                projectile = "laser",
+                starting_speed = 0.28
+              }
             }
           }
         }
-      }
-    },
-      sound =
-      {
-        {
-          filename = "__base__/sound/laser.ogg",
-          volume = 0.4
-        }
-      }
+      },
+      sound = make_laser_sounds()
     }
   },
 }
