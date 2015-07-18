@@ -8,10 +8,10 @@ function CreateButton()
 		if Research_System then
 			RSF.RecipeAvailableToUnlockAll()
 			if not player.gui.top["DynamicsButton"] then
-				player.gui.top.add({type="button", name="DynamicsButton", caption={"dynamic-button-rs", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
+				player.gui.top.add({type="button", name="DynamicsButton", caption={"dynamic-button-rs", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
 			else 
 				player.gui.top["DynamicsButton"].destroy()
-				player.gui.top.add({type="button", name="DynamicsButton", caption={"dynamic-button-rs", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
+				player.gui.top.add({type="button", name="DynamicsButton", caption={"dynamic-button-rs", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
 			end
 		else
 			if not player.gui.top["DynamicsButton"] then
@@ -31,7 +31,7 @@ player.gui.center[guiNames.mainDynamicFlow].add({type="frame", direction="vertic
 adder = player.gui.center[guiNames.mainDynamicFlow][guiNames.mainDynamicFrame]
 if Research_System then
 	RSF.RecipeAvailableToUnlockAll()
-	adder.add({type="button", name=guiNames.ResearchButton, caption={"research-button", "(", tostring(glob.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
+	adder.add({type="button", name=guiNames.ResearchButton, caption={"research-button", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
 end
 if Auto_Researcher then 
 	adder.add({type="button", name=guiNames.AutoResearcherButton, caption={"auto-researcher"}}) 
@@ -52,7 +52,7 @@ function closeGUI(statement, PlayerIndex)
 	if statement=="all" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow] and game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow].destroy()
-			glob.MaxShown = 0
+			global.MaxShown = 0
 		end
 		if game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow] and game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow].destroy()
@@ -73,12 +73,12 @@ function closeGUI(statement, PlayerIndex)
 	elseif statement=="ResearchMain" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow] and game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainResearchFlow].destroy()
-			glob.MaxShown = 0
+			global.MaxShown = 0
 		end
 	elseif statement=="ResearchTable" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow] and game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow].valid then
 			game.players[PlayerIndex].gui.center[guiNames.mainResearchTableFlow].destroy()
-			glob.MaxShown = 0
+			global.MaxShown = 0
 		end
 	elseif statement=="ResearchUnlock" then
 		if game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1] and game.players[PlayerIndex].gui.center[guiNames.mainFlowMRSUnlock1].valid then

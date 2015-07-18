@@ -10,7 +10,7 @@ return (dstotalevents*eventtime) end
 
 function AutomaticRS(event) 
 	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
-		if not glob.ResearchSystem.Unlocked[RecipeName] then
+		if not global.ResearchSystem.Unlocked[RecipeName] then
 		local info = RSDatabase.ItemUnlock[RecipeName]
 			if event.tick%dsttime()==(eventtime*info.Event) then 
 				RSF.RSUnlock(RecipeName) 

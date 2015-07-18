@@ -24,37 +24,37 @@ function debug(str)
 end
 
 function PlayerPrint(message)
-	if glob.Messages then
+	if global.Messages then
 		for _,player in pairs(game.players) do
 			player.print(message)
 		end
 	end
 end
 
-game.oninit(function()
-	if not glob.ResearchSystem then glob.ResearchSystem = {} end
+game.on_init(function()
+	if not global.ResearchSystem then global.ResearchSystem = {} end
 fs.Startup()
 end)
 
-game.onsave(function()
+game.on_save(function()
 
 end)
 
-game.onload(function()
-	if not glob.ResearchSystem then glob.ResearchSystem = {} end
-	if not glob.ResearchSystem.Unlocked then glob.ResearchSystem.Unlocked = {} end
-	if not glob.Collectors then glob.Collectors = {} end
+game.on_load(function()
+	if not global.ResearchSystem then global.ResearchSystem = {} end
+	if not global.ResearchSystem.Unlocked then global.ResearchSystem.Unlocked = {} end
+	if not global.Collectors then global.Collectors = {} end
 end)
 
-game.onevent(defines.events.ontick, function(event)
-	if Research_System and glob.ResearchSystem.RSAutomatic then	
+game.on_event(defines.events.ontick, function(event)
+	if Research_System and global.ResearchSystem.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
 	if game.tick%300==1 then
 		GUI.CreateButton()
 	end
 	if Collectors then
-		if not glob.Collectors.Working then
+		if not global.Collectors.Working then
 			fs.StartupCollectors()
 		else
 			CollectorFunctions.ticker()
@@ -62,77 +62,77 @@ game.onevent(defines.events.ontick, function(event)
 	end
 end)
 
-game.onevent(defines.events.onresearchstarted, function(event)
+game.on_event(defines.events.on_research_started, function(event)
 if Research_System then	
-	if not glob.ResearchSystem.science then glob.ResearchSystem.science=0 end
+	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Started ("..tostring(event.research)..")")
-	if not glob.Technology[event.research].Started then
+	if not global.Technology[event.research].Started then
 		local ingredients = game.forces.player.technologies[event.research].researchunitcount
-		glob.ResearchSystem.science=glob.ResearchSystem.science+(ingredients/10)
-		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(glob.ResearchSystem.science))
-		glob.Technology[event.research].Started = true
+		global.ResearchSystem.science=global.ResearchSystem.science+(ingredients/10)
+		debug("Research found in globalal table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(global.ResearchSystem.science))
+		global.Technology[event.research].Started = true
 	end
 else 
-	if not glob.Technology[event.research] then
+	if not global.Technology[event.research] then
 		fs.InitHalfwayTechnology(event)
 	else
-		glob.Technology[event.research].Started = true
+		global.Technology[event.research].Started = true
 	end
 end
 end)
 
-game.onevent(defines.events.onresearchfinished, function(event)
+game.on_event(defines.events.on_research_finished, function(event)
 if Auto_Researcher then
 	AutoResearch.AutoMode()
 end
 if Research_System then	
-	if not glob.ResearchSystem.science then glob.ResearchSystem.science=0 end
+	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Finished ("..tostring(event.research)..")")
-	if not glob.Technology[event.research].Finished then
-		local ingredients = game.forces.player.technologies[event.research].researchunitcount
-		glob.ResearchSystem.science=glob.ResearchSystem.science+((ingredients/10)*9)
-		debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(glob.ResearchSystem.science))
-		glob.Technology[event.research].Finished = true
+	if not global.Technology[event.research].Finished then
+		local ingredients = game.forces.player.technologies[event.research].research_unit_count
+		global.ResearchSystem.science=global.ResearchSystem.science+((ingredients/10)*9)
+		debug("Research found in globalal table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(global.ResearchSystem.science))
+		global.Technology[event.research].Finished = true
 	end
 else 	
-	glob.Technology[event.research].Finished = true
+	global.Technology[event.research].Finished = true
 end
 end)
 
-game.onevent(defines.events.onbuiltentity, function(event)
+game.on_event(defines.events.on_built_entity, function(event)
 	if Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
 end)
 
-game.onevent(defines.events.onrobotbuiltentity, function(event)
+game.on_event(defines.events.on_robot_built_entity, function(event)
 	if Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
 end)
 
-game.onevent(defines.events.onplayermineditem, function(event)
-	if Collectors and event.itemstack.name == "item-collector-area" then
-		if glob.Collectors.Amount==0 then
-			glob.Collectors.Amount = 0
+game.on_event(defines.events.on_playe_rmined_item, function(event)
+	if Collectors and event.item_stack.name == "item-collector-area" then
+		if global.Collectors.Amount==0 then
+			global.Collectors.Amount = 0
 		else
-			glob.Collectors.Amount = glob.Collectors.Amount - 1
+			global.Collectors.Amount = global.Collectors.Amount - 1
 		end
 	end
 end)
 
-game.onevent(defines.events.onrobotmined, function(event)
-	if Collectors and event.itemstack.name == "item-collector-area" then
-		if glob.Collectors.Amount==0 then
-			glob.Collectors.Amount = 0
+game.on_event(defines.events.on_robot_mined, function(event)
+	if Collectors and event.item_stack.name == "item-collector-area" then
+		if global.Collectors.Amount==0 then
+			global.Collectors.Amount = 0
 		else
-			glob.Collectors.Amount = glob.Collectors.Amount - 1
+			global.Collectors.Amount = global.Collectors.Amount - 1
 		end
 	end
 end)
 
-game.onevent(defines.events.onguiclick, function(event)
-local playerIndex = event.playerindex
+game.on_event(defines.events.on_gui_click, function(event)
+local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	if event.element.name == "DynamicsButton" then
 		GUI.closeGUI("all", playerIndex)
@@ -146,22 +146,22 @@ local player = game.players[playerIndex]
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name:find(guiNames.MRSUnlockButton) then
-		RSF.RSUnlock(glob.ResearchSystem.ToUnlock)
+		RSF.RSUnlock(global.ResearchSystem.ToUnlock)
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
 	elseif RSDatabase.ItemUnlock[event.element.name] then
-		glob.ResearchSystem.ToUnlock = event.element.name
+		global.ResearchSystem.ToUnlock = event.element.name
 		GUI.closeGUI("ResearchUnlock", playerIndex)
-		MRS.showUnlockGUIBase(playerIndex, glob.ResearchSystem.ToUnlock)
+		MRS.showUnlockGUIBase(playerIndex, global.ResearchSystem.ToUnlock)
 	elseif event.element.name:find(guiNames.ResearchButton) then
-		if glob.ResearchSystem.RSManual then
+		if global.ResearchSystem.RSManual then
 			GUI.closeGUI("all", playerIndex)
 			MRS.showResearchMainGUI(playerIndex)
 		else
 			PlayerPrint({"rs-manual-disabled"})
 		end
 	elseif event.element.name == "DebugAddPoints" then
-		glob.ResearchSystem.science = glob.ResearchSystem.science + 100000
+		global.ResearchSystem.science = global.ResearchSystem.science + 100000
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name:find(guiNames.Tier1Base) then
@@ -180,42 +180,42 @@ local player = game.players[playerIndex]
 		GUI.closeGUI("all", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorWorkingButton) then
-		if glob.Collectors.Working then
-			glob.Collectors.Working = false
+		if global.Collectors.Working then
+			global.Collectors.Working = false
 		else
-			glob.Collectors.Working = true
+			global.Collectors.Working = true
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorAutoRangeButton) then
-		if not glob.Collectors.AutomaticRange then
-			glob.Collectors.AutomaticRange = true
+		if not global.Collectors.AutomaticRange then
+			global.Collectors.AutomaticRange = true
 		else
-			glob.Collectors.AutomaticRange = false
+			global.Collectors.AutomaticRange = false
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorFilteredButton) then
-		if glob.Collectors.Filtered then
-			glob.Collectors.Filtered = false
+		if global.Collectors.Filtered then
+			global.Collectors.Filtered = false
 		else
-			glob.Collectors.Filtered = true
+			global.Collectors.Filtered = true
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorRangeMinusButton) then
-		if glob.Collectors.Range == 5 then
-			glob.Collectors.Range = 50
+		if global.Collectors.Range == 5 then
+			global.Collectors.Range = 50
 		else
-			glob.Collectors.Range = glob.Collectors.Range - 1
+			global.Collectors.Range = global.Collectors.Range - 1
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorRangePlusButton) then
-		if glob.Collectors.Range == 50 then
-			glob.Collectors.Range = 5
+		if global.Collectors.Range == 50 then
+			global.Collectors.Range = 5
 		else
-			glob.Collectors.Range = glob.Collectors.Range + 1
+			global.Collectors.Range = global.Collectors.Range + 1
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
@@ -231,7 +231,7 @@ local player = game.players[playerIndex]
 	end
 end)
 
-remote.addinterface("DyTech-Dynamics",
+remote.add_interface("DyTech-Dynamics",
 {  
 	TestResearch = function(pIndex)
 		if pIndex == 0 then
@@ -253,41 +253,41 @@ remote.addinterface("DyTech-Dynamics",
 	end,
 	
 	DataDumpDatabase = function()
-		glob.DatabaseNames = {} 
-		glob.DatabaseNumbers = {}
+		global.DatabaseNames = {} 
+		global.DatabaseNumbers = {}
 		for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 		local data = RSDatabase.ItemUnlock[RecipeName]
-			table.insert(glob.DatabaseNames,RecipeName)
-			table.insert(glob.DatabaseNumbers,data.Points)
+			table.insert(global.DatabaseNames,RecipeName)
+			table.insert(global.DatabaseNumbers,data.Points)
 		end
-		game.makefile("DataDump/Database-Base-Names.xls", serpent.block(glob.DatabaseNames))
-		game.makefile("DataDump/Database-Base-Numbers.xls", serpent.block(glob.DatabaseNumbers))
+		game.make_file("DataDump/Database-Base-Names.xls", serpent.block(global.DatabaseNames))
+		game.make_file("DataDump/Database-Base-Numbers.xls", serpent.block(global.DatabaseNumbers))
 	end,
 	
 	DataDump = function()
-		game.makefile("DataDump/ResearchSystem.txt", serpent.block(glob.ResearchSystem))
-		game.makefile("DataDump/Collectors.txt", serpent.block(glob.Collectors))
-		game.makefile("DataDump/Technology.txt", serpent.block(glob.Technology))
+		game.make_file("DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
+		game.make_file("DataDump/Collectors.txt", serpent.block(global.Collectors))
+		game.make_file("DataDump/Technology.txt", serpent.block(global.Technology))
 	end,
 	
 	SwitchRS = function()
-		if glob.ResearchSystem.RSAutomatic==true then
-			glob.ResearchSystem.RSAutomatic = false
-			glob.ResearchSystem.RSManual = true
+		if global.ResearchSystem.RSAutomatic==true then
+			global.ResearchSystem.RSAutomatic = false
+			global.ResearchSystem.RSManual = true
 			PlayerPrint({"rs-manual"})
 		else
-			glob.ResearchSystem.RSAutomatic = true
-			glob.ResearchSystem.RSManual = false
+			global.ResearchSystem.RSAutomatic = true
+			global.ResearchSystem.RSManual = false
 			PlayerPrint({"rs-automatic"})
 		end
 	end,
 	
 	ToggleMessages = function()
-		if glob.Messages==true then
+		if global.Messages==true then
 			PlayerPrint({"msg-off"})
-			glob.Messages = false
+			global.Messages = false
 		else
-			glob.Messages = true
+			global.Messages = true
 			PlayerPrint({"msg-on"})
 		end
 	end

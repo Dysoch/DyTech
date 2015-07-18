@@ -1,47 +1,47 @@
 module("fs", package.seeall)
 
 function Startup()
-glob.ResearchSystem.Unlocked = {}
-glob.ResearchSystem.RSAutomatic = false
-glob.ResearchSystem.RSManual = true
-glob.ResearchSystem.ToUnlock = {}
-glob.ResearchSystem.science = 0
-glob.Collectors = {}
-glob.Collectors.Range = 25
-glob.Collectors.Working = true
-glob.Collectors.Filtered = true
-glob.Collectors.AutomaticRange = false
-glob.Collectors.Amount = 0
-glob.Collectors.CollectorList = {}
-glob.Messages = true
+global.ResearchSystem.Unlocked = {}
+global.ResearchSystem.RSAutomatic = false
+global.ResearchSystem.RSManual = true
+global.ResearchSystem.ToUnlock = {}
+global.ResearchSystem.science = 0
+global.Collectors = {}
+global.Collectors.Range = 25
+global.Collectors.Working = true
+global.Collectors.Filtered = true
+global.Collectors.AutomaticRange = false
+global.Collectors.Amount = 0
+global.Collectors.CollectorList = {}
+global.Messages = true
 InitTechnologyTable()
-   if not game.forces.player.currentresearch and game.forces.player.technologies["automation"].researched==false then
-      game.forces.player.currentresearch = "automation"
+   if not game.forces.player.current_research and game.forces.player.technologies["automation"].researched==false then
+      game.forces.player.current_research = "automation"
    end
 end
 
 function StartupCollectors()
-glob.Collectors = {}
-glob.Collectors.Range = 25
-glob.Collectors.Working = true
-glob.Collectors.Filtered = true
-glob.Collectors.AutomaticRange = false
-glob.Collectors.Amount = 0
-glob.Collectors.CollectorList = {}
+global.Collectors = {}
+global.Collectors.Range = 25
+global.Collectors.Working = true
+global.Collectors.Filtered = true
+global.Collectors.AutomaticRange = false
+global.Collectors.Amount = 0
+global.Collectors.CollectorList = {}
 end
 
 function InitTechnologyTable()
-    glob.Technology = {}
+    global.Technology = {}
     for name,tech in pairs(game.forces.player.technologies) do
-	glob.Technology[name] = {}
-	glob.Technology[name].Prerequisite = {}
+	global.Technology[name] = {}
+	global.Technology[name].Prerequisite = {}
         for prereqname,count in pairs(game.forces.player.technologies[name].prerequisites) do
-			table.insert(glob.Technology[name].Prerequisite,prereqname)
+			table.insert(global.Technology[name].Prerequisite,prereqname)
 		end
-        glob.Technology[name].TechLevel = getResearchLevel(name)
-        glob.Technology[name].ScienceCount = game.forces.player.technologies[name].researchunitcount
-		glob.Technology[name].Started = false
-		glob.Technology[name].Finished = false
+        global.Technology[name].TechLevel = getResearchLevel(name)
+        global.Technology[name].ScienceCount = game.forces.player.technologies[name].research_unit_count
+		global.Technology[name].Started = false
+		global.Technology[name].Finished = false
     end
 end
 
@@ -49,7 +49,7 @@ function getResearchLevel(technology)
     local levels = {["science-pack-1"] = 1, ["science-pack-2"] = 2, ["science-pack-3"] = 3, ["alien-science-pack"] = 4}
     local level = 0
 	local Tech = game.forces.player.technologies[technology]
-    for _,t in pairs(Tech.researchunitingredients) do
+    for _,t in pairs(Tech.research_unit_ingredients) do
         if levels[t.name] and levels[t.name] > level then
             level = levels[t.name]
 		end
@@ -58,13 +58,13 @@ function getResearchLevel(technology)
 end
 
 function InitHalfwayTechnology(event)
-	glob.Technology[event.research] = {}
-	glob.Technology[event.research].Prerequisite = {}
+	global.Technology[event.research] = {}
+	global.Technology[event.research].Prerequisite = {}
     for prereqname,count in pairs(game.forces.player.technologies[event.research].prerequisites) do
-		table.insert(glob.Technology[event.research].Prerequisite,prereqname)
+		table.insert(global.Technology[event.research].Prerequisite,prereqname)
 	end
-    glob.Technology[event.research].TechLevel = getResearchLevel(event.research)
-    glob.Technology[event.research].ScienceCount = game.forces.player.technologies[event.research].researchunitcount
-	glob.Technology[event.research].Started = true
-	glob.Technology[event.research].Finished = false
+    global.Technology[event.research].TechLevel = getResearchLevel(event.research)
+    global.Technology[event.research].ScienceCount = game.forces.player.technologies[event.research].research_unit_count
+	global.Technology[event.research].Started = true
+	global.Technology[event.research].Finished = false
 end
