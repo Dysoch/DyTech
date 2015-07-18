@@ -1,7 +1,7 @@
 require "defines"
 require "scripts/functions"
 
-remote.addinterface("DyTech-Machine",
+remote.add_interface("DyTech-Machine",
 {  
 	TestMetallurgy = function(pIndex)
 		if pIndex == 0 then
