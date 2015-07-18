@@ -1,4 +1,5 @@
 require "prototypes.internal-config"
+require "prototypes.functions.turrets"
 require "util"
 
 function laser_turret_extension(inputs)
@@ -105,8 +106,8 @@ data:extend(
     max_health = Health.Tier3,
 	resistances = Resistances.Tier3,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group = "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -212,37 +213,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(20, 25, "200kJ", "laser-ruby-2")
   },
   {
     type = "electric-turret",
@@ -253,8 +224,8 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -360,37 +331,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(20, 25, "250kJ", "laser-ruby-3")
   },
   --[[SAPPHIRE TURRETS]]--
   {
@@ -402,8 +343,8 @@ data:extend(
     max_health = Health.Tier5,
 	resistances = Resistances.Tier5,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -509,37 +450,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(18, 27.5, "300kJ", "laser-sapphire-1")
   },
   {
     type = "electric-turret",
@@ -550,8 +461,8 @@ data:extend(
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -657,37 +568,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(16, 30, "350kJ", "laser-sapphire-2")
   },
   {
     type = "electric-turret",
@@ -698,8 +579,8 @@ data:extend(
     max_health = Health.Tier7,
 	resistances = Resistances.Tier7,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -805,37 +686,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(14, 32.5, "400kJ", "laser-sapphire-3")
   },
   --[[EMERALD TURRETS]]--
   {
@@ -847,8 +698,8 @@ data:extend(
     max_health = Health.Tier8,
 	resistances = Resistances.Tier8,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -954,37 +805,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(20, 37.5, "160kJ", "laser-emerald-1")
   },
   {
     type = "electric-turret",
@@ -995,8 +816,8 @@ data:extend(
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1102,37 +923,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(15, 40.5, "140kJ", "laser-emerald-2")
   },
   {
     type = "electric-turret",
@@ -1143,8 +934,8 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1250,37 +1041,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(10, 43.75, "120kJ", "laser-emerald-3")
   },
   --[[TOPAZ TURRETS]]--
   {
@@ -1292,8 +1053,8 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1399,37 +1160,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(60, 62.5, "350kJ", "laser-topaz-1")
   },
   {
     type = "electric-turret",
@@ -1440,8 +1171,8 @@ data:extend(
     max_health = Health.Tier7,
 	resistances = Resistances.Tier7,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1547,37 +1278,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(45, 75, "400kJ", "laser-topaz-2")
   },
   {
     type = "electric-turret",
@@ -1588,8 +1289,8 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1695,37 +1396,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(30, 87.5, "450kJ", "laser-topaz-3")
   },
   --[[Diamond Turrets]]--
   {
@@ -1737,8 +1408,8 @@ data:extend(
     max_health = Health.Tier8,
 	resistances = Resistances.Tier8,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1844,37 +1515,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(30, 30, "450kJ", "laser-diamond-1")
   },
   {
     type = "electric-turret",
@@ -1885,8 +1526,8 @@ data:extend(
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -1992,37 +1633,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(30, 40, "450kJ", "laser-diamond-2")
   },
   {
     type = "electric-turret",
@@ -2033,8 +1644,8 @@ data:extend(
     max_health = Health.Tier10,
 	resistances = Resistances.Tier10,
     corpse = "small-remnants",
-    collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-    selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
+    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    selection_box = {{-1, -1}, {1, 1}},
 	fast_replaceable_group =  "laser-turret",
     rotation_speed = 0.01,
     preparing_speed = 0.05,
@@ -2140,37 +1751,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters =
-    {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 20,
-      projectile_center = {0, -0.2},
-      projectile_creation_distance = 1.4,
-      range = 25,
-      damage_modifier = 4,
-      ammo_type =
-      {
-        type = "projectile",
-        category = "laser-turret",
-        energy_consumption = "800kJ",
-        action =
-        {
-          {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 0.28
-              }
-            }
-          }
-        }
-      },
-      sound = make_laser_sounds()
-    }
+    attack_parameters = Laser_Turret_Attack(30, 50, "450kJ", "laser-diamond-3")
   },
 }
 )

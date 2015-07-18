@@ -65,3 +65,37 @@ return
 	  shift = {1.34375, -0.5 + 0.6}
 	}
 end
+
+function Laser_Turret_Attack(COOLDOWN, RANGE, CONSUMPTION, PROJECTILE)
+return
+	{
+      type = "projectile",
+      ammo_category = "electric",
+      cooldown = COOLDOWN,
+      projectile_center = {0, -0.2},
+      projectile_creation_distance = 1.4,
+      range = RANGE,
+      damage_modifier = 4,
+      ammo_type =
+      {
+        type = "projectile",
+        category = "laser-turret",
+        energy_consumption = CONSUMPTION,
+        action =
+        {
+          {
+            type = "direct",
+            action_delivery =
+            {
+              {
+                type = "projectile",
+                projectile = PROJECTILE,
+                starting_speed = 0.28
+              }
+            }
+          }
+        }
+      },
+      sound = make_laser_sounds()
+    }
+end
