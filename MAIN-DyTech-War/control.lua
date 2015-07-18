@@ -19,32 +19,32 @@ function PlayerPrint(message)
 	end
 end
 
-game.oninit(function()
+game.on_init(function()
 	Dyzilla.Startup()
 end)
 
-game.onsave(function()
+game.on_save(function()
 
 end)
 
-game.onload(function()
+game.on_load(function()
 
 end)
 
-game.onevent(defines.events.ontick, function(event)
+game.on_event(defines.events.on_tick, function(event)
 
 end)
 
-game.onevent(defines.events.onentitydied, function(event)
+game.on_event(defines.events.on_entity_died, function(event)
 	if event.entity.name=="dyzilla-spawner" then
-		glob.Dyzilla.Dead = glob.Dyzilla.Dead + 1
-		glob.Dyzilla.Alive = glob.Dyzilla.Alive - 1
+		global.Dyzilla.Dead = global.Dyzilla.Dead + 1
+		global.Dyzilla.Alive = global.Dyzilla.Alive - 1
 	end
 end)
 
-game.onevent(defines.events.onchunkgenerated, function(event)
+game.on_event(defines.events.on_chunk_generated, function(event)
 	if Dyzilla_Spawner then
-	glob.Dyzilla.Chunks = glob.Dyzilla.Chunks + 1
+	global.Dyzilla.Chunks = global.Dyzilla.Chunks + 1
 		if Difficulty==1 then 
 			Dyzilla.Easy(event)
 		elseif Difficulty==2 then 
@@ -59,9 +59,9 @@ game.onevent(defines.events.onchunkgenerated, function(event)
 	end
 end)
 
-remote.addinterface("DyTech-War",
+remote.add_interface("DyTech-War",
 {  	
 	DataDump = function()
-		game.makefile("DataDump/Dyzilla.txt", serpent.block(glob.Dyzilla))
+		game.make_file("DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
 	end,
 })
