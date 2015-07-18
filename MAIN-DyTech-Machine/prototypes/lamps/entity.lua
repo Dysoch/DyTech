@@ -19,21 +19,42 @@ data:extend(
     light = {intensity = 0.9, size = 60},
     picture_off =
     {
-      filename = "__base__/graphics/entity/small-lamp/small-lamp.png",
+      filename = "__base__/graphics/entity/small-lamp/light-off.png",
       priority = "high",
-      width = 83,
-      height = 75,
-      shift = {0, -0.1}
+      width = 67,
+      height = 58,
+      frame_count = 1,
+      axially_symmetrical = false,
+      direction_count = 1,
+      shift = {0.078125, -0.03125},
     },
     picture_on =
     {
-      filename = "__base__/graphics/entity/small-lamp/small-lamp.png",
+      filename = "__base__/graphics/entity/small-lamp/light-on-patch.png",
       priority = "high",
-      width = 83,
-      height = 75,
-      x = 83,
-      shift = {0, -0.1}
-    }
+      width = 62,
+      height = 62,
+      frame_count = 1,
+      axially_symmetrical = false,
+      direction_count = 1,
+      shift = {0.0625, -0.21875},
+    },
+
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0.859375, -0.296875},
+        green = {0.859375, -0.296875},
+      },
+      wire =
+      {
+        red = {0.40625, -0.59375},
+        green = {0.40625, -0.59375},
+      }
+    },
+
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "lamp",
@@ -54,21 +75,42 @@ data:extend(
     light = {intensity = 0.9, size = 80},
     picture_off =
     {
-      filename = "__base__/graphics/entity/small-lamp/small-lamp.png",
+      filename = "__base__/graphics/entity/small-lamp/light-off.png",
       priority = "high",
-      width = 83,
-      height = 75,
-      shift = {0, -0.1}
+      width = 67,
+      height = 58,
+      frame_count = 1,
+      axially_symmetrical = false,
+      direction_count = 1,
+      shift = {0.078125, -0.03125},
     },
     picture_on =
     {
-      filename = "__base__/graphics/entity/small-lamp/small-lamp.png",
+      filename = "__base__/graphics/entity/small-lamp/light-on-patch.png",
       priority = "high",
-      width = 83,
-      height = 75,
-      x = 83,
-      shift = {0, -0.1}
-    }
+      width = 62,
+      height = 62,
+      frame_count = 1,
+      axially_symmetrical = false,
+      direction_count = 1,
+      shift = {0.0625, -0.21875},
+    },
+
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0.859375, -0.296875},
+        green = {0.859375, -0.296875},
+      },
+      wire =
+      {
+        red = {0.40625, -0.59375},
+        green = {0.40625, -0.59375},
+      }
+    },
+
+    circuit_wire_max_distance = 7.5
   },
 }
 )

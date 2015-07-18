@@ -8,7 +8,7 @@ data:extend(
     minable = {mining_time = 1, result = "electric-furnace-mk2"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
     resistances = 
     {
@@ -19,7 +19,10 @@ data:extend(
     },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 3,
+    module_specification =
+    {
+      module_slots = 3
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
@@ -100,7 +103,7 @@ data:extend(
     minable = {mining_time = 1, result = "electric-furnace-mk3"},
     max_health = 450,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
     resistances = 
     {
@@ -111,7 +114,10 @@ data:extend(
     },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
@@ -192,7 +198,7 @@ data:extend(
     minable = {mining_time = 1, result = "electric-furnace-mk4"},
     max_health = 600,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
     resistances = 
     {
@@ -203,7 +209,10 @@ data:extend(
     },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"smelting"},
     result_inventory_size = 1,
@@ -284,7 +293,7 @@ data:extend(
     minable = {mining_time = 1, result = "electric-furnace-mk5"},
     max_health = 1000,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
     resistances = 
     {
@@ -295,7 +304,10 @@ data:extend(
     },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 6,
+    module_specification =
+    {
+      module_slots = 6
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"smelting"},
     result_inventory_size = 1,

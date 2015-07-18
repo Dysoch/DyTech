@@ -8,7 +8,7 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-4"},
     max_health = 400,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     resistances = 
     {
       {
@@ -92,7 +92,10 @@ data:extend(
     },
     energy_usage = "250kW",
     ingredient_count = 10,
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"}
   },
   {
@@ -103,7 +106,7 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-5"},
     max_health = 500,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     resistances = 
     {
       {
@@ -187,7 +190,10 @@ data:extend(
     },
     energy_usage = "300kW",
     ingredient_count = 12,
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"}
   },
   {
@@ -198,7 +204,7 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-6"},
     max_health = 600,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     resistances = 
     {
       {
@@ -282,7 +288,10 @@ data:extend(
     },
     energy_usage = "350kW",
     ingredient_count = 14,
-    module_slots = 6,
+    module_specification =
+    {
+      module_slots = 6
+    },
     allowed_effects = {"consumption", "speed", "pollution"}
   },
   {
@@ -293,7 +302,7 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-7"},
     max_health = 700,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     resistances = 
     {
       {
@@ -377,7 +386,10 @@ data:extend(
     },
     energy_usage = "400kW",
     ingredient_count = 15,
-    module_slots = 8,
+    module_specification =
+    {
+      module_slots = 8
+    },
     allowed_effects = {"consumption", "speed", "pollution"}
   },
 }

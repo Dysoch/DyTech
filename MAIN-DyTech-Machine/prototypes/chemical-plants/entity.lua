@@ -13,10 +13,13 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-1"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
     fast_replaceable_group = "chemical-plant",
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation =
@@ -162,10 +165,13 @@ data:extend(
     minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-2"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    module_slots = 6,
+    module_specification =
+    {
+      module_slots = 6
+    },
     fast_replaceable_group = "chemical-plant",
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation =

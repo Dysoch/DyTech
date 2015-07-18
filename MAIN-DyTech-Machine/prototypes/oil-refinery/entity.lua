@@ -13,10 +13,13 @@ data:extend(
     minable = {mining_time = 1, result = "oil-refinery-1"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
 	fast_replaceable_group = "oil-refinery",
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"oil-processing"},
@@ -139,10 +142,13 @@ data:extend(
     minable = {mining_time = 1, result = "oil-refinery-2"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    module_slots = 6,
+    module_specification =
+    {
+      module_slots = 6
+    },
 	fast_replaceable_group = "oil-refinery",
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"oil-processing"},

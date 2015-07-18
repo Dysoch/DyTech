@@ -57,12 +57,15 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-600-new.png",
-      priority = "extra-high",
-      width = 75,
-      height = 61,
-      frame_count = 4,
-      direction_count = 1
+      sheet =
+      {
+	    filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-600-new.png",
+		priority = "extra-high",
+        width = 75,
+        height = 61,
+        frame_count = 4,
+        variation_count = 1
+      }
     },
     map_color = {r=80, g=10, b=10},
     map_grid = false
@@ -124,12 +127,15 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-1400-new.png",
-      priority = "extra-high",
-      width = 75,
-      height = 61,
-      frame_count = 4,
-      direction_count = 1
+      sheet =
+      {
+	    filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-1400-new.png",
+		priority = "extra-high",
+        width = 75,
+        height = 61,
+        frame_count = 4,
+        variation_count = 1
+      }
     },
     map_color = {r=80, g=10, b=10},
     map_grid = false
@@ -191,12 +197,15 @@ data:extend(
     stage_counts = {0},
     stages =
     {
-      filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-2800-new.png",
-      priority = "extra-high",
-      width = 75,
-      height = 61,
-      frame_count = 4,
-      direction_count = 1
+      sheet =
+      {
+	    filename = "__MAIN-DyTech-Machine__/graphics/metallurgy/entity/fluids/lava-2800-new.png",
+		priority = "extra-high",
+        width = 75,
+        height = 61,
+        frame_count = 4,
+        variation_count = 1
+      }
     },
     map_color = {r=80, g=10, b=10},
     map_grid = false

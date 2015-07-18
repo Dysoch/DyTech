@@ -67,7 +67,59 @@ data:extend({
         width = 160,
         height = 102
       }
-    }
+    },
+    circuit_wire_connection_points =
+    {
+      {
+        shadow =
+        {
+          red = {2.7125, 0.20625},
+          green = {2.7125, 0.20625},
+        },
+        wire =
+        {
+          red = {0.4, -0.41875},
+          green = {0.4, -0.41875},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {2.025, 0.83125},
+          green = {2.025, 0.83125},
+        },
+        wire =
+        {
+          red = {0.36875, -0.1375},
+          green = {0.36875, -0.1375},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.09, 1.025},
+          green = {1.09, 1.025},
+        },
+        wire =
+        {
+          red = {-0.50625, 0.2125},
+          green = {-0.50625, 0.2125},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.6875, -0.10625},
+          green = {1.6875, -0.10625},
+        },
+        wire =
+        {
+          red = {-0.34375, -0.73125},
+          green = {-0.34375, -0.73125},
+        }
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "offshore-pump",
@@ -130,7 +182,59 @@ data:extend({
         width = 160,
         height = 102
       }
-    }
+    },
+    circuit_wire_connection_points =
+    {
+      {
+        shadow =
+        {
+          red = {2.7125, 0.20625},
+          green = {2.7125, 0.20625},
+        },
+        wire =
+        {
+          red = {0.4, -0.41875},
+          green = {0.4, -0.41875},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {2.025, 0.83125},
+          green = {2.025, 0.83125},
+        },
+        wire =
+        {
+          red = {0.36875, -0.1375},
+          green = {0.36875, -0.1375},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.09, 1.025},
+          green = {1.09, 1.025},
+        },
+        wire =
+        {
+          red = {-0.50625, 0.2125},
+          green = {-0.50625, 0.2125},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.6875, -0.10625},
+          green = {1.6875, -0.10625},
+        },
+        wire =
+        {
+          red = {-0.34375, -0.73125},
+          green = {-0.34375, -0.73125},
+        }
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "offshore-pump",
@@ -193,7 +297,59 @@ data:extend({
         width = 160,
         height = 102
       }
-    }
+    },
+    circuit_wire_connection_points =
+    {
+      {
+        shadow =
+        {
+          red = {2.7125, 0.20625},
+          green = {2.7125, 0.20625},
+        },
+        wire =
+        {
+          red = {0.4, -0.41875},
+          green = {0.4, -0.41875},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {2.025, 0.83125},
+          green = {2.025, 0.83125},
+        },
+        wire =
+        {
+          red = {0.36875, -0.1375},
+          green = {0.36875, -0.1375},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.09, 1.025},
+          green = {1.09, 1.025},
+        },
+        wire =
+        {
+          red = {-0.50625, 0.2125},
+          green = {-0.50625, 0.2125},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.6875, -0.10625},
+          green = {1.6875, -0.10625},
+        },
+        wire =
+        {
+          red = {-0.34375, -0.73125},
+          green = {-0.34375, -0.73125},
+        }
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "offshore-pump",
@@ -256,7 +412,59 @@ data:extend({
         width = 160,
         height = 102
       }
-    }
+    },
+    circuit_wire_connection_points =
+    {
+      {
+        shadow =
+        {
+          red = {2.7125, 0.20625},
+          green = {2.7125, 0.20625},
+        },
+        wire =
+        {
+          red = {0.4, -0.41875},
+          green = {0.4, -0.41875},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {2.025, 0.83125},
+          green = {2.025, 0.83125},
+        },
+        wire =
+        {
+          red = {0.36875, -0.1375},
+          green = {0.36875, -0.1375},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.09, 1.025},
+          green = {1.09, 1.025},
+        },
+        wire =
+        {
+          red = {-0.50625, 0.2125},
+          green = {-0.50625, 0.2125},
+        }
+      },
+      {
+        shadow =
+        {
+          red = {1.6875, -0.10625},
+          green = {1.6875, -0.10625},
+        },
+        wire =
+        {
+          red = {-0.34375, -0.73125},
+          green = {-0.34375, -0.73125},
+        }
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
 }
 )

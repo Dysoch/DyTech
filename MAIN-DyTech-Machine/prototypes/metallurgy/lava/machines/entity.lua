@@ -9,7 +9,7 @@ data:extend(
     resource_categories = {"lava-magma"},
     max_health = 100,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},

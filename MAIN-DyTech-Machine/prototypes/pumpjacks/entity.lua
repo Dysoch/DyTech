@@ -9,7 +9,7 @@ data:extend(
     resource_categories = {"basic-fluid"},
     max_health = 200,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -37,7 +37,10 @@ data:extend(
     mining_power = 3,
     resource_searching_radius = 0.99,
     vector_to_place_result = {0, 0},
-    module_slots = 3,
+    module_specification =
+    {
+      module_slots = 3
+    },
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
@@ -84,7 +87,7 @@ data:extend(
     resource_categories = {"basic-fluid"},
     max_health = 300,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -112,7 +115,10 @@ data:extend(
     mining_power = 4,
     resource_searching_radius = 1.49,
     vector_to_place_result = {0, 0},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
@@ -159,7 +165,7 @@ data:extend(
     resource_categories = {"basic-fluid"},
     max_health = 400,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -187,7 +193,10 @@ data:extend(
     mining_power = 5,
     resource_searching_radius = 1.99,
     vector_to_place_result = {0, 0},
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",
@@ -234,7 +243,7 @@ data:extend(
     resource_categories = {"basic-fluid"},
     max_health = 500,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
@@ -262,7 +271,10 @@ data:extend(
     mining_power = 7,
     resource_searching_radius = 2.49,
     vector_to_place_result = {0, 0},
-    module_slots = 6,
+    module_specification =
+    {
+      module_slots = 6
+    },
     radius_visualisation_picture =
     {
       filename = "__base__/graphics/entity/pumpjack/pumpjack-radius-visualization.png",

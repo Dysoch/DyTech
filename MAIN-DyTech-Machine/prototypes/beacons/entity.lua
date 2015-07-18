@@ -12,7 +12,7 @@ data:extend(
     minable = {mining_time = 1, result = "basic-beacon-1"},
     max_health = 200,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     allowed_effects = {"consumption", "speed", "pollution"},
@@ -58,7 +58,12 @@ data:extend(
     },
     energy_usage = "1500kW",
     distribution_effectivity = 0.1,
-    num_module_slots = 5
+    module_specification =
+    {
+      module_slots = 5,
+      module_info_icon_shift = {0, 0.5},
+      module_info_multi_row_initial_height_modifier = -0.3
+    }
   },
   {
     type = "beacon",
@@ -68,7 +73,7 @@ data:extend(
     minable = {mining_time = 1, result = "basic-beacon-2"},
     max_health = 200,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     allowed_effects = {"consumption", "speed", "pollution"},
@@ -114,7 +119,12 @@ data:extend(
     },
     energy_usage = "3000kW",
     distribution_effectivity = 0.5,
-    num_module_slots = 8
+    module_specification =
+    {
+      module_slots = 8,
+      module_info_icon_shift = {0, 0.5},
+      module_info_multi_row_initial_height_modifier = -0.3
+    }
   },
   {
     type = "beacon",
@@ -124,7 +134,7 @@ data:extend(
     minable = {mining_time = 1, result = "basic-beacon-3"},
     max_health = 200,
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     allowed_effects = {"consumption", "speed", "pollution"},
@@ -170,7 +180,12 @@ data:extend(
     },
     energy_usage = "6000kW",
     distribution_effectivity = 1,
-    num_module_slots = 11
+    module_specification =
+    {
+      module_slots = 11,
+      module_info_icon_shift = {0, 0.5},
+      module_info_multi_row_initial_height_modifier = -0.3
+    }
   },
 }
 )

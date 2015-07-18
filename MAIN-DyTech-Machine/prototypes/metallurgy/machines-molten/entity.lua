@@ -7,14 +7,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "75kW",
     crafting_speed = 1,
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =
@@ -117,14 +120,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "blast-furnace"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"blast-furnace"},
     max_health = 1500,
     energy_usage = "150kW",
 	crafting_speed = 1,
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =
@@ -227,14 +233,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge-1"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "150kW",
     crafting_speed = 2.5,
-    module_slots = 7,
+    module_specification =
+    {
+      module_slots = 7
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =
@@ -337,14 +346,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "blast-furnace-1"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"blast-furnace"},
     max_health = 1500,
     energy_usage = "300kW",
 	crafting_speed = 2.5,
-    module_slots = 7,
+    module_specification =
+    {
+      module_slots = 7
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =
@@ -447,14 +459,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge-2"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "225kW",
     crafting_speed = 5,
-    module_slots = 10,
+    module_specification =
+    {
+      module_slots = 10
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =
@@ -557,14 +572,17 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "blast-furnace-2"},
     corpse = "big-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
 	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"blast-furnace"},
     max_health = 1500,
     energy_usage = "450kW",
 	crafting_speed = 5,
-    module_slots = 10,
+    module_specification =
+    {
+      module_slots = 10
+    },
     ingredient_count = 15,
     allowed_effects = {"consumption", "speed", "pollution"},
     energy_source =

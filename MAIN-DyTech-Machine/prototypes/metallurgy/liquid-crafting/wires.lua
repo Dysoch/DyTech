@@ -73,7 +73,7 @@ data:extend(
     },
     results = 
 	{
-	  {type="item", name="green-wire", amount=1},0
+	  {type="item", name="green-wire", amount=1},
 	}
   },
   {

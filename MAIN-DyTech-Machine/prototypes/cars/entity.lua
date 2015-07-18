@@ -10,7 +10,7 @@ data:extend(
     minable = {mining_time = 1, result = "car2"},
     max_health = Health.Tier5,
     corpse = "medium-remnants",
-    dying_explosion = "huge-explosion",
+    dying_explosion = "medium-explosion",
     resistances = Resistances.Tier4,
     collision_box = {{-0.7, -1}, {0.7, 1}},
     selection_box = {{-0.7, -1}, {0.7, 1}},

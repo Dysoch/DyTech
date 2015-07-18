@@ -91,7 +91,10 @@ data:extend(
     mining_power = 4,
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -1.85},
-    module_slots = 3,
+    module_specification =
+    {
+      module_slots = 3
+    },
 	radius_visualisation_picture =
     {
       filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/z-mining-drill-radius-visualization.png",
@@ -183,7 +186,10 @@ data:extend(
     mining_power = 5,
     resource_searching_radius = 4.49,
     vector_to_place_result = {0, -1.85},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
     radius_visualisation_picture =
     {
       filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/z-mining-drill-radius-visualization.png",
@@ -275,7 +281,10 @@ data:extend(
     mining_power = 7.5,
     resource_searching_radius = 5.49,
     vector_to_place_result = {0, -1.85},
-    module_slots = 4,
+    module_specification =
+    {
+      module_slots = 4
+    },
     radius_visualisation_picture =
     {
       filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/z-mining-drill-radius-visualization.png",
@@ -367,7 +376,10 @@ data:extend(
     mining_power = 10,
     resource_searching_radius = 6.49,
     vector_to_place_result = {0, -1.85},
-    module_slots = 5,
+    module_specification =
+    {
+      module_slots = 5
+    },
     radius_visualisation_picture =
     {
       filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/z-mining-drill-radius-visualization.png",
