@@ -21,10 +21,10 @@ SulfurTree = {
 	}
 
 function OnInit()
-    glob.tf = {}
-	glob.tf.seedPrototypes = {}
-	glob.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
-	glob.tf.seedPrototypes.RubberTree = {
+    global.tf = {}
+	global.tf.seedPrototypes = {}
+	global.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
+	global.tf.seedPrototypes.RubberTree = {
 	states = {
 		"rubber-seed",
 		"small-rubber-tree",
@@ -44,7 +44,7 @@ function OnInit()
 	basicGrowingTime = 5925,
 	randomGrowingTime = 3555,
 	fertilizerBoost = 1.45 }
-	glob.tf.seedPrototypes.SulfurTree = {
+	global.tf.seedPrototypes.SulfurTree = {
 	states = {
 		"sulfur-seed",
 		"small-sulfur-tree",
@@ -65,16 +65,16 @@ function OnInit()
 	randomGrowingTime = 1500,
 	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
-    glob.tf.growing = {}
-    glob.tf.playersData = {}
+    global.tf.growing = {}
+    global.tf.playersData = {}
 end
 
 function OnLoad()
-	if not glob.tf then
-    glob.tf = {}
-	glob.tf.seedPrototypes = {}
-	glob.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
-	glob.tf.seedPrototypes.RubberTree = {
+	if not global.tf then
+    global.tf = {}
+	global.tf.seedPrototypes = {}
+	global.tf.seedPrototypes = {RubberTree = {}, SulfurTree = {}}
+	global.tf.seedPrototypes.RubberTree = {
 	states = {
 		"rubber-seed",
 		"small-rubber-tree",
@@ -94,7 +94,7 @@ function OnLoad()
 	basicGrowingTime = 5925,
 	randomGrowingTime = 3555,
 	fertilizerBoost = 1.45 }
-	glob.tf.seedPrototypes.SulfurTree = {
+	global.tf.seedPrototypes.SulfurTree = {
 	states = {
 		"sulfur-seed",
 		"small-sulfur-tree",
@@ -115,11 +115,11 @@ function OnLoad()
 	randomGrowingTime = 1500,
 	fertilizerBoost = 1.45 }
     populateSeedTypeLookUpTable()
-    glob.tf.growing = {}
-    glob.tf.playersData = {}
+    global.tf.growing = {}
+    global.tf.playersData = {}
 	end
-	if not glob.tf.seedPrototypes.SulfurTree then
-		glob.tf.seedPrototypes.SulfurTree = {
+	if not global.tf.seedPrototypes.SulfurTree then
+		global.tf.seedPrototypes.SulfurTree = {
 		states = {
 			"sulfur-seed",
 			"small-sulfur-tree",
@@ -144,25 +144,25 @@ function OnLoad()
 end
 
 function placeSeedIntoList(entInfo)
-	if #glob.tf.growing > 1 then
-		for i = #glob.tf.growing, 1, -1 do
-			if glob.tf.growing[i].nextUpdate <= entInfo.nextUpdate then
-				table.insert(glob.tf.growing, i + 1, entInfo)
+	if #global.tf.growing > 1 then
+		for i = #global.tf.growing, 1, -1 do
+			if global.tf.growing[i].nextUpdate <= entInfo.nextUpdate then
+				table.insert(global.tf.growing, i + 1, entInfo)
 				debug("next tree update not ready")
 			return
 			end
 		end
-		table.insert(glob.tf.growing, 1, entInfo)
-	elseif #glob.tf.growing == 1 then
-		if glob.tf.growing[1].nextUpdate > entInfo.nextUpdate then
-			table.insert(glob.tf.growing, 1, entInfo)
+		table.insert(global.tf.growing, 1, entInfo)
+	elseif #global.tf.growing == 1 then
+		if global.tf.growing[1].nextUpdate > entInfo.nextUpdate then
+			table.insert(global.tf.growing, 1, entInfo)
 			debug("next tree update ready")
 		else
-			table.insert(glob.tf.growing, entInfo)
+			table.insert(global.tf.growing, entInfo)
 			debug("next tree update not ready")
 		end
 	else
-		table.insert(glob.tf.growing, entInfo)
+		table.insert(global.tf.growing, entInfo)
 		debug("next tree update not ready")
 	end
 end
@@ -172,12 +172,12 @@ function calcEfficiency(entity, fertilizerApplied)
   local currentTilename = game.gettile(entity.position.x, entity.position.y).name
 
   local efficiency
-	if glob.tf.seedPrototypes[seedType].efficiency[currentTilename] == nil then
-		return glob.tf.seedPrototypes[seedType].efficiency.other
+	if global.tf.seedPrototypes[seedType].efficiency[currentTilename] == nil then
+		return global.tf.seedPrototypes[seedType].efficiency.other
 	else
-		efficiency = glob.tf.seedPrototypes[seedType].efficiency[currentTilename]
+		efficiency = global.tf.seedPrototypes[seedType].efficiency[currentTilename]
 		if fertilizerApplied then
-			return efficiency + glob.tf.seedPrototypes[seedType].fertilizerBoost
+			return efficiency + global.tf.seedPrototypes[seedType].fertilizerBoost
 		else
 		return efficiency
 		end

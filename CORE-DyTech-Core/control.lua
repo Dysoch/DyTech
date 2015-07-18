@@ -23,14 +23,14 @@ end
 --[[TreeFarm Stuff, for trees!]]--
 function populateSeedTypeLookUpTable()
 if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
-  for seedTypeName, seedType in pairs(glob.tf.seedPrototypes) do
+  for seedTypeName, seedType in pairs(global.tf.seedPrototypes) do
     for _, stateName in pairs(seedType.states) do
       seedTypeLookUpTable[stateName] = seedTypeName
     end
   end
 end
 
-game.oninit(function()
+game.on_init(function()
 	if not remote.interfaces["treefarm_interface"] then 
 		debug("Treefarm not installed")
 		Trees.OnInit()
@@ -41,11 +41,11 @@ game.oninit(function()
 fs.Startup()
 end)
 
-game.onsave(function()
+game.on_save(function()
 
 end)
 
-game.onload(function()
+game.on_load(function()
 	if not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
 		Trees.OnLoad()
@@ -59,30 +59,30 @@ game.onload(function()
 	end
 end)
 
-game.onevent(defines.events.ontick, function(event)
+game.on_event(defines.events.on_tick, function(event)
 	if event.tick%600==0 then
-		game.windorientation = math.random()
-		debug(tostring(game.windorientation))
+		game.wind_orientation = math.random()
+		debug(tostring(game.wind_orientation))
 	end
 	fs.Timer(event)
 	--if not DyTechOnInit then
 		--DyTechOnInit = true
 	--end
 	if not remote.interfaces["treefarm_interface"] then
-	while ((glob.tf.growing[1] ~= nil) and (event.tick >= glob.tf.growing[1].nextUpdate)) do
-    local removedEntity = table.remove(glob.tf.growing, 1)
+	while ((global.tf.growing[1] ~= nil) and (event.tick >= global.tf.growing[1].nextUpdate)) do
+    local removedEntity = table.remove(global.tf.growing, 1)
     local seedTypeName
     local newState
 	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
 		if removedEntity.entity.valid then
 			seedTypeName = seedTypeLookUpTable[removedEntity.entity.name]
 			newState = removedEntity.state + 1
-			if newState <= #glob.tf.seedPrototypes[seedTypeName].states then
+			if newState <= #global.tf.seedPrototypes[seedTypeName].states then
 			local tmpPos = removedEntity.entity.position
-			local newEnt = game.createentity{name = glob.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
+			local newEnt = game.createentity{name = global.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
 			removedEntity.entity.destroy()
 			debug("Old tree removed, new one placed")
-			local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[seedTypeName].randomGrowingTime + glob.tf.seedPrototypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)
+			local deltaTime = math.ceil((math.random() * global.tf.seedPrototypes[seedTypeName].randomGrowingTime + global.tf.seedPrototypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)
 			local updatedEntry =
 			{
 				entity = newEnt,
@@ -97,47 +97,47 @@ game.onevent(defines.events.ontick, function(event)
 	end end
 end)
 
-game.onevent(defines.events.onplayercrafteditem, function(event)
-	fs.CraftedItemsLogger(event.itemstack.name, event.itemstack.count)
+game.on_event(defines.events.on_player_crafted_item, function(event)
+	fs.CraftedItemsLogger(event.item_stack.name, event.item_stack.count)
 end)
 
-game.onevent(defines.events.onplayermineditem, function(event)
-	fs.MinedItemsLogger(event.itemstack.name, event.itemstack.count)
+game.on_event(defines.events.on_player_mined_item, function(event)
+	fs.MinedItemsLogger(event.item_stack.name, event.item_stack.count)
 end)
 
-game.onevent(defines.events.onrobotmined, function(event)
-	fs.RobotMinedItemsLogger(event.itemstack.name, event.itemstack.count)
+game.on_event(defines.events.on_robot_mined, function(event)
+	fs.RobotMinedItemsLogger(event.item_stack.name, event.item_stack.count)
 end)
 
-game.onevent(defines.events.onentitydied, function(event)
+game.on_event(defines.events.on_entity_died, function(event)
 	fs.EntityDiedLogger(event.entity.name)
 end)
 
-game.onevent(defines.events.onsectorscanned, function(event)
+game.on_event(defines.events.on_sector_scanned, function(event)
 	fs.SectorScannedLogger()
 end)
 
-game.onevent(defines.events.onmarkedfordeconstruction, function(event)
+game.on_event(defines.events.on_marked_for_deconstruction, function(event)
 	fs.MarkedForDeconstructionLogger(event.entity.name)
 end)
 
-game.onevent(defines.events.oncanceleddeconstruction, function(event)
+game.on_event(defines.events.on_canceled_deconstruction, function(event)
 	fs.CanceledDeconstructionLogger(event.entity.name)
 end)
 
-game.onevent(defines.events.onpickedupitem, function(event)
-	fs.PickedItemsLogger(event.itemstack.name, event.itemstack.count)
+game.on_event(defines.events.on_picked_up_item, function(event)
+	fs.PickedItemsLogger(event.item_stack.name, event.item_stack.count)
 end)
 
-game.onevent(defines.events.onresearchstarted, function(event)
+game.on_event(defines.events.on_research_started, function(event)
 	fs.TechLogger("started", event.research)
 end)
 
-game.onevent(defines.events.onresearchfinished, function(event)
+game.on_event(defines.events.on_research_finished, function(event)
 if game.players == 1 then
-	if game.player.controllertype == 2 or game.player.controllertype == 0 then
+	if game.player.controller_type == 2 or game.player.controller_type == 0 then
 		fs.TechLogger("finished-god", event.research)
-	elseif game.player.controllertype == 1 then
+	elseif game.player.controller_type == 1 then
 		fs.TechLogger("finished", event.research)
 	end
 else
@@ -145,50 +145,50 @@ else
 end	
 end)
 
-game.onevent(defines.events.onbuiltentity, function(event)
-	fs.BuildEntityLogger(event.createdentity.name)
-local player = game.players[event.playerindex]
+game.on_event(defines.events.on_built_entity, function(event)
+	fs.BuildEntityLogger(event.created_entity.name)
+local player = game.players[event.player_index]
 	if not remote.interfaces["treefarm_interface"] then
-	if event.createdentity.type == "tree" then
+	if event.created_entity.type == "tree" then
 	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
-	debug("tree created (player "..tostring(event.playerindex)..")")
-    local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
+	debug("tree created (player "..tostring(event.player_index)..")")
+    local currentSeedTypeName = seedTypeLookUpTable[event.created_entity.name]
 		if currentSeedTypeName ~= nil then
 		debug("currentSeedTypeName = nil")
-		local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
-		local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + glob.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
+		local newEfficiency = Trees.calcEfficiency(event.created_entity, false)
+		local deltaTime = math.ceil((math.random() * global.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + global.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
 		local nextUpdateIn = event.tick + deltaTime
 		local entInfo =
 		{
-			entity = event.createdentity,
+			entity = event.created_entity,
 			state = 1,
 			efficiency = newEfficiency,
 			nextUpdate = nextUpdateIn
 		}
 		Trees.placeSeedIntoList(entInfo)
-		debug("seed placed into list (player "..tostring(event.playerindex)..")")
+		debug("seed placed into list (player "..tostring(event.player_index)..")")
 		return
 		debug("return")
 		end
 	end end
 end)
 
-game.onevent(defines.events.onrobotbuiltentity, function(event)
-	fs.RobotBuildEntityLogger(event.createdentity.name)
-local player = game.players[event.playerindex]
+game.on_event(defines.events.on_robot_built_entity, function(event)
+	fs.RobotBuildEntityLogger(event.created_entity.name)
+local player = game.players[event.player_index]
 	if not remote.interfaces["treefarm_interface"] then
-	if event.createdentity.type == "tree" then
+	if event.created_entity.type == "tree" then
 	if seedTypeLookUpTable==nil then populateSeedTypeLookUpTable() end
 	debug("tree created (Robot)")
-    local currentSeedTypeName = seedTypeLookUpTable[event.createdentity.name]
+    local currentSeedTypeName = seedTypeLookUpTable[event.created_entity.name]
 		if currentSeedTypeName ~= nil then
 		debug("currentSeedTypeName ~= nil")
-		local newEfficiency = Trees.calcEfficiency(event.createdentity, false)
-		local deltaTime = math.ceil((math.random() * glob.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + glob.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
+		local newEfficiency = Trees.calcEfficiency(event.created_entity, false)
+		local deltaTime = math.ceil((math.random() * global.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + global.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
 		local nextUpdateIn = event.tick + deltaTime
 		local entInfo =
 		{
-			entity = event.createdentity,
+			entity = event.created_entity,
 			state = 1,
 			efficiency = newEfficiency,
 			nextUpdate = nextUpdateIn
@@ -201,21 +201,21 @@ local player = game.players[event.playerindex]
 	end end
 end)
 
-game.onevent(defines.events.onchunkgenerated, function(event)
-	if not glob.Logger.ChunkGenerated then 
-		glob.Logger.ChunkGenerated = 1
+game.on_event(defines.events.on_chunk_generated, function(event)
+	if not global.Logger.ChunkGenerated then 
+		global.Logger.ChunkGenerated = 1
 	else
-		glob.Logger.ChunkGenerated = glob.Logger.ChunkGenerated + 1
+		global.Logger.ChunkGenerated = global.Logger.ChunkGenerated + 1
 	end
-	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(glob.Logger.ChunkGenerated)) end
+	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(global.Logger.ChunkGenerated)) end
 end)
 
-remote.addinterface("DyTech-Core",
+remote.add_interface("DyTech-Core",
 {  
 	ResetAll = function()
 		for _,player in pairs(game.players) do
-			player.force.resetrecipes()
-			player.force.resettechnologies()
+			player.force.reset_recipes()
+			player.force.reset_technologies()
 		end
 	end,
   
@@ -246,35 +246,35 @@ remote.addinterface("DyTech-Core",
 	end,
 	
 	Timer = function(name)
-		return glob.timer[name]
+		return global.timer[name]
 	end,
 	
 	Logger = function()
-		game.makefile("Logger/Technologies.txt", serpent.block(glob.Logger.Technology))
-		game.makefile("Logger/RobotBuildEntity.txt", serpent.block(glob.Logger.RobotBuildEntity))
-		game.makefile("Logger/BuildEntity.txt", serpent.block(glob.Logger.BuildEntity))
-		game.makefile("Logger/PickedItems.txt", serpent.block(glob.Logger.PickedItems))
-		game.makefile("Logger/CanceledDeconstruction.txt", serpent.block(glob.Logger.CanceledDeconstruction))
-		game.makefile("Logger/MarkedForDeconstruction.txt", serpent.block(glob.Logger.MarkedForDeconstruction))
-		game.makefile("Logger/EntityDied.txt", serpent.block(glob.Logger.EntityDied))
-		game.makefile("Logger/RobotMinedItems.txt", serpent.block(glob.Logger.RobotMinedItems))
-		game.makefile("Logger/MinedItems.txt", serpent.block(glob.Logger.MinedItems))
-		game.makefile("Logger/CraftedItems.txt", serpent.block(glob.Logger.CraftedItems))
-		game.makefile("TimeStamp/RobotBuildEntity.txt", serpent.block(glob.TimeStamp.RobotBuildEntity))
-		game.makefile("TimeStamp/BuildEntity.txt", serpent.block(glob.TimeStamp.BuildEntity))
-		game.makefile("TimeStamp/PickedItems.txt", serpent.block(glob.TimeStamp.PickedItems))
-		game.makefile("TimeStamp/CanceledDeconstruction.txt", serpent.block(glob.TimeStamp.CanceledDeconstruction))
-		game.makefile("TimeStamp/MarkedForDeconstruction.txt", serpent.block(glob.TimeStamp.MarkedForDeconstruction))
-		game.makefile("TimeStamp/EntityDied.txt", serpent.block(glob.TimeStamp.EntityDied))
-		game.makefile("TimeStamp/RobotMinedItems.txt", serpent.block(glob.TimeStamp.RobotMinedItems))
-		game.makefile("TimeStamp/MinedItems.txt", serpent.block(glob.TimeStamp.MinedItems))
-		game.makefile("TimeStamp/CraftedItems.txt", serpent.block(glob.TimeStamp.CraftedItems))
+		game.make_file("Logger/Technologies.txt", serpent.block(global.Logger.Technology))
+		game.make_file("Logger/RobotBuildEntity.txt", serpent.block(global.Logger.RobotBuildEntity))
+		game.make_file("Logger/BuildEntity.txt", serpent.block(global.Logger.BuildEntity))
+		game.make_file("Logger/PickedItems.txt", serpent.block(global.Logger.PickedItems))
+		game.make_file("Logger/CanceledDeconstruction.txt", serpent.block(global.Logger.CanceledDeconstruction))
+		game.make_file("Logger/MarkedForDeconstruction.txt", serpent.block(global.Logger.MarkedForDeconstruction))
+		game.make_file("Logger/EntityDied.txt", serpent.block(global.Logger.EntityDied))
+		game.make_file("Logger/RobotMinedItems.txt", serpent.block(global.Logger.RobotMinedItems))
+		game.make_file("Logger/MinedItems.txt", serpent.block(global.Logger.MinedItems))
+		game.make_file("Logger/CraftedItems.txt", serpent.block(global.Logger.CraftedItems))
+		game.make_file("TimeStamp/RobotBuildEntity.txt", serpent.block(global.TimeStamp.RobotBuildEntity))
+		game.make_file("TimeStamp/BuildEntity.txt", serpent.block(global.TimeStamp.BuildEntity))
+		game.make_file("TimeStamp/PickedItems.txt", serpent.block(global.TimeStamp.PickedItems))
+		game.make_file("TimeStamp/CanceledDeconstruction.txt", serpent.block(global.TimeStamp.CanceledDeconstruction))
+		game.make_file("TimeStamp/MarkedForDeconstruction.txt", serpent.block(global.TimeStamp.MarkedForDeconstruction))
+		game.make_file("TimeStamp/EntityDied.txt", serpent.block(global.TimeStamp.EntityDied))
+		game.make_file("TimeStamp/RobotMinedItems.txt", serpent.block(global.TimeStamp.RobotMinedItems))
+		game.make_file("TimeStamp/MinedItems.txt", serpent.block(global.TimeStamp.MinedItems))
+		game.make_file("TimeStamp/CraftedItems.txt", serpent.block(global.TimeStamp.CraftedItems))
 	end,
 	
 	TimerIncrease = function(Hour, Minute, Second)
-		glob.timer.hours = glob.timer.hours + Hour
-		glob.timer.minutes = glob.timer.minutes + Minute
-		glob.timer.seconds = glob.timer.seconds + Second
+		global.timer.hours = global.timer.hours + Hour
+		global.timer.minutes = global.timer.minutes + Minute
+		global.timer.seconds = global.timer.seconds + Second
 	end,
 	
 	FindResources = function(Amount)
@@ -283,7 +283,7 @@ remote.addinterface("DyTech-Core",
 	
 	ChangeWind = function()
 		local direction = math.random()
-		game.windorientation = direction
-		PlayerPrint(tostring(game.windorientation))
+		game.wind_orientation = direction
+		PlayerPrint(tostring(game.wind_orientation))
 	end
 })
