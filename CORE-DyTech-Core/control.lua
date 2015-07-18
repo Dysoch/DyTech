@@ -1,5 +1,6 @@
 require "defines"
 require "scripts/functions"
+require "scripts/gui"
 require "scripts/remote-calls"
 require "scripts/trees"
 
@@ -38,7 +39,7 @@ game.on_init(function()
 		remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
 		remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
 	end
-fs.Startup()
+	fs.Startup()
 end)
 
 game.on_save(function()
@@ -57,6 +58,7 @@ game.on_load(function()
 			remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
 		end
 	end
+	CoreGUI.CreateButton()
 end)
 
 game.on_event(defines.events.on_tick, function(event)
@@ -208,6 +210,18 @@ game.on_event(defines.events.on_chunk_generated, function(event)
 		global.Logger.ChunkGenerated = global.Logger.ChunkGenerated + 1
 	end
 	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(global.Logger.ChunkGenerated)) end
+end)
+
+game.on_event(defines.events.on_gui_click, function(event)
+local playerIndex = event.player_index
+local player = game.players[playerIndex]
+	if event.element.name == "DyTech-Button" then
+		player.gui.top["DyTech-Button"].destroy()
+		CoreGUI.showDyTechGUI(playerIndex)
+	elseif event.element.name == "DyTech-Close-Button" then
+		CoreGUI.closeGUI("DyTech", playerIndex)
+		CoreGUI.CreateButton()
+	end
 end)
 
 remote.add_interface("DyTech-Core",
