@@ -31,6 +31,20 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "lava-heater-electric",
+    enabled = false,
+    energy_required = 10,
+    ingredients =
+    {
+      {"liquid-handler", 1},
+      {"advanced-circuit", 15},
+      {"pipe", 25},
+      {"frame-2", 5},
+    },
+    result= "lava-heater-electric"
+  },
+  {
+    type = "recipe",
     name = "lava-cooler",
     enabled = false,
     energy_required = 10,

@@ -16,6 +16,9 @@ for index, force in pairs(game.forces) do
 		force.recipes["pipe-mk3"].enabled = true
 		force.recipes["pipe-to-ground-mk3"].enabled = true
 	end
+	if force.technologies["lava-01"].researched then
+		force.recipes["lava-heater-electric"].enabled = true
+	end
 end
 
 for _,player in pairs(game.players) do

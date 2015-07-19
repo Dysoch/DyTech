@@ -16,6 +16,10 @@ data:extend(
       },
       {
         type = "unlock-recipe",
+        recipe = "lava-heater-electric"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "lava-cooler"
       },
     },

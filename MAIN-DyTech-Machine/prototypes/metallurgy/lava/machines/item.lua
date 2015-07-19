@@ -22,6 +22,16 @@ data:extend(
   },
   {
     type = "item",
+    name = "lava-heater-electric",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/machines/liquid-handler.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-machines-metallurgy",
+    order = "lava-heater-electric",
+    place_result = "lava-heater-electric",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "lava-cooler",
     icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/machines/liquid-handler.png",
     flags = {"goes-to-quickbar"},
