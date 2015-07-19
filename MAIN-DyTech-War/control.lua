@@ -44,6 +44,7 @@ end)
 
 game.on_event(defines.events.on_chunk_generated, function(event)
 	if Dyzilla_Spawner then
+	if not global.Dyzilla then Dyzilla.Startup() end
 	global.Dyzilla.Chunks = global.Dyzilla.Chunks + 1
 		if Difficulty==1 then 
 			Dyzilla.Easy(event)
