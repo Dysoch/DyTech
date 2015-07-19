@@ -162,38 +162,38 @@ end)
 
 game.on_event(defines.events.on_built_entity, function(event)
 
-	if event.createdentity.name == "nuclear-reactor" then
+	if event.created_entity.name == "nuclear-reactor" then
 	--Saving the coordinates of the placed entity
 	global.entitycount = global.entitycount + 1
 	datadump(global.entitycount, "global.entitycount")
 	
 	global.entitypos[global.entitycount] = {}
-	global.entitypos[global.entitycount].TopLeftX = event.createdentity.position.x-2 --Left Top
-	global.entitypos[global.entitycount].TopLeftY = event.createdentity.position.y+2
-	global.entitypos[global.entitycount].TopRightX = event.createdentity.position.x+2 --Right Top
-	global.entitypos[global.entitycount].TopRightY = event.createdentity.position.y+2
+	global.entitypos[global.entitycount].TopLeftX = event.created_entity.position.x-2 --Left Top
+	global.entitypos[global.entitycount].TopLeftY = event.created_entity.position.y+2
+	global.entitypos[global.entitycount].TopRightX = event.created_entity.position.x+2 --Right Top
+	global.entitypos[global.entitycount].TopRightY = event.created_entity.position.y+2
 
-	global.entitypos[global.entitycount].BottomLeftX = event.createdentity.position.x-2  --Left Bottom
-	global.entitypos[global.entitycount].BottomLeftY = event.createdentity.position.y-2
-	global.entitypos[global.entitycount].BottomRightX = event.createdentity.position.x+2 --Right Bottom
-	global.entitypos[global.entitycount].BottomRightY = event.createdentity.position.y-2
+	global.entitypos[global.entitycount].BottomLeftX = event.created_entity.position.x-2  --Left Bottom
+	global.entitypos[global.entitycount].BottomLeftY = event.created_entity.position.y-2
+	global.entitypos[global.entitycount].BottomRightX = event.created_entity.position.x+2 --Right Bottom
+	global.entitypos[global.entitycount].BottomRightY = event.created_entity.position.y-2
 	
-	global.entitypos[global.entitycount].ContainerX = event.createdentity.position.x-3
-	global.entitypos[global.entitycount].ContainerY = event.createdentity.position.y
+	global.entitypos[global.entitycount].ContainerX = event.created_entity.position.x-3
+	global.entitypos[global.entitycount].ContainerY = event.created_entity.position.y
 	
 	
 		global.entityinfo[global.entitycount] = {}
 		global.entityinfo[global.entitycount].ContainerEntity = {}
 		global.entityinfo[global.entitycount].ReactorEntity = {}
-		global.entityinfo[global.entitycount].ReactorEntity = event.createdentity
+		global.entityinfo[global.entitycount].ReactorEntity = event.created_entity
 --		datadump(global.entityinfo[global.entitycount].ReactorEntity, "global.entityinfo[global.entitycount].ReactorEntity")
 --		debug(global.entityinfo[global.entitycount].ReactorEntity.name)
---		event.createdentity.operable = false
+--		event.created_entity.operable = false
 		
-		if (game.canplaceentity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}}) then
-			game.createentity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, force=game.forces.player}
---			global.entityinfo[global.entitycount].ContainerEntity = game.findentitiesfiltered{area = {{global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}}, name = "nuclear-reactor-container"}
-			local newReactor = game.createentity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, force=game.forces.player}
+		if (game.can_place_entity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}}) then
+			game.create_entity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, force=game.forces.player}
+--			global.entityinfo[global.entitycount].ContainerEntity = surface.find_entities_filtered{area = {{global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}}, name = "nuclear-reactor-container"}
+			local newReactor = game.create_entity{name = "nuclear-reactor-container", position = {global.entitypos[global.entitycount].ContainerX, global.entitypos[global.entitycount].ContainerY}, force=game.forces.player}
 			global.entityinfo[global.entitycount].ContainerEntity = newReactor
 			if global.entityinfo[global.entitycount].ContainerEntity.name == "nuclear-reactor-container" then
 				debug("Correct Entity Found!")
@@ -213,20 +213,20 @@ game.on_event(defines.events.on_built_entity, function(event)
 			global.entityinfo[global.entitycount].ContainerEntity = nil
 		end
 	end
-	if event.createdentity.name == "nuclear-dynamo" then
+	if event.created_entity.name == "nuclear-dynamo" then
 	
 	global.dynamoentitycount = global.dynamoentitycount + 1
 	
 	global.entitypos2[global.dynamoentitycount] = {}
-	global.entitypos2[global.dynamoentitycount].TopLeftX = event.createdentity.position.x-1 --Left Top
-	global.entitypos2[global.dynamoentitycount].TopLeftY = event.createdentity.position.y+3
-	global.entitypos2[global.dynamoentitycount].TopRightX = event.createdentity.position.x+1 --Right Top
-	global.entitypos2[global.dynamoentitycount].TopRightY = event.createdentity.position.y+3
+	global.entitypos2[global.dynamoentitycount].TopLeftX = event.created_entity.position.x-1 --Left Top
+	global.entitypos2[global.dynamoentitycount].TopLeftY = event.created_entity.position.y+3
+	global.entitypos2[global.dynamoentitycount].TopRightX = event.created_entity.position.x+1 --Right Top
+	global.entitypos2[global.dynamoentitycount].TopRightY = event.created_entity.position.y+3
 
-	global.entitypos2[global.dynamoentitycount].BottomLeftX = event.createdentity.position.x-1  --Left Bottom
-	global.entitypos2[global.dynamoentitycount].BottomLeftY = event.createdentity.position.y-3
-	global.entitypos2[global.dynamoentitycount].BottomRightX = event.createdentity.position.x+1 --Right Bottom
-	global.entitypos2[global.dynamoentitycount].BottomRightY = event.createdentity.position.y-3
+	global.entitypos2[global.dynamoentitycount].BottomLeftX = event.created_entity.position.x-1  --Left Bottom
+	global.entitypos2[global.dynamoentitycount].BottomLeftY = event.created_entity.position.y-3
+	global.entitypos2[global.dynamoentitycount].BottomRightX = event.created_entity.position.x+1 --Right Bottom
+	global.entitypos2[global.dynamoentitycount].BottomRightY = event.created_entity.position.y-3
 
 	if global.entitypos[global.entitycount].TopLeftX == global.entitypos2[global.dynamoentitycount].TopLeftX and global.entitypos[global.entitycount].TopLeftY-1 == global.entitypos2[global.dynamoentitycount].TopLeftY then
 		debug("TopLeft")
@@ -242,7 +242,7 @@ game.on_event(defines.events.on_built_entity, function(event)
 end)
 
 game.on_event(defines.events.on_tick, function(event)
-if debug_master then
+if debug_master and Nuclear_Reactors then
 	if global.tick[1] == 300 then
 		debug("moveFuel")
 		moveFuel()
