@@ -1,5 +1,6 @@
 require "defines"
 require "util"
+require "config"
 require "prototypes.internal-config"
 require "gui.gui"
 
@@ -253,7 +254,7 @@ if debug_master then
 	else
 		global.tick[1] = global.tick[1] + 1
 	end
-else
+elseif Nuclear_Reactors then
 	if global.tick[1] == 30 then
 		moveFuel()
 	end
@@ -267,7 +268,7 @@ end
 end)
 
 game.on_event(defines.events.on_player_mined_item, function(event)
-if event.entity.name == "nuclear-reactor" then
+if event.item.name == "nuclear-reactor" then
 	global.entityinfo[global.entitycount].ContainerEntity.destroy()
 end
 end)
