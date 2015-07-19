@@ -8,8 +8,8 @@ data:extend(
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge"},
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "75kW",
@@ -51,66 +51,81 @@ data:extend(
       height = 91,
       line_length = 11,
       frame_count = 33,
-      shift = {0.2, 0}
+      shift = {0.2, 0},
+	  scale = 1.7
     },
 	fluid_boxes =
 	{
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, 1} }}
+        pipe_connections = {{ type="input", position = {-3, 0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, -1} }}
+        pipe_connections = {{ type="input", position = {-3, -2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {-3, 2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,-2} }}
+        pipe_connections = {{ type="input", position = {3,0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,-2} }}
+        pipe_connections = {{ type="input", position = {3,2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {3,-2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, 1} }}
+        pipe_connections = {{ type="input", position = {1, -3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, -1} }}
+        pipe_connections = {{ type="input", position = {-1, -3} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,2} }}
+        pipe_connections = {{ type="input", position = {1,3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,2} }}
-      }, 
+        pipe_connections = {{ type="input", position = {-1,3} }}
+      },
 	},
   },
   {
@@ -234,8 +249,8 @@ data:extend(
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge-1"},
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "150kW",
@@ -277,66 +292,81 @@ data:extend(
       height = 91,
       line_length = 11,
       frame_count = 33,
-      shift = {0.2, 0}
+      shift = {0.2, 0},
+	  scale = 1.7
     },
 	fluid_boxes =
 	{
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, 1} }}
+        pipe_connections = {{ type="input", position = {-3, 0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, -1} }}
+        pipe_connections = {{ type="input", position = {-3, -2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {-3, 2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,-2} }}
+        pipe_connections = {{ type="input", position = {3,0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,-2} }}
+        pipe_connections = {{ type="input", position = {3,2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {3,-2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, 1} }}
+        pipe_connections = {{ type="input", position = {1, -3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, -1} }}
+        pipe_connections = {{ type="input", position = {-1, -3} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,2} }}
+        pipe_connections = {{ type="input", position = {1,3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,2} }}
-      }, 
+        pipe_connections = {{ type="input", position = {-1,3} }}
+      },
 	},
   },
   {
@@ -460,8 +490,8 @@ data:extend(
     minable = {hardness= 0.2, mining_time= 0.5, result= "forge-2"},
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+	collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"forge"},
     max_health = 1500,
     energy_usage = "225kW",
@@ -503,66 +533,81 @@ data:extend(
       height = 91,
       line_length = 11,
       frame_count = 33,
-      shift = {0.2, 0}
+      shift = {0.2, 0},
+	  scale = 1.7
     },
 	fluid_boxes =
 	{
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, 1} }}
+        pipe_connections = {{ type="input", position = {-3, 0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-2, -1} }}
+        pipe_connections = {{ type="input", position = {-3, -2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {-3, 2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,-2} }}
+        pipe_connections = {{ type="input", position = {3,0} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,-2} }}
+        pipe_connections = {{ type="input", position = {3,2} }}
+      }, 
+	  {
+        production_type = "input",
+        --pipe_covers = pipecoverspictures(),
+        base_area = 500,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {3,-2} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, 1} }}
+        pipe_connections = {{ type="input", position = {1, -3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, -1} }}
+        pipe_connections = {{ type="input", position = {-1, -3} }}
       }, 
       {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {1,2} }}
+        pipe_connections = {{ type="input", position = {1,3} }}
       }, 
 	  {
         production_type = "input",
-        pipe_covers = pipecoverspictures(),
+        --pipe_covers = pipecoverspictures(),
         base_area = 500,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {-1,2} }}
-      }, 
+        pipe_connections = {{ type="input", position = {-1,3} }}
+      },
 	},
   },
   {

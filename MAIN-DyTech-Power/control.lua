@@ -268,7 +268,7 @@ end
 end)
 
 game.on_event(defines.events.on_player_mined_item, function(event)
-if event.item.name == "nuclear-reactor" then
+if event.item_stack.name == "nuclear-reactor" then
 	global.entityinfo[global.entitycount].ContainerEntity.destroy()
 end
 end)
