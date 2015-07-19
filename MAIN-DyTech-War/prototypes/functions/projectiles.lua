@@ -513,7 +513,6 @@ data:extend(
   {
     type = "projectile",
     name = "laser-shotgun-ruby-1",
-    acceleration = 0.005,
     flags = {"not-on-map"},
     collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.005,

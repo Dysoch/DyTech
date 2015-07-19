@@ -132,3 +132,11 @@ elseif Difficulty==5 then
 	end
 end
 
+if Experimental_Feature then
+	for _,projectile in pairs(data.raw["projectile"]) do
+		if not projectile.collision_box then
+			projectile.collision_box = {{-0.05, -1}, {0.05, 1}}
+			projectile.direction_only = true
+		end
+	end
+end

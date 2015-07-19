@@ -31,9 +31,11 @@ LaserWeapons = true
 Tanks = true
 Equipment = true
 Armor = true
+Experimental_Feature = false
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
 -- NOTE: SpecialAmmo REQUIRES the following to be active: PoisonCapsules, AcidCapsules, NapalmCapsules, RadiationCapsules, SlowdownCapsules, Ammo, GunTurret, SniperRifle!!!!
+-- NOTE: Experimental Feature currently contains collisions for projectiles! ALL OF THEM! this is however, highly experimental, and might break your turrets behind the walls! Enable on your own risk!
 
 --[[ Capsules ]]--
 -- Here are all different Capsules:
