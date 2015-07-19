@@ -3,6 +3,7 @@ require "util"
 require "config"
 require "prototypes.internal-config"
 require "gui.gui"
+require "gui.functions"
 
 --[[TODO:
 	Proper localisation
@@ -73,8 +74,12 @@ global.fuel[3] = "u-235-4-0"
 global.fuel[4] = "u-235-4-5"
 global.fuel[5] = "u-235-5-0"
 
-global.nearby_steam_engines = {}
+global.nearbySteamEngines = {}
 global.guiactivationdistance = 1
+global.gui_activation_distance = 1
+global.nearby_engine = {}
+global.nearEngines = {}
+global.gui = {}
 
 global.steam = {}
 global.steam[1] = {}
@@ -98,65 +103,117 @@ global.steam[5].primary = {}
 global.steam[5].secondary = {}
 global.steam[5].tertiary = {}
 
-global.steam[1].primary = "primary-steam-engine"
-global.steam[1].secondary = "secondary-steam-engine"
-global.steam[1].tertiary = "tertiary-steam-engine"
-global.steam[2].primary = "primary-steam-engine-mk2"
-global.steam[2].secondary = "secondary-steam-engine-mk2"
-global.steam[2].tertiary = "tertiary-steam-engine-mk2"
-global.steam[3].primary = "primary-steam-engine-mk3"
-global.steam[3].secondary = "secondary-steam-engine-mk3"
-global.steam[3].tertiary = "tertiary-steam-engine-mk3"
-global.steam[4].primary = "primary-steam-engine-mk4"
-global.steam[4].secondary = "secondary-steam-engine-mk4"
-global.steam[4].tertiary = "tertiary-steam-engine-mk4"
-global.steam[5].primary = "primary-steam-engine-mk5"
-global.steam[5].secondary = "secondary-steam-engine-mk5"
-global.steam[5].tertiary = "tertiary-steam-engine-mk5"
+global.steam[1].primary = "steam-engine-primary"
+global.steam[1].secondary = "steam-engine-secondary"
+global.steam[1].tertiary = "steam-engine-tertiary"
+global.steam[2].primary = "steam-engine-primary-mk2"
+global.steam[2].secondary = "steam-engine-secondary-mk2"
+global.steam[2].tertiary = "steam-engine-tertiary-mk2"
+global.steam[3].primary = "steam-engine-primary-mk3"
+global.steam[3].secondary = "steam-engine-secondary-mk3"
+global.steam[3].tertiary = "steam-engine-tertiary-mk3"
+global.steam[4].primary = "steam-engine-primary-mk4"
+global.steam[4].secondary = "steam-engine-secondary-mk4"
+global.steam[4].tertiary = "steam-engine-tertiary-mk4"
+global.steam[5].primary = "steam-engine-primary-mk5"
+global.steam[5].secondary = "steam-engine-secondary-mk5"
+global.steam[5].tertiary = "steam-engine-tertiary-mk5"
 end)
 
 --[[Steam Engine Code]]--
 
 function CheckPlayerIsNearEngine(player)
-if not global.nearby_steam_engines[player.name] then
-	for i in pairs(global.steam) do
-		if not searcharea then searcharea = {} end
-		local searcharea = SquareArea(player.position, global.guiactivationdistance)
-		local nearEngines = game.findentitiesfiltered{area = searcharea, name = global.steam[i].primary}
-		if nearbyEngines and not nearbyEngines.valid then
-			if gui[player.name] then CloseGUI(player) end
-			nearbyEngines[player.name] = nil
-		elseif nearbyEngines and nearEngines.valid then
-			local dist = util.distance(player.position, nearbyEngines[player.name].position)
-			if dist > global.guiactivationdistance + 2 then
-				if gui[player.name] then CloseGUI(player) end
-				nearbyEngines[player.name] = nil
+for i in pairs(global.steam) do
+local nearbyEngine = global.nearby_engine[player.name]
+	if nearbyEngine and not nearbyEngine.valid then
+		if global.gui[player.name] then CloseGUI(player) end
+		global.nearby_engine[player.name] = nil
+	elseif nearbyEngine and nearbyEngine.valid then
+		local dist = util.distance(player.position, global.nearby_engine[player.name].position)
+		if dist > global.gui_activation_distance + 2 then
+			if global.gui[player.name] then CloseGUI(player) end
+			global.nearby_engine[player.name] = nil
+		end
+	else
+		--primary engine
+		local searchArea = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.primary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].primary}
+		if #global.nearEngines.primary > 0 then
+			global.nearby_engine[player.name] = global.nearEngines.primary[1]
+			if not global.gui[player.name] then 
+				OpenGUI(player, "primary")
+				--global.gui[player.name] = true
+				debug("Opening GUI, primary")
+			else
+				debug("nope, no global.gui for you!")
+			end
+		end
+
+		--secondary engine
+		local searchArea = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.secondary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].secondary}
+		if #global.nearEngines.secondary > 0 then
+			global.nearby_engine[player.name] = global.nearEngines.secondary[1]
+			if not global.gui[player.name] then 
+				OpenGUI(player, "secondary")
+				--global.gui[player.name] = true
+				debug("Opening GUI, secondary")
+			else
+				debug("nope, no global.gui for you!")
+			end
+		end
+
+		--tertiary engine
+		local searchArea = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.tertiary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].tertiary}
+		if #global.nearEngines.tertiary > 0 then
+			global.nearby_engine[player.name] = global.nearEngines.tertiary[1]
+			if not global.gui[player.name] then 
+				OpenGUI(player, "tertiary")
+				--global.gui[player.name] = true
+				debug("Opening GUI, tertiary")
+			else
+				debug("nope, no global.gui for you!")
 			end
 		end
 	end
-	if #nearEngines > 0 then
-		if not gui[player.name] then
-			gui[player.name] = OpenGUI(player)
-		end
-	end
+
 end
 end
 
 
-game.on_event(defines.events.on_tick, function(event)
---ticking like a timebomb
-for player_Index, player in ipairs(game.players) do
-	if nearbyEngines and not nearEngines.valid then
-		--CloseGUI(player)
-		debug("CloseGUI")
-	end
+function OpenGUI(player, output)
+
+	GUI.PushParent(player.gui.left)
+	global.gui[player.name] = GUI.PushParent(GUI.Frame("steamengine_gui", "Steam Engine Control", GUI.VERTICAL))
+	GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
+	local primarybox = GUI.Checkbox("Primary", primary)
+	local secondarybox = GUI.Checkbox("Secondary", secondary)
+	local tertiarybox = GUI.Checkbox("Tertiary", tertiary)
+
+--[[	local primarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
+	local secondarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
+	local tertiarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}]]
 	
-	if global.tick[1] == 30 then
-		CheckPlayerIsNearEngine(player)
-		debug("CheckPlayerIsNearEngine")
+	if output == "primary" then
+		primarybox.state = true
+	elseif output == "secondary" then
+		secondarybox.state = true
+	elseif output == "tertiary" then
+		tertiarybox.state = true
+	else
+		return
 	end
 end
-end)
+
+function CloseGUI()
+	debug("closed the gui (somewhat)")
+	if global.gui[player.name] then
+		global.gui[player.name].destroy()
+		global.gui[player.name] = nil
+	end
+end
+
 
 --[[Reactor Code]]--
 
@@ -242,7 +299,25 @@ game.on_event(defines.events.on_built_entity, function(event)
 end)
 
 game.on_event(defines.events.on_tick, function(event)
-if debug_master and Nuclear_Reactors then
+--Steam Engine code:
+
+for player_Index, player in ipairs(game.players) do
+	if global.nearbyEngines and not global.nearEngines.valid then
+		--CloseGUI(player)
+		debug("CloseGUI")
+	end
+	if global.tick[2] == 300 then
+			debug("CheckPlayerIsNearEngine")
+		CheckPlayerIsNearEngine(player)
+		global.tick[2] = 0
+	else
+		global.tick[2] = global.tick[2] + 1
+	end
+end
+
+--Nuclear reactor code:
+
+if debug_master --[[and Nuclear_Reactors]] then
 	if global.tick[1] == 300 then
 		debug("moveFuel")
 		moveFuel()
@@ -254,7 +329,7 @@ if debug_master and Nuclear_Reactors then
 	else
 		global.tick[1] = global.tick[1] + 1
 	end
-elseif Nuclear_Reactors then
+else--[[if Nuclear_Reactors then]]
 	if global.tick[1] == 30 then
 		moveFuel()
 	end
