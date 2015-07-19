@@ -11,22 +11,43 @@ if Evolution_Reduced then
 local Time = data.raw["map-settings"]["map-settings"].enemy_evolution.time_factor
 local Destroy = data.raw["map-settings"]["map-settings"].enemy_evolution.destroy_factor
 local Pollution = data.raw["map-settings"]["map-settings"].enemy_evolution.pollution_factor
+local BiterPollutionAbsorbAbsolute = data.raw["unit-spawner"]["biter-spawner"].pollution_absorbtion_absolute 
+local BiterPollutionAbsorb = data.raw["unit-spawner"]["biter-spawner"].pollution_absorbtion_proportional
+local SpitterPollutionAbsorbAbsolute = data.raw["unit-spawner"]["spitter-spawner"].pollution_absorbtion_absolute 
+local SpitterPollutionAbsorb = data.raw["unit-spawner"]["spitter-spawner"].pollution_absorbtion_proportional
 	if Difficulty==1 then
 		Time = (Time/4) 
 		Destroy = (Destroy/4) 
 		Pollution = (Pollution/4) 
+		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute/2)
+		BiterPollutionAbsorb = (BiterPollutionAbsorb/2)
+		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute/2)
+		SpitterPollutionAbsorb = (SpitterPollutionAbsorb/2)
 	elseif Difficulty==2 then
 		Time = (Time/2) 
 		Destroy = (Destroy/2) 
-		Pollution = (Pollution/2)  
+		Pollution = (Pollution/2) 
+	elseif Difficulty==3 then
+		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*2)
+		BiterPollutionAbsorb = (BiterPollutionAbsorb*2)
+		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*2)
+		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*2) 
 	elseif Difficulty==4 then
 		Time = (Time*2) 
 		Destroy = (Destroy*2) 
 		Pollution = (Pollution*2) 
+		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*5)
+		BiterPollutionAbsorb = (BiterPollutionAbsorb*5)
+		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*5)
+		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*5)
 	elseif Difficulty==5 then
 		Time = (Time*5) 
 		Destroy = (Destroy*5) 
 		Pollution = (Pollution*5) 
+		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*10)
+		BiterPollutionAbsorb = (BiterPollutionAbsorb*10)
+		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*10)
+		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*10)
 	end
 end
 
