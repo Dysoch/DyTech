@@ -9,7 +9,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="clean-water", amount=1},
 	  {type="item", name="sand", amount=4},
     },
     results = 

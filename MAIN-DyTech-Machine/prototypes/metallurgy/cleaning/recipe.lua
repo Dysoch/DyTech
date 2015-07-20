@@ -10,7 +10,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=3},
+	  {type="fluid", name="clean-water", amount=3},
 	  {type="item", name="iron-ore", amount=1},
     },
     results = 
@@ -29,7 +29,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="copper-ore", amount=1},
     },
     results = 
@@ -48,7 +48,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="tin-ore", amount=1},
     },
     results = 
@@ -67,7 +67,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="zinc-ore", amount=1},
     },
     results = 
@@ -86,7 +86,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="lead-ore", amount=1},
     },
     results = 
@@ -105,7 +105,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="silver-ore", amount=1},
     },
     results = 
@@ -124,7 +124,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="gold-ore", amount=1},
     },
     results = 
@@ -143,7 +143,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="tungsten-ore", amount=1},
     },
     results = 
@@ -162,7 +162,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="cobalt-ore", amount=1},
     },
     results = 
@@ -181,7 +181,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-	  {type="fluid", name="water", amount=5},
+	  {type="fluid", name="clean-water", amount=5},
 	  {type="item", name="ardite-ore", amount=1},
     },
     results = 

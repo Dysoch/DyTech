@@ -76,7 +76,7 @@ data:extend(
     order = "1",
     ingredients =
     {
-	  {type="fluid", name="water", amount=50},
+	  {type="fluid", name="clean-water", amount=50},
 	  {type="item", name="raw-ruby", amount=1},
     },
     results = 
@@ -95,7 +95,7 @@ data:extend(
     order = "2",
     ingredients =
     {
-	  {type="fluid", name="water", amount=50},
+	  {type="fluid", name="clean-water", amount=50},
 	  {type="item", name="raw-sapphire", amount=1},
     },
     results = 
@@ -114,7 +114,7 @@ data:extend(
     order = "3",
     ingredients =
     {
-	  {type="fluid", name="water", amount=50},
+	  {type="fluid", name="clean-water", amount=50},
 	  {type="item", name="raw-emerald", amount=1},
     },
     results = 
@@ -133,7 +133,7 @@ data:extend(
     order = "4",
     ingredients =
     {
-	  {type="fluid", name="water", amount=50},
+	  {type="fluid", name="clean-water", amount=50},
 	  {type="item", name="raw-topaz", amount=1},
     },
     results = 
@@ -152,7 +152,7 @@ data:extend(
     order = "5",
     ingredients =
     {
-	  {type="fluid", name="water", amount=50},
+	  {type="fluid", name="clean-water", amount=50},
 	  {type="item", name="raw-diamond", amount=1},
     },
     results = 
