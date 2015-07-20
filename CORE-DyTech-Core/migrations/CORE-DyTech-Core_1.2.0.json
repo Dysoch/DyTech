@@ -31,5 +31,10 @@
 	["topaz-3", "crystal"],
 	["topaz-4", "crystal"],
 	["topaz-5", "crystal"]
+  ],
+  "fluid":
+  [
+	["water", "clean-water"],
+	["dirty-water", "water"]
   ]
 }

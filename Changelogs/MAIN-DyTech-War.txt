@@ -4,7 +4,7 @@
 [list]
 [*] Features:
 [list][*] Ported to Factorio 0.12.
-[*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! 
+[*] Added Diamond Plasma Turrets! These are expensive, hard to get but totally worth it! 
 [*] Decreased Evolution Factor by 50% to make it a little easier to survive!
 [*] Added a mixed Capsule. They spawn 4 Sharpshooters, 4 Frenzy and 4 Defender Robots.
 [*] Added stationary Robot Capsules. They last longer and have more health. (Makeshift Turrets)
@@ -28,6 +28,7 @@
 [/list]
 [*] Balancing:
 [list] [*] Simplified Biter and Spitter Corpses into 1 corpse per type. All old items will change to the new item!
+[*] Increased damage of all laser turrets by 4x, but not the recipes. (they are expensive enough)
 [*] Increased stacksize of corpses: 50 > 250.
 [*] Decreased stacksize of Laser Turrets: 64 > 50.
 [*] Increased shooting Speed of Marauder to make it stronger then the defender!

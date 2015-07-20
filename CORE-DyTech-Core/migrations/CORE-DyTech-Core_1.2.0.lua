@@ -1,16 +1,16 @@
-for index, force in pairs(game.forces) do
-	if force.technologies["tanks"].researched then
-		force.recipes["track"].enabled = true
-		force.recipes["track-chain-link"].enabled = true
-		force.recipes["hull-lower"].enabled = true
-		force.recipes["hull-top"].enabled = true
-		force.recipes["tank-barrel"].enabled = true
+for _,player in pairs(game.players) do
+	if player.force.technologies["tanks"].researched then
+		player.force.recipes["track"].enabled = true
+		player.force.recipes["track-chain-link"].enabled = true
+		player.force.recipes["hull-lower"].enabled = true
+		player.force.recipes["hull-top"].enabled = true
+		player.force.recipes["tank-barrel"].enabled = true
 	end
-	if force.technologies["automation"].researched then
-		force.recipes["iron-gear-wheel"].enabled = true
+	if player.force.technologies["automation"].researched then
+		player.force.recipes["iron-gear-wheel"].enabled = true
 	end
-	if force.technologies["steel-processing"].researched then
-		force.recipes["steel-gear-wheel"].enabled = true
+	if player.force.technologies["steel-processing"].researched then
+		player.force.recipes["steel-gear-wheel"].enabled = true
 	end
 end
 
