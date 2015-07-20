@@ -4,7 +4,8 @@
 [i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features:
-[list][*] Added Resistances to machines.
+[list][*] Ported to Factorio 0.12.
+[*] Added Resistances to machines.
 [*] Added 5 New High Powered Boilers.
 [*] Added 10 New High Powered Steam Engines.
 [*] Added Large and Small versions of:

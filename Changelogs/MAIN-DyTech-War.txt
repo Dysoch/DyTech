@@ -3,7 +3,8 @@
 [i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features:
-[list][*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! 
+[list][*] Ported to Factorio 0.12.
+[*] Added Diamond Laser Turrets! These are expensive, hard to get but totally worth it! 
 [*] Decreased Evolution Factor by 50% to make it a little easier to survive!
 [*] Added a mixed Capsule. They spawn 4 Sharpshooters, 4 Frenzy and 4 Defender Robots.
 [*] Added stationary Robot Capsules. They last longer and have more health. (Makeshift Turrets)

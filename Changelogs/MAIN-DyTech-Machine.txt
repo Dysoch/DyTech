@@ -3,7 +3,7 @@
 [i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features: 
-[list]
+[list][*] Ported to Factorio 0.12.
 [*] Added lots of new liquid recipes (metallurgy):
 [list] [*] Gears: Added Tin, Zinc, Lead and Cobalt recipe.
 [*] Wires: Added Iron Stick recipe.
@@ -21,6 +21,9 @@
 [*] Added 2 extra Chemical Plants.
 [*] Added 2 extra Forges (faster and more modules)
 [*] Added 2 extra Blast Furnaces (faster and more modules)
+[/list]
+[*] Changes:
+[list] [*] Increased size of Forge from 3x3 to 5x5 to work with the increased fluid input slots.
 [/list]
 [*] Bugfixes: 
 [list] [*] Fixed exploit with lava heating and cooling.

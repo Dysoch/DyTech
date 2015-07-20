@@ -3,7 +3,8 @@
 [i][size=150][b]v1.2.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features:
-[list][*] Added in Cheats. Toggle them on in the config file!
+[list][*] Ported to Factorio 0.12.
+[*] Added in Cheats. Toggle them on in the config file!
 [*] Complete new item sort of the menu. All DyTech Items are sorted properly in menu's!
 [*] Changed Health of all machines.
 [*] Added Tiered resistances to machines.
@@ -27,7 +28,10 @@
 [*] Changes:
 [list] [*] Merged DyTech-Script into DyTech-Core 
 [*] Moved the Stone Gear Usage from Mandatory to Base Override. You can Switch it off now!
+[*] Changed the water and dirty water around to provide compatibility with Atomic Power. This however, will render your savegame bugged. Please start a new game to fully use it!
 [/list]
+[*] Bugfixes :
+[list] [*] Fixed the bug with Obsidian mining! [/list]
 [/list]
 
 [i][size=150][b]v1.1.3:[/b][/size][/i]
