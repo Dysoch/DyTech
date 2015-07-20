@@ -1515,7 +1515,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(30, 30, "450kJ", "laser-diamond-1")
+    attack_parameters = Laser_Turret_Attack(20, 30, "450kJ", "laser-diamond-1")
   },
   {
     type = "electric-turret",
@@ -1633,7 +1633,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(30, 40, "450kJ", "laser-diamond-2")
+    attack_parameters = Laser_Turret_Attack(10, 40, "450kJ", "laser-diamond-2")
   },
   {
     type = "electric-turret",
@@ -1751,7 +1751,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(30, 50, "450kJ", "laser-diamond-3")
+    attack_parameters = Laser_Turret_Attack(5, 50, "450kJ", "laser-diamond-3")
   },
 }
 )
