@@ -26,30 +26,51 @@ function TestTrees(index)
 end
 
 function TestMapStart(index)
-  local players = game.players[index]
-  players.insert{name="construction-robot-2", count=50000}
-  players.insert{name="logistic-robot-2", count=50000}
-  players.insert{name="small-electric-pole", count=50}
-  players.insert{name="fast-inserter", count=500}
-  players.insert{name="smart-inserter", count=500}
-  players.insert{name="large-solar-panel-primary-mk5", count=50}
-  players.insert{name="basic-accumulator-mk6", count=50}
-  players.insert{name="basic-transport-belt", count=5000}
-  players.insert{name="basic-transport-belt-to-ground", count=2000}
-  players.insert{name="basic-splitter", count=2000}
-  players.insert{name="roboport-2", count=2000}
-  players.insert{name="blueprint", count=1}
-  players.insert{name="logistic-chest-requester", count=1000}
-  players.insert{name="logistic-chest-passive-provider", count=1000}
-  players.insert{name="logistic-chest-active-provider", count=1000}
-  players.insert{name="logistic-chest-storage", count=1000}
-  players.insert{name="deconstruction-planner", count=1}
-  game.forces.player.current_research = "construction-robotics"
-  game.forces.player.technologies["construction-robotics"].researched = true
-  game.forces.player.current_research = "construction-robotics-1"
-  game.forces.player.technologies["construction-robotics-1"].researched = true
-  game.forces.player.current_research = "construction-robotics-2"
-  game.forces.player.technologies["construction-robotics-2"].researched = true
+	local players = game.players[index]
+	players.insert{name="small-electric-pole", count=50}
+	players.insert{name="substation", count=50}
+	players.insert{name="fast-inserter", count=500}
+	players.insert{name="smart-inserter", count=500}
+	players.insert{name="basic-accumulator-mk6", count=50}
+	players.insert{name="basic-transport-belt", count=5000}
+	players.insert{name="basic-transport-belt-to-ground", count=2000}
+	players.insert{name="basic-splitter", count=2000}
+	players.insert{name="blueprint", count=1}
+	players.insert{name="logistic-chest-requester", count=100}
+	players.insert{name="logistic-chest-passive-provider", count=100}
+	players.insert{name="logistic-chest-active-provider", count=100}
+	players.insert{name="logistic-chest-storage", count=100}
+	players.insert{name="deconstruction-planner", count=1}
+	if remote.interfaces["DyTech-Power"] then
+		players.insert{name="large-solar-panel-primary-mk5", count=50}
+		players.insert{name="basic-accumulator-mk6", count=50}
+	else
+		players.insert{name="solar-panel", count=250}
+		players.insert{name="basic-accumulator", count=250}
+	end
+	if remote.interfaces["DyTech-Machine"] then
+		players.insert{name="construction-robot-2", count=500}
+		players.insert{name="logistic-robot-2", count=500}
+		players.insert{name="repair-pack-3", count=500}
+		players.insert{name="roboport-2", count=20}
+	else
+		players.insert{name="construction-robot", count=500}
+		players.insert{name="logistic-robot", count=500}
+		players.insert{name="repair-pack", count=500}
+		players.insert{name="roboport", count=20}
+	end
+	if remote.interfaces["DyTech-War"] then
+		players.insert{name="laser-turret-sniper-3", count=150}
+		players.insert{name="laser-turret-diamond-3", count=150}
+	else
+		players.insert{name="laser-turret", count=150}
+	end
+	game.forces.player.current_research = "construction-robotics"
+	game.forces.player.technologies["construction-robotics"].researched = true
+	game.forces.player.current_research = "construction-robotics-1"
+	game.forces.player.technologies["construction-robotics-1"].researched = true
+	game.forces.player.current_research = "construction-robotics-2"
+	game.forces.player.technologies["construction-robotics-2"].researched = true
 	for _,player in pairs(game.players) do
 		player.force.reset_recipes()
 		player.force.reset_technologies()
