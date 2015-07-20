@@ -1160,7 +1160,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(60, 62.5, "350kJ", "laser-topaz-1")
+    attack_parameters = Laser_Turret_Attack(30, 62.5, "350kJ", "laser-topaz-1")
   },
   {
     type = "electric-turret",
@@ -1278,7 +1278,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(45, 75, "400kJ", "laser-topaz-2")
+    attack_parameters = Laser_Turret_Attack(15, 75, "400kJ", "laser-topaz-2")
   },
   {
     type = "electric-turret",
@@ -1396,7 +1396,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Laser_Turret_Attack(30, 87.5, "450kJ", "laser-topaz-3")
+    attack_parameters = Laser_Turret_Attack(7.5, 87.5, "450kJ", "laser-topaz-3")
   },
   --[[Diamond Turrets]]--
   {
