@@ -210,3 +210,10 @@ function RobotBuildEntityLogger(Name)
 		debug("RobotBuildEntity increased by 1".." ("..tostring(Name)..")")
 	end
 end
+
+function ResearchAll()
+	for name,tech in pairs(game.forces.player.technologies) do
+		game.forces.player.current_research = name
+		game.forces.player.technologies[name].researched = true
+	end
+end

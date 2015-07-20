@@ -6,7 +6,8 @@ require "scripts/trees"
 
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
+debug_for_GUI = true -- Adds a debug screen in the gui
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 
@@ -221,20 +222,28 @@ local player = game.players[playerIndex]
 	elseif event.element.name == "DyTech-Debug-Button" then
 		CoreGUI.closeGUI("DyTech", playerIndex)
 		CoreGUI.showDyTechDebugGUI(playerIndex)
-	elseif event.element.name == "DyTech-Dump-Button" then
+	elseif event.element.name == "DyTech-Debug-Dump-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		remote.call("DyTech-Core", "Logger")
 		if remote.interfaces["DyTech-Dynamics"] then remote.call("DyTech-Dynamics", "DataDump") end
 		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
-	elseif event.element.name == "DyTech-TestItems-Button" then
+	elseif event.element.name == "DyTech-Debug-TestItems-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.TestMapStart(playerIndex)
-	elseif event.element.name == "DyTech-TestResource-Button" then
+	elseif event.element.name == "DyTech-Debug-TestResource-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.CheckOreRatio(500, playerIndex)
+	elseif event.element.name == "DyTech-Debug-Reset-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		remote.call("DyTech-Core", "ResetAll")
+	elseif event.element.name == "DyTech-Debug-Technology-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		fs.ResearchAll()
 	elseif event.element.name == "DyTech-Close-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
