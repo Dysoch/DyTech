@@ -75,7 +75,7 @@ data:extend(
     order="g",
     minable =
     {
-      hardness = 7.5,
+      hardness = 2,
       mining_particle = "gem-particle",
       mining_time = 15,
       results =
