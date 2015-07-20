@@ -40,7 +40,7 @@ data:extend(
     type = "item",
     name = "bone",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/bone.png",
-    flags = {"goes-to-quickbar"},
+    flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-raw",
     order = "bone",
     stack_size = 200
@@ -49,7 +49,7 @@ data:extend(
     type = "item",
     name = "bone-charcoal",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/bone-charcoal.png",
-    flags = {"goes-to-quickbar"},
+    flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-processed",
     order = "bone-charcoal",
     fuel_value = "3.5MJ",
@@ -59,7 +59,7 @@ data:extend(
     type = "item",
     name = "chitin",
     icon = "__CORE-DyTech-Core__/graphics/intermediates/chitin.png",
-    flags = {"goes-to-quickbar"},
+    flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-raw",
     order = "chitin",
     stack_size = 200
