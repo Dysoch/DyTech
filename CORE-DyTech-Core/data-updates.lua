@@ -1,5 +1,9 @@
 require "config"
 
+for i, drill in pairs(data.raw["mining-drill"]) do
+  if not drill.storage_slots then drill.storage_slots = 6 end
+end
+
 if Infinite_Resources then
 	for k, v in pairs(data.raw.resource) do
 		v.infinite = true
