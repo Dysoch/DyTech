@@ -23,7 +23,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "solar"
     },
     picture = BaseSolarPictures(2, SolarTint.mk1),
     production = SolarPanels.Normal.Tier1
@@ -63,7 +63,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "solar"
     },
     picture = SolarPictures(2, SolarTint.mk2),
     production = SolarPanels.Normal.Tier2
@@ -103,7 +103,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "solar"
     },
     picture = SolarPictures(2, SolarTint.mk3),
     production = SolarPanels.Normal.Tier3
@@ -143,7 +143,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "solar"
     },
     picture = SolarPictures(2, SolarTint.mk4),
     production = SolarPanels.Normal.Tier4
@@ -183,7 +183,7 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      usage_priority = "secondary-output"
+      usage_priority = "solar"
     },
     picture = SolarPictures(2, SolarTint.mk5),
     production = SolarPanels.Normal.Tier5
