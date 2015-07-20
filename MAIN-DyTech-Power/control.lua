@@ -52,11 +52,6 @@ if global.tick[2] == global.tick[3] then
 end
 end]]
 
-remote.add_interface("DyTech-Power",
-{  	
-	
-})
-
 --[[Insert Fancy Code Here:]]--
 game.on_init(function()
 global.tick = {}
@@ -110,20 +105,20 @@ global.steam[5].secondary = {}
 global.steam[5].tertiary = {}
 
 global.steam[1].primary = "steam-engine-primary"
-global.steam[1].secondary = "steam-engine-secondary"
-global.steam[1].tertiary = "steam-engine-tertiary"
+global.steam[1].secondary = "steam-engine"
+global.steam[1].tertiary = "steam-engine-terciary"
 global.steam[2].primary = "steam-engine-primary-mk2"
 global.steam[2].secondary = "steam-engine-secondary-mk2"
-global.steam[2].tertiary = "steam-engine-tertiary-mk2"
+global.steam[2].tertiary = "steam-engine-terciary-mk2"
 global.steam[3].primary = "steam-engine-primary-mk3"
 global.steam[3].secondary = "steam-engine-secondary-mk3"
-global.steam[3].tertiary = "steam-engine-tertiary-mk3"
+global.steam[3].tertiary = "steam-engine-terciary-mk3"
 global.steam[4].primary = "steam-engine-primary-mk4"
 global.steam[4].secondary = "steam-engine-secondary-mk4"
-global.steam[4].tertiary = "steam-engine-tertiary-mk4"
+global.steam[4].tertiary = "steam-engine-terciary-mk4"
 global.steam[5].primary = "steam-engine-primary-mk5"
 global.steam[5].secondary = "steam-engine-secondary-mk5"
-global.steam[5].tertiary = "steam-engine-tertiary-mk5"
+global.steam[5].tertiary = "steam-engine-terciary-mk5"
 end)
 
 --[[Steam Engine Code]]--
@@ -134,19 +129,17 @@ local player = game.players[playerIndex]
     if event.element.name == "DyTech-Power-Button" then
         remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
         GUI.PushParent(player.gui.left)
+		if not global.dytechpowergui then global.dytechpowergui = {} end
 		global.dytechpowergui[player.name] = GUI.PushParent(GUI.Frame("dytech-power-gui", "Dytech Power GUI", GUI.VERTICAL))
 		GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
 		local checkbox = GUI.Checkbox("Switch Priority", priorityswitch)
-    end
-	if event.element.name == "priorityswitch" then
+	elseif event.element.name == "priorityswitch" then
 		if event.element.state == true then
 			global.prioritycheck = true
 		else
 			global.prioritycheck = false
 		end
-	end
-	
-	if event.element.name == "primarytoggle" then
+	elseif (event.element.name == "primary") then
 		--do primary stuff
 		debug("You clicked: Primary")
 		global.secondarybox.state = false
@@ -189,12 +182,12 @@ local player = game.players[playerIndex]
 		else
 			debug("I have no fucking idea")
 		end
-	elseif event.element.name == "secondarytoggle" then
+	elseif event.element.name == "secondary" then
 		--do secondary stuff
 		debug("You clicked: Secondary")
 		global.primarybox.state = false
 		global.tertiarybox.state = false
-	elseif event.element.name == "tertiarytoggle" then
+	elseif event.element.name == "tertiary" then
 		--do tertiary stuff
 		debug("You clicked: Teritary")
 		global.primarybox.state = false
@@ -217,8 +210,8 @@ local nearbyEngine = global.nearby_engine[player.name]
 		end
 	else
 		--primary engine
-		local searchArea = SquareArea(player.position, global.gui_activation_distance)
-		global.nearEngines.primary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].primary}
+		local searchArea1 = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.primary = player.surface.find_entities_filtered{area = searchArea1, name = global.steam[i].primary}
 		if #global.nearEngines.primary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.primary[1]
 			if not global.gui[player.name] then 
@@ -231,8 +224,8 @@ local nearbyEngine = global.nearby_engine[player.name]
 		end
 
 		--secondary engine
-		local searchArea = SquareArea(player.position, global.gui_activation_distance)
-		global.nearEngines.secondary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].secondary}
+		local searchArea2 = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.secondary = player.surface.find_entities_filtered{area = searchArea2, name = global.steam[i].secondary}
 		if #global.nearEngines.secondary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.secondary[1]
 			if not global.gui[player.name] then 
@@ -245,8 +238,8 @@ local nearbyEngine = global.nearby_engine[player.name]
 		end
 
 		--tertiary engine
-		local searchArea = SquareArea(player.position, global.gui_activation_distance)
-		global.nearEngines.tertiary = player.surface.find_entities_filtered{area = searchArea, name = global.steam[i].tertiary}
+		local searchArea3 = SquareArea(player.position, global.gui_activation_distance)
+		global.nearEngines.tertiary = player.surface.find_entities_filtered{area = searchArea3, name = global.steam[i].tertiary}
 		if #global.nearEngines.tertiary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.tertiary[1]
 			if not global.gui[player.name] then 
@@ -267,7 +260,7 @@ function OpenGUI(player, output)
 
 --[[	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
 	player.gui.top["DyTechPowerFlow"].add({type="frame", direction="vertical", name="steamengine_gui", caption={"steamengine-gui"}})
-	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"]]
+	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"] ]]
 	
 	GUI.PushParent(player.gui.left)
 	global.gui[player.name] = GUI.PushParent(GUI.Frame("steamengine_gui", "Steam Engine Control", GUI.VERTICAL))
@@ -408,7 +401,7 @@ end
 
 --Nuclear reactor code:
 
-if debug_master --[[and Nuclear_Reactors]] then
+if debug_master and Nuclear_Reactors then
 	if global.tick[1] == 300 then
 		debug("moveFuel")
 		moveFuel()
@@ -420,7 +413,7 @@ if debug_master --[[and Nuclear_Reactors]] then
 	else
 		global.tick[1] = global.tick[1] + 1
 	end
-else--[[if Nuclear_Reactors then]]
+elseif Nuclear_Reactors then
 	if global.tick[1] == 30 then
 		moveFuel()
 	end
@@ -538,3 +531,8 @@ end
 end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
+
+remote.add_interface("DyTech-Power",
+{  	
+	
+})
