@@ -2,7 +2,9 @@
 
 function RemoveFromRecipe(Name, Ingredient)
 	for k, v in pairs(data.raw["recipe"][Name].ingredients) do
-		if v[1] == Ingredient then table.remove(data.raw["recipe"][Name].ingredients, k) end
+		if v[1] == Ingredient or v.name == Ingredient then 
+			table.remove(data.raw["recipe"][Name].ingredients, k) 
+		end
 	end
 end
 
