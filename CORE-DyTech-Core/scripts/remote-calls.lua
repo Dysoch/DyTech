@@ -20,8 +20,8 @@ function TestTrees(index)
   game.forces.player.technologies["automation-2"].researched = true
   game.forces.player.technologies["automation-3"].researched = true
 	for _,player in pairs(game.players) do
-		player.force.resetrecipes()
-		player.force.resettechnologies()
+		player.force.reset_recipes()
+		player.force.reset_technologies()
 	end
 end
 
@@ -32,7 +32,7 @@ function TestMapStart(index)
   players.insert{name="small-electric-pole", count=50}
   players.insert{name="fast-inserter", count=500}
   players.insert{name="smart-inserter", count=500}
-  players.insert{name="solar-panel-primary-mk5", count=50}
+  players.insert{name="large-solar-panel-primary-mk5", count=50}
   players.insert{name="basic-accumulator-mk6", count=50}
   players.insert{name="basic-transport-belt", count=5000}
   players.insert{name="basic-transport-belt-to-ground", count=2000}
@@ -44,78 +44,78 @@ function TestMapStart(index)
   players.insert{name="logistic-chest-active-provider", count=1000}
   players.insert{name="logistic-chest-storage", count=1000}
   players.insert{name="deconstruction-planner", count=1}
-  game.forces.player.currentresearch = "construction-robotics"
+  game.forces.player.current_research = "construction-robotics"
   game.forces.player.technologies["construction-robotics"].researched = true
-  game.forces.player.currentresearch = "construction-robotics-1"
+  game.forces.player.current_research = "construction-robotics-1"
   game.forces.player.technologies["construction-robotics-1"].researched = true
-  game.forces.player.currentresearch = "construction-robotics-2"
+  game.forces.player.current_research = "construction-robotics-2"
   game.forces.player.technologies["construction-robotics-2"].researched = true
 	for _,player in pairs(game.players) do
-		player.force.resetrecipes()
-		player.force.resettechnologies()
+		player.force.reset_recipes()
+		player.force.reset_technologies()
 	end
 end
 
 
 function Regenerate(name)
 	if name=="gold" then
-		game.regenerateentity("gold-ore")
+		game.regenerate_entity("gold-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="lead" then
-		game.regenerateentity("lead-ore")
+		game.regenerate_entity("lead-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="tungsten" then
-		game.regenerateentity("tungsten-ore")
+		game.regenerate_entity("tungsten-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="silver" then
-		game.regenerateentity("silver-ore")
+		game.regenerate_entity("silver-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="tin" then
-		game.regenerateentity("tin-ore")
+		game.regenerate_entity("tin-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="zinc" then
-		game.regenerateentity("zinc-ore")
+		game.regenerate_entity("zinc-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="cobalt" then
-		game.regenerateentity("cobalt-ore")
+		game.regenerate_entity("cobalt-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="ardite" then
-		game.regenerateentity("ardite-ore")
+		game.regenerate_entity("ardite-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="copper" then
-		game.regenerateentity("copper-ore")
+		game.regenerate_entity("copper-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="iron" then
-		game.regenerateentity("iron-ore")
+		game.regenerate_entity("iron-ore")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="stone" then
-		game.regenerateentity("stone")
+		game.regenerate_entity("stone")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="coal" then
-		game.regenerateentity("coal")
+		game.regenerate_entity("coal")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="lava" and remote.interfaces["DyTech-Machine"] then
-		game.regenerateentity("lava-600")
-		game.regenerateentity("lava-1400")
-		game.regenerateentity("lava-2800")
+		game.regenerate_entity("lava-600")
+		game.regenerate_entity("lava-1400")
+		game.regenerate_entity("lava-2800")
 		PlayerPrint({"regenerate-"..name})
 	elseif name=="all" then
-		game.regenerateentity("coal")
-		game.regenerateentity("stone")
-		game.regenerateentity("iron-ore")
-		game.regenerateentity("copper-ore")
-		game.regenerateentity("ardite-ore")
-		game.regenerateentity("cobalt-ore")
-		game.regenerateentity("zinc-ore")
-		game.regenerateentity("tin-ore")
-		game.regenerateentity("silver-ore")
-		game.regenerateentity("tungsten-ore")
-		game.regenerateentity("lead-ore")
-		game.regenerateentity("gold-ore")
+		game.regenerate_entity("coal")
+		game.regenerate_entity("stone")
+		game.regenerate_entity("iron-ore")
+		game.regenerate_entity("copper-ore")
+		game.regenerate_entity("ardite-ore")
+		game.regenerate_entity("cobalt-ore")
+		game.regenerate_entity("zinc-ore")
+		game.regenerate_entity("tin-ore")
+		game.regenerate_entity("silver-ore")
+		game.regenerate_entity("tungsten-ore")
+		game.regenerate_entity("lead-ore")
+		game.regenerate_entity("gold-ore")
 		if remote.interfaces["DyTech-Machine"] then
-			game.regenerateentity("lava-600")
-			game.regenerateentity("lava-1400")
-			game.regenerateentity("lava-2800")
+			game.regenerate_entity("lava-600")
+			game.regenerate_entity("lava-1400")
+			game.regenerate_entity("lava-2800")
 		end
 		PlayerPrint({"regenerate-"..name})
 	else
@@ -123,7 +123,8 @@ function Regenerate(name)
 	end
 end
 
-function CheckOreRatio(Amount)
+function CheckOreRatio(Amount, playerIndex)
+local player = game.players[playerIndex]
 		global.Resources = {}
 		global.Resources.FoundTin = 0
 		global.Resources.FoundZinc = 0
@@ -141,28 +142,28 @@ function CheckOreRatio(Amount)
 		global.Resources.AverageTungsten = 0
 		global.Resources.AverageCobalt = 0
 		global.Resources.AverageArdite = 0
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tin-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tin-ore"}) do
 			if found then global.Resources.FoundTin = global.Resources.FoundTin + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "zinc-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "zinc-ore"}) do
 			if found then global.Resources.FoundZinc = global.Resources.FoundZinc + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "silver-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "silver-ore"}) do
 			if found then global.Resources.FoundSilver = global.Resources.FoundSilver + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "gold-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "gold-ore"}) do
 			if found then global.Resources.FoundGold = global.Resources.FoundGold + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "lead-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "lead-ore"}) do
 			if found then global.Resources.FoundLead = global.Resources.FoundLead + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tungsten-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "tungsten-ore"}) do
 			if found then global.Resources.FoundTungsten = global.Resources.FoundTungsten + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "cobalt-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "cobalt-ore"}) do
 			if found then global.Resources.FoundCobalt = global.Resources.FoundCobalt + 1 end
 		end
-		for found in pairs(game.findentitiesfiltered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "ardite-ore"}) do
+		for found in pairs(game.players[playerIndex].surface.find_entities_filtered{area = {{-Amount, -Amount}, {Amount, Amount}}, name = "ardite-ore"}) do
 			if found then global.Resources.FoundArdite = global.Resources.FoundArdite + 1 end
 		end
 		global.Resources.AverageTin = (global.Resources.FoundTin/global.Logger.ChunkGenerated)
@@ -174,5 +175,5 @@ function CheckOreRatio(Amount)
 		global.Resources.AverageCobalt = (global.Resources.FoundCobalt/global.Logger.ChunkGenerated)
 		global.Resources.AverageArdite = (global.Resources.FoundArdite/global.Logger.ChunkGenerated)
 		global.Resources.Chunks = global.Logger.ChunkGenerated
-		game.make_file("Debug/Resources.txt", serpent.block(global.Resources))
+		game.makefile("Debug/Resources.txt", serpent.block(global.Resources))
 end

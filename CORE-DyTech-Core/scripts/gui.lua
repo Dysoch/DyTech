@@ -25,14 +25,46 @@ end
 if remote.interfaces["DyTech-Power"] then 
 	adder.add({type="button", name="DyTech-Power-Button", caption={"dytech-power"}}) 
 end
+if remote.interfaces["DyTech-Science"] then 
+	adder.add({type="button", name="DyTech-Science-Button", caption={"dytech-science"}}) 
+end
 if remote.interfaces["DyTech-War"] then 
 	adder.add({type="button", name="DyTech-War-Button", caption={"dytech-war"}}) 
+end
+if remote.interfaces["DyTech-World"] then 
+	adder.add({type="button", name="DyTech-World-Button", caption={"dytech-world"}}) 
+end
+if debug_master then 
+	adder.add({type="button", name="DyTech-Debug-Button", caption={"dytech-debug"}}) 
 end
 adder.add({type="button", name="DyTech-Close-Button", caption={"close"}})
 end
 
+function showDyTechDebugGUI(PlayerIndex)
+local player = game.players[PlayerIndex]
+player.gui.top.add({type="flow", direction="vertical", name="mainDyTechDebugFlow"})
+player.gui.top["mainDyTechDebugFlow"].add({type="frame", direction="vertical", name="mainDyTechDebugFrame", caption={"dytech-debug-gui"}})
+adder = player.gui.top["mainDyTechDebugFlow"]["mainDyTechDebugFrame"]
+
+adder.add({type="button", name="DyTech-Dump-Button", caption="Data Dump"})
+adder.add({type="button", name="DyTech-TestResource-Button", caption="Test Resources (500x500)"})
+adder.add({type="button", name="DyTech-TestItems-Button", caption="Give debug items"})
+adder.add({type="button", name="DyTech-Close-Button", caption={"close"}})
+end
+
 function closeGUI(statement, PlayerIndex)
-	if statement=="DyTech" then
+	if statement=="Debug" then
+		if game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"] and game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].destroy()
+		end
+	elseif statement=="DyTech" then
+		if game.players[PlayerIndex].gui.top["mainDyTechFlow"] and game.players[PlayerIndex].gui.top["mainDyTechFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDyTechFlow"].destroy()
+		end
+	elseif statement=="All" then
+		if game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"] and game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].destroy()
+		end
 		if game.players[PlayerIndex].gui.top["mainDyTechFlow"] and game.players[PlayerIndex].gui.top["mainDyTechFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechFlow"].destroy()
 		end

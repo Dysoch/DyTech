@@ -260,14 +260,14 @@ remote.add_interface("DyTech-Dynamics",
 			table.insert(global.DatabaseNames,RecipeName)
 			table.insert(global.DatabaseNumbers,data.Points)
 		end
-		game.make_file("DataDump/Database-Base-Names.xls", serpent.block(global.DatabaseNames))
-		game.make_file("DataDump/Database-Base-Numbers.xls", serpent.block(global.DatabaseNumbers))
+		game.makefile("DataDump/Database-Base-Names.xls", serpent.block(global.DatabaseNames))
+		game.makefile("DataDump/Database-Base-Numbers.xls", serpent.block(global.DatabaseNumbers))
 	end,
 	
 	DataDump = function()
-		game.make_file("DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
-		game.make_file("DataDump/Collectors.txt", serpent.block(global.Collectors))
-		game.make_file("DataDump/Technology.txt", serpent.block(global.Technology))
+		game.makefile("DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
+		game.makefile("DataDump/Collectors.txt", serpent.block(global.Collectors))
+		game.makefile("DataDump/Technology.txt", serpent.block(global.Technology))
 	end,
 	
 	SwitchRS = function()

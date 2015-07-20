@@ -63,6 +63,6 @@ end)
 remote.add_interface("DyTech-War",
 {  	
 	DataDump = function()
-		game.make_file("DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
+		game.makefile("DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
 	end,
 })

@@ -6,7 +6,7 @@ require "scripts/trees"
 
 
 --[[Debug Functions]]--
-debug_master = false -- Master switch for debugging, shows most things!
+debug_master = true -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 
@@ -218,11 +218,37 @@ local player = game.players[playerIndex]
 	if event.element.name == "DyTech-Button" then
 		player.gui.top["DyTech-Button"].destroy()
 		CoreGUI.showDyTechGUI(playerIndex)
-	elseif event.element.name == "DyTech-Close-Button" then
+	elseif event.element.name == "DyTech-Debug-Button" then
 		CoreGUI.closeGUI("DyTech", playerIndex)
+		CoreGUI.showDyTechDebugGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dump-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		remote.call("DyTech-Core", "Logger")
+		if remote.interfaces["DyTech-Dynamics"] then remote.call("DyTech-Dynamics", "DataDump") end
+		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
+	elseif event.element.name == "DyTech-TestItems-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		RemoteCalls.TestMapStart(playerIndex)
+	elseif event.element.name == "DyTech-TestResource-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		RemoteCalls.CheckOreRatio(500, playerIndex)
+	elseif event.element.name == "DyTech-Close-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 	end
 end)
+
+--[[game.on_event(defines.events.on_gui_click, function(event)
+local playerIndex = event.player_index
+local player = game.players[playerIndex]
+	if event.element.name == "DyTech-Power-Button" then
+		remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
+		-- open de Power gui hier
+	end
+end)]]--
 
 remote.add_interface("DyTech-Core",
 {  
@@ -264,25 +290,25 @@ remote.add_interface("DyTech-Core",
 	end,
 	
 	Logger = function()
-		game.make_file("Logger/Technologies.txt", serpent.block(global.Logger.Technology))
-		game.make_file("Logger/RobotBuildEntity.txt", serpent.block(global.Logger.RobotBuildEntity))
-		game.make_file("Logger/BuildEntity.txt", serpent.block(global.Logger.BuildEntity))
-		game.make_file("Logger/PickedItems.txt", serpent.block(global.Logger.PickedItems))
-		game.make_file("Logger/CanceledDeconstruction.txt", serpent.block(global.Logger.CanceledDeconstruction))
-		game.make_file("Logger/MarkedForDeconstruction.txt", serpent.block(global.Logger.MarkedForDeconstruction))
-		game.make_file("Logger/EntityDied.txt", serpent.block(global.Logger.EntityDied))
-		game.make_file("Logger/RobotMinedItems.txt", serpent.block(global.Logger.RobotMinedItems))
-		game.make_file("Logger/MinedItems.txt", serpent.block(global.Logger.MinedItems))
-		game.make_file("Logger/CraftedItems.txt", serpent.block(global.Logger.CraftedItems))
-		game.make_file("TimeStamp/RobotBuildEntity.txt", serpent.block(global.TimeStamp.RobotBuildEntity))
-		game.make_file("TimeStamp/BuildEntity.txt", serpent.block(global.TimeStamp.BuildEntity))
-		game.make_file("TimeStamp/PickedItems.txt", serpent.block(global.TimeStamp.PickedItems))
-		game.make_file("TimeStamp/CanceledDeconstruction.txt", serpent.block(global.TimeStamp.CanceledDeconstruction))
-		game.make_file("TimeStamp/MarkedForDeconstruction.txt", serpent.block(global.TimeStamp.MarkedForDeconstruction))
-		game.make_file("TimeStamp/EntityDied.txt", serpent.block(global.TimeStamp.EntityDied))
-		game.make_file("TimeStamp/RobotMinedItems.txt", serpent.block(global.TimeStamp.RobotMinedItems))
-		game.make_file("TimeStamp/MinedItems.txt", serpent.block(global.TimeStamp.MinedItems))
-		game.make_file("TimeStamp/CraftedItems.txt", serpent.block(global.TimeStamp.CraftedItems))
+		game.makefile("DataDump/Technologies.txt", serpent.block(global.Logger.Technology))
+		game.makefile("DataDump/RobotBuildEntity.txt", serpent.block(global.Logger.RobotBuildEntity))
+		game.makefile("DataDump/BuildEntity.txt", serpent.block(global.Logger.BuildEntity))
+		game.makefile("DataDump/PickedItems.txt", serpent.block(global.Logger.PickedItems))
+		game.makefile("DataDump/CanceledDeconstruction.txt", serpent.block(global.Logger.CanceledDeconstruction))
+		game.makefile("DataDump/MarkedForDeconstruction.txt", serpent.block(global.Logger.MarkedForDeconstruction))
+		game.makefile("DataDump/EntityDied.txt", serpent.block(global.Logger.EntityDied))
+		game.makefile("DataDump/RobotMinedItems.txt", serpent.block(global.Logger.RobotMinedItems))
+		game.makefile("DataDump/MinedItems.txt", serpent.block(global.Logger.MinedItems))
+		game.makefile("DataDump/CraftedItems.txt", serpent.block(global.Logger.CraftedItems))
+		game.makefile("DataDump/TimeStamp/RobotBuildEntity.txt", serpent.block(global.TimeStamp.RobotBuildEntity))
+		game.makefile("DataDump/TimeStamp/BuildEntity.txt", serpent.block(global.TimeStamp.BuildEntity))
+		game.makefile("DataDump/TimeStamp/PickedItems.txt", serpent.block(global.TimeStamp.PickedItems))
+		game.makefile("DataDump/TimeStamp/CanceledDeconstruction.txt", serpent.block(global.TimeStamp.CanceledDeconstruction))
+		game.makefile("DataDump/TimeStamp/MarkedForDeconstruction.txt", serpent.block(global.TimeStamp.MarkedForDeconstruction))
+		game.makefile("DataDump/TimeStamp/EntityDied.txt", serpent.block(global.TimeStamp.EntityDied))
+		game.makefile("DataDump/TimeStamp/RobotMinedItems.txt", serpent.block(global.TimeStamp.RobotMinedItems))
+		game.makefile("DataDump/TimeStamp/MinedItems.txt", serpent.block(global.TimeStamp.MinedItems))
+		game.makefile("DataDump/TimeStamp/CraftedItems.txt", serpent.block(global.TimeStamp.CraftedItems))
 	end,
 	
 	TimerIncrease = function(Hour, Minute, Second)
@@ -299,5 +325,17 @@ remote.add_interface("DyTech-Core",
 		local direction = math.random()
 		game.wind_orientation = direction
 		PlayerPrint(tostring(game.wind_orientation))
+	end,
+	
+	OpenMainGUI = function(PlayerIndex)
+		CoreGUI.showDyTechGUI(PlayerIndex)
+	end,
+	
+	CloseMainGUI = function(PlayerIndex)
+		CoreGUI.closeGUI("DyTech", PlayerIndex)
+	end,
+	
+	ShowMainButton = function()
+		CoreGUI.CreateButton()
 	end
 })
