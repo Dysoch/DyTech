@@ -28,3 +28,6 @@
 
 10-07-15:
 - Broke the checking for items. Once there are more than 1 reactors the system will break.
+
+11-07-15 - 20-07-15:
+- Broke more stuff (as usual). Also created an GUI for steam engines.

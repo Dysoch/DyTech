@@ -52,6 +52,11 @@ if global.tick[2] == global.tick[3] then
 end
 end]]
 
+remote.add_interface("DyTech-Power",
+{  	
+	
+})
+
 --[[Insert Fancy Code Here:]]--
 game.on_init(function()
 global.tick = {}
@@ -80,6 +85,7 @@ global.gui_activation_distance = 1
 global.nearby_engine = {}
 global.nearEngines = {}
 global.gui = {}
+global.prioritycheck = false
 
 global.steam = {}
 global.steam[1] = {}
@@ -121,6 +127,81 @@ global.steam[5].tertiary = "steam-engine-tertiary-mk5"
 end)
 
 --[[Steam Engine Code]]--
+
+game.on_event(defines.events.on_gui_click, function(event)
+local playerIndex = event.player_index
+local player = game.players[playerIndex]
+    if event.element.name == "DyTech-Power-Button" then
+        remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
+        GUI.PushParent(player.gui.left)
+		global.dytechpowergui[player.name] = GUI.PushParent(GUI.Frame("dytech-power-gui", "Dytech Power GUI", GUI.VERTICAL))
+		GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
+		local checkbox = GUI.Checkbox("Switch Priority", priorityswitch)
+    end
+	if event.element.name == "priorityswitch" then
+		if event.element.state == true then
+			global.prioritycheck = true
+		else
+			global.prioritycheck = false
+		end
+	end
+	
+	if event.element.name == "primarytoggle" then
+		--do primary stuff
+		debug("You clicked: Primary")
+		global.secondarybox.state = false
+		global.tertiarybox.state = false
+		
+		if global.nearEngines.primary.valid then
+			global.primarybox.state = true
+			debug("what u doing? I'm already activated!")
+		elseif global.nearEngines.secondary.valid then
+			local pos = global.nearEngines.secondary.position
+			local name = global.nearEnginges.secondary.name
+			global.nearEngines.secondary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == glob.steam[i].secondary then
+					debug("found it: "..glob.steam[i].secondary)
+					local mk = i
+				else
+					debug("nope, "..glob.steam[i].secondary)
+				end
+			end
+			
+			game.create_entity{name = global.steam[mk].secondary, position = pos}
+			
+		elseif global.nearEngines.tertiary.valid then
+			local pos = global.nearEngines.tertiary.position
+			local name = global.nearEnginges.tertiary.name
+			global.nearEngines.tertiary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == glob.steam[i].tertiary then
+					debug("found it: "..glob.steam[i].tertiary)
+					local mk = i
+				else
+					debug("nope, "..glob.steam[i].tertiary)
+				end
+			end
+			
+			game.create_entity{name = global.steam[mk].tertiary, position = pos}
+		else
+			debug("I have no fucking idea")
+		end
+	elseif event.element.name == "secondarytoggle" then
+		--do secondary stuff
+		debug("You clicked: Secondary")
+		global.primarybox.state = false
+		global.tertiarybox.state = false
+	elseif event.element.name == "tertiarytoggle" then
+		--do tertiary stuff
+		debug("You clicked: Teritary")
+		global.primarybox.state = false
+		global.secondarybox.state = false
+	end
+end)
+
 
 function CheckPlayerIsNearEngine(player)
 for i in pairs(global.steam) do
@@ -184,30 +265,40 @@ end
 
 function OpenGUI(player, output)
 
+--[[	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
+	player.gui.top["DyTechPowerFlow"].add({type="frame", direction="vertical", name="steamengine_gui", caption={"steamengine-gui"}})
+	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"]]
+	
 	GUI.PushParent(player.gui.left)
 	global.gui[player.name] = GUI.PushParent(GUI.Frame("steamengine_gui", "Steam Engine Control", GUI.VERTICAL))
 	GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
-	local primarybox = GUI.Checkbox("Primary", primary)
-	local secondarybox = GUI.Checkbox("Secondary", secondary)
-	local tertiarybox = GUI.Checkbox("Tertiary", tertiary)
+	global.primarybox = GUI.Checkbox("Primary", primarytoggle)
+	global.secondarybox = GUI.Checkbox("Secondary", secondarytoggle)
+	global.tertiarybox = GUI.Checkbox("Tertiary", tertiarytoggle)
 
---[[	local primarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
-	local secondarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
-	local tertiarybox = game.player.gui.top.steamengine_gui.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}]]
+--[[	local primarybox = adder.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
+	local secondarybox = adder.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
+	local tertiarybox = adder.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}]]
 	
 	if output == "primary" then
-		primarybox.state = true
+		global.primarybox.state = true
 	elseif output == "secondary" then
-		secondarybox.state = true
+		global.secondarybox.state = true
 	elseif output == "tertiary" then
-		tertiarybox.state = true
+		global.tertiarybox.state = true
 	else
 		return
 	end
+	GUI.PopAll()
 end
 
-function CloseGUI()
+function CloseGUI(player)
 	debug("closed the gui (somewhat)")
+--[[	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"] and game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
+		game.players[PlayerIndex].gui.top["DyTechPowerFlow"].destroy()
+		global.gui[player.name] = nil
+	end]]
+	
 	if global.gui[player.name] then
 		global.gui[player.name].destroy()
 		global.gui[player.name] = nil
@@ -447,8 +538,3 @@ end
 end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
-
-remote.add_interface("DyTech-Power",
-{  	
-	
-})
