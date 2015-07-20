@@ -447,3 +447,8 @@ end
 end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
+
+remote.add_interface("DyTech-Power",
+{  	
+	
+})
