@@ -17,11 +17,13 @@ function Easy(event)
 		local BuildEntity = "dyzilla-spawner"
 		local PosX = event.area.left_top.x+math.random(32)
 		local PosY = event.area.left_top.y+math.random(32)
-			if game.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
-				global.Dyzilla.Alive = global.Dyzilla.Alive + 1
-				PlayerPrint("Dyzilla Spawner has been FOUND!")
-				debug(tostring(global.Dyzilla.Alive))
+			for _,player in pairs(game.players) do
+				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
+					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
+					PlayerPrint("Dyzilla Spawner has been FOUND!")
+					debug(tostring(global.Dyzilla.Alive))
+				end
 			end
 		end
 	end
@@ -36,11 +38,13 @@ function Medium(event)
 		local BuildEntity = "dyzilla-spawner"
 		local PosX = event.area.left_top.x+math.random(32)
 		local PosY = event.area.left_top.y+math.random(32)
-			if game.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
-				global.Dyzilla.Alive = global.Dyzilla.Alive + 1
-				PlayerPrint("Dyzilla Spawner has been FOUND!")
-				debug(tostring(global.Dyzilla.Alive))
+			for _,player in pairs(game.players) do
+				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
+					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
+					PlayerPrint("Dyzilla Spawner has been FOUND!")
+					debug(tostring(global.Dyzilla.Alive))
+				end
 			end
 		end
 	end
@@ -55,11 +59,13 @@ function Hard(event)
 		local BuildEntity = "dyzilla-spawner"
 		local PosX = event.area.left_top.x+math.random(32)
 		local PosY = event.area.left_top.y+math.random(32)
-			if game.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
-				global.Dyzilla.Alive = global.Dyzilla.Alive + 1
-				PlayerPrint("Dyzilla Spawner has been FOUND!")
-				debug(tostring(global.Dyzilla.Alive))
+			for _,player in pairs(game.players) do
+				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
+					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
+					PlayerPrint("Dyzilla Spawner has been FOUND!")
+					debug(tostring(global.Dyzilla.Alive))
+				end
 			end
 		end
 	end
@@ -74,11 +80,13 @@ function Insane(event)
 		local BuildEntity = "dyzilla-spawner"
 		local PosX = event.area.left_top.x+math.random(32)
 		local PosY = event.area.left_top.y+math.random(32)
-			if game.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
-				global.Dyzilla.Alive = global.Dyzilla.Alive + 1
-				PlayerPrint("Dyzilla Spawner has been FOUND!")
-				debug(tostring(global.Dyzilla.Alive))
+			for _,player in pairs(game.players) do
+				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
+					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
+					PlayerPrint("Dyzilla Spawner has been FOUND!")
+					debug(tostring(global.Dyzilla.Alive))
+				end
 			end
 		end
 	end
@@ -93,11 +101,13 @@ function Extreme(event)
 		local BuildEntity = "dyzilla-spawner"
 		local PosX = event.area.left_top.x+math.random(32)
 		local PosY = event.area.left_top.y+math.random(32)
-			if game.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
-				global.Dyzilla.Alive = global.Dyzilla.Alive + 1
-				PlayerPrint("Dyzilla Spawner has been FOUND!")
-				debug(tostring(global.Dyzilla.Alive))
+			for _,player in pairs(game.players) do
+				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
+					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
+					PlayerPrint("Dyzilla Spawner has been FOUND!")
+					debug(tostring(global.Dyzilla.Alive))
+				end
 			end
 		end
 	end
