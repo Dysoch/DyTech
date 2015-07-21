@@ -1,6 +1,7 @@
 [size=200]DyTech-Core[/size]
 
-[i][size=150][b]v1.2.0: (UNRELEASED!)[/b][/size][/i]
+[i][size=150][b]v1.2.0:[/b][/size][/i]
+[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
 [list]
 [*] Features:
 [list][*] Ported to Factorio 0.12.
