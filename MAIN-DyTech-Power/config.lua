@@ -4,7 +4,8 @@
 
 --[[Nuclear Reactors Toggle]]--
 -- Don't like the Nuclear Reactors? Here you can switch them off!
-Nuclear_Reactors = false
+--Nuclear_Reactors = false
+--NUCLEAR REACTORS ARE NOT FINISHED!
 	
 	--[[Gem Membrane Toggle]]--
 	--Don't like the gem membranes? Here you can switch them off!

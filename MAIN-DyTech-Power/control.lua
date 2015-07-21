@@ -125,7 +125,7 @@ end)
 
 --[[Steam Engine Code]]--
 
-game.on_event(defines.events.on_gui_click, function(event)
+--[[game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	debug("Event fired!")
@@ -196,7 +196,7 @@ local player = game.players[playerIndex]
 		global.primarybox.state = false
 		global.secondarybox.state = false
 	end
-end)
+end)]]--
 
 
 function CheckPlayerIsNearEngine(player)
@@ -389,7 +389,7 @@ end)
 game.on_event(defines.events.on_tick, function(event)
 --Steam Engine code:
 
-for player_Index, player in ipairs(game.players) do
+--[[for player_Index, player in ipairs(game.players) do
 	if global.nearbyEngines and not global.nearEngines.valid then
 		--CloseGUI(player)
 		debug("CloseGUI")
@@ -401,7 +401,7 @@ for player_Index, player in ipairs(game.players) do
 	else
 		global.tick[2] = global.tick[2] + 1
 	end
-end
+end]]
 
 --Nuclear reactor code:
 
