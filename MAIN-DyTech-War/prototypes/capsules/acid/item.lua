@@ -3,7 +3,7 @@ data:extend(
   {
     type = "capsule",
     name = "acid-capsule-1",
-    icon = "__base__/graphics/icons/poison-capsule.png",
+    icon = "__MAIN-DyTech-War__/graphics/capsules/acid/1.png",
     flags = {"goes-to-quickbar"},
     capsule_action =
     {
@@ -39,7 +39,7 @@ data:extend(
   {
     type = "capsule",
     name = "acid-capsule-2",
-    icon = "__base__/graphics/icons/poison-capsule.png",
+    icon = "__MAIN-DyTech-War__/graphics/capsules/acid/2.png",
     flags = {"goes-to-quickbar"},
     capsule_action =
     {
@@ -75,7 +75,7 @@ data:extend(
   {
     type = "capsule",
     name = "acid-capsule-3",
-    icon = "__base__/graphics/icons/poison-capsule.png",
+    icon = "__MAIN-DyTech-War__/graphics/capsules/acid/3.png",
     flags = {"goes-to-quickbar"},
     capsule_action =
     {
