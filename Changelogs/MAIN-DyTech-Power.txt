@@ -1,7 +1,9 @@
 [size=200]DyTech-Power[/size]
 
 
-[i][size=150][b]v1.1.0: (UNRELEASED!)[/b][/size][/i]
+[i][size=150][b]v1.1.0:[/b][/size][/i]
+[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
+Released: July 21th 2015
 [list]
 [*] Features:
 [list][*] Ported to Factorio 0.12.

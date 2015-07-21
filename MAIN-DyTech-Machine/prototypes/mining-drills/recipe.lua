@@ -63,9 +63,11 @@ data:extend(
     energy_required = 45,
     ingredients =
     {
-      {"basic-mining-drill-mk5", 3},
-	  {"advanced-processing-unit", 250},
-      {"tungsten-plate", 500},
+      {"basic-mining-drill-mk5", 1},
+	  {"logic-diamond-processor", 250},
+      {"tungsten-plate", 300},
+      {"ardite-plate", 100},
+      {"cobalt-plate", 100},
     },
     result = "basic-mining-drill-mk6"
   },

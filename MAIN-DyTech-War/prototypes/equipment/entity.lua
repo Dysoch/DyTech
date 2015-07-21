@@ -23,7 +23,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      buffer_capacity = "202J"
+      buffer_capacity = "20kJ"
     },
     attack_parameters =
     {
@@ -39,7 +39,7 @@ data:extend(
       {
         type = "projectile",
         category = "electric",
-        energy_consumption = "200J",
+        energy_consumption = "20kJ",
         projectile = "laser-sapphire-1",
         speed = 1,
         action = 
@@ -80,7 +80,7 @@ data:extend(
     {
       type = "electric",
       usage_priority = "secondary-input",
-      buffer_capacity = "404J"
+      buffer_capacity = "40kJ"
     },
     attack_parameters =
     {
@@ -96,7 +96,7 @@ data:extend(
       {
         type = "projectile",
         category = "electric",
-        energy_consumption = "300J",
+        energy_consumption = "30kJ",
         projectile = "laser-emerald-3",
         speed = 1,
         action = 
@@ -137,11 +137,11 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "240J",
-      input_flow_limit = "480W",
+      buffer_capacity = "24kJ",
+      input_flow_limit = "48kW",
       usage_priority = "primary-input"
     },
-    energy_per_shield = "40J"
+    energy_per_shield = "4kJ"
   },
   {
     type = "energy-shield-equipment",
@@ -163,11 +163,11 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "300J",
-      input_flow_limit = "600W",
+      buffer_capacity = "30kJ",
+      input_flow_limit = "60kW",
       usage_priority = "primary-input"
     },
-    energy_per_shield = "50J"
+    energy_per_shield = "5kJ"
   },
   {
     type = "energy-shield-equipment",
@@ -189,11 +189,11 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "360J",
-      input_flow_limit = "720W",
+      buffer_capacity = "36kJ",
+      input_flow_limit = "72kW",
       usage_priority = "primary-input"
     },
-    energy_per_shield = "60J"
+    energy_per_shield = "6kJ"
   },
   {
     type = "battery-equipment",
@@ -214,9 +214,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "25KJ",
-      input_flow_limit = "250KW",
-      output_flow_limit = "250KW",
+      buffer_capacity = "2500kJ",
+      input_flow_limit = "25MW",
+      output_flow_limit = "25MW",
       usage_priority = "terciary"
     }
   },
@@ -239,9 +239,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "125KJ",
-      input_flow_limit = "1250KW",
-      output_flow_limit = "1250KW",
+      buffer_capacity = "12500KJ",
+      input_flow_limit = "125MW",
+      output_flow_limit = "125MW",
       usage_priority = "terciary"
     }
   },
@@ -264,9 +264,9 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "600KJ",
-      input_flow_limit = "6000KW",
-      output_flow_limit = "6000KW",
+      buffer_capacity = "60000KJ",
+      input_flow_limit = "600MW",
+      output_flow_limit = "600MW",
       usage_priority = "terciary"
     }
   },
@@ -314,7 +314,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    power = "90W"
+    power = "9kW"
   },
   {
     type = "solar-panel-equipment",
@@ -337,7 +337,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    power = "270W"
+    power = "27kW"
   },
   {
     type = "solar-panel-equipment",
@@ -360,7 +360,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    power = "810W"
+    power = "81kW"
   },
 }
 )

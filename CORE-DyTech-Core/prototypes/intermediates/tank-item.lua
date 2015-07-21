@@ -3,7 +3,7 @@ data:extend(
   {
     type = "item",
     name = "track",
-    icon = "__CORE-DyTech-Core__/graphics/intermediates/temp.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tank/track.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-tank",
     order = "[b]track",
@@ -12,7 +12,7 @@ data:extend(
   {
     type = "item",
     name = "track-chain-link",
-    icon = "__CORE-DyTech-Core__/graphics/intermediates/temp.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tank/chain-link.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-tank",
     order = "[a]track-chain-link",
@@ -21,7 +21,7 @@ data:extend(
   {
     type = "item",
     name = "hull-lower",
-    icon = "__CORE-DyTech-Core__/graphics/intermediates/temp.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tank/hull-bottom.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-tank",
     order = "[b]hull-lower",
@@ -30,7 +30,7 @@ data:extend(
   {
     type = "item",
     name = "hull-top",
-    icon = "__CORE-DyTech-Core__/graphics/intermediates/temp.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tank/hull-top.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-tank",
     order = "[b]hull-top",
@@ -39,7 +39,7 @@ data:extend(
   {
     type = "item",
     name = "tank-barrel",
-    icon = "__CORE-DyTech-Core__/graphics/intermediates/temp.png",
+    icon = "__CORE-DyTech-Core__/graphics/intermediates/tank/barrel.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-tank",
     order = "[a]tank-barrel",

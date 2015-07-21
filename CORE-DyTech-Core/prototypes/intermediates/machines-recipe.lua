@@ -183,7 +183,7 @@ data:extend(
     ingredients =
     {
       {"blade-2", 1},
-      {"lead-plate", 4},
+      {"steel-plate", 4},
     },
     result = "blade-3"
   },

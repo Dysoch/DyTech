@@ -48,7 +48,7 @@ data:extend(
         probability = 1
       }
     },
-    max_count_of_owned_units = 500,
+    max_count_of_owned_units = 1,
     max_friends_around_to_spawn = 50000,
     animations =
     {
