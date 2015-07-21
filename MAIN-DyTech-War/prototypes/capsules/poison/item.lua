@@ -1,9 +1,11 @@
+data.raw["capsule"]["poison-capsule"].icon = "__MAIN-DyTech-War__/graphics/capsules/poison/1.png"
+
 data:extend(
 {
   {
     type = "capsule",
     name = "poison-capsule-1",
-    icon = "__base__/graphics/icons/poison-capsule.png",
+    icon = "__MAIN-DyTech-War__/graphics/capsules/poison/2.png",
     flags = {"goes-to-quickbar"},
     capsule_action =
     {
@@ -39,7 +41,7 @@ data:extend(
   {
     type = "capsule",
     name = "poison-capsule-2",
-    icon = "__base__/graphics/icons/poison-capsule.png",
+    icon = "__MAIN-DyTech-War__/graphics/capsules/poison/3.png",
     flags = {"goes-to-quickbar"},
     capsule_action =
     {
