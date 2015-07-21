@@ -9,7 +9,7 @@ data:extend(
       {"battery", 5},
       {"electronic-circuit", 5},
       {"capacitor-1", 5},
-      {"frame", 1},
+      {"frame-1", 1},
     },
     result = "small-basic-accumulator"
   },
@@ -23,7 +23,7 @@ data:extend(
       {"battery", 5},
       {"electronic-circuit", 5},
       {"capacitor-1", 5},
-      {"frame", 1},
+      {"frame-1", 1},
     },
     result = "small-basic-accumulator-mk2"
   },
@@ -37,7 +37,7 @@ data:extend(
       {"battery", 5},
       {"advanced-circuit", 5},
       {"capacitor-1", 5},
-      {"frame", 1},
+      {"frame-1", 1},
     },
     result = "small-basic-accumulator-mk3"
   },

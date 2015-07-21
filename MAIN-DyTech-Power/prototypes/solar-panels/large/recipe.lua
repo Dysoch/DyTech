@@ -7,7 +7,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-	  {"solar-panel-primary", 3}
+	  {"solar-panel-primary", 3},
       {"frame-1", 1},
       {"electronic-circuit", 15},
       {"copper-cable", 10},
@@ -22,7 +22,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-	  {"solar-panel-secondary", 3}
+	  {"solar-panel-secondary", 3},
       {"frame-1", 1},
       {"electronic-circuit", 15},
       {"copper-cable", 10},

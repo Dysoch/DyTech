@@ -1,14 +1,20 @@
 require "prototypes.internal-config"
-require "prototypes.functions"
+
+data.raw["accumulator"]["basic-accumulator"].fast_replaceable_group = "accumulator"
+data.raw["accumulator"]["basic-accumulator"].max_health = Health.Tier2
+data.raw["accumulator"]["basic-accumulator"].resistances = Resistances.Tier2
+data.raw["accumulator"]["basic-accumulator"].energy_source.buffer_capacity = Accumulators.Buffer.Normal.Tier1
+data.raw["accumulator"]["basic-accumulator"].energy_source.input_flow_limit = Accumulators.Input.Normal.Tier1
+data.raw["accumulator"]["basic-accumulator"].energy_source.output_flow_limit = Accumulators.Output.Normal.Tier1
 
 data:extend(
 {
   {
     type = "accumulator",
-    name = "small-basic-accumulator",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator.png",
+    name = "basic-accumulator-mk2",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator2.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk2"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
@@ -18,16 +24,41 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier1,
+      buffer_capacity = Accumulators.Buffer.Normal.Tier2,
       usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier1,
-      output_flow_limit = Accumulators.Output.Small.Tier1
+      input_flow_limit = Accumulators.Input.Normal.Tier2,
+      output_flow_limit = Accumulators.Output.Normal.Tier2
     },
-	picture = AccumulatorPictures(0.66, AccumulatorsTint.mk2),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk2),
+    picture =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-2.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2}
+    },
+    charge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-charge-animation-2.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5
+    },
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk2),
+    discharge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-discharge-animation-2.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5
+    },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -46,10 +77,10 @@ data:extend(
   },
   {
     type = "accumulator",
-    name = "small-basic-accumulator-mk2",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator2.png",
+    name = "basic-accumulator-mk3",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator3.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator-mk2"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk3"},
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
@@ -59,16 +90,41 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier2,
+      buffer_capacity = Accumulators.Buffer.Normal.Tier3,
       usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier2,
-      output_flow_limit = Accumulators.Output.Small.Tier2
+      input_flow_limit = Accumulators.Input.Normal.Tier3,
+      output_flow_limit = Accumulators.Output.Normal.Tier3
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk2),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk2),
+    picture =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-3.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2}
+    },
+    charge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-charge-animation-3.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5
+    },
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk2),
+    discharge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-discharge-animation-3.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5
+    },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -87,51 +143,10 @@ data:extend(
   },
   {
     type = "accumulator",
-    name = "small-basic-accumulator-mk3",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator3.png",
+    name = "basic-accumulator-mk4",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator4.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator-mk3"},
-    max_health = Health.Tier4,
-	resistances = Resistances.Tier4,
-    corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
-	fast_replaceable_group = "accumulator",
-    energy_source =
-    {
-      type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier3,
-      usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier3,
-      output_flow_limit = Accumulators.Output.Small.Tier3
-    },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk3),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk3),
-    charge_cooldown = 30,
-    charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk3),
-    discharge_cooldown = 60,
-    discharge_light = {intensity = 0.7, size = 7},
-    working_sound =
-    {
-      sound =
-      {
-        filename = "__base__/sound/accumulator-working.ogg",
-        volume = 1
-      },
-      idle_sound = {
-        filename = "__base__/sound/accumulator-idle.ogg",
-        volume = 0.4
-      },
-      max_sounds_per_type = 5
-    },
-  },
-  {
-    type = "accumulator",
-    name = "small-basic-accumulator-mk4",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator4.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator-mk4"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk4"},
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
@@ -141,16 +156,41 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier4,
+      buffer_capacity = Accumulators.Buffer.Normal.Tier4,
       usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier4,
-      output_flow_limit = Accumulators.Output.Small.Tier4
+      input_flow_limit = Accumulators.Input.Normal.Tier4,
+      output_flow_limit = Accumulators.Output.Normal.Tier4
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk4),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk4),
+    picture =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-4.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2}
+    },
+    charge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-charge-animation-4.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5
+    },
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk4),
+    discharge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-discharge-animation-4.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5
+    },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -169,10 +209,10 @@ data:extend(
   },
   {
     type = "accumulator",
-    name = "small-basic-accumulator-mk5",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator5.png",
+    name = "basic-accumulator-mk5",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator5.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator-mk5"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk5"},
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
@@ -182,16 +222,41 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier5,
+      buffer_capacity = Accumulators.Buffer.Normal.Tier5,
       usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier5,
-      output_flow_limit = Accumulators.Output.Small.Tier5
+      input_flow_limit = Accumulators.Input.Normal.Tier5,
+      output_flow_limit = Accumulators.Output.Normal.Tier5
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk5),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk5),
+    picture =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-5.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2}
+    },
+    charge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-charge-animation-5.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5
+    },
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk5),
+    discharge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-discharge-animation-5.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5
+    },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -210,10 +275,10 @@ data:extend(
   },
   {
     type = "accumulator",
-    name = "small-basic-accumulator-mk6",
-    icon = "__MAIN-DyTech-Power__/graphics/accumulators/icons/small/basic-accumulator6.png",
+    name = "basic-accumulator-mk6",
+    icon = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator6.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "small-basic-accumulator-mk6"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-accumulator-mk6"},
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "medium-remnants",
@@ -223,16 +288,41 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = Accumulators.Buffer.Small.Tier6,
+      buffer_capacity = Accumulators.Buffer.Normal.Tier6,
       usage_priority = "terciary",
-      input_flow_limit = Accumulators.Input.Small.Tier6,
-      output_flow_limit = Accumulators.Output.Small.Tier6
+      input_flow_limit = Accumulators.Input.Normal.Tier6,
+      output_flow_limit = Accumulators.Output.Normal.Tier6
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk6),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk6),
+    picture =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-6.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.7, -0.2}
+    },
+    charge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-charge-animation-6.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.482, -0.638},
+      animation_speed = 0.5
+    },
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk6),
+    discharge_animation =
+    {
+      filename = "__MAIN-DyTech-Power__/graphics/accumulators-normal/basic-accumulator-discharge-animation-6.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.395, -0.525},
+      animation_speed = 0.5
+    },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =

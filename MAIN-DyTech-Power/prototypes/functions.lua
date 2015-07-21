@@ -48,7 +48,50 @@ return
     }
 end
 
-function AccumulatorPictures(Type, Scale, Tint)
+function SmallAccumulatorPictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {0.35, -0.2},
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function SmallAccumulatorChargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.25, -0.638},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function SmallAccumulatorDischargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.1, -0.525},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function AccumulatorPictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
@@ -61,7 +104,7 @@ return
     }
 end
 
-function AccumulatorChargePictures(Type, Scale, Tint)
+function AccumulatorChargePictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
@@ -76,7 +119,7 @@ return
     }
 end
 
-function AccumulatorDischargePictures(Type, Scale, Tint)
+function AccumulatorDischargePictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
@@ -85,6 +128,49 @@ return
       line_length = 8,
       frame_count = 24,
       shift = {0.395, -0.525},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function LargeAccumulatorPictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
+      priority = "extra-high",
+      width = 124,
+      height = 103,
+      shift = {1, -0.1},
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function LargeAccumulatorChargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
+      width = 138,
+      height = 135,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.7, -0.1},
+      animation_speed = 0.5,
+	  scale = Scale,
+	  tint = Tint
+    }
+end
+
+function LargeAccumulatorDischargePictures(Scale, Tint)
+return
+    {
+      filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
+      width = 147,
+      height = 128,
+      line_length = 8,
+      frame_count = 24,
+      shift = {0.6, -0.1},
       animation_speed = 0.5,
 	  scale = Scale,
 	  tint = Tint
