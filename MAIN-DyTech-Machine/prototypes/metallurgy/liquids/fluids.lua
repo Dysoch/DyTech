@@ -12,6 +12,8 @@ data:extend(
     order = "copper",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -26,6 +28,8 @@ data:extend(
     order = "iron",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -40,6 +44,8 @@ data:extend(
     order = "carbonated-iron",
     pressure_to_speed_ratio = 0.4,
     flow_to_energy_ratio = 0.59,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -54,6 +60,8 @@ data:extend(
     order = "tin",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -68,6 +76,8 @@ data:extend(
     order = "zinc",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -82,6 +92,8 @@ data:extend(
     order = "lead",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -96,6 +108,8 @@ data:extend(
     order = "silver",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -110,6 +124,8 @@ data:extend(
     order = "gold",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -124,6 +140,8 @@ data:extend(
     order = "tungsten",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -138,6 +156,8 @@ data:extend(
     order = "ardite",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
   {
@@ -152,6 +172,8 @@ data:extend(
     order = "cobalt",
     pressure_to_speed_ratio = 0.2,
     flow_to_energy_ratio = 0.295,
+	max_to_push = 1.5,
+	ratio_to_push = 3.15,
     subgroup = "metallurgy-fluid-metal-basic",
   },
 }
