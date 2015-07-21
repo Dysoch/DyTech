@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-gem",
-    order = "z-dytech-gem",
-	inventory_order = "z-dytech-gem",
+    order = "z-7-dytech-gem",
+	inventory_order = "z-7-dytech-gem",
     icon = "__CORE-DyTech-Core__/graphics/item-group/gem.png",
   },
   {

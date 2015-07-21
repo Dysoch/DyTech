@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-metallurgy",
-    order = "m-1",
-	inventory_order = "m-1",
+    order = "z-8-dytech-metallurgy",
+	inventory_order = "z-8-dytech-metallurgy",
     icon = "__CORE-DyTech-Core__/graphics/item-group/metallurgy.png",
   },
   {

@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-intermediates",
-    order = "z-dytech-intermediates",
-	inventory_order = "z-dytech-intermediates",
+    order = "z-3-dytech-intermediates",
+	inventory_order = "z-3-dytech-intermediates",
     icon = "__CORE-DyTech-Core__/graphics/item-group/intermediates.png",
   },
   {

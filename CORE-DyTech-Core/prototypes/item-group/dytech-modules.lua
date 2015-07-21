@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-modules",
-    order = "z-dytech-modules",
-	inventory_order = "z-dytech-modules",
+    order = "z-6-dytech-modules",
+	inventory_order = "z-6-dytech-modules",
     icon = "__CORE-DyTech-Core__/graphics/item-group/modules.png",
   },
   {

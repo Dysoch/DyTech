@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-nuclear",
-    order = "z-dytech-nuclear",
-	inventory_order = "z-dytech-nuclear",
+    order = "z-9-dytech-nuclear",
+	inventory_order = "z-9-dytech-nuclear",
     icon = "__CORE-DyTech-Core__/graphics/item-group/nuclear.png",
   },
   {

@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-combat",
-    order = "z-dytech-combat",
-	inventory_order = "z-dytech-combat",
+    order = "z-5-dytech-combat",
+	inventory_order = "z-5-dytech-combat",
     icon = "__CORE-DyTech-Core__/graphics/item-group/combat.png",
   },
   {

@@ -3,8 +3,8 @@ data:extend(
   {
     type = "item-group",
     name = "dytech-inserter",
-    order = "z-dytech-inserter",
-	inventory_order = "z-dytech-inserter",
+    order = "z-2-dytech-inserter",
+	inventory_order = "z-2-dytech-inserter",
     icon = "__CORE-DyTech-Core__/graphics/item-group/inserter.png",
   },
   {
