@@ -63,6 +63,8 @@ if Difficulty==1 then
 	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {1900, 400}
 	if Dyzilla_Spawner then
 		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 100000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 40
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {960, 60}
 	end
 elseif Difficulty==2 then
 	data.raw["unit-spawner"]["biter-spawner"].max_health = 2000
@@ -75,6 +77,8 @@ elseif Difficulty==2 then
 	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {900, 200}
 	if Dyzilla_Spawner then
 		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 200000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 75
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {480, 60}
 	end
 elseif Difficulty==3 then
 	data.raw["unit-spawner"]["biter-spawner"].max_health = 4000
@@ -87,6 +91,8 @@ elseif Difficulty==3 then
 	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {600, 125}
 	if Dyzilla_Spawner then
 		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 500000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 125
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {240, 60}
 	end
 elseif Difficulty==4 then
 	data.raw["unit-spawner"]["biter-spawner"].max_health = 16000
@@ -99,6 +105,8 @@ elseif Difficulty==4 then
 	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {300, 60}
 	if Dyzilla_Spawner then
 		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 1000000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 250
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {120, 40}
 	end
 elseif Difficulty==5 then
 	data.raw["unit-spawner"]["biter-spawner"].max_health = 160000
@@ -111,6 +119,8 @@ elseif Difficulty==5 then
 	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {150, 30}
 	if Dyzilla_Spawner then
 		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 5000000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 500
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {60, 20}
 	end
 end
 
