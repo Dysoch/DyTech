@@ -122,7 +122,7 @@ global.steam[5].tertiary = "steam-engine-terciary-mk5"
 end)
 
 --[[Steam Engine Code]]--
-
+--[[
 game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
@@ -296,7 +296,7 @@ function CloseGUI(player)
 		global.gui[player.name].destroy()
 		global.gui[player.name] = nil
 	end
-end
+end]]
 
 
 --[[Reactor Code]]--
@@ -384,7 +384,7 @@ end)
 
 game.on_event(defines.events.on_tick, function(event)
 --Steam Engine code:
-
+--[[
 for player_Index, player in ipairs(game.players) do
 	if global.nearbyEngines and not global.nearEngines.valid then
 		--CloseGUI(player)
@@ -397,7 +397,7 @@ for player_Index, player in ipairs(game.players) do
 	else
 		global.tick[2] = global.tick[2] + 1
 	end
-end
+end]]
 
 --Nuclear reactor code:
 
@@ -532,7 +532,7 @@ end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
 
-remote.add_interface("DyTech-Power",
+--[[remote.add_interface("DyTech-Power",
 {  	
 	
-})
+})]]
