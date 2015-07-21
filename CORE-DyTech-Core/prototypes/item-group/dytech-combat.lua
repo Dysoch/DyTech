@@ -35,7 +35,13 @@ data:extend(
     type = "item-subgroup",
     name = "dytech-combat-ammo",
     group = "dytech-combat",
-    order = "004"
+    order = "004a"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytech-combat-ammo-capsule",
+    group = "dytech-combat",
+    order = "004a"
   },
   {
     type = "item-subgroup",
