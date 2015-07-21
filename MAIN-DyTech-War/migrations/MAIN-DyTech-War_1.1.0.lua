@@ -19,6 +19,6 @@ for _,player in pairs(game.players) do
 end
 
 for _,player in pairs(game.players) do
-	player.force.resetrecipes()
-	player.force.resettechnologies()
+	player.force.reset_recipes()
+	player.force.reset_technologies()
 end
