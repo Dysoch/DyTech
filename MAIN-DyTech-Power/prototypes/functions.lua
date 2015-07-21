@@ -48,7 +48,7 @@ return
     }
 end
 
-function AccumulatorPictures(Type, Scale, Tint)
+function AccumulatorPictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator.png",
@@ -61,7 +61,7 @@ return
     }
 end
 
-function AccumulatorChargePictures(Type, Scale, Tint)
+function AccumulatorChargePictures(cale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-charge-animation.png",
@@ -76,7 +76,7 @@ return
     }
 end
 
-function AccumulatorDischargePictures(Type, Scale, Tint)
+function AccumulatorDischargePictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/basic-accumulator/basic-accumulator-discharge-animation.png",
