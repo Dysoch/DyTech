@@ -122,10 +122,11 @@ global.steam[5].tertiary = "steam-engine-terciary-mk5"
 end)
 
 --[[Steam Engine Code]]--
---[[
+
 game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
+	debug("Event fired!")
     if event.element.name == "DyTech-Power-Button" then
         remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
         GUI.PushParent(player.gui.left)
@@ -145,10 +146,10 @@ local player = game.players[playerIndex]
 		global.secondarybox.state = false
 		global.tertiarybox.state = false
 		
-		if global.nearEngines.primary.valid then
+		if global.nearEngines.primary[1].valid then
 			global.primarybox.state = true
 			debug("what u doing? I'm already activated!")
-		elseif global.nearEngines.secondary.valid then
+		elseif global.nearEngines.secondary[1].valid then
 			local pos = global.nearEngines.secondary.position
 			local name = global.nearEnginges.secondary.name
 			global.nearEngines.secondary.destroy()
@@ -164,7 +165,7 @@ local player = game.players[playerIndex]
 			
 			game.create_entity{name = global.steam[mk].secondary, position = pos}
 			
-		elseif global.nearEngines.tertiary.valid then
+		elseif global.nearEngines.tertiary[1].valid then
 			local pos = global.nearEngines.tertiary.position
 			local name = global.nearEnginges.tertiary.name
 			global.nearEngines.tertiary.destroy()
@@ -258,20 +259,20 @@ end
 
 function OpenGUI(player, output)
 
---[[	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
+	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
 	player.gui.top["DyTechPowerFlow"].add({type="frame", direction="vertical", name="steamengine_gui", caption={"steamengine-gui"}})
-	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"] ]]
+	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"]
 	
-	GUI.PushParent(player.gui.left)
+--[[	GUI.PushParent(player.gui.left)
 	global.gui[player.name] = GUI.PushParent(GUI.Frame("steamengine_gui", "Steam Engine Control", GUI.VERTICAL))
 	GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
 	global.primarybox = GUI.Checkbox("Primary", primarytoggle)
 	global.secondarybox = GUI.Checkbox("Secondary", secondarytoggle)
-	global.tertiarybox = GUI.Checkbox("Tertiary", tertiarytoggle)
+	global.tertiarybox = GUI.Checkbox("Tertiary", tertiarytoggle)]]
 
---[[	local primarybox = adder.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
-	local secondarybox = adder.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
-	local tertiarybox = adder.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}]]
+	global.primarybox = adder.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
+	global.secondarybox = adder.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
+	global.tertiarybox = adder.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}
 	
 	if output == "primary" then
 		global.primarybox.state = true
@@ -287,16 +288,16 @@ end
 
 function CloseGUI(player)
 	debug("closed the gui (somewhat)")
---[[	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"] and game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
+	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"] and game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
 		game.players[PlayerIndex].gui.top["DyTechPowerFlow"].destroy()
 		global.gui[player.name] = nil
-	end]]
+	end
 	
-	if global.gui[player.name] then
+--[[	if global.gui[player.name] then
 		global.gui[player.name].destroy()
 		global.gui[player.name] = nil
-	end
-end]]
+	end]]
+end
 
 
 --[[Reactor Code]]--
@@ -384,7 +385,7 @@ end)
 
 game.on_event(defines.events.on_tick, function(event)
 --Steam Engine code:
---[[
+
 for player_Index, player in ipairs(game.players) do
 	if global.nearbyEngines and not global.nearEngines.valid then
 		--CloseGUI(player)
@@ -397,7 +398,7 @@ for player_Index, player in ipairs(game.players) do
 	else
 		global.tick[2] = global.tick[2] + 1
 	end
-end]]
+end
 
 --Nuclear reactor code:
 
