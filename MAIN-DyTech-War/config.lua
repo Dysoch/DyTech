@@ -3,7 +3,7 @@
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Difficulty ]]
-Difficulty = 5
+Difficulty = 2
 -- Difficulty 1 = EASY
 -- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
 -- Difficulty 3 = HARD
@@ -19,7 +19,7 @@ Difficulty = 5
 EnemiesBaseEdit = true
 Biters = true
 Spitters = true
-Dyzilla_Spawner = true
+Dyzilla_Spawner = false
 -- CAREFULL!!! Dyzilla spawner is incredible HARD, even on easy difficulty!
 
 --[[ Weapons and Ammo ]]--
