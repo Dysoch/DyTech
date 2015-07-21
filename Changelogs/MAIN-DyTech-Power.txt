@@ -2,7 +2,7 @@
 
 
 [i][size=150][b]v1.1.0:[/b][/size][/i]
-[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
+[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]
 Released: July 21th 2015
 [list]
 [*] Features:
@@ -18,18 +18,6 @@ Released: July 21th 2015
 [*] Increased Steam Engines Power Output and Recipe.
 [*] Increased Accumulators Power Specs and Recipe.
 [*] Changed Health of machines.[/list][/list]
-
-[i][size=150][b]v1.0.2:[/b][/size][/i]
-[list]
-[*] Features:
-[list][*] Added Resistances to machines.
-[/list]
-[*] Balancing:
-[list] [*] Increased Solar Panels Power Output by 600% and increased recipe cost by 500%.
-[*] Increased Accumulators Power Specs by 600% and increased recipe cost by 500%.
-[*] Changed Health of machines.
-[/list]
-[/list]
 
 [i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]

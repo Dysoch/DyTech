@@ -1,7 +1,7 @@
 [size=200]DyTech-Machine[/size]
 
 [i][size=150][b]v1.1.0:[/b][/size][/i]
-[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
+[size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]
 Released: July 21th 2015
 [list]
 [*] Features: 
@@ -15,7 +15,6 @@ Released: July 21th 2015
 [*] Added Molds for DyTech Intermediates + Recipes (Frames, Rotors, Blades and Item Exits)
 [/list]
 [*] Added a recipe to get obsidian from lava
-[*] Added 5 new Walls!
 [*] Added 2 Robot Charging Stations (From RoboCharge Mod, if needed, can be deleted if owner doesnt want that i use it) They also act as Zone Expanders.
 [*] Added 3 new Beacons.
 [*] Added 2 new Lamps.
@@ -23,6 +22,7 @@ Released: July 21th 2015
 [*] Added 2 extra Chemical Plants.
 [*] Added 2 extra Forges (faster and more modules)
 [*] Added 2 extra Blast Furnaces (faster and more modules)
+[*] Added Electric Lava Heater. Its slower then the burner though.
 [/list]
 [*] Changes:
 [list] [*] Increased size of Forge from 3x3 to 5x5 to work with the increased fluid input slots.
