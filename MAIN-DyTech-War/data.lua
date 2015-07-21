@@ -152,7 +152,7 @@ if Walls and Gates then
 require("prototypes.gates.entity")
 require("prototypes.gates.item")
 require("prototypes.gates.recipe")
-require("prototypes.walls.tech")
+require("prototypes.gates.tech")
 end
 
 --[[ Equipment Check ]]--
