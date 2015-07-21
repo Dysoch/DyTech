@@ -14,8 +14,7 @@ AccumulatorsTint = {
 	mk2 = {r=0.502, g=0.502, b=0.000, a=1.0},
 	mk3 = {r=0.235, g=0.702, b=0.443, a=1.0},
 	mk4 = {r=0.275, g=0.510, b=0.706, a=1.0},
-	mk5 = {r=0.402, g=0.408, b=0.933, a=1.0},
-	mk6 = {r=0.402, g=0.408, b=0.933, a=1.0}
+	mk5 = {r=0.402, g=0.408, b=0.933, a=1.0}
 }
 
 SolarTint = {
@@ -37,12 +36,12 @@ SteamEngineTint = {
 Accumulators = {
 	Buffer = {
 		Small = {
-			Tier1 = "1MJ",
-			Tier2 = "1MJ",
-			Tier3 = "1MJ",
-			Tier4 = "1MJ",
-			Tier5 = "1MJ",
-			Tier6 = "1MJ"
+			Tier1 = "12MJ", --12.75
+			Tier2 = "12MJ",
+			Tier3 = "12MJ",
+			Tier4 = "21MJ",
+			Tier5 = "20MJ", --19.5
+			Tier6 = "135MJ"
 		},
 		Normal = {
 			Tier1 = "60MJ",
@@ -53,22 +52,22 @@ Accumulators = {
 			Tier6 = "900MJ"
 		},
 		Large = {
-			Tier1 = "1MJ",
-			Tier2 = "1MJ",
-			Tier3 = "1MJ",
-			Tier4 = "1MJ",
-			Tier5 = "1MJ",
-			Tier6 = "1MJ"
+			Tier1 = "149MJ", --148.5
+			Tier2 = "169MJ", --168.75
+			Tier3 = "189MJ",
+			Tier4 = "419MJ", --418.5
+			Tier5 = "459MJ",
+			Tier6 = "3746MJ" --3746.25
 		}
 	},
 	Input = {
 		Small = {
-			Tier1 = "1kW",
-			Tier2 = "1kW",
-			Tier3 = "1kW",
-			Tier4 = "1kW",
-			Tier5 = "1kW",
-			Tier6 = "1kW"
+			Tier1 = "450kW", --472.5
+			Tier2 = "450kW",
+			Tier3 = "1350kW",
+			Tier4 = "800kW", --787.5
+			Tier5 = "2100kW",
+			Tier6 = "600kW"
 		},
 		Normal = {
 			Tier1 = "2100kW",
@@ -79,22 +78,22 @@ Accumulators = {
 			Tier6 = "4500kW"
 		},
 		Large = {
-			Tier1 = "1kW",
-			Tier2 = "1kW",
-			Tier3 = "1kW",
-			Tier4 = "1kW",
-			Tier5 = "1kW",
-			Tier6 = "1kW"
+			Tier1 = "6000kW", --5197.5
+			Tier2 = "6000kW",
+			Tier3 = "17000kW",
+			Tier4 = "17000kW",
+			Tier5 = "40000kW",
+			Tier6 = "20000kW"
 		}
 	},
 	Output = {
 		Small = {
-			Tier1 = "1kW",
-			Tier2 = "1kW",
-			Tier3 = "1kW",
-			Tier4 = "1kW",
-			Tier5 = "1kW",
-			Tier6 = "1kW"
+			Tier1 = "1350kW",
+			Tier2 = "1350kW",
+			Tier3 = "450kW",
+			Tier4 = "2100kW",
+			Tier5 = "800kW",
+			Tier6 = "600kW"
 		},
 		Normal = {
 			Tier1 = "6000kW",
@@ -105,12 +104,12 @@ Accumulators = {
 			Tier6 = "4500kW"
 		},
 		Large = {
-			Tier1 = "1kW",
-			Tier2 = "1kW",
-			Tier3 = "1kW",
-			Tier4 = "1kW",
-			Tier5 = "1kW",
-			Tier6 = "1kW"
+			Tier1 = "17000kW",
+			Tier2 = "17000kW",
+			Tier3 = "6000kW",
+			Tier4 = "40000kW",
+			Tier5 = "15000kW",
+			Tier6 = "20000kW"
 		}
 	},
 }	
@@ -177,10 +176,10 @@ SteamEngines = {
 		fluid_usage_per_tick5 = 1
 	},
 	High = {
-		effectivity1 = 1.43,
-		effectivity2 = 2.04,
-		effectivity3 = 2.92,
-		effectivity4 = 4.18,
+		effectivity1 = 2.002,
+		effectivity2 = 2.652,
+		effectivity3 = 3.504,
+		effectivity4 = 4.598,
 		effectivity5 = 5.98,
 		fluid_usage_per_tick1 = 0.08,
 		fluid_usage_per_tick2 = 0.124,

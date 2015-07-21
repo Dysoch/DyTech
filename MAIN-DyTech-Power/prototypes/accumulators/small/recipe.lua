@@ -6,11 +6,10 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"small-basic-accumulator", 5},
       {"battery", 5},
-      {"advanced-circuit", 5},
-      {"flux-capacitor-1", 5},
-      {"frame-2", 1},
+      {"electronic-circuit", 5},
+      {"capacitor-1", 5},
+      {"frame", 1},
     },
     result = "small-basic-accumulator"
   },
@@ -20,11 +19,11 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"small-basic-accumulator", 5},
+	  {"small-basic-accumulator", 5},
       {"battery", 5},
-      {"advanced-circuit", 5},
-      {"flux-capacitor-1", 5},
-      {"frame-2", 1},
+      {"electronic-circuit", 5},
+      {"capacitor-1", 5},
+      {"frame", 1},
     },
     result = "small-basic-accumulator-mk2"
   },
@@ -37,8 +36,8 @@ data:extend(
       {"small-basic-accumulator", 5},
       {"battery", 5},
       {"advanced-circuit", 5},
-      {"flux-capacitor-1", 5},
-      {"frame-2", 1},
+      {"capacitor-1", 5},
+      {"frame", 1},
     },
     result = "small-basic-accumulator-mk3"
   },
@@ -49,10 +48,10 @@ data:extend(
     ingredients =
     {
       {"small-basic-accumulator-mk2", 5},
-      {"battery", 10},
+      {"battery", 25},
       {"processing-unit", 5},
-      {"flux-capacitor-2", 5},
-      {"frame-3", 1},
+      {"flux-capacitor", 5},
+      {"frame-2", 2},
     },
     result = "small-basic-accumulator-mk4"
   },
@@ -63,10 +62,10 @@ data:extend(
     ingredients =
     {
       {"small-basic-accumulator-mk3", 5},
-      {"battery", 10},
+      {"battery", 25},
       {"processing-unit", 5},
-      {"flux-capacitor-2", 5},
-      {"frame-3", 1},
+      {"flux-capacitor-3", 5},
+      {"frame-2", 2},
     },
     result = "small-basic-accumulator-mk5"
   },
@@ -76,12 +75,11 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"small-basic-accumulator-mk4", 5},
       {"small-basic-accumulator-mk5", 5},
-      {"battery", 110},
-      {"advanced-processing-unit", 25},
+      {"battery", 50},
+      {"processing-unit", 25},
       {"flux-capacitor-4", 5},
-      {"frame-4", 1},
+      {"frame-3", 1},
     },
     result = "small-basic-accumulator-mk6"
   },

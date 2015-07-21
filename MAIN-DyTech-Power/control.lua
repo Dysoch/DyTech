@@ -81,6 +81,8 @@ global.nearby_engine = {}
 global.nearEngines = {}
 global.gui = {}
 global.prioritycheck = false
+global.temp = {}
+global.temp.nearEngines = {}
 
 global.steam = {}
 global.steam[1] = {}
@@ -146,13 +148,13 @@ local player = game.players[playerIndex]
 		global.secondarybox.state = false
 		global.tertiarybox.state = false
 		
-		if global.nearEngines.primary[1].valid then
+		if global.temp.nearEngines.primary.valid then
 			global.primarybox.state = true
 			debug("what u doing? I'm already activated!")
-		elseif global.nearEngines.secondary[1].valid then
-			local pos = global.nearEngines.secondary.position
-			local name = global.nearEnginges.secondary.name
-			global.nearEngines.secondary.destroy()
+		elseif global.temp.nearEngines.secondary.valid then
+			local pos = global.temp.nearEngines.secondary.position
+			local name = global.temp.nearEnginges.secondary.name
+			global.temp.nearEngines.secondary.destroy()
 			
 			for i in pairs(global.steam) do
 				if name == glob.steam[i].secondary then
@@ -165,10 +167,10 @@ local player = game.players[playerIndex]
 			
 			game.create_entity{name = global.steam[mk].secondary, position = pos}
 			
-		elseif global.nearEngines.tertiary[1].valid then
-			local pos = global.nearEngines.tertiary.position
-			local name = global.nearEnginges.tertiary.name
-			global.nearEngines.tertiary.destroy()
+		elseif global.temp.nearEngines.tertiary.valid then
+			local pos = global.temp.nearEngines.tertiary.position
+			local name = global.temp.nearEnginges.tertiary.name
+			global.temp.nearEngines.tertiary.destroy()
 			
 			for i in pairs(global.steam) do
 				if name == glob.steam[i].tertiary then
@@ -215,6 +217,7 @@ local nearbyEngine = global.nearby_engine[player.name]
 		global.nearEngines.primary = player.surface.find_entities_filtered{area = searchArea1, name = global.steam[i].primary}
 		if #global.nearEngines.primary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.primary[1]
+			global.temp.nearEngines.primary = global.nearEngines.primary[1]
 			if not global.gui[player.name] then 
 				OpenGUI(player, "primary")
 				--global.gui[player.name] = true

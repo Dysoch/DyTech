@@ -40,11 +40,11 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "large-basic-accumulator-mk4"
+        recipe = "basic-accumulator-mk4"
       },
       {
         type = "unlock-recipe",
-        recipe = "large-basic-accumulator-mk5"
+        recipe = "basic-accumulator-mk5"
       },
     },
     prerequisites = {"electric-energy-accumulators-2", "capacitor-2", "frame-2"},
@@ -70,7 +70,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "large-basic-accumulator-mk6"
+        recipe = "basic-accumulator-mk6"
       },
     },
     prerequisites = {"electric-energy-accumulators-3", "capacitor-4", "frame-3"},
