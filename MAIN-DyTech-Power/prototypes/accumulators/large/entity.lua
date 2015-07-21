@@ -23,11 +23,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier1,
       output_flow_limit = Accumulators.Output.Large.Tier1
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk1),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk1),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk1),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk1),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk1),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk1),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -64,11 +64,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier2,
       output_flow_limit = Accumulators.Output.Large.Tier2
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk2),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk2),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk2),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk2),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk2),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk2),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -105,11 +105,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier3,
       output_flow_limit = Accumulators.Output.Large.Tier3
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk3),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk3),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk3),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk3),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk3),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk3),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -146,11 +146,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier4,
       output_flow_limit = Accumulators.Output.Large.Tier4
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk4),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk4),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk4),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk4),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk4),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk4),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -187,11 +187,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier5,
       output_flow_limit = Accumulators.Output.Large.Tier5
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk5),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk5),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk5),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk5),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk5),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk5),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -228,11 +228,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Large.Tier6,
       output_flow_limit = Accumulators.Output.Large.Tier6
     },
-    picture = AccumulatorPictures(1.33, AccumulatorsTint.mk6),
-    charge_animation = AccumulatorChargePictures(1.33, AccumulatorsTint.mk6),
+    picture = LargeAccumulatorPictures(1.3, AccumulatorsTint.mk6),
+    charge_animation = LargeAccumulatorChargePictures(1.3, AccumulatorsTint.mk6),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(1.33, AccumulatorsTint.mk6),
+    discharge_animation = LargeAccumulatorDischargePictures(1.3, AccumulatorsTint.mk6),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
