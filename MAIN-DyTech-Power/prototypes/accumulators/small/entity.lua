@@ -12,8 +12,8 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -23,11 +23,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier1,
       output_flow_limit = Accumulators.Output.Small.Tier1
     },
-	picture = AccumulatorPictures(0.66, AccumulatorsTint.mk2),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk2),
+	picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk2),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk2),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk2),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk2),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -53,8 +53,8 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -64,11 +64,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier2,
       output_flow_limit = Accumulators.Output.Small.Tier2
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk2),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk2),
+    picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk2),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk2),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk2),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk2),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -94,8 +94,8 @@ data:extend(
     max_health = Health.Tier4,
 	resistances = Resistances.Tier4,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -105,11 +105,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier3,
       output_flow_limit = Accumulators.Output.Small.Tier3
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk3),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk3),
+    picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk3),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk3),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk3),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk3),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -135,8 +135,8 @@ data:extend(
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -146,11 +146,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier4,
       output_flow_limit = Accumulators.Output.Small.Tier4
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk4),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk4),
+    picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk4),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk4),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk4),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk4),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -176,8 +176,8 @@ data:extend(
     max_health = Health.Tier6,
 	resistances = Resistances.Tier6,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -187,11 +187,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier5,
       output_flow_limit = Accumulators.Output.Small.Tier5
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk5),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk5),
+    picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk5),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk5),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk5),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk5),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
@@ -217,8 +217,8 @@ data:extend(
     max_health = Health.Tier9,
 	resistances = Resistances.Tier9,
     corpse = "medium-remnants",
-    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 	fast_replaceable_group = "accumulator",
     energy_source =
     {
@@ -228,11 +228,11 @@ data:extend(
       input_flow_limit = Accumulators.Input.Small.Tier6,
       output_flow_limit = Accumulators.Output.Small.Tier6
     },
-    picture = AccumulatorPictures(0.66, AccumulatorsTint.mk6),
-    charge_animation = AccumulatorChargePictures(0.66, AccumulatorsTint.mk6),
+    picture = SmallAccumulatorPictures(0.5, AccumulatorsTint.mk6),
+    charge_animation = SmallAccumulatorChargePictures(0.5, AccumulatorsTint.mk6),
     charge_cooldown = 30,
     charge_light = {intensity = 0.3, size = 7},
-    discharge_animation = AccumulatorDischargePictures(0.66, AccumulatorsTint.mk6),
+    discharge_animation = SmallAccumulatorDischargePictures(0.5, AccumulatorsTint.mk6),
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7},
     working_sound =
