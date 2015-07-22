@@ -1,6 +1,6 @@
 [size=200]DyTech-War[/size]
 
-[i][size=150][b]v1.1.0:[/b][/size][/i]
+[spoiler=v1.1.0][i][size=150][b]v1.1.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
 [b]I AM NOT KINDING!!! WAR HAS BEEN CHANGED SO MUCH, THAT YOU WILL DIE WITHIN 10 MINUTES! (thx to resistances changes!)[/b][/size]
 Released: July 21th 2015
@@ -54,9 +54,9 @@ Released: July 21th 2015
 [list] [*] Fixed LARGE tooltip of Marauder, Frenzy and Sharpshooter Capsules
 [*] Fixed amount of capsules spawned of Marauder, Frenzy and Sharpshooter.
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.2:[/b][/size][/i]
+[spoiler=v1.0.2][i][size=150][b]v1.0.2:[/b][/size][/i]
 [list]
 [*] Balancing:
 [list] [*] Changed the base Laser Turret to how it should have been last version (forgot it)
@@ -69,9 +69,9 @@ Released: July 21th 2015
 [*] Bugfixes:
 [list] [*] Fixed error that came with Factorio 0.11.18
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.1:[/b][/size][/i]
+[spoiler=v1.0.1][i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! 
@@ -84,8 +84,8 @@ Released: July 21th 2015
 [*] Emerald [T3] - Medium/High range / Medium DPS / Low Power Use
 [*] Topaz [T4] - Sniper -  High range / Medium DPS / High Power Use	[/list]
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.0:[/b][/size][/i]
+[spoiler=v1.0.0][i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
-[*] Official Release.[/list]
+[*] Official Release.[/list][/spoiler]

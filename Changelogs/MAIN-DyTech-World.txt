@@ -1,9 +1,9 @@
 [size=200]DyTech-World[/size]
 
-[i][size=150][b]v1.0.0: (UNRELEASED!)[/b][/size][/i]
+[spoiler=v1.0.0][i][size=150][b]v1.0.0: (UNRELEASED!)[/b][/size][/i]
 [list]
 [*] Features: 
 [list] [*] 
 [*] 
 [/list]
-[/list]
+[/list][/spoiler]

@@ -1,6 +1,6 @@
 [size=200]DyTech-Machine[/size]
 
-[i][size=150][b]v1.1.0:[/b][/size][/i]
+[spoiler=v1.1.0][i][size=150][b]v1.1.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]
 Released: July 21th 2015
 [list]
@@ -36,18 +36,18 @@ Released: July 21th 2015
 [*] Changed Super and Extreme Transport Belt recipe to require Lubricant.
 [*] Changed the way molds are used: You no longer have to loop them, they wont be used in the recipe. But it is still required to have an Mold in the machine, otherwise it wont run!
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.3:[/b][/size][/i]
+[spoiler=v1.0.3][i][size=150][b]v1.0.3:[/b][/size][/i]
 [list]
 [*] Features: 
 [list] [*] Added Clean Ore smelting in a furnace.[/list]
 [*] Bugfixes: 
 [list] [*] Fixed Car error that came with Factorio 0.11.18[/list]
 [*] Balancing: 
-[list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.[/list][/list]
+[list] [*] Balanced Sludge Processing. Stone now has a 80% chance to get, and only between 1 and 3 stone.[/list][/list][/spoiler]
 
-[i][size=150][b]v1.0.2:[/b][/size][/i]
+[spoiler=v1.0.2][i][size=150][b]v1.0.2:[/b][/size][/i]
 [list]
 [*] Features: 
 [list] [*] Longer Underground Basic, Fast and Express Transport Belt! (10,20,30)
@@ -61,9 +61,9 @@ Released: July 21th 2015
 [*] Balancing: 
 [list] [*] Longer Underground Super and Extreme Transport Belt! (20,25)>(40,50)
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.1:[/b][/size][/i]
+[spoiler=v1.0.1][i][size=150][b]v1.0.1:[/b][/size][/i]
 [list]
 [*] Bugfixes: 
 [list] [*] Fixed wrong recipe output of Lava Heater and Cooler 
@@ -72,8 +72,8 @@ Released: July 21th 2015
 [*] Balancing:
 [list] [*] Reduced max liquid input of Lava Heater and Cooler: 1000 > 10.
 [/list]
-[/list]
+[/list][/spoiler]
 
-[i][size=150][b]v1.0.0:[/b][/size][/i]
+[spoiler=v1.0.0][i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
-[*] Official Release.[/list]
+[*] Official Release.[/list][/spoiler]

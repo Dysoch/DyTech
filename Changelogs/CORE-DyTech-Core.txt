@@ -1,6 +1,6 @@
 [size=200]DyTech-Core[/size]
 
-[i][size=150][b]v1.2.0:[/b][/size][/i]
+[spoiler=v1.2.0][i][size=150][b]v1.2.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]
 Released: July 21th 2015
 [list]
@@ -14,29 +14,23 @@ Released: July 21th 2015
 [*] Added a new Processor: Logic Diamond Processor (tier 5 circuit) 
 [*] Added some different recipes. Coal to Gems, or Crystal to Sand.
 [*] Added in 4 new Damage Types. Mainly used in the War module.
-[*] Added in 5 new intermediates specially for tanks. All tanks use them now!
-[/list]
+[*] Added in 5 new intermediates specially for tanks. All tanks use them now![/list]
 [*] Balancing:
 [list] [*] Decreases time for Technologies of Metal Processing
 [*] Increased Player Inventory Space: 100 > 150
 [*] Completely changed ore generation:
 [list]
-[*] Ardite, Cobalt and Tungsten: Only found around Enemy Bases.
-[/list]
-[/list]
+[*] Ardite, Cobalt and Tungsten: Only found around Enemy Bases.[/list][/list]
 [*] Graphics:
-[list] [*] Added New Graphics for the Item Groups
-[/list]
+[list] [*] Added New Graphics for the Item Groups[/list]
 [*] Changes:
 [list] [*] Merged DyTech-Script into DyTech-Core 
 [*] Moved the Stone Gear Usage from Mandatory to Base Override. You can Switch it off now!
-[*] Changed the water and dirty water around to provide compatibility with Atomic Power. This however, will render your savegame bugged. Please start a new game to fully use it!
-[/list]
+[*] Changed the water and dirty water around to provide compatibility with Atomic Power. This however, will render your savegame bugged. Please start a new game to fully use it![/list]
 [*] Bugfixes :
-[list] [*] Fixed the bug with Obsidian mining! [/list]
-[/list]
+[list] [*] Fixed the bug with Obsidian mining! [/list][/list][/spoiler]
 
-[i][size=150][b]v1.1.3:[/b][/size][/i]
+[spoiler=v1.1.3][i][size=150][b]v1.1.3:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Added more technologies of:
@@ -48,19 +42,16 @@ Released: July 21th 2015
 [*] Added Centrifuge. Mainly used in Ore Cleaning in DyTech-Machine, but also used for Wood Processing![/list]
 [*] Balancing:
 [list] [*] Balanced Times of Capacitors recipes
-[*] Balanced Iron Blade Recipe. Requires now half the recources.
-[/list]
-[/list]
+[*] Balanced Iron Blade Recipe. Requires now half the recources.[/list][/list][/spoiler]
 
-[i][size=150][b]v1.1.2:[/b][/size][/i]
+[spoiler=v1.1.2][i][size=150][b]v1.1.2:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Changed data.lua setup. Now you have to use the config.lua file to disable/enable something! [/list]
 [*] Bugfixes :
-[list] [*] Fixed SeedLookUpTable = nil error. (AGAIN!!!) [/list]
-[/list]
+[list] [*] Fixed SeedLookUpTable = nil error. (AGAIN!!!) [/list][/list][/spoiler]
 
-[i][size=150][b]v1.1.1:[/b][/size][/i]
+[spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Added Remote Calls to Regenerate Ores and Liquids. Check DyTech News to see how to use it. [/list]
@@ -69,20 +60,18 @@ Released: July 21th 2015
 [*] Fixed SeedLookUpTable = nil error.
 [*] Fixed Sulfur tree not growing (when Treefarm isnt installed) [/list]
 [*] Balancing:
-[list] [*] Increased Richness of Stone Deposit by 45% (active with base-override!)[/list]
-[/list]
+[list] [*] Increased Richness of Stone Deposit by 45% (active with base-override!)[/list][/list][/spoiler]
 
-[i][size=150][b]v1.1.0:[/b][/size][/i]
+[spoiler=v1.1.0][i][size=150][b]v1.1.0:[/b][/size][/i]
 [list]
 [*] Features:
 [list][*] Added new Tree: Sulfur Tree. You will get sulfur from this.
 [*] Added new way to get resin without using Script (no longer prone to errors) [/list]
 [*] Bugfixes :
 [list] [*] Fixed crashing script issue with interface between Treefarm and DyTech
-[*] Fixed issue with Resin inserting into Player 1 (deleted it, and replaced with actual gameplay) [/list]
-[/list]
+[*] Fixed issue with Resin inserting into Player 1 (deleted it, and replaced with actual gameplay) [/list][/list][/spoiler]
 
-[i][size=150][b]v1.0.1:[/b][/size][/i]
+[spoiler=v1.0.1][i][size=150][b]v1.0.1:[/b][/size][/i]
 NOTE: If you want to use the new treefarm, it is now possible! Added the proper interface from Treefarm Lite!
 [list]
 [*] Features:
@@ -93,17 +82,14 @@ NOTE: If you want to use the new treefarm, it is now possible! Added the proper 
 [list] [*] Fixed Iron Gear Wheels being used in the Lab.
 [*] Fixed Stone Gear Wheel not available from the start.
 [*] (HOPEFULLY) Fixed desync issues with the treefarm interface.
-[*] Fixed issue of Rubber Trees not growing when Treefarm is not installed.
-[/list]
+[*] Fixed issue of Rubber Trees not growing when Treefarm is not installed.[/list]
 [*] Balancing:
 [list] [*] Changed recipe of Mining Drill Mk 1 to use less iron plates: 98 > 78
 [*] Increased Richness of Gemstone Deposit by 18%
 [*] Increased Spawn Rate of Gemstone Deposit by 4%
 [*] Increased Spawn Rate of all DyTech Ores by 10%
-[*] Reduced Rubber Tree growing time by 21%
-[/list]
-[/list]
+[*] Reduced Rubber Tree growing time by 21%[/list][/list][/spoiler]
 
-[i][size=150][b]v1.0.0:[/b][/size][/i]
+[spoiler=v1.0.0][i][size=150][b]v1.0.0:[/b][/size][/i]
 [list]
-[*] Official Release.[/list]
+[*] Official Release.[/list][/spoiler]
