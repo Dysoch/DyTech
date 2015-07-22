@@ -346,5 +346,9 @@ remote.add_interface("DyTech-Core",
 	
 	ShowMainButton = function()
 		CoreGUI.CreateButton()
+	end,
+	
+	RecipesIngredients = function()
+		RemoteCalls.RecipesIngredients()
 	end
 })

@@ -197,4 +197,20 @@ local player = game.players[playerIndex]
 		global.Resources.AverageArdite = (global.Resources.FoundArdite/global.Logger.ChunkGenerated)
 		global.Resources.Chunks = global.Logger.ChunkGenerated
 		game.makefile("Debug/Resources.txt", serpent.block(global.Resources))
+		global.Resources = {}
+end
+
+function RecipesIngredients()
+	global.Plates = {}
+	for _,player in pairs(game.players) do
+		for Recipe, bla in pairs(player.force.recipes) do
+			local RecipeLocal = player.force.recipes[Recipe]
+			if RecipeLocal.ingredients then
+				global.Plates[Recipe] = {}
+				global.Plates[Recipe].Ingredients = RecipeLocal.ingredients
+			end
+		end
+	end
+	game.makefile("Debug/Recipes.txt", serpent.block(global.Plates))
+	global.Plates = {}
 end
