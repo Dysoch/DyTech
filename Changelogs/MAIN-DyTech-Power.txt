@@ -1,5 +1,15 @@
 [size=200]DyTech-Power[/size]
 
+[spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
+Released: ?? 2015
+[list]
+[*] Features:
+[list] [*]
+[/list]
+[*] Balancing:
+[list] [*] Made Recipes of Solar Panels mk I the same.
+[/list]
+[/list][/spoiler]
 
 [spoiler=v1.1.0][i][size=150][b]v1.1.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]

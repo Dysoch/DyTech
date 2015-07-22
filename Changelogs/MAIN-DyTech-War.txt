@@ -1,5 +1,16 @@
 [size=200]DyTech-War[/size]
 
+[spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
+Released: ?? 2015
+[list]
+[*] Features:
+[list] [*]
+[/list]
+[*] Balancing:
+[list] [*] Added Military 3 as requirement for DyTech turrets.
+[/list]
+[/list][/spoiler]
+
 [spoiler=v1.1.0][i][size=150][b]v1.1.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b]
 [b]I AM NOT KINDING!!! WAR HAS BEEN CHANGED SO MUCH, THAT YOU WILL DIE WITHIN 10 MINUTES! (thx to resistances changes!)[/b][/size]

@@ -1,5 +1,22 @@
 [size=200]DyTech-Core[/size]
 
+[spoiler=v1.2.1][i][size=150][b]v1.2.1:[/b][/size][/i]
+Released: ?? 2015
+[list]
+[*] Features:
+[list][*] 
+[/list]
+[*] Balancing:
+[list] [*] 
+[/list]
+[*] Changes:
+[list] [*] 
+[/list]
+[*] Bugfixes :
+[list] [*] Fixed bug with placing a seed (trees)
+[/list]
+[/list][/spoiler]
+
 [spoiler=v1.2.0][i][size=150][b]v1.2.0:[/b][/size][/i]
 [size=150][b]ITS BEST TO START NEW GAME! SOME THINGS ARE CHANGED HEAVILY![/b][/size]
 Released: July 21th 2015
