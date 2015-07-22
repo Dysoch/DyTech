@@ -3,26 +3,23 @@ data:extend(
   {
    	type = "recipe",
    	name = "blast-furnace",
-	energy_required = 60,
+	energy_required = 15,
     enabled = false,
     subgroup = "metallurgy-machines",
 	ingredients = 
 	{ 
-	  {"advanced-circuit", 10}, 
+	  {"electronic-circuit", 30}, 
 	  {"steel-plate", 10}, 
 	  {"copper-plate", 25}, 
 	  {"iron-plate", 25},
-	  {"tin-plate", 150},
 	  {"zinc-plate", 50},
-	  {"gold-plate", 50},
-	  {"silver-plate", 50},
 	},
    	result = "blast-furnace",
   },
   {
    	type = "recipe",
    	name = "forge",
-	energy_required = 60,
+	energy_required = 15,
     enabled = false,
     subgroup = "metallurgy-machines",
    	ingredients = 
@@ -38,20 +35,22 @@ data:extend(
   {
    	type = "recipe",
    	name = "blast-furnace-1",
-	energy_required = 60,
+	energy_required = 30,
     enabled = false,
     subgroup = "metallurgy-machines",
 	ingredients = 
 	{ 
 	  {"blast-furnace", 1}, 
 	  {"processing-unit", 25}, 
+	  {"zinc-plate", 50},
+	  {"tin-plate", 50},
 	},
    	result = "blast-furnace-1",
   },
   {
    	type = "recipe",
    	name = "forge-1",
-	energy_required = 60,
+	energy_required = 30,
     enabled = false,
     subgroup = "metallurgy-machines",
    	ingredients = 
@@ -72,6 +71,9 @@ data:extend(
 	{ 
 	  {"blast-furnace-1", 1}, 
 	  {"advanced-processing-unit", 25}, 
+	  {"zinc-plate", 50},
+	  {"gold-plate", 50},
+	  {"silver-plate", 50},
 	},
    	result = "blast-furnace-2",
   },
