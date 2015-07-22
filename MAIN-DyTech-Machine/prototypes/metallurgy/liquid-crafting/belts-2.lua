@@ -1,9 +1,5 @@
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4a"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4b"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-4c"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5a"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5b"})
-table.insert(data.raw["technology"]["molds-belt"].effects,{type = "unlock-recipe",recipe = "mold-crafting-belt-5c"})
+require "prototypes.prototype-creation"
+require "prototypes.override-functions"
 
 data:extend(
 { 
@@ -150,3 +146,23 @@ data:extend(
   },
 }
 )
+
+CreateBlankTech("molds-belt-3", "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/mold.png", 250, 45)
+AddRecipeToTech("molds-belt-3", "mold-crafting-belt-4a")
+AddRecipeToTech("molds-belt-3", "mold-crafting-belt-4b")
+AddRecipeToTech("molds-belt-3", "mold-crafting-belt-4c")
+AddRequirementToTech("molds-belt-3", "lava-04")
+AddRequirementToTech("molds-belt-3", "molds-belt-2")
+AddIngredientToTech("molds-belt-3", "science-pack-1", 1)
+AddIngredientToTech("molds-belt-3", "science-pack-2", 1)
+AddIngredientToTech("molds-belt-3", "science-pack-3", 1)
+
+CreateBlankTech("molds-belt-4", "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/mold.png", 350, 60)
+AddRecipeToTech("molds-belt-4", "mold-crafting-belt-5a")
+AddRecipeToTech("molds-belt-4", "mold-crafting-belt-5b")
+AddRecipeToTech("molds-belt-4", "mold-crafting-belt-5c")
+AddRequirementToTech("molds-belt-4", "molds-belt-3")
+AddIngredientToTech("molds-belt-4", "science-pack-1", 1)
+AddIngredientToTech("molds-belt-4", "science-pack-2", 1)
+AddIngredientToTech("molds-belt-4", "science-pack-3", 1)
+AddIngredientToTech("molds-belt-4", "alien-science-pack", 1)

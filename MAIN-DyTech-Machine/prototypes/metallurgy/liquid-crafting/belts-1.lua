@@ -1,3 +1,6 @@
+require "prototypes.prototype-creation"
+require "prototypes.override-functions"
+
 data:extend(
 { 
   {
@@ -206,90 +209,27 @@ data:extend(
 	  {type="item", name="express-splitter", amount=1},
 	}
   },
-  {
-    type = "technology",
-    name = "molds-belt",
-    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/mold.png",
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "mold-belt"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-1a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-1b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-1c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-2c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-3c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-4c"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5a"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5b"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "mold-crafting-belt-5c"
-      },
-    },
-    prerequisites = {"lava-04", "water-cleaning"},
-    unit =
-    {
-      count = 450,
-      ingredients =
-      {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-      },
-      time = 30
-    },
-    order = "molds-belt",
-  },
 }
 )
+
+CreateBlankTech("molds-belt-1", "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/mold.png", 150, 30)
+AddRecipeToTech("molds-belt-1", "mold-belt")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-1a")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-1b")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-1c")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-2a")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-2b")
+AddRecipeToTech("molds-belt-1", "mold-crafting-belt-2c")
+AddRequirementToTech("molds-belt-1", "lava-02")
+AddRequirementToTech("molds-belt-1", "water-cleaning")
+AddIngredientToTech("molds-belt-1", "science-pack-1", 1)
+AddIngredientToTech("molds-belt-1", "science-pack-2", 1)
+
+CreateBlankTech("molds-belt-2", "__MAIN-DyTech-Machine__/graphics/metallurgy/technology/mold.png", 200, 30)
+AddRequirementToTech("molds-belt-2", "molds-belt-1")
+AddRecipeToTech("molds-belt-2", "mold-crafting-belt-3a")
+AddRecipeToTech("molds-belt-2", "mold-crafting-belt-3b")
+AddRecipeToTech("molds-belt-2", "mold-crafting-belt-3c")
+AddIngredientToTech("molds-belt-2", "science-pack-1", 1)
+AddIngredientToTech("molds-belt-2", "science-pack-2", 1)
+AddIngredientToTech("molds-belt-2", "science-pack-3", 1)
