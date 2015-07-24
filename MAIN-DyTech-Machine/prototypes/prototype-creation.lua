@@ -1,4 +1,5 @@
 -- require "prototypes.prototype-creation"
+require "prototypes.override-functions"
 
 function CreateBlankRecipe(Name, Category, Time, Enabled, Result)
 return
@@ -18,27 +19,34 @@ data:extend(
 })
 end
 
-function CreateBlankTech(Name, Icon, Count, Time, Order)
+function CreateBlankTech(Data)
 return
 data:extend(
 { 
   {
     type = "technology",
-    name = Name,
-    icon = Icon,
+    name = Data.Name,
+    icon = "__MAIN-DyTech-Machine__/graphics/"..Data.Icon,
     effects =
     {
     },
     prerequisites = {},
     unit =
     {
-      count = Count,
+      count = Data.Count,
       ingredients =
       {
       },
-      time = Time
+      time = Data.Time
     },
-    order = Order or Name
+    order = Data.Name
   }
 })
+end
+
+function CreateTech(Data)
+	CreateBlankTech(Data)
+	AddRequirementToTechLooped(Data)
+	AddRecipeToTechLooped(Data)
+	AddIngredientToTechSmart(Data)
 end
