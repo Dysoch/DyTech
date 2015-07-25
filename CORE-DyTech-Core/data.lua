@@ -1,6 +1,8 @@
 require "config"
 
 -- Mandatory Stuff!
+require("prototypes.override-functions")
+require("prototypes.prototype-creation")
 require("prototypes.intermediates.circuits-item")
 require("prototypes.intermediates.circuits-recipe")
 require("prototypes.intermediates.circuits-tech")
