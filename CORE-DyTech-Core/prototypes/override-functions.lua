@@ -27,6 +27,12 @@ function AddRequirementToTech(Name, Requirement)
 	table.insert(data.raw["technology"][Name].prerequisites, Requirement)
 end
 
+function Add_To_Recipe_Looped(Data)
+	for bla,name in pairs(Data.Ingredient) do
+		table.insert(data.raw["recipe"][Data.Name].ingredients,name)
+	end
+end
+
 function Add_Requirement_To_Tech_Looped(Data)
 	for bla,name in pairs(Data.Prereq) do
 		table.insert(data.raw["technology"][Data.Name].prerequisites, name)

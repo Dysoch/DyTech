@@ -1,4 +1,4 @@
-require ("prototypes.machines.centrifuge.functions")
+require ("prototypes.machines.functions")
 require "prototypes.internal-config"
 
 data:extend(
@@ -80,3 +80,25 @@ data:extend(
   },
 }
 )
+
+DyTech_Create_Item_and_Recipe({
+	Name = "centrifuge", 
+	Icon = "__CORE-DyTech-Core__/graphics/metallurgy/icons/centrifuge.png", 
+	Flag = "quickbar",
+	Subgroup = "dytech-machines-cleaning",
+	Stack = 50,
+	Time = 10,
+	Enabled = false,
+	Ingredient = {{"iron-plate", 25},{"steel-plate", 10},{"iron-gear-wheel", 25},{"copper-cable", 10}},
+	Entity = true
+})
+
+DyTech_Create_Tech_Core({
+	Name = "centrifuge", 
+	Icon = "metallurgy/technology/centrifuge.png", 
+	Count = 50, 
+	Time = 30, 
+	Prereq = {"oil-processing", "water-cleaning"}, 
+	Recipes = {"centrifuge","raw-wood-centrifuge"}, 
+	Ingredients = {Science1=true, Science2=true, Science3=false, Science4=false}
+})

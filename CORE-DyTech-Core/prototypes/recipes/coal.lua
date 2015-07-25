@@ -3,7 +3,7 @@ require "prototypes.override-functions"
 
 data:extend(
 { 
-  --[[{
+  {
     type = "recipe",
     name = "coal-ruby",
 	category = "compressing",
@@ -14,7 +14,7 @@ data:extend(
 	  {"coal", 100},
     },
     result = "raw-ruby"
-  },]]--
+  },
   {
     type = "recipe",
     name = "coal-sapphire",
@@ -65,5 +65,3 @@ data:extend(
   },
 }
 )
-CreateBlankRecipe("coal-ruby", "compressing", 120, true, "raw-ruby")
-AddToRecipe("coal-ruby", "coal", 100)
