@@ -56,6 +56,7 @@ end
 -- Enabled is optional. if not specified, it will be true.
 -- Category is optional. if not specified, it will be nothing. This is to specify in which machines it can be created.
 -- ResultCount is optional. Use this if you want more results. when not specified, default is 1.
+-- Entity is for the use of items that have an entity hooked to it. When true, it creates the place_result with Name specified in the first line
 -- The order string isnt specified, because the name is placed as the order string.
 
 function DyTech_Create_Tech_Core(Data)
