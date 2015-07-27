@@ -6,3 +6,4 @@
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"This Main Module of DyTech holds all Power related machines. Solar Panels, Boilers, Steam Engines and even Nuclear Reactors!",
 	"dependencies": ["CORE-DyTech-Core >= 1.2.0"]
+}

@@ -19,7 +19,7 @@ Boilers = true
 
 	--[[Advanced Boilers Toggles]]--
 	--More advances switches for the boilers. Don't like the smaller or larger boilers? Here you can switch them off!
-	Normal_Boilers = true
+	Normal_Boilers = false
 	High_Boilers = true
 
 --[[Accumulators Toggle]]--
