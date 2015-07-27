@@ -1,0 +1,9 @@
+Tested with 1000x1000 chunks.
+
+It appears to be a little diffirent. Need to tweak numbers
+
+  Tier1 = 550,	68.5785536159601%
+  Tier2 = 158, 	19.70074812967581%
+  Tier3 = 82,	10.224438902743142%
+  Tier4 = 12,	1.4962593516209477%
+  Total = 802 	100%
