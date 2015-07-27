@@ -82,7 +82,7 @@ game.on_event(defines.events.on_tick, function(event)
 			newState = removedEntity.state + 1
 			if newState <= #global.tf.seedPrototypes[seedTypeName].states then
 			local tmpPos = removedEntity.entity.position
-			local newEnt = game.createentity{name = global.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
+			local newEnt = game.get_surface("nauvis").create_entity{name = global.tf.seedPrototypes[seedTypeLookUpTable[removedEntity.entity.name]].states[newState], position = tmpPos}
 			removedEntity.entity.destroy()
 			debug("Old tree removed, new one placed")
 			local deltaTime = math.ceil((math.random() * global.tf.seedPrototypes[seedTypeName].randomGrowingTime + global.tf.seedPrototypes[seedTypeName].basicGrowingTime) / removedEntity.efficiency)

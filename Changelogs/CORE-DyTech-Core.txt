@@ -15,6 +15,7 @@ Released: ?? 2015
 [*] Bugfixes :
 [list] [*] Fixed bug with placing a seed (trees)
 [*] Fixed Logger lua error.
+[*] Fixed bug with growing seeds without treefarm-lite.
 [/list]
 [/list][/spoiler]
 

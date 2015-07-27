@@ -169,7 +169,7 @@ end
 
 function calcEfficiency(entity, fertilizerApplied)
   local seedType = seedTypeLookUpTable[entity.name]
-  local currentTilename = entity.surface.get_tile(entity.position.x, entity.position.y).name
+  local currentTilename = game.get_surface("nauvis").get_tile(entity.position.x, entity.position.y).name
 
   local efficiency
 	if global.tf.seedPrototypes[seedType].efficiency[currentTilename] == nil then
