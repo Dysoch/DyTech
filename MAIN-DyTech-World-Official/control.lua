@@ -10,6 +10,15 @@ function debug(str)
 	if debug_master then
 		PlayerPrint(str)
 	end
+	if log_everything then log(str) end
+end
+log_everything = true
+function log(str)
+local seconds = math.floor(game.tick/60)
+local minutes = math.floor(seconds/60)
+local hours = math.floor(minutes/60)
+	if not global.Log then global.Log = {} end
+	global.Log[hours..":"..minutes..":"..(seconds-(minutes*60))] = str
 end
 
 function PlayerPrint(message)
@@ -94,5 +103,10 @@ remote.add_interface("DyTech-World",
 {  
 	Chart = function(Amount)
 		game.forces.player.chart({left_top = {x = -Amount, y = -Amount}, right_bottom = {x = Amount, y = Amount}})
+	end,
+	
+	Logger = function()
+		game.makefile("Log/World.txt", serpent.block(global.Log))
+		game.makefile("Datadump/World-Counter.txt", serpent.block(global.Counter))
 	end
 })

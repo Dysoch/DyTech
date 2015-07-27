@@ -21,6 +21,15 @@ function debug(str)
 	if debug_master then
 		PlayerPrint(str)
 	end
+	if log_everything then log(str) end
+end
+log_everything = true
+function log(str)
+local seconds = math.floor(game.tick/60)
+local minutes = math.floor(seconds/60)
+local hours = math.floor(minutes/60)
+	if not global.Log then global.Log = {} end
+	global.Log[hours..":"..minutes..":"..seconds] = str
 end
 
 function PlayerPrint(message)
@@ -268,6 +277,7 @@ remote.add_interface("DyTech-Dynamics",
 		game.makefile("DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
 		game.makefile("DataDump/Collectors.txt", serpent.block(global.Collectors))
 		game.makefile("DataDump/Technology.txt", serpent.block(global.Technology))
+		game.makefile("Log/Dynamics.txt", serpent.block(global.Log))
 	end,
 	
 	SwitchRS = function()

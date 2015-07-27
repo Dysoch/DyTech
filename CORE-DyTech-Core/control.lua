@@ -15,11 +15,15 @@ function debug(str)
 	if debug_master then
 		PlayerPrint(str)
 	end
+	if log_everything then log(str) end
 end
-function PlayerPrint(message)
-	for _,player in pairs(game.players) do
-		player.print(message)
-	end
+log_everything = true
+function log(str)
+local seconds = math.floor(game.tick/60)
+local minutes = math.floor(seconds/60)
+local hours = math.floor(minutes/60)
+	if not global.Log then global.Log = {} end
+	global.Log[hours..":"..minutes..":"..(seconds-(minutes*60))] = str
 end
 
 --[[TreeFarm Stuff, for trees!]]--
@@ -52,11 +56,14 @@ game.on_load(function()
 	debug("Treefarm not installed")
 		Trees.OnLoad()
 	elseif remote.interfaces["treefarm_interface"] and remote.interfaces.treefarm_interface.getSeedTypesData then
+	debug("Trees: Treefarm Found")
 		if not remote.call("treefarm_interface", "readSeed", "RubberTree") then
 			remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
+			debug("Trees: Rubber Tree Moved to Treefarm")
 		end
 		if not remote.call("treefarm_interface", "readSeed", "SulfurTree") then
 			remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
+			debug("Trees: Sulfur Tree Moved to Treefarm")
 		end
 	end
 	CoreGUI.CreateButton()
@@ -65,7 +72,6 @@ end)
 game.on_event(defines.events.on_tick, function(event)
 	if event.tick%600==0 then
 		game.wind_orientation = math.random()
-		debug(tostring(game.wind_orientation))
 	end
 	fs.Timer(event)
 	--if not DyTechOnInit then
@@ -157,7 +163,7 @@ local player = game.players[event.player_index]
 	debug("tree created (player "..tostring(event.player_index)..")")
     local currentSeedTypeName = seedTypeLookUpTable[event.created_entity.name]
 		if currentSeedTypeName ~= nil then
-		debug("currentSeedTypeName = nil")
+		debug("currentSeedTypeName ~= nil")
 		local newEfficiency = Trees.calcEfficiency(event.created_entity, false)
 		local deltaTime = math.ceil((math.random() * global.tf.seedPrototypes[currentSeedTypeName].randomGrowingTime + global.tf.seedPrototypes[currentSeedTypeName].basicGrowingTime) / newEfficiency)
 		local nextUpdateIn = event.tick + deltaTime
@@ -220,34 +226,43 @@ local player = game.players[playerIndex]
 	if event.element.name == "DyTech-Button" then
 		player.gui.top["DyTech-Button"].destroy()
 		CoreGUI.showDyTechGUI(playerIndex)
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Button")
 	elseif event.element.name == "DyTech-Debug-Button" then
 		CoreGUI.closeGUI("DyTech", playerIndex)
 		CoreGUI.showDyTechDebugGUI(playerIndex)
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Button")
 	elseif event.element.name == "DyTech-Debug-Dump-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		remote.call("DyTech-Core", "Logger")
 		if remote.interfaces["DyTech-Dynamics"] then remote.call("DyTech-Dynamics", "DataDump") end
 		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
+		if remote.interfaces["DyTech-World"] then remote.call("DyTech-World", "Logger") end
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Dump-Button")
 	elseif event.element.name == "DyTech-Debug-TestItems-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.TestMapStart(playerIndex)
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-TestItems-Button")
 	elseif event.element.name == "DyTech-Debug-TestResource-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.CheckOreRatio(500, playerIndex)
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-TestResources-Button")
 	elseif event.element.name == "DyTech-Debug-Reset-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		remote.call("DyTech-Core", "ResetAll")
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Reset-Button")
 	elseif event.element.name == "DyTech-Debug-Technology-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		fs.ResearchAll()
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Technology-Button")
 	elseif event.element.name == "DyTech-Close-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
+		debug("GUI: Player "..playerIndex.." clicked DyTech-Close-Button")
 	end
 end)
 
@@ -319,6 +334,7 @@ remote.add_interface("DyTech-Core",
 		game.makefile("DataDump/TimeStamp/RobotMinedItems.txt", serpent.block(global.TimeStamp.RobotMinedItems))
 		game.makefile("DataDump/TimeStamp/MinedItems.txt", serpent.block(global.TimeStamp.MinedItems))
 		game.makefile("DataDump/TimeStamp/CraftedItems.txt", serpent.block(global.TimeStamp.CraftedItems))
+		game.makefile("Log/Core.txt", serpent.block(global.Log))
 	end,
 	
 	TimerIncrease = function(Hour, Minute, Second)
