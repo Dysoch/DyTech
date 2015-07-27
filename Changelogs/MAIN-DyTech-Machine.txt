@@ -8,7 +8,7 @@
 [*] All Smart Inserters can now use the circuit network.
 [/list]
 [*] Bugfixes: 
-[list] [*] 
+[list] [*] Changed DyTech Inserter names to be more clean what they do.
 [/list]
 [*] Balancing: 
 [list] [*] Balanced recipes of the Blast Furnaces.
