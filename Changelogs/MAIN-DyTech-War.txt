@@ -13,7 +13,7 @@ Released: ?? 2015
 [*] Added 2 new technologies. For Chitin Walls and Sand Walls. Sand Wall Gate is also unlocked with Sand Wall technology (requires Gates to be researched)
 [/list]
 [*] Bugfixes:
-[list] [*] 
+[list] [*] Fixed Capsules not working (hopefully, requires some testing)
 [/list]
 [/list][/spoiler]
 
