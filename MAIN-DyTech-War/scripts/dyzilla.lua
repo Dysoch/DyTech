@@ -119,7 +119,7 @@ function DeathModeSupplies()
 	for _,player in pairs(game.players) do
 		local chestposition1 = player.surface.find_non_colliding_position("steel-chest", player.position, 1, 1)
 		local chest1 = player.surface.create_entity{name="steel-chest", position=chestposition1, force = game.forces.player}
-		local chestposition2 = player.surface.find_non_colliding_position("steel-chest", player.position, 1, 1)
+		local chestposition2 = player.surface.find_non_colliding_position("steel-chest", player.position, -1, -1)
 		local chest2 = player.surface.create_entity{name="steel-chest", position=chestposition2, force = game.forces.player}
 		chest1.insert{name="small-electric-pole", count=50}
 		chest1.insert{name="substation", count=10}

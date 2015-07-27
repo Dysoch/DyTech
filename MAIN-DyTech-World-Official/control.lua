@@ -56,7 +56,7 @@ game.on_event(defines.events.on_chunk_generated, function(event)
 		local PosY = event.area.left_top.y+math.random(32)
 		local ItemAmount = math.random(1,10)
 			if game.get_surface("nauvis").can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-				game.get_surface("nauvis").create_entity{name = "item-on-ground", position = player.position, stack = {name=(BuildEntity), count = ItemAmount}}
+				game.get_surface("nauvis").create_entity{name = "item-on-ground", position={PosX,PosY}, stack = {name=(BuildEntity), count = ItemAmount}}
 				debug("Created Item-On_Ground: "..BuildEntity.." at "..PosX..", "..PosY)
 			end
 		elseif checkMatch(27) then
