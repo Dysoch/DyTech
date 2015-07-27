@@ -7,6 +7,7 @@ Here are the goals for this module:
 - It must be easily configurable with a few tweak at the top of the control.lua.
 - MUST be MP compatible.
 - Must be optimized. (with debug screen active, use less then 0.2 script-update)
+- In the generation script, chance 50% = loot on ground, chance 27% = walls, chance 21% = chest filled with loot, chance 2% = machine
 
 Some tips:
 - DyTech Core holds a lot of info which can be used. Ask me for a transfer from Core to World if needed (but try to do it yourself if possible).

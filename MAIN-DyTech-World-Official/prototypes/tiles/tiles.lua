@@ -1,5 +1,7 @@
 local autoplace_utils = require("autoplace_utils")
 
+local snow_vehicle_speed_modifier = 2
+
 local function autoplace_settings(noise_layer, rectangles)
   local ret = {}
 
@@ -109,7 +111,9 @@ data:extend(
         volume = 0.8
       }
     },
-    map_color={r=255, g=250, b=250}
+    map_color={r=255, g=250, b=250},
+    ageing=0.00045,
+    vehicle_friction_modifier = snow_vehicle_speed_modifier
   },
   {
     type = "tile",
@@ -173,7 +177,9 @@ data:extend(
         volume = 0.8
       }
     },
-    map_color={r=248, g=248, b=255}
+    map_color={r=248, g=248, b=255},
+    ageing=0.00045,
+    vehicle_friction_modifier = snow_vehicle_speed_modifier
   },
 }
 )
