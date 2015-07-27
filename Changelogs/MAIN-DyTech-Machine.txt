@@ -7,6 +7,9 @@
 [*] All Chests can now use the circuit network.
 [*] All Smart Inserters can now use the circuit network.
 [/list]
+[*] Changes:
+[list] [*] Removed Centrifuge recipe from Centrifuge 2 technology.
+[/list]
 [*] Bugfixes: 
 [list] [*] Changed DyTech Inserter names to be more clean what they do.
 [/list]

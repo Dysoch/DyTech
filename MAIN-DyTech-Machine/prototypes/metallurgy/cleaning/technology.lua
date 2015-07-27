@@ -8,10 +8,6 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "centrifuge"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "clean-iron-ore"
       },
       {
