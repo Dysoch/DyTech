@@ -205,6 +205,7 @@ local player = game.players[event.player_index]
 end)
 
 game.on_event(defines.events.on_chunk_generated, function(event)
+	if not global.Logger then fs.Startup() end
 	if not global.Logger.ChunkGenerated then 
 		global.Logger.ChunkGenerated = 1
 	else
