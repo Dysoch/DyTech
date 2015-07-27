@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "chitin-wall",
-	enabled = true,
+	enabled = false,
     energy_required = 4.5,
     ingredients =
     {
@@ -14,7 +14,7 @@ data:extend(
   {
     type = "recipe",
     name = "sandwall",
-	enabled = true,
+	enabled = false,
     energy_required = 2.5,
     ingredients =
     {

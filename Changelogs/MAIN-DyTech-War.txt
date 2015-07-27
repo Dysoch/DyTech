@@ -10,6 +10,7 @@ Released: ?? 2015
 [list] [*] Added Military 3 as requirement for DyTech turrets.
 [*] Increased damage of gun turrets by 2.
 [*] Increased shooting speed of Advanced Gun Turret: 6/sec > 12/sec
+[*] Added 2 new technologies. For Chitin Walls and Sand Walls. Sand Wall Gate is also unlocked with Sand Wall technology (requires Gates to be researched)
 [/list]
 [*] Bugfixes:
 [list] [*] 
