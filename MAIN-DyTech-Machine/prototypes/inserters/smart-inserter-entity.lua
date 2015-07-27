@@ -112,7 +112,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-	rotation_speed = 0.014
+	rotation_speed = 0.014,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -226,7 +240,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-	rotation_speed = 0.014
+	rotation_speed = 0.014,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -340,6 +368,20 @@ data:extend(
         height = 46
       }
     },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -453,6 +495,20 @@ data:extend(
         height = 46
       }
     },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -566,6 +622,20 @@ data:extend(
         height = 46
       }
     },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -679,6 +749,20 @@ data:extend(
         height = 46
       }
     },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -790,7 +874,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.035
+    rotation_speed = 0.035,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -902,7 +1000,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1014,7 +1126,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1128,7 +1254,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.035
+    rotation_speed = 0.035,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1242,7 +1382,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.035
+    rotation_speed = 0.035,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1356,7 +1510,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.035
+    rotation_speed = 0.035,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1470,7 +1638,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.035
+    rotation_speed = 0.035,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1582,7 +1764,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1694,7 +1890,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1806,7 +2016,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -1918,7 +2142,21 @@ data:extend(
     },
     programmable = true,
 	filter_count = 5,
-    rotation_speed = 0.07
+    rotation_speed = 0.07,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
  }
 )

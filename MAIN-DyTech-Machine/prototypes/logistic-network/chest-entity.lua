@@ -29,7 +29,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -56,7 +57,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -83,7 +85,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -110,7 +113,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -137,7 +141,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -164,7 +169,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -191,7 +197,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -218,7 +225,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -245,7 +253,8 @@ data:extend(
       width = 38,
       height = 32,
       shift = {0.1, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
 }
 )

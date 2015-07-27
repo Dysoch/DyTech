@@ -29,7 +29,8 @@ data:extend(
       width = 78,
       height = 64,
       shift = {0.2, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -60,7 +61,8 @@ data:extend(
       width = 76,
       height = 64,
       shift = {0.2, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -91,7 +93,8 @@ data:extend(
       width = 78,
       height = 64,
       shift = {0.2, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -122,7 +125,8 @@ data:extend(
       width = 78,
       height = 66,
       shift = {0.2, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -146,7 +150,8 @@ data:extend(
       width = 117,
       height = 96,
       shift = {0.3, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -177,7 +182,8 @@ data:extend(
       width = 114,
       height = 96,
       shift = {0.3, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -208,7 +214,8 @@ data:extend(
       width = 117,
       height = 96,
       shift = {0.3, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "logistic-container",
@@ -239,7 +246,8 @@ data:extend(
       width = 116,
       height = 99,
       shift = {0.3, 0}
-    }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "smart-container",
@@ -269,7 +277,21 @@ data:extend(
       width = 124,
       height = 82,
       shift = {0.9, 0}
-    }
+    },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0.7, -0.3},
+        green = {0.7, -0.3}
+      },
+      wire =
+      {
+        red = {0.3, -0.8},
+        green = {0.3, -0.8}
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
   {
     type = "smart-container",
@@ -292,7 +314,21 @@ data:extend(
       width = 186,
       height = 123,
       shift = {1.3, 0}
-    }
+    },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0.7, -0.3},
+        green = {0.7, -0.3}
+      },
+      wire =
+      {
+        red = {0.3, -0.8},
+        green = {0.3, -0.8}
+      }
+    },
+    circuit_wire_max_distance = 7.5
   },
 }
 )

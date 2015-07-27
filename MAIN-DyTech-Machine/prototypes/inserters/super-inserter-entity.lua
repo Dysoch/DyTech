@@ -110,7 +110,21 @@ data:extend(
     },
 	programmable = true,
     filter_count = 5,
-    rotation_speed = 0.21  
+    rotation_speed = 0.21,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
   {
     type = "inserter",
@@ -221,7 +235,21 @@ data:extend(
       }
     },
 	programmable = true,
-    rotation_speed = 0.40  
+    rotation_speed = 0.40,
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      },
+      wire =
+      {
+        red = {0, 0},
+        green = {0, 0}
+      }
+    },
+    circuit_wire_max_distance = 7.5,
   },
 }
 )

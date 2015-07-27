@@ -4,6 +4,8 @@
 [list]
 [*] Features: 
 [list] [*] Changed the way to get metallurgy. Its now more easily accesable in the beginning instead of late game.
+[*] All Chests can now use the circuit network.
+[*] All Smart Inserters can now use the circuit network.
 [/list]
 [*] Bugfixes: 
 [list] [*] 
