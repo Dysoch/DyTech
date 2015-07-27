@@ -31,7 +31,6 @@ function TestMapStart(index)
 	players.insert{name="substation", count=50}
 	players.insert{name="fast-inserter", count=500}
 	players.insert{name="smart-inserter", count=500}
-	players.insert{name="basic-accumulator-mk6", count=50}
 	players.insert{name="basic-transport-belt", count=5000}
 	players.insert{name="basic-transport-belt-to-ground", count=2000}
 	players.insert{name="basic-splitter", count=2000}
@@ -71,6 +70,7 @@ function TestMapStart(index)
 	game.forces.player.technologies["construction-robotics-1"].researched = true
 	game.forces.player.current_research = "construction-robotics-2"
 	game.forces.player.technologies["construction-robotics-2"].researched = true
+	game.forces.player.current_research = "automation"
 	for _,player in pairs(game.players) do
 		player.force.reset_recipes()
 		player.force.reset_technologies()
