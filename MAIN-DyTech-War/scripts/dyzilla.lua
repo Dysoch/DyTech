@@ -1,4 +1,5 @@
 module("Dyzilla", package.seeall)
+require "config"
 
 function Startup()
 global.Dyzilla = {}
@@ -6,6 +7,7 @@ global.Dyzilla.Chunks = 0
 global.Dyzilla.Alive = 0
 global.Dyzilla.Dead = 0
 global.Dyzilla.Max = 0
+global.Dyzilla.Supplies = false
 end
 
 function Easy(event)
@@ -111,4 +113,63 @@ function Extreme(event)
 			end
 		end
 	end
+end
+
+function DeathModeSupplies()
+	for _,player in pairs(game.players) do
+		local chestposition1 = player.surface.find_non_colliding_position("steel-chest", player.position, 1, 1)
+		local chest1 = player.surface.create_entity{name="steel-chest", position=chestposition1, force = game.forces.player}
+		local chestposition2 = player.surface.find_non_colliding_position("steel-chest", player.position, 1, 1)
+		local chest2 = player.surface.create_entity{name="steel-chest", position=chestposition2, force = game.forces.player}
+		chest1.insert{name="small-electric-pole", count=50}
+		chest1.insert{name="substation", count=10}
+		chest1.insert{name="fast-inserter", count=100}
+		chest1.insert{name="smart-inserter", count=100}
+		chest1.insert{name="basic-transport-belt", count=500}
+		chest1.insert{name="basic-transport-belt-to-ground", count=100}
+		chest1.insert{name="basic-splitter", count=100}
+		chest1.insert{name="assembling-machine-2", count=50}
+		chest1.insert{name="blueprint", count=1}
+		chest1.insert{name="logistic-chest-requester", count=25}
+		chest1.insert{name="logistic-chest-passive-provider", count=25}
+		chest1.insert{name="logistic-chest-active-provider", count=25}
+		chest1.insert{name="logistic-chest-storage", count=10}
+		chest1.insert{name="deconstruction-planner", count=1}
+		if remote.interfaces["DyTech-Power"] then
+			chest2.insert{name="large-solar-panel-primary-mk5", count=50}
+			chest2.insert{name="small-solar-panel-primary-mk5", count=50}
+			chest2.insert{name="basic-accumulator-mk6", count=50}
+		else
+			chest2.insert{name="solar-panel", count=250}
+			chest2.insert{name="basic-accumulator", count=250}
+		end
+		if remote.interfaces["DyTech-Machine"] then
+			chest2.insert{name="construction-robot-2", count=100}
+			chest2.insert{name="logistic-robot-2", count=100}
+			chest2.insert{name="repair-pack-3", count=200}
+			chest2.insert{name="roboport-2", count=10}
+		else
+			chest2.insert{name="construction-robot", count=100}
+			chest2.insert{name="logistic-robot", count=100}
+			chest2.insert{name="repair-pack", count=100}
+			chest2.insert{name="roboport", count=20}
+		end
+		if remote.interfaces["DyTech-War"] then
+			chest2.insert{name="laser-turret-sniper-3", count=50}
+			chest2.insert{name="laser-turret-diamond-3", count=50}
+			chest2.insert{name="tungsten-wall", count=500}
+			chest2.insert{name="tungsten-wall-gate", count=50}
+		else
+			chest2.insert{name="laser-turret", count=150}
+			chest2.insert{name="stone-wall", count=500}
+		end
+		game.forces.player.current_research = "construction-robotics"
+		game.forces.player.technologies["construction-robotics"].researched = true
+		game.forces.player.current_research = "construction-robotics-1"
+		game.forces.player.technologies["construction-robotics-1"].researched = true
+		game.forces.player.current_research = "construction-robotics-2"
+		game.forces.player.technologies["construction-robotics-2"].researched = true
+		game.forces.player.current_research = "automation"
+	end
+	global.Dyzilla.Supplies = true
 end

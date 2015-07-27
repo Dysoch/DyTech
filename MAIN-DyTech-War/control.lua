@@ -32,7 +32,12 @@ game.on_load(function()
 end)
 
 game.on_event(defines.events.on_tick, function(event)
-
+	if not global.Dyzilla.Supplies then
+		if Difficulty==5 then
+			game.show_message_dialog{text = {"msg-dyzilla-death-mode"}}
+			Dyzilla.DeathModeSupplies()
+		end
+	end
 end)
 
 game.on_event(defines.events.on_entity_died, function(event)
