@@ -34,8 +34,9 @@ return
       type = "projectile",
       ammo_category = Ammo,
       cooldown = Cooldown,
-      projectile_center = {0, 0.6},
-      projectile_creation_distance = 1.2,
+      projectile_creation_distance = 1.39375,
+      projectile_center = {0.0625, -0.0875},
+      damage_modifier = 2,
       shell_particle = 
       {
         name = "shell-particle",

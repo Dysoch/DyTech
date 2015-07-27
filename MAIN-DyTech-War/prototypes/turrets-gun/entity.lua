@@ -154,7 +154,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Gun_Turret_Attack("bullet", 10, 26),
+    attack_parameters = Gun_Turret_Attack("bullet", 5, 26),
   },
   {
     type = "ammo-turret",
@@ -686,7 +686,7 @@ data:extend(
       }
     },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    attack_parameters = Gun_Turret_Attack("bullet", 10, 26),
+    attack_parameters = Gun_Turret_Attack("bullet", 5, 26),
   },
   {
     type = "ammo-turret",
