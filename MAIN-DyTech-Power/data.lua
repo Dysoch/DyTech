@@ -28,6 +28,7 @@ if Boilers then
 		require("prototypes.boilers.high.high-entity")
 		require("prototypes.boilers.high.high-item")
 		require("prototypes.boilers.high.high-recipe")
+		require("prototypes.boilers.tech.highTech")
 	end
 --[[	if Small_Boilers then
 		require("prototypes.boilers.small.entity")
@@ -59,12 +60,6 @@ if Boilers then
 	elseif Small_Boilers and Normal_Boilers and Large_Boilers then
 		require("prototypes.boilers.tech.small_normal_and_large")
 	end]]
-	if Normal_Boilers and High_Boilers then
---		require("prototypes.boilers.tech.high")
-	else
-		require("prototypes.boilers.tech.highTech")
-		require("prototypes.boilers.tech.high")
-	end
 end
 
 --[[ Accumulators Check ]]--
@@ -141,6 +136,7 @@ if SteamEngines then
 		require("prototypes.steam-engines.high.high-entity")
 		require("prototypes.steam-engines.high.high-item")
 		require("prototypes.steam-engines.high.high-recipe")
+		require("prototypes.steam-engines.tech.highTech")
 	end
 	if Small_SteamEngines then
 		require("prototypes.steam-engines.small.entity")

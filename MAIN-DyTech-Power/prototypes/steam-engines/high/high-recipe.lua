@@ -56,7 +56,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"high-steam-engine-primary", 1},
+      {"high-steam-engine-secondary", 1},
       {"flux-capacitor-1", 2},
       {"frame-2", 1},
       {"rotor-2", 5},
@@ -70,7 +70,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"high-steam-engine-primary", 1},
+      {"high-steam-engine-terciary", 1},
       {"flux-capacitor-1", 2},
       {"frame-2", 1},
       {"rotor-2", 5},
@@ -140,7 +140,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"high-steam-engine-primary-mk3", 1},
+      {"high-steam-engine-secondary-mk3", 1},
       {"flux-capacitor-3", 5},
       {"frame-3", 1},
       {"rotor-3", 5},
@@ -154,7 +154,7 @@ data:extend(
 	enabled = false,
     ingredients =
     {
-      {"high-steam-engine-primary-mk3", 1},
+      {"high-steam-engine-terciary-mk3", 1},
       {"flux-capacitor-3", 5},
       {"frame-3", 1},
       {"rotor-3", 5},
