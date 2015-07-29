@@ -28,14 +28,14 @@ ModularArmor = {
 	GridTier6 = {width = 22, height = 22},
 	GridTier7 = {width = 26, height = 26},
 	GridTier8 = {width = 30, height = 30},
-	Dura1 = 10000,
-	Dura2 = 14000,
-	Dura3 = 19000,
-	Dura4 = 25000,
-	Dura5 = 31000,
-	Dura6 = 39000,
-	Dura7 = 49000,
-	Dura8 = 60000,
+	Dura1 = 15000,
+	Dura2 = 19950,
+	Dura3 = 26533,
+	Dura4 = 35289,
+	Dura5 = 46935,
+	Dura6 = 62423,
+	Dura7 = 83023,
+	Dura8 = 110421,
 }
 
 Capsules = {

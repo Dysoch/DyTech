@@ -11,9 +11,10 @@ Released: ?? 2015
 [*] Increased damage of gun turrets by 2.
 [*] Increased shooting speed of Advanced Gun Turret: 6/sec > 12/sec
 [*] Added 2 new technologies. For Chitin Walls and Sand Walls. Sand Wall Gate is also unlocked with Sand Wall technology (requires Gates to be researched)
+[*] Balanced Power Armors. First one is stronger, while last one has 60% more durability.
 [/list]
 [*] Bugfixes:
-[list] [*] Fixed Capsules not working (hopefully, requires some testing)
+[list] [*] Fixed Capsules not working
 [/list]
 [/list][/spoiler]
 
