@@ -1,7 +1,7 @@
 data:extend(
 {
   {
-    type = "smoke",
+    type = "smoke-with-trigger",
     name = "napalm-cloud-1",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
@@ -53,7 +53,7 @@ data:extend(
     action_frequency = 30
   },
   {
-    type = "smoke",
+    type = "smoke-with-trigger",
     name = "napalm-cloud-2",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
@@ -105,7 +105,7 @@ data:extend(
     action_frequency = 30
   },
   {
-    type = "smoke",
+    type = "smoke-with-trigger",
     name = "napalm-cloud-3",
     flags = {"not-on-map"},
     show_when_smoke_off = true,
