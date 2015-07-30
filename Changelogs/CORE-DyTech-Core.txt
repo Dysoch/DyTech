@@ -5,6 +5,7 @@ Released: ?? 2015
 [list]
 [*] Features:
 [list][*] Added in a Log. This helps us to debug your savegames. This wont effect the game in any way! (this is in all modules from now on!)
+[*] Added in a science pack cheat.
 [/list]
 [*] Balancing:
 [list] [*] 

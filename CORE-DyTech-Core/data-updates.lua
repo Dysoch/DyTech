@@ -57,6 +57,13 @@ if All_Recipes_Unlocked_From_Start then
 	end
 end
 
+if Science_Packs_Last_Long then
+	data.raw["tool"]["science-pack-1"].durability = 500
+	data.raw["tool"]["science-pack-2"].durability = 500
+	data.raw["tool"]["science-pack-3"].durability = 500
+	data.raw["tool"]["alien-science-pack"].durability = 500
+end
+
 if Stacksize_Increase then
 	for k, v in pairs(data.raw.item) do
 		v.stack_size = (v.stack_size*Stacksize_Increase_Factor)

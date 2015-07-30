@@ -25,6 +25,9 @@ Technology_Takes_Less_Time = false
 All_Recipes_Unlocked_From_Start = false
 -- Unlockes all recipes right from the start!
 
+Science_Packs_Last_Long = true
+-- This increase the durability of the science packs. 
+
 Stacksize_Increase = false
 Stacksize_Increase_Factor = 1000
 -- Change this number to change all stacksizes in the game.
