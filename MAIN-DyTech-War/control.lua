@@ -48,7 +48,7 @@ game.on_event(defines.events.on_tick, function(event)
 	if not global.Dyzilla.Supplies then
 		if Difficulty==5 then
 			debug("Dyzilla: active and difficulty at 5")
-			game.show_message_dialog{text = {"msg-dyzilla-death-mode"}}
+			PlayerPrint({"msg-dyzilla-death-mode"})
 			Dyzilla.DeathModeSupplies()
 			debug("Dyzilla: Supplies given")
 		end
