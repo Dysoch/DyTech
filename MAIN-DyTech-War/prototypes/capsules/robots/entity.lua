@@ -34,7 +34,7 @@ data:extend(
       type = "beam",
       ammo_category = "combat-robot-beam",
       cooldown = 20,
-      range = 15,
+      range = 20,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -44,8 +44,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "marauder-beam",
+            max_length = 20,
             duration = 20,
             source_offset = {0.15, -0.5},
           }
@@ -166,7 +166,7 @@ data:extend(
       type = "beam",
       ammo_category = "combat-robot-beam",
       cooldown = 20,
-      range = 15,
+      range = 20,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -176,8 +176,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "marauder-beam",
+            max_length = 20,
             duration = 20,
             source_offset = {0.15, -0.5},
           }
@@ -295,7 +295,7 @@ data:extend(
       type = "beam",
       ammo_category = "combat-robot-beam",
       cooldown = 20,
-      range = 15,
+      range = 40,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -305,8 +305,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "sharpshooter-beam",
+            max_length = 40,
             duration = 20,
             source_offset = {0.15, -0.5},
           }
@@ -427,7 +427,7 @@ data:extend(
       type = "beam",
       ammo_category = "combat-robot-beam",
       cooldown = 20,
-      range = 15,
+      range = 40,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -437,8 +437,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "sharpshooter-beam",
+            max_length = 40,
             duration = 20,
             source_offset = {0.15, -0.5},
           }
@@ -555,8 +555,8 @@ data:extend(
     {
       type = "beam",
       ammo_category = "combat-robot-beam",
-      cooldown = 20,
-      range = 15,
+      cooldown = 5,
+      range = 30,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -566,8 +566,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "frenzy-beam",
+            max_length = 30,
             duration = 20,
             source_offset = {0.15, -0.5},
           }
@@ -687,8 +687,8 @@ data:extend(
     {
       type = "beam",
       ammo_category = "combat-robot-beam",
-      cooldown = 20,
-      range = 15,
+      cooldown = 5,
+      range = 30,
       ammo_type =
       {
         category = "combat-robot-beam",
@@ -698,8 +698,8 @@ data:extend(
           action_delivery =
           {
             type = "beam",
-            beam = "electric-beam",
-            max_length = 15,
+            beam = "frenzy-beam",
+            max_length = 30,
             duration = 20,
             source_offset = {0.15, -0.5},
           }

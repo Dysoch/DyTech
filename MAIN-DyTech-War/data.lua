@@ -72,6 +72,7 @@ end
 
 --[[ Capsules Check ]]--
 if CombatRobots then 
+require("prototypes.capsules.robots.beams")
 require("prototypes.capsules.robots.entity")
 require("prototypes.capsules.robots.item")
 require("prototypes.capsules.robots.projectiles")
