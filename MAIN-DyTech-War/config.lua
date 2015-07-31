@@ -1,9 +1,10 @@
+Config = {} -- DONT TOCUH THIS!
 -- Welcome to the config file of DyTech-War!
 -- Here you can switch any module on or off!
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Difficulty ]]
-Difficulty = 5
+Config.Difficulty = 5
 -- Difficulty 1 = EASY
 -- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
 -- Difficulty 3 = HARD
@@ -16,22 +17,22 @@ Difficulty = 5
 --[[ Enemies ]]--
 -- Here you can disable or enable the enemies.
 -- Base edit means the change in the spawners, to make them stronger!
-EnemiesBaseEdit = true
-Biters = true
-Spitters = true
-Dyzilla_Spawner = true
+Config.EnemiesBaseEdit = true
+Config.Biters = true
+Config.Spitters = true
+Config.Dyzilla_Spawner = true
 -- CAREFULL!!! Dyzilla spawner is incredible HARD, even on easy difficulty!
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
-Ammo = true
-SpecialAmmo = true
-SniperRifle = true
-LaserWeapons = true
-Tanks = true
-Equipment = true
-Armor = true
-Experimental_Feature = false
+Config.Ammo = true
+Config.SpecialAmmo = true
+Config.SniperRifle = true
+Config.LaserWeapons = true
+Config.Tanks = true
+Config.Equipment = true
+Config.Armor = true
+Config.Experimental_Feature = false
 -- NOTE: Sniper Rifle and Laser Weapons REQUIRES Ammo to be enabled!!!!!
 -- NOTE: Tanks REQUIRES Laser Rifle to be enabled!!!!!
 -- NOTE: SpecialAmmo REQUIRES the following to be active: PoisonCapsules, AcidCapsules, NapalmCapsules, RadiationCapsules, SlowdownCapsules, Ammo, GunTurret, SniperRifle!!!!
@@ -39,21 +40,21 @@ Experimental_Feature = false
 
 --[[ Capsules ]]--
 -- Here are all different Capsules:
-CombatRobots = true
-PoisonCapsules = true
-AcidCapsules = true
-NapalmCapsules = true
-RadiationCapsules = true
-SlowdownCapsules = true
-Grenades = true
+Config.CombatRobots = true
+Config.PoisonCapsules = true
+Config.AcidCapsules = true
+Config.NapalmCapsules = true
+Config.RadiationCapsules = true
+Config.SlowdownCapsules = true
+Config.Grenades = true
 
 --[[ Defences ]]--
 -- Here you can find all kinds of defensive items!
-GunTurret = true
-FlameThrowerTurret = true
-LaserTurret = true
-Walls = true
-Gates = true
+Config.GunTurret = true
+Config.FlameThrowerTurret = true
+Config.LaserTurret = true
+Config.Walls = true
+Config.Gates = true
 -- NOTE: Gun Turret REQUIRES Sniper Rifle to be enabled!!!!!
 -- NOTE: Gates REQUIRES Walls to be enabled!!!!!
 
@@ -67,5 +68,5 @@ Queen_Health = 1000 --Default = 1000
 Biter_Modifier = 1.5
 -- Biter Modifier is an option to have Biters have more health then Spitters. Default = 1.5 times the health of the Spitters! (so 50% more!)
 
-Evolution_Reduced = true
+Config.Evolution_Reduced = true
 -- This will halve the evolution factors, meaning you have twice as long till stronger enemies appear. This is leveled by difficulty

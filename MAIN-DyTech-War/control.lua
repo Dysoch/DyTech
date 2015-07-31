@@ -30,7 +30,7 @@ function PlayerPrint(message)
 end
 
 game.on_init(function()
-	if Dyzilla_Spawner then
+	if Config.Dyzilla_Spawner then
 		Dyzilla.Startup()
 		debug("Dyzilla: started up")
 	end
@@ -46,7 +46,7 @@ end)
 
 game.on_event(defines.events.on_tick, function(event)
 	if not global.Dyzilla.Supplies then
-		if Difficulty==5 then
+		if Config.Difficulty==5 then
 			debug("Dyzilla: active and difficulty at 5")
 			PlayerPrint({"msg-dyzilla-death-mode"})
 			Dyzilla.DeathModeSupplies()
@@ -64,18 +64,18 @@ game.on_event(defines.events.on_entity_died, function(event)
 end)
 
 game.on_event(defines.events.on_chunk_generated, function(event)
-	if Dyzilla_Spawner then
+	if Config.Dyzilla_Spawner then
 	if not global.Dyzilla then Dyzilla.Startup() end
 	global.Dyzilla.Chunks = global.Dyzilla.Chunks + 1
-		if Difficulty==1 then 
+		if Config.Difficulty==1 then 
 			Dyzilla.Easy(event)
-		elseif Difficulty==2 then 
+		elseif Config.Difficulty==2 then 
 			Dyzilla.Medium(event)
-		elseif Difficulty==3 then 
+		elseif Config.Difficulty==3 then 
 			Dyzilla.Hard(event)
-		elseif Difficulty==4 then 
+		elseif Config.Difficulty==4 then 
 			Dyzilla.Insane(event)
-		elseif Difficulty==5 then 
+		elseif Config.Difficulty==5 then 
 			Dyzilla.Extreme(event) 
 		end
 	end
@@ -86,5 +86,8 @@ remote.add_interface("DyTech-War",
 	DataDump = function()
 		game.makefile("DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
 		game.makefile("Log/War.txt", serpent.block(global.Log))
+		global.Config = Config
+		game.makefile("Config/War.txt", serpent.block(global.Config))
+		global.Config = {}
 	end,
 })
