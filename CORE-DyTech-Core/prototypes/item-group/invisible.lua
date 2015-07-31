@@ -15,9 +15,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "modular-tools",
+    name = "ruins",
     group = "dytech-invisible",
     order = "2"
+  },
+  {
+    type = "item-subgroup",
+    name = "modular-tools",
+    group = "dytech-invisible",
+    order = "3"
   },
 }
 )
