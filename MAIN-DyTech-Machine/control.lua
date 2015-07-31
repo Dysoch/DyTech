@@ -1,4 +1,5 @@
 require "defines"
+require "config"
 require "scripts/functions"
 
 remote.add_interface("DyTech-Machine",
@@ -12,5 +13,11 @@ remote.add_interface("DyTech-Machine",
 		else
 			Functions.TestMetallurgy(pIndex)
 		end
+	end,
+	
+	DataDump = function()
+		global.Config = Config
+		game.makefile("Config/Machine.txt", serpent.block(global.Config))
+		global.Config = {}		
 	end
 })

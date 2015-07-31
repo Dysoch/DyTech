@@ -244,6 +244,7 @@ local player = game.players[playerIndex]
 		CoreGUI.CreateButton()
 		remote.call("DyTech-Core", "Logger")
 		if remote.interfaces["DyTech-Dynamics"] then remote.call("DyTech-Dynamics", "DataDump") end
+		if remote.interfaces["DyTech-Machine"] then remote.call("DyTech-Machine", "DataDump") end
 		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
 		if remote.interfaces["DyTech-World"] then remote.call("DyTech-World", "Logger") end
 		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Dump-Button")

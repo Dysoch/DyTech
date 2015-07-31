@@ -1,3 +1,4 @@
+Config = {} -- DONT TOCUH THIS!
 -- Welcome to the config file of DyTech-Machine!
 -- Here you can switch any (sub)module on or off!
 -- And change anything!
@@ -15,11 +16,11 @@ RadarMk5ScanDistance = 50 --Default=50
 -- SWITCHES!!!! --
 --[[ Pipe Related Things ]]--
 -- Here are all pipe related stuff, such as pipes, pumps and Pumpjacks.
-Pumpjacks = true
-Pipes = true
-OffshorePumps = true
-SmallPumps = true
-StorageTanks = true
+Config.Pumpjacks = true
+Config.Pipes = true
+Config.OffshorePumps = true
+Config.SmallPumps = true
+Config.StorageTanks = true
 -- NOTE: Small Pumps REQUIRES Offshore Pumps to be enabled!!!!!
 -- NOTE: If Transport Belts is disabled, Pipe mk 4 and 5 are disabled!
 -- NOTE: If you are using DyTech-Power, i advise you to enable Pipes and both Pumps!
@@ -27,59 +28,59 @@ StorageTanks = true
 
 --[[ Modules ]]--
 -- Here is the toggle for the Modules (ingame modules)
-Modules = true
+Config.Modules = true
 
 --[[ Logistic Related Things ]]--
 -- Here are all logistic related stuff, such as robots and inserters.
-Roboports = true
-ConstructionRobots = true
-LogisticRobots = true
-Inserters = true
-SuperInserters = true
-TransportBelts = true
-LargeChests = true
-LargeLogisticChests = true
+Config.Roboports = true
+Config.ConstructionRobots = true
+Config.LogisticRobots = true
+Config.Inserters = true
+Config.SuperInserters = true
+Config.TransportBelts = true
+Config.LargeChests = true
+Config.LargeLogisticChests = true
 -- NOTE: Construction and Logistic Robots REQUIRES Roboports to be enabled!!!!!
 -- NOTE: Super Inserters REQUIRES Inserters to be enabled!!!!!
 -- NOTE: Large Logistic Chests REQUIRES Large Chests to be enabled!!!!!
 
 --[[ Machines ]]--
 -- Here are all machines, be that furnaces or assembling machines!
-AssemblingMachines = true
-MiningDrills = true
-SteelFurnaces = true
-ElectricFurnaces = true
-Radars = true
-Walls = false
-Beacons = true
-Lamps = true
-Oil_Upgrades = true
+Config.AssemblingMachines = true
+Config.MiningDrills = true
+Config.SteelFurnaces = true
+Config.ElectricFurnaces = true
+Config.Radars = true
+Config.Walls = false
+Config.Beacons = true
+Config.Lamps = true
+Config.Oil_Upgrades = true
 -- Oil_Upgrades gives more chemical plants and oil refineries!
 -- NOTE: Electric Furnaces REQUIRES Steel Furnaces to be enabled!!!!!
 
 --[[ Transportation ]]--
 -- Here are all transportation goods, such as Cars or Trains!
-ArmoredCar = true
-ArmoredTrain = true
-HighSpeedTrain = true
+Config.ArmoredCar = true
+Config.ArmoredTrain = true
+Config.HighSpeedTrain = true
 
 --[[ Tools ]]--
 -- These are the tools of the game. There are currently 7!
-Tools = true
+Config.Tools = true
 
 --[[ Metallurgy ]]--
 -- Here is everything related to metallurgy!
-Metallurgy = true --MASTER SWITCH!
-MoltenMetals = true
-Liquid_Crafting_DyTech_Intermediates = true
-Liquid_Crafting_Science_Packs = true
-Liquid_Crafting_Belts = true 
-Liquid_Crafting_Machines = true
-Liquid_Crafting_Furnaces = true
-Liquid_Crafting_Miners = true
-Liquid_Crafting_Tools = true 
-Liquid_Crafting_Circuits = true
-Liquid_Crafting_Ammo = true
-Liquid_Crafting_Wires = true
-Liquid_Crafting_Gears = true
-Liquid_Crafting_Walls = true
+Config.Metallurgy = true --MASTER SWITCH!
+Config.MoltenMetals = true
+Config.Liquid_Crafting_DyTech_Intermediates = true
+Config.Liquid_Crafting_Science_Packs = true
+Config.Liquid_Crafting_Belts = true 
+Config.Liquid_Crafting_Machines = true
+Config.Liquid_Crafting_Furnaces = true
+Config.Liquid_Crafting_Miners = true
+Config.Liquid_Crafting_Tools = true 
+Config.Liquid_Crafting_Circuits = true
+Config.Liquid_Crafting_Ammo = true
+Config.Liquid_Crafting_Wires = true
+Config.Liquid_Crafting_Gears = true
+Config.Liquid_Crafting_Walls = true
