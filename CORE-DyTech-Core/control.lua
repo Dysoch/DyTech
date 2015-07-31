@@ -1,4 +1,5 @@
 require "defines"
+require "config"
 require "scripts/functions"
 require "scripts/gui"
 require "scripts/remote-calls"
@@ -342,6 +343,9 @@ remote.add_interface("DyTech-Core",
 		game.makefile("DataDump/TimeStamp/MinedItems.txt", serpent.block(global.TimeStamp.MinedItems))
 		game.makefile("DataDump/TimeStamp/CraftedItems.txt", serpent.block(global.TimeStamp.CraftedItems))
 		game.makefile("Log/Core.txt", serpent.block(global.Log))
+		global.Config = Config
+		game.makefile("Config/Core.txt", serpent.block(global.Config))
+		global.Config = {}
 	end,
 	
 	TimerIncrease = function(Hour, Minute, Second)

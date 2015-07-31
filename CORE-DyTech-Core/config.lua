@@ -1,34 +1,35 @@
+Config = {} -- DONT TOUCH THIS!!!
 --[[ Base Game Override ]]--
 -- If you want to use DyTech-Intermediates to be used in all base game items
 -- Set it to true (default = true)
-BaseOverride = true
+Config.BaseOverride = true
 
 -- If you want more researches like Bot Speed, Toolbelts, Logistic Slots etc.
-Technologies = true
+Config.Technologies = true
 
 
 --[[ Cheats Toggles ]]--
 -- Here you can switch cheats on.
 -- Keep in mind, this breaks the game!
 
-Infinite_Resources = false
-Resource_Easier_To_Mine = false
-Super_Size_Resources = false
+Config.Infinite_Resources = false
+Config.Resource_Easier_To_Mine = true
+Config.Super_Size_Resources = false
 -- Resource Changes
 
-Technology_Use_Less_Science_Packs = false 
+Config.Technology_Use_Less_Science_Packs = false 
 -- Now takes only 1 lab to research!
 
-Technology_Takes_Less_Time = false 
+Config.Technology_Takes_Less_Time = false 
 -- Takes only 1 second to research!
 
-All_Recipes_Unlocked_From_Start = false
+Config.All_Recipes_Unlocked_From_Start = false
 -- Unlockes all recipes right from the start!
 
-Science_Packs_Last_Long = true
+Config.Science_Packs_Last_Long = true
 -- This increase the durability of the science packs. 
 
-Stacksize_Increase = false
-Stacksize_Increase_Factor = 1000
+Config.Stacksize_Increase = true
+Config.Stacksize_Increase_Factor = 1000
 -- Change this number to change all stacksizes in the game.
 -- All stacksizes will be changed like this: Original Stacksize * Factor

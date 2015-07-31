@@ -81,11 +81,11 @@ require("prototypes.damage-type")
 -- Autoplace Control
 require("prototypes.autoplace-controls")
 
-if BaseOverride then
+if Config.BaseOverride then
 require("prototypes.base-override")
 end
 
-if Technologies then
+if Config.Technologies then
 require("prototypes.researches.player")
 require("prototypes.researches.bots")
 require("prototypes.researches.misc")
