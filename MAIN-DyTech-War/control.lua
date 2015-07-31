@@ -7,20 +7,21 @@ require "scripts/dyzilla"
 debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
-
-function debug(str)
+function debug(str, statement)
 	if debug_master then
 		PlayerPrint(str)
 	end
-	if log_everything then log(str) end
+	if log_everything then log(str, statement) end
 end
-log_everything = true
-function log(str)
+log_everything = true -- keep this true all times! only disable if the game lags. the info it generates is needed by the DyTech Team to debug your savegame if an bug or error happens!
+function log(str, statement)
 local seconds = math.floor(game.tick/60)
 local minutes = math.floor(seconds/60)
 local hours = math.floor(minutes/60)
 	if not global.Log then global.Log = {} end
-	global.Log[hours..":"..minutes..":"..(seconds-(minutes*60))] = str
+	if not statement then
+		global.Log[hours..":"..(minutes-(hours*60))..":"..(seconds-(minutes*60))] = str
+	end
 end
 
 function PlayerPrint(message)
@@ -84,10 +85,8 @@ end)
 remote.add_interface("DyTech-War",
 {  	
 	DataDump = function()
-		game.makefile("DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
-		game.makefile("Log/War.txt", serpent.block(global.Log))
-		global.Config = Config
-		game.makefile("Config/War.txt", serpent.block(global.Config))
-		global.Config = {}
+		game.makefile("DyTech/DataDump/Dyzilla.txt", serpent.block(global.Dyzilla))
+		game.makefile("DyTech/Log/War.txt", serpent.block(global.Log))
+		game.makefile("DyTech/Config/War.txt", serpent.block(Config))
 	end,
 })

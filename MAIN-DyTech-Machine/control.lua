@@ -16,8 +16,6 @@ remote.add_interface("DyTech-Machine",
 	end,
 	
 	DataDump = function()
-		global.Config = Config
-		game.makefile("Config/Machine.txt", serpent.block(global.Config))
-		global.Config = {}		
+		game.makefile("DyTech/Config/Machine.txt", serpent.block(Config))	
 	end
 })

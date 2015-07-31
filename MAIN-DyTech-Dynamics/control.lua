@@ -274,10 +274,10 @@ remote.add_interface("DyTech-Dynamics",
 	end,
 	
 	DataDump = function()
-		game.makefile("DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
-		game.makefile("DataDump/Collectors.txt", serpent.block(global.Collectors))
-		game.makefile("DataDump/Technology.txt", serpent.block(global.Technology))
-		game.makefile("Log/Dynamics.txt", serpent.block(global.Log))
+		game.makefile("DyTech/DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
+		game.makefile("DyTech/DataDump/Collectors.txt", serpent.block(global.Collectors))
+		game.makefile("DyTech/DataDump/Technology.txt", serpent.block(global.Technology))
+		game.makefile("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
 	end,
 	
 	SwitchRS = function()
