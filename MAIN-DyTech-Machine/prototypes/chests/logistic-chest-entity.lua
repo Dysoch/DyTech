@@ -282,13 +282,13 @@ data:extend(
     {
       shadow =
       {
-        red = {0.7, -0.3},
-        green = {0.7, -0.3}
+        red = {2.3, 0.9},
+        green = {2.3, 0.9}
       },
       wire =
       {
-        red = {0.3, -0.8},
-        green = {0.3, -0.8}
+        red = {0.6, -1.2},
+        green = {0.6, -1.2}
       }
     },
     circuit_wire_max_distance = 7.5
@@ -319,13 +319,13 @@ data:extend(
     {
       shadow =
       {
-        red = {0.7, -0.3},
-        green = {0.7, -0.3}
+        red = {3.7, 1.9},
+        green = {3.7, 1.9}
       },
       wire =
       {
-        red = {0.3, -0.8},
-        green = {0.3, -0.8}
+        red = {0.8, -1.8},
+        green = {0.8, -1.8}
       }
     },
     circuit_wire_max_distance = 7.5
