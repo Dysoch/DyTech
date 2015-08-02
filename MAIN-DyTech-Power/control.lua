@@ -13,14 +13,22 @@ require "gui.functions"
 --/c game.player.insert{name="nuclear-reactor",count=1}
 	
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 global.fckyouimenabelingthisanyway = false -- Other switch for debugging. Or something like that.
-
-function debug(str)
+function debug(str, statement)
 	if debug_master then
-		for _,player in pairs(game.players) do
-			player.print(str)
-		end
+		PlayerPrint(str)
+	end
+	if log_everything then log(str, statement) end
+end
+log_everything = true -- keep this true all times! only disable if the game lags. the info it generates is needed by the DyTech Team to debug your savegame if an bug or error happens!
+function log(str, statement)
+local seconds = math.floor(game.tick/60)
+local minutes = math.floor(seconds/60)
+local hours = math.floor(minutes/60)
+	if not global.Log then global.Log = {} end
+	if not statement then
+		global.Log[hours..":"..(minutes-(hours*60))..":"..(seconds-(minutes*60))] = str
 	end
 end
 
@@ -550,7 +558,7 @@ game.on_event(defines.events.on_tick, function(event)
 if global.prioritycheck --[[or global.fckyouimenabelingthisanyway]] then
 	for player_Index, player in ipairs(game.players) do
 		if global.tick[2] == 30 then
-			debug("CheckPlayerIsNearEngine")
+			debug("CheckPlayerIsNearEngine", true)
 			CheckPlayerIsNearEngine(player)
 			global.tick[2] = 0
 		else
@@ -558,12 +566,12 @@ if global.prioritycheck --[[or global.fckyouimenabelingthisanyway]] then
 		end
 	end
 else
-	debug("prioritycheck is false")
+	debug("prioritycheck is false", true)
 	for player_Index, player in ipairs(game.players) do
 		if global.gui[player.name] then
 			CloseGUI(player)
 		else
-			debug("no gui available for "..player.name)
+			debug("no gui available for "..player.name, true)
 		end
 	end
 end
@@ -703,5 +711,7 @@ end
 
 remote.add_interface("DyTech-Power",
 {  	
-	
+	DataDump = function()
+		game.makefile("DyTech/Log/Power.txt", serpent.block(global.Log))
+	end		
 })
