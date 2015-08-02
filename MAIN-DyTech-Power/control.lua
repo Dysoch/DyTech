@@ -14,6 +14,7 @@ require "gui.functions"
 	
 --[[Debug Functions]]--
 debug_master = true -- Master switch for debugging, shows most things!
+global.fckyouimenabelingthisanyway = false -- Other switch for debugging. Or something like that.
 
 function debug(str)
 	if debug_master then
@@ -83,6 +84,17 @@ global.gui = {}
 global.prioritycheck = false
 global.temp = {}
 global.temp.nearEngines = {}
+global.temp.nearEngines.primary = {}
+global.temp.nearEngines.secondary = {}
+global.temp.nearEngines.terciary = {}
+global.isEngine = {}
+global.isEngine.primary = {}
+global.isEngine.secondary = {}
+global.isEngine.terciary = {}
+global.isEngine.primary = false
+global.isEngine.secondary = false
+global.isEngine.terciary = false
+global.steamMk = {}
 
 global.steam = {}
 global.steam[1] = {}
@@ -92,96 +104,123 @@ global.steam[4] = {}
 global.steam[5] = {}
 global.steam[1].primary = {}
 global.steam[1].secondary = {}
-global.steam[1].tertiary = {}
+global.steam[1].terciary = {}
 global.steam[2].primary = {}
 global.steam[2].secondary = {}
-global.steam[2].tertiary = {}
+global.steam[2].terciary = {}
 global.steam[3].primary = {}
 global.steam[3].secondary = {}
-global.steam[3].tertiary = {}
+global.steam[3].terciary = {}
 global.steam[4].primary = {}
 global.steam[4].secondary = {}
-global.steam[4].tertiary = {}
+global.steam[4].terciary = {}
 global.steam[5].primary = {}
 global.steam[5].secondary = {}
-global.steam[5].tertiary = {}
+global.steam[5].terciary = {}
 
 global.steam[1].primary = "steam-engine-primary"
 global.steam[1].secondary = "steam-engine"
-global.steam[1].tertiary = "steam-engine-terciary"
+global.steam[1].terciary = "steam-engine-terciary"
 global.steam[2].primary = "steam-engine-primary-mk2"
 global.steam[2].secondary = "steam-engine-secondary-mk2"
-global.steam[2].tertiary = "steam-engine-terciary-mk2"
+global.steam[2].terciary = "steam-engine-terciary-mk2"
 global.steam[3].primary = "steam-engine-primary-mk3"
 global.steam[3].secondary = "steam-engine-secondary-mk3"
-global.steam[3].tertiary = "steam-engine-terciary-mk3"
+global.steam[3].terciary = "steam-engine-terciary-mk3"
 global.steam[4].primary = "steam-engine-primary-mk4"
 global.steam[4].secondary = "steam-engine-secondary-mk4"
-global.steam[4].tertiary = "steam-engine-terciary-mk4"
+global.steam[4].terciary = "steam-engine-terciary-mk4"
 global.steam[5].primary = "steam-engine-primary-mk5"
 global.steam[5].secondary = "steam-engine-secondary-mk5"
-global.steam[5].tertiary = "steam-engine-terciary-mk5"
+global.steam[5].terciary = "steam-engine-terciary-mk5"
 end)
 
 --[[Steam Engine Code]]--
 
---[[game.on_event(defines.events.on_gui_click, function(event)
+game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	debug("Event fired!")
     if event.element.name == "DyTech-Power-Button" then
         remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
-        GUI.PushParent(player.gui.left)
+ --       GUI.PushParent(player.gui.left)
 		if not global.dytechpowergui then global.dytechpowergui = {} end
-		global.dytechpowergui[player.name] = GUI.PushParent(GUI.Frame("dytech-power-gui", "Dytech Power GUI", GUI.VERTICAL))
-		GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
-		local checkbox = GUI.Checkbox("Switch Priority", priorityswitch)
+--		global.dytechpowergui[player.name] = GUI.PushParent(GUI.Frame("dytech-power-gui", "Dytech Power GUI", GUI.VERTICAL))
+--		GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
+--		local checkbox = GUI.Checkbox("Switch Priority", priorityswitch)
+--		local bbutton = GUI.Button("Back", backbutton)
+
+		player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
+		player.gui.top["DyTechPowerFlow"].add({type="frame", direction="vertical", name="dytechpowergui", caption={"dytech-power-gui"}})
+		adder = player.gui.top["DyTechPowerFlow"]["dytechpowergui"]
+		
+		global.priorityswitchbox = adder.add{type = "checkbox", caption = "Dytech Power Priority Switch Switch", name = "priorityswitch", state = false}
+		global.bbutton = adder.add{type = "button", caption = "Back", name = "backbutton"}
+		
 	elseif event.element.name == "priorityswitch" then
 		if event.element.state == true then
 			global.prioritycheck = true
-		else
+			debug("proritycheck is true")
+		elseif event.element.state == false then
 			global.prioritycheck = false
+			debug("prioritycheck is false")
+		else
+			debug("nope. Just nope. No prioritycheck for you")
 		end
+	elseif event.element.name == "backbutton" then
+		game.player.gui.top["DyTechPowerFlow"].destroy()
+		remote.call("DyTech-Core", "OpenMainGUI", playerIndex)
+	
 	elseif (event.element.name == "primary") then
 		--do primary stuff
 		debug("You clicked: Primary")
 		global.secondarybox.state = false
-		global.tertiarybox.state = false
+		global.terciarybox.state = false
 		
-		if global.temp.nearEngines.primary.valid then
+		if global.isEngine.primary then
 			global.primarybox.state = true
 			debug("what u doing? I'm already activated!")
-		elseif global.temp.nearEngines.secondary.valid then
+			
+		elseif global.isEngine.secondary then
 			local pos = global.temp.nearEngines.secondary.position
-			local name = global.temp.nearEnginges.secondary.name
+			local name = global.temp.nearEngines.secondary.name
+			local dir = global.temp.nearEngines.secondary.direction
 			global.temp.nearEngines.secondary.destroy()
 			
 			for i in pairs(global.steam) do
-				if name == glob.steam[i].secondary then
-					debug("found it: "..glob.steam[i].secondary)
-					local mk = i
+				if name == global.steam[i].secondary then
+					debug("found it: "..global.steam[i].secondary)
+					global.steamMk = i
+					game.makefile("DataDump/igottis.txt", "igottis, "..global.steamMk)
+					break
 				else
-					debug("nope, "..glob.steam[i].secondary)
+					debug("nope, "..global.steam[i].secondary)
 				end
 			end
 			
-			game.create_entity{name = global.steam[mk].secondary, position = pos}
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].primary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
 			
-		elseif global.temp.nearEngines.tertiary.valid then
-			local pos = global.temp.nearEngines.tertiary.position
-			local name = global.temp.nearEnginges.tertiary.name
-			global.temp.nearEngines.tertiary.destroy()
+		elseif global.isEngine.terciary then
+			local pos = global.temp.nearEngines.terciary.position
+			local name = global.temp.nearEngines.terciary.name
+			local dir = global.temp.nearEngines.terciary.direction
+			global.temp.nearEngines.terciary.destroy()
 			
 			for i in pairs(global.steam) do
-				if name == glob.steam[i].tertiary then
-					debug("found it: "..glob.steam[i].tertiary)
-					local mk = i
+				if name == global.steam[i].terciary then
+					debug("found it: "..global.steam[i].terciary)
+					global.steamMk = i
+					break
 				else
-					debug("nope, "..glob.steam[i].tertiary)
+					debug("nope, "..global.steam[i].terciary)
 				end
 			end
 			
-			game.create_entity{name = global.steam[mk].tertiary, position = pos}
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].primary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
 		else
 			debug("I have no fucking idea")
 		end
@@ -189,14 +228,111 @@ local player = game.players[playerIndex]
 		--do secondary stuff
 		debug("You clicked: Secondary")
 		global.primarybox.state = false
-		global.tertiarybox.state = false
-	elseif event.element.name == "tertiary" then
-		--do tertiary stuff
+		global.terciarybox.state = false
+		
+		if global.isEngine.secondary then
+			global.primarybox.state = true
+			debug("what u doing? I'm already activated!")
+			
+		elseif global.isEngine.primary then
+			local pos = global.temp.nearEngines.primary.position
+			local name = global.temp.nearEngines.primary.name
+			local dir = global.temp.nearEngines.primary.direction
+			global.temp.nearEngines.primary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == global.steam[i].primary then
+					debug("found it: "..global.steam[i].primary)
+					global.steamMk = i
+					game.makefile("DataDump/igottis.txt", "igottis, "..global.steamMk)
+					break
+				else
+					debug("nope, "..global.steam[i].primary)
+				end
+			end
+			
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].secondary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
+			
+		elseif global.isEngine.terciary then
+			local pos = global.temp.nearEngines.terciary.position
+			local name = global.temp.nearEngines.terciary.name
+			local dir = global.temp.nearEngines.terciary.direction
+			global.temp.nearEngines.terciary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == global.steam[i].terciary then
+					debug("found it: "..global.steam[i].terciary)
+					global.steamMk = i
+					break
+				else
+					debug("nope, "..global.steam[i].terciary)
+				end
+			end
+			
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].secondary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
+		else
+			debug("I have no fucking idea 2.0")
+		end
+		
+	elseif event.element.name == "terciary" then
+		--do terciary stuff
 		debug("You clicked: Teritary")
 		global.primarybox.state = false
 		global.secondarybox.state = false
+		
+		if global.isEngine.terciary then
+			global.primarybox.state = true
+			debug("what u doing? I'm already activated!")
+		
+		elseif global.isEngine.primary then
+			local pos = global.temp.nearEngines.primary.position
+			local name = global.temp.nearEngines.primary.name
+			local dir = global.temp.nearEngines.primary.direction
+			global.temp.nearEngines.primary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == global.steam[i].primary then
+					debug("found it: "..global.steam[i].primary)
+					global.steamMk = i
+					break
+				else
+					debug("nope, "..global.steam[i].primary)
+				end
+			end
+			
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].terciary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
+		
+		elseif global.isEngine.secondary then
+			local pos = global.temp.nearEngines.secondary.position
+			local name = global.temp.nearEngines.secondary.name
+			local dir = global.temp.nearEngines.secondary.direction
+			global.temp.nearEngines.secondary.destroy()
+			
+			for i in pairs(global.steam) do
+				if name == global.steam[i].secondary then
+					debug("found it: "..global.steam[i].secondary)
+					global.steamMk = i
+					game.makefile("DataDump/igottis.txt", "igottis, "..global.steamMk)
+					break
+				else
+					debug("nope, "..global.steam[i].secondary)
+				end
+			end
+			
+			game.get_surface(1).create_entity{name = global.steam[global.steamMk].terciary, position = pos, force=game.player.force, direction = dir}
+			CloseGUI(player)
+			ResetEngines(player)
+		else
+			debug("I have no fucking idea 3.0")
+		end
 	end
-end)]]--
+end)
 
 
 function CheckPlayerIsNearEngine(player)
@@ -218,6 +354,8 @@ local nearbyEngine = global.nearby_engine[player.name]
 		if #global.nearEngines.primary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.primary[1]
 			global.temp.nearEngines.primary = global.nearEngines.primary[1]
+			global.isEngine = {}
+			global.isEngine.primary = true
 			if not global.gui[player.name] then 
 				OpenGUI(player, "primary")
 				--global.gui[player.name] = true
@@ -232,6 +370,9 @@ local nearbyEngine = global.nearby_engine[player.name]
 		global.nearEngines.secondary = player.surface.find_entities_filtered{area = searchArea2, name = global.steam[i].secondary}
 		if #global.nearEngines.secondary > 0 then
 			global.nearby_engine[player.name] = global.nearEngines.secondary[1]
+			global.temp.nearEngines.secondary = global.nearEngines.secondary[1]
+			global.isEngine = {}
+			global.isEngine.secondary = true
 			if not global.gui[player.name] then 
 				OpenGUI(player, "secondary")
 				--global.gui[player.name] = true
@@ -241,15 +382,18 @@ local nearbyEngine = global.nearby_engine[player.name]
 			end
 		end
 
-		--tertiary engine
+		--terciary engine
 		local searchArea3 = SquareArea(player.position, global.gui_activation_distance)
-		global.nearEngines.tertiary = player.surface.find_entities_filtered{area = searchArea3, name = global.steam[i].tertiary}
-		if #global.nearEngines.tertiary > 0 then
-			global.nearby_engine[player.name] = global.nearEngines.tertiary[1]
+		global.nearEngines.terciary = player.surface.find_entities_filtered{area = searchArea3, name = global.steam[i].terciary}
+		if #global.nearEngines.terciary > 0 then
+			global.nearby_engine[player.name] = global.nearEngines.terciary[1]
+			global.temp.nearEngines.terciary = global.nearEngines.terciary[1]
+			global.isEngine = {}
+			global.isEngine.terciary = true
 			if not global.gui[player.name] then 
-				OpenGUI(player, "tertiary")
+				OpenGUI(player, "terciary")
 				--global.gui[player.name] = true
-				debug("Opening GUI, tertiary")
+				debug("Opening GUI, terciary")
 			else
 				debug("nope, no global.gui for you!")
 			end
@@ -262,27 +406,28 @@ end
 
 function OpenGUI(player, output)
 
-	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerFlow"})
-	player.gui.top["DyTechPowerFlow"].add({type="frame", direction="vertical", name="steamengine_gui", caption={"steamengine-gui"}})
-	adder = player.gui.top["DyTechPowerFlow"]["steamengine_gui"]
+	player.gui.top.add({type="flow", direction="vertical", name="DyTechPowerSteamFlow"})
+	player.gui.top["DyTechPowerSteamFlow"].add({type="frame", direction="vertical", name="steamengine_gui", caption={"steamengine-gui"}})
+	steamadder = player.gui.top["DyTechPowerSteamFlow"]["steamengine_gui"]
+	global.gui[player.name] = true
 	
 --[[	GUI.PushParent(player.gui.left)
 	global.gui[player.name] = GUI.PushParent(GUI.Frame("steamengine_gui", "Steam Engine Control", GUI.VERTICAL))
 	GUI.PushParent(GUI.Flow("main_buttons", GUI.VERTICAL))
 	global.primarybox = GUI.Checkbox("Primary", primarytoggle)
 	global.secondarybox = GUI.Checkbox("Secondary", secondarytoggle)
-	global.tertiarybox = GUI.Checkbox("Tertiary", tertiarytoggle)]]
+	global.terciarybox = GUI.Checkbox("terciary", terciarytoggle)]]
 
-	global.primarybox = adder.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
-	global.secondarybox = adder.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
-	global.tertiarybox = adder.add{type = "checkbox", caption = "Tertiary", name = "tertiary", state = false}
+	global.primarybox = steamadder.add{type = "checkbox", caption = "Primary", name = "primary", state = false}
+	global.secondarybox = steamadder.add{type = "checkbox", caption = "Secondary", name = "secondary", state = false}
+	global.terciarybox = steamadder.add{type = "checkbox", caption = "terciary", name = "terciary", state = false}
 	
 	if output == "primary" then
 		global.primarybox.state = true
 	elseif output == "secondary" then
 		global.secondarybox.state = true
-	elseif output == "tertiary" then
-		global.tertiarybox.state = true
+	elseif output == "terciary" then
+		global.terciarybox.state = true
 	else
 		return
 	end
@@ -291,10 +436,11 @@ end
 
 function CloseGUI(player)
 	debug("closed the gui (somewhat)")
-	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"] and game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
-		game.players[PlayerIndex].gui.top["DyTechPowerFlow"].destroy()
+--	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
+--		game.players[PlayerIndex].gui.top["DyTechPowerFlow"].destroy()
+		game.player.gui.top["DyTechPowerSteamFlow"].destroy()
 		global.gui[player.name] = nil
-	end
+--	end
 	
 --[[	if global.gui[player.name] then
 		global.gui[player.name].destroy()
@@ -302,6 +448,19 @@ function CloseGUI(player)
 	end]]
 end
 
+function ResetEngines(player)
+global.isEngine.primary = false
+global.isEngine.secondary = false
+global.isEngine.terciary = false
+global.steamMk = nil
+global.nearEngines.primary = nil
+global.nearEngines.secondary = nil
+global.nearEngines.terciary = nil
+global.temp.nearEngines.primary = nil
+global.temp.nearEngines.secondary = nil
+global.temp.nearEngines.terciary = nil
+global.nearby_engine[player.name] = nil
+end
 
 --[[Reactor Code]]--
 
@@ -388,20 +547,26 @@ end)
 
 game.on_event(defines.events.on_tick, function(event)
 --Steam Engine code:
-
---[[for player_Index, player in ipairs(game.players) do
-	if global.nearbyEngines and not global.nearEngines.valid then
-		--CloseGUI(player)
-		debug("CloseGUI")
-	end
-	if global.tick[2] == 300 then
+if global.prioritycheck --[[or global.fckyouimenabelingthisanyway]] then
+	for player_Index, player in ipairs(game.players) do
+		if global.tick[2] == 30 then
 			debug("CheckPlayerIsNearEngine")
-		CheckPlayerIsNearEngine(player)
-		global.tick[2] = 0
-	else
-		global.tick[2] = global.tick[2] + 1
+			CheckPlayerIsNearEngine(player)
+			global.tick[2] = 0
+		else
+			global.tick[2] = global.tick[2] + 1
+		end
 	end
-end]]
+else
+	debug("prioritycheck is false")
+	for player_Index, player in ipairs(game.players) do
+		if global.gui[player.name] then
+			CloseGUI(player)
+		else
+			debug("no gui available for "..player.name)
+		end
+	end
+end
 
 --Nuclear reactor code:
 
@@ -536,7 +701,7 @@ end
 --Don't mind me:
 --/c game.player.insert{name="nuclear-reactor",count=1}
 
---[[remote.add_interface("DyTech-Power",
+remote.add_interface("DyTech-Power",
 {  	
 	
-})]]
+})
