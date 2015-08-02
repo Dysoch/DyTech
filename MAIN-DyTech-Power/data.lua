@@ -35,17 +35,17 @@ if Boilers then
 		require("prototypes.boilers.small.item")
 		require("prototypes.boilers.small.recipe")
 	end]]
---[[	if Normal_Boilers then
+	if Normal_Boilers then
 		require("prototypes.boilers.normal.entity")
 		require("prototypes.boilers.normal.item")
 		require("prototypes.boilers.normal.recipe")
-	end]]
+	end
 --[[	if Large_Boilers then
 		require("prototypes.boilers.large.entity")
 		require("prototypes.boilers.large.item")
 		require("prototypes.boilers.large.recipe")
 	end]]
---[[	if Small_Boilers and not Normal_Boilers and not Large_Boilers then
+	if Small_Boilers and not Normal_Boilers and not Large_Boilers then
 		require("prototypes.boilers.tech.small")
 	elseif Normal_Boilers and not Small_Boilers and not Large_Boilers then
 		require("prototypes.boilers.tech.normal")
@@ -59,7 +59,7 @@ if Boilers then
 		require("prototypes.boilers.tech.normal_and_large")
 	elseif Small_Boilers and Normal_Boilers and Large_Boilers then
 		require("prototypes.boilers.tech.small_normal_and_large")
-	end]]
+	end
 end
 
 --[[ Accumulators Check ]]--
