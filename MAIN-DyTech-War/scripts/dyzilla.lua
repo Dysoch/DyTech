@@ -21,7 +21,11 @@ function Easy(event)
 		local PosY = event.area.left_top.y+math.random(32)
 			for _,player in pairs(game.players) do
 				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					if remote.interfaces["DyTech-World"] then
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					else
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.dyzilla}
+					end
 					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
 					PlayerPrint("Dyzilla Spawner has been FOUND!")
 					debug("Dyzilla: New spawner spawned in, total alive: "..global.Dyzilla.Alive)
@@ -42,7 +46,11 @@ function Medium(event)
 		local PosY = event.area.left_top.y+math.random(32)
 			for _,player in pairs(game.players) do
 				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					if remote.interfaces["DyTech-World"] then
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					else
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.dyzilla}
+					end
 					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
 					PlayerPrint("Dyzilla Spawner has been FOUND!")
 					debug("Dyzilla: New spawner spawned in, total alive: "..global.Dyzilla.Alive)
@@ -63,7 +71,11 @@ function Hard(event)
 		local PosY = event.area.left_top.y+math.random(32)
 			for _,player in pairs(game.players) do
 				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					if remote.interfaces["DyTech-World"] then
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					else
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.dyzilla}
+					end
 					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
 					PlayerPrint("Dyzilla Spawner has been FOUND!")
 					debug("Dyzilla: New spawner spawned in, total alive: "..global.Dyzilla.Alive)
@@ -84,7 +96,11 @@ function Insane(event)
 		local PosY = event.area.left_top.y+math.random(32)
 			for _,player in pairs(game.players) do
 				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					if remote.interfaces["DyTech-World"] then
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					else
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.dyzilla}
+					end
 					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
 					PlayerPrint("Dyzilla Spawner has been FOUND!")
 					debug("Dyzilla: New spawner spawned in, total alive: "..global.Dyzilla.Alive)
@@ -105,7 +121,11 @@ function Extreme(event)
 		local PosY = event.area.left_top.y+math.random(32)
 			for _,player in pairs(game.players) do
 				if player.surface.can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
-					player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					if remote.interfaces["DyTech-World"] then
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.enemy}
+					else
+						player.surface.create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.dyzilla}
+					end
 					global.Dyzilla.Alive = global.Dyzilla.Alive + 1
 					PlayerPrint("Dyzilla Spawner has been FOUND!")
 					debug("Dyzilla: New spawner spawned in, total alive: "..global.Dyzilla.Alive)

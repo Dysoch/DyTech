@@ -31,6 +31,7 @@ function PlayerPrint(message)
 end
 
 game.on_init(function()
+	game.create_force("dyzilla")
 	if Config.Dyzilla_Spawner then
 		Dyzilla.Startup()
 		debug("Dyzilla: started up")

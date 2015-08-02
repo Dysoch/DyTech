@@ -5,6 +5,7 @@ Released: ?? 2015
 [list]
 [*] Features:
 [list] [*] Added in personal Roboports (2)
+[*] Dyzilla now has its own force (when DyTech-World is not installed) it will attack everything!
 [/list]
 [*] Balancing:
 [list] [*] Added Military 3 as requirement for DyTech turrets.
