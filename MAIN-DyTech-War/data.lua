@@ -172,7 +172,7 @@ require("prototypes.armor.tech")
 end
 
 --[[ Sniper Turret Check ]]--
-if Config.GunTurret and Config.SniperRifle and Ammo then 
+if Config.GunTurret and Config.SniperRifle and Config.Ammo then 
 require("prototypes.turrets-gun.entity")
 require("prototypes.turrets-gun.item")
 require("prototypes.turrets-gun.recipe")
