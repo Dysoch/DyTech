@@ -3,7 +3,7 @@ require "defines"
 
 function CreateButton()
 	for _,player in pairs(game.players) do
-		if not player.gui.top["DyTech-Button"] then
+		if not player.gui.top["DyTech-Button"] and not player.gui.top["mainDyTechFlow"] then
 			player.gui.top.add({type="button", name="DyTech-Button", caption={"dytech-button"}})
 		end
 	end
