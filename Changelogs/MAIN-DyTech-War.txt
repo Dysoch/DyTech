@@ -14,6 +14,7 @@ Released: ?? 2015
 [*] Added 2 new technologies. For Chitin Walls and Sand Walls. Sand Wall Gate is also unlocked with Sand Wall technology (requires Gates to be researched)
 [*] Balanced Power Armors. First one is stronger, while last one has 60% more durability.
 [*] Rebalanced the Robots. They have their own beams now.
+[*] Biters and Spitters are no longer at war with each other!
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed Capsules not working

@@ -4,9 +4,7 @@ data:extend(
     type = "projectile",
     name = "berserker-projectile",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.005,
-    direction_only = true,
     action =
     {
       type = "direct",
@@ -56,9 +54,7 @@ data:extend(
     type = "projectile",
     name = "elder-projectile",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.005,
-    direction_only = true,
     action =
     {
       type = "direct",
@@ -99,9 +95,7 @@ data:extend(
     type = "projectile",
     name = "king-projectile",
     flags = {"not-on-map"},
-    collision_box = {{-0.05, -1}, {0.05, 1}},
     acceleration = 0.15,
-    direction_only = true,
     action =
     {
       type = "direct",
