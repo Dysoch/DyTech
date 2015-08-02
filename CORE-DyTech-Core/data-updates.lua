@@ -74,10 +74,13 @@ if Config.Stacksize_Increase then
 	for k, v in pairs(data.raw.gun) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
 	end
+	for k, v in pairs(data.raw["repair-tool"]) do
+		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+	end
 	for k, v in pairs(data.raw["mining-tool"]) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
 	end
-	for k, v in pairs(data.raw["repair-tool"]) do
+	for k, v in pairs(data.raw.tool) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
 	end
 	for k, v in pairs(data.raw["capsule"]) do
