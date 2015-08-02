@@ -77,6 +77,7 @@ data:extend(
       sound = { filename = "__base__/sound/pumpjack.ogg" },
       apparent_volume = 1.5,
     },
+    fast_replaceable_group = "pumpjack"
   },
   {
     type = "mining-drill",
@@ -155,6 +156,7 @@ data:extend(
       sound = { filename = "__base__/sound/pumpjack.ogg" },
       apparent_volume = 1.5,
     },
+    fast_replaceable_group = "pumpjack"
   },
   {
     type = "mining-drill",
@@ -233,6 +235,7 @@ data:extend(
       sound = { filename = "__base__/sound/pumpjack.ogg" },
       apparent_volume = 1.5,
     },
+    fast_replaceable_group = "pumpjack"
   },
   {
     type = "mining-drill",
@@ -311,6 +314,7 @@ data:extend(
       sound = { filename = "__base__/sound/pumpjack.ogg" },
       apparent_volume = 1.5,
     },
+    fast_replaceable_group = "pumpjack"
   },
 }
 )
