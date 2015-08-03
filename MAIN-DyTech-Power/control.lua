@@ -578,7 +578,7 @@ end
 
 --Nuclear reactor code:
 
-if debug_master and Nuclear_Reactors then
+if debug_master and Config.Nuclear_Reactors then
 	if global.tick[1] == 300 then
 		debug("moveFuel")
 		moveFuel()
@@ -590,7 +590,7 @@ if debug_master and Nuclear_Reactors then
 	else
 		global.tick[1] = global.tick[1] + 1
 	end
-elseif Nuclear_Reactors then
+elseif Config.Nuclear_Reactors then
 	if global.tick[1] == 30 then
 		moveFuel()
 	end
@@ -713,5 +713,6 @@ remote.add_interface("DyTech-Power",
 {  	
 	DataDump = function()
 		game.makefile("DyTech/Log/Power.txt", serpent.block(global.Log))
+		game.makefile("DyTech/Config/Power.txt", serpent.block(Config))
 	end		
 })
