@@ -7,6 +7,7 @@ Released: ?? 2015
 [list][*] Added in a Log. This helps us to debug your savegames. This wont effect the game in any way! (this is in all modules from now on!)
 [*] Added in a science pack cheat.
 [*] Transport Belts now have a stacksize of 100 (instead of 50)
+[*] Added more intermediates to the productivity module usage list.
 [/list]
 [*] Balancing:
 [list] [*] 
