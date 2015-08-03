@@ -27,12 +27,17 @@ end
 
 function World_Call()
 	if remote.interfaces["DyTech-World"] then
-		remote.call("DyTech-World", "Loot_Table_Insert", "sand")
-		remote.call("DyTech-World", "Loot_Table_Insert", "rubber-seed")
-		remote.call("DyTech-World", "Loot_Table_Insert", "sulfur-seed")
-		remote.call("DyTech-World", "Loot_Table_Insert", "resin")
-		remote.call("DyTech-World", "Loot_Table_Insert", "sulfur-wood")
+	global.Normal_Loot = {"sand","rubber-seed","sulfur-seed","resin","sulfur-wood","crystal","raw-ruby","raw-emerald","raw-sapphire","raw-topaz","raw-diamond"}
+	global.Special_Loot = {"cut-ruby","cut-emerald","cut-sapphire","cut-topaz","cut-diamond","compressed-ruby","compressed-emerald","compressed-sapphire","compressed-topaz","compressed-diamond"}
+		for _,name in pairs(global.Normal_Loot) do
+			remote.call("DyTech-World", "Loot_Table_Insert", name)
+		end
+		for _,name in pairs(global.Special_Loot) do
+			remote.call("DyTech-World", "Special_Loot_Table_Insert", name)
+		end
 	end
+	global.Normal_Loot = {}
+	global.Special_Loot = {}
 end
 
 function TechLogger(statement, name)
