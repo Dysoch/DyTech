@@ -18,6 +18,7 @@ Released: ?? 2015
 [list] [*] Fixed bug with placing a seed (trees)
 [*] Fixed Logger lua error.
 [*] Fixed bug with growing seeds without treefarm-lite.
+[*] Fixed Productivity Modules not working with DyTech Intermediates.
 [/list]
 [/list][/spoiler]
 
