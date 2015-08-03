@@ -25,6 +25,16 @@ function Startup()
 	if not global.TimeStamp.RobotBuildEntity then global.TimeStamp.RobotBuildEntity = {} end
 end
 
+function World_Call()
+	if remote.interfaces["DyTech-World"] then
+		remote.call("DyTech-World", "Loot_Table_Insert", "sand")
+		remote.call("DyTech-World", "Loot_Table_Insert", "rubber-seed")
+		remote.call("DyTech-World", "Loot_Table_Insert", "sulfur-seed")
+		remote.call("DyTech-World", "Loot_Table_Insert", "resin")
+		remote.call("DyTech-World", "Loot_Table_Insert", "sulfur-wood")
+	end
+end
+
 function TechLogger(statement, name)
 	if not global.Logger then global.Logger = {} end
 	if not global.Logger.Technology then global.Logger.Technology = {} end

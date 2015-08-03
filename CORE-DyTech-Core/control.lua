@@ -53,6 +53,7 @@ game.on_init(function()
 		remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
 	end
 	fs.Startup()
+	fs.World_Call()
 end)
 
 game.on_save(function()
