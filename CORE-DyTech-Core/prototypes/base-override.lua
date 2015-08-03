@@ -50,6 +50,9 @@ data.raw["item"]["coal"].stack_size = 200
 data.raw["item"]["stone"].stack_size = 200
 data.raw["item"]["processing-unit"].stack_size = 200
 data.raw["item"]["battery"].stack_size = 200
+data.raw["item"]["basic-transport-belt"].stack_size = 100
+data.raw["item"]["fast-transport-belt"].stack_size = 100
+data.raw["item"]["express-transport-belt"].stack_size = 100
 
 --[[ Recipes ]]--
 ChangeRecipe("steam-engine", "iron-gear-wheel", "stone-gear-wheel", 5)

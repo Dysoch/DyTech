@@ -6,6 +6,7 @@ Released: ?? 2015
 [*] Features:
 [list][*] Added in a Log. This helps us to debug your savegames. This wont effect the game in any way! (this is in all modules from now on!)
 [*] Added in a science pack cheat.
+[*] Transport Belts now have a stacksize of 100 (instead of 50)
 [/list]
 [*] Balancing:
 [list] [*] 

@@ -8,7 +8,7 @@ data:extend(
     subgroup = "dytech-machines-belts",
     order = "a[transport-belt]-d[super-transport-belt]",
     place_result = "super-transport-belt",
-    stack_size = 50
+    stack_size = 100
   },
   {
     type = "item",
@@ -18,7 +18,7 @@ data:extend(
     subgroup = "dytech-machines-belts",
     order = "a[transport-belt]-e[extreme-transport-belt]",
     place_result = "extreme-transport-belt",
-    stack_size = 50
+    stack_size = 100
   },
   {
     type = "item",
