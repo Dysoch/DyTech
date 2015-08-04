@@ -10,6 +10,12 @@ table.insert(data.raw["technology"]["bullet-speed-3"].effects,{type = "gun-speed
 table.insert(data.raw["technology"]["bullet-speed-4"].effects,{type = "gun-speed",ammo_category = "sniper-ammo",modifier = "0.3"})
 table.insert(data.raw["technology"]["bullet-speed-5"].effects,{type = "gun-speed",ammo_category = "sniper-ammo",modifier = "0.3"})
 table.insert(data.raw["technology"]["bullet-speed-6"].effects,{type = "gun-speed",ammo_category = "sniper-ammo",modifier = "0.3"})
+data.raw["technology"]["military-2"].unit.count = 50
+data.raw["technology"]["military-2"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2", 1}}
+data.raw["technology"]["military-3"].unit.count = 150
+data.raw["technology"]["military-3"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2", 1}}
+data.raw["technology"]["military-4"].unit.count = 200
+data.raw["technology"]["military-4"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2", 1}}
 
 data:extend(
 {
@@ -35,7 +41,7 @@ data:extend(
     prerequisites = {"military-4", "zinc-processing", "tin-processing", "lead-processing", "tungsten-processing", "cobalt-processing", "advanced-electronics"},
     unit =
     {
-      count = 150,
+      count = 300,
       ingredients =
       {
 	    {"science-pack-1", 1}, 

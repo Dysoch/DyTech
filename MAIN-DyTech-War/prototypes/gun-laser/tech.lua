@@ -26,7 +26,7 @@ data:extend(
     prerequisites = {"military-4", "battery", "laser", "ardite-processing", "gold-processing", "tin-processing"},
     unit =
     {
-      count = 450,
+      count = 500,
       ingredients =
       {
 	    {"science-pack-1", 1}, 
