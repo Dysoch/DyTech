@@ -47,12 +47,11 @@ data:extend(
     {
       {type="item", name="coal", amount=5},
 	  {type="fluid", name="molten-iron", amount=5},
-      {type="item", name="mold-plate", amount=1},
+      {type="item", name="mold-plate", amount=0},
     },
     results =
 	{
       {type="item", name="steel-plate", amount=1},
-      {type="item", name="mold-plate", amount=1},
     },
   },
 }

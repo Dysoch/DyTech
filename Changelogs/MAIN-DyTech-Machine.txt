@@ -12,6 +12,7 @@
 [/list]
 [*] Bugfixes: 
 [list] [*] Changed DyTech Inserter names to be more clean what they do.
+[*] Fixed recipe for making Steel in metallurgy. (still used the mold, will do that no longer)
 [/list]
 [*] Balancing: 
 [list] [*] Balanced recipes of the Blast Furnaces.
