@@ -7,7 +7,7 @@ data:extend(
     effects = {
       {
         type = "logistic-robot-speed",
-        modifier = "0.65"
+        modifier = "0.75"
       }
     },
     prerequisites = {
