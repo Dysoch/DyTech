@@ -8,6 +8,7 @@ data:extend(
     ingredients =
     {
       {"poison-capsule", 1},
+      {"flame-thrower-ammo", 5},
     },
     result = "napalm-capsule-1"
   },
@@ -19,6 +20,7 @@ data:extend(
     ingredients =
     {
       {"napalm-capsule-1", 1},
+      {"flame-thrower-ammo", 5},
     },
     result = "napalm-capsule-2"
   },
@@ -30,6 +32,7 @@ data:extend(
     ingredients =
     {
       {"napalm-capsule-2", 1},
+      {"flame-thrower-ammo", 5},
     },
     result = "napalm-capsule-3"
   },

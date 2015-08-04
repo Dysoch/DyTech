@@ -7,7 +7,7 @@ data:extend(
     energy_required = 11,
     ingredients =
     {
-      {"poison-capsule", 1},
+      {"napalm-capsule", 5},
     },
     result = "firestorm-capsule-1"
   },
@@ -19,6 +19,7 @@ data:extend(
     ingredients =
     {
       {"firestorm-capsule-1", 1},
+      {"napalm-capsule-1", 5},
     },
     result = "firestorm-capsule-2"
   },
@@ -30,6 +31,7 @@ data:extend(
     ingredients =
     {
       {"firestorm-capsule-2", 1},
+      {"napalm-capsule-2", 5},
     },
     result = "firestorm-capsule-3"
   },

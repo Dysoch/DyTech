@@ -7,7 +7,8 @@ data:extend(
     energy_required = 11,
     ingredients =
     {
-      {"poison-capsule", 1},
+      {"poison-capsule", 4},
+      {"acid-capsule", 4},
     },
     result = "radiation-capsule-1"
   },
@@ -19,6 +20,8 @@ data:extend(
     ingredients =
     {
       {"radiation-capsule-1", 1},
+      {"poison-capsule-2", 4},
+      {"acid-capsule-2", 4},
     },
     result = "radiation-capsule-2"
   },
@@ -30,6 +33,8 @@ data:extend(
     ingredients =
     {
       {"radiation-capsule-2", 1},
+      {"poison-capsule-2", 4},
+      {"acid-capsule-2", 4},
     },
     result = "radiation-capsule-3"
   },

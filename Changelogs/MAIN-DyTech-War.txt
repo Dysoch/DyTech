@@ -15,6 +15,10 @@ Released: ?? 2015
 [*] Balanced Power Armors. First one is stronger, while last one has 60% more durability.
 [*] Rebalanced the Robots. They have their own beams now.
 [*] Biters and Spitters are no longer at war with each other!
+[*] Balanced the recipes for all the Capsules.
+[/list]
+[*] Changes:
+[list] [*] Radiation Capsules now require Acid and Poison Capsules to be active!
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed Capsules not working

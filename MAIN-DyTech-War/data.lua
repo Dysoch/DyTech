@@ -117,7 +117,7 @@ require("prototypes.capsules.firestorm.recipe")
 require("prototypes.capsules.firestorm.tech")
 end
 
-if Config.RadiationCapsules then 
+if Config.RadiationCapsules and Config.AcidCapsules and Config.PoisonCapsules then 
 require("prototypes.capsules.radiation.entity")
 require("prototypes.capsules.radiation.item")
 require("prototypes.capsules.radiation.projectiles")
