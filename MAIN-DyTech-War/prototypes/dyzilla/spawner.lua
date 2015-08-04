@@ -60,8 +60,9 @@ data:extend(
     result_units = (function()
                     local res = {}
 						res[1] = {"dyzilla-unit-1", {{0.3, 0.0}, {0.4, 1.0}}}
-						--res[2] = {"medium-biter", {{0.3, 0.0}, {0.6, 0.3}}}
-						--res[3] = {"big-biter", {{0.6, 0.0}, {1.0, 0.4}}}
+						res[2] = {"dyzilla-unit-2", {{0, 0.4}, {0.3, 1.0}}}
+						res[3] = {"dyzilla-unit-3", {{0, 0.7}, {0.2, 1.0}}}
+						res[4] = {"dyzilla-unit-4", {{0, 0.9}, {0.1, 1.0}}}
 						return res
 					end)(),
     spawning_cooldown = {60, 20},

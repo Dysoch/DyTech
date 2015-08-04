@@ -61,6 +61,18 @@ Enemies = {
 	King_Tint2 = {r=0.486, g=0.988, b=0, a=0.85},
 	Queen_Tint1 = {r=0.729, g=0.333, b=0.827, a=0.6},
 	Queen_Tint2 = {r=0.502, g=0, b=0.502, a=0.85},
+	Dyzilla_Unit_1_Scale = 0.25,
+	Dyzilla_Unit_2_Scale = 0.5,
+	Dyzilla_Unit_3_Scale = 1,
+	Dyzilla_Unit_4_Scale = 1.5,
+	Dyzilla_Unit_1_Tint1 = {r=1, g=0.271, b=0, a=0.6},
+	Dyzilla_Unit_1_Tint2 = {r=1, g=0.549, b=0, a=0.85},
+	Dyzilla_Unit_2_Tint1 = {r=0.722, g=0.525, b=0.043, a=0.6},
+	Dyzilla_Unit_2_Tint2 = {r=0.804, g=0.522, b=0.247, a=0.85},
+	Dyzilla_Unit_3_Tint1 = {r=0.133, g=0.545, b=0.133, a=0.6},
+	Dyzilla_Unit_3_Tint2 = {r=0.180, g=0.545, b=0.341, a=0.85},
+	Dyzilla_Unit_4_Tint1 = {r=0.184, g=0.310, b=0.310, a=0.6},
+	Dyzilla_Unit_4_Tint2 = {r=0, g=0, b=0, a=0.85},
 }
 
 Bullets = {
