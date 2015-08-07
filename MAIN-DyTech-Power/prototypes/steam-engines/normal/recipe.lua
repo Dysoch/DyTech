@@ -1,6 +1,6 @@
 data:extend(
 {
-  {
+--[[  {
     type = "recipe",
     name = "steam-engine-primary",
     ingredients =
@@ -35,7 +35,7 @@ data:extend(
       {"electronic-circuit", 5}
     },
     result = "steam-engine-primary-mk2"
-  },
+  },]]
   {
     type = "recipe",
     name = "steam-engine-secondary-mk2",
@@ -50,7 +50,7 @@ data:extend(
     },
     result = "steam-engine-secondary-mk2"
   },
-  {
+--[[  {
     type = "recipe",
     name = "steam-engine-terciary-mk2",
 	enabled = false,
@@ -77,7 +77,7 @@ data:extend(
       {"advanced-circuit", 5}
     },
     result = "steam-engine-primary-mk3"
-  },
+  },]]
   {
     type = "recipe",
     name = "steam-engine-secondary-mk3",
@@ -92,7 +92,7 @@ data:extend(
     },
     result = "steam-engine-secondary-mk3"
   },
-  {
+--[[  {
     type = "recipe",
     name = "steam-engine-terciary-mk3",
 	enabled = false,
@@ -119,7 +119,7 @@ data:extend(
       {"processing-unit", 5}
     },
     result = "steam-engine-primary-mk4"
-  },
+  },]]
   {
     type = "recipe",
     name = "steam-engine-secondary-mk4",
@@ -134,7 +134,7 @@ data:extend(
     },
     result = "steam-engine-secondary-mk4"
   },
-  {
+--[[  {
     type = "recipe",
     name = "steam-engine-terciary-mk4",
 	enabled = false,
@@ -161,7 +161,7 @@ data:extend(
       {"advanced-processing-unit", 5}
     },
     result = "steam-engine-primary-mk5"
-  },
+  },]]
   {
     type = "recipe",
     name = "steam-engine-secondary-mk5",
@@ -176,7 +176,7 @@ data:extend(
     },
     result = "steam-engine-secondary-mk5"
   },
-  {
+--[[  {
     type = "recipe",
     name = "steam-engine-terciary-mk5",
 	enabled = false,
@@ -189,6 +189,6 @@ data:extend(
       {"advanced-processing-unit", 5}
     },
     result = "steam-engine-terciary-mk5"
-  },
+  },]]
 }
 )
