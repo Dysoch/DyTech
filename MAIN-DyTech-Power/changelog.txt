@@ -34,3 +34,6 @@
 
 02-08-15
 - Broke even more stuff. Managed to finish the fancy GUI for steam engines with my amazing programming skillzz.
+
+07-08-15
+- Final changes & cleanup before release.

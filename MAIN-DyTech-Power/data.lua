@@ -30,35 +30,19 @@ if Config.Boilers then
 		require("prototypes.boilers.high.high-recipe")
 		require("prototypes.boilers.tech.highTech")
 	end
---[[	if Config.Small_Boilers then
-		require("prototypes.boilers.small.entity")
-		require("prototypes.boilers.small.item")
-		require("prototypes.boilers.small.recipe")
-	end]]
 	if Config.Normal_Boilers then
 		require("prototypes.boilers.normal.entity")
 		require("prototypes.boilers.normal.item")
 		require("prototypes.boilers.normal.recipe")
 	end
---[[	if Config.Large_Boilers then
-		require("prototypes.boilers.large.entity")
-		require("prototypes.boilers.large.item")
-		require("prototypes.boilers.large.recipe")
-	end]]
-	if Config.Small_Boilers and not Config.Normal_Boilers and not Config.Large_Boilers then
-		require("prototypes.boilers.tech.small")
-	elseif Config.Normal_Boilers and not Config.Small_Boilers and not Config.Large_Boilers then
+
+	if Config.Normal_Boilers and not Config.High_Boilers then
 		require("prototypes.boilers.tech.normal")
-	elseif Config.Large_Boilers and not Config.Small_Boilers and not Config.Normal_Boilers then
-		require("prototypes.boilers.tech.small")
-	elseif Config.Small_Boilers and Config.Normal_Boilers and not Config.Large_Boilers then
-		require("prototypes.boilers.tech.small_and_normal")
-	elseif Config.Small_Boilers and Config.Large_Boilers and not Config.Normal_Boilers then
-		require("prototypes.boilers.tech.small_and_large")
-	elseif Config.Normal_Boilers and Config.Large_Boilers and not Config.Small_Boilers then
-		require("prototypes.boilers.tech.normal_and_large")
-	elseif Config.Small_Boilers and Config.Normal_Boilers and Config.Large_Boilers then
-		require("prototypes.boilers.tech.small_normal_and_large")
+	elseif Config.High_Boilers and not Config.Normal_Boilers then
+		require("prototypes.boilers.tech.hightech")
+	elseif Config.Normal_Boilers and Config.High_Boilers then
+		require("prototypes.boilers.tech.normal")
+		require("prototypes.boilers.tech.highTech")
 	end
 end
 
@@ -138,34 +122,17 @@ if Config.SteamEngines then
 		require("prototypes.steam-engines.high.high-recipe")
 		require("prototypes.steam-engines.tech.highTech")
 	end
-	if Config.Small_SteamEngines then
-		require("prototypes.steam-engines.small.entity")
-		require("prototypes.steam-engines.small.item")
-		require("prototypes.steam-engines.small.recipe")
-	end
 	if Config.Normal_SteamEngines then
 		require("prototypes.steam-engines.normal.entity")
 		require("prototypes.steam-engines.normal.item")
 		require("prototypes.steam-engines.normal.recipe")
 	end
-	if Config.Large_SteamEngines then
-		require("prototypes.steam-engines.large.entity")
-		require("prototypes.steam-engines.large.item")
-		require("prototypes.steam-engines.large.recipe")
-	end
-	if Config.Small_SteamEngines and not Config.Normal_SteamEngines and not Config.Large_SteamEngines then
-		require("prototypes.steam-engines.tech.small")
-	elseif Config.Normal_SteamEngines and not Config.Small_SteamEngines and not Config.Large_SteamEngines then
+	if Config.Normal_Boilers and not Config.High_Boilers then
 		require("prototypes.steam-engines.tech.normal")
-	elseif Config.Large_SteamEngines and not Config.Small_SteamEngines and not Config.Normal_SteamEngines then
-		require("prototypes.steam-engines.tech.small")
-	elseif Config.Small_SteamEngines and Config.Normal_SteamEngines and not Config.Large_SteamEngines then
-		require("prototypes.steam-engines.tech.small_and_normal")
-	elseif Config.Small_SteamEngines and Config.Large_SteamEngines and not Config.Normal_SteamEngines then
-		require("prototypes.steam-engines.tech.small_and_large")
-	elseif Config.Normal_SteamEngines and Config.Large_SteamEngines and not Config.Small_SteamEngines then
-		require("prototypes.steam-engines.tech.normal_and_large")
-	elseif Config.Small_SteamEngines and Config.Normal_SteamEngines and Config.Large_SteamEngines then
-		require("prototypes.steam-engines.tech.small_normal_and_large")
+	elseif Config.High_Boilers and not Config.Normal_Boilers then
+		require("prototypes.steam-engines.tech.hightech")
+	elseif Config.Normal_Boilers and Config.High_Boilers then
+		require("prototypes.steam-engines.tech.normal")
+		require("prototypes.steam-engines.tech.highTech")
 	end
 end
