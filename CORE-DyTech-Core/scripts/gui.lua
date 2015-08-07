@@ -51,6 +51,7 @@ adder.add({type="button", name="DyTech-Debug-TestResource-Button", caption="Test
 adder.add({type="button", name="DyTech-Debug-TestItems-Button", caption="Give debug items"})
 adder.add({type="button", name="DyTech-Debug-Reset-Button", caption="Reset all"})
 adder.add({type="button", name="DyTech-Debug-Technology-Button", caption="Research All"})
+adder.add({type="button", name="DyTech-Debug-Evolution-Button", caption="Set Evolution to 1"})
 adder.add({type="button", name="DyTech-Close-Button", caption={"close"}})
 end
 

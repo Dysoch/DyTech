@@ -232,14 +232,13 @@ end)
 game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
+	debug("GUI: Player "..playerIndex.." clicked "..event.element.name)
 	if event.element.name == "DyTech-Button" then
 		player.gui.top["DyTech-Button"].destroy()
 		CoreGUI.showDyTechGUI(playerIndex)
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Button")
 	elseif event.element.name == "DyTech-Debug-Button" then
 		CoreGUI.closeGUI("DyTech", playerIndex)
 		CoreGUI.showDyTechDebugGUI(playerIndex)
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Button")
 	elseif event.element.name == "DyTech-Debug-Dump-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
@@ -249,31 +248,29 @@ local player = game.players[playerIndex]
 		if remote.interfaces["DyTech-Power"] then remote.call("DyTech-Power", "DataDump") end
 		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
 		if remote.interfaces["DyTech-World"] then remote.call("DyTech-World", "Logger") end
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Dump-Button")
 	elseif event.element.name == "DyTech-Debug-TestItems-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.TestMapStart(playerIndex)
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-TestItems-Button")
 	elseif event.element.name == "DyTech-Debug-TestResource-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		RemoteCalls.CheckOreRatio(500, playerIndex)
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-TestResources-Button")
 	elseif event.element.name == "DyTech-Debug-Reset-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		remote.call("DyTech-Core", "ResetAll")
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Reset-Button")
 	elseif event.element.name == "DyTech-Debug-Technology-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		fs.ResearchAll()
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Debug-Technology-Button")
+	elseif event.element.name == "DyTech-Debug-Evolution-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		game.evolution_factor = 1
 	elseif event.element.name == "DyTech-Close-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
-		debug("GUI: Player "..playerIndex.." clicked DyTech-Close-Button")
 	end
 end)
 
