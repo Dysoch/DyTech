@@ -47,12 +47,14 @@ game.on_load(function()
 end)
 
 game.on_event(defines.events.on_tick, function(event)
-	if not global.Dyzilla.Supplies then
-		if Config.Difficulty==5 then
-			debug("Dyzilla: active and difficulty at 5")
-			PlayerPrint({"msg-dyzilla-death-mode"})
-			Dyzilla.DeathModeSupplies()
-			debug("Dyzilla: Supplies given")
+	if Config.Dyzilla_Spawner then
+		if not global.Dyzilla.Supplies then
+			if Config.Difficulty==5 then
+				debug("Dyzilla: active and difficulty at 5")
+				PlayerPrint({"msg-dyzilla-death-mode"})
+				Dyzilla.DeathModeSupplies()
+				debug("Dyzilla: Supplies given")
+			end
 		end
 	end
 end)
