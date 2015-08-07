@@ -2,58 +2,48 @@ require "prototypes.internal-config"
 require "prototypes.functions.turrets"
 require "util"
 
-function laser_turret_extension(inputs)
-return
-{
-  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start.png",
-  priority = "medium",
-  width = 66,
-  height = 67,
-  frame_count = inputs.frame_count and inputs.frame_count or 15,
-  line_length = inputs.line_length and inputs.line_length or 0,
-  run_mode = inputs.run_mode and inputs.run_mode or "forward",
-  axially_symmetrical = false,
-  direction_count = 4,
-  shift = {0.0625, -0.984375}
-}
-end
-
-function laser_turret_extension_shadow(inputs)
-return
-{
-  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start-shadow.png",
-  width = 92,
-  height = 50,
-  frame_count = inputs.frame_count and inputs.frame_count or 15,
-  line_length = inputs.line_length and inputs.line_length or 0,
-  run_mode = inputs.run_mode and inputs.run_mode or "forward",
-  axially_symmetrical = false,
-  direction_count = 4,
-  draw_as_shadow = true,
-  shift = {1.46875, 0},
-}
-end
-
-function laser_turret_extension_mask(inputs)
-return
-{
-  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start-mask.png",
-  width = 51,
-  height = 47,
-  frame_count = inputs.frame_count and inputs.frame_count or 15,
-  line_length = inputs.line_length and inputs.line_length or 0,
-  run_mode = inputs.run_mode and inputs.run_mode or "forward",
-  axially_symmetrical = false,
-  apply_runtime_tint = true,
-  direction_count = 4,
-  shift = {0.078125, -1.26563},
-}
-end
+BRONZE_BASE = {r=0.722, g=0.525, b=0.043, a=0.95}
+SILVER_BASE = {r=0.753, g=0.753, b=0.753, a=0.95}
+GOLD_BASE = {r=1, g=0.843, b=0, a=0.95}
+RUBY = {r=0.698, g=0.133, b=0.133, a=0.95}
+SAPPHIRE = {r=0.255, g=0.412, b=0.882, a=0.95}
+EMERALD = {r=0.196, g=0.804, b=0.196, a=0.95}
+TOPAZ = {r=0.855, g=0.647, b=0.125, a=0.95}
+DIAMOND = {r=0.941, g=0.973, b=1, a=0.95}
 
 data.raw["electric-turret"]["laser-turret"].icon = "__MAIN-DyTech-War__/graphics/turrets-laser/laser-ruby-1.png"
 data.raw["electric-turret"]["laser-turret"].max_health = Health.Tier2
 data.raw["electric-turret"]["laser-turret"].resistances = Resistances.Tier2
 data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
+data.raw["electric-turret"]["laser-turret"].base_picture = Laser_Turret_Base_Graphics(BRONZE_BASE)
+data.raw["electric-turret"]["laser-turret"].prepared_animation = Laser_Turret_Animation_Graphics(RUBY)
+data.raw["electric-turret"]["laser-turret"].folded_animation =
+    {
+      layers =
+      {
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=RUBY},
+        laser_turret_extension_shadow{frame_count=1, line_length=1},
+        laser_turret_extension_mask{frame_count=1, line_length=1}
+      }
+    }
+data.raw["electric-turret"]["laser-turret"].preparing_animation =
+    {
+      layers =
+      {
+        Laser_Turret_Start_Graphics{TINT=RUBY},
+        laser_turret_extension_shadow{},
+        laser_turret_extension_mask{}
+      }
+    }
+data.raw["electric-turret"]["laser-turret"].folding_animation = 
+    {
+      layers =
+      {
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=RUBY},
+        laser_turret_extension_shadow{run_mode = "backward"},
+        laser_turret_extension_mask{run_mode = "backward"}
+      }
+    }
 data.raw["electric-turret"]["laser-turret"].energy_source =
     {
       type = "electric",
@@ -125,7 +115,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=RUBY},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -134,84 +124,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=RUBY},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(RUBY),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=RUBY},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(SILVER_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(20, 25, "200kJ", "laser-ruby-2")
   },
@@ -243,7 +171,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=RUBY},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -252,84 +180,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=RUBY},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(RUBY),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=RUBY},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(GOLD_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(20, 25, "250kJ", "laser-ruby-3")
   },
@@ -362,7 +228,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=SAPPHIRE},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -371,84 +237,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=SAPPHIRE},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(SAPPHIRE),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=SAPPHIRE},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(BRONZE_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(18, 27.5, "300kJ", "laser-sapphire-1")
   },
@@ -480,7 +284,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=SAPPHIRE},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -489,84 +293,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=SAPPHIRE},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(SAPPHIRE),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=SAPPHIRE},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(SILVER_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(16, 30, "350kJ", "laser-sapphire-2")
   },
@@ -598,7 +340,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=SAPPHIRE},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -607,84 +349,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=SAPPHIRE},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(SAPPHIRE),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=SAPPHIRE},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(GOLD_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(14, 32.5, "400kJ", "laser-sapphire-3")
   },
@@ -717,7 +397,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=EMERALD},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -726,84 +406,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=EMERALD},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(EMERALD),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=EMERALD},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(BRONZE_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(20, 37.5, "160kJ", "laser-emerald-1")
   },
@@ -835,7 +453,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=EMERALD},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -844,84 +462,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=EMERALD},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(EMERALD),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=EMERALD},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(SILVER_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(15, 40.5, "140kJ", "laser-emerald-2")
   },
@@ -953,7 +509,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=EMERALD},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -962,84 +518,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=EMERALD},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(EMERALD),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=EMERALD},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(GOLD_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(10, 43.75, "120kJ", "laser-emerald-3")
   },
@@ -1072,7 +566,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=TOPAZ},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1081,84 +575,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=TOPAZ},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(TOPAZ),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=TOPAZ},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(BRONZE_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(30, 62.5, "350kJ", "laser-topaz-1")
   },
@@ -1190,7 +622,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=TOPAZ},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1199,84 +631,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=TOPAZ},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(TOPAZ),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=TOPAZ},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(SILVER_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(15, 75, "400kJ", "laser-topaz-2")
   },
@@ -1308,7 +678,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=TOPAZ},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1317,84 +687,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=TOPAZ},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(TOPAZ),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=TOPAZ},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(GOLD_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(7.5, 87.5, "450kJ", "laser-topaz-3")
   },
@@ -1427,7 +735,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=DIAMOND},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1436,84 +744,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=DIAMOND},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(DIAMOND),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=DIAMOND},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(BRONZE_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(20, 30, "450kJ", "laser-diamond-1")
   },
@@ -1545,7 +791,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=DIAMOND},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1554,84 +800,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=DIAMOND},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(DIAMOND),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=DIAMOND},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(SILVER_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(10, 40, "450kJ", "laser-diamond-2")
   },
@@ -1663,7 +847,7 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{frame_count=1, line_length = 1},
+        Laser_Turret_Start_Graphics{frame_count=1, line_length = 1, TINT=DIAMOND},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
         laser_turret_extension_mask{frame_count=1, line_length=1}
       }
@@ -1672,84 +856,22 @@ data:extend(
     {
       layers =
       {
-        laser_turret_extension{},
+        Laser_Turret_Start_Graphics{TINT=DIAMOND},
         laser_turret_extension_shadow{},
         laser_turret_extension_mask{}
       }
     },
-    prepared_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
-          line_length = 8,
-          width = 68,
-          height = 68,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          shift = {0.0625, -1}
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
-          line_length = 8,
-          width = 54,
-          height = 44,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 64,
-          shift = {0.0625, -1.3125},
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
-          line_length = 8,
-          width = 88,
-          height = 52,
-          frame_count = 1,
-          axially_symmetrical = false,
-          direction_count = 64,
-          draw_as_shadow = true,
-          shift = {1.59375, 0}
-        }
-      }
-    },
+    prepared_animation = Laser_Turret_Animation_Graphics(DIAMOND),
     folding_animation = 
     {
       layers =
       {
-        laser_turret_extension{run_mode = "backward"},
+        Laser_Turret_Start_Graphics{run_mode = "backward", TINT=DIAMOND},
         laser_turret_extension_shadow{run_mode = "backward"},
         laser_turret_extension_mask{run_mode = "backward"}
       }
     },
-    base_picture =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
-          priority = "high",
-          width = 98,
-          height = 82,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = { 0.109375, 0.03125 }
-        },
-        {
-          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
-          line_length = 1,
-          width = 54,
-          height = 46,
-          frame_count = 1,
-          axially_symmetrical = false,
-          apply_runtime_tint = true,
-          direction_count = 1,
-          shift = {0.046875, -0.109375},
-        },
-      }
-    },
+    base_picture = Laser_Turret_Base_Graphics(GOLD_BASE),
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = Laser_Turret_Attack(5, 50, "450kJ", "laser-diamond-3")
   },

@@ -100,3 +100,92 @@ return
       sound = make_laser_sounds()
     }
 end
+
+function Laser_Turret_Base_Graphics(TINT)
+return
+	{
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          axially_symmetrical = false,
+          direction_count = 1,
+          shift = { 0.109375, 0.03125 },
+		  tint = TINT
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+          line_length = 1,
+          width = 54,
+          height = 46,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 1,
+          shift = {0.046875, -0.109375},
+        },
+      }
+    }
+end
+
+function Laser_Turret_Start_Graphics(inputs)
+return
+{
+  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-start.png",
+  priority = "medium",
+  width = 66,
+  height = 67,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  direction_count = 4,
+  shift = {0.0625, -0.984375},
+  tint = inputs.TINT
+}
+end
+
+function Laser_Turret_Animation_Graphics(TINT)
+return
+	{
+      layers =
+      {
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+          line_length = 8,
+          width = 68,
+          height = 68,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          shift = {0.0625, -1}
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+          line_length = 8,
+          width = 54,
+          height = 44,
+          frame_count = 1,
+          axially_symmetrical = false,
+          apply_runtime_tint = true,
+          direction_count = 64,
+          shift = {0.0625, -1.3125},
+		  tint = TINT
+        },
+        {
+          filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+          line_length = 8,
+          width = 88,
+          height = 52,
+          frame_count = 1,
+          axially_symmetrical = false,
+          direction_count = 64,
+          draw_as_shadow = true,
+          shift = {1.59375, 0}
+        }
+      }
+    }
+end

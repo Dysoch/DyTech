@@ -1,7 +1,7 @@
 [size=200]DyTech-War[/size]
 
 [spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
-Released: ?? 2015
+Released: August 8th 2015
 [list]
 [*] Features:
 [list] [*] Added in personal Roboports (2)
@@ -19,6 +19,7 @@ Released: ?? 2015
 [/list]
 [*] Changes:
 [list] [*] Radiation Capsules now require Acid and Poison Capsules to be active!
+[*] Laser Turrets now have their own color. This should be nicer to see their difference!
 [/list]
 [*] Bugfixes:
 [list] [*] Fixed Capsules not working
