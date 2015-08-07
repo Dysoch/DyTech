@@ -87,7 +87,7 @@ if Config.Accumulators then
 		require("prototypes.accumulators.tech.small")
 	elseif Config.Small_Accumulators and Config.Normal_Accumulators and not Config.Large_Accumulators then
 		require("prototypes.accumulators.tech.small_and_normal")
-	elseif Config.Small_Accumulators and Config.Large_Accumulators and not Normal_Accumulators then
+	elseif Config.Small_Accumulators and Config.Large_Accumulators and not Config.Normal_Accumulators then
 		require("prototypes.accumulators.tech.small_and_large")
 	elseif Config.Normal_Accumulators and Config.Large_Accumulators and not Config.Small_Accumulators then
 		require("prototypes.accumulators.tech.normal_and_large")
