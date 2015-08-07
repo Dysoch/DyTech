@@ -2,7 +2,8 @@
 
 [spoiler=v1.2.1][i][size=150][b]v1.2.1:[/b][/size][/i]
 Released: August 8th 2015
-[size=200]NOTE: because of some changes, old savegames MIGHT be broken/corrupted![/size]
+[size=200]NOTE: because of some changes, old savegames MIGHT be broken/corrupted!
+This might also not be the case![/size]
 [list]
 [*] Features:
 [list][*] Added in a Log. This helps us to debug your savegames. This wont effect the game in any way! (this is in all modules from now on!)
@@ -10,12 +11,6 @@ Released: August 8th 2015
 [*] Transport Belts now have a stacksize of 100 (instead of 50) (this includes also dytech belts!)
 [*] Added more intermediates to the productivity module usage list.
 [*] When Stacksize cheat is active, default request amount of all items is 50!
-[/list]
-[*] Balancing:
-[list] [*] 
-[/list]
-[*] Changes:
-[list] [*] 
 [/list]
 [*] Bugfixes :
 [list] [*] Fixed bug with placing a seed (trees)
