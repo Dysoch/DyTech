@@ -1,13 +1,15 @@
 [size=200]DyTech-Core[/size]
 
 [spoiler=v1.2.1][i][size=150][b]v1.2.1:[/b][/size][/i]
-Released: ?? 2015
+Released: August 8th 2015
+[size=200]NOTE: because of some changes, old savegames MIGHT be broken/corrupted![/size]
 [list]
 [*] Features:
 [list][*] Added in a Log. This helps us to debug your savegames. This wont effect the game in any way! (this is in all modules from now on!)
 [*] Added in a science pack cheat.
-[*] Transport Belts now have a stacksize of 100 (instead of 50)
+[*] Transport Belts now have a stacksize of 100 (instead of 50) (this includes also dytech belts!)
 [*] Added more intermediates to the productivity module usage list.
+[*] When Stacksize cheat is active, default request amount of all items is 50!
 [/list]
 [*] Balancing:
 [list] [*] 
