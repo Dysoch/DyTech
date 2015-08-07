@@ -58,35 +58,43 @@ if Config.All_Recipes_Unlocked_From_Start then
 end
 
 if Config.Science_Packs_Last_Long then
-	data.raw["tool"]["science-pack-1"].durability = 500
-	data.raw["tool"]["science-pack-2"].durability = 500
-	data.raw["tool"]["science-pack-3"].durability = 500
-	data.raw["tool"]["alien-science-pack"].durability = 500
+	data.raw["tool"]["science-pack-1"].durability = 2500
+	data.raw["tool"]["science-pack-2"].durability = 2500
+	data.raw["tool"]["science-pack-3"].durability = 2500
+	data.raw["tool"]["alien-science-pack"].durability = 2500
 end
 
 if Config.Stacksize_Increase then
 	for k, v in pairs(data.raw.item) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw.ammo) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw.gun) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw["repair-tool"]) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw["mining-tool"]) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw.tool) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw["capsule"]) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 	for k, v in pairs(data.raw["module"]) do
 		v.stack_size = (v.stack_size*Config.Stacksize_Increase_Factor)
+		v.default_request_amount = 50
 	end
 end
