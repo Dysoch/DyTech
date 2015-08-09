@@ -13,7 +13,7 @@ if Config.Research_System then
 	adder.add({type="button", name=guiNames.ResearchButton, caption={"research-button", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
 end
 if Config.Auto_Researcher then 
-	adder.add({type="button", name=guiNames.AutoResearcherButton, caption={"auto-researcher"}}) 
+	adder.add({type="button", name="DyTech-Dynamics-AutoResearcher-Button", caption={"auto-researcher"}}) 
 end
 if Config.Dynamic_Tools then 
 	adder.add({type="button", name=guiNames.DynamicToolsButton, caption={"dynamic-tools"}}) 
@@ -41,6 +41,9 @@ function closeGUI(statement, PlayerIndex)
 		end
 		if game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow] and game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow].destroy()
+		end
+		if game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow] and game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].valid then
+			game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].destroy()
 		end
 	elseif statement=="DynamicsMain" then
 		if game.players[PlayerIndex].gui.top[guiNames.mainDynamicFlow] and game.players[PlayerIndex].gui.top[guiNames.mainDynamicFlow].valid then

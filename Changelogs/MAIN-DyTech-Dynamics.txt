@@ -7,6 +7,7 @@
 [*] Added MP Compatibility to the Research System.
 [*] Removed text buttons for unlocks, added in Icons! The tier screen can now hold more unlocks!
 [*] Added in all of DyTechs recipes. Amount of unlocks now rests around 401 (CORE, WAR and MACHINE!)
+[*] Implemented a working Auto Researcher! This will automatically select a new tech for you. It is random though!
 [/list]
 [*] Changes:
 [list] [*] Increased Stability of Research System.

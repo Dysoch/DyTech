@@ -13,7 +13,7 @@ Config.Research_System = true
 -- DISABLE THE FOLLOWING LINE IN YOUR OPTIONS MENU! (its under Other)
 -- singleplayer game stops when the research is completed
 -- THIS NEEDS TO BE DISABLED TO FULLY USE THIS FUNCTION!!
-Config.Auto_Researcher = false
+Config.Auto_Researcher = true
 
 --[[ Dynamic Items Toggle ]]--
 Config.Dynamic_Tools = false

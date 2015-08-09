@@ -38,5 +38,8 @@ CollectorRangeMinusButton="CollectorRangeMinusButton"
 CollectorRangeButton="CollectorRangeButton"
 CollectorRangePlusButton="CollectorRangePlusButton"
 CollectorAutoRangeButton="CollectorAutoRangeButton"
+-- Auto Researcher
+mainAutoResearcherFlow="mainAutoResearcherFlow"
+mainAutoResearcherFrame="mainAutoResearcherFrame"
 -- DEBUG
 DebugButton1="DebugButton1"

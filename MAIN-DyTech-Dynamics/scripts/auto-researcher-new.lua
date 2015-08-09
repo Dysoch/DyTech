@@ -2,66 +2,106 @@ module("AutoResearch", package.seeall)
 require "scripts/functions"
 
 function Startup() 
-	global.Research = global.Research or game.forces.player.technologies
-	if not global.AutoTechLevel then 
-		global.AutoTechLevel = 
-		{
-			levels = { [1] = {}, [2] = {}, [3] = {}, [4] = {} },
-			leveled = { [1] = {}, [2] = {}, [3] = {}, [4] = {} },
-			count = 0
-		}
-		IncreaseAutoTechLevel()
+	if not global.AutoResearcher then global.AutoResearcher = {} end
+	if not global.AutoResearcher.Check then global.AutoResearcher.Check = 0 end
+	if not global.AutoResearcher.Tier1 then global.AutoResearcher.Tier1 = true end
+	if not global.AutoResearcher.Tier2 then global.AutoResearcher.Tier2 = false end
+	if not global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false end
+	if not global.AutoResearcher.Tier4 then global.AutoResearcher.Tier4 = false end
+	global.Auto_Researcher = {}
+	for NAME, TECH in pairs(global.Technology) do
+		if not TECH.Finished then
+			table.insert(global.Auto_Researcher,NAME)
+		end
 	end
 end
 
-function AutoMode()
+function AutoMode(TECH)
+	if global.AutoResearcher.Tier1 and global.Technology[TECH].TechLevel==1 then
+		if PreReqCheck(TECH) then
+			game.forces.player.current_research = TECH
+			global.AutoResearcher.Check = 0
+		else
+			Select_New_Tech()
+		end
+	elseif global.AutoResearcher.Tier2 and global.Technology[TECH].TechLevel==2 then
+		if PreReqCheck(TECH) then
+			game.forces.player.current_research = TECH
+			global.AutoResearcher.Check = 0
+		else
+			Select_New_Tech()
+		end
+	elseif global.AutoResearcher.Tier3 and global.Technology[TECH].TechLevel==3 then
+		if PreReqCheck(TECH) then
+			game.forces.player.current_research = TECH
+			global.AutoResearcher.Check = 0
+		else
+			Select_New_Tech()
+		end
+	elseif global.AutoResearcher.Tier4 and global.Technology[TECH].TechLevel==4 then
+		if PreReqCheck(TECH) then
+			game.forces.player.current_research = TECH
+			global.AutoResearcher.Check = 0
+		else
+			Select_New_Tech()
+		end
+	elseif global.AutoResearcher.Check > 150 then
+		global.AutoResearcher.Check = 0
+		PlayerPrint({"auto-researcher-overflow"})
+		return
+	elseif global.AutoResearcher.Check < 150 then
+		Select_New_Tech()
+		global.AutoResearcher.Check = global.AutoResearcher.Check + 1
+	end
+end
+
+function Select_New_Tech()
 	Startup()
-	local minResearchLevel = getMinResearchLevel()
-	if minResearchLevel ~= -1 then
-		for name, tech in pairs (global.Research) do
-			if not tech.researched and getResearchLevel(tech) == minResearchLevel then
-			-- set tech to be researched (or a needed prereq)
-			local setTech = setCurrentTech(tech);
-			debug("set current tech to " .. setTech)
-			-- we just set a tech to be researched so stop checking
-			break
+	if Empty_Table_Check(global.Auto_Researcher) then 
+		PlayerPrint({"auto-researcher-finished"}) 
+	else
+		local TECH=global.Auto_Researcher[math.random(#global.Auto_Researcher)]
+		AutoMode(TECH)
+	end
+end
+
+function Empty_Table_Check(self)
+    for _, _ in pairs(self) do
+        return false
+    end
+    return true
+end
+
+function PreReqCheck(TECH)
+	global.temp = {}
+	global.temp.True = 0
+	global.temp.index = 0
+	if global.Technology[TECH].Prerequisite ~= nil then
+		for Index, Name in pairs(global.Technology[TECH].Prerequisite) do
+			global.temp.index = global.temp.index + 1
+			if global.Technology[Name].Finished then 
+				global.temp.True = global.temp.True + 1
 			end
 		end
+		if global.temp.True == global.temp.index then return true end
 	end
 end
 
-function setCurrentTech(tech)
-	for preReqName, prerequisite in pairs(tech.prerequisites) do
-    debug("checking " .. tostring(preReqName))
-		if not prerequisite.researched then
-			return setCurrentTech(prerequisite)
-		end
-	end
-	game.forces.player.current_research = tech.name
-	return tech.name
+function showAutoResearcherGUI(PlayerIndex)
+local player = game.players[PlayerIndex]
+player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainAutoResearcherFlow})
+player.gui.top[guiNames.mainAutoResearcherFlow].add({type="frame", direction="vertical", name=guiNames.mainAutoResearcherFrame, caption={"auto-researcher"}})
+adder = player.gui.top[guiNames.mainAutoResearcherFlow][guiNames.mainAutoResearcherFrame]
+adder.add({type= "checkbox", caption={"auto-researcher-tier-1"}, name="auto-researcher-tier-1", state = global.AutoResearcher.Tier1})
+adder.add({type= "checkbox", caption={"auto-researcher-tier-2"}, name="auto-researcher-tier-2", state = global.AutoResearcher.Tier2})
+adder.add({type= "checkbox", caption={"auto-researcher-tier-3"}, name="auto-researcher-tier-3", state = global.AutoResearcher.Tier3})
+adder.add({type= "checkbox", caption={"auto-researcher-tier-4"}, name="auto-researcher-tier-4", state = global.AutoResearcher.Tier4})
+adder.add({type= "label", caption={"auto-researcher-explenation-1"}, name=""})
+--adder.add({type= "label", caption={"auto-researcher-explenation-2"}, name=""})
+--adder.add({type= "label", caption={"auto-researcher-explenation-3"}, name=""})
+adder.add({type= "label", caption={"auto-researcher-explenation-4"}, name=""})
+adder.add({type= "label", caption={"stack-overflow-1"}, name=""})
+adder.add({type= "label", caption={"stack-overflow-2"}, name=""})
+adder.add({type= "label", caption={"stack-overflow-3"}, name=""})
+adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
-
-function getResearchLevel(technology)
-	local levels = {["science-pack-1"] = 1, ["science-pack-2"] = 2, ["science-pack-3"] = 3, ["alien-science-pack"] = 4}
-	local level = 0
-	local Tech = global.Research[technology]
-	for _,t in pairs(Tech.researchunitingredients) do
-		if levels[t.name] and levels[t.name] > level then
-			level = levels[t.name]
-		end
-	end
-	return level
-end
-
-
-function getMinResearchLevel()
-  for level, info in ipairs(global.AutoTechLevel.levels) do
-    if info.count != info.maxCount then
-      return level
-    end
-  end
-  -- all leveled techs researched
-  return -1
-end
-
-  

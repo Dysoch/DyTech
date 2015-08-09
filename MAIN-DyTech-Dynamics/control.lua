@@ -3,7 +3,7 @@ require "config"
 require "database/research"
 require "database/research-system"
 require "scripts/automatic-research-system"
-require "scripts/auto-researcher"
+require "scripts/auto-researcher-new"
 require "scripts/collectors"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
@@ -93,9 +93,6 @@ end
 end)
 
 game.on_event(defines.events.on_research_finished, function(event)
-if Config.Auto_Researcher then
-	AutoResearch.AutoMode()
-end
 if Config.Research_System then	
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Finished ("..tostring(event.research.name)..")")
@@ -107,6 +104,9 @@ if Config.Research_System then
 	end
 else 	
 	global.Technology[event.research.name].Finished = true
+end
+if Config.Auto_Researcher then
+	AutoResearch.Select_New_Tech()
 end
 end)
 
@@ -230,7 +230,21 @@ local player = game.players[playerIndex]
 		CollectorFunctions.showCollectorGUI(playerIndex)
 	elseif event.element.name == "DyTech-Dynamics-Button" then
         remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
-		GUI.showDynamicsMainGUI(playerIndex)		
+		GUI.showDynamicsMainGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Button" then
+        remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
+		GUI.showDynamicsMainGUI(playerIndex)	
+	elseif event.element.name == "DyTech-Dynamics-AutoResearcher-Button" then
+		GUI.closeGUI("all", playerIndex)
+		AutoResearch.showAutoResearcherGUI(playerIndex)	
+	elseif event.element.name == "auto-researcher-tier-1" then	 
+		if global.AutoResearcher.Tier1 then global.AutoResearcher.Tier1 = false else global.AutoResearcher.Tier1 = true end
+	elseif event.element.name == "auto-researcher-tier-2" then	 
+		if global.AutoResearcher.Tier2 then global.AutoResearcher.Tier2 = false else global.AutoResearcher.Tier2 = true end
+	elseif event.element.name == "auto-researcher-tier-3" then	 
+		if global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false else global.AutoResearcher.Tier3 = true end
+	elseif event.element.name == "auto-researcher-tier-4" then	 
+		if global.AutoResearcher.Tier4 then global.AutoResearcher.Tier4 = false else global.AutoResearcher.Tier4 = true end
 	end
 end)
 
@@ -275,6 +289,8 @@ remote.add_interface("DyTech-Dynamics",
 		game.makefile("DyTech/DataDump/Dynamics-ResearchSystem.txt", serpent.block(global.ResearchSystem))
 		game.makefile("DyTech/DataDump/Dynamics-Collectors.txt", serpent.block(global.Collectors))
 		game.makefile("DyTech/DataDump/Dynamics-Technology.txt", serpent.block(global.Technology))
+		game.makefile("DyTech/DataDump/Dynamics-AutoResearcher.txt", serpent.block(global.AutoResearcher))
+		game.makefile("DyTech/DataDump/Dynamics-Auto_Researcher.txt", serpent.block(global.Auto_Researcher))
 		game.makefile("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
 		game.makefile("DyTech/Config/Dynamics.txt", serpent.block(Config))
 	end,
