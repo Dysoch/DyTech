@@ -69,7 +69,7 @@ game.on_event(defines.events.on_tick, function(event)
 		end
 	end
 	if event.tick%108000==1 then
-		ARS.Amount_Of_Events()
+		RSF.Amount_Of_Events()
 	end
 end)
 

@@ -6,12 +6,13 @@
 [list] [*] Compatible with DyTech GUI.
 [*] Added MP Compatibility to the Research System.
 [*] Removed text buttons for unlocks, added in Icons! The tier screen can now hold more unlocks!
+[*] Added in all of DyTechs recipes. Amount of unlocks now rests around 401 (CORE, WAR and MACHINE!)
 [/list]
 [*] Changes:
-[list] [*] Changed the button on top to open other GUI.
-[*] Increased Stability of Research System.
+[list] [*] Increased Stability of Research System.
 [*] Removed all fluid recipes that will cripple the new system. (they wont work with icon graphics)
-[*] Improved checks for automatic Research System. It dynamically alters to amount of unlocks that can still be done. This change happens every 30 minutes. This way the Automatic system takes less time the more recipes are unlocked so recipes are faster unlocked!
+[*] Improved checks for automatic Research System. It dynamically alters to amount of unlocks that can still be done. This change happens every time you unlock something! This way the Automatic system takes less time the more recipes are unlocked so recipes are faster unlocked!
+[*] Dynamic Checks for the tier an item goes in. This is based of the technology it previously was in!
 [/list]
 [*] Bugfixes :
 [list] 

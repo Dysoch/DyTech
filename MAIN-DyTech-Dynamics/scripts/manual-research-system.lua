@@ -1,5 +1,5 @@
 module("MRS", package.seeall)
-require "database/research-system"
+require "scripts/functions"
 require "scripts/rs-functions"
 require "scripts/guinames"
 require "config"
@@ -38,17 +38,17 @@ local mainResearchTableFrame = player.gui.top[guiNames.mainResearchTableFlow][gu
 	for _, name in pairs(mainResearchTableFrame[guiNames.RSTable].children_names) do
 		mainResearchTableFrame[guiNames.RSTable][name].destroy()
 	end
-	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
+	for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
-	local data = RSDatabase.ItemUnlock[RecipeName]
-		if global.ResearchSystem.science > data.Points and data.Tier==TierRecipe then
+	local data = global.ResearchSystem.ItemUnlock[RecipeName]
+		if global.ResearchSystem.science > data.Points and RSF.DSgetResearchLevel(data.Tech)==TierRecipe then
 			mainResearchTableFrame[guiNames.RSTable].add({type="checkbox", name=RecipeName, style=RecipeName.."_DyTech_button_style", caption="", state = false})
 		end
 	end end
 end
 
 function showUnlockGUIBase(PlayerIndex, RecipeName)
-local info = RSDatabase.ItemUnlock[RecipeName]
+local info = global.ResearchSystem.ItemUnlock[RecipeName]
 game.players[PlayerIndex].gui.top.add({type="flow", direction="vertical", name=guiNames.mainFlowMRSUnlock1})
 game.players[PlayerIndex].gui.top[guiNames.mainFlowMRSUnlock1].add({type="frame", direction="vertical", name=guiNames.mainFrameMRSUnlock, caption={"gui-unlock-screen"}})
 mainFrameMRSUnlock = game.players[PlayerIndex].gui.top[guiNames.mainFlowMRSUnlock1][guiNames.mainFrameMRSUnlock]

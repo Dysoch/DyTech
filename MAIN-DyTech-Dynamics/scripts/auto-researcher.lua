@@ -32,7 +32,7 @@ function getResearchLevel(technology)
 	local levels = {["science-pack-1"] = 1, ["science-pack-2"] = 2, ["science-pack-3"] = 3, ["alien-science-pack"] = 4}
 	local level = 0
 	local Tech = global.Research[technology]
-	for _,t in pairs(Tech.researchunitingredients) do
+	for _,t in pairs(Tech.research_unit_ingredients) do
 		if levels[t.name] and levels[t.name] > level then
 			level = levels[t.name]
 		end

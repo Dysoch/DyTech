@@ -1,12 +1,17 @@
 module("fs", package.seeall)
+require "database/research-system"
+require "scripts/rs-functions"
 
 function Startup()
+global.Temp = {}
 global.ResearchSystem.Unlocked = {}
 global.ResearchSystem.RSAutomatic = false
 global.ResearchSystem.RSManual = true
 global.ResearchSystem.ToUnlock = {}
 global.ResearchSystem.science = 0
 global.ResearchSystem.Amount_Enabled = 0
+global.ResearchSystem.Amount = 0
+StartupResearchSystem()
 global.Collectors = {}
 global.Collectors.Range = 25
 global.Collectors.Working = true
@@ -16,7 +21,7 @@ global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 global.Messages = true
 InitTechnologyTable()
-ARS.Amount_Of_Events()
+RSF.Amount_Of_Events()
 end
 
 function StartupCollectors()
@@ -27,6 +32,17 @@ global.Collectors.Filtered = true
 global.Collectors.AutomaticRange = false
 global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
+end
+
+function StartupResearchSystem()
+	global.ResearchSystem.ItemUnlock = {}
+	global.ResearchSystem.ItemUnlock = RSDatabase.ItemUnlock
+	global.Temp.Amount = 1
+	for RecipeName, sdt in pairs(global.ResearchSystem.ItemUnlock) do
+		local info = global.ResearchSystem.ItemUnlock[RecipeName]
+		info.Event = global.Temp.Amount
+		global.Temp.Amount = global.Temp.Amount + 1
+	end
 end
 
 function InitTechnologyTable()

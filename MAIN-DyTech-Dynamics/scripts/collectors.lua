@@ -15,7 +15,7 @@ function builtEntity(event)
 	local newCollector
 	
 	if event.created_entity.name == "item-collector-area" then
-		newCollector = game.create_entity({name = "item-collector-area", position = event.created_entity.position, force = game.forces.player})
+		newCollector = game.get_surface("nauvis").create_entity({name = "item-collector-area", position = event.created_entity.position, force = game.forces.player})
 		event.created_entity.destroy()
 		
 		if global.Collectors.CollectorList == nil then
@@ -41,11 +41,11 @@ function processCollectors()
 for k,collector in pairs(global.Collectors.CollectorList) do
 	if collector.valid then
 		if not global.Collectors.AutomaticRange then
-			items = game.find_entities_filtered({area = {{x = collector.position.x - global.Collectors.Range, y = collector.position.y - global.Collectors.Range}, {x = collector.position.x + global.Collectors.Range, y = collector.position.y + global.Collectors.Range}}, name = "item-on-ground"})
+			items = game.get_surface("nauvis").find_entities_filtered({area = {{x = collector.position.x - global.Collectors.Range, y = collector.position.y - global.Collectors.Range}, {x = collector.position.x + global.Collectors.Range, y = collector.position.y + global.Collectors.Range}}, name = "item-on-ground"})
 			if #items > 0 then
 				inventory = collector.get_inventory(1)
 				for _,item in pairs(items) do
-					if not item.isitemonbelt() then
+					--if not item.is_item_on_belt() then
 						if global.Collectors.Filtered then
 							if item.stack.name == "small-corpse" or
 							item.stack.name == "medium-corpse" or
@@ -67,15 +67,15 @@ for k,collector in pairs(global.Collectors.CollectorList) do
 							break
 							end
 						end
-					end
+					--end
 				end
 			end
 		else
-			items = game.find_entities_filtered({area = {{x = collector.position.x - (AutoRange/global.Collectors.Amount), y = collector.position.y - (AutoRange/global.Collectors.Amount)}, {x = collector.position.x + (AutoRange/global.Collectors.Amount), y = collector.position.y + (AutoRange/global.Collectors.Amount)}}, name = "item-on-ground"})
+			items = game.get_surface("nauvis").find_entities_filtered({area = {{x = collector.position.x - (AutoRange/global.Collectors.Amount), y = collector.position.y - (AutoRange/global.Collectors.Amount)}, {x = collector.position.x + (AutoRange/global.Collectors.Amount), y = collector.position.y + (AutoRange/global.Collectors.Amount)}}, name = "item-on-ground"})
 			if #items > 0 then
 				inventory = collector.get_inventory(1)
 				for _,item in pairs(items) do
-					if not item.isitemonbelt() then
+					--if not item.is_item_on_belt() then
 						if global.Collectors.Filtered then
 							if item.stack.name == "small-corpse" or
 							item.stack.name == "medium-corpse" or
@@ -97,7 +97,7 @@ for k,collector in pairs(global.Collectors.CollectorList) do
 							break
 							end
 						end
-					end
+					--end
 				end
 			end
 		end
