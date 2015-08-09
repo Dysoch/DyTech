@@ -88,7 +88,7 @@ data:extend(
     prerequisites = {"combat-robotics-5"},
     unit =
     {
-      count = 800,
+      count = 2500,
       ingredients =
       {
         {"science-pack-1", 3},
