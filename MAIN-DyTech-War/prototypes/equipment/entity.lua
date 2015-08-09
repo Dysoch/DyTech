@@ -291,7 +291,7 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-    power = "30W"
+    power = "3kW"
   },
   {
     type = "solar-panel-equipment",
