@@ -3,10 +3,18 @@ require "scripts/rs-functions"
 require "database/research-system"
 
 --[[ The Calculators for the time to check the events!]]--
-dstotalevents = 1801 -- This makes 30 minutes before the entire unlock event starts again
+dstotalevents = (global.ResearchSystem.Amount+1) -- This makes it select the amount of 
 eventtime = 60 -- This makes it that the automatic mode checks 1 event every second
 function dsttime()
 return (dstotalevents*eventtime) end
+
+function Amount_Of_Events()
+	global.ResearchSystem.Amount = 0
+	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
+		global.ResearchSystem.Amount = global.ResearchSystem.Amount + 1
+	end
+	global.ResearchSystem.Amount = global.ResearchSystem.Amount - global.ResearchSystem.Amount_Enabled
+end
 
 function AutomaticRS(event) 
 	for RecipeName, info in pairs(RSDatabase.ItemUnlock) do

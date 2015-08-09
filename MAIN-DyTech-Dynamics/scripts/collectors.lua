@@ -112,9 +112,9 @@ end
 
 function showCollectorGUI(PlayerIndex)
 local player = game.players[PlayerIndex]
-player.gui.center.add({type="flow", direction="vertical", name=guiNames.mainCollectorFlow})
-player.gui.center[guiNames.mainCollectorFlow].add({type="frame", direction="vertical", name=guiNames.mainCollectorFrame, caption={"collector-gui"}})
-adder = player.gui.center[guiNames.mainCollectorFlow][guiNames.mainCollectorFrame]
+player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainCollectorFlow})
+player.gui.top[guiNames.mainCollectorFlow].add({type="frame", direction="vertical", name=guiNames.mainCollectorFrame, caption={"collector-gui"}})
+adder = player.gui.top[guiNames.mainCollectorFlow][guiNames.mainCollectorFrame]
 adder.add({type="button", name=guiNames.CollectorWorkingButton, caption={"collectors-working", tostring(global.Collectors.Working)}})
 adder.add({type="button", name=guiNames.CollectorFilteredButton, caption={"collectors-filtered", tostring(global.Collectors.Filtered)}})
 adder.add({type="button", name=guiNames.CollectorAutoRangeButton, caption={"collectors-autorange-1", tostring(global.Collectors.AutomaticRange)}})

@@ -1,6 +1,7 @@
 module("RSF", package.seeall)
 require "config"
 require "database/research-system"
+require "scripts/automatic-research-system"
 
 function ClearToUnlock()
 	global.ToUnlock = {}
@@ -11,25 +12,13 @@ local data = RSDatabase.ItemUnlock[Name]
 	if not global.ResearchSystem.Unlocked[Name] then
 	global.ResearchSystem.Points = data.Points
 		if global.ResearchSystem.science >= global.ResearchSystem.Points then
-			if Research_System_Time_Usage then
-				if (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) then
-					for _,player in pairs(game.players) do
-						player.force.recipes[Name].enabled = true
-					end
-					PlayerPrint({"unlocked", {data.Locale.."-name."..Name}})
-					global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
-					UnlockedRecipe(Name, true)
-				else
-					PlayerPrint({"not-enough-time"})
-				end
-			else
-				for _,player in pairs(game.players) do
-					player.force.recipes[Name].enabled = true
-				end
-				PlayerPrint({"unlocked", {data.Locale.."-name."..Name}})
-				global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
-				UnlockedRecipe(Name, false)
+			for _,player in pairs(game.players) do
+				player.force.recipes[Name].enabled = true
 			end
+			PlayerPrint({"unlocked", {data.Locale.."-name."..Name}})
+			global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
+			UnlockedRecipe(Name, false)
+			ARS.Amount_Of_Events()
 		else
 			PlayerPrint({"not-enough-points"})
 		end
@@ -39,10 +28,13 @@ local data = RSDatabase.ItemUnlock[Name]
 end
 
 function UnlockedRecipe(Name, bool)
+local seconds = math.floor(game.tick/60)
+local minutes = math.floor(seconds/60)
+local hours = math.floor(minutes/60)
 	global.ResearchSystem.Unlocked[Name] = {}
 	global.ResearchSystem.Unlocked[Name].Done = true
-	global.ResearchSystem.Unlocked[Name].TimeUsage = bool
-	global.ResearchSystem.Unlocked[Name].Time = remote.call("DyTech-Core", "Timer", "hours")..":"..remote.call("DyTech-Core", "Timer", "minutes")..":"..remote.call("DyTech-Core", "Timer", "seconds")
+	global.ResearchSystem.Unlocked[Name].Time = hours..":"..(minutes-(hours*60))..":"..(seconds-(minutes*60))
+	global.ResearchSystem.Amount_Enabled = global.ResearchSystem.Amount_Enabled+1
 end
 
 function RecipeAvailableToUnlockAll(TierRecipe)
@@ -51,14 +43,8 @@ global.ResearchSystem.RecipeAvailableToUnlock.All = 0
 for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
-		if Research_System_Time_Usage then
-			if global.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "Minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) then
-				global.ResearchSystem.RecipeAvailableToUnlock.All = global.ResearchSystem.RecipeAvailableToUnlock.All + 1
-			end
-		else
-			if global.ResearchSystem.science > data.Points then
-				global.ResearchSystem.RecipeAvailableToUnlock.All = global.ResearchSystem.RecipeAvailableToUnlock.All + 1
-			end
+		if global.ResearchSystem.science > data.Points then
+			global.ResearchSystem.RecipeAvailableToUnlock.All = global.ResearchSystem.RecipeAvailableToUnlock.All + 1
 		end
 	end
 end
@@ -69,14 +55,8 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = 0
 for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
-		if Research_System_Time_Usage then
-			if global.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "Minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) and data.Tier==1 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = global.ResearchSystem.RecipeAvailableToUnlock.Tier1 + 1
-			end
-		else
-			if global.ResearchSystem.science > data.Points and data.Tier==1 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = global.ResearchSystem.RecipeAvailableToUnlock.Tier1 + 1
-			end
+		if global.ResearchSystem.science > data.Points and data.Tier==1 then
+			global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = global.ResearchSystem.RecipeAvailableToUnlock.Tier1 + 1
 		end
 	end 
 end
@@ -87,14 +67,8 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = 0
 for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
-		if Research_System_Time_Usage then
-			if global.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "Minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) and data.Tier==2 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = global.ResearchSystem.RecipeAvailableToUnlock.Tier2 + 1
-			end
-		else
-			if global.ResearchSystem.science > data.Points and data.Tier==2 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = global.ResearchSystem.RecipeAvailableToUnlock.Tier2 + 1
-			end
+		if global.ResearchSystem.science > data.Points and data.Tier==2 then
+			global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = global.ResearchSystem.RecipeAvailableToUnlock.Tier2 + 1
 		end
 	end 
 end
@@ -105,14 +79,8 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = 0
 for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
-		if Research_System_Time_Usage then
-			if global.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "Minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) and data.Tier==3 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = global.ResearchSystem.RecipeAvailableToUnlock.Tier3 + 1
-			end
-		else
-			if global.ResearchSystem.science > data.Points and data.Tier==3 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = global.ResearchSystem.RecipeAvailableToUnlock.Tier3 + 1
-			end
+		if global.ResearchSystem.science > data.Points and data.Tier==3 then
+			global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = global.ResearchSystem.RecipeAvailableToUnlock.Tier3 + 1
 		end
 	end 
 end
@@ -123,14 +91,8 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = 0
 for RecipeName, info in pairs(RSDatabase.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = RSDatabase.ItemUnlock[RecipeName]
-		if Research_System_Time_Usage then
-			if global.ResearchSystem.science > data.Points and (data.Minute+(data.Hour*60)) < (remote.call("DyTech-Core", "Timer", "Minutes")+(remote.call("DyTech-Core", "Timer", "hours")*60)) and data.Tier==4 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = global.ResearchSystem.RecipeAvailableToUnlock.Tier4 + 1
-			end
-		else
-			if global.ResearchSystem.science > data.Points and data.Tier==4 then
-				global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = global.ResearchSystem.RecipeAvailableToUnlock.Tier4 + 1
-			end
+		if global.ResearchSystem.science > data.Points and data.Tier==4 then
+			global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = global.ResearchSystem.RecipeAvailableToUnlock.Tier4 + 1
 		end
 	end 
 end

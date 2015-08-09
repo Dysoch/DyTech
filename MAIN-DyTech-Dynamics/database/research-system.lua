@@ -18,18 +18,14 @@ ItemUnlock  =
 	{
 		Tech = "automation", 
 		Points = 2, 
-		Hour = 0, 
-		Minute = 10, 
 		Event = 1, 
 		Tier = 1,
-		Locale = "item"
+		Locale = "item",
 	},
 	["long-handed-inserter"] = 
 	{
 		Tech = "automation", 
 		Points = 3, 
-		Hour = 0, 
-		Minute = 15, 
 		Event = 2, 
 		Tier = 1,
 		Locale = "entity"
@@ -38,8 +34,6 @@ ItemUnlock  =
 	{
 		Tech = "automation", 
 		Points = 5, 
-		Hour = 0, 
-		Minute = 15, 
 		Event = 3, 
 		Tier = 1,
 		Locale = "entity"
@@ -48,8 +42,6 @@ ItemUnlock  =
 	{
 		Tech = "steel-processing", 
 		Points = 7, 
-		Hour = 0, 
-		Minute = 20, 
 		Event = 4, 
 		Tier = 1,
 		Locale = "item"
@@ -58,8 +50,6 @@ ItemUnlock  =
 	{
 		Tech = "steel-processing", 
 		Points = 7, 
-		Hour = 0, 
-		Minute = 20, 
 		Event = 5, 
 		Tier = 1,
 		Locale = "entity"
@@ -68,8 +58,6 @@ ItemUnlock  =
 	{
 		Tech = "steel-processing", 
 		Points = 6, 
-		Hour = 0, 
-		Minute = 20, 
 		Event = 6, 
 		Tier = 1,
 		Locale = "item"
@@ -78,8 +66,6 @@ ItemUnlock  =
 	{
 		Tech = "military", 
 		Points = 4, 
-		Hour = 0, 
-		Minute = 10, 
 		Event = 7, 
 		Tier = 1,
 		Locale = "item"
@@ -88,8 +74,6 @@ ItemUnlock  =
 	{
 		Tech = "military", 
 		Points = 4, 
-		Hour = 0, 
-		Minute = 10, 
 		Event = 8, 
 		Tier = 1,
 		Locale = "item"
@@ -98,8 +82,6 @@ ItemUnlock  =
 	{
 		Tech = "military", 
 		Points = 2, 
-		Hour = 0, 
-		Minute = 10, 
 		Event = 9, 
 		Tier = 1,
 		Locale = "item"
@@ -108,8 +90,6 @@ ItemUnlock  =
 	{
 		Tech = "turrets", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 5, 
 		Event = 10, 
 		Tier = 1,
 		Locale = "entity"
@@ -118,8 +98,6 @@ ItemUnlock  =
 	{
 		Tech = "stone-walls", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 30, 
 		Event = 11, 
 		Tier = 1,
 		Locale = "entity"
@@ -128,8 +106,6 @@ ItemUnlock  =
 	{
 		Tech = "electronics", 
 		Points = 25, 
-		Hour = 1, 
-		Minute = 0, 
 		Event = 12, 
 		Tier = 1,
 		Locale = "entity"
@@ -138,8 +114,6 @@ ItemUnlock  =
 	{
 		Tech = "automation-2", 
 		Points = 75, 
-		Hour = 1, 
-		Minute = 0, 
 		Event = 13, 
 		Tier = 1,
 		Locale = "entity"
@@ -148,8 +122,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 30, 
 		Event = 14, 
 		Tier = 1,
 		Locale = "entity"
@@ -158,8 +130,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 30, 
 		Event = 15, 
 		Tier = 1,
 		Locale = "entity"
@@ -168,8 +138,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 30, 
 		Event = 16, 
 		Tier = 1,
 		Locale = "entity"
@@ -178,8 +146,6 @@ ItemUnlock  =
 	{
 		Tech = "armor-making", 
 		Points = 10, 
-		Hour = 0, 
-		Minute = 45, 
 		Event = 17, 
 		Tier = 1,
 		Locale = "item"
@@ -188,8 +154,6 @@ ItemUnlock  =
 	{
 		Tech = "armor-making-2", 
 		Points = 25, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 18, 
 		Tier = 1,
 		Locale = "item"
@@ -198,8 +162,6 @@ ItemUnlock  =
 	{
 		Tech = "optics", 
 		Points = 5, 
-		Hour = 0, 
-		Minute = 2, 
 		Event = 19, 
 		Tier = 1,
 		Locale = "entity"
@@ -209,8 +171,6 @@ ItemUnlock  =
 	{
 		Tech = "military-2", 
 		Points = 15, 
-		Hour = 1, 
-		Minute = 0, 
 		Event = 451, 
 		Tier = 2,
 		Locale = "item"
@@ -219,8 +179,6 @@ ItemUnlock  =
 	{
 		Tech = "military-2", 
 		Points = 20, 
-		Hour = 1, 
-		Minute = 0, 
 		Event = 452, 
 		Tier = 2,
 		Locale = "item"
@@ -228,9 +186,7 @@ ItemUnlock  =
 	["explosives"] = 
 	{
 		Tech = "explosives", 
-		Points = 110, 
-		Hour = 2, 
-		Minute = 0, 
+		Points = 110,
 		Event = 453, 
 		Tier = 2,
 		Locale = "item"
@@ -238,9 +194,7 @@ ItemUnlock  =
 	["land-mine"] = 
 	{
 		Tech = "land-mine", 
-		Points = 35, 
-		Hour = 2, 
-		Minute = 0, 
+		Points = 35,
 		Event = 454, 
 		Tier = 2,
 		Locale = "entity"
@@ -248,9 +202,7 @@ ItemUnlock  =
 	["flame-thrower"] = 
 	{
 		Tech = "flame-thrower", 
-		Points = 35, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 35,
 		Event = 455, 
 		Tier = 2,
 		Locale = "item"
@@ -258,9 +210,7 @@ ItemUnlock  =
 	["flame-thrower-ammo"] = 
 	{
 		Tech = "flame-thrower", 
-		Points = 5, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 5,
 		Event = 456, 
 		Tier = 2,
 		Locale = "item"
@@ -269,8 +219,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-electronics", 
 		Points = 8, 
-		Hour = 1, 
-		Minute = 15, 
 		Event = 457, 
 		Tier = 2,
 		Locale = "item"
@@ -279,8 +227,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-electronics", 
 		Points = 8, 
-		Hour = 1, 
-		Minute = 15, 
 		Event = 458, 
 		Tier = 2,
 		Locale = "item"
@@ -289,8 +235,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-electronics", 
 		Points = 8, 
-		Hour = 1, 
-		Minute = 15, 
 		Event = 459, 
 		Tier = 2,
 		Locale = "item"
@@ -299,8 +243,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-electronics", 
 		Points = 8, 
-		Hour = 1, 
-		Minute = 15, 
 		Event = 460, 
 		Tier = 2,
 		Locale = "item"
@@ -309,8 +251,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-electronics", 
 		Points = 8, 
-		Hour = 1, 
-		Minute = 15, 
 		Event = 461, 
 		Tier = 2,
 		Locale = "entity"
@@ -318,9 +258,7 @@ ItemUnlock  =
 	["diesel-locomotive"] = 
 	{
 		Tech = "railway", 
-		Points = 65, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 65,
 		Event = 462, 
 		Tier = 2,
 		Locale = "entity"
@@ -328,9 +266,7 @@ ItemUnlock  =
 	["curved-rail"] = 
 	{
 		Tech = "railway", 
-		Points = 65, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 65,
 		Event = 463, 
 		Tier = 2,
 		Locale = "entity"
@@ -338,9 +274,7 @@ ItemUnlock  =
 	["straight-rail"] = 
 	{
 		Tech = "railway", 
-		Points = 65, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 65,
 		Event = 464, 
 		Tier = 2,
 		Locale = "entity"
@@ -348,9 +282,7 @@ ItemUnlock  =
 	["train-stop"] = 
 	{
 		Tech = "automated-rail-transportation", 
-		Points = 100, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 100,
 		Event = 465, 
 		Tier = 2,
 		Locale = "entity"
@@ -358,9 +290,7 @@ ItemUnlock  =
 	["cargo-wagon"] = 
 	{
 		Tech = "automated-rail-transportation", 
-		Points = 100, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 100,
 		Event = 466, 
 		Tier = 2,
 		Locale = "entity"
@@ -369,8 +299,6 @@ ItemUnlock  =
 	{
 		Tech = "rail-signals", 
 		Points = 400, 
-		Hour = 3, 
-		Minute = 0, 
 		Event = 467, 
 		Tier = 2,
 		Locale = "entity"
@@ -379,8 +307,6 @@ ItemUnlock  =
 	{
 		Tech = "automobilism", 
 		Points = 250, 
-		Hour = 3, 
-		Minute = 0, 
 		Event = 468, 
 		Tier = 2,
 		Locale = "entity"
@@ -389,8 +315,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics-2", 
 		Points = 20, 
-		Hour = 3, 
-		Minute = 0, 
 		Event = 469, 
 		Tier = 2,
 		Locale = "entity"
@@ -399,8 +323,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics-2", 
 		Points = 20, 
-		Hour = 3, 
-		Minute = 0, 
 		Event = 470, 
 		Tier = 2,
 		Locale = "entity"
@@ -409,8 +331,6 @@ ItemUnlock  =
 	{
 		Tech = "logistics-2", 
 		Points = 20, 
-		Hour = 3, 
-		Minute = 0, 
 		Event = 471, 
 		Tier = 2,
 		Locale = "entity"
@@ -418,9 +338,7 @@ ItemUnlock  =
 	["solar-panel"] = 
 	{
 		Tech = "solar-energy", 
-		Points = 180, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 180,
 		Event = 472, 
 		Tier = 2,
 		Locale = "entity"
@@ -429,8 +347,6 @@ ItemUnlock  =
 	{
 		Tech = "rocketry", 
 		Points = 180, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 473, 
 		Tier = 2,
 		Locale = "item"
@@ -439,8 +355,6 @@ ItemUnlock  =
 	{
 		Tech = "rocketry", 
 		Points = 180, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 474, 
 		Tier = 2,
 		Locale = "item"
@@ -448,9 +362,7 @@ ItemUnlock  =
 	["basic-modular-armor"] = 
 	{
 		Tech = "armor-making-3", 
-		Points = 180, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 180,
 		Event = 475, 
 		Tier = 2,
 		Locale = "item"
@@ -459,8 +371,6 @@ ItemUnlock  =
 	{
 		Tech = "laser-turrets", 
 		Points = 180, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 476, 
 		Tier = 2,
 		Locale = "entity"
@@ -469,8 +379,6 @@ ItemUnlock  =
 	{
 		Tech = "gates", 
 		Points = 200, 
-		Hour = 1, 
-		Minute = 0, 
 		Event = 477, 
 		Tier = 2,
 		Locale = "entity"
@@ -478,9 +386,7 @@ ItemUnlock  =
 	["flying-robot-frame"] = 
 	{
 		Tech = "robotics", 
-		Points = 180, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 180,
 		Event = 478, 
 		Tier = 2,
 		Locale = "item"
@@ -489,8 +395,6 @@ ItemUnlock  =
 	{
 		Tech = "alien-technology", 
 		Points = 300, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 479, 
 		Tier = 2,
 		Locale = "item"
@@ -499,8 +403,6 @@ ItemUnlock  =
 	{
 		Tech = "electric-energy-distribution-1", 
 		Points = 40, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 480, 
 		Tier = 2,
 		Locale = "entity"
@@ -509,8 +411,6 @@ ItemUnlock  =
 	{
 		Tech = "electric-energy-distribution-1", 
 		Points = 60, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 481, 
 		Tier = 2,
 		Locale = "entity"
@@ -518,9 +418,7 @@ ItemUnlock  =
 	["basic-accumulator"] = 
 	{
 		Tech = "electric-energy-accumulators-1", 
-		Points = 110, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 110,
 		Event = 482, 
 		Tier = 2,
 		Locale = "entity"
@@ -528,9 +426,7 @@ ItemUnlock  =
 	["steel-furnace"] = 
 	{
 		Tech = "advanced-material-processing", 
-		Points = 90, 
-		Hour = 2, 
-		Minute = 0, 
+		Points = 90,
 		Event = 483, 
 		Tier = 2,
 		Locale = "entity"
@@ -539,8 +435,6 @@ ItemUnlock  =
 	{
 		Tech = "advanced-material-processing-2", 
 		Points = 195, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 484, 
 		Tier = 2,
 		Locale = "entity"
@@ -549,8 +443,6 @@ ItemUnlock  =
 	{
 		Tech = "engine", 
 		Points = 85, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 485, 
 		Tier = 2,
 		Locale = "item"
@@ -558,9 +450,7 @@ ItemUnlock  =
 	["electric-engine-unit"] = 
 	{
 		Tech = "electric-engine", 
-		Points = 90, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 90,
 		Event = 486, 
 		Tier = 2,
 		Locale = "item"
@@ -569,8 +459,6 @@ ItemUnlock  =
 	{
 		Tech = "battery", 
 		Points = 20, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 487, 
 		Tier = 2,
 		Locale = "item"
@@ -579,8 +467,6 @@ ItemUnlock  =
 	{
 		Tech = "battery", 
 		Points = 80, 
-		Hour = 1, 
-		Minute = 30, 
 		Event = 488, 
 		Tier = 2,
 		Locale = "item"
@@ -588,9 +474,7 @@ ItemUnlock  =
 	["speed-module"] = 
 	{
 		Tech = "speed-module", 
-		Points = 100, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 100,
 		Event = 489, 
 		Tier = 2,
 		Locale = "item"
@@ -598,9 +482,7 @@ ItemUnlock  =
 	["effectivity-module"] = 
 	{
 		Tech = "effectivity-module", 
-		Points = 100, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 100,
 		Event = 490, 
 		Tier = 2,
 		Locale = "item"
@@ -608,9 +490,7 @@ ItemUnlock  =
 	["productivity-module"] = 
 	{
 		Tech = "productivity-module", 
-		Points = 100, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 100,
 		Event = 491, 
 		Tier = 2,
 		Locale = "item"
@@ -618,9 +498,7 @@ ItemUnlock  =
 	["roboport"] = 
 	{
 		Tech = "construction-robotics", 
-		Points = 150, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 150,
 		Event = 492, 
 		Tier = 2,
 		Locale = "entity"
@@ -628,9 +506,7 @@ ItemUnlock  =
 	["logistic-chest-passive-provider"] = 
 	{
 		Tech = "construction-robotics", 
-		Points = 25, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 25,
 		Event = 493, 
 		Tier = 2,
 		Locale = "entity"
@@ -638,9 +514,7 @@ ItemUnlock  =
 	["logistic-chest-storage"] = 
 	{
 		Tech = "construction-robotics", 
-		Points = 25, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 25,
 		Event = 494, 
 		Tier = 2,
 		Locale = "entity"
@@ -648,9 +522,7 @@ ItemUnlock  =
 	["construction-robot"] = 
 	{
 		Tech = "construction-robotics", 
-		Points = 100, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 100,
 		Event = 495, 
 		Tier = 2,
 		Locale = "entity"
@@ -659,8 +531,6 @@ ItemUnlock  =
 	{
 		Tech = "automated-construction", 
 		Points = 75, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 496, 
 		Tier = 2,
 		Locale = "item"
@@ -669,8 +539,6 @@ ItemUnlock  =
 	{
 		Tech = "automated-construction", 
 		Points = 75, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 497, 
 		Tier = 2,
 		Locale = "item"
@@ -679,8 +547,6 @@ ItemUnlock  =
 	{
 		Tech = "logistic-robotics", 
 		Points = 100, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 498, 
 		Tier = 2,
 		Locale = "entity"
@@ -688,9 +554,7 @@ ItemUnlock  =
 	["energy-shield-equipment"] = 
 	{
 		Tech = "energy-shield-equipment", 
-		Points = 75, 
-		Hour = 4, 
-		Minute = 15, 
+		Points = 75,
 		Event = 499, 
 		Tier = 2,
 		Locale = "equipment"
@@ -698,9 +562,7 @@ ItemUnlock  =
 	["night-vision-equipment"] = 
 	{
 		Tech = "night-vision-equipment", 
-		Points = 75, 
-		Hour = 4, 
-		Minute = 15, 
+		Points = 75,
 		Event = 500, 
 		Tier = 2,
 		Locale = "equipment"
@@ -708,9 +570,7 @@ ItemUnlock  =
 	["battery-equipment"] = 
 	{
 		Tech = "battery-equipment", 
-		Points = 75, 
-		Hour = 4, 
-		Minute = 15, 
+		Points = 75,
 		Event = 501, 
 		Tier = 2,
 		Locale = "equipment"
@@ -718,9 +578,7 @@ ItemUnlock  =
 	["solar-panel-equipment"] = 
 	{
 		Tech = "solar-panel-equipment", 
-		Points = 75, 
-		Hour = 4, 
-		Minute = 15, 
+		Points = 75,
 		Event = 502, 
 		Tier = 2,
 		Locale = "equipment"
@@ -728,9 +586,7 @@ ItemUnlock  =
 	["storage-tank"] = 
 	{
 		Tech = "fluid-handling", 
-		Points = 50, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 50,
 		Event = 503, 
 		Tier = 2,
 		Locale = "entity"
@@ -738,9 +594,7 @@ ItemUnlock  =
 	["small-pump"] = 
 	{
 		Tech = "fluid-handling", 
-		Points = 40, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 40,
 		Event = 504, 
 		Tier = 2,
 		Locale = "entity"
@@ -748,39 +602,15 @@ ItemUnlock  =
 	["empty-barrel"] = 
 	{
 		Tech = "fluid-handling", 
-		Points = 25, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 25,
 		Event = 505, 
 		Tier = 2,
 		Locale = "item"
 	},
-	["fill-crude-oil-barrel"] = 
-	{
-		Tech = "fluid-handling", 
-		Points = 10, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 506, 
-		Tier = 2,
-		Locale = "recipe"
-	},
-	["empty-crude-oil-barrel"] = 
-	{
-		Tech = "fluid-handling", 
-		Points = 10, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 507, 
-		Tier = 2,
-		Locale = "recipe"
-	},
 	["pumpjack"] = 
 	{
 		Tech = "oil-processing", 
-		Points = 20, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 20,
 		Event = 508, 
 		Tier = 2,
 		Locale = "entity"
@@ -788,9 +618,7 @@ ItemUnlock  =
 	["oil-refinery"] = 
 	{
 		Tech = "oil-processing", 
-		Points = 50, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 50,
 		Event = 509, 
 		Tier = 2,
 		Locale = "entity"
@@ -798,89 +626,23 @@ ItemUnlock  =
 	["chemical-plant"] = 
 	{
 		Tech = "oil-processing", 
-		Points = 50, 
-		Hour = 2, 
-		Minute = 15, 
+		Points = 50,
 		Event = 510, 
 		Tier = 2,
 		Locale = "entity"
 	},
-	["basic-oil-processing"] = 
-	{
-		Tech = "oil-processing", 
-		Points = 25, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 511, 
-		Tier = 2,
-		Locale = "recipe"
-	},
-	["solid-fuel-from-light-oil"] = 
-	{
-		Tech = "oil-processing", 
-		Points = 10, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 512, 
-		Tier = 2,
-		Locale = "recipe"
-	},
-	["solid-fuel-from-petroleum-gas"] = 
-	{
-		Tech = "oil-processing", 
-		Points = 10, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 513, 
-		Tier = 2,
-		Locale = "recipe"
-	},
-	["solid-fuel-from-heavy-oil"] = 
-	{
-		Tech = "oil-processing", 
-		Points = 10, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 514, 
-		Tier = 2,
-		Locale = "recipe"
-	},
-	["lubricant"] = 
-	{
-		Tech = "oil-processing", 
-		Points = 50, 
-		Hour = 2, 
-		Minute = 15, 
-		Event = 515, 
-		Tier = 2,
-		Locale = "fluid"
-	},
 	["sulfur"] = 
 	{
 		Tech = "sulfur-processing", 
-		Points = 75, 
-		Hour = 2, 
-		Minute = 30, 
+		Points = 75,
 		Event = 516, 
 		Tier = 2,
 		Locale = "item"
 	},
-	["sulfuric-acid"] = 
-	{
-		Tech = "sulfur-processing", 
-		Points = 125, 
-		Hour = 2, 
-		Minute = 30, 
-		Event = 517, 
-		Tier = 2,
-		Locale = "fluid"
-	},
 	["plastic-bar"] = 
 	{
 		Tech = "plastics", 
-		Points = 150, 
-		Hour = 2, 
-		Minute = 20, 
+		Points = 150,
 		Event = 518, 
 		Tier = 2,
 		Locale = "item"
@@ -889,8 +651,6 @@ ItemUnlock  =
 	{
 		Tech = "combat-robotics", 
 		Points = 300, 
-		Hour = 3, 
-		Minute = 30, 
 		Event = 519, 
 		Tier = 2,
 		Locale = "item"
@@ -899,9 +659,7 @@ ItemUnlock  =
 	["poison-capsule"] = 
 	{
 		Tech = "military-3", 
-		Points = 40, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 40,
 		Event = 901, 
 		Tier = 3,
 		Locale = "item"
@@ -909,9 +667,7 @@ ItemUnlock  =
 	["slowdown-capsule"] = 
 	{
 		Tech = "military-3", 
-		Points = 40, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 40,
 		Event = 902, 
 		Tier = 3,
 		Locale = "item"
@@ -919,9 +675,7 @@ ItemUnlock  =
 	["combat-shotgun"] = 
 	{
 		Tech = "military-3", 
-		Points = 120, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 120,
 		Event = 903, 
 		Tier = 3,
 		Locale = "item"
@@ -929,9 +683,7 @@ ItemUnlock  =
 	["assembling-machine-3"] = 
 	{
 		Tech = "automation-3", 
-		Points = 250, 
-		Hour = 4, 
-		Minute = 45, 
+		Points = 250,
 		Event = 904, 
 		Tier = 3,
 		Locale = "entity"
@@ -940,8 +692,6 @@ ItemUnlock  =
 	{
 		Tech = "tanks", 
 		Points = 100, 
-		Hour = 5, 
-		Minute = 30, 
 		Event = 905, 
 		Tier = 3,
 		Locale = "entity"
@@ -950,8 +700,6 @@ ItemUnlock  =
 	{
 		Tech = "tanks", 
 		Points = 20, 
-		Hour = 5, 
-		Minute = 30, 
 		Event = 906, 
 		Tier = 3,
 		Locale = "item"
@@ -959,9 +707,7 @@ ItemUnlock  =
 	["express-transport-belt"] = 
 	{
 		Tech = "logistics-3", 
-		Points = 150, 
-		Hour = 6, 
-		Minute = 30, 
+		Points = 150,
 		Event = 907, 
 		Tier = 3,
 		Locale = "entity"
@@ -969,9 +715,7 @@ ItemUnlock  =
 	["express-transport-belt-to-ground"] = 
 	{
 		Tech = "logistics-3", 
-		Points = 75, 
-		Hour = 6, 
-		Minute = 30, 
+		Points = 75,
 		Event = 908, 
 		Tier = 3,
 		Locale = "entity"
@@ -979,9 +723,7 @@ ItemUnlock  =
 	["express-splitter"] = 
 	{
 		Tech = "logistics-3", 
-		Points = 75, 
-		Hour = 6, 
-		Minute = 30, 
+		Points = 75,
 		Event = 909, 
 		Tier = 3,
 		Locale = "entity"
@@ -989,9 +731,7 @@ ItemUnlock  =
 	["explosive-rocket"] = 
 	{
 		Tech = "explosive-rocketry", 
-		Points = 250, 
-		Hour = 7, 
-		Minute = 30, 
+		Points = 250,
 		Event = 910, 
 		Tier = 3,
 		Locale = "item"
@@ -999,9 +739,7 @@ ItemUnlock  =
 	["power-armor"] = 
 	{
 		Tech = "power-armor", 
-		Points = 300, 
-		Hour = 8, 
-		Minute = 30, 
+		Points = 300,
 		Event = 911, 
 		Tier = 3,
 		Locale = "item"
@@ -1010,8 +748,6 @@ ItemUnlock  =
 	{
 		Tech = "effect-transmission", 
 		Points = 250, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 912, 
 		Tier = 3,
 		Locale = "entity"
@@ -1020,8 +756,6 @@ ItemUnlock  =
 	{
 		Tech = "speed-module-2", 
 		Points = 200, 
-		Hour = 5, 
-		Minute = 30, 
 		Event = 913, 
 		Tier = 3,
 		Locale = "item"
@@ -1030,8 +764,6 @@ ItemUnlock  =
 	{
 		Tech = "effectivity-module-2", 
 		Points = 200, 
-		Hour = 5, 
-		Minute = 30, 
 		Event = 914, 
 		Tier = 3,
 		Locale = "item"
@@ -1040,8 +772,6 @@ ItemUnlock  =
 	{
 		Tech = "productivity-module-2", 
 		Points = 200, 
-		Hour = 5, 
-		Minute = 30, 
 		Event = 915, 
 		Tier = 3,
 		Locale = "item"
@@ -1049,9 +779,7 @@ ItemUnlock  =
 	["logistic-chest-active-provider"] = 
 	{
 		Tech = "logistic-system", 
-		Points = 200, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 200,
 		Event = 916, 
 		Tier = 3,
 		Locale = "entity"
@@ -1059,9 +787,7 @@ ItemUnlock  =
 	["logistic-chest-requester"] = 
 	{
 		Tech = "logistic-system", 
-		Points = 250, 
-		Hour = 4, 
-		Minute = 30, 
+		Points = 250,
 		Event = 917, 
 		Tier = 3,
 		Locale = "entity"
@@ -1070,8 +796,6 @@ ItemUnlock  =
 	{
 		Tech = "energy-shield-mk2-equipment", 
 		Points = 300, 
-		Hour = 9, 
-		Minute = 30, 
 		Event = 918, 
 		Tier = 3,
 		Locale = "equipment"
@@ -1080,8 +804,6 @@ ItemUnlock  =
 	{
 		Tech = "battery-mk2-equipment", 
 		Points = 300, 
-		Hour = 9, 
-		Minute = 30, 
 		Event = 919, 
 		Tier = 3,
 		Locale = "equipment"
@@ -1090,8 +812,6 @@ ItemUnlock  =
 	{
 		Tech = "basic-laser-defense-equipment", 
 		Points = 300, 
-		Hour = 9, 
-		Minute = 30, 
 		Event = 920, 
 		Tier = 3,
 		Locale = "equipment"
@@ -1100,8 +820,6 @@ ItemUnlock  =
 	{
 		Tech = "fusion-reactor-equipment", 
 		Points = 300, 
-		Hour = 9, 
-		Minute = 30, 
 		Event = 921, 
 		Tier = 3,
 		Locale = "equipment"
@@ -1110,48 +828,14 @@ ItemUnlock  =
 	{
 		Tech = "basic-exoskeleton-equipment", 
 		Points = 300, 
-		Hour = 9, 
-		Minute = 30, 
 		Event = 922, 
 		Tier = 3,
 		Locale = "equipment"
 	},
-	["advanced-oil-processing"] = 
-	{
-		Tech = "advanced-oil-processing", 
-		Points = 75, 
-		Hour = 8, 
-		Minute = 30, 
-		Event = 923, 
-		Tier = 3,
-		Locale = "recipe"
-	},
-	["heavy-oil-cracking"] = 
-	{
-		Tech = "advanced-oil-processing", 
-		Points = 75, 
-		Hour = 8, 
-		Minute = 30, 
-		Event = 924, 
-		Tier = 3,
-		Locale = "recipe"
-	},
-	["light-oil-cracking"] = 
-	{
-		Tech = "advanced-oil-processing", 
-		Points = 75, 
-		Hour = 8, 
-		Minute = 30, 
-		Event = 925, 
-		Tier = 3,
-		Locale = "recipe"
-	},
 	["substation"] = 
 	{
 		Tech = "electric-energy-distribution-2", 
-		Points = 250, 
-		Hour = 6, 
-		Minute = 30, 
+		Points = 250,
 		Event = 926, 
 		Tier = 3,
 		Locale = "entity"
@@ -1159,30 +843,32 @@ ItemUnlock  =
 	["distractor-capsule"] = 
 	{
 		Tech = "combat-robotics-2", 
-		Points = 500, 
-		Hour = 7, 
-		Minute = 0, 
+		Points = 500,
 		Event = 927, 
 		Tier = 3,
 		Locale = "item"
 	},
-	-- Tier 4 Base Game
-	["rocket-defense"] = 
+	["bundled-wire"] = 
 	{
-		Tech = "rocket-defense", 
-		Points = 5000, 
-		Hour = 20, 
-		Minute = 0, 
-		Event = 1351, 
-		Tier = 4,
-		Locale = "entity"
+		Tech = "advanced-cables", 
+		Points = 250,
+		Event = 928, 
+		Tier = 3,
+		Locale = "item"
 	},
+	["advanced-processing-unit"] = 
+	{
+		Tech = "advanced-processing-unit", 
+		Points = 500,
+		Event = 929, 
+		Tier = 3,
+		Locale = "item"
+	},
+	-- Tier 4 Base Game
 	["power-armor-mk2"] = 
 	{
 		Tech = "power-armor-2", 
 		Points = 850, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1352, 
 		Tier = 4,
 		Locale = "item"
@@ -1191,8 +877,6 @@ ItemUnlock  =
 	{
 		Tech = "military-4", 
 		Points = 500, 
-		Hour = 10, 
-		Minute = 30, 
 		Event = 1353, 
 		Tier = 4,
 		Locale = "item"
@@ -1201,8 +885,6 @@ ItemUnlock  =
 	{
 		Tech = "speed-module-3", 
 		Points = 1000, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1354, 
 		Tier = 4,
 		Locale = "item"
@@ -1211,8 +893,6 @@ ItemUnlock  =
 	{
 		Tech = "productivity-module-3", 
 		Points = 1000, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1355, 
 		Tier = 4,
 		Locale = "item"
@@ -1221,8 +901,6 @@ ItemUnlock  =
 	{
 		Tech = "effectivity-module-3", 
 		Points = 1000, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1356, 
 		Tier = 4,
 		Locale = "item"
@@ -1231,8 +909,6 @@ ItemUnlock  =
 	{
 		Tech = "basic-electric-discharge-defense-equipment", 
 		Points = 1000, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1357, 
 		Tier = 4,
 		Locale = "equipment"
@@ -1241,8 +917,6 @@ ItemUnlock  =
 	{
 		Tech = "basic-electric-discharge-defense-equipment", 
 		Points = 1000, 
-		Hour = 10, 
-		Minute = 0, 
 		Event = 1358, 
 		Tier = 4,
 		Locale = "item"
@@ -1251,8 +925,14 @@ ItemUnlock  =
 	{
 		Tech = "combat-robotics-3", 
 		Points = 1200, 
-		Hour = 10, 
-		Minute = 0, 
+		Event = 1359, 
+		Tier = 4,
+		Locale = "item"
+	},
+	["destroyer-capsule"] = 
+	{
+		Tech = "combat-robotics-3", 
+		Points = 1200, 
 		Event = 1359, 
 		Tier = 4,
 		Locale = "item"

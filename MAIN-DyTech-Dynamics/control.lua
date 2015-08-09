@@ -33,7 +33,6 @@ local hours = math.floor(minutes/60)
 		global.Log[hours..":"..(minutes-(hours*60))..":"..(seconds-(minutes*60))] = str
 	end
 end
-end
 
 function PlayerPrint(message)
 	if global.Messages then
@@ -58,73 +57,73 @@ game.on_load(function()
 	if not global.Collectors then global.Collectors = {} end
 end)
 
-game.on_event(defines.events.ontick, function(event)
-	if Research_System and global.ResearchSystem.RSAutomatic then	
+game.on_event(defines.events.on_tick, function(event)
+	if Config.Research_System and global.ResearchSystem.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
-	if game.tick%300==1 then
-		GUI.CreateButton()
-	end
-	if Collectors then
+	if Config.Collectors then
 		if not global.Collectors.Working then
 			fs.StartupCollectors()
 		else
 			CollectorFunctions.ticker()
 		end
 	end
+	if event.tick%108000==1 then
+		ARS.Amount_Of_Events()
+	end
 end)
 
 game.on_event(defines.events.on_research_started, function(event)
-if Research_System then	
+if Config.Research_System then	
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
-	debug("Research Started ("..tostring(event.research)..")")
-	if not global.Technology[event.research].Started then
-		local ingredients = game.forces.player.technologies[event.research].researchunitcount
+	debug("Research Started ("..tostring(event.research.name)..")")
+	if not global.Technology[event.research.name].Started then
+		local ingredients = game.forces.player.technologies[event.research.name].research_unit_count
 		global.ResearchSystem.science=global.ResearchSystem.science+(ingredients/10)
 		debug("Research found in globalal table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(global.ResearchSystem.science))
-		global.Technology[event.research].Started = true
+		global.Technology[event.research.name].Started = true
 	end
 else 
-	if not global.Technology[event.research] then
+	if not global.Technology[event.research.name] then
 		fs.InitHalfwayTechnology(event)
 	else
-		global.Technology[event.research].Started = true
+		global.Technology[event.research.name].Started = true
 	end
 end
 end)
 
 game.on_event(defines.events.on_research_finished, function(event)
-if Auto_Researcher then
+if Config.Auto_Researcher then
 	AutoResearch.AutoMode()
 end
-if Research_System then	
+if Config.Research_System then	
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
-	debug("Research Finished ("..tostring(event.research)..")")
-	if not global.Technology[event.research].Finished then
-		local ingredients = game.forces.player.technologies[event.research].research_unit_count
+	debug("Research Finished ("..tostring(event.research.name)..")")
+	if not global.Technology[event.research.name].Finished then
+		local ingredients = game.forces.player.technologies[event.research.name].research_unit_count
 		global.ResearchSystem.science=global.ResearchSystem.science+((ingredients/10)*9)
 		debug("Research found in globalal table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(global.ResearchSystem.science))
-		global.Technology[event.research].Finished = true
+		global.Technology[event.research.name].Finished = true
 	end
 else 	
-	global.Technology[event.research].Finished = true
+	global.Technology[event.research.name].Finished = true
 end
 end)
 
 game.on_event(defines.events.on_built_entity, function(event)
-	if Collectors then
+	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
 end)
 
 game.on_event(defines.events.on_robot_built_entity, function(event)
-	if Collectors then
+	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
 end)
 
-game.on_event(defines.events.on_playe_rmined_item, function(event)
-	if Collectors and event.item_stack.name == "item-collector-area" then
+game.on_event(defines.events.on_player_mined_item, function(event)
+	if Config.Collectors and event.item_stack.name == "item-collector-area" then
 		if global.Collectors.Amount==0 then
 			global.Collectors.Amount = 0
 		else
@@ -134,7 +133,7 @@ game.on_event(defines.events.on_playe_rmined_item, function(event)
 end)
 
 game.on_event(defines.events.on_robot_mined, function(event)
-	if Collectors and event.item_stack.name == "item-collector-area" then
+	if Config.Collectors and event.item_stack.name == "item-collector-area" then
 		if global.Collectors.Amount==0 then
 			global.Collectors.Amount = 0
 		else
@@ -146,12 +145,10 @@ end)
 game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
-	if event.element.name == "DynamicsButton" then
-		GUI.closeGUI("all", playerIndex)
-		GUI.showDynamicsMainGUI(playerIndex)
-	elseif event.element.name:find(guiNames.CloseButton) then
+	if event.element.name:find(guiNames.CloseButton) then
 		GUI.closeGUI("all", playerIndex)
 		RSF.ClearToUnlock()
+        remote.call("DyTech-Core", "OpenMainGUI", playerIndex)
 	elseif event.element.name:find(guiNames.MRSBackButton1) then
 		GUI.closeGUI("ResearchUnlock", playerIndex)
 	elseif event.element.name:find(guiNames.MRSBackButton2) then
@@ -231,15 +228,9 @@ local player = game.players[playerIndex]
 		end
 		GUI.closeGUI("Collectors", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
-	elseif event.element.name:find(guiNames.DebugButton1) then
-		GUI.closeGUI("all", playerIndex)
-		remote.call("DyTech-Dynamics", "DataDump")
-		if remote.interfaces["DyTech-Core"] then
-			remote.call("DyTech-Core", "Logger")
-		end
-		if remote.interfaces["DyTech-War"] then
-			remote.call("DyTech-War", "DataDump")
-		end
+	elseif event.element.name == "DyTech-Dynamics-Button" then
+        remote.call("DyTech-Core", "CloseMainGUI", playerIndex)
+		GUI.showDynamicsMainGUI(playerIndex)		
 	end
 end)
 
@@ -264,6 +255,10 @@ remote.add_interface("DyTech-Dynamics",
 		end
 	end,
 	
+	DEBUG = function(name)
+		global.ResearchSystem.science = global.ResearchSystem.science + 100000
+	end,
+	
 	DataDumpDatabase = function()
 		global.DatabaseNames = {} 
 		global.DatabaseNumbers = {}
@@ -277,10 +272,11 @@ remote.add_interface("DyTech-Dynamics",
 	end,
 	
 	DataDump = function()
-		game.makefile("DyTech/DataDump/ResearchSystem.txt", serpent.block(global.ResearchSystem))
-		game.makefile("DyTech/DataDump/Collectors.txt", serpent.block(global.Collectors))
-		game.makefile("DyTech/DataDump/Technology.txt", serpent.block(global.Technology))
+		game.makefile("DyTech/DataDump/Dynamics-ResearchSystem.txt", serpent.block(global.ResearchSystem))
+		game.makefile("DyTech/DataDump/Dynamics-Collectors.txt", serpent.block(global.Collectors))
+		game.makefile("DyTech/DataDump/Dynamics-Technology.txt", serpent.block(global.Technology))
 		game.makefile("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
+		game.makefile("DyTech/Config/Dynamics.txt", serpent.block(Config))
 	end,
 	
 	SwitchRS = function()

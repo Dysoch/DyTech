@@ -6,6 +6,7 @@ global.ResearchSystem.RSAutomatic = false
 global.ResearchSystem.RSManual = true
 global.ResearchSystem.ToUnlock = {}
 global.ResearchSystem.science = 0
+global.ResearchSystem.Amount_Enabled = 0
 global.Collectors = {}
 global.Collectors.Range = 25
 global.Collectors.Working = true
@@ -15,9 +16,7 @@ global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 global.Messages = true
 InitTechnologyTable()
-   if not game.forces.player.current_research and game.forces.player.technologies["automation"].researched==false then
-      game.forces.player.current_research = "automation"
-   end
+ARS.Amount_Of_Events()
 end
 
 function StartupCollectors()

@@ -1,49 +1,91 @@
-data.raw["gui-style"]["default"]["research-button"] = 
+data.raw["gui-style"].default["blank".."_DyTech_button_style"]  =
+{
+  type = "checkbox_style",
+  parent = "checkbox_style",
+  width = 38,
+  height = 45,
+  hovered_background =
   {
-	type = "button_style",
-	font = "default-button",
-	default_font_color={r=1, g=0, b=1},
-	align = "center",
-    top_padding = 5,
-    right_padding = 5,
-    bottom_padding = 5,
-    left_padding = 5,
-	width = 100,
-	height = 30,
-	default_graphical_set =
-      {
-        type = "composition",
-        filename = "__core__/graphics/gui.png",
-        priority = "extra-high-no-scale",
-        corner_size = {3, 3},
-        position = {0, 0}
-      },
-      hovered_font_color={r=1, g=1, b=1},
-      hovered_graphical_set =
-      {
-        type = "composition",
-        filename = "__core__/graphics/gui.png",
-        priority = "extra-high-no-scale",
-        corner_size = {3, 3},
-        position = {0, 8}
-      },
-      clicked_font_color={r=1, g=1, b=1},
-      clicked_graphical_set =
-      {
-        type = "composition",
-        filename = "__core__/graphics/gui.png",
-        priority = "extra-high-no-scale",
-        corner_size = {3, 3},
-        position = {0, 16}
-      },
-      disabled_font_color={r=0.5, g=0.5, b=0.5},
-      disabled_graphical_set =
-      {
-        type = "composition",
-        filename = "__core__/graphics/gui.png",
-        priority = "extra-high-no-scale",
-        corner_size = {3, 3},
-        position = {0, 0}
-      },
-      pie_progress_color = {r=1, g=1, b=1}
+    filename = "__core__/graphics/gui.png",
+    priority = "extra-high-no-scale",
+    width = 35,
+    height = 35,
+    x = 185,
+    y = 0
+  },
+  default_background =
+  {
+    filename = "__core__/graphics/gui.png",
+    priority = "extra-high-no-scale",
+    width = 35,
+    height = 35,
+    x = 185,
+    y = 0
+  },
+  checked =
+  {
+    filename = "__core__/graphics/gui.png",
+    priority = "extra-high-no-scale",
+    width = 35,
+    height = 35,
+    x = 185,
+    y = 0
+  },
+  clicked_background =
+  {
+    filename = "__core__/graphics/gui.png",
+    priority = "extra-high-no-scale",
+    width = 35,
+    height = 35,
+    x = 111,
+    y = 0
   }
+}
+
+for a, b in pairs(data.raw) do
+  for name, item in pairs(b) do
+    if item.stack_size then
+      data.raw["gui-style"].default[name.."_DyTech_button_style"]  =
+      {
+        type = "checkbox_style",
+        parent = "checkbox_style",
+        width = 38,
+        height = 45,
+        hovered_background =
+        {
+          filename = item.icon,
+          priority = "extra-high-no-scale",
+          width = 32,
+          height = 32,
+          x = 0,
+          y = 0
+        },
+        default_background =
+        {
+          filename = item.icon,
+          priority = "extra-high-no-scale",
+          width = 32,
+          height = 32,
+          x = 0,
+          y = 0
+        },
+        checked =
+        {
+          filename = "__core__/graphics/gui.png",
+          priority = "extra-high-no-scale",
+          width = 0,
+          height = 0
+        },
+        clicked_background =
+        {
+          filename = "__core__/graphics/gui.png",
+          priority = "extra-high-no-scale",
+          width = 35,
+          height = 35,
+          x = 111
+        }
+      }
+    end
+  end
+end
+

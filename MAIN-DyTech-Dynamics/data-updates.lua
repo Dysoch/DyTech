@@ -17,7 +17,7 @@ function RemoveFromTechManual(Tech, Recipe)
 		end
 end
 
-if Research_System then
+if Config.Research_System then
 	RemoveFromTechAuto()
 	-- The following Recipes are already in the database, but are twice as unlock available in the game. The second needs to be removed without the database.
 	RemoveFromTechManual("logistic-robotics", "roboport")
