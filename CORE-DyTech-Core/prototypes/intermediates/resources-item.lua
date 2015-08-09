@@ -7,7 +7,13 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-raw",
     order = "sand",
-    stack_size = 5000
+    stack_size = 5000,
+    place_as_tile =
+    {
+      result = "sand",
+      condition_size = 4,
+      condition = { "water-tile" }
+    }
   },
   {
     type = "item",

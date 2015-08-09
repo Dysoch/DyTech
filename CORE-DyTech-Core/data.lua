@@ -72,6 +72,9 @@ require("prototypes.item-group.invisible")
 -- Noise Layers
 require("prototypes.tile.noise-layers")
 
+-- Tiles
+require("prototypes.tile.tiles")
+
 -- Catergories
 require("prototypes.categories.ammo-category")
 require("prototypes.categories.recipe-category")

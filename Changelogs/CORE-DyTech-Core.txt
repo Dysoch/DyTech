@@ -1,5 +1,16 @@
 [size=200]DyTech-Core[/size]
 
+[spoiler=v1.3.0][i][size=150][b]v1.3.0:[/b][/size][/i]
+Released: ?? 2015
+[list]
+[*] Features:
+[list][*] Added in Floors! (Sand)
+[/list]
+[*] Bugfixes :
+[list] 
+[/list]
+[/list][/spoiler]
+
 [spoiler=v1.2.1][i][size=150][b]v1.2.1:[/b][/size][/i]
 Released: August 8th 2015
 [size=200]NOTE: because of some changes, old savegames MIGHT be broken/corrupted!
