@@ -4,7 +4,7 @@
 Released: ?? 2015
 [list]
 [*] Features:
-[list][*] Added in Floors! (Sand)
+[list][*] Added in Floors! (Sand, Sandbag)
 [/list]
 [*] Bugfixes :
 [list] 

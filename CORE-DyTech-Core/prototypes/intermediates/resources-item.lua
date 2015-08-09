@@ -22,7 +22,13 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "dytech-intermediates-processed",
     order = "sandbag",
-    stack_size = 500
+    stack_size = 500,
+    place_as_tile =
+    {
+      result = "sandbag",
+      condition_size = 4,
+      condition = { "water-tile" }
+    }
   },
   {
     type = "item",
