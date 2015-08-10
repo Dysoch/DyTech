@@ -8,15 +8,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "steam-engine-primary-mk2"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "steam-engine-secondary-mk2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "steam-engine-terciary-mk2"
       },
     },
     prerequisites = {"oil-processing", "capacitor-1"},
@@ -40,15 +32,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "steam-engine-primary-mk3"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "steam-engine-secondary-mk3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "steam-engine-terciary-mk3"
       },
     },
     prerequisites = {"steam-1", "rotor-1", "capacitor-2", "frame-1"},
@@ -73,15 +57,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "steam-engine-primary-mk4"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "steam-engine-secondary-mk4"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "steam-engine-terciary-mk4"
       },
     },
     prerequisites = {"steam-2", "rotor-2", "capacitor-3", "frame-2"},
@@ -107,15 +83,7 @@ data:extend(
     {
       {
         type = "unlock-recipe",
-        recipe = "steam-engine-primary-mk5"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "steam-engine-secondary-mk5"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "steam-engine-terciary-mk5"
       },
     },
     prerequisites = {"steam-3", "rotor-3", "capacitor-4", "frame-3"},
