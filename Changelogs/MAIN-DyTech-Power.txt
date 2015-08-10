@@ -4,10 +4,13 @@
 Released: August 8th 2015
 [list]
 [*] Features:
-[list] [*]
+[list] [*] Steam Engine Switching. You now make only secondary steam engines, and you can switch them to primary or tertiary by standing next to it and enabling the gui in the DyTech Power GUI. There you can switch. Mining an primary or tertiary gives the secondary back.
 [/list]
 [*] Balancing:
 [list] [*] Made Recipes of Solar Panels mk I the same.
+[/list]
+[*] Bugfixes :
+[list] [*] Fixed GUI error when loading a map.
 [/list]
 [/list][/spoiler]
 
