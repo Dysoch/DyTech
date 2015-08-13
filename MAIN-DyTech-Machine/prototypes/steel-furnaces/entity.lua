@@ -66,7 +66,7 @@ data:extend(
           width = 36,
           height = 19,
           frame_count = 12,
-          shift = { -0.05, 0.65}
+          shift = { 0.0625, 0.375}
         },
         light = {intensity = 1, size = 1}
       }
@@ -139,7 +139,7 @@ data:extend(
           width = 36,
           height = 19,
           frame_count = 12,
-          shift = { -0.05, 0.65}
+          shift = { 0.0625, 0.375}
         },
         light = {intensity = 1, size = 1}
       }
@@ -212,7 +212,7 @@ data:extend(
           width = 36,
           height = 19,
           frame_count = 12,
-          shift = { -0.05, 0.65}
+          shift = { 0.0625, 0.375}
         },
         light = {intensity = 1, size = 1}
       }
@@ -285,7 +285,7 @@ data:extend(
           width = 36,
           height = 19,
           frame_count = 12,
-          shift = { -0.05, 0.65}
+          shift = { 0.0625, 0.375}
         },
         light = {intensity = 1, size = 1}
       }

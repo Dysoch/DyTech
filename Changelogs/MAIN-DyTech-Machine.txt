@@ -10,7 +10,7 @@ Released: ?? 2015
 [list] [*] 
 [/list]
 [*] Bugfixes: 
-[list] [*] 
+[list] [*] Fixed Wrong Graphics of Fire at Steel Furnaces.
 [/list]
 [*] Balancing: 
 [list] [*] Balanced Armored Car. It should be a lot better now!
