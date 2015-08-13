@@ -8,6 +8,7 @@
 [*] Removed text buttons for unlocks, added in Icons! The tier screen can now hold more unlocks!
 [*] Added in all of DyTechs recipes. Amount of unlocks now rests around 401 (CORE, WAR and MACHINE!)
 [*] Implemented a working Auto Researcher! This will automatically select a new tech for you. It is random though!
+[*] Added Dynamic Power. A Scripted power of sorts. Currently only things you can do with it are giving boosts to crafting, mining and researching. Amount of power is unlimited!
 [/list]
 [*] Changes:
 [list] [*] Increased Stability of Research System.

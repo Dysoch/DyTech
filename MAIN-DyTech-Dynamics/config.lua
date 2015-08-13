@@ -15,6 +15,10 @@ Config.Research_System = true
 -- THIS NEEDS TO BE DISABLED TO FULLY USE THIS FUNCTION!!
 Config.Auto_Researcher = true
 
+--[[ Dynamic Power ]]--
+-- WIP!!!
+Config.Dynamic_Power = true
+
 --[[ Dynamic Items Toggle ]]--
 Config.Dynamic_Tools = false
 

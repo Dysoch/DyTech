@@ -5,6 +5,8 @@ require "database/research-system"
 require "scripts/automatic-research-system"
 require "scripts/auto-researcher-new"
 require "scripts/collectors"
+require "scripts/dynamic-power"
+require "scripts/dynamic-power-boost"
 require "scripts/manual-research-system"
 require "scripts/rs-functions"
 require "scripts/functions"
@@ -13,7 +15,7 @@ require "scripts/guinames"
 require "scripts/test-functions"
 
 --[[Debug Functions]]--
-debug_master = true -- Master switch for debugging, shows most things!
+debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
 debug_GUI = false -- debugger for GUI
@@ -44,7 +46,8 @@ end
 
 game.on_init(function()
 	if not global.ResearchSystem then global.ResearchSystem = {} end
-fs.Startup()
+	fs.Startup()
+	Power.Startup()
 end)
 
 game.on_save(function()
@@ -70,6 +73,9 @@ game.on_event(defines.events.on_tick, function(event)
 	end
 	if event.tick%108000==1 then
 		RSF.Amount_Of_Events()
+	end
+	if Config.Dynamic_Power and event.tick%60==1 then
+		Power.Ticker()
 	end
 end)
 
@@ -114,11 +120,17 @@ game.on_event(defines.events.on_built_entity, function(event)
 	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
+	if Config.Dynamic_Power then
+		Power.Built_Entity(event)
+	end
 end)
 
 game.on_event(defines.events.on_robot_built_entity, function(event)
 	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
+	end
+	if Config.Dynamic_Power then
+		Power.Built_Entity(event)
 	end
 end)
 
@@ -130,6 +142,9 @@ game.on_event(defines.events.on_player_mined_item, function(event)
 			global.Collectors.Amount = global.Collectors.Amount - 1
 		end
 	end
+	if Config.Dynamic_Power then
+		Power.Mined_Entity(event)
+	end
 end)
 
 game.on_event(defines.events.on_robot_mined, function(event)
@@ -139,6 +154,15 @@ game.on_event(defines.events.on_robot_mined, function(event)
 		else
 			global.Collectors.Amount = global.Collectors.Amount - 1
 		end
+	end
+	if Config.Dynamic_Power then
+		Power.Mined_Entity(event)
+	end
+end)
+
+game.on_event(defines.events.on_entity_died, function(event)
+	if Config.Dynamic_Power then
+		Power.Died_Entity(event)
 	end
 end)
 
@@ -245,6 +269,18 @@ local player = game.players[playerIndex]
 		if global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false else global.AutoResearcher.Tier3 = true end
 	elseif event.element.name == "auto-researcher-tier-4" then	 
 		if global.AutoResearcher.Tier4 then global.AutoResearcher.Tier4 = false else global.AutoResearcher.Tier4 = true end
+	elseif event.element.name:find(guiNames.DynamicPowerButton) then
+		GUI.closeGUI("all", playerIndex)
+		Power.GUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamic-Power-Close-Button" then
+		GUI.closeGUI("all", playerIndex)
+        remote.call("DyTech-Core", "OpenMainGUI", playerIndex)
+	elseif event.element.name == "DyTech-Dynamic-Power-Crafter-Button" then
+		PowerBoost.Crafting_Boost("start")
+	elseif event.element.name == "DyTech-Dynamic-Power-Miner-Button" then
+		PowerBoost.Mining_Boost("start")
+	elseif event.element.name == "DyTech-Dynamic-Power-Research-Button" then
+		PowerBoost.Researching_Boost("start")
 	end
 end)
 
@@ -293,6 +329,10 @@ remote.add_interface("DyTech-Dynamics",
 		game.makefile("DyTech/DataDump/Dynamics-Auto_Researcher.txt", serpent.block(global.Auto_Researcher))
 		game.makefile("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
 		game.makefile("DyTech/Config/Dynamics.txt", serpent.block(Config))
+	end,
+	
+	IncreaseDynamicPower = function()	
+		global.Dynamic_Power.Power = global.Dynamic_Power.Power + (1000*1000*10)
 	end,
 	
 	SwitchRS = function()

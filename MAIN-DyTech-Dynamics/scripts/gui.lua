@@ -15,6 +15,9 @@ end
 if Config.Auto_Researcher then 
 	adder.add({type="button", name="DyTech-Dynamics-AutoResearcher-Button", caption={"auto-researcher"}}) 
 end
+if Config.Dynamic_Power then 
+	adder.add({type="button", name=guiNames.DynamicPowerButton, caption={"dynamic-power"}}) 
+end
 if Config.Dynamic_Tools then 
 	adder.add({type="button", name=guiNames.DynamicToolsButton, caption={"dynamic-tools"}}) 
 end
@@ -44,6 +47,9 @@ function closeGUI(statement, PlayerIndex)
 		end
 		if game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow] and game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].destroy()
+		end
+		if game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"] and game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"].destroy()
 		end
 	elseif statement=="DynamicsMain" then
 		if game.players[PlayerIndex].gui.top[guiNames.mainDynamicFlow] and game.players[PlayerIndex].gui.top[guiNames.mainDynamicFlow].valid then

@@ -6,6 +6,7 @@ mainDynamicFlow="mainDynamicFlow"
 ResearchButton="ResearchButton"
 AutoResearcherButton="AutoResearcherButton"
 DynamicToolsButton="DynamicToolsButton"
+DynamicPowerButton="DynamicPowerButton"
 CollectorsButton="CollectorsButton"
 CloseButton="CloseButton"
 -- Main Research System GUI
