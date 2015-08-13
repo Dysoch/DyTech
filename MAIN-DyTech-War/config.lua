@@ -21,7 +21,9 @@ Config.EnemiesBaseEdit = true
 Config.Biters = true
 Config.Spitters = true
 Config.Dyzilla_Spawner = true
+Config.Dyzilla_Spawner_Supplies = false
 -- CAREFULL!!! Dyzilla spawner is incredible HARD, even on easy difficulty!
+-- Supplies are only given on Difficulty 5 and with Dyzilla active!
 
 --[[ Weapons and Ammo ]]--
 -- Here are all forms of weapons and ammo!
