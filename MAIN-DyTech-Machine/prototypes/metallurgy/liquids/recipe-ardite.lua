@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="ardite-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "ardite-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-ardite-ore", 1}},
+    result = "ardite-plate"
+  },
 }
 )

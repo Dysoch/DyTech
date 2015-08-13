@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="zinc-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "zinc-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-zinc-ore", 1}},
+    result = "zinc-plate"
+  },
 }
 )

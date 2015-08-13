@@ -7,7 +7,7 @@ Released: ?? 2015
 [list] [*] 
 [/list]
 [*] Changes:
-[list] [*] 
+[list] [*] All Clean Ores can now be smelted in Furnaces. (not just Iron and Copper)
 [/list]
 [*] Bugfixes: 
 [list] [*] Fixed Wrong Graphics of Fire at Steel Furnaces.

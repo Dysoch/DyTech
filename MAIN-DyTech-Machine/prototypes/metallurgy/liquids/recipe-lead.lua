@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="lead-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "lead-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-lead-ore", 1}},
+    result = "lead-plate"
+  },
 }
 )

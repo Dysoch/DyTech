@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="silver-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "silver-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-silver-ore", 1}},
+    result = "silver-plate"
+  },
 }
 )

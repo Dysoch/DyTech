@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="gold-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "gold-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-gold-ore", 1}},
+    result = "gold-plate"
+  },
 }
 )

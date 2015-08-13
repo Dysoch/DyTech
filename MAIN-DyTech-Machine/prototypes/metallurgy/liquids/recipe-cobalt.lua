@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="cobalt-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "cobalt-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-cobalt-ore", 1}},
+    result = "cobalt-plate"
+  },
 }
 )

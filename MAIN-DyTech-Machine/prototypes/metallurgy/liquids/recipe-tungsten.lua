@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="tungsten-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "tungsten-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-tungsten-ore", 1}},
+    result = "tungsten-plate"
+  },
 }
 )

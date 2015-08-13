@@ -34,5 +34,13 @@ data:extend(
       {type="item", name="copper-plate", amount=1},
     },
   },
+  {
+    type = "recipe",
+    name = "copper-plate-01",
+    category = "smelting",
+    energy_required = 2.5,
+    ingredients = {{ "clean-copper-ore", 1}},
+    result = "copper-plate"
+  },
 }
 )
