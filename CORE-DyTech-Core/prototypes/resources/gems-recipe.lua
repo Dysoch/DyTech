@@ -68,7 +68,7 @@ data:extend(
   {
     type = "recipe",
     name = "raw-cut-ruby",
-    icon = "__CORE-DyTech-Core__/graphics/gems/raw-ruby.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/cut-ruby.png",
 	category = "crafting-with-fluid",
     energy_required = 32,
     enabled = true,
@@ -87,7 +87,7 @@ data:extend(
   {
     type = "recipe",
     name = "raw-cut-sapphire",
-    icon = "__CORE-DyTech-Core__/graphics/gems/raw-sapphire.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/cut-sapphire.png",
 	category = "crafting-with-fluid",
     energy_required = 56,
     enabled = true,
@@ -106,7 +106,7 @@ data:extend(
   {
     type = "recipe",
     name = "raw-cut-emerald",
-    icon = "__CORE-DyTech-Core__/graphics/gems/raw-emerald.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/cut-emerald.png",
 	category = "crafting-with-fluid",
     energy_required = 160,
     enabled = true,
@@ -125,7 +125,7 @@ data:extend(
   {
     type = "recipe",
     name = "raw-cut-topaz",
-    icon = "__CORE-DyTech-Core__/graphics/gems/raw-topaz.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/cut-topaz.png",
 	category = "crafting-with-fluid",
     energy_required = 96,
     enabled = true,
@@ -144,7 +144,7 @@ data:extend(
   {
     type = "recipe",
     name = "raw-cut-diamond",
-    icon = "__CORE-DyTech-Core__/graphics/gems/raw-diamond.png",
+    icon = "__CORE-DyTech-Core__/graphics/gems/cut-diamond.png",
 	category = "crafting-with-fluid",
     energy_required = 224,
     enabled = true,
