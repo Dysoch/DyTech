@@ -5,11 +5,13 @@ Released: ?? 2015
 [list]
 [*] Features:
 [list][*] Added in Floors! (Sand, Sandbag)
-[*] Added in more cheats.
+[*] Added in more cheats. (amo more larger magazine size and tools more durability.)
 [/list]
 [*] Changes:
 [list] [*] Added in a Tech Fix. This fixes the screen getting to big. Also adds a new order in the tech screen
 [*] Changed Graphics of Cut Gems.
+[*] When Stacksize cheat is active, default request amount of all items is the old stacksize!
+[*] Super Size Resource cheat now requires an input. Default is set to 500.000
 [/list]
 [*] Bugfixes :
 [list] 

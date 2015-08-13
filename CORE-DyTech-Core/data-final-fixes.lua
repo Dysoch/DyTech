@@ -14,7 +14,11 @@ if TechFix then
 end 
 
 for i, drill in pairs(data.raw["mining-drill"]) do
-  if not drill.storage_slots then drill.storage_slots = 6 end
+	if not drill.storage_slots then 
+		drill.storage_slots = 6 
+	else
+		drill.storage_slots = 6 
+	end
 end
 
 if Config.Infinite_Resources then
