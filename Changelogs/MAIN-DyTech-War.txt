@@ -1,5 +1,22 @@
 [size=200]DyTech-War[/size]
 
+[spoiler=v1.2.0][i][size=150][b]v1.2.0:[/b][/size][/i]
+Released: ?? 2015
+[list]
+[*] Features:
+[list] [*] Added in Dyzilla Supplies. Given when Difficulty = 5 and Dyzilla is active.
+[/list]
+[*] Balancing:
+[list] [*] 
+[/list]
+[*] Changes:
+[list] [*] Added Config option to disable Dyzilla Supplies.
+[/list]
+[*] Bugfixes:
+[list] [*] Equipment Technologies are now leveled.
+[/list]
+[/list][/spoiler]
+
 [spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
 Released: August 8th 2015
 [list]

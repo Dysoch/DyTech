@@ -56,7 +56,7 @@ data:extend(
     type = "technology",
     name = "energy-shield-mk3-equipment",
     icon = "__base__/graphics/technology/energy-shield-mk2-equipment.png",
-    prerequisites = {"energy-shield-equipment"},
+    prerequisites = {"energy-shield-mk2-equipment"},
     effects =
     {
       {
@@ -82,7 +82,7 @@ data:extend(
     type = "technology",
     name = "energy-shield-mk4-equipment",
     icon = "__base__/graphics/technology/energy-shield-mk2-equipment.png",
-    prerequisites = {"energy-shield-equipment"},
+    prerequisites = {"energy-shield-mk3-equipment"},
     effects =
     {
       {
@@ -109,7 +109,7 @@ data:extend(
     type = "technology",
     name = "energy-shield-mk5-equipment",
     icon = "__base__/graphics/technology/energy-shield-mk2-equipment.png",
-    prerequisites = {"energy-shield-equipment"},
+    prerequisites = {"energy-shield-mk4-equipment"},
     effects =
     {
       {
@@ -136,7 +136,7 @@ data:extend(
     type = "technology",
     name = "battery-mk3-equipment",
     icon = "__base__/graphics/technology/battery-mk2-equipment.png",
-    prerequisites = {"battery-equipment"},
+    prerequisites = {"battery-mk2-equipment"},
     effects =
     {
       {
@@ -162,7 +162,7 @@ data:extend(
     type = "technology",
     name = "battery-mk4-equipment",
     icon = "__base__/graphics/technology/battery-mk2-equipment.png",
-    prerequisites = {"battery-equipment"},
+    prerequisites = {"battery-mk3-equipment"},
     effects =
     {
       {
@@ -189,7 +189,7 @@ data:extend(
     type = "technology",
     name = "battery-mk5-equipment",
     icon = "__base__/graphics/technology/battery-mk2-equipment.png",
-    prerequisites = {"battery-equipment"},
+    prerequisites = {"battery-mk4-equipment"},
     effects =
     {
       {
@@ -234,7 +234,8 @@ data:extend(
 	  },
       time = 15
     },
-    order = "g-k"
+    order = "g-k",
+	upgrade = true,
   },
   {
     type = "technology",
@@ -259,7 +260,8 @@ data:extend(
 	  },
       time = 15
     },
-    order = "g-k"
+    order = "g-k",
+	upgrade = true,
   },
   {
     type = "technology",
@@ -285,7 +287,8 @@ data:extend(
 	  },
       time = 15
     },
-    order = "g-k"
+    order = "g-k",
+	upgrade = true,
   },
   {
     type = "technology",
@@ -311,7 +314,8 @@ data:extend(
 	  },
       time = 15
     },
-    order = "g-k"
+    order = "g-k",
+	upgrade = true,
   },
   {
     type = "technology",
@@ -335,6 +339,7 @@ data:extend(
       time = 30
     },
     order = "c-k-d-zz",
+	upgrade = true,
   },
   {
     type = "technology",
@@ -359,6 +364,7 @@ data:extend(
       time = 30
     },
     order = "c-k-d-zz",
+	upgrade = true,
   },
 }
 )
