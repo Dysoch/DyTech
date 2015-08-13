@@ -303,7 +303,7 @@ data:extend(
     stack_size = 50,
     effect = { productivity = {bonus = 0.1}, consumption = {bonus = 0.4}, pollution = {bonus = 0.4}, speed = {bonus = -0.3}},
     limitation = productivitymodulelimitation(),
-    limitation_message_key = "production-module-usable-only-on-intermeidates"
+    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -315,7 +315,7 @@ data:extend(
     stack_size = 50,
     effect = { productivity = {bonus = 0.16}, consumption = {bonus = 0.6}, pollution = {bonus = 0.6}, speed = {bonus = -0.56}},
     limitation = productivitymodulelimitation(),
-    limitation_message_key = "production-module-usable-only-on-intermeidates"
+    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -327,7 +327,7 @@ data:extend(
     stack_size = 50,
     effect = { productivity = {bonus = 0.18}, consumption = {bonus = 0.7}, pollution = {bonus = 0.7}, speed = {bonus = -0.72}},
     limitation = productivitymodulelimitation(),
-    limitation_message_key = "production-module-usable-only-on-intermeidates"
+    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -339,7 +339,7 @@ data:extend(
     stack_size = 50,
     effect = { productivity = {bonus = 0.28}, consumption = {bonus = 1.1}, pollution = {bonus = 1.1}, speed = {bonus = -1.26}},
     limitation = productivitymodulelimitation(),
-    limitation_message_key = "production-module-usable-only-on-intermeidates"
+    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -351,7 +351,7 @@ data:extend(
     stack_size = 50,
     effect = { productivity = {bonus = 0.4}, consumption = {bonus = 1.6}, pollution = {bonus = 1.6}, speed = {bonus = -2.0}},
     limitation = productivitymodulelimitation(),
-    limitation_message_key = "production-module-usable-only-on-intermeidates"
+    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
 }
 )
