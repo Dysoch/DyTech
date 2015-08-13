@@ -5,6 +5,10 @@ Released: ?? 2015
 [list]
 [*] Features:
 [list][*] Added in Floors! (Sand, Sandbag)
+[*] Added in more cheats.
+[/list]
+[*] Changes:
+[list] [*] Added in a Tech Fix. This fixes the screen getting to big. Also adds a new order in the tech screen
 [/list]
 [*] Bugfixes :
 [list] 

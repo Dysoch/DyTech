@@ -14,8 +14,8 @@ Config.Technologies = true
 
 Config.Infinite_Resources = false
 Config.Resource_Easier_To_Mine = true
-Config.Super_Size_Resources = false
-Config.Super_Size_Resources_Size = 1000000
+Config.Super_Size_Resources = true
+Config.Super_Size_Resources_Size = 500000
 -- Resource Changes
 
 Config.Technology_Use_Less_Science_Packs = false 
@@ -28,7 +28,8 @@ Config.All_Recipes_Unlocked_From_Start = false
 -- Unlockes all recipes right from the start!
 
 Config.Science_Packs_Last_Long = false
--- This increase the durability of the science packs. 
+Config.Ammo_Has_Large_Magazine = true
+Config.Tools_Have_Large_Durability = true
 
 Config.Stacksize_Increase = true
 Config.Stacksize_Increase_Factor = 1000
