@@ -236,7 +236,7 @@ data:extend(
                                                  tint=Enemies.Queen_Tint1,
                                                  roarvolume=0.7}),
     vision_distance = (30*Enemies.Young_Factor),
-    movement_speed = (0.01*Enemies.Young_Factor),
+    movement_speed = (0.05*Enemies.Young_Factor),
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Young_Factor),
@@ -478,7 +478,7 @@ data:extend(
                                                  tint=Enemies.Queen_Tint1,
                                                  roarvolume=0.7}),
     vision_distance = (30*Enemies.Teen_Factor),
-    movement_speed = (0.01*Enemies.Teen_Factor),
+    movement_speed = (0.05*Enemies.Teen_Factor),
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Teen_Factor),
@@ -720,7 +720,7 @@ data:extend(
                                                  tint=Enemies.Queen_Tint1,
                                                  roarvolume=0.7}),
     vision_distance = (30*Enemies.Adult_Factor),
-    movement_speed = (0.01*Enemies.Adult_Factor),
+    movement_speed = (0.05*Enemies.Adult_Factor),
     distance_per_frame = (0.2*Enemies.Adult_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Adult_Factor),

@@ -7,7 +7,7 @@ Released: ?? 2015
 [list] [*] Added in Dyzilla Supplies. Given when Difficulty = 5 and Dyzilla is active.
 [/list]
 [*] Balancing:
-[list] [*] 
+[list] [*] Increase Speed of Queen Spitters. 0.01 > 0.05
 [/list]
 [*] Changes:
 [list] [*] Added Config option to disable Dyzilla Supplies.
