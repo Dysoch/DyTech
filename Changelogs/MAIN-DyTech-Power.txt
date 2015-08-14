@@ -1,7 +1,7 @@
 [size=200]DyTech-Power[/size]
 
 [spoiler=v1.1.1][i][size=150][b]v1.1.1:[/b][/size][/i]
-Released: August 8th 2015
+Released: August 14th 2015
 [list]
 [*] Features:
 [list] [*] Steam Engine Switching. You now make only secondary steam engines, and you can switch them to primary or tertiary by standing next to it and enabling the gui in the DyTech Power GUI. There you can switch. Mining an primary or tertiary gives the secondary back.
