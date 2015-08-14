@@ -4,13 +4,15 @@ Config = {} -- DONT TOCUH THIS!
 -- The general rule is: TRUE is on, FALSE is off!
 
 --[[ Difficulty ]]
-Config.Difficulty = 5
+Config.Difficulty = 6
 -- Difficulty 1 = EASY
 -- Difficulty 2 = MEDIUM (difficulty of old DyTech!)
 -- Difficulty 3 = HARD
 -- Difficulty 4 = INSANE
 -- Difficulty 5 = EXTREME DEATH MODE (How long can you last? :D )
--- Input anything other then those 5 numbers will result in an error at start of game!
+-- Difficulty 6 = HELL ON EARTH! (CAREFULL, EXTREMELY DEMANDING ON PC!!!)
+-- Input anything other then those 6 numbers will result in an error at start of game!
+-- CAREFULL: Difficulty 6 is 10 times harder then difficulty 5!
 
 --[[ Toggles ]]--
 

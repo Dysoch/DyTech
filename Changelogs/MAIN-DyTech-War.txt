@@ -5,9 +5,11 @@ Released: ?? 2015
 [list]
 [*] Features:
 [list] [*] Added in Dyzilla Supplies. Given when Difficulty = 5 and Dyzilla is active.
+[*] Added in Difficulty 6! This trully is hell on Earth! This difficulty is 10x harder then difficulty 5! Difficulty 6 can hold 100 Dyzilla spawners if it is active! Difficulty 6 is not for the faint of heart, or weak machines. IT IS VERY DEMANDING ON YOUR PC!
 [/list]
 [*] Balancing:
 [list] [*] Increase Speed of Queen Spitters. 0.01 > 0.05
+[*] Majorly improved spawning mechanism of Dyzilla Spawners. They spawn more evenly out now.
 [/list]
 [*] Changes:
 [list] [*] Added Config option to disable Dyzilla Supplies.

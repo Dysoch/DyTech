@@ -1,9 +1,9 @@
 require "config"
 
-if Config.Difficulty==1 or Config.Difficulty==2 or Config.Difficulty==3 or Config.Difficulty==4 or Config.Difficulty==5 then
+if Config.Difficulty==1 or Config.Difficulty==2 or Config.Difficulty==3 or Config.Difficulty==4 or Config.Difficulty==5 or Config.Difficulty==6 then
 	
 else
-	error("You inputted something other then 1,2,3,4 or 5 into the difficulty meter. Please correct it, and try again! (DyTech-War Difficulty Error!")
+	error("You inputted something other then 1,2,3,4,5 or 6 into the difficulty meter. Please correct it, and try again! (DyTech-War Difficulty Error!")
 end
 
 --[[ Evolution Check ]]--
@@ -48,6 +48,14 @@ local SpitterPollutionAbsorb = data.raw["unit-spawner"]["spitter-spawner"].pollu
 		BiterPollutionAbsorb = (BiterPollutionAbsorb*10)
 		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*10)
 		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*10)
+	elseif Config.Difficulty==6 then
+		Time = (Time*50) 
+		Destroy = (Destroy*50) 
+		Pollution = (Pollution*50) 
+		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*100)
+		BiterPollutionAbsorb = (BiterPollutionAbsorb*100)
+		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*100)
+		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*100)
 	end
 end
 
@@ -122,6 +130,20 @@ elseif Config.Difficulty==5 then
 		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 500
 		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {60, 20}
 	end
+elseif Config.Difficulty==6 then
+	data.raw["unit-spawner"]["biter-spawner"].max_health = 1600000
+	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 1600
+	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 1200
+	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {15, 2.5}
+	data.raw["unit-spawner"]["spitter-spawner"].max_health = 2400000
+	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 1200
+	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 1200
+	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {15, 3}
+	if Config.Dyzilla_Spawner then
+		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 50000000
+		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 5000
+		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {6, 2}
+	end
 end
 
 if Config.Difficulty==1 then
@@ -139,6 +161,10 @@ elseif Config.Difficulty==4 then
 elseif Config.Difficulty==5 then
 	for _,unitname in pairs(data.raw["unit"]) do
 		unitname.max_health = unitname.max_health*10
+	end
+elseif Config.Difficulty==6 then
+	for _,unitname in pairs(data.raw["unit"]) do
+		unitname.max_health = unitname.max_health*100
 	end
 end
 

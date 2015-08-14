@@ -49,8 +49,8 @@ end)
 game.on_event(defines.events.on_tick, function(event)
 	if Config.Dyzilla_Spawner and Config.Dyzilla_Spawner_Supplies then
 		if not global.Dyzilla.Supplies then
-			if Config.Difficulty==5 then
-				debug("Dyzilla: active and difficulty at 5")
+			if Config.Difficulty==5 or Config.Difficulty==6 then
+				debug("Dyzilla: active and difficulty at 5 or 6")
 				PlayerPrint({"msg-dyzilla-death-mode"})
 				Dyzilla.DeathModeSupplies()
 				debug("Dyzilla: Supplies given")
@@ -80,7 +80,9 @@ game.on_event(defines.events.on_chunk_generated, function(event)
 		elseif Config.Difficulty==4 then 
 			Dyzilla.Insane(event)
 		elseif Config.Difficulty==5 then 
-			Dyzilla.Extreme(event) 
+			Dyzilla.Extreme(event)
+		elseif Config.Difficulty==6 then 
+			Dyzilla.Hell(event) 
 		end
 	end
 end)
