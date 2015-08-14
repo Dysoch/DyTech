@@ -7,9 +7,10 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-small-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "1",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="clean-water", amount=1},
 	  {type="item", name="small-corpse", amount=1},
     },
     results = 
@@ -25,9 +26,10 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-medium-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "2",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="clean-water", amount=1},
 	  {type="item", name="medium-corpse", amount=1},
     },
     results = 
@@ -43,9 +45,10 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-big-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "3",
     ingredients =
     {
-	  {type="fluid", name="water", amount=1},
+	  {type="fluid", name="clean-water", amount=1},
 	  {type="item", name="big-corpse", amount=1},
     },
     results = 
@@ -61,6 +64,7 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-berserk-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "4",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.25},
@@ -80,6 +84,7 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-elder-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "5",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.5},
@@ -99,6 +104,7 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-ripper-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "6",
     ingredients =
     {
 	  {type="fluid", name="water", amount=1},
@@ -118,6 +124,7 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-king-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "7",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=0.75},
@@ -137,6 +144,7 @@ data:extend(
     energy_required = 15,
     icon = "__MAIN-DyTech-War__/graphics/enemies/biter-queen-corpse.png",
     subgroup = "dytech-combat-corpses",
+	order = "8",
     ingredients =
     {
 	  {type="fluid", name="sulfuric-acid", amount=1},

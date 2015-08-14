@@ -13,9 +13,11 @@ Released: ?? 2015
 [/list]
 [*] Changes:
 [list] [*] Added Config option to disable Dyzilla Supplies.
+[*] Fixed wrong order of corpses processing recipes.
 [/list]
 [*] Bugfixes:
 [list] [*] Equipment Technologies are now leveled.
+[*] Fixed Small, Medium and Big corpse processing requiring dirty water. Now needs clean water.
 [/list]
 [/list][/spoiler]
 
