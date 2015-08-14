@@ -8,12 +8,6 @@ function Startup()
 	if not global.AutoResearcher.Tier2 then global.AutoResearcher.Tier2 = false end
 	if not global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false end
 	if not global.AutoResearcher.Tier4 then global.AutoResearcher.Tier4 = false end
-	global.Auto_Researcher = {}
-	for NAME, TECH in pairs(global.Technology) do
-		if not TECH.Finished then
-			table.insert(global.Auto_Researcher,NAME)
-		end
-	end
 end
 
 function AutoMode(TECH)
@@ -21,6 +15,7 @@ function AutoMode(TECH)
 		if PreReqCheck(TECH) then
 			game.forces.player.current_research = TECH
 			global.AutoResearcher.Check = 0
+			return
 		else
 			Select_New_Tech()
 		end
@@ -28,6 +23,7 @@ function AutoMode(TECH)
 		if PreReqCheck(TECH) then
 			game.forces.player.current_research = TECH
 			global.AutoResearcher.Check = 0
+			return
 		else
 			Select_New_Tech()
 		end
@@ -35,6 +31,7 @@ function AutoMode(TECH)
 		if PreReqCheck(TECH) then
 			game.forces.player.current_research = TECH
 			global.AutoResearcher.Check = 0
+			return
 		else
 			Select_New_Tech()
 		end
@@ -42,6 +39,7 @@ function AutoMode(TECH)
 		if PreReqCheck(TECH) then
 			game.forces.player.current_research = TECH
 			global.AutoResearcher.Check = 0
+			return
 		else
 			Select_New_Tech()
 		end
@@ -56,7 +54,6 @@ function AutoMode(TECH)
 end
 
 function Select_New_Tech()
-	Startup()
 	if Empty_Table_Check(global.Auto_Researcher) then 
 		PlayerPrint({"auto-researcher-finished"}) 
 	else

@@ -106,6 +106,12 @@ else
 	global.Technology[event.research.name].Finished = true
 end
 if Config.Auto_Researcher then
+	global.Auto_Researcher = {}
+	for NAME, TECH in pairs(global.Technology) do
+		if not TECH.Finished then
+			table.insert(global.Auto_Researcher,NAME)
+		end
+	end
 	AutoResearch.Select_New_Tech()
 end
 end)
