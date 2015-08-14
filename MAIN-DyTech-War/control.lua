@@ -32,10 +32,7 @@ end
 
 game.on_init(function()
 	game.create_force("dyzilla")
-	if Config.Dyzilla_Spawner then
-		Dyzilla.Startup()
-		debug("Dyzilla: started up")
-	end
+	Dyzilla.Startup()
 end)
 
 game.on_save(function()
