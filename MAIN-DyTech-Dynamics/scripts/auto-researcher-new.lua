@@ -100,8 +100,5 @@ adder.add({type= "label", caption={"auto-researcher-explenation-1"}, name=""})
 --adder.add({type= "label", caption={"auto-researcher-explenation-2"}, name=""})
 --adder.add({type= "label", caption={"auto-researcher-explenation-3"}, name=""})
 adder.add({type= "label", caption={"auto-researcher-explenation-4"}, name=""})
-adder.add({type= "label", caption={"stack-overflow-1"}, name=""})
-adder.add({type= "label", caption={"stack-overflow-2"}, name=""})
-adder.add({type= "label", caption={"stack-overflow-3"}, name=""})
 adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end

@@ -45,19 +45,13 @@ function PlayerPrint(message)
 end
 
 game.on_init(function()
-	if not global.ResearchSystem then global.ResearchSystem = {} end
 	fs.Startup()
 	Power.Startup()
-end)
-
-game.on_save(function()
-
+	AutoResearch.Startup()
 end)
 
 game.on_load(function()
-	if not global.ResearchSystem then global.ResearchSystem = {} end
-	if not global.ResearchSystem.Unlocked then global.ResearchSystem.Unlocked = {} end
-	if not global.Collectors then global.Collectors = {} end
+
 end)
 
 game.on_event(defines.events.on_tick, function(event)
