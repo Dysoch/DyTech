@@ -10,6 +10,7 @@ data:extend(
       {"tungsten-gear-wheel", 20},
       {"tungsten-plate", 45},
       {"lead-plate", 45},
+      {"engine-unit", 10},
     },
     result = "diesel-locomotive-armor"
   },

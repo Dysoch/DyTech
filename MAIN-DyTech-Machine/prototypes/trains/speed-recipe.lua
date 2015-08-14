@@ -10,6 +10,7 @@ data:extend(
       {"steel-gear-wheel", 20},
       {"steel-plate", 20},
       {"zinc-plate", 20},
+      {"engine-unit", 10},
     },
     result = "diesel-locomotive-fast"
   },

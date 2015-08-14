@@ -175,7 +175,7 @@ data:extend(
     name = "cargo-wagon-armor",
     icon = "__base__/graphics/icons/cargo-wagon.png",
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
-    inventory_size = 10,
+    inventory_size = 25,
     minable = {mining_time = 1, result = "cargo-wagon-armor"},
     max_health = 1800,
     corpse = "medium-remnants",

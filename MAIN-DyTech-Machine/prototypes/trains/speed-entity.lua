@@ -162,7 +162,7 @@ data:extend(
     name = "cargo-wagon-fast",
     icon = "__base__/graphics/icons/cargo-wagon.png",
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
-    inventory_size = 8,
+    inventory_size = 25,
     minable = {mining_time = 1, result = "cargo-wagon-fast"},
     max_health = 300,
     corpse = "medium-remnants",

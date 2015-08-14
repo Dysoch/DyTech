@@ -14,6 +14,7 @@ Released: ?? 2015
 [/list]
 [*] Balancing: 
 [list] [*] Balanced Armored Car. It should be a lot better now!
+[*] Rebalanced the Trains and Cargo Wagons. Increased Inventory size to 25
 [/list]
 [/list][/spoiler]
 
