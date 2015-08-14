@@ -10,10 +10,12 @@ Released: ?? 2015
 [*] Balancing:
 [list] [*] Increase Speed of Queen Spitters. 0.01 > 0.05
 [*] Majorly improved spawning mechanism of Dyzilla Spawners. They spawn more evenly out now.
+[*] 
 [/list]
 [*] Changes:
 [list] [*] Added Config option to disable Dyzilla Supplies.
 [*] Fixed wrong order of corpses processing recipes.
+[*] Graphics: Made corpses for Younglings and Teens. The are properly scaled to their size.
 [/list]
 [*] Bugfixes:
 [list] [*] Equipment Technologies are now leveled.

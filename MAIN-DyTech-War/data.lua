@@ -3,6 +3,14 @@ require "config"
 --[[ Mandatory Stuff ]]--
 require("prototypes.functions.projectiles")
 
+--[[ Enemies Loot Check ]]--
+if Config.Spitters or Config.Biters then 
+require("prototypes.enemies.corpses")
+require("prototypes.enemies.item")
+require("prototypes.enemies.projectiles")
+require("prototypes.enemies.recipe")
+end
+
 --[[ EnemiesBaseEdit Check ]]--
 if Config.EnemiesBaseEdit then 
 require("prototypes.enemies.base-edit")
@@ -18,13 +26,6 @@ end
 if Config.Spitters then 
 require("prototypes.enemies.spitters")
 require("prototypes.enemies.spitters-edit")
-end
-
---[[ Enemies Loot Check ]]--
-if Config.Spitters or Config.Biters then 
-require("prototypes.enemies.item")
-require("prototypes.enemies.projectiles")
-require("prototypes.enemies.recipe")
 end
 
 --[[ Dyzilla Check ]]--

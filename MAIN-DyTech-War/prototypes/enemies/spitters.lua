@@ -52,7 +52,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (5000*Enemies.Young_Factor),
-    corpse = "berserk-spitter-corpse",
+    corpse = "young-berserk-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -105,7 +105,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (10000*Enemies.Young_Factor),
-    corpse = "elder-spitter-corpse",
+    corpse = "young-elder-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -166,7 +166,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (20000*Enemies.Young_Factor),
-    corpse = "king-spitter-corpse",
+    corpse = "young-king-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -240,7 +240,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Young_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Young_Factor),
-    corpse = "queen-spitter-corpse",
+    corpse = "young-queen-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -294,7 +294,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (5000*Enemies.Teen_Factor),
-    corpse = "berserk-spitter-corpse",
+    corpse = "teen-berserk-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -347,7 +347,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (10000*Enemies.Teen_Factor),
-    corpse = "elder-spitter-corpse",
+    corpse = "teen-elder-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -408,7 +408,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (20000*Enemies.Teen_Factor),
-    corpse = "king-spitter-corpse",
+    corpse = "teen-king-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -482,7 +482,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Teen_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Teen_Factor),
-    corpse = "queen-spitter-corpse",
+    corpse = "teen-queen-corpse",
     dying_explosion = "blood-explosion-small",
     working_sound = make_biter_calls(0.75),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -536,7 +536,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Adult_Factor),
     -- in pu
     pollution_to_join_attack = (5000*Enemies.Adult_Factor),
-    corpse = "berserk-spitter-corpse",
+    corpse = "adult-berserk-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = make_biter_calls(0.9),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -589,7 +589,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Adult_Factor),
     -- in pu
     pollution_to_join_attack = (10000*Enemies.Adult_Factor),
-    corpse = "elder-spitter-corpse",
+    corpse = "adult-elder-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = make_biter_calls(0.9),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -650,7 +650,7 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Adult_Factor),
     -- in pu
     pollution_to_join_attack = (20000*Enemies.Adult_Factor),
-    corpse = "king-spitter-corpse",
+    corpse = "adult-king-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = make_biter_calls(0.9),
     dying_sound = make_spitter_dying_sounds(1.0),
@@ -724,70 +724,11 @@ data:extend(
     distance_per_frame = (0.2*Enemies.Adult_Factor),
     -- in pu
     pollution_to_join_attack = (50000*Enemies.Adult_Factor),
-    corpse = "queen-spitter-corpse",
+    corpse = "adult-queen-corpse",
     dying_explosion = "blood-explosion-big",
     working_sound = make_biter_calls(0.9),
     dying_sound = make_spitter_dying_sounds(1.0),
     run_animation = spitterrunanimation((Enemies.QueenScale*Enemies.Adult_Factor), Enemies.Queen_Tint1)
-  },
-  
-  -- CORPSES
-  
-  {
-    type = "corpse",
-    name = "berserk-spitter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    selectable_in_game = false,
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.7, -1}, {0.7, 1}},
-    subgroup="corpses",
-    order = "c[corpse]-b[spitter]-d[berserker]",
-    flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
-    dying_speed = 0.04,
-    final_render_layer = "corpse",
-    animation = spitterdyinganimation(Enemies.BerserkerScale, Enemies.Berserker_Tint1),
-  },
-  {
-    type = "corpse",
-    name = "elder-spitter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    selectable_in_game = false,
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.7, -1}, {0.7, 1}},
-    subgroup="corpses",
-    order = "c[corpse]-b[spitter]-e[elder]",
-    flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
-    dying_speed = 0.04,
-    final_render_layer = "corpse",
-    animation = spitterdyinganimation(Enemies.ElderScale, Enemies.Elder_Tint1),
-  },
-  {
-    type = "corpse",
-    name = "king-spitter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    selectable_in_game = false,
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.7, -1}, {0.7, 1}},
-    subgroup="corpses",
-    order = "c[corpse]-b[spitter]-f[king]",
-    flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
-    dying_speed = 0.04,
-    final_render_layer = "corpse",
-    animation = spitterdyinganimation(Enemies.KingScale, Enemies.King_Tint1),
-  },
-  {
-    type = "corpse",
-    name = "queen-spitter-corpse",
-    icon = "__base__/graphics/icons/big-biter-corpse.png",
-    selectable_in_game = false,
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.7, -1}, {0.7, 1}},
-    subgroup="corpses",
-    order = "c[corpse]-b[spitter]-g[queen]",
-    flags = {"placeable-neutral", "placeable-off-grid", "building-direction-8-way"},
-    dying_speed = 0.04,
-    final_render_layer = "corpse",
-    animation = spitterdyinganimation(Enemies.QueenScale),
   },
   {
     type = "smoke",
@@ -832,7 +773,7 @@ data:extend(
               target_effects =
               {
                 type = "damage",
-                damage = { amount = 2.5, type = "poison"}
+                damage = { amount = 2.5, type = "acid"}
               }
             }
           }
