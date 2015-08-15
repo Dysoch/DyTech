@@ -1,3 +1,7 @@
+require "prototypes.functions.trains"
+
+TINT = {r=0.282, g=0.239, b=0.545, a=0.99}
+
 data:extend(
 {
   {
@@ -93,28 +97,7 @@ data:extend(
     },
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    pictures =
-    {
-      priority = "very-low",
-      width = 346,
-      height = 248,
-      axially_symmetrical = false,
-      direction_count = 256,
-      filenames =
-      {
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-01.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-02.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-03.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-04.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-05.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-06.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-07.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/diesel-locomotive-08.png"
-      },
-      line_length = 4,
-      lines_per_file = 8,
-      shift = {0.9, -0.45}
-    },
+    pictures = Animation_Locomotive(TINT),
     rail_category = "regular",
 
     stop_trigger =
@@ -204,25 +187,7 @@ data:extend(
 	energy_per_hit_point = 7,
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
-    pictures =
-    {
-      priority = "very-low",
-      width = 285,
-      height = 218,
-      axially_symmetrical = false,
-      back_equals_front = true,
-      direction_count = 128,
-      filenames =
-      {
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/cargo-wagon-spritesheet-1.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/cargo-wagon-spritesheet-2.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/cargo-wagon-spritesheet-3.png",
-        "__MAIN-DyTech-Machine__/graphics/trains/armored/cargo-wagon-spritesheet-4.png"
-      },
-      line_length = 4,
-      lines_per_file = 8,
-      shift={0.7, -0.45}
-    },
+    pictures = Animation_Cargo_Wagon(TINT),
     rail_category = "regular",
     drive_over_tie_trigger = drive_over_tie(),
     tie_distance = 50,
