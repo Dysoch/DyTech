@@ -7,7 +7,7 @@ data:extend(
     energy_required = 30,
     ingredients =
     {
-      {"basic-beacon", 2},
+      {"basic-beacon", 1},
       {"advanced-circuit", 40},
     },
     result = "basic-beacon-1"
@@ -19,7 +19,7 @@ data:extend(
     energy_required = 45,
     ingredients =
     {
-      {"basic-beacon", 2},
+      {"basic-beacon-1", 1},
       {"processing-unit", 40},
       {"zinc-plate", 10},
     },
@@ -32,7 +32,7 @@ data:extend(
     energy_required = 60,
     ingredients =
     {
-      {"basic-beacon", 2},
+      {"basic-beacon-2", 1},
       {"advanced-processing-unit", 40},
       {"gold-plate", 10},
     },
