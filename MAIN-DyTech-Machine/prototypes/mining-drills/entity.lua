@@ -1,8 +1,70 @@
+function Animation_Miner(TINT)
+return
+    {
+      north =
+      {
+        priority = "extra-high",
+        width = 110,
+        height = 114,
+        line_length = 8,
+        shift = {0.2, -0.2},
+        filename = "__base__/graphics/entity/basic-mining-drill/north.png",
+        frame_count = 64,
+        animation_speed = 0.5,
+        run_mode = "forward-then-backward",
+		tint = TINT
+      },
+      east =
+      {
+        priority = "extra-high",
+        width = 129,
+        height = 100,
+        line_length = 8,
+        shift = {0.45, 0},
+        filename = "__base__/graphics/entity/basic-mining-drill/east.png",
+        frame_count = 64,
+        animation_speed = 0.5,
+        run_mode = "forward-then-backward",
+		tint = TINT
+      },
+      south =
+      {
+        priority = "extra-high",
+        width = 109,
+        height = 111,
+        line_length = 8,
+        shift = {0.15, 0},
+        filename = "__base__/graphics/entity/basic-mining-drill/south.png",
+        frame_count = 64,
+        animation_speed = 0.5,
+        run_mode = "forward-then-backward",
+		tint = TINT
+      },
+      west =
+      {
+        priority = "extra-high",
+        width = 128,
+        height = 100,
+        line_length = 8,
+        shift = {0.25, 0},
+        filename = "__base__/graphics/entity/basic-mining-drill/west.png",
+        frame_count = 64,
+        animation_speed = 0.5,
+        run_mode = "forward-then-backward",
+		tint = TINT
+      }
+    }
+end
+
+Mk1 = {r=0.804, g=0.361, b=0.361, a=0.99}
+Mk2 = {r=1, g=0.627, b=0.478, a=0.99}
+Mk3 = {r=0.753, g=0.753, b=0.753, a=0.99}
+Mk4 = {r=1, g=0.078, b=0.576, a=0.99}
+Mk5 = {r=1, g=0.843, b=0, a=0.99}
+Mk6 = {r=0.529, g=0.808, b=0.980, a=0.99}
+
 data.raw["mining-drill"]["basic-mining-drill"].icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.north.filename ="__MAIN-DyTech-Machine__/graphics/mining-drills/north1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.east.filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.south.filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south1.png"
-data.raw["mining-drill"]["basic-mining-drill"].animations.west.filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west1.png"
+data.raw["mining-drill"]["basic-mining-drill"].animations = Animation_Miner(Mk1)
 data.raw["mining-drill"]["basic-mining-drill"].fast_replaceable_group =  "drill"
 
 data:extend(
@@ -28,57 +90,7 @@ data:extend(
       },
       apparent_volume = 1.5,
     },
-    animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        width = 110,
-        height = 114,
-        line_length = 8,
-        shift = {0.2, -0.2},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/north2.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      east =
-      {
-        priority = "extra-high",
-        width = 129,
-        height = 100,
-        line_length = 8,
-        shift = {0.45, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east2.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      south =
-      {
-        priority = "extra-high",
-        width = 109,
-        height = 111,
-        line_length = 8,
-        shift = {0.15, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south2.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      west =
-      {
-        priority = "extra-high",
-        width = 128,
-        height = 100,
-        line_length = 8,
-        shift = {0.25, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west2.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      }
-    },
+    animations = Animation_Miner(Mk2),
     mining_speed = 1.25,
     energy_source =
     {
@@ -123,57 +135,7 @@ data:extend(
       },
       apparent_volume = 1.5,
     },
-    animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        width = 110,
-        height = 114,
-        line_length = 8,
-        shift = {0.2, -0.2},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/north3.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      east =
-      {
-        priority = "extra-high",
-        width = 129,
-        height = 100,
-        line_length = 8,
-        shift = {0.45, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east3.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      south =
-      {
-        priority = "extra-high",
-        width = 109,
-        height = 111,
-        line_length = 8,
-        shift = {0.15, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south3.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      west =
-      {
-        priority = "extra-high",
-        width = 128,
-        height = 100,
-        line_length = 8,
-        shift = {0.25, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west3.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      }
-    },
+    animations = Animation_Miner(Mk3),
     mining_speed = 2.5,
     energy_source =
     {
@@ -218,57 +180,7 @@ data:extend(
       },
       apparent_volume = 1.5,
     },
-    animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        width = 110,
-        height = 114,
-        line_length = 8,
-        shift = {0.2, -0.2},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/north4.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      east =
-      {
-        priority = "extra-high",
-        width = 129,
-        height = 100,
-        line_length = 8,
-        shift = {0.45, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east4.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      south =
-      {
-        priority = "extra-high",
-        width = 109,
-        height = 111,
-        line_length = 8,
-        shift = {0.15, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south4.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      west =
-      {
-        priority = "extra-high",
-        width = 128,
-        height = 100,
-        line_length = 8,
-        shift = {0.25, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west4.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      }
-    },
+    animations = Animation_Miner(Mk4),
     mining_speed = 4,
     energy_source =
     {
@@ -313,57 +225,7 @@ data:extend(
       },
       apparent_volume = 1.5,
     },
-    animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        width = 110,
-        height = 114,
-        line_length = 8,
-        shift = {0.2, -0.2},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/north5.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      east =
-      {
-        priority = "extra-high",
-        width = 129,
-        height = 100,
-        line_length = 8,
-        shift = {0.45, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east5.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      south =
-      {
-        priority = "extra-high",
-        width = 109,
-        height = 111,
-        line_length = 8,
-        shift = {0.15, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south5.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      west =
-      {
-        priority = "extra-high",
-        width = 128,
-        height = 100,
-        line_length = 8,
-        shift = {0.25, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west5.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      }
-    },
+    animations = Animation_Miner(Mk5),
     mining_speed = 6.5,
     energy_source =
     {
@@ -409,57 +271,7 @@ data:extend(
       },
       apparent_volume = 1.5,
     },
-    animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        width = 110,
-        height = 114,
-        line_length = 8,
-        shift = {0.2, -0.2},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/north6.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      east =
-      {
-        priority = "extra-high",
-        width = 129,
-        height = 100,
-        line_length = 8,
-        shift = {0.45, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/east6.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      south =
-      {
-        priority = "extra-high",
-        width = 109,
-        height = 111,
-        line_length = 8,
-        shift = {0.15, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/south6.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      },
-      west =
-      {
-        priority = "extra-high",
-        width = 128,
-        height = 100,
-        line_length = 8,
-        shift = {0.25, 0},
-        filename = "__MAIN-DyTech-Machine__/graphics/mining-drills/west6.png",
-        frame_count = 64,
-		animation_speed = 0.5,
-		run_mode = "forward-then-backward",
-      }
-    },
+    animations = Animation_Miner(Mk6),
     mining_speed = 30,
     energy_source =
     {
