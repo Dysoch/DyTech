@@ -176,7 +176,7 @@ local player = game.players[playerIndex]
 			debug("nope. Just nope. No prioritycheck for you")
 		end
 	elseif event.element.name == "backbutton" then
-		game.player.gui.top["DyTechPowerFlow"].destroy()
+		player.gui.top["DyTechPowerFlow"].destroy()
 		remote.call("DyTech-Core", "OpenMainGUI", playerIndex)
 	
 	elseif (event.element.name == "primary") then
@@ -446,7 +446,7 @@ function CloseGUI(player)
 	debug("closed the gui (somewhat)")
 --	if game.players[PlayerIndex].gui.top["DyTechPowerFlow"].valid then
 --		game.players[PlayerIndex].gui.top["DyTechPowerFlow"].destroy()
-		game.player.gui.top["DyTechPowerSteamFlow"].destroy()
+		player.gui.top["DyTechPowerSteamFlow"].destroy()
 		global.gui[player.name] = nil
 --	end
 	
