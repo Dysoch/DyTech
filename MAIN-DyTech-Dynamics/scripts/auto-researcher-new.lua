@@ -4,6 +4,7 @@ require "scripts/functions"
 function Startup() 
 	if not global.AutoResearcher then global.AutoResearcher = {} end
 	if not global.AutoResearcher.Check then global.AutoResearcher.Check = 0 end
+	if not global.AutoResearcher.State then global.AutoResearcher.State = true end
 	if not global.AutoResearcher.Tier1 then global.AutoResearcher.Tier1 = true end
 	if not global.AutoResearcher.Tier2 then global.AutoResearcher.Tier2 = false end
 	if not global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false end
@@ -89,6 +90,7 @@ local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainAutoResearcherFlow})
 player.gui.top[guiNames.mainAutoResearcherFlow].add({type="frame", direction="vertical", name=guiNames.mainAutoResearcherFrame, caption={"auto-researcher"}})
 adder = player.gui.top[guiNames.mainAutoResearcherFlow][guiNames.mainAutoResearcherFrame]
+adder.add({type= "checkbox", caption={"auto-researcher-state"}, name="auto-researcher-state", state = global.AutoResearcher.State})
 adder.add({type= "checkbox", caption={"auto-researcher-tier-1"}, name="auto-researcher-tier-1", state = global.AutoResearcher.Tier1})
 adder.add({type= "checkbox", caption={"auto-researcher-tier-2"}, name="auto-researcher-tier-2", state = global.AutoResearcher.Tier2})
 adder.add({type= "checkbox", caption={"auto-researcher-tier-3"}, name="auto-researcher-tier-3", state = global.AutoResearcher.Tier3})
@@ -97,5 +99,5 @@ adder.add({type= "label", caption={"auto-researcher-explenation-1"}, name=""})
 --adder.add({type= "label", caption={"auto-researcher-explenation-2"}, name=""})
 --adder.add({type= "label", caption={"auto-researcher-explenation-3"}, name=""})
 adder.add({type= "label", caption={"auto-researcher-explenation-4"}, name=""})
-adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
+adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end

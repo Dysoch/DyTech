@@ -112,7 +112,10 @@ if Config.Auto_Researcher then
 			table.insert(global.Auto_Researcher,NAME)
 		end
 	end
-	AutoResearch.Select_New_Tech()
+	if global.AutoResearcher.State==nil then global.AutoResearcher.State = true end
+	if global.AutoResearcher.State then
+		AutoResearch.Select_New_Tech()
+	end
 end
 end)
 
@@ -269,6 +272,8 @@ local player = game.players[playerIndex]
 		if global.AutoResearcher.Tier3 then global.AutoResearcher.Tier3 = false else global.AutoResearcher.Tier3 = true end
 	elseif event.element.name == "auto-researcher-tier-4" then	 
 		if global.AutoResearcher.Tier4 then global.AutoResearcher.Tier4 = false else global.AutoResearcher.Tier4 = true end
+	elseif event.element.name == "auto-researcher-state" then	 
+		if global.AutoResearcher.State then global.AutoResearcher.State = false else global.AutoResearcher.State = true end
 	elseif event.element.name:find(guiNames.DynamicPowerButton) then
 		GUI.closeGUI("all", playerIndex)
 		Power.GUI(playerIndex)
@@ -281,6 +286,9 @@ local player = game.players[playerIndex]
 		PowerBoost.Mining_Boost("start")
 	elseif event.element.name == "DyTech-Dynamic-Power-Research-Button" then
 		PowerBoost.Researching_Boost("start")
+	elseif event.element.name == "DyTech-Dynamics-Back-Button" then
+		GUI.closeGUI("all", playerIndex)
+		GUI.showDynamicsMainGUI(playerIndex)	
 	end
 end)
 

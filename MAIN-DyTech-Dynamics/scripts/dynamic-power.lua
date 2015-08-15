@@ -116,5 +116,5 @@ end
 if global.Dynamic_Power.Power > (1000*1000*2.5) then
 	adder.add({type="button", name="DyTech-Dynamic-Power-Research-Button", caption={"dynamic-power-research"}})
 end
-adder.add({type="button", name="DyTech-Dynamic-Power-Close-Button", caption={"close"}})
+adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end

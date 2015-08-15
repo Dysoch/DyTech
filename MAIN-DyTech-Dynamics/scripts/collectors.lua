@@ -126,5 +126,5 @@ else
 	adder.add({type="label", name="CollectorsLabel-1", caption={"collectors-amount", tostring(global.Collectors.Amount)}})
 	adder.add({type="label", name="CollectorsLabel-2", caption={"collectors-autorange-2", tostring(math.floor((AutoRange/global.Collectors.Amount)*2)), "x", tostring(math.floor((AutoRange/global.Collectors.Amount)*2))}})
 end
-adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
+adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end
