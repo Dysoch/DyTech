@@ -12,17 +12,12 @@ function ticker()
 end
 
 function builtEntity(event)
-	local newCollector
-	
 	if event.created_entity.name == "item-collector-area" then
-		newCollector = game.get_surface("nauvis").create_entity({name = "item-collector-area", position = event.created_entity.position, force = game.forces.player})
-		event.created_entity.destroy()
-		
+		newCollector = event.created_entity
 		if global.Collectors.CollectorList == nil then
 			global.Collectors.CollectorList = {}
 			ticker()
 		end
-		
 		table.insert(global.Collectors.CollectorList, newCollector)
 		if not global.Collectors.Amount then
 			global.Collectors.Amount = 1

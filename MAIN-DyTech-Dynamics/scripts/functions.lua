@@ -4,6 +4,7 @@ require "scripts/rs-functions"
 
 function Startup()
 global.Temp = {}
+global.ResearchSystem = {}
 global.ResearchSystem.Unlocked = {}
 global.ResearchSystem.RSAutomatic = false
 global.ResearchSystem.RSManual = true

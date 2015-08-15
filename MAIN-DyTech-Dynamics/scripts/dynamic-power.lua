@@ -65,7 +65,7 @@ function Mined_Entity(event)
 	end
 end
 
-function Built_Entity(event)
+function Built(event)
 	if string.sub(event.created_entity.name,1,12) == "steam-engine" or string.sub(event.created_entity.name,1,11) == "solar-panel" or string.sub(event.created_entity.name,1,17) == "small-solar-panel" or string.sub(event.created_entity.name,1,17) == "large-solar-panel" or string.sub(event.created_entity.name,1,23) == "small-basic-accumulator" or string.sub(event.created_entity.name,1,23) == "large-basic-accumulator" or string.sub(event.created_entity.name,1,17) == "basic-accumulator" then
 		global.Dynamic_Power.Amount_Placed = global.Dynamic_Power.Amount_Placed + 1
 	end

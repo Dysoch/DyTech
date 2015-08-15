@@ -123,7 +123,7 @@ game.on_event(defines.events.on_built_entity, function(event)
 		CollectorFunctions.builtEntity(event)
 	end
 	if Config.Dynamic_Power then
-		Power.Built_Entity(event)
+		Power.Built(event)
 	end
 end)
 
@@ -132,7 +132,7 @@ game.on_event(defines.events.on_robot_built_entity, function(event)
 		CollectorFunctions.builtEntity(event)
 	end
 	if Config.Dynamic_Power then
-		Power.Built_Entity(event)
+		Power.Built(event)
 	end
 end)
 
