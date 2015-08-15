@@ -1,7 +1,7 @@
 require "prototypes.internal-config"
 
-data.raw["roboport"]["construction-robot"].max_health = Health.Tier3
-data.raw["roboport"]["construction-robot"].resistances = Resistances.Tier3
+data.raw["roboport"]["roboport"].max_health = Health.Tier3
+data.raw["roboport"]["roboport"].resistances = Resistances.Tier3
 
 data:extend(
 {
