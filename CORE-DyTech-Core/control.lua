@@ -147,22 +147,6 @@ game.on_event(defines.events.on_picked_up_item, function(event)
 	fs.PickedItemsLogger(event.item_stack.name, event.item_stack.count)
 end)
 
-game.on_event(defines.events.on_research_started, function(event)
-	fs.TechLogger("started", event.research)
-end)
-
-game.on_event(defines.events.on_research_finished, function(event)
-if game.players == 1 then
-	if game.player.controller_type == 2 or game.player.controller_type == 0 then
-		fs.TechLogger("finished-god", event.research)
-	elseif game.player.controller_type == 1 then
-		fs.TechLogger("finished", event.research)
-	end
-else
-	fs.TechLogger("finished", event.research)
-end	
-end)
-
 game.on_event(defines.events.on_built_entity, function(event)
 	fs.BuildEntityLogger(event.created_entity.name)
 local player = game.players[event.player_index]

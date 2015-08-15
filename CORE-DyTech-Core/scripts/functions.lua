@@ -12,7 +12,6 @@ function Startup()
 	if not global.Logger.PickedItems then global.Logger.PickedItems = {} end
 	if not global.Logger.BuildEntity then global.Logger.BuildEntity = {} end
 	if not global.Logger.RobotBuildEntity then global.Logger.RobotBuildEntity = {} end
-	if not global.Logger.Technology then global.Logger.Technology = {} end
 	if not global.TimeStamp then global.TimeStamp = {} end
 	if not global.TimeStamp.CraftedItems then global.TimeStamp.CraftedItems = {} end
 	if not global.TimeStamp.MinedItems then global.TimeStamp.MinedItems = {} end
@@ -38,33 +37,6 @@ function World_Call()
 	end
 	global.Normal_Loot = {}
 	global.Special_Loot = {}
-end
-
-function TechLogger(statement, name)
-	if not global.Logger then global.Logger = {} end
-	if not global.Logger.Technology then global.Logger.Technology = {} end
-	if statement=="started" then
-		if not global.techcount then global.techcount=0 end
-		global.techcount = global.techcount + 1
-		global.Logger.Technology[global.techcount] = {}
-		global.Logger.Technology[global.techcount].Name = name
-		global.Logger.Technology[global.techcount].Started = true
-		global.Logger.Technology[global.techcount].TimeStarted = global.timer.hours..":"..global.timer.minutes..":"..global.timer.seconds
-	elseif statement=="finished" then
-		if not global.techcount then global.techcount=1 end
-		global.Logger.Technology[global.techcount].TimeFinished = global.timer.hours..":"..global.timer.minutes..":"..global.timer.seconds
-		global.Logger.Technology[global.techcount].Finished = true
-	elseif statement=="finished-god" then
-		if not global.techcount then global.techcount=1 end
-		global.techcount = global.techcount + 1
-		global.Logger.Technology[global.techcount] = {}
-		global.Logger.Technology[global.techcount].Name = name
-		global.Logger.Technology[global.techcount].Started = true
-		global.Logger.Technology[global.techcount].TimeFinished = global.timer.hours..":"..global.timer.minutes..":"..global.timer.seconds
-		global.Logger.Technology[global.techcount].Finished = true
-	else
-		error("Dysoch derped out and made a typo. Please show this error to Dysoch on Github.(statement name="..statement..")")	
-	end
 end
 
 function Timer(event)
