@@ -86,6 +86,7 @@ function PreReqCheck(TECH)
 end
 
 function showAutoResearcherGUI(PlayerIndex)
+	if global.AutoResearcher.State==nil then global.AutoResearcher.State = true end
 local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainAutoResearcherFlow})
 player.gui.top[guiNames.mainAutoResearcherFlow].add({type="frame", direction="vertical", name=guiNames.mainAutoResearcherFrame, caption={"auto-researcher"}})

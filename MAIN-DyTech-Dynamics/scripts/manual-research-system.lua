@@ -19,7 +19,7 @@ adder.add({type="button", name=guiNames.Tier2Base, caption={"Tier2", "(", tostri
 adder.add({type="button", name=guiNames.Tier3Base, caption={"Tier3", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.Tier3), ")"}})
 adder.add({type="button", name=guiNames.Tier4Base, caption={"Tier4", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.Tier4), ")"}})
 if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
-adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
+adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end
 
 function showUnlockTableGUI(PlayerIndex, Tier)

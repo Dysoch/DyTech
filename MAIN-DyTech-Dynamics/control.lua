@@ -112,7 +112,6 @@ if Config.Auto_Researcher then
 			table.insert(global.Auto_Researcher,NAME)
 		end
 	end
-	if global.AutoResearcher.State==nil then global.AutoResearcher.State = true end
 	if global.AutoResearcher.State then
 		AutoResearch.Select_New_Tech()
 	end
