@@ -5,6 +5,7 @@ Released: ?? 2015
 [list]
 [*] Features: 
 [list] [*] Implemented Tinted Graphics to Mining Drills, Locomotives and Cargo Wagons. Reduces mod size by 45 MB!
+[*] All entities now have different health and resistances. (Forgot a few)
 [/list]
 [*] Changes:
 [list] [*] All Clean Ores can now be smelted in Furnaces. (not just Iron and Copper)

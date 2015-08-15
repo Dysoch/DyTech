@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["furnace"]["steel-furnace"].max_health = Health.Tier3
+data.raw["furnace"]["steel-furnace"].resistances = Resistances.Tier3
+
 data:extend(
 { 
   {
@@ -6,18 +11,12 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/steel-furnaces/icon/steel-furnace-2.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "steel-furnace-mk2"},
-    max_health = 400,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "medium-remnants",
     working_sound =
     {
       sound = { filename = "__base__/sound/furnace.ogg" }
-    },
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 100
-      }
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
@@ -79,18 +78,12 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/steel-furnaces/icon/steel-furnace-3.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "steel-furnace-mk3"},
-    max_health = 600,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     corpse = "medium-remnants",
     working_sound =
     {
       sound = { filename = "__base__/sound/furnace.ogg" }
-    },
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 100
-      }
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
@@ -152,18 +145,12 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/steel-furnaces/icon/steel-furnace-4.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "steel-furnace-mk4"},
-    max_health = 800,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "medium-remnants",
     working_sound =
     {
       sound = { filename = "__base__/sound/furnace.ogg" }
-    },
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 100
-      }
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
@@ -225,18 +212,12 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/steel-furnaces/icon/steel-furnace-5.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "steel-furnace-mk5"},
-    max_health = 1000,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "medium-remnants",
     working_sound =
     {
       sound = { filename = "__base__/sound/furnace.ogg" }
-    },
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 100
-      }
     },
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},

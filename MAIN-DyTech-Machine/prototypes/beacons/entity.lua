@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["beacon"]["basic-beacon"].max_health = Health.Tier3
+data.raw["beacon"]["basic-beacon"].resistances = Resistances.Tier3
+
 MK1Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 MK2Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 MK3Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
@@ -10,7 +15,8 @@ data:extend(
     icon = "__base__/graphics/icons/basic-beacon.png",
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "basic-beacon-1"},
-    max_health = 200,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -71,7 +77,8 @@ data:extend(
     icon = "__base__/graphics/icons/basic-beacon.png",
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "basic-beacon-2"},
-    max_health = 200,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -132,7 +139,8 @@ data:extend(
     icon = "__base__/graphics/icons/basic-beacon.png",
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "basic-beacon-3"},
-    max_health = 200,
+    max_health = Health.Tier9,
+    resistances = Resistances.Tier9,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},

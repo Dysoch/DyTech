@@ -1,5 +1,8 @@
 require "config"
+require "prototypes.internal-config"
 
+data.raw["radar"]["radar"].max_health = Health.Tier2
+data.raw["radar"]["radar"].resistances = Resistances.Tier2
 data.raw["radar"]["radar"].fast_replaceable_group =  "radar"
 
 data:extend(
@@ -10,15 +13,9 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/radars/icon/radar-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "radar-mk2"},
-    max_health = 300,
+    max_health = Health.Tier4,
+    resistances = Resistances.Tier4,
     corpse = "big-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
@@ -60,15 +57,9 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/radars/icon/radar-3.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "radar-mk3"},
-    max_health = 450,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     corpse = "big-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
@@ -110,15 +101,9 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/radars/icon/radar-4.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "radar-mk4"},
-    max_health = 600,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "big-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",
@@ -160,15 +145,9 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/radars/icon/radar-5.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "radar-mk5"},
-    max_health = 1000,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "big-remnants",
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fast_replaceable_group =  "radar",

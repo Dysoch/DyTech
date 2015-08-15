@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["logistic-robot"]["logistic-robot"].max_health = Health.Tier3
+data.raw["logistic-robot"]["logistic-robot"].resistances = Resistances.Tier3
+
 data:extend(
 {
   {
@@ -11,7 +16,8 @@ data:extend(
 		mining_time = 0.1, 
 		result = "logistic-robot-1"
 	},
-    max_health = 100,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     max_payload_size = 6,
@@ -138,7 +144,8 @@ data:extend(
 		mining_time = 0.1, 
 		result = "logistic-robot-2"
 	},
-    max_health = 100,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     max_payload_size = 11,

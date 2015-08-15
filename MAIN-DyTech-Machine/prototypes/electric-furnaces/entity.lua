@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["furnace"]["electric-furnace"].max_health = Health.Tier3
+data.raw["furnace"]["electric-furnace"].resistances = Resistances.Tier3
+
 data:extend(
 { 
   {
@@ -6,17 +11,11 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/electric-furnaces/electric-furnace-2.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "electric-furnace-mk2"},
-    max_health = 300,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_specification =
@@ -101,17 +100,11 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/electric-furnaces/electric-furnace-3.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "electric-furnace-mk3"},
-    max_health = 450,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_specification =
@@ -196,17 +189,11 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/electric-furnaces/electric-furnace-4.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "electric-furnace-mk4"},
-    max_health = 600,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_specification =
@@ -291,17 +278,11 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/electric-furnaces/electric-furnace-5.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "electric-furnace-mk5"},
-    max_health = 1000,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     light = {intensity = 1, size = 10},
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 80
-      }
-    },
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     module_specification =

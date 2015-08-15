@@ -1,4 +1,5 @@
 require "prototypes.functions.trains"
+require "prototypes.internal-config"
 
 TINT = {r=0.933, g=0.910, b=0.667, a=0.99}
 
@@ -10,7 +11,8 @@ data:extend(
     icon = "__base__/graphics/icons/diesel-locomotive.png",
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {mining_time = 1, result = "diesel-locomotive-fast"},
-    max_health = 500,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "medium-remnants",
     collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
     selection_box = {{-0.7, -2.5}, {1, 2.5}},
@@ -147,7 +149,8 @@ data:extend(
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
     inventory_size = 25,
     minable = {mining_time = 1, result = "cargo-wagon-fast"},
-    max_health = 300,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "medium-remnants",
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
     selection_box = {{-0.7, -2.5}, {1, 2.5}},

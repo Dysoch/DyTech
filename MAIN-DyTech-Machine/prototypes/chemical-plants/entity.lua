@@ -1,7 +1,11 @@
+require "prototypes.internal-config"
+
 MK1Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 MK2Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+data.raw["assembling-machine"]["chemical-plant"].max_health = Health.Tier3
+data.raw["assembling-machine"]["chemical-plant"].resistances = Resistances.Tier3
 
 data:extend(
 { 
@@ -11,7 +15,8 @@ data:extend(
     icon = "__base__/graphics/icons/chemical-plant.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-1"},
-    max_health = 300,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
@@ -163,7 +168,8 @@ data:extend(
     icon = "__base__/graphics/icons/chemical-plant.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "chemical-plant-2"},
-    max_health = 300,
+    max_health = Health.Tier9,
+    resistances = Resistances.Tier9,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

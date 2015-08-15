@@ -1,3 +1,12 @@
+require "prototypes.internal-config"
+
+data.raw["assembling-machine"]["assembling-machine-1"].max_health = Health.Tier2
+data.raw["assembling-machine"]["assembling-machine-1"].resistances = Resistances.Tier2
+data.raw["assembling-machine"]["assembling-machine-2"].max_health = Health.Tier3
+data.raw["assembling-machine"]["assembling-machine-2"].resistances = Resistances.Tier3
+data.raw["assembling-machine"]["assembling-machine-3"].max_health = Health.Tier4
+data.raw["assembling-machine"]["assembling-machine-3"].resistances = Resistances.Tier4
+
 data:extend(
 { 
   {
@@ -6,16 +15,10 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/assembling-machines/icon/assembling-machine-4.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-4"},
-    max_health = 400,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     fluid_boxes =
     {
       {
@@ -104,16 +107,10 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/assembling-machines/icon/assembling-machine-5.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-5"},
-    max_health = 500,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     fluid_boxes =
     {
       {
@@ -202,16 +199,10 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/assembling-machines/icon/assembling-machine-6.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-6"},
-    max_health = 600,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     fluid_boxes =
     {
       {
@@ -300,16 +291,10 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/assembling-machines/icon/assembling-machine-7.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-7"},
-    max_health = 700,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    resistances = 
-    {
-      {
-        type = "fire",
-        percent = 70
-      }
-    },
     fluid_boxes =
     {
       {

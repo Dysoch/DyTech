@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["mining-drill"]["pumpjack"].max_health = Health.Tier2
+data.raw["mining-drill"]["pumpjack"].resistances = Resistances.Tier2
+
 data:extend(
 { 
   {
@@ -7,7 +12,8 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "pumpjack-mk2"},
     resource_categories = {"basic-fluid"},
-    max_health = 200,
+    max_health = Health.Tier4,
+    resistances = Resistances.Tier4,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
@@ -86,7 +92,8 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "pumpjack-mk3"},
     resource_categories = {"basic-fluid"},
-    max_health = 300,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
@@ -165,7 +172,8 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "pumpjack-mk4"},
     resource_categories = {"basic-fluid"},
-    max_health = 400,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
@@ -244,7 +252,8 @@ data:extend(
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "pumpjack-mk5"},
     resource_categories = {"basic-fluid"},
-    max_health = 500,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},

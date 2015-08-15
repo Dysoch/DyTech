@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["construction-robot"]["construction-robot"].max_health = Health.Tier3
+data.raw["construction-robot"]["construction-robot"].resistances = Resistances.Tier3
+
 data:extend(
 {
   {
@@ -6,7 +11,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/construction-robots/icon-1.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "construction-robot-1"},
-    max_health = 200,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     max_payload_size = 6,
@@ -183,7 +189,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/construction-robots/icon-2.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {hardness = 0.1, mining_time = 0.1, result = "construction-robot-2"},
-    max_health = 400,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{-0.9, -1.5}, {0.9, -0.5}},
     max_payload_size = 11,

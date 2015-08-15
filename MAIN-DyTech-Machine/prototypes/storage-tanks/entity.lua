@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["storage-tank"]["storage-tank"].max_health = Health.Tier2
+data.raw["storage-tank"]["storage-tank"].resistances = Resistances.Tier2
+
 data:extend(
 {
   {
@@ -6,7 +11,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/storage-tanks/icon/storage-tank-2.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 3, result = "storage-tank-2"},
-    max_health = 500,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     corpse = "medium-remnants",
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -130,7 +136,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/storage-tanks/icon/storage-tank-3.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 3, result = "storage-tank-3"},
-    max_health = 500,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     corpse = "medium-remnants",
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -254,7 +261,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/storage-tanks/icon/storage-tank-4.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 3, result = "storage-tank-4"},
-    max_health = 500,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     corpse = "medium-remnants",
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -378,7 +386,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/storage-tanks/icon/storage-tank-5.png",
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 3, result = "storage-tank-5"},
-    max_health = 500,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "medium-remnants",
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},

@@ -1,3 +1,8 @@
+require "prototypes.internal-config"
+
+data.raw["assembling-machine"]["oil-refinery"].max_health = Health.Tier3
+data.raw["assembling-machine"]["oil-refinery"].resistances = Resistances.Tier3
+
 MK1Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 MK2Tint = {r=0.804, g=0.361, b=0.361, a=0.85}
 
@@ -11,7 +16,8 @@ data:extend(
     icon = "__base__/graphics/icons/oil-refinery.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-1"},
-    max_health = 300,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -140,7 +146,8 @@ data:extend(
     icon = "__base__/graphics/icons/oil-refinery.png",
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "oil-refinery-2"},
-    max_health = 300,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},

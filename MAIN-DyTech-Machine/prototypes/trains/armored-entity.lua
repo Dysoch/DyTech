@@ -1,4 +1,5 @@
 require "prototypes.functions.trains"
+require "prototypes.internal-config"
 
 TINT = {r=0.282, g=0.239, b=0.545, a=0.99}
 
@@ -10,21 +11,9 @@ data:extend(
     icon = "__base__/graphics/icons/diesel-locomotive.png",
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
     minable = {mining_time = 1, result = "diesel-locomotive-armor"},
-    max_health = 5000,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "medium-remnants",
-	resistances =
-    {
-      {
-        type = "physical",
-        decrease = 5,
-        percent = 25
-      },
-      {
-        type = "explosion",
-        decrease = 5,
-        percent = 25
-      },
-    },
     collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
     selection_box = {{-0.7, -2.5}, {1, 2.5}},
     drawing_box = {{-1, -4}, {1, 3}},
@@ -160,21 +149,9 @@ data:extend(
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
     inventory_size = 25,
     minable = {mining_time = 1, result = "cargo-wagon-armor"},
-    max_health = 1800,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     corpse = "medium-remnants",
-	resistances =
-    {
-      {
-        type = "physical",
-        decrease = 4,
-        percent = 20
-      },
-      {
-        type = "explosion",
-        decrease = 4,
-        percent = 20
-      },
-    },
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
     selection_box = {{-0.7, -2.5}, {1, 2.5}},
     weight = 2000,

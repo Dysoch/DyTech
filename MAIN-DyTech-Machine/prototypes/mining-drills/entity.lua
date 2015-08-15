@@ -1,3 +1,4 @@
+require "prototypes.internal-config"
 require "prototypes.functions.miners"
 
 Mk1 = {r=0.804, g=0.361, b=0.361, a=0.99}
@@ -8,6 +9,8 @@ Mk5 = {r=1, g=0.843, b=0, a=0.99}
 Mk6 = {r=0.529, g=0.808, b=0.980, a=0.99}
 
 data.raw["mining-drill"]["basic-mining-drill"].icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill1.png"
+data.raw["mining-drill"]["basic-mining-drill"].max_health = Health.Tier3
+data.raw["mining-drill"]["basic-mining-drill"].resistances = Resistances.Tier3 
 data.raw["mining-drill"]["basic-mining-drill"].animations = Animation_Miner(Mk1)
 data.raw["mining-drill"]["basic-mining-drill"].fast_replaceable_group =  "drill"
 
@@ -19,7 +22,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill2.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk2"},
-    max_health = 350,
+    max_health = Health.Tier5,
+    resistances = Resistances.Tier5,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
 	fast_replaceable_group =  "drill",
@@ -64,7 +68,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill3.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk3"},
-    max_health = 450,
+    max_health = Health.Tier6,
+    resistances = Resistances.Tier6,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
 	fast_replaceable_group =  "drill",
@@ -110,7 +115,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill4.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk4"},
-    max_health = 800,
+    max_health = Health.Tier7,
+    resistances = Resistances.Tier7,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
@@ -154,7 +160,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill5.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk5"},
-    max_health = 1500,
+    max_health = Health.Tier8,
+    resistances = Resistances.Tier8,
     resource_categories = {"basic-solid"},
     corpse = "big-remnants",
 	fast_replaceable_group =  "drill",
@@ -199,7 +206,8 @@ data:extend(
     icon = "__MAIN-DyTech-Machine__/graphics/mining-drills/basic-mining-drill6.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "basic-mining-drill-mk6"},
-    max_health = 4500,
+    max_health = Health.Tier10,
+    resistances = Resistances.Tier10,
     resource_categories = {"basic-solid"},
     healing_per_tick = 0,25,
 	corpse = "big-remnants",
