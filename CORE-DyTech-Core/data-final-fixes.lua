@@ -1,17 +1,7 @@
 require "config"
 
 TechFix = true
-
-if TechFix then
-	for k, v in pairs(data.raw.technology) do
-		if not v.upgrade then
-			v.upgrade = true
-		elseif v.upgrade == "false" then
-			v.upgrade = "true"
-		end
-		v.order = v.name
-	end
-end 
+ItemFix = false
 
 for i, drill in pairs(data.raw["mining-drill"]) do
 	if not drill.storage_slots then 
@@ -190,3 +180,41 @@ for k, v in pairs(data.raw.module) do
 		table.insert(v.limitation, "logic-diamond-processor")
 	end
 end
+
+if TechFix then
+	for k, v in pairs(data.raw.technology) do
+		if not v.upgrade then
+			v.upgrade = true
+		elseif v.upgrade == "false" then
+			v.upgrade = "true"
+		end
+		v.order = v.name
+	end
+end 
+
+if ItemFix then
+	for k, v in pairs(data.raw.item) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw.ammo) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw.gun) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw["repair-tool"]) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw["mining-tool"]) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw.tool) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw["capsule"]) do
+		v.order = v.name
+	end
+	for k, v in pairs(data.raw["module"]) do
+		v.order = v.name
+	end
+end 
