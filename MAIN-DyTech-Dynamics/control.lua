@@ -18,7 +18,7 @@ require "scripts/test-functions"
 debug_master = false -- Master switch for debugging, shows most things!
 debug_ontick = false -- Ontick switch for debugging, shows all ontick event debugs
 debug_chunks = false -- shows the chunks generated with this on
-debug_GUI = false -- debugger for GUI
+debug_GUI = true -- debugger for GUI
 function debug(str, statement)
 	if debug_master then
 		PlayerPrint(str)
@@ -183,18 +183,14 @@ local player = game.players[playerIndex]
 	elseif event.element.name:find(guiNames.MRSUnlockButton) then
 		RSF.RSUnlock(global.ResearchSystem.ToUnlock)
 		GUI.closeGUI("all", playerIndex)
-		MRS.showResearchMainGUI(playerIndex)
+		MRS.showUnlockTableGUI(playerIndex, RSF.DSgetResearchLevel(global.ResearchSystem.ItemUnlock[global.ResearchSystem.ToUnlock].Tech))
 	elseif RSDatabase.ItemUnlock[event.element.name] then
 		global.ResearchSystem.ToUnlock = event.element.name
 		GUI.closeGUI("ResearchUnlock", playerIndex)
 		MRS.showUnlockGUIBase(playerIndex, global.ResearchSystem.ToUnlock)
 	elseif event.element.name:find(guiNames.ResearchButton) then
-		if global.ResearchSystem.RSManual then
-			GUI.closeGUI("all", playerIndex)
-			MRS.showResearchMainGUI(playerIndex)
-		else
-			PlayerPrint({"rs-manual-disabled"})
-		end
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name == "DebugAddPoints" then
 		global.ResearchSystem.science = global.ResearchSystem.science + 100000
 		GUI.closeGUI("all", playerIndex)
@@ -211,6 +207,10 @@ local player = game.players[playerIndex]
 	elseif event.element.name:find(guiNames.Tier4Base) then
 		MRS.showUnlockTableGUI(playerIndex, 4)
 		GUI.closeGUI("ResearchMain", playerIndex)
+	elseif event.element.name == "DyTech-Research-System-Switch" then
+		remote.call("DyTech-Dynamics", "SwitchRS")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name:find(guiNames.CollectorsButton) then
 		GUI.closeGUI("all", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
@@ -287,7 +287,28 @@ local player = game.players[playerIndex]
 		PowerBoost.Researching_Boost("start")
 	elseif event.element.name == "DyTech-Dynamics-Back-Button" then
 		GUI.closeGUI("all", playerIndex)
-		GUI.showDynamicsMainGUI(playerIndex)	
+		GUI.showDynamicsMainGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Unlocks" then
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Quickbar-Minus-Button" then
+		RSF.Quickbars("-")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Quickbar-Plus-Button" then
+		if game.forces.player.quickbar_count < 20 then 
+			RSF.Quickbars("+")
+			GUI.closeGUI("all", playerIndex)
+			MRS.showResearchExtraGUI(playerIndex)	
+		end
+	elseif event.element.name == "DyTech-Dynamics-Extra-Stacksize-Minus-Button" then
+		RSF.Stacksize("-")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Stacksize-Plus-Button" then
+		RSF.Stacksize("+")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
 	end
 end)
 
@@ -301,14 +322,6 @@ remote.add_interface("DyTech-Dynamics",
 		elseif game.players[pIndex] == nil then return
 		else
 			TestFunctions.TestResearch(pIndex)
-		end
-	end,
-	
-	RSRemote = function(name)
-		if Research_System then
-			RSF.RSUnlock(name)
-		else
-			PlayerPrint({"rs-disabled"})
 		end
 	end,
 	

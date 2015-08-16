@@ -48,6 +48,9 @@ function closeGUI(statement, PlayerIndex)
 		if game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow] and game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainAutoResearcherFlow].destroy()
 		end
+		if game.players[PlayerIndex].gui.top[guiNames.mainResearchExtraFlow] and game.players[PlayerIndex].gui.top[guiNames.mainResearchExtraFlow].valid then
+			game.players[PlayerIndex].gui.top[guiNames.mainResearchExtraFlow].destroy()
+		end
 		if game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"] and game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDynamicPowerFlow"].destroy()
 		end

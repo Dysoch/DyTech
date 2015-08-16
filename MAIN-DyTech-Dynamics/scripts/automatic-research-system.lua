@@ -18,7 +18,7 @@ function AutomaticRS(event)
 	for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		if not global.ResearchSystem.Unlocked[RecipeName] then
 		local info = global.ResearchSystem.ItemUnlock[RecipeName]
-			if event.tick%dsttime()==(eventtime*info.Event) then 
+			if event.tick%dsttime()==(eventtime*info.Event) and global.ResearchSystem.science >= info.Points then 
 				RSF.RSUnlock(RecipeName) 
 			end
 		end

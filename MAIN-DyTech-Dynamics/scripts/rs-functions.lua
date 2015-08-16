@@ -107,3 +107,35 @@ for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	end 
 end
 end
+
+function Quickbars(STATEMENT)
+	if STATEMENT == "+" then
+		if global.ResearchSystem.science >= (500*game.forces.player.quickbar_count) then
+			global.ResearchSystem.science = global.ResearchSystem.science - (500*game.forces.player.quickbar_count)
+			game.forces.player.quickbar_count = game.forces.player.quickbar_count + 1
+			PlayerPrint({"quickbar-increase"})
+		end
+	elseif STATEMENT == "-" then
+		if game.forces.player.quickbar_count ~= 1 then
+			game.forces.player.quickbar_count = game.forces.player.quickbar_count - 1
+			global.ResearchSystem.science = global.ResearchSystem.science + (500*game.forces.player.quickbar_count)
+			PlayerPrint({"quickbar-decrease"})
+		end
+	end
+end
+
+function Stacksize(STATEMENT)
+	if STATEMENT == "+" then
+		if global.ResearchSystem.science >= (250+(250*game.forces.player.inserter_stack_size_bonus)) then
+			global.ResearchSystem.science = global.ResearchSystem.science - (250+(250*game.forces.player.inserter_stack_size_bonus))
+			game.forces.player.inserter_stack_size_bonus = game.forces.player.inserter_stack_size_bonus + 1
+			PlayerPrint({"stacksize-increase"})
+		end
+	elseif STATEMENT == "-" then
+		if game.forces.player.inserter_stack_size_bonus ~= 0 then
+			game.forces.player.inserter_stack_size_bonus = game.forces.player.inserter_stack_size_bonus - 1
+			global.ResearchSystem.science = global.ResearchSystem.science + (250+(250*game.forces.player.inserter_stack_size_bonus))
+			PlayerPrint({"stacksize-decrease"})
+		end
+	end
+end
