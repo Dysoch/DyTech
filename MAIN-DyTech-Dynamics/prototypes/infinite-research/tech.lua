@@ -9,7 +9,7 @@ function Create_Infinite_Research(level, pack1, pack2, pack3, alienpack, count)
     unit =
     {
       ingredients = {},
-      time = 30
+      time = 9
     },
     upgrade = true,
     order = "e-p-b-c"
@@ -33,33 +33,34 @@ function Create_Infinite_Research(level, pack1, pack2, pack3, alienpack, count)
   if alienpack ~= 0 then
     table.insert(result.unit.ingredients, {"alien-science-pack", alienpack})
   end
+  result.unit.time = 9 + level
   return result
 end
 
 for i=1,24 do
 data:extend(
 {
-	Create_Infinite_Research(i, 1, 0, 0, 0, i * 50)
+	Create_Infinite_Research(i, 1, 0, 0, 0, i * 100)
 })
 end
 
 for i=25,99 do
 data:extend(
 {
-	Create_Infinite_Research(i, 1, 1, 0, 0, i * 50)
+	Create_Infinite_Research(i, 1, 1, 0, 0, i * 100)
 })
 end
 
 for i=100,249 do
 data:extend(
 {
-	Create_Infinite_Research(i, 1, 1, 1, 0, i * 50)
+	Create_Infinite_Research(i, 1, 1, 1, 0, i * 100)
 })
 end
 
 for i=250,500 do
 data:extend(
 {
-	Create_Infinite_Research(i, 1, 1, 1, 1, i * 50)
+	Create_Infinite_Research(i, 1, 1, 1, 1, i * 100)
 })
 end
