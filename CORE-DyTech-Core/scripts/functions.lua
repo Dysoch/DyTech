@@ -39,6 +39,13 @@ function World_Call()
 	global.Special_Loot = {}
 end
 
+function Wind_Startup()
+	global.Wind = {}
+	global.Wind.Low = 600
+	global.Wind.High = 18000
+	global.Wind.Value = math.random(global.Wind.Low,global.Wind.High)
+end
+
 function Timer(event)
 	if not global.timer then global.timer={seconds=0, minutes=0, hours=0} end
 	if event.tick%60==0 then

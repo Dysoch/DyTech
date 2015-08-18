@@ -12,6 +12,7 @@ Released: ?? 2015
 [*] Changed Graphics of Cut Gems.
 [*] When Stacksize cheat is active, default request amount of all items is the old stacksize!
 [*] Super Size Resource cheat now requires an input. Default is set to 500.000
+[*] Much improved the wind changing direction. Doesnt happen every 10 seconds anymore. It can now happen between 10 seconds and 5 minutes. So be careful with your firestorm capsules.
 [/list]
 [*] Bugfixes :
 [list] 

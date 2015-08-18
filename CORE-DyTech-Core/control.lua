@@ -54,6 +54,7 @@ game.on_init(function()
 	end
 	fs.Startup()
 	fs.World_Call()
+	fs.Wind_Startup()
 end)
 
 game.on_save(function()
@@ -76,11 +77,13 @@ game.on_load(function()
 		end
 	end
 	CoreGUI.CreateButton()
+	if not global.Wind then fs.Wind_Startup() end
 end)
 
 game.on_event(defines.events.on_tick, function(event)
-	if event.tick%600==0 then
+	if event.tick%global.Wind.Value==(global.Wind.Value-1) then
 		game.wind_orientation = math.random()
+		global.Wind.Value = math.random(global.Wind.Low,global.Wind.High)
 	end
 	fs.Timer(event)
 	--if not DyTechOnInit then
@@ -311,6 +314,7 @@ remote.add_interface("DyTech-Core",
 	end,
 	
 	Logger = function()
+		game.makefile("DyTech/DataDump/Core-Wind.txt", serpent.block(global.Wind))
 		game.makefile("DyTech/DataDump/Core-Technologies.txt", serpent.block(global.Logger.Technology))
 		game.makefile("DyTech/DataDump/Core-RobotBuildEntity.txt", serpent.block(global.Logger.RobotBuildEntity))
 		game.makefile("DyTech/DataDump/Core-BuildEntity.txt", serpent.block(global.Logger.BuildEntity))
