@@ -173,3 +173,10 @@ function Combat_Robots(STATEMENT)
 		end
 	end
 end
+
+function Lab_Increament(event)
+	if event.tick%36000==35999 then
+	local count = game.players[1].force.get_entity_count("lab")
+	global.ResearchSystem.science = global.ResearchSystem.science + count
+	end
+end

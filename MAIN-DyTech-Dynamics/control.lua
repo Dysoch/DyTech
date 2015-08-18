@@ -71,6 +71,7 @@ game.on_event(defines.events.on_tick, function(event)
 	if Config.Dynamic_Power and event.tick%60==1 then
 		Power.Ticker()
 	end
+	RSF.Lab_Increament(event)
 end)
 
 game.on_event(defines.events.on_research_started, function(event)
