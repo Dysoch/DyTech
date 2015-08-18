@@ -248,7 +248,11 @@ local player = game.players[playerIndex]
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		fs.ResearchAll()
-	elseif event.element.name == "DyTech-Debug-Evolution-Button" then
+	elseif event.element.name == "DyTech-Debug-Evolution-0-Button" then
+		CoreGUI.closeGUI("All", playerIndex)
+		CoreGUI.CreateButton()
+		game.evolution_factor = 0
+	elseif event.element.name == "DyTech-Debug-Evolution-1-Button" then
 		CoreGUI.closeGUI("All", playerIndex)
 		CoreGUI.CreateButton()
 		game.evolution_factor = 1
