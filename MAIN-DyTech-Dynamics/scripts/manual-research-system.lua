@@ -19,9 +19,7 @@ if global.ResearchSystem.RSManual then
 	adder.add({type="button", name=guiNames.Tier2Base, caption={"Tier2", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.Tier2), ")"}})
 	adder.add({type="button", name=guiNames.Tier3Base, caption={"Tier3", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.Tier3), ")"}})
 	adder.add({type="button", name=guiNames.Tier4Base, caption={"Tier4", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.Tier4), ")"}})
-	if global.ResearchSystem.science >= 250 then 
-		adder.add({type="button", name="DyTech-Dynamics-Extra-Unlocks", caption={"research-system-extra-unlocks"}})
-	end
+	adder.add({type="button", name="DyTech-Dynamics-Extra-Unlocks", caption={"research-system-extra-unlocks"}})
 end
 adder.add({type="button", name="DyTech-Research-System-Switch", caption={"research-system-switch", {tostring(global.ResearchSystem.RSAutomatic)}}})
 if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
@@ -32,23 +30,48 @@ function showResearchExtraGUI(PlayerIndex)
 local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="horizontal", name=guiNames.mainResearchExtraFlow})
 player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame1, caption={"gui-unlock-screen-1"}})
-player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame2, caption={"quickbar", game.forces.player.quickbar_count}})
-player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame3, caption={"stacksize", (game.forces.player.inserter_stack_size_bonus+1)}})
+
 adder1 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame1]
-adder2 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame2]
-adder3 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame3]
 adder1.add({type="label", name="", caption={"points", global.ResearchSystem.science}})
 if global.ResearchSystem.science > (500*game.forces.player.quickbar_count) and game.forces.player.quickbar_count <= 20 then
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame2, caption={"quickbar", game.forces.player.quickbar_count}})
+	adder2 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame2]
 	adder2.add({type="button", name="DyTech-Dynamics-Extra-Quickbar-Minus-Button", caption="-"})
 	adder2.add({type="button", name="DyTech-Dynamics-Extra-Quickbar-Plus-Button", caption="+"})
 else
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame2, caption={"quickbar", game.forces.player.quickbar_count}})
+	adder2 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame2]
 	adder2.add({type="button", name="DyTech-Dynamics-Extra-Quickbar-Minus-Button", caption="-"})
 end
 if global.ResearchSystem.science > (250+(250*game.forces.player.inserter_stack_size_bonus)) then
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame3, caption={"stacksize", (game.forces.player.inserter_stack_size_bonus+1)}})
+	adder3 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame3]
 	adder3.add({type="button", name="DyTech-Dynamics-Extra-Stacksize-Minus-Button", caption="-"})
 	adder3.add({type="button", name="DyTech-Dynamics-Extra-Stacksize-Plus-Button", caption="+"})
 else
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame3, caption={"stacksize", (game.forces.player.inserter_stack_size_bonus+1)}})
+	adder3 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame3]
 	adder3.add({type="button", name="DyTech-Dynamics-Extra-Stacksize-Minus-Button", caption="-"})
+end
+if global.ResearchSystem.science > (50+(50*game.forces.player.character_logistic_slot_count)) then
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame4, caption={"logistics", (game.forces.player.character_logistic_slot_count)}})
+	adder4 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame4]
+	adder4.add({type="button", name="DyTech-Dynamics-Extra-Logistics-Minus-Button", caption="-"})
+	adder4.add({type="button", name="DyTech-Dynamics-Extra-Logistics-Plus-Button", caption="+"})
+else
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame4, caption={"logistics", (game.forces.player.character_logistic_slot_count)}})
+	adder4 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame4]
+	adder4.add({type="button", name="DyTech-Dynamics-Extra-Logistics-Minus-Button", caption="-"})
+end
+if global.ResearchSystem.science > (50+(50*game.forces.player.maximum_following_robot_count)) then
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame5, caption={"combat", (game.forces.player.maximum_following_robot_count)}})
+	adder5 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame5]
+	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Minus-Button", caption="-"})
+	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Plus-Button", caption="+"})
+else
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame5, caption={"combat", (game.forces.player.maximum_following_robot_count)}})
+	adder5 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame5]
+	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Minus-Button", caption="-"})
 end
 adder1.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end

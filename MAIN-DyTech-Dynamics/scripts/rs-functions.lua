@@ -139,3 +139,37 @@ function Stacksize(STATEMENT)
 		end
 	end
 end
+
+function Logistics(STATEMENT)
+	if STATEMENT == "+" then
+		if global.ResearchSystem.science >= (50+(50*game.forces.player.character_logistic_slot_count)) then
+			global.ResearchSystem.science = global.ResearchSystem.science - (50+(50*game.forces.player.character_logistic_slot_count))
+			game.forces.player.character_logistic_slot_count = game.forces.player.character_logistic_slot_count + 1
+			game.forces.player.character_trash_slot_count = game.forces.player.character_trash_slot_count + 1
+			PlayerPrint({"logistics-increase"})
+		end
+	elseif STATEMENT == "-" then
+		if game.forces.player.character_logistic_slot_count ~= 0 then
+			game.forces.player.character_logistic_slot_count = game.forces.player.character_logistic_slot_count - 1
+			game.forces.player.character_trash_slot_count = game.forces.player.character_trash_slot_count - 1
+			global.ResearchSystem.science = global.ResearchSystem.science + (50+(50*game.forces.player.character_logistic_slot_count))
+			PlayerPrint({"logistics-decrease"})
+		end
+	end
+end
+
+function Combat_Robots(STATEMENT)
+	if STATEMENT == "+" then
+		if global.ResearchSystem.science >= (50+(50*game.forces.player.maximum_following_robot_count)) then
+			global.ResearchSystem.science = global.ResearchSystem.science - (50+(50*game.forces.player.maximum_following_robot_count))
+			game.forces.player.maximum_following_robot_count = game.forces.player.maximum_following_robot_count + 1
+			PlayerPrint({"combat-increase"})
+		end
+	elseif STATEMENT == "-" then
+		if game.forces.player.maximum_following_robot_count ~= 0 then
+			game.forces.player.maximum_following_robot_count = game.forces.player.maximum_following_robot_count - 1
+			global.ResearchSystem.science = global.ResearchSystem.science + (50+(50*game.forces.player.maximum_following_robot_count))
+			PlayerPrint({"combat-decrease"})
+		end
+	end
+end

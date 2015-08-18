@@ -309,6 +309,22 @@ local player = game.players[playerIndex]
 		RSF.Stacksize("+")
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Logistics-Minus-Button" then
+		RSF.Logistics("-")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Logistics-Plus-Button" then
+		RSF.Logistics("+")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Combat-Minus-Button" then
+		RSF.Combat_Robots("-")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Combat-Plus-Button" then
+		RSF.Combat_Robots("+")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
 	end
 end)
 
