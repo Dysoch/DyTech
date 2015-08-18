@@ -21,7 +21,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"chemical-plant-1", 5},
+      {"chemical-plant-1", 1},
       {"tungsten-gear-wheel", 5},
       {"processing-unit", 5},
       {"pipe", 25}
