@@ -2,6 +2,7 @@ require "config"
 
 TechFix = true
 ItemFix = false
+Fast_Replace_Fix = true
 
 for i, drill in pairs(data.raw["mining-drill"]) do
 	if not drill.storage_slots then 
@@ -218,3 +219,11 @@ if ItemFix then
 		v.order = v.name
 	end
 end 
+
+if Fast_Replace_Fix then
+	for k, v in pairs(data.raw["inserter"]) do
+		v.fast_replaceable_group = "inserter"
+		v.collision_box = {{-0.15, -0.15}, {0.15, 0.15}}
+		v.selection_box = {{-0.4, -0.35}, {0.4, 0.45}}
+	end
+end
