@@ -10,6 +10,7 @@ local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainResearchFlow})
 player.gui.top[guiNames.mainResearchFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchFrame, caption={"gui-unlock-screen-1"}})
 adder = player.gui.top[guiNames.mainResearchFlow][guiNames.mainResearchFrame]
+adder.add({type="label", name="", caption={"points", global.ResearchSystem.science}})
 if global.ResearchSystem.RSManual then
 	RSF.RecipeAvailableToUnlockTier1()
 	RSF.RecipeAvailableToUnlockTier2()
@@ -24,6 +25,7 @@ end
 adder.add({type="button", name="DyTech-Research-System-Switch", caption={"research-system-switch", {tostring(global.ResearchSystem.RSAutomatic)}}})
 if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
 adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
+adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
 
 function showResearchExtraGUI(PlayerIndex)
@@ -74,6 +76,7 @@ else
 	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Minus-Button", caption="-"})
 end
 adder1.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
+adder1.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
 
 function showUnlockTableGUI(PlayerIndex, Tier)

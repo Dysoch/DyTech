@@ -65,4 +65,9 @@ data.raw["technology"]["inserter-stack-size-bonus-9"].effects = {}
 data.raw["technology"]["toolbelt"].effects = {}
 data.raw["technology"]["toolbelt-1"].effects = {}
 data.raw["technology"]["toolbelt-2"].effects = {}
+if Config.Longer_Research and not Config.Infinite_Research then
+	for k, v in pairs(data.raw["technology"]) do
+	 v.unit.count = v.unit.count * 5
+	end
+end
 end
