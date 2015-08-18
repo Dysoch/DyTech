@@ -23,7 +23,7 @@ if global.ResearchSystem.RSManual then
 	adder.add({type="button", name="DyTech-Dynamics-Extra-Unlocks", caption={"research-system-extra-unlocks"}})
 end
 adder.add({type="button", name="DyTech-Research-System-Switch", caption={"research-system-switch", {tostring(global.ResearchSystem.RSAutomatic)}}})
-if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="100k points"}) end
+if debug_GUI then adder.add({type="button", name="DebugAddPoints", caption="DEBUG: Max points"}) end
 adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 adder.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end
@@ -40,6 +40,7 @@ if global.ResearchSystem.science > (500*game.forces.player.quickbar_count) and g
 	adder2 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame2]
 	adder2.add({type="button", name="DyTech-Dynamics-Extra-Quickbar-Minus-Button", caption="-"})
 	adder2.add({type="button", name="DyTech-Dynamics-Extra-Quickbar-Plus-Button", caption="+"})
+	adder2.add({type="label", name="", caption={"cost", (500*game.forces.player.quickbar_count)}})
 else
 	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame2, caption={"quickbar", game.forces.player.quickbar_count}})
 	adder2 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame2]
@@ -50,6 +51,7 @@ if global.ResearchSystem.science > (250+(250*game.forces.player.inserter_stack_s
 	adder3 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame3]
 	adder3.add({type="button", name="DyTech-Dynamics-Extra-Stacksize-Minus-Button", caption="-"})
 	adder3.add({type="button", name="DyTech-Dynamics-Extra-Stacksize-Plus-Button", caption="+"})
+	adder3.add({type="label", name="", caption={"cost", (250+(250*game.forces.player.inserter_stack_size_bonus))}})
 else
 	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame3, caption={"stacksize", (game.forces.player.inserter_stack_size_bonus+1)}})
 	adder3 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame3]
@@ -60,6 +62,7 @@ if global.ResearchSystem.science > (50+(50*game.forces.player.character_logistic
 	adder4 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame4]
 	adder4.add({type="button", name="DyTech-Dynamics-Extra-Logistics-Minus-Button", caption="-"})
 	adder4.add({type="button", name="DyTech-Dynamics-Extra-Logistics-Plus-Button", caption="+"})
+	adder4.add({type="label", name="", caption={"cost", (50+(50*game.forces.player.character_logistic_slot_count))}})
 else
 	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame4, caption={"logistics", (game.forces.player.character_logistic_slot_count)}})
 	adder4 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame4]
@@ -70,6 +73,7 @@ if global.ResearchSystem.science > (50+(50*game.forces.player.maximum_following_
 	adder5 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame5]
 	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Minus-Button", caption="-"})
 	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Plus-Button", caption="+"})
+	adder5.add({type="label", name="", caption={"cost", (50+(50*game.forces.player.maximum_following_robot_count))}})
 else
 	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame5, caption={"combat", (game.forces.player.maximum_following_robot_count)}})
 	adder5 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame5]

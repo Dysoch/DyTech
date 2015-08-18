@@ -9,7 +9,7 @@ Config = {}
 -- and lets the Research Handle it!
 Config.Research_System = true
 
-Config.Infinite_Research = false
+Config.Infinite_Research = true
 Config.Longer_Research = false
 -- You have the option to enable 1 of the 2 here. 
 -- Infinite Research gives 500 new technologies that unlock nothing. 

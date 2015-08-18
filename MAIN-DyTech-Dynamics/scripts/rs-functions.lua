@@ -17,6 +17,7 @@ local data = global.ResearchSystem.ItemUnlock[Name]
 			global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
 			UnlockedRecipe(Name, false)
 			Amount_Of_Events()
+			debug("Unlock Events left: "..global.ResearchSystem.Amount)
 		else
 			PlayerPrint({"not-enough-points"})
 		end

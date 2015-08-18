@@ -74,13 +74,13 @@ function getResearchLevel(technology)
 end
 
 function InitHalfwayTechnology(event)
-	global.Technology[event.research] = {}
-	global.Technology[event.research].Prerequisite = {}
-    for prereqname,count in pairs(game.forces.player.technologies[event.research].prerequisites) do
-		table.insert(global.Technology[event.research].Prerequisite,prereqname)
+	global.Technology[event.research.name] = {}
+	global.Technology[event.research.name].Prerequisite = {}
+    for prereqname,count in pairs(game.forces.player.technologies[event.research.name].prerequisites) do
+		table.insert(global.Technology[event.research.name].Prerequisite,prereqname)
 	end
-    global.Technology[event.research].TechLevel = getResearchLevel(event.research)
-    global.Technology[event.research].ScienceCount = game.forces.player.technologies[event.research].research_unit_count
-	global.Technology[event.research].Started = true
-	global.Technology[event.research].Finished = false
+    global.Technology[event.research.name].TechLevel = getResearchLevel(event.research.name)
+    global.Technology[event.research.name].ScienceCount = game.forces.player.technologies[event.research.name].research_unit_count
+	global.Technology[event.research.name].Started = false
+	global.Technology[event.research.name].Finished = false
 end

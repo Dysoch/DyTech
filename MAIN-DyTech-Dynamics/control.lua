@@ -65,9 +65,6 @@ game.on_event(defines.events.on_tick, function(event)
 			CollectorFunctions.ticker()
 		end
 	end
-	if event.tick%108000==1 then
-		RSF.Amount_Of_Events()
-	end
 	if Config.Dynamic_Power and event.tick%60==1 then
 		Power.Ticker()
 	end
@@ -76,21 +73,20 @@ end)
 
 game.on_event(defines.events.on_research_started, function(event)
 if Config.Research_System then	
+	fs.InitHalfwayTechnology(event)
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Started ("..tostring(event.research.name)..")")
 	if not global.Technology[event.research.name].Started then
 		local ingredients = game.forces.player.technologies[event.research.name].research_unit_count
 		global.ResearchSystem.science=global.ResearchSystem.science+(ingredients/10)
-		debug("Research found in globalal table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(global.ResearchSystem.science))
-		global.Technology[event.research.name].Started = true
+		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(global.ResearchSystem.science))
 	end
 else 
 	if not global.Technology[event.research.name] then
 		fs.InitHalfwayTechnology(event)
-	else
-		global.Technology[event.research.name].Started = true
 	end
 end
+global.Technology[event.research.name].Started = true
 end)
 
 game.on_event(defines.events.on_research_finished, function(event)
@@ -100,12 +96,11 @@ if Config.Research_System then
 	if not global.Technology[event.research.name].Finished then
 		local ingredients = game.forces.player.technologies[event.research.name].research_unit_count
 		global.ResearchSystem.science=global.ResearchSystem.science+((ingredients/10)*9)
-		debug("Research found in globalal table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(global.ResearchSystem.science))
+		debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(global.ResearchSystem.science))
 		global.Technology[event.research.name].Finished = true
 	end
-else 	
-	global.Technology[event.research.name].Finished = true
-end
+end	
+global.Technology[event.research.name].Finished = true
 if Config.Auto_Researcher then
 	global.Auto_Researcher = {}
 	for NAME, TECH in pairs(global.Technology) do
@@ -193,7 +188,8 @@ local player = game.players[playerIndex]
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name == "DebugAddPoints" then
-		global.ResearchSystem.science = global.ResearchSystem.science + 100000
+		remote.call("DyTech-Dynamics", "TotalSciencePoints")
+		global.ResearchSystem.science = global.ResearchSystem.science + global.ScienceTemp
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
 	elseif event.element.name:find(guiNames.Tier1Base) then
@@ -392,5 +388,13 @@ remote.add_interface("DyTech-Dynamics",
 			global.Messages = true
 			PlayerPrint({"msg-on"})
 		end
+	end,
+	
+	TotalSciencePoints = function()
+		global.ScienceTemp = 0
+		for name,tech in pairs(global.Technology) do
+			global.ScienceTemp = global.ScienceTemp + tech.ScienceCount
+		end
+		debug("total science points: "..global.ScienceTemp)
 	end
 })
