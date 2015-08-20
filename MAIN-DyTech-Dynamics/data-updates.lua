@@ -50,15 +50,24 @@ for a, b in pairs(data.raw.recipe) do
 			b.icon = data.raw.item[b.name].icon
 		elseif data.raw.ammo[b.name] then
 			b.icon = data.raw.ammo[b.name].icon
+		elseif data.raw.armor[b.name] then
+			b.icon = data.raw.armor[b.name].icon
+		elseif data.raw.gun[b.name] then
+			b.icon = data.raw.gun[b.name].icon
+		elseif data.raw.capsule[b.name] then
+			b.icon = data.raw.capsule[b.name].icon
+		elseif data.raw.tool[b.name] then
+			b.icon = data.raw.tool[b.name].icon
+		elseif data.raw.module[b.name] then
+			b.icon = data.raw.module[b.name].icon
+		elseif data.raw["mining-tool"][b.name] then
+			b.icon = data.raw["mining-tool"][b.name].icon
+		elseif data.raw["repair-tool"][b.name] then
+			b.icon = data.raw["repair-tool"][b.name].icon
+		else
+			b.icon = "__MAIN-DyTech-Dynamics__/graphics/questionmark.png"
 		end
 	end
-end
-
-if data.raw.recipe["tf-flame-thrower-ammo"] then
-	data.raw.recipe["tf-flame-thrower-ammo"].icon = data.raw.ammo["flame-thrower-ammo"].icon
-	data.raw.recipe["tf-coal"].icon = data.raw.item["coal"].icon
-	data.raw.recipe["tf-coal-2"].icon = data.raw.item["coal"].icon
-	data.raw.recipe["tf-platic"].icon = data.raw.item["plastic-bar"].icon
 end
 
 for a, b in pairs(data.raw) do

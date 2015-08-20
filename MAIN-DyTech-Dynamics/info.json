@@ -5,5 +5,5 @@
 	"title":"MAIN-DyTech-Dynamics",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"This Main Module of DyTech holds all scripted things. Dynamic System, Modular Tools and many more are included!",
-	"dependencies": ["CORE-DyTech-Core >= 1.3.0", "? MAIN-DyTech-Machine >= 1.0.1", "? MAIN-DyTech-Power >= 1.0.0", "? MAIN-DyTech-War >= 1.0.0", "base"]
+	"dependencies": ["base"]
 }

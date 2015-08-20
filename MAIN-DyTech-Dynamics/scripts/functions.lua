@@ -57,7 +57,7 @@ function StartupResearchSystem1()
 				if Recipe.recipe then
 					global.ResearchTemp2[var] = {}
 					global.ResearchTemp2[var].Recipe = Recipe.recipe
-					global.ResearchTemp2[var].Points = math.random(Tech.research_unit_count)
+					global.ResearchTemp2[var].Points = math.random(math.floor(Tech.research_unit_count*0.75),math.floor(Tech.research_unit_count*1.25))
 					global.ResearchTemp2[var].Tech = Name
 					var = var + 1
 				end
