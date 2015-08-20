@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "sniper-magazine-1",
+    icon = "__MAIN-DyTech-War__/graphics/ammo/sniper-magazine.png",
     enabled = false,
     energy_required = 15,
     ingredients =
@@ -17,6 +18,7 @@ data:extend(
   {
     type = "recipe",
     name = "sniper-magazine-2",
+    icon = "__MAIN-DyTech-War__/graphics/ammo/sniper-magazine.png",
     enabled = false,
     energy_required = 15,
     ingredients =
