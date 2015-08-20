@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-800-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-600.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -20,6 +21,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-1000-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-800.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -37,6 +39,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-1200-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-1000.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -54,6 +57,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-1400-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-1200.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -71,6 +75,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-1600-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-1400.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -88,6 +93,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-1800-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-1600.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -105,6 +111,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-2000-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-1800.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -122,6 +129,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-2200-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-2000.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -139,6 +147,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-2400-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-2200.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -156,6 +165,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-2600-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-2400.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -173,6 +183,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-2800-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-2600.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -190,6 +201,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-3000-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-2800.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -207,6 +219,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-3200-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-3000.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -224,6 +237,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-3400-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-3200.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -241,6 +255,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-3600-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-3400.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -258,6 +273,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-3800-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-3600.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
@@ -275,6 +291,7 @@ data:extend(
   {
     type = "recipe",
     name = "lava-4000-cooling",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/lava-3800.png",
 	enabled = false,
 	category = "lava-cooler",
     subgroup = "metallurgy-fluid-lava-cooling",
