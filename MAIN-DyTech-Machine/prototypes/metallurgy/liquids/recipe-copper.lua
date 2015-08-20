@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-copper-smelt",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/molten-copper.png",
 	enabled = false,
 	category = "blast-furnace",
     energy_required = 5,

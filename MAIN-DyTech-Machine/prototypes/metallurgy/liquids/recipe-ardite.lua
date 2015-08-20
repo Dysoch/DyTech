@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-ardite-smelt",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/molten-ardite.png",
 	enabled = false,
 	category = "blast-furnace",
     energy_required = 7,

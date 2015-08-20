@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-silver-smelt",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/molten-silver.png",
 	enabled = false,
 	category = "blast-furnace",
     energy_required = 7,

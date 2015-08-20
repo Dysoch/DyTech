@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-iron-carbonated",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/molten-carbonated-iron.png",
 	enabled = false,
 	category = "blast-furnace",
     energy_required = 10,

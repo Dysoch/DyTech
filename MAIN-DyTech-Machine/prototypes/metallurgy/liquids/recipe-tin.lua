@@ -3,6 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "metallurgy-tin-smelt",
+    icon = "__MAIN-DyTech-Machine__/graphics/metallurgy/fluid/molten-tin.png",
 	enabled = false,
 	category = "blast-furnace",
     energy_required = 7,
