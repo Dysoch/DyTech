@@ -2,7 +2,7 @@ require "config"
 
 if Config.Research_System then
 require("prototypes.research-system")
-require("prototypes.style-research-system")
+--require("prototypes.style-research-system")
 end
 
 if Config.Collectors then

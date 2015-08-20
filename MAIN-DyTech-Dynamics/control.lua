@@ -179,7 +179,7 @@ local player = game.players[playerIndex]
 		RSF.RSUnlock(global.ResearchSystem.ToUnlock)
 		GUI.closeGUI("all", playerIndex)
 		MRS.showUnlockTableGUI(playerIndex, RSF.DSgetResearchLevel(global.ResearchSystem.ItemUnlock[global.ResearchSystem.ToUnlock].Tech))
-	elseif RSDatabase.ItemUnlock[event.element.name] then
+	elseif global.ResearchSystem.ItemUnlock[event.element.name] then
 		global.ResearchSystem.ToUnlock = event.element.name
 		GUI.closeGUI("ResearchUnlock", playerIndex)
 		MRS.showUnlockGUIBase(playerIndex, global.ResearchSystem.ToUnlock)

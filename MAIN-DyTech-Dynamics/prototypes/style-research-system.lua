@@ -42,9 +42,20 @@ data.raw["gui-style"].default["blank".."_DyTech_button_style"]  =
   }
 }
 
+for a, b in pairs(data.raw.recipe) do
+	if not b.icon then 
+		if data.raw.item[b.name] then
+			b.icon = data.raw.item[b.name].icon
+		elseif data.raw.ammo[b.name] then
+			b.icon = data.raw.ammo[b.name].icon
+		end
+	end
+end
+
 for a, b in pairs(data.raw) do
   for name, item in pairs(b) do
-    if item.icon then
+    if item.type ~= "technology" then
+	  if item.icon then
       data.raw["gui-style"].default[name.."_DyTech_button_style"]  =
       {
         type = "checkbox_style",
@@ -85,6 +96,7 @@ for a, b in pairs(data.raw) do
           x = 111
         }
       }
+	  end
     end
   end
 end

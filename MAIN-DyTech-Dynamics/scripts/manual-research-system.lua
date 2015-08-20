@@ -88,9 +88,9 @@ local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainResearchTableFlow})
 player.gui.top[guiNames.mainResearchTableFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchTableFrame, caption={"tier-unlock-screen-1", Tier, {"tier-unlock-screen-2"}}})
 adder = player.gui.top[guiNames.mainResearchTableFlow][guiNames.mainResearchTableFrame]
+adder.add({type="button", name=guiNames.MRSBackButton2, caption={"back"}})
 adder.add({type="table", name=guiNames.RSTable, colspan=16})
 	populateGUIUnlockTable(PlayerIndex, Tier)
-adder.add({type="button", name=guiNames.MRSBackButton2, caption={"back"}})
 end
 
 function populateGUIUnlockTable(PlayerIndex, TierRecipe)
