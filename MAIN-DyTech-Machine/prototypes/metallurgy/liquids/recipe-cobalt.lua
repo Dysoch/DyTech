@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "cobalt-plate-01",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/cobalt/plate-icon.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-cobalt-ore", 1}},

@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "lead-plate-01",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/lead/plate-icon.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-lead-ore", 1}},

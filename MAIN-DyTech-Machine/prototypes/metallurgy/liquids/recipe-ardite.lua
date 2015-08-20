@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "ardite-plate-01",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/ardite/plate-icon.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-ardite-ore", 1}},

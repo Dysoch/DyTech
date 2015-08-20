@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "gold-plate-01",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/gold/plate-icon.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-gold-ore", 1}},

@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "copper-plate-01",
+    icon = "__base__/graphics/icons/copper-plate.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-copper-ore", 1}},

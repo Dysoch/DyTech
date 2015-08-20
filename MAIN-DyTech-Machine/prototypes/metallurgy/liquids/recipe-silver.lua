@@ -38,6 +38,7 @@ data:extend(
   {
     type = "recipe",
     name = "silver-plate-01",
+    icon = "__CORE-DyTech-Core__/graphics/metallurgy/silver/plate-icon.png",
     category = "smelting",
     energy_required = 2.5,
     ingredients = {{ "clean-silver-ore", 1}},
