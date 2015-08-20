@@ -13,7 +13,7 @@ local data = global.ResearchSystem.ItemUnlock[Name]
 			for _,player in pairs(game.players) do
 				player.force.recipes[Name].enabled = true
 			end
-			PlayerPrint({"unlocked", {data.Locale.."-name."..Name}})
+			PlayerPrint({"unlocked", Name})
 			global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
 			UnlockedRecipe(Name, false)
 			Amount_Of_Events()
@@ -66,7 +66,7 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = 0
 for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = global.ResearchSystem.ItemUnlock[RecipeName]
-		if global.ResearchSystem.science > data.Points and DSgetResearchLevel(data.Tech)==1 then
+		if global.ResearchSystem.science > data.Points and data.Tier==1 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = global.ResearchSystem.RecipeAvailableToUnlock.Tier1 + 1
 		end
 	end 
@@ -78,7 +78,7 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = 0
 for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = global.ResearchSystem.ItemUnlock[RecipeName]
-		if global.ResearchSystem.science > data.Points and DSgetResearchLevel(data.Tech)==2 then
+		if global.ResearchSystem.science > data.Points and data.Tier==2 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = global.ResearchSystem.RecipeAvailableToUnlock.Tier2 + 1
 		end
 	end 
@@ -90,7 +90,7 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = 0
 for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = global.ResearchSystem.ItemUnlock[RecipeName]
-		if global.ResearchSystem.science > data.Points and DSgetResearchLevel(data.Tech)==3 then
+		if global.ResearchSystem.science > data.Points and data.Tier==3 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = global.ResearchSystem.RecipeAvailableToUnlock.Tier3 + 1
 		end
 	end 
@@ -102,7 +102,7 @@ global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = 0
 for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 	if not global.ResearchSystem.Unlocked[RecipeName] then
 	local data = global.ResearchSystem.ItemUnlock[RecipeName]
-		if global.ResearchSystem.science > data.Points and DSgetResearchLevel(data.Tech)==4 then
+		if global.ResearchSystem.science > data.Points and data.Tier==4 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = global.ResearchSystem.RecipeAvailableToUnlock.Tier4 + 1
 		end
 	end 
@@ -179,5 +179,44 @@ function Lab_Increament(event)
 	if event.tick%36000==35999 then
 	local count = game.players[1].force.get_entity_count("lab")
 	global.ResearchSystem.science = global.ResearchSystem.science + count
+	end
+end
+
+function Add_To_Rewards()
+	global.Lottery.Rewards = {}
+	for name,bla in pairs(game.item_prototypes) do
+		if string.sub(name,1,7) ~= "cursed-" then
+			table.insert(global.Lottery.Rewards,name)
+		end
+	end
+end
+
+function Lottery(playerIndex)
+	if global.Lottery.Text <= global.ResearchSystem.science then
+		if not global.Lottery.Rewards then Add_To_Rewards() end
+		if global.Lottery.Text < 100 then
+			Chance = math.random(100)
+			if Chance == 50 then
+				global.Lottery.Won = global.Lottery.Won + 1
+				game.players[playerIndex].print("YOU WON!")
+				game.players[playerIndex].insert{name=global.Lottery.Rewards[math.random(#global.Lottery.Rewards)], count=math.random(1,5)}
+			else	
+				global.Lottery.Lost = global.Lottery.Lost + 1
+				game.players[playerIndex].print("YOU LOST")
+			end
+		else
+			Chance = math.random(math.floor(global.Lottery.Text*0.9),math.floor(global.Lottery.Text*1.1))
+			if Chance == math.floor(global.Lottery.Text) then
+				global.Lottery.Won = global.Lottery.Won + 1
+				game.players[playerIndex].print("YOU WON!")
+				game.players[playerIndex].insert{name=global.Lottery.Rewards[math.random(#global.Lottery.Rewards)], count=math.random(1,5)}
+			else	
+				global.Lottery.Lost = global.Lottery.Lost + 1
+				game.players[playerIndex].print("YOU LOST")
+			end
+		end
+		global.ResearchSystem.science = global.ResearchSystem.science - global.Lottery.Text
+	else
+		game.players[playerIndex].print("Not enough Science points!")
 	end
 end

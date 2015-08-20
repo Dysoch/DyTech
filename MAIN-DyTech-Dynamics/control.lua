@@ -72,7 +72,7 @@ game.on_event(defines.events.on_tick, function(event)
 end)
 
 game.on_event(defines.events.on_research_started, function(event)
-if Config.Research_System then	
+--[[if Config.Research_System then	
 	fs.InitHalfwayTechnology(event)
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Started ("..tostring(event.research.name)..")")
@@ -81,16 +81,15 @@ if Config.Research_System then
 		global.ResearchSystem.science=global.ResearchSystem.science+(ingredients/10)
 		debug("Research found in global table and increased: ("..tostring(ingredients/10)..") Total now: "..tostring(global.ResearchSystem.science))
 	end
-else 
+else]]-- 
 	if not global.Technology[event.research.name] then
 		fs.InitHalfwayTechnology(event)
 	end
-end
-global.Technology[event.research.name].Started = true
+	global.Technology[event.research.name].Started = true
 end)
 
 game.on_event(defines.events.on_research_finished, function(event)
-if Config.Research_System then	
+--[[if Config.Research_System then	
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Finished ("..tostring(event.research.name)..")")
 	if not global.Technology[event.research.name].Finished then
@@ -99,7 +98,7 @@ if Config.Research_System then
 		debug("Research found in global table and increased: ("..tostring((ingredients/10)*9)..") Total now: "..tostring(global.ResearchSystem.science))
 		global.Technology[event.research.name].Finished = true
 	end
-end	
+end	]]--
 global.Technology[event.research.name].Finished = true
 if Config.Auto_Researcher then
 	global.Auto_Researcher = {}
@@ -322,6 +321,18 @@ local player = game.players[playerIndex]
 		RSF.Combat_Robots("+")
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Lottery" then
+		GUI.closeGUI("Lottery", playerIndex)
+		MRS.showResearchLotteryGUI(playerIndex)
+	elseif event.element.name == "DyTech-Lottery-Start-Button" then
+		if tonumber(player.gui.top["mainLotteryFlow"]["mainLotteryFrame"]["Lottery"].text)~=nil then
+			global.Lottery.Text = tonumber(player.gui.top["mainLotteryFlow"]["mainLotteryFrame"]["Lottery"].text)
+			RSF.Lottery(playerIndex)
+			GUI.closeGUI("Lottery", playerIndex)
+			MRS.showResearchLotteryGUI(playerIndex)
+		else
+			player.print("Only numbers can be set!")
+		end
 	end
 end)
 
@@ -396,5 +407,21 @@ remote.add_interface("DyTech-Dynamics",
 			global.ScienceTemp = global.ScienceTemp + tech.ScienceCount
 		end
 		debug("total science points: "..global.ScienceTemp)
+	end,
+	
+	TestLottery = function(number)
+		if not global.Lottery then global.Lottery = {Text=1, Won=0, Lost=0} end
+		global.Lottery.Lost = 0
+		global.Lottery.Won = 0
+		for i=1,number do
+			global.Lottery.Text = math.random(1000)
+			RSF.Lottery()
+		end
+		PlayerPrint(global.Lottery.Lost..":"..global.Lottery.Won)
+		PlayerPrint((global.Lottery.Won/global.Lottery.Lost).."%")
+	end,
+	
+	Startup = function()
+		fs.StartupResearchSystem1()
 	end
 })

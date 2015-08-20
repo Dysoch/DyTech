@@ -11,6 +11,7 @@ adder = player.gui.top[guiNames.mainDynamicFlow][guiNames.mainDynamicFrame]
 if Config.Research_System then
 	RSF.RecipeAvailableToUnlockAll()
 	adder.add({type="button", name=guiNames.ResearchButton, caption={"research-button", "(", tostring(global.ResearchSystem.RecipeAvailableToUnlock.All), ")"}})
+	adder.add({type="button", name="DyTech-Dynamics-Lottery", caption={"gui-lottery"}})
 end
 if Config.Auto_Researcher then 
 	adder.add({type="button", name="DyTech-Dynamics-AutoResearcher-Button", caption={"auto-researcher"}}) 
@@ -32,6 +33,9 @@ function closeGUI(statement, PlayerIndex)
 		if game.players[PlayerIndex].gui.top[guiNames.mainResearchFlow] and game.players[PlayerIndex].gui.top[guiNames.mainResearchFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainResearchFlow].destroy()
 			global.MaxShown = 0
+		end
+		if game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow] and game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow].valid then
+			game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow].destroy()
 		end
 		if game.players[PlayerIndex].gui.top[guiNames.mainResearchTableFlow] and game.players[PlayerIndex].gui.top[guiNames.mainResearchTableFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainResearchTableFlow].destroy()
@@ -75,6 +79,10 @@ function closeGUI(statement, PlayerIndex)
 	elseif statement=="Collectors" then
 		if game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow] and game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow].valid then
 			game.players[PlayerIndex].gui.top[guiNames.mainCollectorFlow].destroy()
+		end
+	elseif statement=="Lottery" then
+		if game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow] and game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow].valid then
+			game.players[PlayerIndex].gui.top[guiNames.mainLotteryFlow].destroy()
 		end
 	end
 end

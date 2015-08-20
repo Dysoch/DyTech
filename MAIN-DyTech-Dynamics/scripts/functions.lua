@@ -1,4 +1,5 @@
 module("fs", package.seeall)
+require "config"
 require "database/research-system"
 require "scripts/rs-functions"
 
@@ -12,7 +13,7 @@ global.ResearchSystem.ToUnlock = {}
 global.ResearchSystem.science = 0
 global.ResearchSystem.Amount_Enabled = 0
 global.ResearchSystem.Amount = 0
-StartupResearchSystem()
+StartupResearchSystem1()
 global.Collectors = {}
 global.Collectors.Range = 25
 global.Collectors.Working = true
@@ -22,7 +23,7 @@ global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 global.Messages = true
 InitTechnologyTable()
-RSF.Amount_Of_Events()
+--RSF.Amount_Of_Events()
 end
 
 function StartupCollectors()
@@ -35,16 +36,50 @@ global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 end
 
-function StartupResearchSystem()
+--[[function StartupResearchSystem()
 	global.ResearchSystem.ItemUnlock = {}
 	global.ResearchSystem.ItemUnlock = RSDatabase.ItemUnlock
 	global.Temp.Amount = 1
-	for RecipeName, sdt in pairs(global.ResearchSystem.ItemUnlock) do
+	for RecipeName in pairs(global.ResearchSystem.ItemUnlock) do
 		local info = global.ResearchSystem.ItemUnlock[RecipeName]
 		info.Event = global.Temp.Amount
 		global.Temp.Amount = global.Temp.Amount + 1
 	end
+end]]
+
+function StartupResearchSystem1()
+	global.ResearchSystem.ItemUnlock = {}
+	global.ResearchTemp2 = {}	
+	var = 1
+	for Name,Tech in pairs(game.forces.player.technologies) do 
+		if game.forces.player.technologies[Name].effects then
+			for i,Recipe in pairs(game.forces.player.technologies[Name].effects) do 
+				if Recipe.recipe then
+					global.ResearchTemp2[var] = {}
+					global.ResearchTemp2[var].Recipe = Recipe.recipe
+					global.ResearchTemp2[var].Points = math.random(Tech.research_unit_count)
+					global.ResearchTemp2[var].Tech = Name
+					var = var + 1
+				end
+			end 
+		end
+	end
+	for I,Name in pairs(global.ResearchTemp2) do
+		local recipe = global.ResearchTemp2[I].Recipe
+		global.ResearchSystem.ItemUnlock[recipe] = {}
+		global.ResearchSystem.ItemUnlock[recipe].Points = Name.Points
+		global.ResearchSystem.ItemUnlock[recipe].Tech = Name.Tech
+		global.ResearchSystem.ItemUnlock[recipe].Tier = getResearchLevel(Name.Tech)
+	end
+	game.makefile("DyTech/DataDump/Dynamics-ResearchSystem-ItemUnlock.txt", serpent.block(global.ResearchSystem.ItemUnlock))
+	game.makefile("DyTech/DataDump/Dynamics-Temper.txt", serpent.block(global.temper))
+	game.makefile("DyTech/DataDump/Dynamics-ResearchTemp2.txt", serpent.block(global.ResearchTemp2))
+	if Config.Research_System then	
+		game.forces.player.disable_research()
+	end
 end
+
+--/c for Name,Tech in pairs(game.forces.player.technologies) do for Index,Recipe in pairs(Tech.effects) do if Index > 0  then debug(Tech.effects[Index].recipe) end end end
 
 function InitTechnologyTable()
     global.Technology = {}

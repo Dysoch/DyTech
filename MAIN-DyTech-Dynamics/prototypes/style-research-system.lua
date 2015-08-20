@@ -44,7 +44,7 @@ data.raw["gui-style"].default["blank".."_DyTech_button_style"]  =
 
 for a, b in pairs(data.raw) do
   for name, item in pairs(b) do
-    if item.stack_size then
+    if item.icon then
       data.raw["gui-style"].default[name.."_DyTech_button_style"]  =
       {
         type = "checkbox_style",
@@ -88,4 +88,3 @@ for a, b in pairs(data.raw) do
     end
   end
 end
-

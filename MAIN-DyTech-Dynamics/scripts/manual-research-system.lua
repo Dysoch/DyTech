@@ -115,7 +115,7 @@ game.players[PlayerIndex].gui.top[guiNames.mainFlowMRSUnlock1].add({type="frame"
 mainFrameMRSUnlock = game.players[PlayerIndex].gui.top[guiNames.mainFlowMRSUnlock1][guiNames.mainFrameMRSUnlock]
 -- Flow 2
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock2})
-mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock2].add({type="label", name="", caption={"name", {info.Locale.."-name."..RecipeName}}})
+mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock2].add({type="label", name="", caption={"name", RecipeName}})
 -- Flow 3
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock3})
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock3].add({type="label", name="", caption={"has-science-points", tostring(global.ResearchSystem.science)}})
@@ -126,4 +126,17 @@ mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock4].add({type="label", name="", capt
 mainFrameMRSUnlock.add({type="flow", direction="horizontal", name=guiNames.mainFlowMRSUnlock5})
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock5].add({type="button", name=guiNames.MRSUnlockButton, caption={"unlock"}})
 mainFrameMRSUnlock[guiNames.mainFlowMRSUnlock5].add({type="button", name=guiNames.MRSBackButton1, caption={"close"}})
+end
+
+function showResearchLotteryGUI(PlayerIndex)
+local player = game.players[PlayerIndex]
+if not global.Lottery then global.Lottery = {Text=1, Won=0, Lost=0} end
+	RSF.Add_To_Rewards()
+player.gui.top.add({type="flow", direction="vertical", name=guiNames.mainLotteryFlow})
+player.gui.top[guiNames.mainLotteryFlow].add({type="frame", direction="vertical", name=guiNames.mainLotteryFrame, caption={"gui-lottery"}})
+adder = player.gui.top[guiNames.mainLotteryFlow][guiNames.mainLotteryFrame]
+adder.add({type="label", name="", caption={"points", global.ResearchSystem.science}})
+adder.add({type="textfield", name="Lottery", text=tostring(global.Lottery.Text)})
+adder.add({type="button", name="DyTech-Lottery-Start-Button", caption={"start"}})
+adder.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 end
