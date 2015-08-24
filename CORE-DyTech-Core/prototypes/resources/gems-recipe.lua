@@ -165,6 +165,7 @@ data:extend(
     type = "recipe",
     name = "cut-compressed-ruby",
 	category = "compressing",
+    icon = "__CORE-DyTech-Core__/graphics/gems/compressed-ruby.png",
 	energy_required = 58,
     enabled = true,
     ingredients =
@@ -178,6 +179,7 @@ data:extend(
     type = "recipe",
     name = "cut-compressed-sapphire",
 	category = "compressing",
+    icon = "__CORE-DyTech-Core__/graphics/gems/compressed-sapphire.png",
 	energy_required = 101,
     enabled = true,
     ingredients =
@@ -191,6 +193,7 @@ data:extend(
     type = "recipe",
     name = "cut-compressed-emerald",
 	category = "compressing",
+    icon = "__CORE-DyTech-Core__/graphics/gems/compressed-emerald.png",
 	energy_required = 288,
     enabled = true,
     ingredients =
@@ -204,6 +207,7 @@ data:extend(
     type = "recipe",
     name = "cut-compressed-topaz",
 	category = "compressing",
+    icon = "__CORE-DyTech-Core__/graphics/gems/compressed-topaz.png",
 	energy_required = 173,
     enabled = true,
     ingredients =
@@ -217,6 +221,7 @@ data:extend(
     type = "recipe",
     name = "cut-compressed-diamond",
 	category = "compressing",
+    icon = "__CORE-DyTech-Core__/graphics/gems/compressed-diamond.png",
 	energy_required = 403,
     enabled = true,
     ingredients =
