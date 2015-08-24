@@ -1,11 +1,25 @@
-module("CoreGUI", package.seeall)
+module("GUI", package.seeall)
 require "defines"
 
 function CreateButton()
-	for _,player in pairs(game.players) do
-		if not player.gui.top["DyTech-Button"] and not player.gui.top["mainDyTechFlow"] then
+	for Index,player in pairs(game.players) do
+		if not ButtonChecker(Index) then
 			player.gui.top.add({type="button", name="DyTech-Button", caption={"dytech-button"}})
 		end
+	end
+end
+
+function ButtonChecker(Index)
+	if game.players[Index].gui.top["DyTech-Button"] then
+		return true
+	elseif game.players[Index].gui.top["mainDyTechFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainDyTechDebugFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainDyTechCoreFlow"] then
+		return true
+	else
+		return false
 	end
 end
 
@@ -65,12 +79,19 @@ function closeGUI(statement, PlayerIndex)
 		if game.players[PlayerIndex].gui.top["mainDyTechFlow"] and game.players[PlayerIndex].gui.top["mainDyTechFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechFlow"].destroy()
 		end
+	elseif statement=="Core" then
+		if game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"] and game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"].destroy()
+		end
 	elseif statement=="All" then
 		if game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"] and game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechDebugFlow"].destroy()
 		end
 		if game.players[PlayerIndex].gui.top["mainDyTechFlow"] and game.players[PlayerIndex].gui.top["mainDyTechFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechFlow"].destroy()
+		end
+		if game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"] and game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"].valid then
+			game.players[PlayerIndex].gui.top["mainDyTechCoreFlow"].destroy()
 		end
 	end
 end

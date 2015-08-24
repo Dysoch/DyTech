@@ -1,5 +1,6 @@
 require "defines"
 require "config"
+require "scripts/core-gui"
 require "scripts/functions"
 require "scripts/gui"
 require "scripts/remote-calls"
@@ -76,7 +77,7 @@ game.on_load(function()
 			debug("Trees: Sulfur Tree Moved to Treefarm")
 		end
 	end
-	CoreGUI.CreateButton()
+	GUI.CreateButton()
 	if not global.Wind then fs.Wind_Startup() end
 end)
 
@@ -120,38 +121,47 @@ end)
 
 game.on_event(defines.events.on_player_crafted_item, function(event)
 	fs.CraftedItemsLogger(event.item_stack.name, event.item_stack.count)
+	fs.LoggerCount("PlayerCrafted", event.item_stack.count)
 end)
 
 game.on_event(defines.events.on_player_mined_item, function(event)
 	fs.MinedItemsLogger(event.item_stack.name, event.item_stack.count)
+	fs.LoggerCount("PlayerMined", event.item_stack.count)
 end)
 
 game.on_event(defines.events.on_robot_mined, function(event)
 	fs.RobotMinedItemsLogger(event.item_stack.name, event.item_stack.count)
+	fs.LoggerCount("RobotMined", event.item_stack.count)
 end)
 
 game.on_event(defines.events.on_entity_died, function(event)
 	fs.EntityDiedLogger(event.entity.name)
+	fs.LoggerCount("EntityDied", 1)
 end)
 
 game.on_event(defines.events.on_sector_scanned, function(event)
 	fs.SectorScannedLogger()
+	fs.LoggerCount("SectorScanned", 1)
 end)
 
 game.on_event(defines.events.on_marked_for_deconstruction, function(event)
 	fs.MarkedForDeconstructionLogger(event.entity.name)
+	fs.LoggerCount("MarkedForDeconstruction", 1)
 end)
 
 game.on_event(defines.events.on_canceled_deconstruction, function(event)
 	fs.CanceledDeconstructionLogger(event.entity.name)
+	fs.LoggerCount("CanceledDeconstruction", 1)
 end)
 
 game.on_event(defines.events.on_picked_up_item, function(event)
 	fs.PickedItemsLogger(event.item_stack.name, event.item_stack.count)
+	fs.LoggerCount("PickedUpItem", event.item_stack.count)
 end)
 
 game.on_event(defines.events.on_built_entity, function(event)
 	fs.BuildEntityLogger(event.created_entity.name)
+	fs.LoggerCount("PlayerBuilt", 1)
 local player = game.players[event.player_index]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.created_entity.type == "tree" then
@@ -180,6 +190,7 @@ end)
 
 game.on_event(defines.events.on_robot_built_entity, function(event)
 	fs.RobotBuildEntityLogger(event.created_entity.name)
+	fs.LoggerCount("RobotBuilt", 1)
 local player = game.players[event.player_index]
 	if not remote.interfaces["treefarm_interface"] then
 	if event.created_entity.type == "tree" then
@@ -207,6 +218,7 @@ local player = game.players[event.player_index]
 end)
 
 game.on_event(defines.events.on_chunk_generated, function(event)
+	fs.LoggerCount("Chunks", 1)
 	if not global.Logger then fs.Startup() end
 	if not global.Logger.ChunkGenerated then 
 		global.Logger.ChunkGenerated = 1
@@ -219,16 +231,17 @@ end)
 game.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
+	fs.LoggerCount("GUI", 1)
 	debug("GUI: Player "..playerIndex.." clicked "..event.element.name)
 	if event.element.name == "DyTech-Button" then
 		player.gui.top["DyTech-Button"].destroy()
-		CoreGUI.showDyTechGUI(playerIndex)
+		GUI.showDyTechGUI(playerIndex)
 	elseif event.element.name == "DyTech-Debug-Button" then
-		CoreGUI.closeGUI("DyTech", playerIndex)
-		CoreGUI.showDyTechDebugGUI(playerIndex)
+		GUI.closeGUI("DyTech", playerIndex)
+		GUI.showDyTechDebugGUI(playerIndex)
 	elseif event.element.name == "DyTech-Debug-Dump-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		remote.call("DyTech-Core", "Logger")
 		if remote.interfaces["DyTech-Dynamics"] then remote.call("DyTech-Dynamics", "DataDump") end
 		if remote.interfaces["DyTech-Machine"] then remote.call("DyTech-Machine", "DataDump") end
@@ -236,32 +249,38 @@ local player = game.players[playerIndex]
 		if remote.interfaces["DyTech-War"] then remote.call("DyTech-War", "DataDump") end
 		if remote.interfaces["DyTech-World"] then remote.call("DyTech-World", "Logger") end
 	elseif event.element.name == "DyTech-Debug-TestItems-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		RemoteCalls.TestMapStart(playerIndex)
 	elseif event.element.name == "DyTech-Debug-TestResource-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		RemoteCalls.CheckOreRatio(500, playerIndex)
 	elseif event.element.name == "DyTech-Debug-Reset-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		remote.call("DyTech-Core", "ResetAll")
 	elseif event.element.name == "DyTech-Debug-Technology-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		fs.ResearchAll()
 	elseif event.element.name == "DyTech-Debug-Evolution-0-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		game.evolution_factor = 0
 	elseif event.element.name == "DyTech-Debug-Evolution-1-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
 		game.evolution_factor = 1
 	elseif event.element.name == "DyTech-Close-Button" then
-		CoreGUI.closeGUI("All", playerIndex)
-		CoreGUI.CreateButton()
+		GUI.closeGUI("All", playerIndex)
+		GUI.CreateButton()
+	elseif event.element.name == "DyTech-Core-Button" then
+		GUI.closeGUI("All", playerIndex)
+		Core_GUI.showCoreGUI(playerIndex)
+	elseif event.element.name == "DyTech-Core-Back-Button" then
+		GUI.closeGUI("Core", playerIndex)
+		GUI.showDyTechGUI(playerIndex)
 	end
 end)
 
@@ -355,15 +374,15 @@ remote.add_interface("DyTech-Core",
 	end,
 	
 	OpenMainGUI = function(PlayerIndex)
-		CoreGUI.showDyTechGUI(PlayerIndex)
+		GUI.showDyTechGUI(PlayerIndex)
 	end,
 	
 	CloseMainGUI = function(PlayerIndex)
-		CoreGUI.closeGUI("DyTech", PlayerIndex)
+		GUI.closeGUI("DyTech", PlayerIndex)
 	end,
 	
 	ShowMainButton = function()
-		CoreGUI.CreateButton()
+		GUI.CreateButton()
 	end,
 	
 	RecipesIngredients = function()

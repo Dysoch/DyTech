@@ -61,6 +61,13 @@ function Timer(event)
 	end
 end
 
+function LoggerCount(NAME, AMOUNT)
+	local NAME = NAME
+	if not global.LoggerCount then global.LoggerCount = {} end
+	if not global.LoggerCount[NAME] then global.LoggerCount[NAME] = 0 end
+	global.LoggerCount[NAME] = global.LoggerCount[NAME] + AMOUNT
+end
+
 function SectorScannedLogger()
 	if not global.Logger then global.Logger = {} end
 	if not global.Logger.SectorScanned then 
