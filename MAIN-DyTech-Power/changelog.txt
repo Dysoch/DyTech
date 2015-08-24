@@ -4,36 +4,67 @@
 |____/|_  | |_| |___|___|_|_|  |_____|_|_|__,|_|_|_  |___|_|___|_  |
       |___|                                      |___|         |___|
 
+
+
 24-06-15:
+
 - Created the small and large solar textures
 
+
+
 26-06-15:
+
 - Moved the regular solar panel to the dytech tab
+
 - Moved the regular steam engine to the dytech tab
+
 - Tried to redo high powered steam engines
+
 - Moved the regular boiler to the dytech tab
 
+
+
 19-06-15:
+
 - Started working on the reactors again
 
+
+
 30-06-15:
+
 - More scripting done
 
+
+
 01-07-15:
+
 - More nuclear scripting done
+
 - Fixed small iconsize bug
 
+
+
 05-07-15:
+
 - More scripting done. The checking for items in the reactor now works.
 
+
+
 10-07-15:
+
 - Broke the checking for items. Once there are more than 1 reactors the system will break.
 
+
+
 11-07-15 - 20-07-15:
+
 - Broke more stuff (as usual). Also created an GUI for steam engines.
 
-02-08-15
+
+
+02-08-15:
 - Broke even more stuff. Managed to finish the fancy GUI for steam engines with my amazing programming skillzz.
 
 07-08-15
+:
 - Final changes & cleanup before release.
