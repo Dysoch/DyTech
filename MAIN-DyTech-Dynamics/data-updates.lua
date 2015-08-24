@@ -118,3 +118,20 @@ for a, b in pairs(data.raw) do
     end
   end
 end
+
+Debug = false
+
+if Debug then
+	Config.Ammo_Catergory = {}
+	for _,TABLE in pairs(data.raw["ammo-category"]) do
+		for _,NAME in pairs(TABLE) do
+			if not Config.Ammo_Catergory[TABLE.name] then
+				table.insert(Config.Ammo_Catergory, TABLE.name)
+			end
+		end
+	end
+end
+
+if Debug then
+	error(serpent.block(Config.Ammo_Catergory))
+end

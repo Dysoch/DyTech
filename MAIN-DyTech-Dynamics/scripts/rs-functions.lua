@@ -16,7 +16,6 @@ local data = global.ResearchSystem.ItemUnlock[Name]
 			PlayerPrint({"unlocked", Name})
 			global.ResearchSystem.science = (global.ResearchSystem.science-data.Points)
 			UnlockedRecipe(Name, false)
-			Amount_Of_Events()
 			debug("Unlock Events left: "..global.ResearchSystem.Amount)
 		else
 			PlayerPrint({"not-enough-points"})
@@ -41,7 +40,6 @@ function Amount_Of_Events()
 	for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		global.ResearchSystem.Amount = global.ResearchSystem.Amount + 1
 	end
-	global.ResearchSystem.Amount = global.ResearchSystem.Amount - global.ResearchSystem.Amount_Enabled
 end
 
 function RecipeAvailableToUnlockAll(TierRecipe)

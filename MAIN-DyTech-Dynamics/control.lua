@@ -207,6 +207,7 @@ local player = game.players[playerIndex]
 		remote.call("DyTech-Dynamics", "SwitchRS")
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchMainGUI(playerIndex)
+		RSF.Amount_Of_Events()
 	elseif event.element.name:find(guiNames.CollectorsButton) then
 		GUI.closeGUI("all", playerIndex)
 		CollectorFunctions.showCollectorGUI(playerIndex)
@@ -423,5 +424,5 @@ remote.add_interface("DyTech-Dynamics",
 	
 	Startup = function()
 		fs.StartupResearchSystem1()
-	end
+	end,
 })

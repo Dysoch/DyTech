@@ -23,7 +23,7 @@ global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 global.Messages = true
 InitTechnologyTable()
---RSF.Amount_Of_Events()
+RSF.Amount_Of_Events()
 end
 
 function StartupCollectors()
@@ -35,17 +35,6 @@ global.Collectors.AutomaticRange = false
 global.Collectors.Amount = 0
 global.Collectors.CollectorList = {}
 end
-
---[[function StartupResearchSystem()
-	global.ResearchSystem.ItemUnlock = {}
-	global.ResearchSystem.ItemUnlock = RSDatabase.ItemUnlock
-	global.Temp.Amount = 1
-	for RecipeName in pairs(global.ResearchSystem.ItemUnlock) do
-		local info = global.ResearchSystem.ItemUnlock[RecipeName]
-		info.Event = global.Temp.Amount
-		global.Temp.Amount = global.Temp.Amount + 1
-	end
-end]]
 
 function StartupResearchSystem1()
 	global.ResearchSystem.ItemUnlock = {}
@@ -59,6 +48,7 @@ function StartupResearchSystem1()
 					global.ResearchTemp2[var].Recipe = Recipe.recipe
 					global.ResearchTemp2[var].Points = math.random(math.floor(Tech.research_unit_count*0.75),math.floor(Tech.research_unit_count*1.25))
 					global.ResearchTemp2[var].Tech = Name
+					global.ResearchTemp2[var].Event = var
 					var = var + 1
 				end
 			end 
@@ -67,8 +57,9 @@ function StartupResearchSystem1()
 	for I,Name in pairs(global.ResearchTemp2) do
 		local recipe = global.ResearchTemp2[I].Recipe
 		global.ResearchSystem.ItemUnlock[recipe] = {}
-		global.ResearchSystem.ItemUnlock[recipe].Points = Name.Points
+		global.ResearchSystem.ItemUnlock[recipe].Points = math.random(math.floor(Name.Points*0.5),math.floor(Name.Points*1.5))
 		global.ResearchSystem.ItemUnlock[recipe].Tech = Name.Tech
+		global.ResearchSystem.ItemUnlock[recipe].Event = Name.Event
 		global.ResearchSystem.ItemUnlock[recipe].Tier = getResearchLevel(Name.Tech)
 	end
 	game.makefile("DyTech/DataDump/Dynamics-ResearchSystem-ItemUnlock.txt", serpent.block(global.ResearchSystem.ItemUnlock))
@@ -78,8 +69,6 @@ function StartupResearchSystem1()
 		game.forces.player.disable_research()
 	end
 end
-
---/c for Name,Tech in pairs(game.forces.player.technologies) do for Index,Recipe in pairs(Tech.effects) do if Index > 0  then debug(Tech.effects[Index].recipe) end end end
 
 function InitTechnologyTable()
     global.Technology = {}
