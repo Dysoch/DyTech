@@ -194,6 +194,7 @@ data:extend(
     type = "recipe",
     name = "iron-chunks",
     category = "smelting",
+    icon = "__base__/graphics/icons/iron-plate.png",
 	enabled = false,
     energy_required = 7,
     ingredients = 
@@ -206,6 +207,7 @@ data:extend(
     type = "recipe",
     name = "copper-chunks",
     category = "smelting",
+    icon = "__base__/graphics/icons/copper-plate.png",
 	enabled = false,
     energy_required = 7,
     ingredients = 
