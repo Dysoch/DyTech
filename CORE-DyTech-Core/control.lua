@@ -77,7 +77,6 @@ game.on_load(function()
 			debug("Trees: Sulfur Tree Moved to Treefarm")
 		end
 	end
-	GUI.CreateButton()
 	if not global.Wind then fs.Wind_Startup() end
 end)
 
@@ -87,9 +86,9 @@ game.on_event(defines.events.on_tick, function(event)
 		global.Wind.Value = math.random(global.Wind.Low,global.Wind.High)
 	end
 	fs.Timer(event)
-	--if not DyTechOnInit then
-		--DyTechOnInit = true
-	--end
+	if event.tick%600==1 then
+		GUI.CreateButton()
+	end
 	if not remote.interfaces["treefarm_interface"] then
 	while ((global.tf.growing[1] ~= nil) and (event.tick >= global.tf.growing[1].nextUpdate)) do
     local removedEntity = table.remove(global.tf.growing, 1)
