@@ -6,7 +6,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator", 5},
+      {"basic-accumulator", 1},
       {"battery", 5},
       {"advanced-circuit", 5},
       {"flux-capacitor-1", 5},
@@ -20,7 +20,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator", 5},
+      {"basic-accumulator", 1},
       {"battery", 5},
       {"advanced-circuit", 5},
       {"flux-capacitor-1", 5},
@@ -34,7 +34,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator-mk2", 5},
+      {"basic-accumulator-mk2", 1},
       {"battery", 10},
       {"processing-unit", 5},
       {"flux-capacitor-2", 5},
@@ -48,7 +48,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator-mk3", 5},
+      {"basic-accumulator-mk3", 1},
       {"battery", 10},
       {"processing-unit", 5},
       {"flux-capacitor-2", 5},
@@ -62,7 +62,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator-mk4", 5},
+      {"basic-accumulator-mk4", 1},
       {"basic-accumulator-mk5", 5},
       {"battery", 110},
       {"advanced-processing-unit", 25},

@@ -14,7 +14,7 @@ require "gui.functions"
 	
 --[[Debug Functions]]--
 debug_master = false -- Master switch for debugging, shows most things!
-global.fckyouimenabelingthisanyway = false -- Other switch for debugging. Or something like that.
+
 function debug(str, statement)
 	if debug_master then
 		PlayerPrint(str)
@@ -62,6 +62,89 @@ end
 end]]
 
 --[[Insert Fancy Code Here:]]--
+game.on_load(function()
+if not global.tick then global.tick = {} end
+if not global.tick[1] then global.tick[1] = 0 end
+if not global.tick[2] then global.tick[2] = 0 end
+if not global.usedFuel then global.usedFuel = {} end
+if not global.usedFuel.EntityContents then global.usedFuel.EntityContents = {} end
+if not global.entitypos then global.entitypos = {} end
+if not global.entityinfo then global.entityinfo = {} end
+if not global.entitycount then global.entitycount = 0 end
+if not global.dynamoentitycount then global.dynamoentitycount = 0 end
+if not global.entitypos2 then global.entitypos2 = {} end
+if not global.itemcount then global.itemcount = {} end
+if not global.item then global.item = {} end
+
+if not global.fuel then global.fuel = {} end
+if not global.fuel then global.fuel[1] = "u-235-3-0" end
+if not global.fuel then global.fuel[2] = "u-235-3-5" end
+if not global.fuel then global.fuel[3] = "u-235-4-0" end
+if not global.fuel then global.fuel[4] = "u-235-4-5" end
+if not global.fuel then global.fuel[5] = "u-235-5-0" end
+
+if not global.nearbySteamEngines then global.nearbySteamEngines = {} end
+if not global.guiactivationdistance then global.guiactivationdistance = 1 end
+if not global.gui_activation_distance then global.gui_activation_distance = 1 end
+if not global.nearby_engine then global.nearby_engine = {} end
+if not global.nearEngines then global.nearEngines = {} end
+if not global.gui then global.gui = {} end
+if not global.prioritycheck then global.prioritycheck = false end
+if not global.temp then global.temp = {} end
+if not global.temp.nearEngines then global.temp.nearEngines = {} end
+if not global.temp.nearEngines.primary then global.temp.nearEngines.primary = {} end
+if not global.temp.nearEngines.secondary then global.temp.nearEngines.secondary = {} end
+if not global.temp.nearEngines.terciary then global.temp.nearEngines.terciary = {} end
+if not global.isEngine then global.isEngine = {} end
+if not global.isEngine.primary then global.isEngine.primary = {} end
+if not global.isEngine.secondary then global.isEngine.secondary = {} end
+if not global.isEngine.terciary then global.isEngine.terciary = {} end
+if not global.isEngine.primary then global.isEngine.primary = false end
+if not global.isEngine.secondary then global.isEngine.secondary = false end
+if not global.isEngine.terciary then global.isEngine.terciary = false end
+if not global.steamMk then global.steamMk = {} end
+
+if not global.steam then
+	global.steam = {}
+	global.steam[1] = {}
+	global.steam[2] = {}
+	global.steam[3] = {}
+	global.steam[4] = {}
+	global.steam[5] = {}
+	global.steam[1].primary = {}
+	global.steam[1].secondary = {}
+	global.steam[1].terciary = {}
+	global.steam[2].primary = {}
+	global.steam[2].secondary = {}
+	global.steam[2].terciary = {}
+	global.steam[3].primary = {}
+	global.steam[3].secondary = {}
+	global.steam[3].terciary = {}
+	global.steam[4].primary = {}
+	global.steam[4].secondary = {}
+	global.steam[4].terciary = {}
+	global.steam[5].primary = {}
+	global.steam[5].secondary = {}
+	global.steam[5].terciary = {}
+
+	global.steam[1].primary = "steam-engine-primary"
+	global.steam[1].secondary = "steam-engine"
+	global.steam[1].terciary = "steam-engine-terciary"
+	global.steam[2].primary = "steam-engine-primary-mk2"
+	global.steam[2].secondary = "steam-engine-secondary-mk2"
+	global.steam[2].terciary = "steam-engine-terciary-mk2"
+	global.steam[3].primary = "steam-engine-primary-mk3"
+	global.steam[3].secondary = "steam-engine-secondary-mk3"
+	global.steam[3].terciary = "steam-engine-terciary-mk3"
+	global.steam[4].primary = "steam-engine-primary-mk4"
+	global.steam[4].secondary = "steam-engine-secondary-mk4"
+	global.steam[4].terciary = "steam-engine-terciary-mk4"
+	global.steam[5].primary = "steam-engine-primary-mk5"
+	global.steam[5].secondary = "steam-engine-secondary-mk5"
+	global.steam[5].terciary = "steam-engine-terciary-mk5"
+end
+end)
+
 game.on_init(function()
 global.tick = {}
 global.tick[1] = 0
@@ -141,6 +224,22 @@ global.steam[4].terciary = "steam-engine-terciary-mk4"
 global.steam[5].primary = "steam-engine-primary-mk5"
 global.steam[5].secondary = "steam-engine-secondary-mk5"
 global.steam[5].terciary = "steam-engine-terciary-mk5"
+
+global.steam[6].primary = "high-steam-engine-primary"
+global.steam[6].secondary = "high-steam-engine-secondary"
+global.steam[6].terciary = "high-steam-engine-terciary"
+global.steam[7].primary = "high-steam-engine-primary-mk2"
+global.steam[7].secondary = "high-steam-engine-secondary-mk2"
+global.steam[7].terciary = "high-steam-engine-terciary-mk2"
+global.steam[8].primary = "high-steam-engine-primary-mk3"
+global.steam[8].secondary = "high-steam-engine-secondary-mk3"
+global.steam[8].terciary = "high-steam-engine-terciary-mk3"
+global.steam[9].primary = "high-steam-engine-primary-mk4"
+global.steam[9].secondary = "high-steam-engine-secondary-mk4"
+global.steam[9].terciary = "high-steam-engine-terciary-mk4"
+global.steam[10].primary = "high-steam-engine-primary-mk5"
+global.steam[10].secondary = "high-steam-engine-secondary-mk5"
+global.steam[10].terciary = "high-steam-engine-terciary-mk5"
 end)
 
 --[[Steam Engine Code]]--
