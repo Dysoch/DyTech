@@ -6,13 +6,14 @@ Pipe_mk4 = {r=1, g=0.843, b=0, a=1}
 Pipe_mk5 = {r=0, g=1, b=0.498, a=1}
 
 data.raw["pipe-to-ground"]["pipe-to-ground"].fast_replaceable_group = "pipe-to-ground"
+table.insert(data.raw["pipe-to-ground"]["pipe-to-ground"].flags,"fast-replaceable-no-build-while-moving")
 
 data:extend({
   {
     type = "pipe-to-ground",
     name = "pipe-to-ground-mk2",
     icon = "__MAIN-DyTech-Machine__/graphics/pipes/icons/pipe-to-ground-mk2.png",
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground-mk2"},
     max_health = 50,
     corpse = "small-remnants",
@@ -52,7 +53,7 @@ data:extend({
     type = "pipe-to-ground",
     name = "pipe-to-ground-mk3",
     icon = "__MAIN-DyTech-Machine__/graphics/pipes/icons/pipe-to-ground-mk3.png",
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground-mk3"},
     max_health = 50,
     corpse = "small-remnants",
@@ -92,7 +93,7 @@ data:extend({
     type = "pipe-to-ground",
     name = "pipe-to-ground-mk4",
     icon = "__MAIN-DyTech-Machine__/graphics/pipes/icons/pipe-to-ground-mk4.png",
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground-mk4"},
     max_health = 50,
     corpse = "small-remnants",
@@ -132,7 +133,7 @@ data:extend({
     type = "pipe-to-ground",
     name = "pipe-to-ground-mk5",
     icon = "__MAIN-DyTech-Machine__/graphics/pipes/icons/pipe-to-ground-mk5.png",
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground-mk5"},
     max_health = 50,
     corpse = "small-remnants",
