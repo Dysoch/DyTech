@@ -6,6 +6,7 @@ Released: ?? 2015
 [*] Features:
 [list][*] Added in Floors! (Sand, Sandbag)
 [*] Added in more cheats. (amo more larger magazine size and tools more durability.)
+[*] Added in stats in DyTech-Core GUI.
 [/list]
 [*] Changes:
 [list] [*] Added in a Tech Fix. This fixes the screen getting to big. Also adds a new order in the tech screen
@@ -16,6 +17,7 @@ Released: ?? 2015
 [/list]
 [*] Bugfixes :
 [list] [*] Fixed Error when loading or saving.
+[*] DyTech Button no longer shows up when any GUI from DyTech is open.
 [/list]
 [/list][/spoiler]
 

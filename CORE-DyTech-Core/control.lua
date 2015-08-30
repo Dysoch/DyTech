@@ -218,6 +218,7 @@ end)
 
 game.on_event(defines.events.on_chunk_generated, function(event)
 	fs.LoggerCount("Chunks", 1)
+	fs.Pollution_Add_Pos(event)
 	if not global.Logger then fs.Startup() end
 	if not global.Logger.ChunkGenerated then 
 		global.Logger.ChunkGenerated = 1

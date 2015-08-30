@@ -18,6 +18,24 @@ function ButtonChecker(Index)
 		return true
 	elseif game.players[Index].gui.top["mainDyTechCoreFlow"] then
 		return true
+	elseif game.players[Index].gui.top["mainDynamicFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainResearchFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainLotteryFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainResearchTableFlow"] then
+		return true
+	elseif game.players[Index].gui.top["MRSUnlockGUIFrame"] then
+		return true
+	elseif game.players[Index].gui.top["mainCollectorFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainAutoResearcherFlow"] then
+		return true
+	elseif game.players[Index].gui.top["DyTechPowerFlow"] then
+		return true
+	elseif game.players[Index].gui.top["mainDyTechWorldFlow"] then
+		return true
 	else
 		return false
 	end
