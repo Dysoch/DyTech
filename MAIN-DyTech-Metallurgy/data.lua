@@ -1,6 +1,7 @@
 require "config"
 
 -- Categories
+require("prototypes.categories.autoplace-controls")
 require("prototypes.categories.recipe-category")
 
 -- Item Groups
@@ -9,6 +10,10 @@ require("prototypes.item-group.metallurgy-2")
 
 -- Metals
 require("prototypes.metals.cleaning.clean-ores")
+require("prototypes.metals.cleaning.fluid")
+require("prototypes.metals.cleaning.lava")
+require("prototypes.metals.cleaning.lava-resource")
+require("prototypes.metals.cleaning.slurry-processing")
 require("prototypes.metals.iron-pig.fluid")
 require("prototypes.metals.iron-pig.item")
 require("prototypes.metals.iron-pig.recipe")

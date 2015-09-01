@@ -33,9 +33,15 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "dytech-metallurgy-fluids-cleaning-recipes",
+    name = "dytech-metallurgy-fluids-cleaning-recipes-1",
     group = "dytech-metallurgy-2",
-    order = "05"
+    order = "05a"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytech-metallurgy-fluids-cleaning-recipes-2",
+    group = "dytech-metallurgy-2",
+    order = "05b"
   },
 
 }
