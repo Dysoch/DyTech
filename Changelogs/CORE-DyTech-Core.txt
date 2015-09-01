@@ -1,7 +1,21 @@
 [size=200]DyTech-Core[/size]
 
-[spoiler=v1.3.0][i][size=150][b]v1.3.0:[/b][/size][/i]
+[spoiler=v1.3.1][i][size=150][b]v1.3.1:[/b][/size][/i]
 Released: ?? 2015
+[list]
+[*] Features:
+[list][*] 
+[/list]
+[*] Changes:
+[list] [*] Changed Stone resource richness.
+[/list]
+[*] Bugfixes :
+[list] [*] Fixed Error with Languages files
+[/list]
+[/list][/spoiler]
+
+[spoiler=v1.3.0][i][size=150][b]v1.3.0:[/b][/size][/i]
+Released: August 30th 2015
 [list]
 [*] Features:
 [list][*] Added in Floors! (Sand, Sandbag)

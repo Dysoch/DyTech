@@ -1,8 +1,8 @@
 require("prototypes.override-functions")
 
 --[[ Entities ]]--
-data.raw["resource"]["stone"].richness_multiplier = 18850
-data.raw["resource"]["stone"].richness_base = 435
+data.raw["resource"]["stone"].richness_multiplier = data.raw["resource"]["stone"].richness_multiplier * 1.5
+data.raw["resource"]["stone"].richness_base = data.raw["resource"]["stone"].richness_base * 2
 data.raw["player"]["player"].inventory_size = 150
 data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 3
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
@@ -48,6 +48,7 @@ data.raw["item"]["copper-ore"].stack_size = 200
 data.raw["item"]["iron-ore"].stack_size = 200
 data.raw["item"]["coal"].stack_size = 200
 data.raw["item"]["stone"].stack_size = 200
+data.raw["item"]["raw-wood"].stack_size = 200
 data.raw["item"]["processing-unit"].stack_size = 200
 data.raw["item"]["battery"].stack_size = 200
 data.raw["item"]["basic-transport-belt"].stack_size = 100
