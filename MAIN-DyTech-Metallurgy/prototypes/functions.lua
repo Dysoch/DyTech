@@ -75,6 +75,8 @@ RESOURCES = {
 		Range = 1.02,
 		Color = {r=150, g=75, b=0}
 	},
-
-
 }
+
+CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydrogen","methane","nitric-oxide","nitrogen-dioxide","nitrous-oxide","oxygen","ozone","sulfur-dioxide","sulfur-monoxide","sulfur-trioxide","water"}
+
+INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay"}

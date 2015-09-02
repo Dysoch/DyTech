@@ -25,8 +25,8 @@ require("prototypes.metals.steel-blister.item")
 require("prototypes.metals.steel-plate.item")
 
 -- Intermediates
-require("prototypes.intermediates.hydrogen.fluid")
-require("prototypes.intermediates.oxygen.fluid")
+require("prototypes.intermediates.chemicals.fluid")
+require("prototypes.intermediates.intermediates.item")
 if data.raw.fluid["clean-water"] then
 	require("prototypes.intermediates.water.core-recipe")
 else

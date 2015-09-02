@@ -1,6 +1,6 @@
 require "prototypes.functions"
 
-function createresource(Name, Hardness, Range, Color)
+function DyTech_Create_Resource(Name, Hardness, Range, Color)
   local result =
   {
     type = "resource",
@@ -121,7 +121,7 @@ function createresource(Name, Hardness, Range, Color)
   return result
 end
 
-function createrawore(NAME)
+function DyTech_Create_Raw_Ore(NAME)
   local result =
   {
     type = "item",
@@ -138,7 +138,7 @@ function createrawore(NAME)
   return result
 end
 
-function createautoplace(NAME)
+function DyTech_Create_Autoplace(NAME)
   local result =
   {
     type = "autoplace-control",
@@ -151,7 +151,7 @@ function createautoplace(NAME)
   return result
 end
 
-function createnoiselayer(NAME)
+function DyTech_Create_Noise_Layer(NAME)
   local result =
   {
     type = "noise-layer",
@@ -161,7 +161,7 @@ function createnoiselayer(NAME)
   return result
 end
 
-function removeResources()
+function DyTech_Remove_Resources()
 	for k,v in pairs(data.raw.resource) do
 		if v.autoplace and v.name ~= "crude-oil" then
 			v.autoplace = nil
@@ -169,13 +169,13 @@ function removeResources()
 	end
 end
 
-removeResources()
+DyTech_Remove_Resources()
 for index,name in pairs(RESOURCES) do
 data:extend(
   {
-	createautoplace(name.Name),
-	createnoiselayer(name.Name),
-	createresource(name.Name, name.Hardness, name.Range, name.Color),
-	createrawore(name.Name)
+	DyTech_Create_Autoplace(name.Name),
+	DyTech_Create_Noise_Layer(name.Name),
+	DyTech_Create_Resource(name.Name, name.Hardness, name.Range, name.Color),
+	DyTech_Create_Raw_Ore(name.Name)
   })
 end
