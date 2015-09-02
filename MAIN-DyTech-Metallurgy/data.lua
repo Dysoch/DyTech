@@ -8,6 +8,9 @@ require("prototypes.categories.recipe-category")
 require("prototypes.item-group.metallurgy-1")
 require("prototypes.item-group.metallurgy-2")
 
+-- Resources
+require("prototypes.resources.resources")
+
 -- Metals
 require("prototypes.metals.cleaning.clean-ores")
 require("prototypes.metals.cleaning.fluid")
