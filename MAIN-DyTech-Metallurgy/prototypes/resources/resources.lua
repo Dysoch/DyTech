@@ -139,6 +139,23 @@ function DyTech_Create_Raw_Ore(NAME)
   return result
 end
 
+function DyTech_Create_Raw_Ore_Two(NAME)
+  local result =
+  {
+    type = "item",
+    name = "pig-iron-plate",
+	icon = "__MAIN-DyTech-Metallurgy__/graphics/metals/iron/pig.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "dytech-metallurgy-ores-clean",
+    order = "iron-pig",
+    stack_size = 200
+  }
+  result.name = NAME
+  result.order = NAME
+  result.icon = "__MAIN-DyTech-Metallurgy__/graphics/ores/" .. NAME .. ".png"
+  return result
+end
+
 function DyTech_Create_Autoplace(NAME)
   local result =
   {
@@ -179,4 +196,13 @@ data:extend(
 	DyTech_Create_Resource(name.Name, name.Hardness, name.Range, name.Color, name.Time),
 	DyTech_Create_Raw_Ore(name.Name)
   })
+end
+
+for index,name in pairs(ORES) do
+	if not data.raw.item[name] then
+	  data:extend(
+		{
+		  DyTech_Create_Raw_Ore_Two(name)
+		})
+	end
 end

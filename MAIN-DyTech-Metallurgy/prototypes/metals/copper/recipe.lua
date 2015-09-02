@@ -1,6 +1,7 @@
 data.raw.recipe["copper-plate"].subgroup = "dytech-metallurgy-plates-early"
 data.raw.recipe["copper-plate"].order = "copper"
 data.raw.recipe["copper-plate"].category = "centrifuge"
+data.raw.recipe["copper-plate"].icon = data.raw.item["copper-plate"].icon
 data.raw.recipe["copper-plate"].ingredients = {
 	{type="item", name="copper-sulfide", amount=2},
 }

@@ -1,7 +1,7 @@
 -- require "prototypes.functions"
 
 CLEAN_ORES = {"zinc-ore","lead-ore"}
-ORES = {"iron-ore","copper-ore","zinc-ore","lead-ore"}
+ORES = {"iron-ore","copper-ore","zinc-ore","lead-ore","tin-ore","tungsten-ore","silver-ore","gold-ore","ardite-ore","cobalt-ore","nickel-ore","quartz-ore","rutile-ore"}
 
 RESOURCES = {
 	{
@@ -11,7 +11,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=165, g=42, b=42},
 		Result = "stone",
-		Amount_Needed = 6
+		Amount_Needed = 6,
 	},
 	{
 		Name = "anthracite",
@@ -20,7 +20,7 @@ RESOURCES = {
 		Time = 0.5,
 		Color = {r=165, g=42, b=42},
 		Result = "coal",
-		Amount_Needed = 1
+		Amount_Needed = 1,
 	},
 	{
 		Name = "chalcopyrite",
@@ -29,7 +29,10 @@ RESOURCES = {
 		Time = 0.5,
 		Color = {r=181, g=166, b=66},
 		Result = "copper-plate",
-		Amount_Needed = 4
+		Amount_Needed = 4,
+		Processing = true,
+		Processing_Ingredients = {{type="item", name="chalcopyrite-ore", amount=2},{type="fluid", name="lava", amount=1}},
+		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="item", name="copper-sulfide", amount=2}},
 	},
 	{
 		Name = "chromite",
@@ -38,7 +41,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=38, g=38, b=38},
 		Result = "stone",
-		Amount_Needed = 2
+		Amount_Needed = 2,
 	},
 	{
 		Name = "cinnabar",
@@ -47,7 +50,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=255, g=36, b=0},
 		Result = "stone",
-		Amount_Needed = 3
+		Amount_Needed = 3,
 	},
 	{
 		Name = "fluorite",
@@ -56,7 +59,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=255, g=255, b=255},
 		Result = "stone",
-		Amount_Needed = 4
+		Amount_Needed = 4,
 	},
 	{
 		Name = "galena",
@@ -65,7 +68,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=166, g=166, b=166},
 		Result = "stone",
-		Amount_Needed = 5
+		Amount_Needed = 5,
 	},
 	{
 		Name = "hematite",
@@ -74,7 +77,10 @@ RESOURCES = {
 		Time = 0.5,
 		Color = {r=64, g=0, b=0},
 		Result = "iron-plate",
-		Amount_Needed = 5
+		Amount_Needed = 5,
+		Processing = true,
+		Processing_Ingredients = {{type="item", name="hematite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
+		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="fluid", name="oxygen", amount=5}},
 	},
 	{
 		Name = "limonite",
@@ -83,7 +89,7 @@ RESOURCES = {
 		Time = 0.5,
 		Color = {r=140, g=117, b=0},
 		Result = "stone",
-		Amount_Needed = 1
+		Amount_Needed = 1,
 	},
 	{
 		Name = "magnetite",
@@ -92,7 +98,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=26, g=0, b=4},
 		Result = "stone",
-		Amount_Needed = 4
+		Amount_Needed = 4,
 	},
 	{
 		Name = "malachite",
@@ -101,7 +107,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=80, g=200, b=120},
 		Result = "stone",
-		Amount_Needed = 7
+		Amount_Needed = 7,
 	},
 	{
 		Name = "pyrite",
@@ -110,7 +116,7 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=150, g=25, b=0},
 		Result = "stone",
-		Amount_Needed = 5
+		Amount_Needed = 5,
 	},
 	{
 		Name = "sphalerite",
@@ -119,12 +125,15 @@ RESOURCES = {
 		Time = 1.5,
 		Color = {r=150, g=75, b=0},
 		Result = "stone",
-		Amount_Needed = 2
+		Amount_Needed = 2,
+		Processing = true,
+		Processing_Ingredients = {{type="item", name="sphalerite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
+		Processing_Results = {{type="item", name="zinc-ore", amount=1},{type="item", name="phosphor", amount=3}},
 	},
 }
 
-CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydrogen","methane","nitric-oxide","nitrogen-dioxide","nitrous-oxide","oxygen","ozone","sulfur-dioxide","sulfur-monoxide","sulfur-trioxide","water"}
+CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydrogen","methane","nitric-oxide","nitrogen-dioxide","nitrous-oxide","oxygen","ozone","sulfur-dioxide","sulfur-monoxide","sulfur-trioxide","water","aluminium-hydroxide","sodium-hydroxide"}
 
-INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide"}
+INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor"}
 
 RECIPES = {"blooming","crystalizing","electrolys","centrifuge"}

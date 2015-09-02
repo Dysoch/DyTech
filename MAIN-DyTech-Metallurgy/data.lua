@@ -13,8 +13,7 @@ require("prototypes.resources.resources")
 require("prototypes.resources.lava")
 
 -- Raw Ore Processing
-require("prototypes.ores.chalcopyrite")
-require("prototypes.ores.hematite")
+require("prototypes.ores.processing")
 
 -- Metals
 require("prototypes.metals.copper.item")
@@ -30,6 +29,7 @@ require("prototypes.metals.steel-plate.item")
 require("prototypes.metals.steel-plate.recipe")
 
 -- Intermediates
+require("prototypes.intermediates.charcoal.recipe")
 require("prototypes.intermediates.chemicals.fluid")
 require("prototypes.intermediates.intermediates.item")
 if data.raw.fluid["clean-water"] then

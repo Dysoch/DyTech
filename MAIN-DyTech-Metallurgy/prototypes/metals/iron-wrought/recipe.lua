@@ -1,6 +1,7 @@
 data.raw.recipe["iron-plate"].subgroup = "dytech-metallurgy-plates-early"
 data.raw.recipe["iron-plate"].order = "iron-wrought"
 data.raw.recipe["iron-plate"].category = "centrifuge"
+data.raw.recipe["iron-plate"].icon = data.raw.item["iron-plate"].icon
 data.raw.recipe["iron-plate"].enabled = true
 data.raw.recipe["iron-plate"].ingredients = {
 	{type="item", name="iron-ore", amount=2},
