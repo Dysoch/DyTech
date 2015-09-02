@@ -25,7 +25,7 @@ data:extend(
       type = "electric",
       usage_priority = "solar"
     },
-    picture = BaseSolarPictures(2, SolarTint.mk1),
+    picture = BaseSolarPictures(1, SolarTint.mk1),
     production = SolarPanels.Normal.Tier1
   },
   {
