@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "water-electrolys",
-    icon = "__MAIN-DyTech-Metallurgy__/graphics/intermediates/water.png",
+    icon = "__MAIN-DyTech-Metallurgy__/graphics/chemicals/water.png",
 	category = "electrolys",
     subgroup = "dytech-metallurgy-fluids-recipes",
     enabled = true,

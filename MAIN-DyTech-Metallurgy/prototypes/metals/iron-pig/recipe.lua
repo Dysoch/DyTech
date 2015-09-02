@@ -27,7 +27,7 @@ data:extend(
     subgroup = "dytech-metallurgy-plates-mid",
     ingredients =
     {
-      {type="item", name="clean-iron-ore", amount=1},
+      {type="item", name="iron-ore", amount=1},
       {type="item", name="coal", amount=1},
       {type="fluid", name="oxygen", amount=1},
     },

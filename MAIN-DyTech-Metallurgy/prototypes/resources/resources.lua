@@ -1,6 +1,6 @@
 require "prototypes.functions"
 
-function DyTech_Create_Resource(Name, Hardness, Range, Color)
+function DyTech_Create_Resource(Name, Hardness, Range, Color, Time)
   local result =
   {
     type = "resource",
@@ -98,6 +98,7 @@ function DyTech_Create_Resource(Name, Hardness, Range, Color)
   result.order = Name .. "-ore"
   result.minable.result = Name .. "-ore"
   result.minable.hardness = Hardness
+  result.minable.mining_time = Time * Range
   result.icon = "__MAIN-DyTech-Metallurgy__/graphics/resource/" .. Name .. "-ore.png"
   result.stages.sheet.filename = "__MAIN-DyTech-Metallurgy__/graphics/resource/" .. Name .. "-deposit.png"
   result.autoplace.control = Name
@@ -175,7 +176,7 @@ data:extend(
   {
 	DyTech_Create_Autoplace(name.Name),
 	DyTech_Create_Noise_Layer(name.Name),
-	DyTech_Create_Resource(name.Name, name.Hardness, name.Range, name.Color),
+	DyTech_Create_Resource(name.Name, name.Hardness, name.Range, name.Color, name.Time),
 	DyTech_Create_Raw_Ore(name.Name)
   })
 end

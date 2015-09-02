@@ -1,4 +1,4 @@
-require "prototypes.resources.function"
+require "prototypes.functions"
 
 function DyTech_Create_Chemicals(NAME)
   local result =

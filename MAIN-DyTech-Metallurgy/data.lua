@@ -10,19 +10,24 @@ require("prototypes.item-group.metallurgy-2")
 
 -- Resources
 require("prototypes.resources.resources")
+require("prototypes.resources.lava")
+
+-- Raw Ore Processing
+require("prototypes.ores.chalcopyrite")
+require("prototypes.ores.hematite")
 
 -- Metals
-require("prototypes.metals.cleaning.clean-ores")
-require("prototypes.metals.cleaning.fluid")
-require("prototypes.metals.cleaning.lava")
-require("prototypes.metals.cleaning.lava-resource")
-require("prototypes.metals.cleaning.slurry-processing")
+require("prototypes.metals.copper.item")
+require("prototypes.metals.copper.recipe")
+require("prototypes.metals.raw-ores.recipe")
 require("prototypes.metals.iron-pig.fluid")
 require("prototypes.metals.iron-pig.item")
 require("prototypes.metals.iron-pig.recipe")
 require("prototypes.metals.iron-wrought.item")
+require("prototypes.metals.iron-wrought.recipe")
 require("prototypes.metals.steel-blister.item")
 require("prototypes.metals.steel-plate.item")
+require("prototypes.metals.steel-plate.recipe")
 
 -- Intermediates
 require("prototypes.intermediates.chemicals.fluid")

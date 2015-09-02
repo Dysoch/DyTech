@@ -1,4 +1,4 @@
-require "prototypes.resources.function"
+require "prototypes.functions"
 
 function DyTech_Create_Intermediates(NAME)
   local result =
