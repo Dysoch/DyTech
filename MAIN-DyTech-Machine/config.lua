@@ -51,7 +51,6 @@ Config.MiningDrills = true
 Config.SteelFurnaces = true
 Config.ElectricFurnaces = true
 Config.Radars = true
-Config.Walls = false
 Config.Beacons = true
 Config.Lamps = true
 Config.Oil_Upgrades = true
