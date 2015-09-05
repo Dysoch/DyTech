@@ -204,5 +204,8 @@ for index,name in pairs(ORES) do
 		{
 		  DyTech_Create_Raw_Ore_Two(name)
 		})
+	else
+		data.raw.item[name].subgroup = "dytech-metallurgy-ores-clean"
+		data.raw.item[name].order = name
 	end
 end

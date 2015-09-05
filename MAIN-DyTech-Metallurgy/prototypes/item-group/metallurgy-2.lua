@@ -43,6 +43,18 @@ data:extend(
     group = "dytech-metallurgy-2",
     order = "05b"
   },
+  {
+    type = "item-subgroup",
+    name = "dytech-metallurgy-ores-stone-brick",
+    group = "dytech-metallurgy-2",
+    order = "06"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytech-metallurgy-fluids-venting-recipes",
+    group = "dytech-metallurgy-2",
+    order = "99"
+  },
 
 }
 )

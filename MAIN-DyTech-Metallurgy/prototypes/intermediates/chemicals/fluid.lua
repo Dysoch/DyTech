@@ -25,8 +25,10 @@ function DyTech_Create_Chemicals(NAME)
 end
 
 for index,name in pairs(CHEMICALS) do
-data:extend(
-  {
-	DyTech_Create_Chemicals(name)
-  })
+	if not data.raw.fluid[name] then
+	  data:extend(
+		{
+		  DyTech_Create_Chemicals(name)
+		})
+	end
 end

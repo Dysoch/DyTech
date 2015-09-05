@@ -14,6 +14,7 @@ require("prototypes.resources.lava")
 
 -- Raw Ore Processing
 require("prototypes.ores.processing")
+require("prototypes.ores.stone-bricks")
 
 -- Metals
 require("prototypes.metals.copper.item")
@@ -28,9 +29,13 @@ require("prototypes.metals.steel-blister.item")
 require("prototypes.metals.steel-plate.item")
 require("prototypes.metals.steel-plate.recipe")
 
+-- Alloys
+require("prototypes.alloys.plates")
+
 -- Intermediates
 require("prototypes.intermediates.charcoal.recipe")
 require("prototypes.intermediates.chemicals.fluid")
+require("prototypes.intermediates.chemicals.venting")
 require("prototypes.intermediates.intermediates.item")
 if data.raw.fluid["clean-water"] then
 	require("prototypes.intermediates.water.core-recipe")
@@ -39,6 +44,9 @@ else
 end
 
 -- Machines
+require("prototypes.machines.venting.entity")
+require("prototypes.machines.venting.item")
+require("prototypes.machines.venting.recipe")
 require("prototypes.machines.electrolyser.entity")
 require("prototypes.machines.electrolyser.item")
 require("prototypes.machines.electrolyser.recipe")

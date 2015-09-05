@@ -1,7 +1,8 @@
 -- require "prototypes.functions"
 
-CLEAN_ORES = {"zinc-ore","lead-ore"}
 ORES = {"iron-ore","copper-ore","zinc-ore","lead-ore","tin-ore","tungsten-ore","silver-ore","gold-ore","ardite-ore","cobalt-ore","nickel-ore","quartz-ore","rutile-ore"}
+
+ALLOYS = {"invar","solder","brass","bronze","copper-tungsten","electrum","goloid","ferrophosphorus"}
 
 RESOURCES = {
 	{
@@ -31,6 +32,7 @@ RESOURCES = {
 		Result = "copper-plate",
 		Amount_Needed = 4,
 		Processing = true,
+		Processing_Category = "centrifuge",
 		Processing_Ingredients = {{type="item", name="chalcopyrite-ore", amount=2},{type="fluid", name="lava", amount=1}},
 		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="item", name="copper-sulfide", amount=2}},
 	},
@@ -79,6 +81,7 @@ RESOURCES = {
 		Result = "iron-plate",
 		Amount_Needed = 5,
 		Processing = true,
+		Processing_Category = "centrifuge",
 		Processing_Ingredients = {{type="item", name="hematite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
 		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="fluid", name="oxygen", amount=5}},
 	},
@@ -90,6 +93,10 @@ RESOURCES = {
 		Color = {r=140, g=117, b=0},
 		Result = "stone",
 		Amount_Needed = 1,
+		Processing = true,
+		Processing_Category = "centrifuge",
+		Processing_Ingredients = {{type="item", name="limonite-ore", amount=4},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
+		Processing_Results = {{type="item", name="iron-ore", amount=2},{type="fluid", name="oxygen", amount=3}},
 	},
 	{
 		Name = "magnetite",
@@ -99,6 +106,10 @@ RESOURCES = {
 		Color = {r=26, g=0, b=4},
 		Result = "stone",
 		Amount_Needed = 4,
+		Processing = true,
+		Processing_Category = "centrifuge",
+		Processing_Ingredients = {{type="item", name="magnetite-ore", amount=4},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
+		Processing_Results = {{type="item", name="iron-ore", amount=1},{type="item", name="tungsten-ore", amount=1}},
 	},
 	{
 		Name = "malachite",
@@ -117,6 +128,10 @@ RESOURCES = {
 		Color = {r=150, g=25, b=0},
 		Result = "stone",
 		Amount_Needed = 5,
+		Processing = true,
+		Processing_Category = "centrifuge",
+		Processing_Ingredients = {{type="item", name="pyrite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
+		Processing_Results = {{type="item", name="iron-sulfide", amount=1},{type="item", name="sulfur", amount=3}},
 	},
 	{
 		Name = "sphalerite",
@@ -127,6 +142,7 @@ RESOURCES = {
 		Result = "stone",
 		Amount_Needed = 2,
 		Processing = true,
+		Processing_Category = "centrifuge",
 		Processing_Ingredients = {{type="item", name="sphalerite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
 		Processing_Results = {{type="item", name="zinc-ore", amount=1},{type="item", name="phosphor", amount=3}},
 	},
@@ -134,6 +150,6 @@ RESOURCES = {
 
 CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydrogen","methane","nitric-oxide","nitrogen-dioxide","nitrous-oxide","oxygen","ozone","sulfur-dioxide","sulfur-monoxide","sulfur-trioxide","water","aluminium-hydroxide","sodium-hydroxide"}
 
-INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor"}
+INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor","iron-sulfide"}
 
-RECIPES = {"blooming","crystalizing","electrolys","centrifuge"}
+RECIPES = {"blooming","crystalizing","electrolys","centrifuge","venting"}
