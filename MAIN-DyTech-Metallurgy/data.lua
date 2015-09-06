@@ -7,6 +7,7 @@ require("prototypes.categories.recipe-category")
 -- Item Groups
 require("prototypes.item-group.metallurgy-1")
 require("prototypes.item-group.metallurgy-2")
+require("prototypes.item-group.metallurgy-3")
 
 -- Resources
 require("prototypes.resources.resources")
@@ -50,4 +51,6 @@ require("prototypes.machines.venting.recipe")
 require("prototypes.machines.electrolyser.entity")
 require("prototypes.machines.electrolyser.item")
 require("prototypes.machines.electrolyser.recipe")
+require("prototypes.machines.pipes.pipes")
+require("prototypes.machines.pipes.pipes-to-ground")
 --require("prototypes.machines.electrolyser.tech")
