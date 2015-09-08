@@ -20,6 +20,6 @@ end
 for index,name in pairs(ALLOYS) do
 	  data:extend(
 		{
-		  DyTech_Create_Alloy_Plates(name)
+		  DyTech_Create_Alloy_Plates(name.Name)
 		})
 end

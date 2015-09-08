@@ -112,5 +112,5 @@ for index,name in pairs(PIPES_WALLS_GATES_AMMO) do
 	end
 end
 
-data.raw.item["pipe"].order = "3-iron-plate-pipe"
+data.raw.item["pipe"].order = "103-iron-plate-pipe"
 data.raw.item["pipe"].subgroup = "dytech-metallurgy-pipes"

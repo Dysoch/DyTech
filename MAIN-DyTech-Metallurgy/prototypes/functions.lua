@@ -2,7 +2,42 @@
 
 ORES = {"iron-ore","copper-ore","zinc-ore","lead-ore","tin-ore","tungsten-ore","silver-ore","gold-ore","ardite-ore","cobalt-ore","nickel-ore","quartz-ore","rutile-ore"}
 
-ALLOYS = {"invar","solder","brass","bronze","copper-tungsten","electrum","goloid","ferrophosphorus"}
+ALLOYS = {
+	{
+		Name = "invar",
+		Recipe = false,
+	},
+	{
+		Name = "solder",
+		Recipe = false,
+	},
+	{
+		Name = "brass",
+		Recipe = false,
+	},
+	{
+		Name = "bronze",
+		Recipe = true,
+		Recipe_Ingredients = {{type="item", name="copper-plate", amount=4},{type="item", name="tin-plate", amount=1},{type="item", name="zinc-plate", amount=1},{type="fluid", name="lava", amount=1}},
+		Recipe_Results = {{type="item", name="bronze-alloy", amount=5}},
+	},
+	{
+		Name = "copper-tungsten",
+		Recipe = false,
+	},
+	{
+		Name = "electrum",
+		Recipe = false,
+	},
+	{
+		Name = "goloid",
+		Recipe = false,
+	},
+	{
+		Name = "ferrophosphorus",
+		Recipe = false,
+	},
+}
 
 RESOURCES = {
 	{
@@ -32,7 +67,7 @@ RESOURCES = {
 		Result = "copper-plate",
 		Amount_Needed = 4,
 		Processing = true,
-		Processing_Category = "centrifuge",
+		Processing_Category = "melting",
 		Processing_Ingredients = {{type="item", name="chalcopyrite-ore", amount=2},{type="fluid", name="lava", amount=1}},
 		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="item", name="copper-sulfide", amount=2}},
 	},
@@ -81,7 +116,7 @@ RESOURCES = {
 		Result = "iron-plate",
 		Amount_Needed = 5,
 		Processing = true,
-		Processing_Category = "centrifuge",
+		Processing_Category = "roasting",
 		Processing_Ingredients = {{type="item", name="hematite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
 		Processing_Results = {{type="item", name="iron-ore", amount=3},{type="fluid", name="oxygen", amount=5}},
 	},
@@ -94,7 +129,7 @@ RESOURCES = {
 		Result = "stone",
 		Amount_Needed = 1,
 		Processing = true,
-		Processing_Category = "centrifuge",
+		Processing_Category = "roasting",
 		Processing_Ingredients = {{type="item", name="limonite-ore", amount=4},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
 		Processing_Results = {{type="item", name="iron-ore", amount=2},{type="fluid", name="oxygen", amount=3}},
 	},
@@ -129,7 +164,7 @@ RESOURCES = {
 		Result = "stone",
 		Amount_Needed = 5,
 		Processing = true,
-		Processing_Category = "centrifuge",
+		Processing_Category = "roasting",
 		Processing_Ingredients = {{type="item", name="pyrite-ore", amount=2},{type="fluid", name="lava", amount=1},{type="fluid", name="water", amount=1}},
 		Processing_Results = {{type="item", name="iron-sulfide", amount=1},{type="item", name="sulfur", amount=3}},
 	},
@@ -152,4 +187,59 @@ CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydr
 
 INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor","iron-sulfide"}
 
-RECIPES = {"blooming","crystalizing","electrolys","centrifuge","venting"}
+MACHINES = {
+	{
+		Name = "bloomer",
+		Machine = true,
+		Enabled = true,
+		Category = "blooming",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "crystalizer",
+		Machine = true,
+		Enabled = true,
+		Category = "crystalizing",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "melter",
+		Machine = true,
+		Enabled = true,
+		Category = "melting",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "roaster",
+		Machine = true,
+		Enabled = true,
+		Category = "roasting",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "electrolyser",
+		Machine = true,
+		Enabled = true,
+		Category = "electrolys",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "centrifuger",
+		Machine = true,
+		Enabled = true,
+		Category = "centrifuge",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "venting",
+		Machine = false,
+		Enabled = false,
+		Category = "venting",
+	},
+}

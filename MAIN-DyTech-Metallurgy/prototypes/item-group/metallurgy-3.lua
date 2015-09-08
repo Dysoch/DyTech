@@ -9,6 +9,12 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "dytech-metallurgy-machines",
+    group = "dytech-metallurgy-3",
+    order = "01"
+  },
+  {
+    type = "item-subgroup",
     name = "dytech-metallurgy-ammo",
     group = "dytech-metallurgy-3",
     order = "80"

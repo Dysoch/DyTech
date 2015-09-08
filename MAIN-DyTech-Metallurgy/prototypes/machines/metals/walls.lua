@@ -375,6 +375,6 @@ for index,name in pairs(PIPES_WALLS_GATES_AMMO) do
 	end
 end
 
-data.raw.item["stone-wall"].order = "1-stone-brick-wall"
+data.raw.item["stone-wall"].order = "101-stone-brick-wall"
 data.raw.item["stone-wall"].subgroup = "dytech-metallurgy-walls"
 data.raw["wall"]["stone-wall"].max_health = 250

@@ -32,6 +32,7 @@ require("prototypes.metals.steel-plate.recipe")
 
 -- Alloys
 require("prototypes.alloys.plates")
+require("prototypes.alloys.recipes")
 
 -- Intermediates
 require("prototypes.intermediates.charcoal.recipe")
@@ -48,9 +49,7 @@ end
 require("prototypes.machines.venting.entity")
 require("prototypes.machines.venting.item")
 require("prototypes.machines.venting.recipe")
-require("prototypes.machines.electrolyser.entity")
-require("prototypes.machines.electrolyser.item")
-require("prototypes.machines.electrolyser.recipe")
+require("prototypes.machines.machines.creation")
 require("prototypes.machines.metals.ammo")
 require("prototypes.machines.metals.gates")
 require("prototypes.machines.metals.pipes")

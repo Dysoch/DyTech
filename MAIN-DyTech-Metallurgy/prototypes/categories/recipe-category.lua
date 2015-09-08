@@ -10,9 +10,9 @@ function DyTech_Create_Recipe_Category(NAME)
   return result
 end
 
-for index,name in pairs(RECIPES) do
+for index,name in pairs(MACHINES) do
 data:extend(
   {
-	DyTech_Create_Recipe_Category(name)
+	DyTech_Create_Recipe_Category(name.Category)
   })
 end

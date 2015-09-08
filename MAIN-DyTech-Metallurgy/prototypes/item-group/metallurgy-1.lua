@@ -55,5 +55,11 @@ data:extend(
     group = "dytech-metallurgy-1",
     order = "07"
   },
+  {
+    type = "item-subgroup",
+    name = "dytech-metallurgy-alloys-recipes",
+    group = "dytech-metallurgy-1",
+    order = "08"
+  },
 }
 )

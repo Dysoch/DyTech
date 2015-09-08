@@ -1,7 +1,8 @@
 require "prototypes.internal-config"
+require "prototypes.functions"
 
-data:extend(
-{ 
+function DyTech_Create_Machine_Entity(NAME, TINT, CATEGORY)
+  local result =
   {
     type = "assembling-machine",
     name = "electrolyser",
@@ -20,7 +21,15 @@ data:extend(
         pipe_covers = pipecoverspictures(),
         base_area = 250,
         base_level = -1,
-        pipe_connections = {{ type="input", position = {2, 0} }}
+        pipe_connections = {{ type="input", position = {2, 1} }}
+      },
+      {
+        production_type = "input",
+        pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 250,
+        base_level = -1,
+        pipe_connections = {{ type="input", position = {2, -1} }}
       },
       {
         production_type = "output",
@@ -66,7 +75,8 @@ data:extend(
       height = 102,
       frame_count = 32,
       line_length = 8,
-      shift = {0.25, -0.1}
+      shift = {0.25, -0.1},
+	  tint = TINT
     },
     crafting_categories = {"electrolys"},
     crafting_speed = 1,
@@ -77,12 +87,75 @@ data:extend(
       emissions = 0.035 / 3.5
     },
     energy_usage = "250kW",
-    ingredient_count = 10,
+    ingredient_count = 50,
     module_specification =
     {
       module_slots = 5
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"}
-  },
-}
-)
+  }
+  result.name = NAME
+  result.minable.result = NAME
+  result.crafting_categories[1] = CATEGORY
+  --result.icon = "__MAIN-DyTech-Metallurgy__/graphics/pipes/" .. NAME .. "-pipe.png"
+  result.icon = "__base__/graphics/icons/assembling-machine-1.png"
+  return result
+end
+
+function DyTech_Create_Machine_Item(NAME)
+  local result =
+  {
+    type = "item",
+    name = "pig-iron-plate",
+	icon = "__base__/graphics/icons/pipe.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "dytech-metallurgy-machines",
+    order = "iron-pig",
+    place_result = "pipe",
+    stack_size = 50
+  }
+  result.name = NAME
+  result.place_result = NAME
+  result.order = NAME
+  --result.icon = "__MAIN-DyTech-Metallurgy__/graphics/pipes/" .. NAME .. "-pipe.png"
+  result.icon = "__base__/graphics/icons/assembling-machine-1.png"
+  return result
+end
+
+function DyTech_Create_Machine_Recipe(NAME, ENABLED)
+  local result =
+  {
+    type = "recipe",
+    name = "hematite-processing",
+    icon = "__MAIN-DyTech-Metallurgy__/graphics/chemicals/water.png",
+    subgroup = "dytech-metallurgy-machines",
+	order = "1",
+    enabled = true,
+    ingredients =
+    {
+	
+    },
+    result = "stone-brick"
+  }
+  result.name = NAME
+  result.order = NAME
+  result.result = NAME
+  result.enabled = ENABLED
+  --result.icon = "__MAIN-DyTech-Metallurgy__/graphics/pipes/" .. NAME .. "-pipe.png"
+  result.icon = "__base__/graphics/icons/assembling-machine-1.png"
+  return result
+end
+
+for index,name in pairs(MACHINES) do
+	if name.Machine then
+	  data:extend(
+		{
+		  DyTech_Create_Machine_Entity(name.Name, name.Tint, name.Category),
+		  DyTech_Create_Machine_Item(name.Name),
+		  DyTech_Create_Machine_Recipe(name.Name, name.Enabled),
+		})
+		for _,v in pairs(name.Recipe) do
+			table.insert(data.raw.recipe[name.Name].ingredients,v)
+		end
+	end
+end
