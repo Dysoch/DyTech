@@ -18,6 +18,7 @@ ALLOYS = {
 	{
 		Name = "bronze",
 		Recipe = true,
+		Recipe_Category = "melting",
 		Recipe_Ingredients = {{type="item", name="copper-plate", amount=4},{type="item", name="tin-plate", amount=1},{type="item", name="zinc-plate", amount=1},{type="fluid", name="lava", amount=1}},
 		Recipe_Results = {{type="item", name="bronze-alloy", amount=5}},
 	},
@@ -233,6 +234,14 @@ MACHINES = {
 		Machine = true,
 		Enabled = true,
 		Category = "centrifuge",
+		Tint = {r=0.500, g=0.500, b=0.500},
+		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
+	},
+	{
+		Name = "reducer",
+		Machine = true,
+		Enabled = true,
+		Category = "reduction",
 		Tint = {r=0.500, g=0.500, b=0.500},
 		Recipe = {{type="item", name="iron-plate", amount=5},{type="item", name="copper-plate", amount=3},{type="item", name="pipe", amount=1}},
 	},

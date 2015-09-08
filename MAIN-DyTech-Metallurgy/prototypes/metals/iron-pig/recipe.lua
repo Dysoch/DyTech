@@ -5,7 +5,7 @@ data:extend(
     name = "pig-iron-plate",
 	icon = "__MAIN-DyTech-Metallurgy__/graphics/metals/iron/pig.png",
 	enabled = true,
-	category = "crafting-with-fluid",
+	category = "crystalizing",
     energy_required = 2,
     subgroup = "dytech-metallurgy-plates-mid",
     ingredients =
@@ -22,7 +22,7 @@ data:extend(
     name = "molten-pig-iron",
 	icon = "__MAIN-DyTech-Metallurgy__/graphics/metals/iron/pig.png",
 	enabled = true,
-	category = "crafting-with-fluid",
+	category = "melting",
     energy_required = 2,
     subgroup = "dytech-metallurgy-plates-mid",
     ingredients =

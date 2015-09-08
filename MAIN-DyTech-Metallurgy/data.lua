@@ -27,6 +27,7 @@ require("prototypes.metals.iron-pig.recipe")
 require("prototypes.metals.iron-wrought.item")
 require("prototypes.metals.iron-wrought.recipe")
 require("prototypes.metals.steel-blister.item")
+require("prototypes.metals.steel-blister.recipe")
 require("prototypes.metals.steel-plate.item")
 require("prototypes.metals.steel-plate.recipe")
 
