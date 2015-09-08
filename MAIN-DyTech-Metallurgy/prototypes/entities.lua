@@ -1,9 +1,12 @@
 -- require "prototypes.entities"
 
-PIPES = {
+PIPES_WALLS_GATES_AMMO = {
 	{
 		Name = "stone-brick",
 		Enabled = true,
+		Pipes = true,
+		Walls = false,
+		Ammo = true,
 		Range = 10,
 		Liquid = 5,
 		Order = 1,
@@ -13,6 +16,9 @@ PIPES = {
 	{
 		Name = "copper-plate",
 		Enabled = true,
+		Pipes = true,
+		Walls = true,
+		Ammo = true,
 		Range = 15,
 		Liquid = 5,
 		Order = 2,
@@ -20,8 +26,23 @@ PIPES = {
 		Tint = {r=0.500, g=0.500, b=0.500},
 	},
 	{
+		Name = "iron-plate",
+		Enabled = true,
+		Pipes = false,
+		Walls = true,
+		Ammo = true,
+		Range = 15,
+		Liquid = 10,
+		Order = 3,
+		Health = 50,
+		Tint = {r=0.500, g=0.500, b=0.500},
+	},
+	{
 		Name = "blister-steel-plate",
 		Enabled = true,
+		Pipes = true,
+		Walls = true,
+		Ammo = true,
 		Range = 10,
 		Liquid = 15,
 		Order = 4,
@@ -31,10 +52,13 @@ PIPES = {
 	{
 		Name = "steel-plate",
 		Enabled = true,
+		Pipes = true,
+		Walls = true,
+		Ammo = true,
 		Range = 15,
 		Liquid = 20,
 		Order = 5,
-		Health = 75,
+		Health = 100,
 		Tint = {r=0.500, g=0.500, b=0.500},
 	},
 }

@@ -132,13 +132,15 @@ function DyTech_Create_Pipes_To_Ground_Recipe(INDEX, NAME, ENABLED)
   return result
 end
 
-for index,name in pairs(PIPES) do
+for index,name in pairs(PIPES_WALLS_GATES_AMMO) do
+	if name.Pipes then
 	  data:extend(
 		{
 		  DyTech_Create_Pipes_To_Ground_Entity(name.Name, name.Health, name.Liquid, name.Tint, name.Range),
 		  DyTech_Create_Pipes_To_Ground_Item(name.Order, name.Name),
 		  DyTech_Create_Pipes_To_Ground_Recipe(name.Order ,name.Name, name.Enabled),
 		})
+	end
 end
 
 data.raw.item["pipe-to-ground"].order = "3-iron-plate-pipe-to-ground"
