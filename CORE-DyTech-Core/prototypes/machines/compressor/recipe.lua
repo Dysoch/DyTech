@@ -10,7 +10,7 @@ data:extend(
       {"iron-plate", 100},
       {"electronic-circuit", 25},
       {"pipe", 2},
-      {"frame-1", 1},
+      {"frame", 1},
     },
     result= "compressor"
   },

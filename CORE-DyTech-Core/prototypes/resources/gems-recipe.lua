@@ -34,7 +34,7 @@ data:extend(
     ingredients =
     {
 	  {"crystal", 1},
-	  {"obsidian", 10},
+	  {"coal", 10},
     },
     result = "raw-emerald"
   },
@@ -47,7 +47,7 @@ data:extend(
     ingredients =
     {
 	  {"crystal", 1},
-	  {"obsidian", 25},
+	  {"coal", 25},
     },
     result = "raw-topaz"
   },
@@ -60,7 +60,7 @@ data:extend(
     ingredients =
     {
 	  {"crystal", 1},
-	  {"obsidian", 50},
+	  {"coal", 50},
     },
     result = "raw-diamond"
   },

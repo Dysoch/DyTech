@@ -1,8 +1,12 @@
 require("prototypes.override-functions")
 
 --[[ Entities ]]--
-data.raw["resource"]["stone"].richness_multiplier = data.raw["resource"]["stone"].richness_multiplier * 1.5
-data.raw["resource"]["stone"].richness_base = data.raw["resource"]["stone"].richness_base * 2
+if data.raw.resource["stone"].autoplace then
+	local STONE1 = data.raw.resource["stone"].autoplace.richness_multiplier
+	local STONE2 = data.raw.resource["stone"].autoplace.richness_base
+	STONE1 = STONE1 * 1.5
+	STONE2 = STONE2 * 2
+end
 data.raw["player"]["player"].inventory_size = 150
 data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 3
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
@@ -64,37 +68,40 @@ ChangeRecipe("science-pack-1", "iron-gear-wheel", "stone-gear-wheel", 1)
 ChangeRecipe("basic-transport-belt", "iron-gear-wheel", "stone-gear-wheel", 1)
 ChangeRecipe("lab", "iron-gear-wheel", "stone-gear-wheel", 5)
 data.raw["recipe"]["iron-gear-wheel"].enabled = false
-AddToRecipe("boiler", "rotor-1", 1)
-AddToRecipe("radar", "frame-1", 1)
-AddToRecipe("basic-mining-drill", "frame-1", 1)
-AddToRecipe("solar-panel", "flux-capacitor-1", 1)
-AddToRecipe("assembling-machine-2", "capacitor-1", 1)
-AddToRecipe("assembling-machine-3", "capacitor-1", 3)
+AddToRecipe("boiler", "rotor", 1)
+AddToRecipe("radar", "frame", 1)
+AddToRecipe("basic-mining-drill", "frame", 1)
+AddToRecipe("solar-panel", "flux-capacitor", 1)
+AddToRecipe("solar-panel", "solar-cell", 9)
+AddToRecipe("assembling-machine-2", "capacitor", 1)
+AddToRecipe("assembling-machine-3", "capacitor", 3)
 AddToRecipe("car", "rubber", 5)
 ChangeRecipe("tank", "iron-gear-wheel", "steel-gear-wheel", 15)
 AddToRecipe("diesel-locomotive", "steel-gear-wheel", 5)
 AddToRecipe("cargo-wagon", "steel-gear-wheel", 5)
-ChangeRecipe("basic-modular-armor", "steel-plate", "lead-plate", 50)
-ChangeRecipe("power-armor", "steel-plate", "lead-plate", 150)
-ChangeRecipe("power-armor-mk2", "steel-plate", "tungsten-plate", 150)
-AddToRecipe("logistic-robot", "capacitor-1", 1)
-AddToRecipe("construction-robot", "capacitor-1", 1)
-AddToRecipe("roboport", "capacitor-1", 8)
-AddToRecipe("basic-accumulator", "flux-capacitor-1", 3)
-AddToRecipe("steel-furnace", "frame-1", 1)
-ChangeRecipe("electric-furnace", "steel-plate", "tin-plate", 15)
-AddToRecipe("electric-furnace", "frame-1", 1)
-AddToRecipe("electric-furnace", "capacitor-1", 2)
-AddToRecipe("basic-beacon", "capacitor-1", 2)
-AddToRecipe("pumpjack", "capacitor-1", 2)
-AddToRecipe("pumpjack", "frame-1", 1)
-AddToRecipe("oil-refinery", "frame-1", 1)
-ChangeRecipe("oil-refinery", "steel-plate", "zinc-plate", 15)
-AddToRecipe("battery", "capacitor-1", 1)
-AddToRecipe("small-pump", "capacitor-1", 1)
-AddToRecipe("chemical-plant", "capacitor-1", 1)
-AddToRecipe("chemical-plant", "frame-1", 1)
-ChangeRecipe("laser-turret", "battery", "capacitor-1", 2)
+AddToRecipe("logistic-robot", "capacitor", 1)
+AddToRecipe("construction-robot", "capacitor", 1)
+AddToRecipe("roboport", "capacitor", 8)
+AddToRecipe("basic-accumulator", "flux-capacitor", 3)
+AddToRecipe("steel-furnace", "frame", 1)
+AddToRecipe("electric-furnace", "frame", 1)
+AddToRecipe("electric-furnace", "capacitor", 2)
+AddToRecipe("basic-beacon", "capacitor", 2)
+AddToRecipe("pumpjack", "capacitor", 2)
+AddToRecipe("pumpjack", "frame", 1)
+AddToRecipe("oil-refinery", "frame", 1)
+AddToRecipe("battery", "capacitor", 1)
+AddToRecipe("small-pump", "capacitor", 1)
+AddToRecipe("chemical-plant", "capacitor", 1)
+AddToRecipe("chemical-plant", "frame", 1)
+data.raw.recipe["laser-turret"].ingredients = {}
+AddToRecipe("laser-turret", "turret-base", 1)
+AddToRecipe("laser-turret", "turret-stock", 1)
+AddToRecipe("laser-turret", "turret-guidance-01", 1)
+data.raw.recipe["gun-turret"].ingredients = {}
+AddToRecipe("gun-turret", "turret-base", 1)
+AddToRecipe("gun-turret", "turret-stock", 1)
+AddToRecipe("gun-turret", "turret-guidance-21", 1)
 ChangeRecipe("tank", "engine-unit", "track", 2)
 ChangeRecipe("tank", "iron-gear-wheel", "hull-lower", 1)
 ChangeRecipe("tank", "advanced-circuit", "hull-top", 1)

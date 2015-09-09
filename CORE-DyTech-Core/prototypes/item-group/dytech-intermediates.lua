@@ -69,7 +69,7 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "dytech-intermediates-molds",
+    name = "dytech-intermediates-turret",
     group = "dytech-intermediates",
     order = "011"
   },
@@ -78,6 +78,12 @@ data:extend(
     name = "dytech-intermediates-enemies",
     group = "dytech-intermediates",
     order = "012"
+  },
+  {
+    type = "item-subgroup",
+    name = "dytech-intermediates-all",
+    group = "dytech-intermediates",
+    order = "013"
   },
 }
 )

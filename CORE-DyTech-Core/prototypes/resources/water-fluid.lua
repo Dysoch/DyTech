@@ -1,5 +1,6 @@
 data.raw["fluid"]["water"].pressure_to_speed_ratio = 0.6
 data.raw["fluid"]["water"].flow_to_energy_ratio = 0.885
+data.raw["fluid"]["water"].max_temperature = 80
 data.raw["fluid"]["water"].icon = "__CORE-DyTech-Core__/graphics/fluid/dirty-water.png"
 
 data:extend(

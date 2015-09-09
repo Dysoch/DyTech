@@ -5,5 +5,5 @@
 	"title":"CORE-DyTech-Core",
 	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
 	"description":"1 Core to rule them all!",
-	"dependencies": ["base >= 0.12.5", "? Treefarm-Lite >= 0.1.2"]
+	"dependencies": ["base >= 0.12.5", "? Treefarm-Lite >= 0.1.2", "? MAIN-DyTech-Metallurgy"]
 }
