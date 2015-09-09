@@ -1,4 +1,5 @@
 require "config"
+require "prototypes.intermediates.intermediates"
 
 TechFix = true
 ItemFix = false
@@ -125,30 +126,11 @@ end
 
 for k, v in pairs(data.raw.module) do
 	if string.sub("productivity-module-", 1, 20) and v.limitation then
-		table.insert(v.limitation, "advanced-processing-unit")
-		table.insert(v.limitation, "bundled-wire")
-		table.insert(v.limitation, "rubber")
-		table.insert(v.limitation, "stone-gear-wheel")
-		table.insert(v.limitation, "steel-gear-wheel")
-		table.insert(v.limitation, "frame")
-		table.insert(v.limitation, "item-exit")
-		table.insert(v.limitation, "rotor")
-		table.insert(v.limitation, "blade")
-		table.insert(v.limitation, "capacitor")
-		table.insert(v.limitation, "flux-capacitor")
-		table.insert(v.limitation, "sandbag")
-		table.insert(v.limitation, "solar-cell")
-		table.insert(v.limitation, "glass")
-		table.insert(v.limitation, "bundled-wire")
-		table.insert(v.limitation, "advanced-processing-unit")
-		table.insert(v.limitation, "bone-charcoal")
-		table.insert(v.limitation, "track")
-		table.insert(v.limitation, "track-chain-link")
-		table.insert(v.limitation, "hull-lower")
-		table.insert(v.limitation, "hull-top")
-		table.insert(v.limitation, "tank-barrel")
-		table.insert(v.limitation, "logic-diamond")
-		table.insert(v.limitation, "logic-diamond-processor")
+		for index,name in pairs(INTERMEDIATES) do
+			if data.raw.recipe[name.Name] then
+				table.insert(v.limitation, name.Name)
+			end
+		end
 	end
 end
 

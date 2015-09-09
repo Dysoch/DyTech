@@ -27,7 +27,6 @@ function DyTech_Core_Create_Intermediates_Recipe(NAME)
     enabled = true,
     ingredients =
     {
-	  {type="item", name="iron-plate", amount=1},
     },
     result = "stone-brick"
   }
@@ -41,19 +40,23 @@ for index,name in pairs(INTERMEDIATES) do
 	  data:extend(
 		{
 		  DyTech_Core_Create_Intermediates_Item(name.Name, name.Subgroup),
-		  DyTech_Core_Create_Intermediates_Recipe(name.Name),
 		})
 	if name.Recipe then
+	  data:extend(
+		{
+		  DyTech_Core_Create_Intermediates_Recipe(name.Name),
+		})
 		if data.raw.item["chalcopyrite-ore"] then
-			data.raw.recipe[name.Name].ingredients = {}
 			for _,v in pairs(name.Recipe_Metallurgy) do
 				table.insert(data.raw.recipe[name.Name].ingredients,v)
 			end
 		else
-			data.raw.recipe[name.Name].ingredients = {}
 			for _,v in pairs(name.Recipe_Normal) do
 				table.insert(data.raw.recipe[name.Name].ingredients,v)
 			end
 		end
 	end
 end
+
+data.raw.recipe["track-chain-link"].result_count = 5
+data.raw.recipe["sand"].result_count = 5
