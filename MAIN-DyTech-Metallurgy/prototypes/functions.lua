@@ -186,7 +186,7 @@ RESOURCES = {
 
 CHEMICALS = {"ammonia","argon","carbon-dioxide","carbon-monoxide","helium","hydrogen","methane","nitric-oxide","nitrogen-dioxide","nitrous-oxide","oxygen","ozone","sulfur-dioxide","sulfur-monoxide","sulfur-trioxide","water","aluminium-hydroxide","sodium-hydroxide"}
 
-INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor","iron-sulfide"}
+INTERMEDIATES = {"charcoal","carbon","silicon","brick","clay","copper-sulfide","phosphor","iron-sulfide","lead-plate","silver-plate","gold-plate","zinc-plate","tin-plate","ardite-plate","cobalt-plate","tungsten-plate"}
 
 MACHINES = {
 	{

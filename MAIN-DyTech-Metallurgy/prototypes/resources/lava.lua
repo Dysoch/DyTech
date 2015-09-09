@@ -84,5 +84,9 @@ data:extend(
     map_color = {r=80, g=10, b=10},
     map_grid = false
   },
+  {
+    type = "noise-layer",
+    name = "lava"
+  }
 }
 )
