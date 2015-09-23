@@ -1,4 +1,5 @@
 require "config"
+require "loot"
 
 if Config.Difficulty==1 or Config.Difficulty==2 or Config.Difficulty==3 or Config.Difficulty==4 or Config.Difficulty==5 or Config.Difficulty==6 then
 	
@@ -174,5 +175,25 @@ if Config.Experimental_Feature then
 			projectile.collision_box = {{-0.05, -1}, {0.05, 1}}
 			projectile.direction_only = true
 		end
+	end
+end
+
+for k, v in pairs(data.raw["unit"]) do
+	if v.loot then
+		for _,table in pairs(Units_Loot) do
+			table.insert(v.loot, table)
+		end
+	else
+		v.loot = Units_Loot
+	end
+end
+
+for k, v in pairs(data.raw["unit-spawner"]) do
+	if v.loot then
+		for _,table in pairs(Spawner_Loot) do
+			table.insert(v.loot, table)
+		end
+	else
+		v.loot = Spawner_Loot
 	end
 end
