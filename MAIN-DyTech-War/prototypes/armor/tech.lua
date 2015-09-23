@@ -11,7 +11,7 @@ data:extend(
         recipe = "power-armor-mk3"
       },
     },
-    prerequisites = {"power-armor-2", "cobalt-processing", "tungsten-processing", "ardite-processing"},
+    prerequisites = {"power-armor-2"},
     unit =
     {
       count = 1500,
