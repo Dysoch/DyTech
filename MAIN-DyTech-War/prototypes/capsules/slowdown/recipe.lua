@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"slowdown-capsule", 1},
-      {"ardite-plate", 5},
+      {"iron-plate", 5},
       {"coal", 10},
     },
     result = "slowdown-capsule-1"
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"slowdown-capsule-1", 1},
-      {"cobalt-plate", 10},
+      {"steel-plate", 10},
       {"coal", 15},
     },
     result = "slowdown-capsule-2"

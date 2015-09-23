@@ -9,7 +9,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 2},
-      {"zinc-plate", 10},
+      {"copper-plate", 10},
 	  {"cut-ruby", 2} 
     },
     result = "laser-turret-2"
@@ -23,7 +23,7 @@ data:extend(
     {
       {"laser-turret-2", 1},
       {"battery", 5},
-      {"zinc-plate", 20},
+      {"copper-plate", 20},
       {"compressed-ruby", 4} 
     },
     result = "laser-turret-3"
@@ -37,9 +37,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 2},
-      {"gold-plate", 5},
-      {"zinc-plate", 5},
-      {"silver-plate", 5},
+      {"copper-plate", 20},
 	  {"raw-sapphire", 1} 
     },
     result = "laser-turret-4"
@@ -53,9 +51,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 5},
-      {"gold-plate", 10},
-      {"zinc-plate", 10},
-      {"silver-plate", 10},
+      {"iron-plate", 40},
 	  {"cut-sapphire", 2} 
     },
     result = "laser-turret-5"
@@ -69,9 +65,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 10},
-      {"gold-plate", 20},
-      {"zinc-plate", 20},
-      {"silver-plate", 20},
+      {"iron-plate", 60},
 	  {"compressed-sapphire", 4} 
     },
     result = "laser-turret-6"
@@ -85,10 +79,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 5},
-      {"lead-plate", 10},
-      {"tungsten-plate", 10},
-      {"cobalt-plate", 10},
-      {"ardite-plate", 10},
+      {"steel-plate", 50},
 	  {"raw-emerald", 1} 
     },
     result = "laser-turret-7"
@@ -102,10 +93,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 10},
-      {"lead-plate", 20},
-      {"tungsten-plate", 20},
-      {"cobalt-plate", 20},
-      {"ardite-plate", 20},
+      {"steel-plate", 100},
 	  {"cut-emerald", 2} 
     },
     result = "laser-turret-8"
@@ -119,10 +107,7 @@ data:extend(
     {
       {"laser-turret", 1},
       {"battery", 15},
-      {"lead-plate", 40},
-      {"tungsten-plate", 40},
-      {"cobalt-plate", 40},
-      {"ardite-plate", 40},
+      {"steel-plate", 150},
 	  {"compressed-emerald", 4} 
     },
     result = "laser-turret-9"
@@ -137,7 +122,6 @@ data:extend(
       {"laser-turret-5", 1},
       {"iron-plate", 20},
       {"electronic-circuit", 20},
-      {"steel-gear-wheel", 20},
       {"battery", 12},
 	  {"raw-topaz", 4} 
     },
@@ -153,7 +137,6 @@ data:extend(
       {"laser-turret-sniper-1", 1},
       {"steel-plate", 40},
       {"advanced-circuit", 20},
-      {"steel-gear-wheel", 20},
       {"battery", 12},
 	  {"cut-topaz", 4} 
     },
@@ -168,7 +151,6 @@ data:extend(
     {
       {"laser-turret-sniper-2", 1},
       {"advanced-processing-unit", 20},
-      {"tungsten-gear-wheel", 20},
       {"battery", 12},
 	  {"compressed-topaz", 4} 
     },
@@ -182,9 +164,8 @@ data:extend(
     ingredients =
     {
       {"laser-turret-9", 1},
-      {"ardite-plate", 200},
+      {"iron-plate", 200},
       {"advanced-circuit", 200},
-      {"lead-gear-wheel", 100},
       {"battery", 200},
 	  {"raw-diamond", 200} 
     },
@@ -198,9 +179,8 @@ data:extend(
     ingredients =
     {
       {"laser-turret-diamond-1", 1},
-      {"cobalt-plate", 200},
+      {"steel-plate", 200},
       {"processing-unit", 200},
-      {"steel-gear-wheel", 100},
       {"battery", 200},
 	  {"cut-diamond", 200} 
     },
@@ -215,7 +195,6 @@ data:extend(
     {
       {"laser-turret-diamond-2", 1},
       {"advanced-processing-unit", 200},
-      {"tungsten-gear-wheel", 100},
       {"battery", 200},
 	  {"compressed-diamond", 200} 
     },

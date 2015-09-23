@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"basic-grenade", 1},
-      {"steel-plate", 2},
+      {"iron-plate", 2},
       {"explosives", 1},
     },
     result = "basic-grenade-2"
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"basic-grenade-2", 1},
-      {"tin-plate", 2},
+      {"steel-plate", 2},
       {"explosives", 2},
     },
     result = "basic-grenade-3"

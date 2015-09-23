@@ -46,7 +46,7 @@ data:extend(
     {
       {"marauder-capsule", 2},
       {"speed-module-3", 1},
-      {"tungsten-plate", 10},
+      {"steel-plate", 10},
     },
     result = "marauder-turret-capsule"
   },
@@ -59,7 +59,7 @@ data:extend(
     {
       {"sharpshooter-capsule", 2},
       {"speed-module-3", 2},
-      {"tungsten-plate", 20},
+      {"steel-plate", 20},
     },
     result = "sharpshooter-turret-capsule"
   },
@@ -72,7 +72,7 @@ data:extend(
     {
       {"frenzy-capsule", 2},
       {"speed-module-3", 4},
-      {"tungsten-plate", 40},
+      {"steel-plate", 40},
     },
     result = "frenzy-turret-capsule"
   },

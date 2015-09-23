@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
 	  {"steel-plate", 45},
-	  {"zinc-plate", 45},
+	  {"copper-plate", 45},
       {"electronic-circuit", 12},
       {"advanced-circuit", 15},
       {"glass", 2},
@@ -23,7 +23,7 @@ data:extend(
     ingredients =
     {
 	  {"laser-gun", 1},
-	  {"cobalt-plate", 45},
+	  {"steel-plate", 45},
       {"advanced-circuit", 15},
       {"glass", 22},
     },

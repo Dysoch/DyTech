@@ -9,7 +9,7 @@ data:extend(
     {
       {"flame-thrower", 1},
       {"gun-turret", 1},
-      {"steel-gear-wheel", 20}
+      {"iron-gear-wheel", 20}
     },
     result = "flame-thrower-turret"
   },

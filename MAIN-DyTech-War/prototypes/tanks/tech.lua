@@ -15,7 +15,7 @@ data:extend(
         recipe = "battery-tank"
       },
     },
-    prerequisites = {"tanks", "tungsten-processing"},
+    prerequisites = {"tanks"},
     unit =
     {
       count = 450,
@@ -41,7 +41,7 @@ data:extend(
         recipe = "tank-dytech-2"
       },
     },
-    prerequisites = {"tanks-2", "ardite-processing"},
+    prerequisites = {"tanks-2"},
     unit =
     {
       count = 800,

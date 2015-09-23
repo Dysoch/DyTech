@@ -65,34 +65,5 @@ data:extend(
     final_render_layer = "remnants",
     animation = WallRemains(SandWall)
   },
-  {
-    type = "wall",
-    name = "tungsten-wall",
-    icon = "__MAIN-DyTech-War__/graphics/walls/tungsten-wall.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1, result = "tungsten-wall"},
-    max_health = Health.Tier8,
-    repair_speed_modifier = 2,
-    corpse = "tungsten-wall-remnants",
-	fast_replaceable_group = "wall",
-    resistances = Resistances.Tier8,
-    collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
-    mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-    pictures = WallSetup(TungstenWall)
-  },
-  {
-    type = "corpse",
-    name = "tungsten-wall-remnants",
-    icon = "__MAIN-DyTech-War__/graphics/walls/tungsten-wall-remnants.png",
-    flags = {"placeable-neutral", "player-creation"},
-	order = "sw-r",
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    selectable_in_game = false,
-    time_before_removed = 60 * 60 * 15, -- 15 minutes
-    final_render_layer = "remnants",
-    animation = WallRemains(TungstenWall)
-  },
 }
 )

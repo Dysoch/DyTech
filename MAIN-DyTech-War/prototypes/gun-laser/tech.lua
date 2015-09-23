@@ -23,7 +23,7 @@ data:extend(
         recipe = "laser-clip-3"
       },
     },
-    prerequisites = {"military-4", "battery", "laser", "ardite-processing", "gold-processing", "tin-processing"},
+    prerequisites = {"military-4", "battery", "laser"},
     unit =
     {
       count = 500,
@@ -61,7 +61,7 @@ data:extend(
         recipe = "laser-clip-shotgun-3"
       },
     },
-    prerequisites = {"military-6", "zinc-processing", "cobalt-processing"},
+    prerequisites = {"military-6"},
     unit =
     {
       count = 750,

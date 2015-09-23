@@ -4,7 +4,7 @@ data:extend(
     type = "technology",
     name = "basic-laser-defense-equipment-1",
     icon = "__base__/graphics/technology/basic-laser-defense-equipment.png",
-    prerequisites = {"basic-laser-defense-equipment", "silver-processing"},
+    prerequisites = {"basic-laser-defense-equipment"},
     effects =
     {
       {
@@ -30,7 +30,7 @@ data:extend(
     type = "technology",
     name = "basic-laser-defense-equipment-2",
     icon = "__base__/graphics/technology/basic-laser-defense-equipment.png",
-    prerequisites = {"basic-laser-defense-equipment-1", "tungsten-processing"},
+    prerequisites = {"basic-laser-defense-equipment-1"},
     effects =
     {
       {

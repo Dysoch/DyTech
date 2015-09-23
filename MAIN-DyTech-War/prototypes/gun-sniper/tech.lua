@@ -38,7 +38,7 @@ data:extend(
         recipe = "sniper"
       },
     },
-    prerequisites = {"military-4", "zinc-processing", "tin-processing", "lead-processing", "tungsten-processing", "cobalt-processing", "advanced-electronics"},
+    prerequisites = {"military-4", "advanced-electronics"},
     unit =
     {
       count = 300,

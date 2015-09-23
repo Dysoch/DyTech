@@ -1,5 +1,3 @@
-table.insert(data.raw["technology"]["tungsten-processing"].effects,{type = "unlock-recipe",recipe = "tungsten-wall"})
-
 DyTech_Create_Tech_War({
 	Name = "sand-wall", 
 	Icon = "walls/sandwall.png", 

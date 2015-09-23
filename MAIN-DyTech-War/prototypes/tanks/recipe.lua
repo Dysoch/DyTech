@@ -12,7 +12,6 @@ data:extend(
 	  {"hull-top", 1},
       {"laser-gun", 1},
       {"rocket-launcher", 1},
-      {"tungsten-plate", 50},
     },
     result = "tank-dytech-1"
   },
@@ -27,7 +26,6 @@ data:extend(
 	  {"hull-lower", 1},
 	  {"hull-top", 1},
       {"advanced-processing-unit", 2},
-      {"ardite-plate", 50},
       {"flame-thrower", 1},
       {"combat-shotgun", 1},
       {"laser-gun", 1},

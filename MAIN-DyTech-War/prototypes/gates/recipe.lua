@@ -13,19 +13,5 @@ data:extend(
     },
     result = "sand-wall-gate"
   },
-  {
-    type = "recipe",
-    name = "tungsten-wall-gate",
-	enabled = false,
-    energy_required = 2.5,
-    ingredients =
-    {
-      {"tungsten-wall", 1},
-      {"tungsten-plate", 5},
-      {"electronic-circuit", 15},
-	  {"copper-cable", 25},
-    },
-    result = "tungsten-wall-gate"
-  },
 }
 )

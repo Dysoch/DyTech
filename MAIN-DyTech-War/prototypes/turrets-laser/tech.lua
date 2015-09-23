@@ -23,7 +23,7 @@ data:extend(
         recipe = "laser-turret-6"
       },
     },
-    prerequisites = {"laser-turrets", "gold-processing", "zinc-processing", "silver-processing"},
+    prerequisites = {"laser-turrets"},
     unit =
     {
       count = 450,
@@ -57,7 +57,7 @@ data:extend(
         recipe = "laser-turret-9"
       },
     },
-    prerequisites = {"laser-turrets-1", "lead-processing", "cobalt-processing", "tungsten-processing", "ardite-processing"},
+    prerequisites = {"laser-turrets-1"},
     unit =
     {
       count = 550,
@@ -92,7 +92,7 @@ data:extend(
         recipe = "laser-turret-sniper-3"
       },
     },
-    prerequisites = {"laser-turrets-1"},
+    prerequisites = {"laser-turrets-2"},
     unit =
     {
       count = 1000,

@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-3", 2},
-      {"silver-plate", 5},
+      {"copper-plate", 5},
       {"laser-turret", 10}
     },
     result = "basic-laser-defense-equipment-2"
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-3", 8},
-      {"tungsten-plate", 5},
+      {"steel-plate", 5},
       {"laser-turret", 20}
     },
     result = "basic-laser-defense-equipment-3"
@@ -46,7 +46,7 @@ data:extend(
     ingredients =
     {
       {"energy-shield-mk3-equipment", 2},
-      {"tungsten-plate", 10}
+      {"steel-plate", 10}
     },
     result = "energy-shield-mk4-equipment"
   },
@@ -82,7 +82,7 @@ data:extend(
     ingredients =
     {
       {"battery-mk3-equipment", 2},
-      {"tungsten-plate", 10}
+      {"steel-plate", 10}
     },
     result = "battery-mk4-equipment"
   },
@@ -107,7 +107,7 @@ data:extend(
     {
       {"solar-panel-equipment", 2},
       {"processing-unit", 2},
-      {"zinc-plate", 5}
+      {"copper-plate", 5}
     },
     result = "solar-panel-equipment-2"
   },
@@ -120,7 +120,7 @@ data:extend(
     {
       {"solar-panel-equipment-2", 2},
       {"processing-unit", 5},
-      {"gold-plate", 5}
+      {"copper-plate", 5}
     },
     result = "solar-panel-equipment-3"
   },
@@ -133,7 +133,7 @@ data:extend(
     {
       {"solar-panel-equipment-3", 2},
       {"advanced-processing-unit", 1},
-      {"tungsten-plate", 5}
+      {"steel-plate", 5}
     },
     result = "solar-panel-equipment-4"
   },
@@ -146,7 +146,7 @@ data:extend(
     {
       {"solar-panel-equipment-4", 2},
       {"advanced-processing-unit", 2},
-      {"cobalt-plate", 5}
+      {"steel-plate", 5}
     },
     result = "solar-panel-equipment-5"
   },
@@ -159,7 +159,7 @@ data:extend(
     {
       {"personal-roboport-equipment", 1},
       {"advanced-processing-unit", 10},
-      {"steel-gear-wheel", 10},
+      {"iron-gear-wheel", 10},
     },
     result = "personal-roboport-equipment-1"
   },
@@ -172,7 +172,7 @@ data:extend(
     {
       {"personal-roboport-equipment-1", 1},
       {"logic-diamond-processor", 10},
-      {"tungsten-gear-wheel", 40},
+      {"iron-gear-wheel", 40},
     },
     result = "personal-roboport-equipment-2"
   }

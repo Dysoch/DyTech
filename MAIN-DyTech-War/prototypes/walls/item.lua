@@ -12,16 +12,6 @@ data:extend(
   },
   {
     type = "item",
-    name = "tungsten-wall",
-    icon = "__MAIN-DyTech-War__/graphics/walls/tungsten-wall.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "dytech-combat-walls",
-    order = "h[tungsten-wall]",
-    place_result = "tungsten-wall",
-    stack_size = 50
-  },
-  {
-    type = "item",
     name = "sandwall",
     icon = "__MAIN-DyTech-War__/graphics/walls/sandwall.png",
     flags = {"goes-to-quickbar"},

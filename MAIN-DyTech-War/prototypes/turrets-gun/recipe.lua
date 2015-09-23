@@ -9,9 +9,7 @@ data:extend(
     {
       {"sniper", 1},
       {"advanced-processing-unit", 5},
-	  {"cobalt-plate", 25},
-	  {"tungsten-plate", 25},
-	  {"tungsten-gear-wheel", 15},
+	  {"steel-plate", 75},
     },
     result = "sniper-turret",
   },
@@ -114,8 +112,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-1", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-1-armored"
   },
@@ -127,8 +125,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-2", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-2-armored"
   },
@@ -140,8 +138,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-3", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-3-armored"
   },
@@ -153,8 +151,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-4", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-4-armored"
   },
@@ -166,8 +164,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-5", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-5-armored"
   },
@@ -179,8 +177,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-6", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-6-armored"
   },
@@ -192,8 +190,8 @@ data:extend(
     ingredients =
     {
       {"gun-turret-7", 1},
-      {"tungsten-plate", 5},
-      {"ardite-plate", 5},
+      {"steel-plate", 75},
+      {"iron-plate", 15},
     },
     result = "gun-turret-7-armored"
   },
