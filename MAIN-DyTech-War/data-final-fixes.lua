@@ -12,138 +12,128 @@ if Config.Evolution_Reduced then
 local Time = data.raw["map-settings"]["map-settings"].enemy_evolution.time_factor
 local Destroy = data.raw["map-settings"]["map-settings"].enemy_evolution.destroy_factor
 local Pollution = data.raw["map-settings"]["map-settings"].enemy_evolution.pollution_factor
-local BiterPollutionAbsorbAbsolute = data.raw["unit-spawner"]["biter-spawner"].pollution_absorbtion_absolute 
-local BiterPollutionAbsorb = data.raw["unit-spawner"]["biter-spawner"].pollution_absorbtion_proportional
-local SpitterPollutionAbsorbAbsolute = data.raw["unit-spawner"]["spitter-spawner"].pollution_absorbtion_absolute 
-local SpitterPollutionAbsorb = data.raw["unit-spawner"]["spitter-spawner"].pollution_absorbtion_proportional
 	if Config.Difficulty==1 then
 		Time = (Time/4) 
 		Destroy = (Destroy/4) 
 		Pollution = (Pollution/4) 
-		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute/2)
-		BiterPollutionAbsorb = (BiterPollutionAbsorb/2)
-		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute/2)
-		SpitterPollutionAbsorb = (SpitterPollutionAbsorb/2)
+		for k,v in pairs(data.raw["unit-spawner"]) do
+			v.pollution_absorbtion_absolute = (v.pollution_absorbtion_absolute/2)
+			v.pollution_absorbtion_proportional = (v.pollution_absorbtion_proportional/2)
+		end
 	elseif Config.Difficulty==2 then
 		Time = (Time/2) 
 		Destroy = (Destroy/2) 
 		Pollution = (Pollution/2) 
 	elseif Config.Difficulty==3 then
-		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*2)
-		BiterPollutionAbsorb = (BiterPollutionAbsorb*2)
-		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*2)
-		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*2) 
+		for k,v in pairs(data.raw["unit-spawner"]) do
+			v.pollution_absorbtion_absolute = (v.pollution_absorbtion_absolute*2)
+			v.pollution_absorbtion_proportional = (v.pollution_absorbtion_proportional*2)
+		end
 	elseif Config.Difficulty==4 then
 		Time = (Time*2) 
 		Destroy = (Destroy*2) 
 		Pollution = (Pollution*2) 
-		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*5)
-		BiterPollutionAbsorb = (BiterPollutionAbsorb*5)
-		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*5)
-		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*5)
+		for k,v in pairs(data.raw["unit-spawner"]) do
+			v.pollution_absorbtion_absolute = (v.pollution_absorbtion_absolute*5)
+			v.pollution_absorbtion_proportional = (v.pollution_absorbtion_proportional*5)
+		end
 	elseif Config.Difficulty==5 then
 		Time = (Time*5) 
 		Destroy = (Destroy*5) 
 		Pollution = (Pollution*5) 
-		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*10)
-		BiterPollutionAbsorb = (BiterPollutionAbsorb*10)
-		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*10)
-		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*10)
+		for k,v in pairs(data.raw["unit-spawner"]) do
+			v.pollution_absorbtion_absolute = (v.pollution_absorbtion_absolute*10)
+			v.pollution_absorbtion_proportional = (v.pollution_absorbtion_proportional*10)
+		end
 	elseif Config.Difficulty==6 then
 		Time = (Time*50) 
 		Destroy = (Destroy*50) 
 		Pollution = (Pollution*50) 
-		BiterPollutionAbsorbAbsolute = (BiterPollutionAbsorbAbsolute*100)
-		BiterPollutionAbsorb = (BiterPollutionAbsorb*100)
-		SpitterPollutionAbsorbAbsolute = (SpitterPollutionAbsorbAbsolute*100)
-		SpitterPollutionAbsorb = (SpitterPollutionAbsorb*100)
+		for k,v in pairs(data.raw["unit-spawner"]) do
+			v.pollution_absorbtion_absolute = (v.pollution_absorbtion_absolute*100)
+			v.pollution_absorbtion_proportional = (v.pollution_absorbtion_proportional*100)
+		end
 	end
 end
 
 --[[ Difficulty Spawners]]--
 if Config.Difficulty==1 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 1000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 10
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 7
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {1800, 300}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 1500
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 7
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 7
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {1900, 400}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 100000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 40
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {960, 60}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 0.5
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 elseif Config.Difficulty==2 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 2000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 20
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 15
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {900, 150}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 3000
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 15
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 15
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {900, 200}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 200000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 75
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {480, 60}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 1
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 elseif Config.Difficulty==3 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 4000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 40
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 30
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {600, 100}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 6000
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 30
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 30
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {600, 125}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 500000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 125
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {240, 60}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 3.5
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 elseif Config.Difficulty==4 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 16000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 80
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 60
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {300, 50}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 24000
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 60
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 60
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {300, 60}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 1000000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 250
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {120, 40}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 12.25
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 elseif Config.Difficulty==5 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 160000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 160
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 120
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {150, 25}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 240000
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 120
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 120
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {150, 30}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 5000000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 500
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {60, 20}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 42.88
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 elseif Config.Difficulty==6 then
-	data.raw["unit-spawner"]["biter-spawner"].max_health = 1600000
-	data.raw["unit-spawner"]["biter-spawner"].maximum_count_of_owned_units = 1600
-	data.raw["unit-spawner"]["biter-spawner"].max_friends_around_to_spawn = 1200
-	data.raw["unit-spawner"]["biter-spawner"].spawning_cooldown = {15, 2.5}
-	data.raw["unit-spawner"]["spitter-spawner"].max_health = 2400000
-	data.raw["unit-spawner"]["spitter-spawner"].maximum_count_of_owned_units = 1200
-	data.raw["unit-spawner"]["spitter-spawner"].max_friends_around_to_spawn = 1200
-	data.raw["unit-spawner"]["spitter-spawner"].spawning_cooldown = {15, 3}
-	if Config.Dyzilla_Spawner then
-		data.raw["unit-spawner"]["dyzilla-spawner"].max_health = 50000000
-		data.raw["unit-spawner"]["dyzilla-spawner"].maximum_count_of_owned_units = 5000
-		data.raw["unit-spawner"]["dyzilla-spawner"].spawning_cooldown = {6, 2}
+	for k,v in pairs(data.raw["unit-spawner"]) do
+	local Factor = 150.06
+		v.max_health = math.floor(v.max_health*Factor)
+		v.healing_per_tick = math.floor(v.healing_per_tick*Factor)
+		v.pollution_absorbtion_absolute = math.floor(v.pollution_absorbtion_absolute*Factor)
+		v.pollution_absorbtion_proportional = math.floor(v.pollution_absorbtion_proportional*Factor)
+		v.max_count_of_owned_units = math.floor(v.max_count_of_owned_units*Factor)
+		v.max_friends_around_to_spawn = math.floor(v.max_friends_around_to_spawn*Factor)
+		for i,n in pairs(v.spawning_cooldown) do
+			n = math.floor(n*Factor)
+		end
 	end
 end
 

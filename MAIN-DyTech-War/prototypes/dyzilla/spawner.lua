@@ -5,7 +5,7 @@ data:extend(
     name = "dyzilla-spawner",
     icon = "__base__/graphics/icons/biter-spawner.png",
     flags = {"placeable-player", "placeable-enemy", "not-repairable"},
-    max_health = 1,
+    max_health = 50000,
     order="b-b-g",
     subgroup="enemies",
     resistances = Resistances.Tier6,
@@ -48,7 +48,7 @@ data:extend(
         probability = 1
       }
     },
-    max_count_of_owned_units = 1,
+    max_count_of_owned_units = 75,
     max_friends_around_to_spawn = 50000,
     animations =
     {

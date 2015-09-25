@@ -12,7 +12,7 @@ Released: ?? 2015
 [*] Balancing:
 [list] [*] Increase Speed of Queen Spitters. 0.01 > 0.05
 [*] Majorly improved spawning mechanism of Dyzilla Spawners. They spawn more evenly out now.
-[*] 
+[*] Rebalanced the Health of Spawners. Its now much different. Without Base Edit, the normal health values are there. With base edit, the health is 2.5 times larger.
 [/list]
 [*] Changes:
 [list] [*] Added Config option to disable Dyzilla Supplies.
