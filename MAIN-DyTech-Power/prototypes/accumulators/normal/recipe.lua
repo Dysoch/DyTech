@@ -63,7 +63,7 @@ data:extend(
     ingredients =
     {
       {"basic-accumulator-mk4", 1},
-      {"basic-accumulator-mk5", 5},
+      {"basic-accumulator-mk5", 1},
       {"battery", 110},
       {"advanced-processing-unit", 25},
       {"flux-capacitor-4", 5},
