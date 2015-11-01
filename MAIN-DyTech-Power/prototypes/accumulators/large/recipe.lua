@@ -6,7 +6,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator", 5},
+      {"basic-accumulator", 1},
       {"battery", 10},
       {"advanced-circuit", 10},
       {"flux-capacitor-1", 5},
@@ -20,7 +20,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"large-basic-accumulator", 5},
+      {"large-basic-accumulator", 1},
       {"battery", 10},
       {"advanced-circuit", 15},
       {"flux-capacitor-2", 5},
@@ -34,7 +34,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"large-basic-accumulator", 5},
+      {"large-basic-accumulator", 1},
       {"battery", 10},
       {"advanced-circuit", 15},
       {"flux-capacitor-2", 5},
@@ -48,7 +48,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"large-basic-accumulator-mk2", 5},
+      {"large-basic-accumulator-mk2", 1},
       {"battery", 25},
       {"processing-unit", 20},
       {"flux-capacitor-2", 5},
@@ -62,7 +62,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"large-basic-accumulator-mk3", 5},
+      {"large-basic-accumulator-mk3", 1},
       {"battery", 25},
       {"processing-unit", 20},
       {"flux-capacitor-2", 5},
@@ -76,7 +76,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"basic-accumulator-mk5", 5},
+      {"basic-accumulator-mk4", 1},
+      {"basic-accumulator-mk5", 1},
       {"battery", 110},
       {"advanced-processing-unit", 25},
       {"flux-capacitor-4", 5},
