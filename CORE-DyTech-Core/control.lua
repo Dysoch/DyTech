@@ -45,7 +45,7 @@ if seedTypeLookUpTable==nil then seedTypeLookUpTable = {} end
   end
 end
 
-game.on_init(function()
+script.on_init(function()
 	if not remote.interfaces["treefarm_interface"] then 
 		debug("Treefarm not installed")
 		Trees.OnInit()
@@ -58,11 +58,7 @@ game.on_init(function()
 	fs.Wind_Startup()
 end)
 
-game.on_save(function()
-
-end)
-
-game.on_load(function()
+script.on_load(function()
 	if not remote.interfaces["treefarm_interface"] then 
 	debug("Treefarm not installed")
 		Trees.OnLoad()
@@ -80,7 +76,7 @@ game.on_load(function()
 	if not global.Wind then fs.Wind_Startup() end
 end)
 
-game.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
 	if event.tick%global.Wind.Value==(global.Wind.Value-1) then
 		game.wind_orientation = math.random()
 		global.Wind.Value = math.random(global.Wind.Low,global.Wind.High)
@@ -118,47 +114,47 @@ game.on_event(defines.events.on_tick, function(event)
 	end end
 end)
 
-game.on_event(defines.events.on_player_crafted_item, function(event)
+script.on_event(defines.events.on_player_crafted_item, function(event)
 	fs.CraftedItemsLogger(event.item_stack.name, event.item_stack.count)
 	fs.LoggerCount("PlayerCrafted", event.item_stack.count)
 end)
 
-game.on_event(defines.events.on_player_mined_item, function(event)
+script.on_event(defines.events.on_player_mined_item, function(event)
 	fs.MinedItemsLogger(event.item_stack.name, event.item_stack.count)
 	fs.LoggerCount("PlayerMined", event.item_stack.count)
 end)
 
-game.on_event(defines.events.on_robot_mined, function(event)
+script.on_event(defines.events.on_robot_mined, function(event)
 	fs.RobotMinedItemsLogger(event.item_stack.name, event.item_stack.count)
 	fs.LoggerCount("RobotMined", event.item_stack.count)
 end)
 
-game.on_event(defines.events.on_entity_died, function(event)
+script.on_event(defines.events.on_entity_died, function(event)
 	fs.EntityDiedLogger(event.entity.name)
 	fs.LoggerCount("EntityDied", 1)
 end)
 
-game.on_event(defines.events.on_sector_scanned, function(event)
+script.on_event(defines.events.on_sector_scanned, function(event)
 	fs.SectorScannedLogger()
 	fs.LoggerCount("SectorScanned", 1)
 end)
 
-game.on_event(defines.events.on_marked_for_deconstruction, function(event)
+script.on_event(defines.events.on_marked_for_deconstruction, function(event)
 	fs.MarkedForDeconstructionLogger(event.entity.name)
 	fs.LoggerCount("MarkedForDeconstruction", 1)
 end)
 
-game.on_event(defines.events.on_canceled_deconstruction, function(event)
+script.on_event(defines.events.on_canceled_deconstruction, function(event)
 	fs.CanceledDeconstructionLogger(event.entity.name)
 	fs.LoggerCount("CanceledDeconstruction", 1)
 end)
 
-game.on_event(defines.events.on_picked_up_item, function(event)
+script.on_event(defines.events.on_picked_up_item, function(event)
 	fs.PickedItemsLogger(event.item_stack.name, event.item_stack.count)
 	fs.LoggerCount("PickedUpItem", event.item_stack.count)
 end)
 
-game.on_event(defines.events.on_built_entity, function(event)
+script.on_event(defines.events.on_built_entity, function(event)
 	fs.BuildEntityLogger(event.created_entity.name)
 	fs.LoggerCount("PlayerBuilt", 1)
 local player = game.players[event.player_index]
@@ -187,7 +183,7 @@ local player = game.players[event.player_index]
 	end end
 end)
 
-game.on_event(defines.events.on_robot_built_entity, function(event)
+script.on_event(defines.events.on_robot_built_entity, function(event)
 	fs.RobotBuildEntityLogger(event.created_entity.name)
 	fs.LoggerCount("RobotBuilt", 1)
 local player = game.players[event.player_index]
@@ -216,7 +212,7 @@ local player = game.players[event.player_index]
 	end end
 end)
 
-game.on_event(defines.events.on_chunk_generated, function(event)
+script.on_event(defines.events.on_chunk_generated, function(event)
 	fs.LoggerCount("Chunks", 1)
 	fs.Pollution_Add_Pos(event)
 	if not global.Logger then fs.Startup() end
@@ -228,7 +224,7 @@ game.on_event(defines.events.on_chunk_generated, function(event)
 	if debug_chunks then debug("Chunk Generated, chunks counter is now "..tostring(global.Logger.ChunkGenerated)) end
 end)
 
-game.on_event(defines.events.on_gui_click, function(event)
+script.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	fs.LoggerCount("GUI", 1)
@@ -284,7 +280,7 @@ local player = game.players[playerIndex]
 	end
 end)
 
---[[game.on_event(defines.events.on_gui_click, function(event)
+--[[script.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	if event.element.name == "DyTech-Power-Button" then
