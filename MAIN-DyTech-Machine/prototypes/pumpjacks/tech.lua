@@ -36,7 +36,7 @@ data:extend(
         recipe = "pumpjack-mk3"
       },
     },
-    prerequisites = {"extractor-1", "frame-1", "lead-processing"},
+    prerequisites = {"extractor-1"},
     unit =
     {
       count = 400,
@@ -61,7 +61,7 @@ data:extend(
         recipe = "pumpjack-mk4"
       },
     },
-    prerequisites = {"extractor-2", "frame-2"},
+    prerequisites = {"extractor-2"},
     unit =
     {
       count = 650,
@@ -86,7 +86,7 @@ data:extend(
         recipe = "pumpjack-mk5"
       },
     },
-    prerequisites = {"extractor-3", "frame-3", "tungsten-processing", "advanced-processing-unit"},
+    prerequisites = {"extractor-3"},
     unit =
     {
       count = 750,

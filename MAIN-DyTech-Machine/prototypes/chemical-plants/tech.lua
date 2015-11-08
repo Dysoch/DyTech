@@ -15,7 +15,7 @@ data:extend(
         recipe = "chemical-plant-1"
       },
     },
-    prerequisites = {"oil-processing", "advanced-electronics"},
+    prerequisites = {"oil-processing"},
     unit =
     {
       count = 200,

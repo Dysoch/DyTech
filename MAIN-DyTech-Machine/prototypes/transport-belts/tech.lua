@@ -19,7 +19,7 @@ data:extend(
         recipe = "super-splitter"
       },
     },
-    prerequisites = {"logistics-3", "tungsten-processing", "lead-processing", "advanced-processing-unit"},
+    prerequisites = {"logistics-3"},
     unit =
     {
       count = 300,
@@ -52,7 +52,7 @@ data:extend(
         recipe = "extreme-splitter"
       },
     },
-    prerequisites = {"logistics-4", "cobalt-processing"},
+    prerequisites = {"logistics-4"},
     unit =
     {
       count = 1200,

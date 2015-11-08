@@ -15,7 +15,7 @@ data:extend(
         recipe = "diesel-locomotive-armor"
       },
     },
-    prerequisites = {"railway", "lead-processing", "tungsten-processing", "advanced-electronics"},
+    prerequisites = {"railway"},
     unit =
     {
       count = 250,

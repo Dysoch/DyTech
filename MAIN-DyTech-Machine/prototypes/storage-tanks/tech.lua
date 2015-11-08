@@ -11,7 +11,7 @@ data:extend(
         recipe = "storage-tank-2"
       },
     },
-    prerequisites = {"steel-processing", "fluid-handling", "zinc-processing"},
+    prerequisites = {"fluid-handling"},
     unit =
     {
       count = 50,
@@ -35,7 +35,7 @@ data:extend(
         recipe = "storage-tank-3"
       },
     },
-    prerequisites = {"storage-tanks-1", "silver-processing", "frame-1", "rotor-1"},
+    prerequisites = {"storage-tanks-1"},
     unit =
     {
       count = 250,
@@ -60,7 +60,7 @@ data:extend(
         recipe = "storage-tank-4"
       },
     },
-    prerequisites = {"storage-tanks-2", "lead-processing", "frame-2", "rotor-2"},
+    prerequisites = {"storage-tanks-2"},
     unit =
     {
       count = 450,
@@ -86,7 +86,7 @@ data:extend(
         recipe = "storage-tank-5"
       },
     },
-    prerequisites = {"storage-tanks-3", "cobalt-processing", "frame-3", "rotor-3"},
+    prerequisites = {"storage-tanks-3"},
     unit =
     {
       count = 750,

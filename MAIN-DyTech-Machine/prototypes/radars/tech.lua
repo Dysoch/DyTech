@@ -11,7 +11,7 @@ data:extend(
         recipe = "radar-mk2"
       },
     },
-    prerequisites = {"tin-processing", "silver-processing", "advanced-electronics"},
+    prerequisites = {},
     unit =
     {
       count = 200,
@@ -36,7 +36,7 @@ data:extend(
         recipe = "radar-mk3"
       },
     },
-    prerequisites = {"radar-1", "frame-1", "lead-processing"},
+    prerequisites = {"radar-1"},
     unit =
     {
       count = 400,
@@ -62,7 +62,7 @@ data:extend(
         recipe = "radar-mk4"
       },
     },
-    prerequisites = {"radar-2", "ardite-processing", "tungsten-processing", "advanced-processing-unit", "frame-2"},
+    prerequisites = {"radar-2"},
     unit =
     {
       count = 600,
@@ -88,7 +88,7 @@ data:extend(
         recipe = "radar-mk5"
       },
     },
-    prerequisites = {"radar-3", "frame-3", "cobalt-processing"},
+    prerequisites = {"radar-3"},
     unit =
     {
       count = 1000,

@@ -11,7 +11,7 @@ data:extend(
         recipe = "assembling-machine-4"
       }
     },
-    prerequisites = {"automation-3", "capacitor-2"},
+    prerequisites = {"automation-3"},
     unit =
     {
       count = 300,
@@ -37,7 +37,7 @@ data:extend(
         recipe = "assembling-machine-5"
       }
     },
-    prerequisites = {"automation-4", "lead-processing", "capacitor-3"},
+    prerequisites = {"automation-4"},
     unit =
     {
       count = 450,
@@ -63,7 +63,7 @@ data:extend(
         recipe = "assembling-machine-6"
       }
     },
-    prerequisites = {"automation-5", "tungsten-processing", "advanced-processing-unit", "frame-2"},
+    prerequisites = {"automation-5"},
     unit =
     {
       count = 600,
@@ -90,7 +90,7 @@ data:extend(
         recipe = "assembling-machine-7"
       }
     },
-    prerequisites = {"automation-6", "capacitor-4", "frame-3"},
+    prerequisites = {"automation-6"},
     unit =
     {
       count = 800,

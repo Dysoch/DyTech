@@ -33,7 +33,7 @@ data:extend(
         recipe = "robot-charger-1"
       },
     },
-    prerequisites = {"logistic-robotics", "logistic-system", "advanced-electronics", "lead-processing"},
+    prerequisites = {"logistic-robotics", "logistic-system"},
     unit = 
 	{
       count = 250,
@@ -79,7 +79,7 @@ data:extend(
         recipe = "robot-charger-2"
       },
     },
-    prerequisites = {"logistic-system-1", "advanced-processing-unit", "tungsten-processing"},
+    prerequisites = {"logistic-system-1"},
     unit = 
 	{
       count = 250,

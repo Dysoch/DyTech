@@ -129,7 +129,7 @@ data:extend(
         recipe = "pollution-clean-module-7"
       }
     },
-    prerequisites = {"pollution-clean-module-6", "advanced-processing-unit"},
+    prerequisites = {"pollution-clean-module-6"},
     unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-cl-7"
@@ -257,7 +257,7 @@ data:extend(
         recipe = "pollution-create-module-7"
       }
     },
-    prerequisites = {"pollution-create-module-6", "advanced-processing-unit"},
+    prerequisites = {"pollution-create-module-6"},
     unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-cr-7"
@@ -338,7 +338,7 @@ data:extend(
         recipe = "speed-module-7"
       }
     },
-    prerequisites = {"speed-module-6", "advanced-processing-unit"},
+    prerequisites = {"speed-module-6"},
     unit = Tech.Tier14,
 	upgrade = true,
     order = "m-s-7"
@@ -419,7 +419,7 @@ data:extend(
         recipe = "effectivity-module-7"
       }
     },
-    prerequisites = {"effectivity-module-6", "advanced-processing-unit"},
+    prerequisites = {"effectivity-module-6"},
     unit = Tech.Tier14,
 	upgrade = true,
     order = "m-e-7"
@@ -500,7 +500,7 @@ data:extend(
         recipe = "productivity-module-7"
       }
     },
-    prerequisites = {"productivity-module-6", "advanced-processing-unit"},
+    prerequisites = {"productivity-module-6"},
     unit = Tech.Tier14,
 	upgrade = true,
     order = "m-p-7"

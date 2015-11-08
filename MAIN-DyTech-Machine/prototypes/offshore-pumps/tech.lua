@@ -60,7 +60,7 @@ data:extend(
         recipe = "offshore-pump-mk4"
       },
     },
-    prerequisites = {"pump-2", "lead-processing"},
+    prerequisites = {"pump-2"},
     unit =
     {
       count = 300,
@@ -86,7 +86,7 @@ data:extend(
         recipe = "offshore-pump-mk5"
       },
     },
-    prerequisites = {"pump-3", "tungsten-processing"},
+    prerequisites = {"pump-3"},
     unit =
     {
       count = 600,

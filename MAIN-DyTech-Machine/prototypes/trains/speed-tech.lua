@@ -15,7 +15,7 @@ data:extend(
         recipe = "diesel-locomotive-fast"
       }
     },
-    prerequisites = {"railway", "advanced-processing-unit", "gold-processing", "zinc-processing"},
+    prerequisites = {"railway"},
     unit =
     {
       count = 750,

@@ -11,7 +11,7 @@ data:extend(
       {"tin-plate", 20},
       {"silver-plate", 20},
       {"advanced-circuit", 4},
-      {"frame-1", 1},
+      {"frame", 1},
     },
     result = "radar-mk2"
   },
@@ -26,7 +26,7 @@ data:extend(
       {"lead-plate", 40},
       {"silver-plate", 40},
       {"processing-unit", 4},
-      {"frame-2", 1},
+      {"frame", 1},
     },
     result = "radar-mk3"
   },
@@ -41,7 +41,7 @@ data:extend(
       {"tungsten-plate", 80},
       {"ardite-plate", 80},
       {"advanced-processing-unit", 4},
-      {"frame-3", 1},
+      {"frame", 1},
     },
     result = "radar-mk4"
   },
@@ -56,7 +56,7 @@ data:extend(
       {"cobalt-plate", 160},
       {"ardite-plate", 160},
       {"advanced-processing-unit", 10},
-      {"frame-4", 1},
+      {"frame", 1},
     },
     result = "radar-mk5"
   },

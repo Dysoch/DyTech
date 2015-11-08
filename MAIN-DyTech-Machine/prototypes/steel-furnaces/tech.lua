@@ -11,7 +11,7 @@ data:extend(
         recipe = "steel-furnace-mk2"
       },
     },
-    prerequisites = {"advanced-material-processing-2", "lead-processing"},
+    prerequisites = {"advanced-material-processing-2"},
     unit =
     {
       count = 200,
@@ -37,7 +37,7 @@ data:extend(
         recipe = "steel-furnace-mk3"
       },
     },
-    prerequisites = {"advanced-material-processing-3", "item-exit-1"},
+    prerequisites = {"advanced-material-processing-3"},
     unit =
     {
       count = 400,
@@ -63,7 +63,7 @@ data:extend(
         recipe = "steel-furnace-mk4"
       },
     },
-    prerequisites = {"advanced-material-processing-4", "tungsten-processing", "item-exit-2"},
+    prerequisites = {"advanced-material-processing-4"},
     unit =
     {
       count = 600,
@@ -89,7 +89,7 @@ data:extend(
         recipe = "steel-furnace-mk5"
       },
     },
-    prerequisites = {"advanced-material-processing-5", "item-exit-3"},
+    prerequisites = {"advanced-material-processing-5"},
     unit =
     {
       count = 1000,

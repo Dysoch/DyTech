@@ -8,7 +8,7 @@ data:extend(
     {
       {"pumpjack", 1},
       {"advanced-circuit", 10},
-      {"frame-1", 1},
+      {"frame", 1},
     },
     result = "pumpjack-mk2",
     enabled = false
@@ -21,7 +21,7 @@ data:extend(
     {
       {"pumpjack-mk2", 1},
       {"advanced-circuit", 20},
-      {"frame-2", 1},
+      {"frame", 1},
       {"lead-gear-wheel", 3},
     },
     result = "pumpjack-mk3",
@@ -35,7 +35,7 @@ data:extend(
     {
       {"pumpjack-mk3", 1},
       {"processing-unit", 20},
-      {"frame-3", 1},
+      {"frame", 1},
       {"steel-gear-wheel", 6},
     },
     result = "pumpjack-mk4",
@@ -49,7 +49,7 @@ data:extend(
     {
       {"pumpjack-mk4", 1},
       {"advanced-processing-unit", 20},
-      {"frame-4", 1},
+      {"frame", 1},
       {"tungsten-gear-wheel", 12},
     },
     result = "pumpjack-mk5",

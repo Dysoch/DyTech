@@ -35,7 +35,7 @@ data:extend(
         recipe = "basic-mining-drill-mk3"
       },
     },
-    prerequisites = {"miner-2", "frame-1", "item-exit-1", "rotor-1"},
+    prerequisites = {"miner-2"},
     unit =
     {
       count = 400,
@@ -60,7 +60,7 @@ data:extend(
         recipe = "basic-mining-drill-mk4"
       },
     },
-    prerequisites = {"miner-3", "frame-2", "item-exit-2", "rotor-2"},
+    prerequisites = {"miner-3"},
     unit =
     {
       count = 600,
@@ -86,7 +86,7 @@ data:extend(
         recipe = "basic-mining-drill-mk5"
       },
     },
-    prerequisites = {"miner-4", "frame-3", "item-exit-3", "rotor-3"},
+    prerequisites = {"miner-4"},
     unit =
     {
       count = 800,

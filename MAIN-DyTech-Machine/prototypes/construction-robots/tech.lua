@@ -21,7 +21,7 @@ data:extend(
         modifier = 60 * 60 * 15
       }
     },
-    prerequisites = {"construction-robotics", "logistic-system-1", "lead-processing"},
+    prerequisites = {"construction-robotics", "logistic-system-1"},
     unit =
     {
       count = 250,
@@ -55,7 +55,7 @@ data:extend(
         modifier = 60 * 60 * 45
       }
     },
-    prerequisites = {"construction-robotics-1", "logistic-system-2", "tungsten-processing"},
+    prerequisites = {"construction-robotics-1", "logistic-system-2"},
     unit =
     {
       count = 500,

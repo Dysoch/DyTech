@@ -11,7 +11,7 @@ data:extend(
         recipe = "small-lamp-1"
       }
     },
-    prerequisites = {"optics", "advanced-electronics"},
+    prerequisites = {"optics"},
     unit =
     {
       count = 50,
@@ -36,7 +36,7 @@ data:extend(
         recipe = "small-lamp-2"
       }
     },
-    prerequisites = {"optics-1", "tungsten-processing"},
+    prerequisites = {"optics-1"},
     unit =
     {
       count = 150,

@@ -10,7 +10,7 @@ data:extend(
       {"assembling-machine-3", 1},
       {"steel-plate", 10},
       {"processing-unit", 2},
-      {"capacitor-2", 4},
+      {"capacitor", 4},
     },
     result = "assembling-machine-4"
   },
@@ -24,7 +24,7 @@ data:extend(
       {"assembling-machine-4", 1},
       {"lead-plate", 20},
       {"processing-unit", 4},
-      {"capacitor-3", 4},
+      {"capacitor", 4},
     },
     result = "assembling-machine-5"
   },
@@ -38,8 +38,8 @@ data:extend(
       {"assembling-machine-5", 1},
       {"tungsten-plate", 40},
       {"advanced-processing-unit", 2},
-      {"capacitor-3", 10},
-      {"frame-3", 1},
+      {"capacitor", 10},
+      {"frame", 1},
     },
     result = "assembling-machine-6"
   },
@@ -53,8 +53,8 @@ data:extend(
       {"assembling-machine-6", 1},
       {"tungsten-plate", 80},
       {"advanced-processing-unit", 4},
-      {"capacitor-4", 25},
-      {"frame-4", 1},
+      {"capacitor", 25},
+      {"frame", 1},
       {"obsidian", 10},
     },
     result = "assembling-machine-7"

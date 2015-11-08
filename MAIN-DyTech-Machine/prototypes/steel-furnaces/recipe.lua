@@ -9,7 +9,7 @@ data:extend(
     {
       {"steel-furnace", 1},
       {"lead-plate", 10},
-      {"item-exit-1", 1},
+      {"item-exit", 1},
     },
     result = "steel-furnace-mk2"
   },
@@ -22,7 +22,7 @@ data:extend(
     {
       {"steel-furnace-mk2", 1},
       {"lead-plate", 20},
-      {"item-exit-2", 1},
+      {"item-exit", 1},
     },
     result = "steel-furnace-mk3"
   },
@@ -35,7 +35,7 @@ data:extend(
     {
       {"steel-furnace-mk3", 1},
       {"tungsten-plate", 40},
-      {"item-exit-3", 1},
+      {"item-exit", 1},
     },
     result = "steel-furnace-mk4"
   },
@@ -48,7 +48,7 @@ data:extend(
     {
       {"steel-furnace-mk4", 1},
       {"tungsten-plate", 80},
-      {"item-exit-4", 1},
+      {"item-exit", 1},
     },
     result = "steel-furnace-mk5"
   },

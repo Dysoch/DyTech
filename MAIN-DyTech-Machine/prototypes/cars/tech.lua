@@ -11,7 +11,7 @@ data:extend(
         recipe = "car2"
       },
     },
-    prerequisites = {"automobilism", "advanced-processing-unit", "lead-processing", "tungsten-processing"},
+    prerequisites = {"automobilism"},
     unit =
     {
       count = 150,
