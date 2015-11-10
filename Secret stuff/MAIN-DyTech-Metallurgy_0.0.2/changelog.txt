@@ -1,0 +1,13 @@
+[spoiler=Features 0.0.3]
+[list]
+[*] Different Ores! Currently 13 different ores! Your most important are: Hematite (iron), Chalcopyrite (copper), Limonite (stone) and Anthracite (coal).
+[*] Different recipes! Early game is hard, as you need more then 3 ores of each to make 1 plate. Quickly switch to the new recipes when possible!
+[*] An extra type of iron: Pig Iron. This is used to make steel with oxygen. Pig iron can be made with Iron Ore, Coal and Oxygen.
+[*] An early steel: Blister steel. Currently not really used.
+[*] New fuel for your Steam Engines (really need to rename them now): Hydrogen! (obtained from electrolysing water into 2 hydrogen and 1 oxygen)
+[*] Quite big range of Chemicals (currently resting at 16 different), however only 5 are used for now.
+[*] First alloy recipe: Bronze!
+[*] Loads of different machines. Total now at 8
+[*] Walls, Gates, Ammo, Pipes and Pipes to ground made for all different metals. Total rests at 20 for each!!
+[/list]
+[/spoiler]

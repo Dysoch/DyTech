@@ -1,0 +1,9 @@
+{
+	"name":"MAIN-DyTech-Machine",
+	"author":"Dysoch",
+	"version":"2.0.0",
+	"title":"MAIN-DyTech-Machine",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
+	"description":"This Main Module of DyTech holds all Machines. Metallurgy, Belts, Pipes, Assembling Machine, etc. are all included!",
+	"dependencies": ["CORE-DyTech-Core >= 2.0.0"]
+}

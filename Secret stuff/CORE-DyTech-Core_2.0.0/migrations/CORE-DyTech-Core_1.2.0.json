@@ -1,0 +1,40 @@
+{
+  "item":
+  [
+	["ruby-ore", "crystal"],
+	["ruby-orex", "crystal"],
+	["ruby-2", "crystal"],
+	["ruby-3", "crystal"],
+	["ruby-4", "crystal"],
+	["ruby-5", "crystal"],
+	["emerald-ore", "crystal"],
+	["emerald-orex", "crystal"],
+	["emerald-2", "crystal"],
+	["emerald-3", "crystal"],
+	["emerald-4", "crystal"],
+	["emerald-5", "crystal"],
+	["sapphire-ore", "crystal"],
+	["sapphire-orex", "crystal"],
+	["sapphire-2", "crystal"],
+	["sapphire-3", "crystal"],
+	["sapphire-4", "crystal"],
+	["sapphire-5", "crystal"],
+	["diamond-ore", "crystal"],
+	["diamond-orex", "crystal"],
+	["diamond-2", "crystal"],
+	["diamond-3", "crystal"],
+	["diamond-4", "crystal"],
+	["diamond-5", "crystal"],
+	["topaz-ore", "crystal"],
+	["topaz-orex", "crystal"],
+	["topaz-2", "crystal"],
+	["topaz-3", "crystal"],
+	["topaz-4", "crystal"],
+	["topaz-5", "crystal"]
+  ],
+  "fluid":
+  [
+	["water", "clean-water"],
+	["dirty-water", "water"]
+  ]
+}

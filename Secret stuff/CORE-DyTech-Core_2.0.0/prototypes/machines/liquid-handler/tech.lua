@@ -1,0 +1,1 @@
+DyTech_Create_Tech_Core({Name="water-cleaning", Icon="machines/water-cleaning.png", Count=50, Time=10, Prereq={"automation"}, Recipes={"liquid-handler","dirty-water-sand","dirty-water-stone","dirty-water-to-water","dirty-water-stone-sand-random"}, Ingredients={Science1=true, Science2=true, Science3=false, Science4=false}})

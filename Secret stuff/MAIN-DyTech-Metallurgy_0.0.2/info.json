@@ -1,0 +1,9 @@
+{
+	"name":"MAIN-DyTech-Metallurgy",
+	"author":"Dysoch",
+	"version":"0.0.2",
+	"title":"MAIN-DyTech-Metallurgy",
+	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
+	"description":"This is a module that completely revamps the smelting area's. Everything is done differently, and is much more complex!",
+	"dependencies": ["base", "? CORE-DyTech-Core"]
+}
