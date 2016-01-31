@@ -67,7 +67,6 @@ data:extend(
 	  {type="fluid", name="clean-water", amount=80},
       {type="item", name="stone", amount_min=1, amount_max=4, probability=0.4},
       {type="item", name="sand", amount_min=1, amount_max=15, probability=0.8},
-      {type="item", name="gold-ore", amount_min=1, amount_max=1, probability=0.01},
       {type="item", name="iron-ore", amount_min=1, amount_max=1, probability=0.025},
 	}
   },
