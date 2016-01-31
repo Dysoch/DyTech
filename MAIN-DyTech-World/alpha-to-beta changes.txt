@@ -1,0 +1,14 @@
+Changes made from the alpha build:
+
+[list]
+[*] Random Machines are removed, they are replaced with Massive Ruins where only 9 can spawn. (they are named after Alpha Testers, so each tester gets 1 per game!) These ruins are filled with great amount of loot!
+[*] Cursed items are now disallowed from the loot list because some items are overpowered!
+[*] Added in checks for loot generation:
+[list]
+[*] Random loot in the world: This has a max amount now. This is tied to the amount of chunks that are generated. (so amount of items will not exceed the amount of chunks!)
+[*] Random Chests: Added in more chests types, but they will not spawn in the beginning. It takes a certain amount of chunks generated before the chests start spawning. (250 chunks) Loot in chests is increased in chance (33%>60%) but no longer 25 items of 1 item (max is now 10). The loot in chests happen after 1000 chunks are generated.
+[*] Ruins are the expection. They will spawn no matter what!
+[/list]
+[*] Added in an extinction event. This is an event that you can trigger. You get 1 extinction event per 2 levels of fighting XP. Use them wisely! This event will kill all enemies :D
+[*] Added in a research booster. This boosts your current research and finishes it. Use it wisely!
+[/list]

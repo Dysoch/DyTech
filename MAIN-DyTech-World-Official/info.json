@@ -1,9 +1,0 @@
-{
-	"name":"MAIN-DyTech-World",
-	"author":"Dysoch",
-	"version":"1.0.0",
-	"title":"MAIN-DyTech-World",
-	"homepage":"http://www.factorioforums.com/forum/viewforum.php?f=43",
-	"description":"This main module of DyTech is made specially to enhance the world. New Tile sets, random ruins, and epic loot can be found!",
-	"dependencies": ["base"]
-}
