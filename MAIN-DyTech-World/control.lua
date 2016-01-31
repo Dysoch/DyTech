@@ -4,6 +4,11 @@ require "scripts.functions"
 require "scripts.gui"
 require "scripts.world-generation"
 require "scripts.xp"
+require "scripts.missions.utils"
+require "scripts.missions.mission-easy"
+--require "scripts.missions.mission-medium"
+--require "scripts.missions.mission-hard"
+--require "scripts.missions.mission-insane"
 
 --[[Debug Functions]]--
 debug_master = false -- Master switch for debugging, shows most things!
@@ -33,37 +38,79 @@ function PlayerPrint(message)
 	end
 end
 
-game.on_init(function()
+script.on_init(function()
 	fs.Startup()
+	MissionUtils.Startup()
 	debug("Started up")
 end)
 
-game.on_load(function()
+script.on_load(function()
 	fs.Startup()
 	debug("Saved or Loaded up")
 end)
 
-game.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
 	if event.tick%216000==1 and not Config.Leveled_Loot_List then
 		fs.Add_To_Random_Entity()
 	end
+	--if event.tick%18000==17999 then
+	if event.tick%300==299 then
+		MissionUtils.StaminaIncrease()
+		if not remote.interfaces["DyTech-Core"] then
+			MissionUtils.GUI()
+		end
+	end
+	if event.tick%60==59 then
+		if global.Missions.Timers.EasyActive then
+			global.Missions.Timers.Easy = (global.Missions.Timers.Easy-1)
+			if global.Missions.Timers.Easy == 0 then
+				global.Missions.Timers.EasyActive = false
+				MissionUtils.Reward(global.Missions.Active.Easy)
+			end
+		end
+		if global.Missions.Timers.MediumActive then
+			global.Missions.Timers.Medium = (global.Missions.Timers.Medium-1)
+			if global.Missions.Timers.Medium == 0 then
+				global.Missions.Timers.MediumActive = false
+				MissionUtils.Reward(global.Missions.Active.Medium)
+			end
+		end
+		if global.Missions.Timers.HardActive then
+			global.Missions.Timers.Hard = (global.Missions.Timers.Hard-1)
+			if global.Missions.Timers.Hard == 0 then
+				global.Missions.Timers.HardActive = false
+				MissionUtils.Reward(global.Missions.Active.Hard)
+			end
+		end
+		if global.Missions.Timers.InsaneActive then
+			global.Missions.Timers.Insane = (global.Missions.Timers.Insane-1)
+			if global.Missions.Timers.Insane == 0 then
+				global.Missions.Timers.InsaneActive = false
+				MissionUtils.Reward(global.Missions.Active.Insane)
+			end
+		end
+		if global.GUI1 then
+			GUI.closeGUI("Main", global.GUI1Active)
+			GUI.showDyTechWorldGUI(global.GUI1Active)
+		end
+	end
 end)
 
-game.on_event(defines.events.on_player_crafted_item, function(event)
+script.on_event(defines.events.on_player_crafted_item, function(event)
 	XP.Crafting_Speed_Bonus(event)
 	XP.GUI_checker()
 end)
 
-game.on_event(defines.events.on_player_mined_item, function(event)
+script.on_event(defines.events.on_player_mined_item, function(event)
 	XP.Mining_Speed_Bonus(event)
 	XP.GUI_checker()
 end)
 
-game.on_event(defines.events.on_entity_died, function(event)
+script.on_event(defines.events.on_entity_died, function(event)
 	XP.Fighting_Bonus(event)
 end)
 
-game.on_event(defines.events.on_chunk_generated, function(event)
+script.on_event(defines.events.on_chunk_generated, function(event)
 	fs.Chunk_Increaser()
 	if fs.checkMatch100(33) then
 		if fs.checkMatch100(45) then
@@ -83,18 +130,19 @@ game.on_event(defines.events.on_chunk_generated, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_research_finished, function(event)
+script.on_event(defines.events.on_research_finished, function(event)
 	if not event.research.name == "blank" then
 		global.XP.Research = global.XP.Research + (math.random()/5)
 		XP.GUI_checker()
 	end
 end)
 
-game.on_event(defines.events.on_gui_click, function(event)
+script.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	if event.element.name == "DyTech-World-Button" then
 		GUI.showDyTechWorldGUI(playerIndex)
+		global.GUI1Active = playerIndex
 	elseif event.element.name == "DyTech-World-Close-Button" then
 		GUI.closeGUI("Main", playerIndex)
 	elseif event.element.name == "XP-checkbox" then
@@ -183,5 +231,9 @@ remote.add_interface("DyTech-World",
 	Ammo_Insert = function(name)
 		if not global.XP then fs.Startup() end
 		table.insert(global.XP.Fighting.Category,name)
+	end,
+	
+	TestMission001 = function()
+		MissionEasy.Mission_001()
 	end
 })

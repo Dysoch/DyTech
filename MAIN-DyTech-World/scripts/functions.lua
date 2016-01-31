@@ -16,6 +16,7 @@ function Startup()
 	if not global.RandomEntity.Massive_Ruins_Spawned.Chunk  then global.RandomEntity.Massive_Ruins_Spawned.Chunk = 0 end
 	if not global.Counter then global.Counter = {Chunks=0, Total=0, Loot=0, Ruins=0, Chests=0, Massive_Ruins=0, Loot_ItemCount=0, Chests_Loot_ItemCount=0} end
 	if not global.XP then global.XP = {} end
+	if not global.XP.Level then global.XP.Level = 0 end
 	if not global.XP.GUI then global.XP.GUI = false end
 	if not global.XP.Crafting then global.XP.Crafting = {} end
 	if not global.XP.Crafting.Total then global.XP.Crafting.Total = 0 end

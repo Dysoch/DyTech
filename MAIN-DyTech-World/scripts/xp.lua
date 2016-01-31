@@ -10,6 +10,7 @@ function Crafting_Speed_Bonus(event)
 	if global.XP.Crafting.Set == global.XP.Crafting.Needed or global.XP.Crafting.Set > global.XP.Crafting.Needed then
 		global.XP.Crafting.Set = global.XP.Crafting.Set - global.XP.Crafting.Needed
 		global.XP.Crafting.Level = global.XP.Crafting.Level + 1
+		global.XP.Level = global.XP.Level + 1
 		Bonus1 = (math.random()/2)
 		global.XP.Crafting.Bonus = (global.XP.Crafting.Bonus + Bonus1)
 		debug("XP: Crafting reached "..global.XP.Crafting.Needed.." items, increased crafting speed. (speed: "..global.XP.Crafting.Bonus..")")
@@ -26,6 +27,7 @@ function Mining_Speed_Bonus(event)
 	if global.XP.Mining.Set == global.XP.Mining.Needed or global.XP.Mining.Set > global.XP.Mining.Needed then
 		global.XP.Mining.Set = global.XP.Mining.Set - global.XP.Mining.Needed
 		global.XP.Mining.Level = global.XP.Mining.Level + 1
+		global.XP.Level = global.XP.Level + 1
 		Bonus1 = (math.random()/2)
 		global.XP.Mining.Bonus = global.XP.Mining.Bonus + Bonus1
 		debug("XP: Mining reached "..global.XP.Mining.Needed.." items, increased Mining speed. (speed: "..global.XP.Mining.Bonus..")")
@@ -49,6 +51,7 @@ function Fighting_Bonus(event)
 	if global.XP.Fighting.Killed_Set == global.XP.Fighting.Needed or global.XP.Fighting.Killed_Set > global.XP.Fighting.Needed then
 		global.XP.Fighting.Killed_Set = global.XP.Fighting.Killed_Set - global.XP.Fighting.Needed
 		global.XP.Fighting.Level = global.XP.Fighting.Level + 1
+		global.XP.Level = global.XP.Level + 1
 		Extinction()
 		debug("XP: Fighting reached "..global.XP.Fighting.Needed.." kills, increased Fighting stats by "..(global.XP.Fighting.Level/50))
 		global.XP.Fighting.Needed = global.XP.Fighting.Needed + math.random(global.XP.Fighting.Killed_Total)
@@ -69,9 +72,9 @@ function GUI_checker()
 		for number in pairs(game.players) do
 			GUI.closeGUI("XP", number)
 			GUI.showDyTechWorldXPGUI(number)
-			game.players[number].gui.top["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame-1"]["Crafting-XP"].value = (global.XP.Crafting.Set/global.XP.Crafting.Needed)
-			game.players[number].gui.top["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame-2"]["Mining-XP"].value = (global.XP.Mining.Set/global.XP.Mining.Needed)
-			game.players[number].gui.top["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame-3"]["Fighting-XP"].value = (global.XP.Fighting.Killed_Set/global.XP.Fighting.Needed)
+			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Crafting-XP"].value = (global.XP.Crafting.Set/global.XP.Crafting.Needed)
+			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Mining-XP"].value = (global.XP.Mining.Set/global.XP.Mining.Needed)
+			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Fighting-XP"].value = (global.XP.Fighting.Killed_Set/global.XP.Fighting.Needed)
 		end
 	else
 		for number in pairs(game.players) do
