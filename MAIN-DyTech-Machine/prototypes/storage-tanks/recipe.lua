@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"storage-tank", 1},
-      {"zinc-plate", 15},
+      {"steel-plate", 15},
       {"frame", 2},
       {"rotor", 2},
     },
@@ -22,7 +22,7 @@ data:extend(
     ingredients =
     {
       {"storage-tank-2", 1},
-      {"silver-plate", 35},
+      {"steel-plate", 35},
       {"frame", 2},
       {"rotor", 2},
     },
@@ -36,7 +36,7 @@ data:extend(
     ingredients =
     {
       {"storage-tank-3", 1},
-      {"lead-plate", 55},
+      {"steel-plate", 55},
       {"frame", 2},
       {"rotor", 2},
     },
@@ -50,7 +50,7 @@ data:extend(
     ingredients =
     {
       {"storage-tank-4", 1},
-      {"cobalt-plate", 85},
+      {"steel-plate", 85},
       {"frame", 2},
       {"rotor", 2},
     },

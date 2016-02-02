@@ -7,8 +7,8 @@ data:extend(
     energy_required = 30,
     ingredients =
     {
-      {"lead-plate", 90},
-      {"lead-gear-wheel", 45},
+      {"steel-plate", 90},
+      {"steel-gear-wheel", 45},
       {"processing-unit", 45}
     },
     result = "roboport-1",
@@ -20,9 +20,9 @@ data:extend(
     energy_required = 60,
     ingredients =
     {
-      {"tungsten-plate", 180},
-      {"tungsten-gear-wheel", 90},
-      {"advanced-processing-unit", 45}
+      {"steel-plate", 180},
+      {"steel-gear-wheel", 90},
+      {"processing-unit", 45}
     },
     result = "roboport-2",
   },

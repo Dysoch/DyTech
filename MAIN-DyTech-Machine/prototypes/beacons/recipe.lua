@@ -21,7 +21,7 @@ data:extend(
     {
       {"basic-beacon-1", 1},
       {"processing-unit", 40},
-      {"zinc-plate", 10},
+      {"copper-plate", 50},
     },
     result = "basic-beacon-2"
   },
@@ -33,8 +33,8 @@ data:extend(
     ingredients =
     {
       {"basic-beacon-2", 1},
-      {"advanced-processing-unit", 40},
-      {"gold-plate", 10},
+      {"processing-unit", 80},
+      {"steel-plate", 50},
     },
     result = "basic-beacon-3"
   },

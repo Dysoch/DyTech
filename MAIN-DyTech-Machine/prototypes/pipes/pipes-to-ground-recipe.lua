@@ -19,7 +19,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-to-ground-mk2", 2},
-      {"tin-plate", 8},
+      {"steel-plate", 8},
 	},
     result = "pipe-to-ground-mk3",
 	result_count = 2
@@ -31,7 +31,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-to-ground-mk3", 2},
-      {"lead-plate", 16},
+      {"steel-plate", 16},
 	},
     result = "pipe-to-ground-mk4",
 	result_count = 2
@@ -43,7 +43,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-to-ground-mk4", 2},
-      {"tungsten-plate", 32},
+      {"steel-plate", 32},
 	},
     result = "pipe-to-ground-mk5",
 	result_count = 2

@@ -175,7 +175,7 @@ data:extend(
     {
       {"inserter-veryfast", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-veryfast-smart"
@@ -188,7 +188,7 @@ data:extend(
     {
       {"inserter-veryfast-close", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-veryfast-close-smart"
@@ -369,7 +369,7 @@ data:extend(
     {
       {"inserter-long-veryfast", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-long-veryfast-smart"
@@ -382,7 +382,7 @@ data:extend(
     {
       {"inserter-long-veryfast-short", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-long-veryfast-smart-short"
@@ -395,7 +395,7 @@ data:extend(
     {
       {"inserter-long-veryfast-close", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-long-veryfast-smart-close"
@@ -408,7 +408,7 @@ data:extend(
     {
       {"inserter-long-veryfast-close-short", 1},
       {"smart-inserter", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
 	  {"steel-plate", 10},
     },
     result = "inserter-long-veryfast-smart-close-short"

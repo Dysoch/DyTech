@@ -179,7 +179,6 @@ data:extend(
     {
       {"pollution-clean-module-6", 1},
       {"processing-unit", 5},
-      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "pollution-clean-module-7"
@@ -191,7 +190,7 @@ data:extend(
     ingredients =
     {
       {"pollution-clean-module-7", 1},
-      {"advanced-processing-unit", 25},
+      {"processing-unit", 25},
     },
     energy_required = 640,
     result = "pollution-clean-module-8"
@@ -284,7 +283,6 @@ data:extend(
     {
       {"pollution-create-module-6", 1},
       {"processing-unit", 5},
-      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "pollution-create-module-7"
@@ -296,7 +294,7 @@ data:extend(
     ingredients =
     {
       {"pollution-create-module-7", 1},
-      {"advanced-processing-unit", 25},
+      {"processing-unit", 25},
     },
     energy_required = 640,
     result = "pollution-create-module-8"
@@ -348,7 +346,6 @@ data:extend(
     {
       {"speed-module-6", 1},
       {"processing-unit", 5},
-      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "speed-module-7"
@@ -360,7 +357,7 @@ data:extend(
     ingredients =
     {
       {"speed-module-7", 1},
-      {"advanced-processing-unit", 25},
+      {"processing-unit", 25},
     },
     energy_required = 640,
     result = "speed-module-8"
@@ -412,7 +409,6 @@ data:extend(
     {
       {"effectivity-module-6", 1},
       {"processing-unit", 5},
-      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "effectivity-module-7"
@@ -424,7 +420,7 @@ data:extend(
     ingredients =
     {
       {"effectivity-module-7", 1},
-      {"advanced-processing-unit", 25},
+      {"processing-unit", 25},
     },
     energy_required = 640,
     result = "effectivity-module-8"
@@ -476,7 +472,6 @@ data:extend(
     {
       {"productivity-module-6", 1},
       {"processing-unit", 5},
-      {"advanced-processing-unit", 5},
     },
     energy_required = 320,
     result = "productivity-module-7"
@@ -488,7 +483,7 @@ data:extend(
     ingredients =
     {
       {"productivity-module-7", 1},
-      {"advanced-processing-unit", 25},
+      {"processing-unit", 25},
     },
     energy_required = 640,
     result = "productivity-module-8"

@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"electric-furnace", 1},
-      {"lead-plate", 10},
+      {"steel-plate", 10},
       {"item-exit", 1},
       {"advanced-circuit", 2},
     },
@@ -22,7 +22,7 @@ data:extend(
     ingredients =
     {
       {"electric-furnace-mk2", 1},
-      {"lead-plate", 20},
+      {"steel-plate", 20},
       {"item-exit", 1},
       {"advanced-circuit", 5},
     },
@@ -36,7 +36,7 @@ data:extend(
     ingredients =
     {
       {"electric-furnace-mk3", 1},
-      {"tungsten-plate", 40},
+      {"steel-plate", 40},
       {"item-exit", 1},
       {"processing-unit", 2},
     },
@@ -50,7 +50,7 @@ data:extend(
     ingredients =
     {
       {"electric-furnace-mk4", 1},
-      {"tungsten-plate", 80},
+      {"steel-plate", 80},
       {"item-exit", 1},
       {"processing-unit", 5},
     },

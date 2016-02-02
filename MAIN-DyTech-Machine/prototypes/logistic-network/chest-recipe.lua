@@ -56,7 +56,7 @@ data:extend(
     ingredients =
     {
       {"logistic-chest-passive-provider-1", 1},
-      {"advanced-processing-unit", 5}
+      {"processing-unit", 15}
     },
     result = "logistic-chest-passive-provider-2"
   },
@@ -68,7 +68,7 @@ data:extend(
     ingredients =
     {
       {"logistic-chest-active-provider-1", 1},
-      {"advanced-processing-unit", 5}
+      {"processing-unit", 15}
     },
     result = "logistic-chest-active-provider-2"
   },
@@ -80,7 +80,7 @@ data:extend(
     ingredients =
     {
       {"logistic-chest-storage-1", 1},
-      {"advanced-processing-unit", 5}
+      {"processing-unit", 15}
     },
     result = "logistic-chest-storage-2"
   },
@@ -92,7 +92,7 @@ data:extend(
     ingredients =
     {
       {"logistic-chest-requester-1", 1},
-      {"advanced-processing-unit", 5}
+      {"processing-unit", 15}
     },
     result = "logistic-chest-requester-2"
   },

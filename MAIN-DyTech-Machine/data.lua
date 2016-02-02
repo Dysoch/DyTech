@@ -203,11 +203,11 @@ require("prototypes.chests.logistic-chest-tech")
 end
 
 --[[ Tools Check ]]--
-if Config.Tools then 
+--[[if Config.Tools then 
 require("prototypes.tools.item")
 require("prototypes.tools.recipe")
 require("prototypes.tools.tech")
-end
+end]]--
 
 --[[ Beacons Check ]]--
 if Config.Beacons then

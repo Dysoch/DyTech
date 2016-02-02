@@ -18,7 +18,7 @@ data:extend(
     ingredients =
     {
       {"offshore-pump-mk2", 1},
-      {"steel-gear-wheel", 4},
+      {"iron-gear-wheel", 2},
     },
     result = "offshore-pump-mk3"
   },
@@ -29,7 +29,7 @@ data:extend(
     ingredients =
     {
       {"offshore-pump-mk3", 1},
-      {"lead-gear-wheel", 1},
+      {"iron-gear-wheel", 4},
     },
     result = "offshore-pump-mk4"
   },
@@ -40,7 +40,7 @@ data:extend(
     ingredients =
     {
       {"offshore-pump-mk4", 1},
-      {"tungsten-gear-wheel", 4},
+      {"iron-gear-wheel", 8},
     },
     result = "offshore-pump-mk5"
   },

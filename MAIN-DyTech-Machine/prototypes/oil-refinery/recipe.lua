@@ -8,9 +8,9 @@ data:extend(
     ingredients =
     {
       {"oil-refinery", 1},
-      {"steel-gear-wheel", 10},
+      {"iron-gear-wheel", 25},
       {"advanced-circuit", 10},
-      {"frame-2", 1}
+      {"frame", 1}
     },
     result = "oil-refinery-1",
   },
@@ -22,9 +22,9 @@ data:extend(
     ingredients =
     {
       {"oil-refinery-1", 1},
-      {"lead-gear-wheel", 10},
+      {"iron-gear-wheel", 75},
       {"processing-unit", 10},
-      {"frame-3", 1}
+      {"frame", 1}
     },
     result = "oil-refinery-2",
   },

@@ -22,7 +22,7 @@ data:extend(
     ingredients =
     {
       {"assembling-machine-4", 1},
-      {"lead-plate", 20},
+      {"steel-plate", 20},
       {"processing-unit", 4},
       {"capacitor", 4},
     },
@@ -36,8 +36,8 @@ data:extend(
     ingredients =
     {
       {"assembling-machine-5", 1},
-      {"tungsten-plate", 40},
-      {"advanced-processing-unit", 2},
+      {"steel-plate", 40},
+      {"processing-unit", 8},
       {"capacitor", 10},
       {"frame", 1},
     },
@@ -51,11 +51,10 @@ data:extend(
     ingredients =
     {
       {"assembling-machine-6", 1},
-      {"tungsten-plate", 80},
-      {"advanced-processing-unit", 4},
+      {"steel-plate", 80},
+      {"processing-unit", 16},
       {"capacitor", 25},
       {"frame", 1},
-      {"obsidian", 10},
     },
     result = "assembling-machine-7"
   },

@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"steel-furnace", 1},
-      {"lead-plate", 10},
+      {"steel-plate", 10},
       {"item-exit", 1},
     },
     result = "steel-furnace-mk2"
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"steel-furnace-mk2", 1},
-      {"lead-plate", 20},
+      {"steel-plate", 20},
       {"item-exit", 1},
     },
     result = "steel-furnace-mk3"
@@ -34,7 +34,7 @@ data:extend(
     ingredients =
     {
       {"steel-furnace-mk3", 1},
-      {"tungsten-plate", 40},
+      {"steel-plate", 40},
       {"item-exit", 1},
     },
     result = "steel-furnace-mk4"
@@ -47,7 +47,7 @@ data:extend(
     ingredients =
     {
       {"steel-furnace-mk4", 1},
-      {"tungsten-plate", 80},
+      {"steel-plate", 80},
       {"item-exit", 1},
     },
     result = "steel-furnace-mk5"

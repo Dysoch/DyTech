@@ -18,7 +18,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-mk2", 1},
-      {"tin-plate", 2},
+      {"steel-plate", 2},
 	},
     result = "pipe-mk3"
   },
@@ -29,7 +29,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-mk3", 1},
-      {"lead-plate", 4},
+      {"steel-plate", 4},
 	},
     result = "pipe-mk4"
   },
@@ -40,7 +40,7 @@ data:extend(
     ingredients = 
 	{
 	  {"pipe-mk4", 1},
-      {"tungsten-plate", 8},
+      {"steel-plate", 8},
 	},
     result = "pipe-mk5"
   },

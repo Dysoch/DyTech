@@ -64,10 +64,8 @@ data:extend(
     ingredients =
     {
       {"basic-mining-drill-mk5", 1},
-	  {"logic-diamond-processor", 250},
-      {"tungsten-plate", 300},
-      {"ardite-plate", 100},
-      {"cobalt-plate", 100},
+      {"processing-unit", 500},
+      {"steel-plate", 1000},
     },
     result = "basic-mining-drill-mk6"
   },

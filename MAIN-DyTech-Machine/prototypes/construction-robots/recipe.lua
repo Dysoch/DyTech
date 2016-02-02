@@ -19,7 +19,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"advanced-processing-unit", 5},
+      {"processing-unit", 15},
 	  {"construction-robot-1", 1},
     },
     result = "construction-robot-2"
@@ -41,7 +41,7 @@ data:extend(
     ingredients =
     {
       {"advanced-circuit", 1},
-      {"lead-gear-wheel", 1}
+      {"iron-gear-wheel", 2}
     },
     result = "repair-pack-2"
   },
@@ -52,7 +52,7 @@ data:extend(
     ingredients =
     {
       {"processing-unit", 1},
-      {"tungsten-gear-wheel", 1}
+      {"iron-gear-wheel", 5}
     },
     result = "repair-pack-3"
   },

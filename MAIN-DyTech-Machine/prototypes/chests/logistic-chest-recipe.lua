@@ -73,8 +73,8 @@ data:extend(
     ingredients = 
 	{
 		{"smart-chest-big", 1},
-		{"advanced-processing-unit", 5},
-		{"ardite-plate", 25},
+		{"processing-unit", 15},
+		{"steel-plate", 25},
 	},
     result = "logistic-chest-requester-big"
   },
@@ -85,8 +85,8 @@ data:extend(
     ingredients = 
 	{
 		{"smart-chest-big", 1},
-		{"advanced-processing-unit", 5},
-		{"ardite-plate", 25},
+		{"processing-unit", 15},
+		{"steel-plate", 25},
 	},
     result = "logistic-chest-storage-big"
   },
@@ -97,8 +97,8 @@ data:extend(
     ingredients = 
 	{
 		{"smart-chest-big", 1},
-		{"advanced-processing-unit", 5},
-		{"ardite-plate", 25},
+		{"processing-unit", 15},
+		{"steel-plate", 25},
 	},
     result = "logistic-chest-active-provider-big"
   },
@@ -109,8 +109,8 @@ data:extend(
     ingredients = 
 	{
 		{"smart-chest-big", 1},
-		{"advanced-processing-unit", 5},
-		{"ardite-plate", 25},
+		{"processing-unit", 15},
+		{"steel-plate", 25},
 	},
     result = "logistic-chest-passive-provider-big"
   },

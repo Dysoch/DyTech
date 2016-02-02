@@ -19,7 +19,7 @@ data:extend(
     energy_required = 1,
     ingredients =
     {
-      {"advanced-processing-unit", 5},
+      {"processing-unit", 25},
 	  {"logistic-robot-1", 1}
     },
     result = "logistic-robot-2"

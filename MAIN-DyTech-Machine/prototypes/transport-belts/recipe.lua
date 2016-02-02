@@ -8,7 +8,7 @@ data:extend(
 	energy_required = 5,
     ingredients =
     {
-	  {"tungsten-gear-wheel", 2},
+	  {"iron-gear-wheel", 10},
       {"express-transport-belt", 1},
       {type="fluid", name="lubricant", amount=5},
     },
@@ -22,7 +22,7 @@ data:extend(
 	energy_required = 6,
     ingredients =
     {
-	  {"cobalt-gear-wheel", 5},
+	  {"iron-gear-wheel", 20},
       {"super-transport-belt", 1},
       {type="fluid", name="lubricant", amount=10},
     },
@@ -35,7 +35,7 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"tungsten-plate", 20},
+      {"steel-plate", 20},
       {"super-transport-belt", 6}
     },
     result_count = 2,
@@ -49,7 +49,7 @@ data:extend(
     ingredients =
     {
       {"extreme-transport-belt", 6},
-      {"cobalt-plate", 40}
+      {"steel-plate", 40}
     },
     result_count = 2,
     result = "extreme-transport-belt-to-ground"
@@ -61,8 +61,8 @@ data:extend(
     energy_required = 5,
     ingredients =
     {
-      {"advanced-processing-unit", 4},
-      {"lead-gear-wheel", 3},
+      {"processing-unit", 4},
+      {"iron-gear-wheel", 3},
       {"super-transport-belt", 2}
     },
     result = "super-splitter"
@@ -74,8 +74,8 @@ data:extend(
     energy_required = 6,
     ingredients =
     {
-      {"advanced-processing-unit", 10},
-      {"tungsten-gear-wheel", 5},
+      {"processing-unit", 10},
+      {"iron-gear-wheel", 5},
       {"extreme-transport-belt", 2}
     },
     result = "extreme-splitter"

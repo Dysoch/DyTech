@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"chemical-plant", 1},
-      {"steel-gear-wheel", 5},
+      {"iron-gear-wheel", 15},
       {"advanced-circuit", 5},
       {"pipe", 15}
     },
@@ -22,7 +22,7 @@ data:extend(
     ingredients =
     {
       {"chemical-plant-1", 1},
-      {"tungsten-gear-wheel", 5},
+      {"iron-gear-wheel", 45},
       {"processing-unit", 5},
       {"pipe", 25}
     },

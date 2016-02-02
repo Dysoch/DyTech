@@ -8,8 +8,7 @@ data:extend(
     ingredients =
     {
       {"radar", 1},
-      {"tin-plate", 20},
-      {"silver-plate", 20},
+      {"steel-plate", 20},
       {"advanced-circuit", 4},
       {"frame", 1},
     },
@@ -23,8 +22,7 @@ data:extend(
     ingredients =
     {
       {"radar-mk2", 1},
-      {"lead-plate", 40},
-      {"silver-plate", 40},
+      {"steel-plate", 40},
       {"processing-unit", 4},
       {"frame", 1},
     },
@@ -38,9 +36,8 @@ data:extend(
     ingredients =
     {
       {"radar-mk3", 1},
-      {"tungsten-plate", 80},
-      {"ardite-plate", 80},
-      {"advanced-processing-unit", 4},
+      {"steel-plate", 80},
+      {"processing-unit", 12},
       {"frame", 1},
     },
     result = "radar-mk4"
@@ -53,9 +50,8 @@ data:extend(
     ingredients =
     {
       {"radar-mk4", 1},
-      {"cobalt-plate", 160},
-      {"ardite-plate", 160},
-      {"advanced-processing-unit", 10},
+      {"steel-plate", 160},
+      {"processing-unit", 32},
       {"frame", 1},
     },
     result = "radar-mk5"

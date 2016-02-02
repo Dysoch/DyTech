@@ -20,7 +20,7 @@ data:extend(
     {
       {"small-lamp-1", 1},
       {"advanced-circuit", 2},
-      {"tungsten-plate", 1}
+      {"steel-plate", 5}
     },
     result = "small-lamp-2"
   },

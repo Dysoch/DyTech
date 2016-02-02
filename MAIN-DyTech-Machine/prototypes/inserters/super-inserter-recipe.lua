@@ -5,7 +5,7 @@ data:extend(
     name = "dytech-inserter",
     ingredients = 
 	{
-      {"advanced-processing-unit", 10},
+      {"processing-unit", 25},
       {"iron-gear-wheel", 10},
       {"steel-plate", 10}
     },
@@ -17,9 +17,9 @@ data:extend(
     name = "dytech-inserter-fast",
     ingredients = 
 	{
-      {"advanced-processing-unit", 25},
-      {"steel-gear-wheel", 25},
-      {"steel-plate", 15}
+      {"processing-unit", 75},
+      {"iron-gear-wheel", 75},
+      {"steel-plate", 75}
     },
     result = "dytech-inserter-fast",
     enabled = false

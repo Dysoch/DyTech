@@ -7,9 +7,8 @@ data:extend(
     ingredients =
     {
       {"advanced-circuit", 5},
-      {"tungsten-gear-wheel", 20},
-      {"tungsten-plate", 45},
-      {"lead-plate", 45},
+      {"iron-gear-wheel", 50},
+      {"steel-plate", 80},
       {"engine-unit", 10},
     },
     result = "diesel-locomotive-armor"
@@ -20,9 +19,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"lead-gear-wheel", 10},
+      {"iron-gear-wheel", 14},
       {"rubber", 20},
-      {"lead-plate", 20},
+      {"steel-plate", 70},
     },
     result = "cargo-wagon-armor"
   },

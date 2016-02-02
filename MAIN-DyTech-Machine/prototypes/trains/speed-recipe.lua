@@ -7,9 +7,8 @@ data:extend(
     ingredients =
     {
       {"advanced-processing-unit", 5},
-      {"steel-gear-wheel", 20},
+      {"iron-gear-wheel", 20},
       {"steel-plate", 20},
-      {"zinc-plate", 20},
       {"engine-unit", 10},
     },
     result = "diesel-locomotive-fast"
@@ -20,9 +19,8 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-gear-wheel", 10},
-      {"zinc-plate", 20},
-      {"gold-plate", 20},
+      {"iron-gear-wheel", 10},
+      {"steel-plate", 20},
       {"rubber", 5},
     },
     result = "cargo-wagon-fast"

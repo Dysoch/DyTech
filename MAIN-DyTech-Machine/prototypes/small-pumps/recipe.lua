@@ -37,7 +37,7 @@ data:extend(
 	{
 	  {"small-pump-mk3", 1},
       {"electric-engine-unit", 1},
-      {"lead-plate", 1},
+      {"steel-plate", 5},
 	},
     result = "small-pump-mk4"
   },
@@ -49,7 +49,7 @@ data:extend(
 	{
 	  {"small-pump-mk4", 1},
       {"electric-engine-unit", 1},
-      {"tungsten-plate", 1},
+      {"steel-plate", 25},
 	},
     result = "small-pump-mk5"
   },

@@ -7,9 +7,9 @@ data:extend(
     ingredients =
     {
       {"car", 1},
-      {"lead-plate", 75},
-      {"advanced-processing-unit", 2},
-      {"tungsten-gear-wheel", 12},
+      {"steel-plate", 75},
+      {"processing-unit", 5},
+      {"iron-gear-wheel", 50},
     },
     result = "car2"
   },
