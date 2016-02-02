@@ -10,7 +10,7 @@ data:extend(
       {"steel-plate", 5},
       {"electronic-circuit", 15},
       {"copper-plate", 5},
-      {"flux-capacitor-1", 1}
+      {"flux-capacitor", 1}
     },
     result = "solar-panel-secondary"
   },
@@ -23,7 +23,7 @@ data:extend(
     {
       {"solar-panel", 5},
       {"advanced-circuit", 15},
-      {"flux-capacitor-1", 1},
+      {"flux-capacitor", 1},
     },
     result = "solar-panel-primary-mk2"
   },
@@ -36,7 +36,7 @@ data:extend(
     {
       {"solar-panel-secondary", 5},
       {"advanced-circuit", 15},
-      {"flux-capacitor-1", 1},
+      {"flux-capacitor", 1},
     },
     result = "solar-panel-secondary-mk2"
   },
@@ -49,8 +49,8 @@ data:extend(
     {
       {"solar-panel-primary-mk2", 5},
       {"processing-unit", 15},
-      {"tin-plate", 20},
-      {"flux-capacitor-2", 2},
+      {"iron-plate", 20},
+      {"flux-capacitor", 2},
     },
     result = "solar-panel-primary-mk3"
   },
@@ -63,8 +63,8 @@ data:extend(
     {
       {"solar-panel-secondary-mk2", 5},
       {"processing-unit", 15},
-      {"tin-plate", 20},
-      {"flux-capacitor-2", 2},
+      {"iron-plate", 20},
+      {"flux-capacitor", 2},
     },
     result = "solar-panel-secondary-mk3"
   },
@@ -76,9 +76,9 @@ data:extend(
     ingredients =
     {
       {"solar-panel-primary-mk3", 5},
-      {"advanced-processing-unit", 15},
-      {"zinc-plate", 40},
-      {"flux-capacitor-3", 5},
+      {"processing-unit", 15},
+      {"iron-plate", 40},
+      {"flux-capacitor", 5},
     },
     result = "solar-panel-primary-mk4"
   },
@@ -90,9 +90,9 @@ data:extend(
     ingredients =
     {
       {"solar-panel-secondary-mk3", 5},
-      {"advanced-processing-unit", 15},
-      {"zinc-plate", 40},
-      {"flux-capacitor-3", 5},
+      {"processing-unit", 15},
+      {"iron-plate", 40},
+      {"flux-capacitor", 5},
     },
     result = "solar-panel-secondary-mk4"
   },
@@ -104,9 +104,9 @@ data:extend(
     ingredients =
     {
       {"solar-panel-primary-mk4", 5},
-      {"advanced-processing-unit", 45},
-      {"gold-plate", 80},
-      {"flux-capacitor-4", 10},
+      {"processing-unit", 45},
+      {"iron-plate", 80},
+      {"flux-capacitor", 10},
     },
     result = "solar-panel-primary-mk5"
   },
@@ -118,9 +118,9 @@ data:extend(
     ingredients =
     {
       {"solar-panel-secondary-mk4", 5},
-      {"advanced-processing-unit", 45},
-      {"gold-plate", 80},
-      {"flux-capacitor-4", 10},
+      {"processing-unit", 45},
+      {"iron-plate", 80},
+      {"flux-capacitor", 10},
     },
     result = "solar-panel-secondary-mk5"
   },

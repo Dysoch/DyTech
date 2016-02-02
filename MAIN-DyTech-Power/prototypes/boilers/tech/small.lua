@@ -15,7 +15,6 @@ data:extend(
         recipe = "high-boiler-mk2"
       },
     },
-    prerequisites = {"tin-processing", "rotor-1"},
     unit =
     {
       count = 150,
@@ -43,7 +42,7 @@ data:extend(
         recipe = "high-boiler-mk3"
       },
     },
-    prerequisites = {"boilers-1", "lead-processing", "rotor-2"},
+    prerequisites = {"boilers-1"},
     unit =
     {
       count = 225,
@@ -102,7 +101,7 @@ data:extend(
         recipe = "high-boiler-mk5"
       },
     },
-    prerequisites = {"boilers-3", "zinc-processing", "rotor-3"},
+    prerequisites = {"boilers-3"},
     unit =
     {
       count = 500,

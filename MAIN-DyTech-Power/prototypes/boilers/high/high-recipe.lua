@@ -7,8 +7,8 @@ data:extend(
     ingredients = 
 	{
 	  {"boiler", 2},
-	  {"rotor-1", 5},
-	  {"tin-plate", 30},
+	  {"rotor", 5},
+	  {"steel-plate", 30},
 	},
     result = "high-boiler-mk1"
   },
@@ -18,9 +18,9 @@ data:extend(
 	enabled = false,
     ingredients = 
 	{
-	  {"high-boiler-mk1", 1,
-	  {"rotor-2", 6},
-	  {"tin-plate", 25},
+	  {"high-boiler-mk1", 1},
+	  {"rotor", 6},
+	  {"steel-plate", 25},
 	},
     result = "high-boiler-mk2"
   },
@@ -31,8 +31,8 @@ data:extend(
     ingredients = 
 	{
 	  {"high-boiler-mk2", 1},
-	  {"lead-plate", 6},
-	  {"rotor-3", 6},
+	  {"steel-plate", 6},
+	  {"rotor", 6},
 	},
     result = "high-boiler-mk3"
   },
@@ -43,7 +43,7 @@ data:extend(
     ingredients = 
 	{
 	  {"high-boiler-mk3", 1},
-	  {"rotor-3", 10},
+	  {"rotor", 10},
 	  {"steel-plate", 25},
 	},
     result = "high-boiler-mk4"
@@ -55,10 +55,9 @@ data:extend(
     ingredients = 
 	{
 	  {"high-boiler-mk4", 1},
-	  {"rotor-4", 13},
-	  {"zinc-plate", 250},
+	  {"rotor", 13},
+	  {"steel-plate", 250},
 	},
     result = "high-boiler-mk5"
   },
- }
-)
+})

@@ -11,7 +11,7 @@ data:extend(
         recipe = "steam-engine-secondary-mk2"
       },
     },
-    prerequisites = {"oil-processing", "capacitor-1"},
+    prerequisites = {"oil-processing"},
     unit =
     {
       count = 150,
@@ -35,7 +35,7 @@ data:extend(
         recipe = "steam-engine-secondary-mk3"
       },
     },
-    prerequisites = {"steam-1", "rotor-1", "capacitor-2", "frame-1"},
+    prerequisites = {"steam-1"},
     unit =
     {
       count = 225,
@@ -60,7 +60,7 @@ data:extend(
         recipe = "steam-engine-secondary-mk4"
       },
     },
-    prerequisites = {"steam-2", "rotor-2", "capacitor-3", "frame-2"},
+    prerequisites = {"steam-2"},
     unit =
     {
       count = 300,
@@ -86,7 +86,7 @@ data:extend(
         recipe = "steam-engine-secondary-mk5"
       },
     },
-    prerequisites = {"steam-3", "rotor-3", "capacitor-4", "frame-3"},
+    prerequisites = {"steam-3"},
     unit =
     {
       count = 600,

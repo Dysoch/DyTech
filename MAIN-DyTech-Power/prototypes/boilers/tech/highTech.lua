@@ -3,7 +3,7 @@ Name = "high-boilers-1",
 Icon = "/boilers/boiler2.png",
 Count = 150,
 Time = 10,
-Prereq = {"tin-processing", "rotor-1"},
+Prereq = {},
 Recipes = {"high-boiler-mk1"},
 Ingredients = {Science1 = true, Science2 = false, Science3 = false, Science4 = false}})
 
@@ -21,7 +21,7 @@ Name = "high-boilers-3",
 Icon = "/boilers/boiler2.png",
 Count = 225,
 Time = 60,
-Prereq = {"high-boilers-2", "lead-processing", "rotor-2"},
+Prereq = {"high-boilers-2"},
 Recipes = {"high-boiler-mk3"},
 Ingredients = {Science1 = true, Science2 = true, Science3 = false, Science4 = false}})
 

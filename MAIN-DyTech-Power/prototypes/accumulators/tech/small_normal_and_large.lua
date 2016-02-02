@@ -34,7 +34,7 @@ data:extend(
         recipe = "large-basic-accumulator-mk3"
       },
     },
-    prerequisites = {"electric-energy-accumulators-1", "capacitor-1", "frame-1"},
+    prerequisites = {"electric-energy-accumulators-1"},
     unit =
     {
       count = 200,
@@ -79,7 +79,7 @@ data:extend(
         recipe = "large-basic-accumulator-mk5"
       },
     },
-    prerequisites = {"electric-energy-accumulators-2", "capacitor-2", "frame-2"},
+    prerequisites = {"electric-energy-accumulators-2"},
     unit =
     {
       count = 300,
@@ -113,7 +113,7 @@ data:extend(
         recipe = "large-basic-accumulator-mk6"
       },
     },
-    prerequisites = {"electric-energy-accumulators-3", "capacitor-4", "frame-3"},
+    prerequisites = {"electric-energy-accumulators-3"},
     unit =
     {
       count = 500,

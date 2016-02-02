@@ -7,9 +7,9 @@ data:extend(
     ingredients =
     {
       {"steam-engine", 1},
-      {"flux-capacitor-1", 2},
-      {"frame-1", 1},
-      {"rotor-1", 4},
+      {"flux-capacitor", 2},
+      {"frame", 1},
+      {"rotor", 4},
       {"electronic-circuit", 5}
     },
     result = "steam-engine-secondary-mk2"
@@ -21,9 +21,9 @@ data:extend(
     ingredients =
     {
       {"steam-engine-secondary-mk2", 1},
-      {"flux-capacitor-2", 2},
-      {"frame-2", 1},
-      {"rotor-2", 4},
+      {"flux-capacitor", 2},
+      {"frame", 1},
+      {"rotor", 4},
       {"advanced-circuit", 5}
     },
     result = "steam-engine-secondary-mk3"
@@ -35,9 +35,9 @@ data:extend(
     ingredients =
     {
       {"steam-engine-secondary-mk3", 1},
-      {"flux-capacitor-3", 5},
-      {"frame-3", 1},
-      {"rotor-3", 4},
+      {"flux-capacitor", 5},
+      {"frame", 1},
+      {"rotor", 4},
       {"processing-unit", 5}
     },
     result = "steam-engine-secondary-mk4"
@@ -49,10 +49,10 @@ data:extend(
     ingredients =
     {
       {"steam-engine-secondary-mk4", 1},
-      {"flux-capacitor-4", 10},
-      {"frame-4", 1},
-      {"rotor-4", 4},
-      {"advanced-processing-unit", 5}
+      {"flux-capacitor", 10},
+      {"frame", 1},
+      {"rotor", 4},
+      {"processing-unit", 5}
     },
     result = "steam-engine-secondary-mk5"
   },

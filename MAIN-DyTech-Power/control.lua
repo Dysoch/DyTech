@@ -62,7 +62,7 @@ end
 end]]
 
 --[[Insert Fancy Code Here:]]--
-game.on_load(function()
+script.on_load(function()
 if not global.tick then global.tick = {} end
 if not global.tick[1] then global.tick[1] = 0 end
 if not global.tick[2] then global.tick[2] = 0 end
@@ -145,7 +145,7 @@ if not global.steam then
 end
 end)
 
-game.on_init(function()
+script.on_init(function()
 global.tick = {}
 global.tick[1] = 0
 global.tick[2] = 0
@@ -225,7 +225,7 @@ global.steam[5].primary = "steam-engine-primary-mk5"
 global.steam[5].secondary = "steam-engine-secondary-mk5"
 global.steam[5].terciary = "steam-engine-terciary-mk5"
 
-global.steam[6].primary = "high-steam-engine-primary"
+--[[global.steam[6].primary = "high-steam-engine-primary"
 global.steam[6].secondary = "high-steam-engine-secondary"
 global.steam[6].terciary = "high-steam-engine-terciary"
 global.steam[7].primary = "high-steam-engine-primary-mk2"
@@ -239,12 +239,12 @@ global.steam[9].secondary = "high-steam-engine-secondary-mk4"
 global.steam[9].terciary = "high-steam-engine-terciary-mk4"
 global.steam[10].primary = "high-steam-engine-primary-mk5"
 global.steam[10].secondary = "high-steam-engine-secondary-mk5"
-global.steam[10].terciary = "high-steam-engine-terciary-mk5"
+global.steam[10].terciary = "high-steam-engine-terciary-mk5"]]--
 end)
 
 --[[Steam Engine Code]]--
 
-game.on_event(defines.events.on_gui_click, function(event)
+script.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	debug("Event fired!")
@@ -571,7 +571,7 @@ end
 
 --[[Reactor Code]]--
 
-game.on_event(defines.events.on_built_entity, function(event)
+script.on_event(defines.events.on_built_entity, function(event)
 
 	if event.created_entity.name == "nuclear-reactor" then
 	--Saving the coordinates of the placed entity
@@ -652,7 +652,7 @@ game.on_event(defines.events.on_built_entity, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
 --Steam Engine code:
 if global.prioritycheck --[[or global.fckyouimenabelingthisanyway]] then
 	for player_Index, player in ipairs(game.players) do
@@ -702,7 +702,7 @@ elseif Config.Nuclear_Reactors then
 end
 end)
 
-game.on_event(defines.events.on_player_mined_item, function(event)
+script.on_event(defines.events.on_player_mined_item, function(event)
 if event.item_stack.name == "nuclear-reactor" then
 	global.entityinfo[global.entitycount].ContainerEntity.destroy()
 end
