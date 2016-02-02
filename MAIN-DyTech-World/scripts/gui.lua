@@ -13,13 +13,14 @@ else
 	adder.add({type= "checkbox", caption={"xp-checkbox"}, name="XP-checkbox", state = true})
 end
 adder.add({type="label", name="Stamina-Label", caption={"stamina", global.Missions.Stamina}})
+adder.add({type="button", name="DyTech-World-Mission-Button", caption={"missions"}})
 adder.add({type="button", name="DyTech-World-Close-Button", caption={"close"}})
 end
 
 function showDyTechWorldXPGUI(PlayerIndex)
 local player = game.players[PlayerIndex]
 player.gui.left.add({type="flow", direction="horizontal", name="mainDyTechWorldXPFlow"})
-player.gui.left["mainDyTechWorldXPFlow"].add({type="frame", direction="vertical", name="mainDyTechWorldXPFrame", caption="XP System"})
+player.gui.left["mainDyTechWorldXPFlow"].add({type="frame", direction="vertical", name="mainDyTechWorldXPFrame", caption={"xp-system", global.XP.Level}})
 adder = player.gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]
 
 adder.add({type="label", name="", caption={"dytech-world-gui-xp-crafting", global.XP.Crafting.Level}})
@@ -57,6 +58,10 @@ function closeGUI(statement, PlayerIndex)
 			game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"].destroy()
 			global.GUI1 = false
 		end
+	elseif statement=="Missions" then
+		if game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"] and game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].valid then
+			game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].destroy()
+		end
 	elseif statement=="All" then
 		if game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"] and game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"].destroy()
@@ -64,6 +69,9 @@ function closeGUI(statement, PlayerIndex)
 		if game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"] and game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"].valid then
 			game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"].destroy()
 			global.GUI1 = false
+		end
+		if game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"] and game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].valid then
+			game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].destroy()
 		end
 	end
 end

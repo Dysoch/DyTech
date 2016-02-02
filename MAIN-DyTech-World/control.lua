@@ -5,6 +5,7 @@ require "scripts.gui"
 require "scripts.world-generation"
 require "scripts.xp"
 require "scripts.missions.utils"
+require "scripts.missions.gui"
 require "scripts.missions.mission-easy"
 --require "scripts.missions.mission-medium"
 --require "scripts.missions.mission-hard"
@@ -45,8 +46,7 @@ script.on_init(function()
 end)
 
 script.on_load(function()
-	fs.Startup()
-	debug("Saved or Loaded up")
+	
 end)
 
 script.on_event(defines.events.on_tick, function(event)
@@ -145,6 +145,8 @@ local player = game.players[playerIndex]
 		global.GUI1Active = playerIndex
 	elseif event.element.name == "DyTech-World-Close-Button" then
 		GUI.closeGUI("Main", playerIndex)
+	elseif event.element.name == "DyTech-World-Close-Missions-Button" then
+		GUI.closeGUI("Missions", playerIndex)
 	elseif event.element.name == "XP-checkbox" then
 		if event.element.state == true then
 			global.XP.GUI = true
@@ -167,6 +169,25 @@ local player = game.players[playerIndex]
 			game.forces.player.current_research = "blank"
 			XP.GUI_checker()
 		end
+	elseif event.element.name == "DyTech-World-Mission-Test-Button-1" then
+		MissionEasy.Mission_001()
+		GUI.closeGUI("Missions", playerIndex)
+		MissionGUI.showDyTechWorldMissions(playerIndex)
+	elseif event.element.name == "DyTech-World-Mission-Test-Button-2" then
+		MissionEasy.Mission_002()
+		GUI.closeGUI("Missions", playerIndex)
+		MissionGUI.showDyTechWorldMissions(playerIndex)
+	elseif event.element.name == "DyTech-World-Mission-Test-Button-3" then
+		MissionEasy.Mission_003()
+		GUI.closeGUI("Missions", playerIndex)
+		MissionGUI.showDyTechWorldMissions(playerIndex)
+	elseif event.element.name == "DyTech-World-Mission-Test-Button-4" then
+		MissionEasy.Mission_004()
+		GUI.closeGUI("Missions", playerIndex)
+		MissionGUI.showDyTechWorldMissions(playerIndex)
+	elseif event.element.name == "DyTech-World-Mission-Button" then
+		GUI.closeGUI("Missions", playerIndex)
+		MissionGUI.showDyTechWorldMissions(playerIndex)
 	end
 end)
 
