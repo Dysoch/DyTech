@@ -60,17 +60,13 @@ end)
 
 script.on_load(function()
 	if not remote.interfaces["treefarm_interface"] then 
-	debug("Treefarm not installed")
 		Trees.OnLoad()
 	elseif remote.interfaces["treefarm_interface"] and remote.interfaces.treefarm_interface.getSeedTypesData then
-	debug("Trees: Treefarm Found")
 		if not remote.call("treefarm_interface", "readSeed", "RubberTree") then
 			remote.call("treefarm_interface", "addSeed", Trees.RubberTree)
-			debug("Trees: Rubber Tree Moved to Treefarm")
 		end
 		if not remote.call("treefarm_interface", "readSeed", "SulfurTree") then
 			remote.call("treefarm_interface", "addSeed", Trees.SulfurTree)
-			debug("Trees: Sulfur Tree Moved to Treefarm")
 		end
 	end
 	if not global.Wind then fs.Wind_Startup() end
