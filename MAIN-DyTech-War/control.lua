@@ -30,20 +30,16 @@ function PlayerPrint(message)
 	end
 end
 
-game.on_init(function()
+script.on_init(function()
 	game.create_force("dyzilla")
 	Dyzilla.Startup()
 end)
 
-game.on_save(function()
+script.on_load(function()
 
 end)
 
-game.on_load(function()
-
-end)
-
-game.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
 	if Config.Dyzilla_Spawner and Config.Dyzilla_Spawner_Supplies then
 		if not global.Dyzilla.Supplies then
 			if Config.Difficulty==5 or Config.Difficulty==6 then
@@ -56,7 +52,7 @@ game.on_event(defines.events.on_tick, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_entity_died, function(event)
+script.on_event(defines.events.on_entity_died, function(event)
 	if event.entity.name=="dyzilla-spawner" then
 		global.Dyzilla.Dead = global.Dyzilla.Dead + 1
 		global.Dyzilla.Alive = global.Dyzilla.Alive - 1
@@ -64,7 +60,7 @@ game.on_event(defines.events.on_entity_died, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_chunk_generated, function(event)
+script.on_event(defines.events.on_chunk_generated, function(event)
 	if Config.Dyzilla_Spawner then
 	if not global.Dyzilla then Dyzilla.Startup() end
 	global.Dyzilla.Chunks = global.Dyzilla.Chunks + 1

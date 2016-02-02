@@ -150,7 +150,7 @@ data:extend(
     ingredients =
     {
       {"laser-turret-sniper-2", 1},
-      {"advanced-processing-unit", 20},
+      {"processing-unit", 20},
       {"battery", 12},
 	  {"compressed-topaz", 4} 
     },
@@ -165,7 +165,7 @@ data:extend(
     {
       {"laser-turret-9", 1},
       {"iron-plate", 200},
-      {"advanced-circuit", 200},
+      {"electronic-circuit", 200},
       {"battery", 200},
 	  {"raw-diamond", 200} 
     },
@@ -180,7 +180,7 @@ data:extend(
     {
       {"laser-turret-diamond-1", 1},
       {"steel-plate", 200},
-      {"processing-unit", 200},
+      {"advanced-circuit", 200},
       {"battery", 200},
 	  {"cut-diamond", 200} 
     },
@@ -194,7 +194,7 @@ data:extend(
     ingredients =
     {
       {"laser-turret-diamond-2", 1},
-      {"advanced-processing-unit", 200},
+      {"processing-unit", 200},
       {"battery", 200},
 	  {"compressed-diamond", 200} 
     },

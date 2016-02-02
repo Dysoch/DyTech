@@ -25,7 +25,7 @@ data:extend(
 	  {"track", 2},
 	  {"hull-lower", 1},
 	  {"hull-top", 1},
-      {"advanced-processing-unit", 2},
+      {"processing-unit", 2},
       {"flame-thrower", 1},
       {"combat-shotgun", 1},
       {"laser-gun", 1},

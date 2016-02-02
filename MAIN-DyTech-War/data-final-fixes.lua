@@ -168,7 +168,7 @@ if Config.Experimental_Feature then
 	end
 end
 
-for k, v in pairs(data.raw["unit"]) do
+--[[for k, v in pairs(data.raw["unit"]) do
 	if v.loot then
 		for _,table in pairs(Units_Loot) do
 			table.insert(v.loot, table)
@@ -186,4 +186,4 @@ for k, v in pairs(data.raw["unit-spawner"]) do
 	else
 		v.loot = Spawner_Loot
 	end
-end
+end]]--

@@ -11,7 +11,7 @@ data:extend(
         recipe = "sniper-turret"
       },
     },
-    prerequisites = {"military-5", "advanced-processing-unit"},
+    prerequisites = {"military-5"},
     unit =
     {
       count = 1000,

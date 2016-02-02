@@ -8,7 +8,7 @@ data:extend(
     ingredients =
     {
       {"sniper", 1},
-      {"advanced-processing-unit", 5},
+      {"processing-unit", 5},
 	  {"steel-plate", 75},
     },
     result = "sniper-turret",
