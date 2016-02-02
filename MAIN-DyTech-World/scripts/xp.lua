@@ -3,6 +3,34 @@ require "config"
 require "scripts.functions"
 require "scripts.gui"
 
+function Building_Level(event)
+	if not global.XP then fs.Startup() end
+	global.XP.Building.Total = global.XP.Building.Total + (1/fs.Amount_Players())
+	global.XP.Building.Set = global.XP.Building.Set + (1/fs.Amount_Players())
+	if global.XP.Building.Set == global.XP.Building.Needed or global.XP.Building.Set > global.XP.Building.Needed then
+		global.XP.Building.Set = global.XP.Building.Set - global.XP.Building.Needed
+		global.XP.Building.Level = global.XP.Building.Level + 1
+		global.XP.Level = global.XP.Level + 1
+		debug("XP: Building reached "..global.XP.Building.Needed.." items")
+		global.XP.Building.Needed = global.XP.Building.Needed + math.random(global.XP.Building.Total)
+		PlayerPrint({"xp-2", {"building"}})
+	end
+end
+
+function Explore_Level(event)
+	if not global.XP then fs.Startup() end
+	global.XP.Explore.Total = global.XP.Explore.Total + (1/fs.Amount_Players())
+	global.XP.Explore.Set = global.XP.Explore.Set + (1/fs.Amount_Players())
+	if global.XP.Explore.Set == global.XP.Explore.Needed or global.XP.Explore.Set > global.XP.Explore.Needed then
+		global.XP.Explore.Set = global.XP.Explore.Set - global.XP.Explore.Needed
+		global.XP.Explore.Level = global.XP.Explore.Level + 1
+		global.XP.Level = global.XP.Level + 1
+		debug("XP: Explore reached "..global.XP.Explore.Needed.." chunks")
+		global.XP.Explore.Needed = global.XP.Explore.Needed + math.random(math.floor(global.XP.Explore.Total/5))
+		PlayerPrint({"xp-2", {"explore"}})
+	end
+end
+
 function Crafting_Speed_Bonus(event)
 	if not global.XP then fs.Startup() end
 	global.XP.Crafting.Total = global.XP.Crafting.Total + (event.item_stack.count/fs.Amount_Players())
@@ -74,6 +102,8 @@ function GUI_checker()
 			GUI.showDyTechWorldXPGUI(number)
 			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Crafting-XP"].value = (global.XP.Crafting.Set/global.XP.Crafting.Needed)
 			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Mining-XP"].value = (global.XP.Mining.Set/global.XP.Mining.Needed)
+			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Building-XP"].value = (global.XP.Building.Set/global.XP.Building.Needed)
+			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Explore-XP"].value = (global.XP.Explore.Set/global.XP.Explore.Needed)
 			game.players[number].gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]["Fighting-XP"].value = (global.XP.Fighting.Killed_Set/global.XP.Fighting.Needed)
 		end
 	else

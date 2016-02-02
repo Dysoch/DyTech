@@ -54,7 +54,7 @@ script.on_event(defines.events.on_tick, function(event)
 		fs.Add_To_Random_Entity()
 	end
 	--if event.tick%18000==17999 then
-	if event.tick%300==299 then
+	if event.tick%60==59 then --test line
 		MissionUtils.StaminaIncrease()
 		if not remote.interfaces["DyTech-Core"] then
 			MissionUtils.GUI()
@@ -112,6 +112,8 @@ end)
 
 script.on_event(defines.events.on_chunk_generated, function(event)
 	fs.Chunk_Increaser()
+	XP.Explore_Level(event)
+	XP.GUI_checker()
 	if fs.checkMatch100(33) then
 		if fs.checkMatch100(45) then
 			Generation.Loot_Spawner(31, 5, event)
@@ -135,6 +137,16 @@ script.on_event(defines.events.on_research_finished, function(event)
 		global.XP.Research = global.XP.Research + (math.random()/5)
 		XP.GUI_checker()
 	end
+end)
+
+script.on_event(defines.events.on_built_entity, function(event)
+	XP.Building_Level(event)
+	XP.GUI_checker()
+end)
+
+script.on_event(defines.events.on_robot_built_entity, function(event)
+	XP.Building_Level(event)
+	XP.GUI_checker()
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)

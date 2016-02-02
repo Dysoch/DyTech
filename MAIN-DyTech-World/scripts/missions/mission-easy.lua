@@ -28,8 +28,8 @@ function Mission_002()
 end
 
 function Mission_003()
-	if global.Missions.Stamina >= 3 and global.Missions.Timers.EasyActive==false then
-		global.Missions.Stamina = global.Missions.Stamina - 3
+	if global.Missions.Stamina >= 5 and global.Missions.Timers.EasyActive==false then
+		global.Missions.Stamina = global.Missions.Stamina - 5
 		global.Missions.Timers.Easy = 15
 		global.Missions.Timers.EasyActive = true
 		global.Missions.Active.Easy = {}	
@@ -38,8 +38,8 @@ function Mission_003()
 end
 
 function Mission_004()
-	if global.Missions.Stamina >= 5 and global.Missions.Timers.EasyActive==false then
-		global.Missions.Stamina = global.Missions.Stamina - 5
+	if global.Missions.Stamina >= 10 and global.Missions.Timers.EasyActive==false then
+		global.Missions.Stamina = global.Missions.Stamina - 10
 		global.Missions.Timers.Easy = 20
 		global.Missions.Timers.EasyActive = true
 		global.Missions.Active.Easy = {}	

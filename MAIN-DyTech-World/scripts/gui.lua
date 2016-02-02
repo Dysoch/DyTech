@@ -25,18 +25,28 @@ adder = player.gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]
 
 adder.add({type="label", name="", caption={"dytech-world-gui-xp-crafting", global.XP.Crafting.Level}})
 adder.add({type="progressbar", name="Crafting-XP", size=global.XP.Crafting.Needed})
-adder.add({type="label", name="", caption={"crafting-bonus", string.sub(global.XP.Crafting.Bonus,1,4)}})
-adder.add({type="label", name="", caption={"crafting-total", global.XP.Crafting.Total}})
+--adder.add({type="label", name="", caption={"crafting-bonus", string.sub(global.XP.Crafting.Bonus,1,4)}})
+--adder.add({type="label", name="", caption={"crafting-total", global.XP.Crafting.Total}})
 
 adder.add({type="label", name="", caption={"dytech-world-gui-xp-mining", global.XP.Mining.Level}})
 adder.add({type="progressbar", name="Mining-XP", size=global.XP.Mining.Needed})
-adder.add({type="label", name="", caption={"mining-bonus", string.sub(global.XP.Mining.Bonus,1,4)}})
-adder.add({type="label", name="", caption={"mining-total", global.XP.Mining.Total}})
+--adder.add({type="label", name="", caption={"mining-bonus", string.sub(global.XP.Mining.Bonus,1,4)}})
+--adder.add({type="label", name="", caption={"mining-total", global.XP.Mining.Total}})
+
+adder.add({type="label", name="", caption={"dytech-world-gui-xp-building", global.XP.Building.Level}})
+adder.add({type="progressbar", name="Building-XP", size=global.XP.Building.Needed})
+--adder.add({type="label", name="", caption={"mining-bonus", string.sub(global.XP.Mining.Bonus,1,4)}})
+--adder.add({type="label", name="", caption={"mining-total", global.XP.Mining.Total}})
+
+adder.add({type="label", name="", caption={"dytech-world-gui-xp-explore", global.XP.Explore.Level}})
+adder.add({type="progressbar", name="Explore-XP", size=global.XP.Explore.Needed})
+--adder.add({type="label", name="", caption={"mining-bonus", string.sub(global.XP.Mining.Bonus,1,4)}})
+--adder.add({type="label", name="", caption={"mining-total", global.XP.Mining.Total}})
 
 adder.add({type="label", name="", caption={"dytech-world-gui-xp-fighting", global.XP.Fighting.Level}})
 adder.add({type="progressbar", name="Fighting-XP", size=global.XP.Fighting.Needed})
-adder.add({type="label", name="", caption={"fighting-bonus", string.sub(global.XP.Fighting.Bonus,1,4)}})
-adder.add({type="label", name="", caption={"fighting-evolution", string.sub(game.evolution_factor,1,4)}})
+--adder.add({type="label", name="", caption={"fighting-bonus", string.sub(global.XP.Fighting.Bonus,1,4)}})
+--adder.add({type="label", name="", caption={"fighting-evolution", string.sub(game.evolution_factor,1,4)}})
 if not global.XP.Fighting.Extinction then global.XP.Fighting.Extinction = 0 end
 if global.XP.Fighting.Extinction > 0 then
 	adder.add({type="button", name="DyTech-Extinction-Button", caption={"fighting-extinction", global.XP.Fighting.Extinction}})

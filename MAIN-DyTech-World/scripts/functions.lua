@@ -16,8 +16,18 @@ function Startup()
 	if not global.RandomEntity.Massive_Ruins_Spawned.Chunk  then global.RandomEntity.Massive_Ruins_Spawned.Chunk = 0 end
 	if not global.Counter then global.Counter = {Chunks=0, Total=0, Loot=0, Ruins=0, Chests=0, Massive_Ruins=0, Loot_ItemCount=0, Chests_Loot_ItemCount=0} end
 	if not global.XP then global.XP = {} end
-	if not global.XP.Level then global.XP.Level = 0 end
+	if not global.XP.Level then global.XP.Level = 1 end
 	if not global.XP.GUI then global.XP.GUI = false end
+	if not global.XP.Building then global.XP.Building = {} end
+	if not global.XP.Building.Total then global.XP.Building.Total = 0 end
+	if not global.XP.Building.Set then global.XP.Building.Set = 0 end
+	if not global.XP.Building.Level then global.XP.Building.Level = 1 end
+	if not global.XP.Building.Needed then global.XP.Building.Needed = math.random(25,150) end
+	if not global.XP.Explore then global.XP.Explore = {} end
+	if not global.XP.Explore.Total then global.XP.Explore.Total = 0 end
+	if not global.XP.Explore.Set then global.XP.Explore.Set = 0 end
+	if not global.XP.Explore.Level then global.XP.Explore.Level = 1 end
+	if not global.XP.Explore.Needed then global.XP.Explore.Needed = math.random(400,600) end
 	if not global.XP.Crafting then global.XP.Crafting = {} end
 	if not global.XP.Crafting.Total then global.XP.Crafting.Total = 0 end
 	if not global.XP.Crafting.Set then global.XP.Crafting.Set = 0 end

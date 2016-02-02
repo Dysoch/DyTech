@@ -21,7 +21,7 @@ function Startup()
 end
 
 function StaminaIncrease()
-	if global.Missions.Stamina < (20+global.XP.Level*5) then
+	if global.Missions.Stamina < (20+global.XP.Level*10) then
 		global.Missions.Stamina = global.Missions.Stamina + 1
 	end
 end
