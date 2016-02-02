@@ -1,0 +1,71 @@
+Here you can find the download for DyTech Core:
+
+[size=150][color=#0040FF][b]DyTech-Core v1.3.0:[/b][/color][/size]
+[list][b][*]Factorio version: [/b][color=#FF8000]0.12.5+[/color]
+[*]Release Date: [i][color=#FF0000]August 30th 2015[/color][/i][/list]
+[b][url=https://github.com/Dysoch/DyTech/releases/download/v0.12-factorio-3/CORE-DyTech-Core_1.3.0.zip]DOWNLOAD[/url][/b]
+
+-------------------------------------------------------------------------
+
+For Older versions, check [url=https://github.com/Dysoch/DyTech/releases]Github Releases[/url]
+
+[url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=8337#p66102]Changelog[/url]
+
+Here you can find the download for DyTech Machine:
+
+[size=150][color=#0040FF][b]DyTech-Machine v1.1.1:[/b][/color][/size]
+[list][b][*]Factorio version: [/b][color=#FF8000]0.12.x[/color]
+[*]Release Date: [i][color=#FF0000]August 8th 2015[/color][/i]
+[*] Dependencies: 
+[list][*][color=#400080]DyTech-Core: v1.2.0+[/color][/list][/list]
+[b][url=https://github.com/Dysoch/DyTech/releases/download/v0.12-factorio-1/MAIN-DyTech-Machine_1.1.1.zip]DOWNLOAD[/url][/b]
+
+-------------------------------------------------------------------------
+
+For Older versions, check [url=https://github.com/Dysoch/DyTech/releases]Github Releases[/url]
+
+[url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=8337#p66103]Changelog[/url]
+
+Here you can find the download for DyTech Power:
+
+[size=150][color=#0040FF][b]DyTech-Power v1.1.3:[/b][/color][/size]
+[list][b][*]Factorio version: [/b][color=#FF8000]0.12.x[/color]
+[*]Release Date: [i][color=#FF0000]September 25th 2015[/color][/i]
+[*] Dependencies: 
+[list][*][color=#400080]DyTech-Core: v1.2.1+[/color][/list][/list]
+[b][url=http://bit.ly/DyTechPower_1-1-3-2]DOWNLOAD[/url][/b]
+
+-------------------------------------------------------------------------
+
+For Older versions, check [url=https://github.com/Dysoch/DyTech/releases]Github Releases[/url]
+
+[url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=8337#p66104]Changelog[/url]
+
+Here you can find the download for DyTech War:
+
+[size=150][color=#0040FF][b]DyTech-War v1.1.1:[/b][/color][/size]
+[list][b][*]Factorio version: [/b][color=#FF8000]0.12.x[/color]
+[*]Release Date: [i][color=#FF0000]August 8th 2015[/color][/i]
+[*] Dependencies: 
+[list][*][color=#400080]DyTech-Core: v1.2.0+[/color][/list][/list]
+[b][url=https://github.com/Dysoch/DyTech/releases/download/v0.12-factorio-1/MAIN-DyTech-War_1.1.1.zip]DOWNLOAD[/url][/b]
+
+-------------------------------------------------------------------------
+
+For Older versions, check [url=https://github.com/Dysoch/DyTech/releases]Github Releases[/url]
+
+[url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=8337#p66105]Changelog[/url]
+
+Here you can find the download for DyTech Dynamics:
+
+[size=150][color=#0040FF][b]DyTech-Dynamics v1.0.0 BETA VERSION!:[/b][/color][/size]
+[list][b][*]Factorio version: [/b][color=#FF8000]0.11.17+[/color]
+[*]Release Date: [i][color=#FF0000]March 12th 2015[/color][/i]
+[*] Dependencies: 
+[list][*][color=#400080]DyTech-Script: v1.0.0 (included in file)[/color][/list]
+[*] NOTES: BETA VERSION! MP COMPATIBILITY NOT CERTAIN! USE IN MP AT OWN RISK!
+[list][*] Only the base game is included! Check [url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=4657]Console Commands[/url] for the commands!
+[*] EXTRACT THE RAR FILE! (Temporary rar file till official release!)[/list][/list]
+[b][url=https://github.com/Dysoch/DyTech/releases/download/v1.0.0-beta/DyTech-Dynamics-BETA_EXTRACT.IT.rar]DOWNLOAD[/url][/b]
+
+[url=http://www.factorioforums.com/forum/viewtopic.php?f=43&t=8337#p66105]Changelog[/url]
