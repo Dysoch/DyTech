@@ -6,10 +6,7 @@ require "scripts.world-generation"
 require "scripts.xp"
 require "scripts.missions.utils"
 require "scripts.missions.gui"
-require "scripts.missions.mission-easy"
---require "scripts.missions.mission-medium"
---require "scripts.missions.mission-hard"
---require "scripts.missions.mission-insane"
+require "scripts.missions.mission"
 
 --[[Debug Functions]]--
 debug_master = false -- Master switch for debugging, shows most things!
@@ -181,22 +178,6 @@ local player = game.players[playerIndex]
 			game.forces.player.current_research = "blank"
 			XP.GUI_checker()
 		end
-	elseif event.element.name == "DyTech-World-Mission-Test-Button-1" then
-		MissionEasy.Mission_001()
-		GUI.closeGUI("Missions", playerIndex)
-		MissionGUI.showDyTechWorldMissions(playerIndex)
-	elseif event.element.name == "DyTech-World-Mission-Test-Button-2" then
-		MissionEasy.Mission_002()
-		GUI.closeGUI("Missions", playerIndex)
-		MissionGUI.showDyTechWorldMissions(playerIndex)
-	elseif event.element.name == "DyTech-World-Mission-Test-Button-3" then
-		MissionEasy.Mission_003()
-		GUI.closeGUI("Missions", playerIndex)
-		MissionGUI.showDyTechWorldMissions(playerIndex)
-	elseif event.element.name == "DyTech-World-Mission-Test-Button-4" then
-		MissionEasy.Mission_004()
-		GUI.closeGUI("Missions", playerIndex)
-		MissionGUI.showDyTechWorldMissions(playerIndex)
 	elseif event.element.name == "DyTech-World-Mission-Button" then
 		GUI.closeGUI("Missions", playerIndex)
 		MissionGUI.showDyTechWorldMissions(playerIndex)
@@ -264,9 +245,5 @@ remote.add_interface("DyTech-World",
 	Ammo_Insert = function(name)
 		if not global.XP then fs.Startup() end
 		table.insert(global.XP.Fighting.Category,name)
-	end,
-	
-	TestMission001 = function()
-		MissionEasy.Mission_001()
 	end
 })

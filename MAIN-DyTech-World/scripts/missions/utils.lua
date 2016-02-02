@@ -1,5 +1,6 @@
 module("MissionUtils", package.seeall)
 require "config"
+require "scripts.missions.mission"
 
 function Startup()
 	global.Missions = {}
