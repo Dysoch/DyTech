@@ -10,7 +10,7 @@ adder = player.gui.center["mainDyTechWorldMissionFlow"]["mainDyTechWorldMissionF
 -- Table Easy
 adder.add({type="label", name="", caption={"mission-easy"}})
 if global.Missions.Timers.EasyActive then
-	adder.add({type="label", name="", caption={"mission-active", global.Missions.Timers.Easy}})
+	adder.add({type="button", name="", caption={"mission-active", global.Missions.Timers.Easy}})
 else
 	adder.add({type="table", name="mainDyTechWorldEasyMissionTable", colspan=4})
 	Missions.populateGUIEasyMissionTable(PlayerIndex)
@@ -18,7 +18,7 @@ end
 -- Table Medium
 adder.add({type="label", name="", caption={"mission-medium"}})
 if global.Missions.Timers.MediumActive then
-	adder.add({type="label", name="", caption={"mission-active", global.Missions.Timers.Medium}})
+	adder.add({type="button", name="", caption={"mission-active", global.Missions.Timers.Medium}})
 elseif global.XP.Level <= 4 then
 	adder.add({type="label", name="", caption={"level-low", global.XP.Level}})
 else
@@ -28,7 +28,7 @@ end
 -- Table Hard
 adder.add({type="label", name="", caption={"mission-hard"}})
 if global.Missions.Timers.HardActive then
-	adder.add({type="label", name="", caption={"mission-active", global.Missions.Timers.Hard}})
+	adder.add({type="button", name="", caption={"mission-active", global.Missions.Timers.Hard}})
 elseif global.XP.Level <= 9 then
 	adder.add({type="label", name="", caption={"level-low", global.XP.Level}})
 else
@@ -38,7 +38,7 @@ end
 -- Table Insane
 adder.add({type="label", name="", caption={"mission-insane"}})
 if global.Missions.Timers.InsaneActive then
-	adder.add({type="label", name="", caption={"mission-active", global.Missions.Timers.Insane}})
+	adder.add({type="button", name="", caption={"mission-active", global.Missions.Timers.Insane}})
 elseif global.XP.Level <= 14 then
 	adder.add({type="label", name="", caption={"level-low", global.XP.Level}})
 else

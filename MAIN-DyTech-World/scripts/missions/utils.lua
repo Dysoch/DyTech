@@ -40,4 +40,5 @@ function Reward(data)
 	for _,player in pairs(game.players) do
 		player.insert{name=data.Item, count=data.Amount}
 	end
+	PlayerPrint({"mission-complete", data.Amount, data.Item})
 end

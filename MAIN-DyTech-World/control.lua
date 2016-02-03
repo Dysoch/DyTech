@@ -51,7 +51,7 @@ script.on_event(defines.events.on_tick, function(event)
 		fs.Add_To_Random_Entity()
 	end
 	--if event.tick%18000==17999 then
-	if event.tick%60==59 then --test line
+	if event.tick%6==5 then --test line
 		MissionUtils.StaminaIncrease()
 		if not remote.interfaces["DyTech-Core"] then
 			MissionUtils.GUI()
@@ -85,10 +85,6 @@ script.on_event(defines.events.on_tick, function(event)
 				global.Missions.Timers.InsaneActive = false
 				MissionUtils.Reward(global.Missions.Active.Insane)
 			end
-		end
-		if global.GUI1 then
-			GUI.closeGUI("Main", global.GUI1Active)
-			GUI.showDyTechWorldGUI(global.GUI1Active)
 		end
 	end
 end)
@@ -151,7 +147,6 @@ local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	if event.element.name == "DyTech-World-Button" then
 		GUI.showDyTechWorldGUI(playerIndex)
-		global.GUI1Active = playerIndex
 	elseif event.element.name == "DyTech-World-Close-Button" then
 		GUI.closeGUI("Main", playerIndex)
 	elseif event.element.name == "DyTech-World-Close-Missions-Button" then
@@ -181,6 +176,9 @@ local player = game.players[playerIndex]
 	elseif event.element.name == "DyTech-World-Mission-Button" then
 		GUI.closeGUI("Missions", playerIndex)
 		MissionGUI.showDyTechWorldMissions(playerIndex)
+	elseif Missions.Mission_Table[event.element.name] then
+		Missions.StartMission(Missions.Mission_Table[event.element.name])
+		GUI.closeGUI("Missions", playerIndex)
 	end
 end)
 
@@ -245,5 +243,9 @@ remote.add_interface("DyTech-World",
 	Ammo_Insert = function(name)
 		if not global.XP then fs.Startup() end
 		table.insert(global.XP.Fighting.Category,name)
+	end,
+	
+	GeneralLevel = function()
+		global.XP.Level = global.XP.Level + 50
 	end
 })

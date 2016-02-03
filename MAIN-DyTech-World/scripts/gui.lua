@@ -2,7 +2,6 @@ module("GUI", package.seeall)
 require "defines"
 
 function showDyTechWorldGUI(PlayerIndex)
-global.GUI1 = true
 local player = game.players[PlayerIndex]
 player.gui.top.add({type="flow", direction="vertical", name="mainDyTechWorldFlow"})
 player.gui.top["mainDyTechWorldFlow"].add({type="frame", direction="vertical", name="mainDyTechWorldFrame", caption={"dytech-world-gui"}})
@@ -12,7 +11,7 @@ if not global.XP.GUI then
 else 
 	adder.add({type= "checkbox", caption={"xp-checkbox"}, name="XP-checkbox", state = true})
 end
-adder.add({type="label", name="Stamina-Label", caption={"stamina", global.Missions.Stamina}})
+
 adder.add({type="button", name="DyTech-World-Mission-Button", caption={"missions"}})
 adder.add({type="button", name="DyTech-World-Close-Button", caption={"close"}})
 end
@@ -20,8 +19,10 @@ end
 function showDyTechWorldXPGUI(PlayerIndex)
 local player = game.players[PlayerIndex]
 player.gui.left.add({type="flow", direction="horizontal", name="mainDyTechWorldXPFlow"})
-player.gui.left["mainDyTechWorldXPFlow"].add({type="frame", direction="vertical", name="mainDyTechWorldXPFrame", caption={"xp-system", global.XP.Level}})
+player.gui.left["mainDyTechWorldXPFlow"].add({type="frame", direction="vertical", name="mainDyTechWorldXPFrame", caption={"world-stats"}})
 adder = player.gui.left["mainDyTechWorldXPFlow"]["mainDyTechWorldXPFrame"]
+
+adder.add({type="label", name="", caption={"xp-system", global.XP.Level}})
 
 adder.add({type="label", name="", caption={"dytech-world-gui-xp-crafting", global.XP.Crafting.Level}})
 adder.add({type="progressbar", name="Crafting-XP", size=global.XP.Crafting.Needed})
@@ -56,6 +57,11 @@ if global.XP.Research > 0.99 then
 	adder.add({type="label", name="", caption={"dytech-world-gui-xp-research"}})
 	adder.add({type="button", name="DyTech-Research-Finish-Button", caption={"research-finish", string.sub(global.XP.Research,1,1)}})
 end
+adder.add({type="label", name="Stamina-Label", caption={"stamina", global.Missions.Stamina}})
+adder.add({type="label", name="", caption={"mission-1", global.Missions.Timers.Easy}})
+adder.add({type="label", name="", caption={"mission-2", global.Missions.Timers.Medium}})
+adder.add({type="label", name="", caption={"mission-3", global.Missions.Timers.Hard}})
+adder.add({type="label", name="", caption={"mission-4", global.Missions.Timers.Insane}})
 end
 
 function closeGUI(statement, PlayerIndex)
@@ -66,7 +72,6 @@ function closeGUI(statement, PlayerIndex)
 	elseif statement=="Main" then
 		if game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"] and game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"].valid then
 			game.players[PlayerIndex].gui.top["mainDyTechWorldFlow"].destroy()
-			global.GUI1 = false
 		end
 	elseif statement=="Missions" then
 		if game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"] and game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].valid then
@@ -78,7 +83,6 @@ function closeGUI(statement, PlayerIndex)
 		end
 		if game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"] and game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"].valid then
 			game.players[PlayerIndex].gui.left["mainDyTechWorldXPFlow"].destroy()
-			global.GUI1 = false
 		end
 		if game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"] and game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].valid then
 			game.players[PlayerIndex].gui.center["mainDyTechWorldMissionFlow"].destroy()

@@ -7,28 +7,70 @@ Mission_Table = {
 	["find-water"] = {Diff="Easy", Stamina=2, Time=10, Amount1=2, Amount2=10},
 	["find-trees"] = {Diff="Easy", Stamina=5, Time=20, Amount1=5, Amount2=20},
 	["find-coal"] = {Diff="Easy", Stamina=10, Time=30, Amount1=15, Amount2=50},
-	["search-life"] = {Diff="Easy", Stamina=25, Time=60, Amount1=25, Amount2=100},
 	-- Medium
-	["search-life1"] = {Diff="Medium", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life2"] = {Diff="Medium", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life3"] = {Diff="Medium", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life4"] = {Diff="Medium", Stamina=25, Time=60, Amount1=25, Amount2=100},
+	["search-life"] = {Diff="Medium", Stamina=25, Time=60, Amount1=10, Amount2=25},
+	["fight-creeper"] = {Diff="Medium", Stamina=40, Time=90, Amount1=25, Amount2=75},
+	["search-life2"] = {Diff="Medium", Stamina=80, Time=120, Amount1=25, Amount2=100},
+	["search-life3"] = {Diff="Medium", Stamina=100, Time=150, Amount1=25, Amount2=100},
 	-- Hard
-	["search-life5"] = {Diff="Hard", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life6"] = {Diff="Hard", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life7"] = {Diff="Hard", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life8"] = {Diff="Hard", Stamina=25, Time=60, Amount1=25, Amount2=100},
+	["search-life5"] = {Diff="Hard", Stamina=150, Time=300, Amount1=25, Amount2=100},
+	["search-life6"] = {Diff="Hard", Stamina=200, Time=480, Amount1=25, Amount2=100},
+	["search-life7"] = {Diff="Hard", Stamina=300, Time=600, Amount1=25, Amount2=100},
+	["search-life8"] = {Diff="Hard", Stamina=500, Time=900, Amount1=25, Amount2=100},
 	-- Insane
-	["search-life9"] = {Diff="Insane", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life10"] = {Diff="Insane", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life11"] = {Diff="Insane", Stamina=25, Time=60, Amount1=25, Amount2=100},
-	["search-life12"] = {Diff="Insane", Stamina=25, Time=60, Amount1=25, Amount2=100},
+	["search-life9"] = {Diff="Insane", Stamina=1000, Time=1500, Amount1=25, Amount2=100},
+	["search-life10"] = {Diff="Insane", Stamina=1500, Time=1800, Amount1=25, Amount2=100},
+	["search-life11"] = {Diff="Insane", Stamina=2500, Time=2400, Amount1=25, Amount2=100},
+	["search-life12"] = {Diff="Insane", Stamina=10000, Time=3600, Amount1=2500, Amount2=10000},
 }
 
 function MissionEasyLoot()
 	local Loot = {"iron-ore", "copper-ore", "coal", "stone", "raw-wood", "wood", "iron-plate", "copper-plate"}
 	GivenReward = Loot[math.random(#Loot)]
 	return GivenReward
+end
+
+function MissionMediumLoot()
+	local Loot = {"iron-plate", "copper-plate", "steel-plate", "basic-bullet-magazine", "sulfur"}
+	GivenReward = Loot[math.random(#Loot)]
+	return GivenReward
+end
+
+function MissionHardLoot()
+	local Loot = {"iron-ore", "copper-ore", "coal", "stone", "raw-wood", "wood", "iron-plate", "copper-plate"}
+	GivenReward = Loot[math.random(#Loot)]
+	return GivenReward
+end
+
+function MissionInsaneLoot()
+	local Loot = {"iron-ore", "copper-ore", "coal", "stone", "raw-wood", "wood", "iron-plate", "copper-plate"}
+	GivenReward = Loot[math.random(#Loot)]
+	return GivenReward
+end
+
+function StartMission(data)
+	global.Missions.Stamina = (global.Missions.Stamina-data.Stamina)
+	if data.Diff == "Easy" then
+		global.Missions.Timers.EasyActive = true
+		global.Missions.Timers.Easy = data.Time
+		global.Missions.Active.Easy = {}
+		global.Missions.Active.Easy = {Item=MissionEasyLoot(), Amount=math.random(data.Amount1,data.Amount2)}
+	elseif data.Diff == "Medium" then
+		global.Missions.Timers.MediumActive = true
+		global.Missions.Timers.Medium = data.Time
+		global.Missions.Active.Medium = {}
+		global.Missions.Active.Medium = {Item=MissionMediumLoot(), Amount=math.random(data.Amount1,data.Amount2)}
+	elseif data.Diff == "Hard" then
+		global.Missions.Timers.HardActive = true
+		global.Missions.Timers.Hard = data.Time
+		global.Missions.Active.Hard = {}
+		global.Missions.Active.Hard = {Item=MissionHardLoot(), Amount=math.random(data.Amount1,data.Amount2)}
+	elseif data.Diff == "Insane" then
+		global.Missions.Timers.InsaneActive = true
+		global.Missions.Timers.Insane = data.Time
+		global.Missions.Active.Insane = {}
+		global.Missions.Active.Insane = {Item=MissionInsaneLoot(), Amount=math.random(data.Amount1,data.Amount2)}
+	end
 end
 
 function populateGUIEasyMissionTable(PlayerIndex)
