@@ -55,8 +55,12 @@ for index,name in pairs(INTERMEDIATES) do
 				table.insert(data.raw.recipe[name.Name].ingredients,v)
 			end
 		end
+		if name.Smelting then
+			data.raw.recipe[name.Name].category = "smelting"
+		end
 	end
 end
 
 data.raw.recipe["track-chain-link"].result_count = 5
 data.raw.recipe["sand"].result_count = 5
+data.raw.recipe["bone-charcoal"].result_count = 5
