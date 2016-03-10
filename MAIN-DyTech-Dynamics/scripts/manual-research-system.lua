@@ -79,6 +79,17 @@ else
 	adder5 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame5]
 	adder5.add({type="button", name="DyTech-Dynamics-Extra-Combat-Minus-Button", caption="-"})
 end
+if global.ResearchSystem.science > (10+(0.15*game.forces.player.ghost_time_to_live)) then
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame6, caption={"ghost", (game.forces.player.ghost_time_to_live/60)}})
+	adder6 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame6]
+	adder6.add({type="button", name="DyTech-Dynamics-Extra-Ghost-Minus-Button", caption="-"})
+	adder6.add({type="button", name="DyTech-Dynamics-Extra-Ghost-Plus-Button", caption="+"})
+	adder6.add({type="label", name="", caption={"cost", (10+(0.15*game.forces.player.ghost_time_to_live))}})
+else
+	player.gui.top[guiNames.mainResearchExtraFlow].add({type="frame", direction="vertical", name=guiNames.mainResearchExtraFrame6, caption={"ghost", (game.forces.player.ghost_time_to_live/60)}})
+	adder6 = player.gui.top[guiNames.mainResearchExtraFlow][guiNames.mainResearchExtraFrame6]
+	adder6.add({type="button", name="DyTech-Dynamics-Extra-Ghost-Minus-Button", caption="-"})
+end
 adder1.add({type="button", name="DyTech-Dynamics-Back-Button", caption={"back"}})
 adder1.add({type="button", name=guiNames.CloseButton, caption={"close"}})
 end

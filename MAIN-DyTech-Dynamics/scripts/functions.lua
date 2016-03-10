@@ -62,9 +62,9 @@ function StartupResearchSystem1()
 		global.ResearchSystem.ItemUnlock[recipe].Event = Name.Event
 		global.ResearchSystem.ItemUnlock[recipe].Tier = getResearchLevel(Name.Tech)
 	end
-	game.makefile("DyTech/DataDump/Dynamics-ResearchSystem-ItemUnlock.txt", serpent.block(global.ResearchSystem.ItemUnlock))
-	game.makefile("DyTech/DataDump/Dynamics-Temper.txt", serpent.block(global.temper))
-	game.makefile("DyTech/DataDump/Dynamics-ResearchTemp2.txt", serpent.block(global.ResearchTemp2))
+	game.write_file("DyTech/DataDump/Dynamics-ResearchSystem-ItemUnlock.txt", serpent.block(global.ResearchSystem.ItemUnlock))
+	game.write_file("DyTech/DataDump/Dynamics-Temper.txt", serpent.block(global.temper))
+	game.write_file("DyTech/DataDump/Dynamics-ResearchTemp2.txt", serpent.block(global.ResearchTemp2))
 	if Config.Research_System then	
 		game.forces.player.disable_research()
 	end

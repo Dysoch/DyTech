@@ -173,6 +173,22 @@ function Combat_Robots(STATEMENT)
 	end
 end
 
+function Ghost(STATEMENT)
+	if STATEMENT == "+" then
+		if global.ResearchSystem.science >= (10+(0.15*game.forces.player.ghost_time_to_live)) then
+			global.ResearchSystem.science = global.ResearchSystem.science - (10+(0.15*game.forces.player.ghost_time_to_live))
+			game.forces.player.ghost_time_to_live = game.forces.player.ghost_time_to_live + 600
+			PlayerPrint({"ghost-increase"})
+		end
+	elseif STATEMENT == "-" then
+		if game.forces.player.ghost_time_to_live ~= 0 then
+			game.forces.player.ghost_time_to_live = game.forces.player.ghost_time_to_live - 600
+			global.ResearchSystem.science = global.ResearchSystem.science + (10+(0.15*game.forces.player.ghost_time_to_live))
+			PlayerPrint({"ghost-decrease"})
+		end
+	end
+end
+
 function Lab_Increament(event)
 	if event.tick%36000==35999 then
 	local count = game.players[1].force.get_entity_count("lab")

@@ -44,17 +44,17 @@ function PlayerPrint(message)
 	end
 end
 
-game.on_init(function()
+script.on_init(function()
 	fs.Startup()
 	Power.Startup()
 	AutoResearch.Startup()
 end)
 
-game.on_load(function()
+script.on_load(function()
 
 end)
 
-game.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
 	if Config.Research_System and global.ResearchSystem.RSAutomatic then	
 		ARS.AutomaticRS(event)
 	end
@@ -71,7 +71,7 @@ game.on_event(defines.events.on_tick, function(event)
 	RSF.Lab_Increament(event)
 end)
 
-game.on_event(defines.events.on_research_started, function(event)
+script.on_event(defines.events.on_research_started, function(event)
 --[[if Config.Research_System then	
 	fs.InitHalfwayTechnology(event)
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
@@ -88,7 +88,7 @@ else]]--
 	global.Technology[event.research.name].Started = true
 end)
 
-game.on_event(defines.events.on_research_finished, function(event)
+script.on_event(defines.events.on_research_finished, function(event)
 --[[if Config.Research_System then	
 	if not global.ResearchSystem.science then global.ResearchSystem.science=0 end
 	debug("Research Finished ("..tostring(event.research.name)..")")
@@ -113,7 +113,7 @@ if Config.Auto_Researcher then
 end
 end)
 
-game.on_event(defines.events.on_built_entity, function(event)
+script.on_event(defines.events.on_built_entity, function(event)
 	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
@@ -122,7 +122,7 @@ game.on_event(defines.events.on_built_entity, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_robot_built_entity, function(event)
+script.on_event(defines.events.on_robot_built_entity, function(event)
 	if Config.Collectors then
 		CollectorFunctions.builtEntity(event)
 	end
@@ -131,7 +131,7 @@ game.on_event(defines.events.on_robot_built_entity, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_player_mined_item, function(event)
+script.on_event(defines.events.on_player_mined_item, function(event)
 	if Config.Collectors and event.item_stack.name == "item-collector-area" then
 		if global.Collectors.Amount==0 then
 			global.Collectors.Amount = 0
@@ -144,7 +144,7 @@ game.on_event(defines.events.on_player_mined_item, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_robot_mined, function(event)
+script.on_event(defines.events.on_robot_mined, function(event)
 	if Config.Collectors and event.item_stack.name == "item-collector-area" then
 		if global.Collectors.Amount==0 then
 			global.Collectors.Amount = 0
@@ -157,13 +157,13 @@ game.on_event(defines.events.on_robot_mined, function(event)
 	end
 end)
 
-game.on_event(defines.events.on_entity_died, function(event)
+script.on_event(defines.events.on_entity_died, function(event)
 	if Config.Dynamic_Power then
 		Power.Died_Entity(event)
 	end
 end)
 
-game.on_event(defines.events.on_gui_click, function(event)
+script.on_event(defines.events.on_gui_click, function(event)
 local playerIndex = event.player_index
 local player = game.players[playerIndex]
 	if event.element.name:find(guiNames.CloseButton) then
@@ -322,6 +322,14 @@ local player = game.players[playerIndex]
 		RSF.Combat_Robots("+")
 		GUI.closeGUI("all", playerIndex)
 		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Ghost-Minus-Button" then
+		RSF.Ghost("-")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
+	elseif event.element.name == "DyTech-Dynamics-Extra-Ghost-Plus-Button" then
+		RSF.Ghost("+")
+		GUI.closeGUI("all", playerIndex)
+		MRS.showResearchExtraGUI(playerIndex)
 	elseif event.element.name == "DyTech-Dynamics-Lottery" then
 		GUI.closeGUI("Lottery", playerIndex)
 		MRS.showResearchLotteryGUI(playerIndex)
@@ -362,18 +370,18 @@ remote.add_interface("DyTech-Dynamics",
 			table.insert(global.DatabaseNames,RecipeName)
 			table.insert(global.DatabaseNumbers,data.Points)
 		end
-		game.makefile("DataDump/Database-Base-Names.xls", serpent.block(global.DatabaseNames))
-		game.makefile("DataDump/Database-Base-Numbers.xls", serpent.block(global.DatabaseNumbers))
+		game.write_file("DataDump/Database-Base-Names.xls", serpent.block(global.DatabaseNames))
+		game.write_file("DataDump/Database-Base-Numbers.xls", serpent.block(global.DatabaseNumbers))
 	end,
 	
 	DataDump = function()
-		game.makefile("DyTech/DataDump/Dynamics-ResearchSystem.txt", serpent.block(global.ResearchSystem))
-		game.makefile("DyTech/DataDump/Dynamics-Collectors.txt", serpent.block(global.Collectors))
-		game.makefile("DyTech/DataDump/Dynamics-Technology.txt", serpent.block(global.Technology))
-		game.makefile("DyTech/DataDump/Dynamics-AutoResearcher.txt", serpent.block(global.AutoResearcher))
-		game.makefile("DyTech/DataDump/Dynamics-Auto_Researcher.txt", serpent.block(global.Auto_Researcher))
-		game.makefile("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
-		game.makefile("DyTech/Config/Dynamics.txt", serpent.block(Config))
+		game.write_file("DyTech/DataDump/Dynamics-ResearchSystem.txt", serpent.block(global.ResearchSystem))
+		game.write_file("DyTech/DataDump/Dynamics-Collectors.txt", serpent.block(global.Collectors))
+		game.write_file("DyTech/DataDump/Dynamics-Technology.txt", serpent.block(global.Technology))
+		game.write_file("DyTech/DataDump/Dynamics-AutoResearcher.txt", serpent.block(global.AutoResearcher))
+		game.write_file("DyTech/DataDump/Dynamics-Auto_Researcher.txt", serpent.block(global.Auto_Researcher))
+		game.write_file("DyTech/Log/Dynamics.txt", serpent.block(global.Log))
+		game.write_file("DyTech/Config/Dynamics.txt", serpent.block(Config))
 	end,
 	
 	IncreaseDynamicPower = function()	
