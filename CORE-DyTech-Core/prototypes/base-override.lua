@@ -104,7 +104,7 @@ AddToRecipe("laser-turret", "turret-base", 1)
 AddToRecipe("laser-turret", "turret-stock", 1)
 AddToRecipe("laser-turret", "turret-guidance-01", 1)
 data.raw.recipe["gun-turret"].ingredients = {}
-AddToRecipe("gun-turret", "turret-base", 1)
+AddToRecipe("gun-turret", "turret-base-gun", 1)
 AddToRecipe("gun-turret", "turret-stock", 1)
 AddToRecipe("gun-turret", "turret-guidance-21", 1)
 ChangeRecipe("tank", "engine-unit", "track", 2)

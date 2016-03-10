@@ -205,6 +205,14 @@ INTERMEDIATES = {
 		Recipe_Normal = {{type="item", name="steel-plate", amount=8}},
 	},
 	{
+		Name = "turret-base-gun",
+		Subgroup = "turret",
+		Enabled = false,
+		Recipe = true,
+		Recipe_Metallurgy = {{type="item", name="zinc-plate", amount=4},{type="item", name="electronic-circuit", amount=1},{type="item", name="frame", amount=1}},
+		Recipe_Normal = {{type="item", name="copper-plate", amount=4},{type="item", name="electronic-circuit", amount=1},{type="item", name="frame", amount=1}},
+	},
+	{
 		Name = "turret-base",
 		Subgroup = "turret",
 		Enabled = false,
