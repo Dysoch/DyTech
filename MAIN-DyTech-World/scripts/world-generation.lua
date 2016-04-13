@@ -27,8 +27,8 @@ function Ruins_Spawner(event)
 			global.RandomEntity.Ruins_Spawned.Chunk = global.RandomEntity.Ruins_Spawned.Chunk + 1
 		end
 	end
-	if fs.checkMatch100(4) then Loot_Spawner(31, 5, event) end
-	if fs.checkMatch100(2) then Chest_Spawner(63, 10, 1000, false, event) end
+	if (math.random(100) < 4) then Loot_Spawner(31, 5, event) end
+	if (math.random(100) < 2) then Chest_Spawner(63, 10, 1000, false, event) end
 	debug("Generator: Tier 2: Created "..BuildEntity.." ("..global.RandomEntity.Ruins_Spawned.Chunk..") at "..PosX..", "..PosY)
 	global.RandomEntity.Ruins_Spawned.Chunk = 0
 end
@@ -39,7 +39,7 @@ function Chest_Spawner(AREA, MAX_AMOUNT, CHUNKS, STATEMENT, event)
 	local PosY = event.area.left_top.y+math.random(AREA)
 	if game.get_surface("nauvis").can_place_entity{name=(BuildEntity), position={PosX,PosY}} then 
 		local Chest = game.get_surface("nauvis").create_entity{name=(BuildEntity), position={PosX,PosY}, force=game.forces.neutral}
-		if fs.checkMatch100(60) and global.Counter.Chunks > CHUNKS and STATEMENT then
+		if (math.random(100) < 60) and global.Counter.Chunks > CHUNKS and STATEMENT then
 			for i = 1, (math.random(2,5)) do
 				local Insert=global.RandomEntity.Special_Loot[math.random(#global.RandomEntity.Special_Loot)]
 				local Amount = math.random(MAX_AMOUNT)
@@ -47,7 +47,7 @@ function Chest_Spawner(AREA, MAX_AMOUNT, CHUNKS, STATEMENT, event)
 				fs.SpawnCounter(3, Amount)
 			debug("Generator: Chests with Special_Loot: Created "..BuildEntity.." at "..PosX..", "..PosY)
 			end
-		elseif fs.checkMatch100(60) and global.Counter.Chunks > CHUNKS and not STATEMENT then
+		elseif (math.random(100) < 60) and global.Counter.Chunks > CHUNKS and not STATEMENT then
 			for i = 1, (math.random(2,5)) do
 				local Insert=global.RandomEntity.Loot[math.random(#global.RandomEntity.Loot)]
 				local Amount = math.random(MAX_AMOUNT)
@@ -59,15 +59,6 @@ function Chest_Spawner(AREA, MAX_AMOUNT, CHUNKS, STATEMENT, event)
 			fs.SpawnCounter(3, 0)
 		debug("Generator: Chests: Created "..BuildEntity.." at "..PosX..", "..PosY)
 		end
-	end
-end
-
-function StartTestersRuins(event)
-	local TESTER = global.Testers[math.random(#global.Testers)]
-	if not global.TestersDone[TESTER] then
-		Massive_Ruin_Spawner(TESTER, event)
-	else
-		StartTestersRuins(event)
 	end
 end
 
@@ -86,8 +77,9 @@ function Massive_Ruin_Spawner(TESTER, event)
 			end
 		end
 		for i = 1, (math.random(5,20)) do
-			if fs.checkMatch100(math.random(15,35)) then Loot_Spawner(191, 25, event) end
-			if fs.checkMatch100(math.random(5,25)) then Chest_Spawner(191, 25, 5, true, event) end
+			if (math.random(100) < 20) then Loot_Spawner(191, 25, event) end
+			if (math.random(100) < 20) then Chest_Spawner(191, 25, 5, true, event) end
+			
 		end
 		debug("Generator: Tier 2: Created "..BuildEntity4.." ("..global.RandomEntity.Massive_Ruins_Spawned.Chunk..") at "..PosX4..", "..PosY4)
 		global.RandomEntity.Massive_Ruins_Spawned.Chunk = 0

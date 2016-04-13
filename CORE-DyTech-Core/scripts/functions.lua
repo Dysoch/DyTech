@@ -26,8 +26,10 @@ end
 
 function World_Call()
 	if remote.interfaces["DyTech-World"] then
+	--[[ move to config to users can specify loot tables? ]]
 	global.Normal_Loot = {"sand","rubber-seed","sulfur-seed","resin","sulfur-wood","crystal","raw-ruby","raw-emerald","raw-sapphire","raw-topaz","raw-diamond"}
 	global.Special_Loot = {"cut-ruby","cut-emerald","cut-sapphire","cut-topaz","cut-diamond","compressed-ruby","compressed-emerald","compressed-sapphire","compressed-topaz","compressed-diamond"}
+	--[[	]]
 		for _,name in pairs(global.Normal_Loot) do
 			remote.call("DyTech-World", "Loot_Table_Insert", name)
 		end

@@ -103,25 +103,29 @@ script.on_event(defines.events.on_entity_died, function(event)
 	XP.Fighting_Bonus(event)
 end)
 
+--[[ 
+Randomly generate items in the world based on # of chunks revealed so far.
+
+On each Chunk revealed:
+- 15% loot spawner 
+- 2% ruins 
+when Chunks > 250:
+- 10% chest 
+when Chunks > 500:
+- massive ruins with the name of a random ( and unique ) tester
+
+--]]
 script.on_event(defines.events.on_chunk_generated, function(event)
-	fs.Chunk_Increaser()
+	fs.incrementCounter("Chunks")
 	XP.Explore_Level(event)
 	XP.GUI_checker()
-	if fs.checkMatch100(33) then
-		if fs.checkMatch100(45) then
-			Generation.Loot_Spawner(31, 5, event)
-		end
-		if fs.checkMatch1000(45) then
-			Generation.Ruins_Spawner(event)
-		end
-		if fs.checkMatch100(26) and global.Counter.Chunks > 250 then
-			Generation.Chest_Spawner(63, 10, 1000, false, event)
-		end
+	if (math.random(100) < 15) 	then Generation.Loot_Spawner(31, 5, event) end
+	if (math.random(100) < 2) 	then Generation.Ruins_Spawner(event) end
+	if (math.random(100) < 15) and global.Counter.Chunks > 250	then 
+		Generation.Chest_Spawner(63, 10, 1000, false, event) 
 	end
-	if fs.checkMatch100(50) and global.Counter.Chunks > (500*global.RandomEntity.Massive_Ruins_Spawned.Total) then
-		if not fs.CheckTesters() then
-			Generation.StartTestersRuins(event)
-		end
+	if (math.random(100) < 15)  and global.Counter.Chunks > (500*global.RandomEntity.Massive_Ruins_Spawned.Total)	then 
+		Generation.Massive_Ruin_Spawner(table.remove(global.Testers, math.random( #global.Testers )), event) 
 	end
 end)
 
@@ -208,10 +212,12 @@ remote.add_interface("DyTech-World",
 		debug("Remote Call: Added Chest: "..NAME)
 	end,
 	
+	--[[ not used, remove ]]
 	Check_Which_Loot_List = function()
 		return Config.Leveled_Loot_List
 	end,
 	
+	--[[ nothign else uses this interface. Might as well keep all loot in World and kill this ]]
 	Loot_Table_Insert = function(NAME)
 		if not global.RandomEntity then global.RandomEntity = {} end
 		if not global.RandomEntity.Loot then global.RandomEntity.Loot = {"stone"} end
@@ -219,6 +225,7 @@ remote.add_interface("DyTech-World",
 		debug("Remote Call: Added Loot: "..NAME)
 	end,
 	
+	--[[ may remove ]]
 	Special_Loot_Table_Insert = function(NAME)
 		if not global.RandomEntity then global.RandomEntity = {} end
 		if not global.RandomEntity.Special_Loot then global.RandomEntity.Special_Loot = {"pistol"} end
