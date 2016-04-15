@@ -48,6 +48,14 @@ script.on_init(function()
 	fs.Startup()
 	Power.Startup()
 	AutoResearch.Startup()
+
+  for id, lab in pairs(game.get_surface(1).find_entities_filtered {
+      area = {{-200,-200},{200,200}},
+      name = "lab",
+      type = "lab",
+      force = "player"}) do
+    lab.active = false
+  end
 end)
 
 script.on_load(function()
