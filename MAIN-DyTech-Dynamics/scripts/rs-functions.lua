@@ -57,7 +57,7 @@ end
 
 function DSgetResearchLevel(technology)
     return global.Technology[technology].TechLevel
-end 
+end
 
 function RecipeAvailableToUnlockTier1()
 global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = 0
@@ -67,7 +67,7 @@ for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		if global.ResearchSystem.science > data.Points and data.Tier==1 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier1 = global.ResearchSystem.RecipeAvailableToUnlock.Tier1 + 1
 		end
-	end 
+	end
 end
 end
 
@@ -79,7 +79,7 @@ for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		if global.ResearchSystem.science > data.Points and data.Tier==2 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier2 = global.ResearchSystem.RecipeAvailableToUnlock.Tier2 + 1
 		end
-	end 
+	end
 end
 end
 
@@ -91,7 +91,7 @@ for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		if global.ResearchSystem.science > data.Points and data.Tier==3 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier3 = global.ResearchSystem.RecipeAvailableToUnlock.Tier3 + 1
 		end
-	end 
+	end
 end
 end
 
@@ -103,7 +103,7 @@ for RecipeName, info in pairs(global.ResearchSystem.ItemUnlock) do
 		if global.ResearchSystem.science > data.Points and data.Tier==4 then
 			global.ResearchSystem.RecipeAvailableToUnlock.Tier4 = global.ResearchSystem.RecipeAvailableToUnlock.Tier4 + 1
 		end
-	end 
+	end
 end
 end
 
@@ -190,9 +190,59 @@ function Ghost(STATEMENT)
 end
 
 function Lab_Increament(event)
+
+  if event.tick % 100 == 0 then
+    for id, lab in pairs(game.get_surface(1).find_entities_filtered {
+        area = {{-200,-200},{200,200}},
+        name = "lab",
+        type = "lab",
+        force = "player"}) do
+
+      lab.active = false
+
+      local lab_inventory = lab.get_inventory(defines.inventory.lab_input)
+
+      if lab_inventory.valid == true then
+        for i = 1,#lab_inventory do
+          stack = lab_inventory[i]
+
+          if stack.valid_for_read == true then
+            PlayerPrint(stack.name)
+            PlayerPrint(stack.durability)
+
+            if stack.durability >= 0.01 then
+              stack.durability = stack.durability - 0.01
+            else
+              stack.durability = 1.0
+              stack.count = stack.count -1
+
+              if stack.name == "science-pack-1" then
+                global.ResearchSystem.science = global.ResearchSystem.science + 1
+              end
+
+              if stack.name == "science-pack-2" then
+                global.ResearchSystem.science = global.ResearchSystem.science + 3
+              end
+
+              if stack.name == "science-pack-3" then
+                global.ResearchSystem.science = global.ResearchSystem.science + 5
+              end
+
+              if stack.name == "alien-science-pack" then
+                global.ResearchSystem.science = global.ResearchSystem.science + 10
+              end
+            end
+          end
+
+        end
+      end
+
+    end
+  end
+
 	if event.tick%36000==35999 then
-	local count = game.players[1].force.get_entity_count("lab")
-	global.ResearchSystem.science = global.ResearchSystem.science + count
+    local count = game.players[1].force.get_entity_count("lab")
+    --global.ResearchSystem.science = global.ResearchSystem.science + count
 	end
 end
 
@@ -214,7 +264,7 @@ function Lottery(playerIndex)
 				global.Lottery.Won = global.Lottery.Won + 1
 				game.players[playerIndex].print("YOU WON!")
 				game.players[playerIndex].insert{name=global.Lottery.Rewards[math.random(#global.Lottery.Rewards)], count=math.random(1,5)}
-			else	
+			else
 				global.Lottery.Lost = global.Lottery.Lost + 1
 				game.players[playerIndex].print("YOU LOST")
 			end
@@ -224,7 +274,7 @@ function Lottery(playerIndex)
 				global.Lottery.Won = global.Lottery.Won + 1
 				game.players[playerIndex].print("YOU WON!")
 				game.players[playerIndex].insert{name=global.Lottery.Rewards[math.random(#global.Lottery.Rewards)], count=math.random(1,5)}
-			else	
+			else
 				global.Lottery.Lost = global.Lottery.Lost + 1
 				game.players[playerIndex].print("YOU LOST")
 			end
