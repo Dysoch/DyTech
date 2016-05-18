@@ -177,7 +177,7 @@ return
     }
 end
 
-function SteamHorizontalPictures(Type, Scale, Tint)
+function SteamHorizontalPictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
@@ -191,7 +191,7 @@ return
     }
 end
 
-function SteamVerticalPictures(Type, Scale, Tint)
+function SteamVerticalPictures(Scale, Tint)
 return
     {
       filename = "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
